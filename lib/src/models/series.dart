@@ -49,7 +49,11 @@ Example:
    */
   @nullable
   BuiltList<num> get data;
-  /** 
+
+  @nullable
+  BuiltList<BuiltList<num>> get dataNumPairs;
+
+  /**
    * This method is deprecated as of version 2.0. Instead, use options preprocessing as described in <a href="http://docs.highcharts.com/#preprocessing">the docs</a>. 
    */
   @deprecated
@@ -89,7 +93,9 @@ Example:
   @nullable
   String get stack;
   /** 
-   * The type of series. Can be one of <code>area</code>, <code>areaspline</code>, <code>bar</code>, <code>column</code>, <code>line</code>, <code>pie</code>, <code>scatter</code> or <code>spline</code>. From version 2.3, <code>arearange</code>, <code>areasplinerange</code> and <code>columnrange</code> are supported with the highcharts-more.js component. 
+   * The type of series. Can be one of <code>area</code>, <code>areaspline</code>,
+ <code>bar</code>, <code>column</code>, <code>line</code>, <code>pie</code>,
+ <code>scatter</code> or <code>spline</code>. From version 2.3, <code>arearange</code>, <code>areasplinerange</code> and <code>columnrange</code> are supported with the highcharts-more.js component. 
    */
   @nullable
   String get type;

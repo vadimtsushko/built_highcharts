@@ -5,8 +5,9 @@ import 'dart:js';
 import 'package:js/js.dart';
 import 'dart:html';
 
-import 'package:highcharts/highcharts.dart';
-import 'package:built_highcharts/build_highcharts_browser.dart' as hc;
+import 'package:highcharts/highcharts.dart' as hc;
+import 'package:built_highcharts/build_highcharts_browser.dart';
+import 'package:built_collection/built_collection.dart';
 import 'dart:async';
 import 'dart:convert';
 

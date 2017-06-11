@@ -27,6 +27,14 @@ class _$SeriesSerializer implements StructuredSerializer<Series> {
             specifiedType:
                 const FullType(BuiltList, const [const FullType(num)])));
     }
+    if (object.dataNumPairs != null) {
+      result
+        ..add('dataNumPairs')
+        ..add(serializers.serialize(object.dataNumPairs,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(BuiltList, const [const FullType(num)])
+            ])));
+    }
     if (object.dataParser != null) {
       result
         ..add('dataParser')
@@ -102,6 +110,12 @@ class _$SeriesSerializer implements StructuredSerializer<Series> {
                       const FullType(BuiltList, const [const FullType(num)]))
               as BuiltList<num>);
           break;
+        case 'dataNumPairs':
+          result.dataNumPairs.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(BuiltList, const [const FullType(num)])
+              ])) as BuiltList<BuiltList<num>>);
+          break;
         case 'dataParser':
           result.dataParser = serializers.deserialize(value,
               specifiedType: const FullType(Function)) as Function;
@@ -173,6 +187,8 @@ class _$Series extends Series {
   @override
   final BuiltList<num> data;
   @override
+  final BuiltList<BuiltList<num>> dataNumPairs;
+  @override
   final Function dataParser;
   @override
   final String dataURL;
@@ -196,6 +212,7 @@ class _$Series extends Series {
 
   _$Series._(
       {this.data,
+      this.dataNumPairs,
       this.dataParser,
       this.dataURL,
       this.id,
@@ -219,6 +236,7 @@ class _$Series extends Series {
     if (identical(other, this)) return true;
     if (other is! Series) return false;
     return data == other.data &&
+        dataNumPairs == other.dataNumPairs &&
         dataParser == other.dataParser &&
         dataURL == other.dataURL &&
         id == other.id &&
@@ -240,7 +258,9 @@ class _$Series extends Series {
                         $jc(
                             $jc(
                                 $jc(
-                                    $jc($jc(0, data.hashCode),
+                                    $jc(
+                                        $jc($jc(0, data.hashCode),
+                                            dataNumPairs.hashCode),
                                         dataParser.hashCode),
                                     dataURL.hashCode),
                                 id.hashCode),
@@ -256,6 +276,7 @@ class _$Series extends Series {
   String toString() {
     return (newBuiltValueToStringHelper('Series')
           ..add('data', data)
+          ..add('dataNumPairs', dataNumPairs)
           ..add('dataParser', dataParser)
           ..add('dataURL', dataURL)
           ..add('id', id)
@@ -275,6 +296,12 @@ class SeriesBuilder implements Builder<Series, SeriesBuilder> {
   ListBuilder<num> _data;
   ListBuilder<num> get data => _$this._data ??= new ListBuilder<num>();
   set data(ListBuilder<num> data) => _$this._data = data;
+
+  ListBuilder<BuiltList<num>> _dataNumPairs;
+  ListBuilder<BuiltList<num>> get dataNumPairs =>
+      _$this._dataNumPairs ??= new ListBuilder<BuiltList<num>>();
+  set dataNumPairs(ListBuilder<BuiltList<num>> dataNumPairs) =>
+      _$this._dataNumPairs = dataNumPairs;
 
   Function _dataParser;
   Function get dataParser => _$this._dataParser;
@@ -317,6 +344,7 @@ class SeriesBuilder implements Builder<Series, SeriesBuilder> {
   SeriesBuilder get _$this {
     if (_$v != null) {
       _data = _$v.data?.toBuilder();
+      _dataNumPairs = _$v.dataNumPairs?.toBuilder();
       _dataParser = _$v.dataParser;
       _dataURL = _$v.dataURL;
       _id = _$v.id;
@@ -347,6 +375,7 @@ class SeriesBuilder implements Builder<Series, SeriesBuilder> {
     final result = _$v ??
         new _$Series._(
             data: _data?.build(),
+            dataNumPairs: _dataNumPairs?.build(),
             dataParser: dataParser,
             dataURL: dataURL,
             id: id,

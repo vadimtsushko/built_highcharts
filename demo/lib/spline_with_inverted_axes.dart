@@ -1,72 +1,45 @@
 part of highcharts_options.samples;
 
-void spline_with_inverted_axes (_) {
+void spline_with_inverted_axes(_) {
   clearOutput();
-  ChartOptions chartOptions = new ChartOptions ()
-    ..chart = (
-      new Chart()
-        ..renderTo = 'output'
-        ..type = 'spline'
-        ..inverted = true
-    )
-    ..title = (
-      new Title()..text = 'Atmosphere Temperature by Altitude'
-    )
-    ..subtitle = (
-      new Subtitle()..text = 'According to the Standard Atmosphere model'
-    )
-    ..xAxis = (
-      new XAxis()
-        ..reversed = false
-        ..title = (
-          new XAxisTitle()
-            /*..enabled = true  DEPRECATED */
-            ..text = 'Altitude'
-        )
-        ..labels = (
-          new XAxisLabels()
-            ..formatter = allowInteropCaptureThis((self) {
-              return '${self.value} Km';
-            })
-        )
-        ..maxPadding = 0.05
-        ..showLastLabel = true
-    )
-    ..yAxis = (
-      new YAxis()
-        ..title = (
-          new YAxisTitle()..text = 'Temperature'
-        )
-        ..labels = (
-          new YAxisLabels()
-            ..formatter = allowInteropCaptureThis((t) {
-              return '${t.value}º';
-            })
-        )
-        ..lineWidth = 2
-    )
-    ..legend = (
-      new Legend()..enabled = false
-    )
-    ..tooltip = (
-      new Tooltip()
-        ..headerFormat = '<b>{series.name}</b>'
-        ..pointFormat = '{point.x} km: {point.y}ºC'
-    )
-    ..plotOptions = (
-      new PlotOptions()
-        ..spline = (
-          new PlotOptionsSpline()
-            ..marker = (
-              new PlotOptionsSplineMarker()..enabled = false
-            )
-        )
-    )
-    ..series = [
-      new Series()
+  var chartOptions = new ChartOptions((b) => b
+    ..chart.renderTo = 'output'
+    ..chart.type = 'spline'
+    ..chart.inverted = true
+    ..title.text = 'Atmosphere Temperature by Altitude'
+    ..subtitle.text = 'According to the Standard Atmosphere model'
+    ..xAxis.reversed = false
+    ..xAxis.title.text = 'Altitude'
+    ..xAxis.labels.formatter = allowInteropCaptureThis((self) {
+      return '${self.value} Km';
+    })
+    ..xAxis.maxPadding = 0.05
+    ..xAxis.showLastLabel = true
+    ..yAxis.title.text = 'Temperature'
+    ..yAxis.labels.formatter = allowInteropCaptureThis((t) {
+      return '${t.value}º';
+    })
+    ..yAxis.lineWidth = 2
+    ..legend.enabled = false
+    ..tooltip.headerFormat = '<b>{series.name}</b>'
+    ..tooltip.pointFormat = '{point.x} km: {point.y}ºC'
+    ..plotOptions.spline.marker.enabled = false
+    ..series.addAll([
+      new Series((b) => b
         ..name = 'Temperature'
-        ..data = [[0, 15], [10, -50], [20, -56.5], [30, -46.5], [40, -22.1],
-        [50, -2.5], [60, -27.7], [70, -55.7], [80, -76.5]]
-    ];
-  HighchartsChart chart = new HighchartsChart(chartOptions);
+        ..dataNumPairs.addAll([
+          new BuiltList<num>([0, 15]),
+          new BuiltList<num>([10, -50]),
+          new BuiltList<num>([20, -56.5]),
+          new BuiltList<num>([30, -46.5]),
+          new BuiltList<num>([40, -22.1]),
+          new BuiltList<num>([50, -2.5]),
+          new BuiltList<num>([60, -27.7]),
+          new BuiltList<num>([70, -55.7]),
+          new BuiltList<num>([80, -76.5]),
+        ]))
+    ]));
+  var options = toJsObject(chartOptions);
+  window.console.log(options);
+  new hc.HighchartsChart(options);
 }

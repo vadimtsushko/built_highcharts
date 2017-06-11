@@ -12,8 +12,8 @@ class JsInteropPlugin implements SerializerPlugin {
 
   @override
   Object beforeSerialize(Object object, FullType specifiedType) {
-    if (specifiedType.isUnspecified)
-      throw new ArgumentError('Standard JSON requires specifiedType.');
+//    if (specifiedType.isUnspecified)
+//      throw new ArgumentError('Standard JSON requires specifiedType.');
     if (_unsupportedTypes.contains(specifiedType.root)) {
       throw new ArgumentError(
           'Standard JSON cannot serialize type ${specifiedType.root}.');
@@ -26,7 +26,7 @@ class JsInteropPlugin implements SerializerPlugin {
     return object is List &&
             specifiedType.root != BuiltList &&
             specifiedType.root != JsonObject
-        ? _toJS(object, _alreadyHasStringKeys(specifiedType))
+        ? _toJS(object, specifiedType)
         : object;
   }
 
@@ -43,16 +43,26 @@ class JsInteropPlugin implements SerializerPlugin {
       specifiedType.root != BuiltMap ||
       specifiedType.parameters[0].root == String;
 
-  dynamic _toJS(List list, bool alreadyStringKeys) {
+  dynamic _toJS(List list, FullType specifiedType) {
     final result = js_util.newObject();
+//    print(list);
     for (int i = 0; i != list.length ~/ 2; ++i) {
       final key = list[i * 2];
       final value = list[i * 2 + 1];
+      final resolvedKey = resolveKey(key, specifiedType);
       js_util.setProperty(
-          result, alreadyStringKeys ? key : _toStringKey(key), value);
+          result, resolvedKey, value);
     }
     return result;
   }
+
+  String resolveKey(String key, FullType specifiedType) {
+    if (key == 'dataNumPairs') {
+      return 'data';
+    }
+    return key;
+  }
+
 
   String _toStringKey(Object key) {
     return JSON.encode(key);
