@@ -18,6 +18,6 @@ Future main(List<String> args) async {
   watch(
       new PhaseGroup.singleAction(
           new GeneratorBuilder([new BuiltValueGenerator()]),
-          new InputSet('built_highchart', const ['lib/src/models/*.dart', 'lib/src/serializers.dart'])),
+          new InputSet('built_highcharts', const ['lib/src/models/*.dart', 'lib/src/serializers/serializers.dart'])),
       deleteFilesByDefault: true);
 }

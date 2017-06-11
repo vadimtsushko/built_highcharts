@@ -109,17 +109,20 @@ abstract class Chart implements Built<Chart, ChartBuilder> {
   ///TODO Разобратья с типом
   ///BuiltList<dynamic> get margin;
   /** 
-   * The margin between the bottom outer edge of the chart and the plot area. Use this to set a fixed pixel value for the margin as opposed to the default dynamic margin. See also <code>spacingBottom</code>. 
+   * The margin between the bottom outer edge of the chart and the plot area. Use this to set a fixed
+ pixel value for the margin as opposed to the default dynamic margin. See also <code>spacingBottom</code>. 
    */
   @nullable
   num get marginBottom;
   /** 
-   * The margin between the left outer edge of the chart and the plot area. Use this to set a fixed pixel value for the margin as opposed to the default dynamic margin. See also <code>spacingLeft</code>. 
+   * The margin between the left outer edge of the chart and the plot area. Use this to set a fixed
+ pixel value for the margin as opposed to the default dynamic margin. See also <code>spacingLeft</code>. 
    */
   @nullable
   num get marginLeft;
   /** 
-   * The margin between the right outer edge of the chart and the plot area. Use this to set a fixed pixel value for the margin as opposed to the default dynamic margin. See also <code>spacingRight</code>. 
+   * The margin between the right outer edge of the chart and the plot area. Use this to set a fixed
+ pixel value for the margin as opposed to the default dynamic margin. See also <code>spacingRight</code>. 
    */
   @nullable
   num get marginRight;
@@ -190,8 +193,8 @@ abstract class Chart implements Built<Chart, ChartBuilder> {
 
 <p>When using the <a href="#Highcharts.chart">Highcharts.chart</a> constructor, the <code>renderTo</code> is given as a parameter, and can be skipped in the options set.</p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get renderTo;
+  @nullable
+  String get renderTo;
   /** 
    * The button that appears after a selection zoom, allowing the user to reset zoom. 
    */
@@ -203,7 +206,8 @@ abstract class Chart implements Built<Chart, ChartBuilder> {
   @nullable
   String get selectionMarkerFill;
   /** 
-   * Whether to apply a drop shadow to the outer chart area. Requires that  backgroundColor be set. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>. 
+   * Whether to apply a drop shadow to the outer chart area. Requires that 
+ backgroundColor be set. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>. 
    */
   ///TODO Разобратья с типом
   ///dynamic get shadow;
@@ -218,17 +222,20 @@ abstract class Chart implements Built<Chart, ChartBuilder> {
   @nullable
   BuiltList<num> get spacing;
   /** 
-   * <p>The space between the bottom edge of the chart and the content (plot area, axis title and labels, title, subtitle or  legend in top position).</p> 
+   * <p>The space between the bottom edge of the chart and the content (plot area, axis title and labels, title, subtitle or 
+ legend in top position).</p> 
    */
   @nullable
   num get spacingBottom;
   /** 
-   * <p>The space between the left edge of the chart and the content (plot area, axis title and labels, title, subtitle or  legend in top position).</p> 
+   * <p>The space between the left edge of the chart and the content (plot area, axis title and labels, title, subtitle or 
+ legend in top position).</p> 
    */
   @nullable
   num get spacingLeft;
   /** 
-   * <p>The space between the right edge of the chart and the content (plot area, axis title and labels, title, subtitle or  legend in top position).</p> 
+   * <p>The space between the right edge of the chart and the content (plot area, axis title and labels, title, subtitle or 
+ legend in top position).</p> 
    */
   @nullable
   num get spacingRight;

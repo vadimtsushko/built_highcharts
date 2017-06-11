@@ -193,6 +193,12 @@ class _$ChartSerializer implements StructuredSerializer<Chart> {
         ..add(serializers.serialize(object.reflow,
             specifiedType: const FullType(bool)));
     }
+    if (object.renderTo != null) {
+      result
+        ..add('renderTo')
+        ..add(serializers.serialize(object.renderTo,
+            specifiedType: const FullType(String)));
+    }
     if (object.resetZoomButton != null) {
       result
         ..add('resetZoomButton')
@@ -391,6 +397,10 @@ class _$ChartSerializer implements StructuredSerializer<Chart> {
         case 'reflow':
           result.reflow = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'renderTo':
+          result.renderTo = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
         case 'resetZoomButton':
           result.resetZoomButton.replace(serializers.deserialize(value,
@@ -1171,6 +1181,8 @@ class _$Chart extends Chart {
   @override
   final bool reflow;
   @override
+  final String renderTo;
+  @override
   final ChartResetZoomButton resetZoomButton;
   @override
   final String selectionMarkerFill;
@@ -1227,6 +1239,7 @@ class _$Chart extends Chart {
       this.plotBorderWidth,
       this.polar,
       this.reflow,
+      this.renderTo,
       this.resetZoomButton,
       this.selectionMarkerFill,
       this.showAxes,
@@ -1279,6 +1292,7 @@ class _$Chart extends Chart {
         plotBorderWidth == other.plotBorderWidth &&
         polar == other.polar &&
         reflow == other.reflow &&
+        renderTo == other.renderTo &&
         resetZoomButton == other.resetZoomButton &&
         selectionMarkerFill == other.selectionMarkerFill &&
         showAxes == other.showAxes &&
@@ -1314,13 +1328,13 @@ class _$Chart extends Chart {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, alignTicks.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), colorCount.hashCode), defaultSeriesType.hashCode), description.hashCode), events.hashCode), ignoreHiddenSeries.hashCode), inverted.hashCode), marginBottom.hashCode), marginLeft.hashCode), marginRight.hashCode), marginTop.hashCode), options3d.hashCode), panKey.hashCode), panning.hashCode), pinchType.hashCode),
-                                                                                plotBackgroundColor.hashCode),
-                                                                            plotBackgroundImage.hashCode),
-                                                                        plotBorderColor.hashCode),
-                                                                    plotBorderWidth.hashCode),
-                                                                polar.hashCode),
-                                                            reflow.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, alignTicks.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), colorCount.hashCode), defaultSeriesType.hashCode), description.hashCode), events.hashCode), ignoreHiddenSeries.hashCode), inverted.hashCode), marginBottom.hashCode), marginLeft.hashCode), marginRight.hashCode), marginTop.hashCode), options3d.hashCode), panKey.hashCode), panning.hashCode), pinchType.hashCode), plotBackgroundColor.hashCode),
+                                                                                plotBackgroundImage.hashCode),
+                                                                            plotBorderColor.hashCode),
+                                                                        plotBorderWidth.hashCode),
+                                                                    polar.hashCode),
+                                                                reflow.hashCode),
+                                                            renderTo.hashCode),
                                                         resetZoomButton.hashCode),
                                                     selectionMarkerFill.hashCode),
                                                 showAxes.hashCode),
@@ -1365,6 +1379,7 @@ class _$Chart extends Chart {
           ..add('plotBorderWidth', plotBorderWidth)
           ..add('polar', polar)
           ..add('reflow', reflow)
+          ..add('renderTo', renderTo)
           ..add('resetZoomButton', resetZoomButton)
           ..add('selectionMarkerFill', selectionMarkerFill)
           ..add('showAxes', showAxes)
@@ -1498,6 +1513,10 @@ class ChartBuilder implements Builder<Chart, ChartBuilder> {
   bool get reflow => _$this._reflow;
   set reflow(bool reflow) => _$this._reflow = reflow;
 
+  String _renderTo;
+  String get renderTo => _$this._renderTo;
+  set renderTo(String renderTo) => _$this._renderTo = renderTo;
+
   ChartResetZoomButtonBuilder _resetZoomButton;
   ChartResetZoomButtonBuilder get resetZoomButton =>
       _$this._resetZoomButton ??= new ChartResetZoomButtonBuilder();
@@ -1585,6 +1604,7 @@ class ChartBuilder implements Builder<Chart, ChartBuilder> {
       _plotBorderWidth = _$v.plotBorderWidth;
       _polar = _$v.polar;
       _reflow = _$v.reflow;
+      _renderTo = _$v.renderTo;
       _resetZoomButton = _$v.resetZoomButton?.toBuilder();
       _selectionMarkerFill = _$v.selectionMarkerFill;
       _showAxes = _$v.showAxes;
@@ -1644,6 +1664,7 @@ class ChartBuilder implements Builder<Chart, ChartBuilder> {
             plotBorderWidth: plotBorderWidth,
             polar: polar,
             reflow: reflow,
+            renderTo: renderTo,
             resetZoomButton: _resetZoomButton?.build(),
             selectionMarkerFill: selectionMarkerFill,
             showAxes: showAxes,

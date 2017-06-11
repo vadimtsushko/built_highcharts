@@ -120,6 +120,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(BubbleSeriesZones.serializer)
       ..add(Chart.serializer)
       ..add(ChartEvents.serializer)
+      ..add(ChartOptions.serializer)
       ..add(ChartOptions3d.serializer)
       ..add(ChartOptions3dFrame.serializer)
       ..add(ChartOptions3dFrameBack.serializer)
@@ -658,152 +659,401 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(YAxisPlotLinesLabel.serializer)
       ..add(YAxisStackLabels.serializer)
       ..add(YAxisTitle.serializer)
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(Series)]),
+          () => new ListBuilder<Series>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
-          () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
-          () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
-          () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
-          () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
-          () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
-          () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
-          () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
-          () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
-          () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
-          () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(num)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(num)]),
           () => new ListBuilder<num>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(String)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(num)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(num)]),
           () => new ListBuilder<num>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(num)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(num)]),
           () => new ListBuilder<num>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(num)]),
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(num)]),
           () => new ListBuilder<num>())
-      ..addBuilderFactory(const FullType(List, const [const FullType(num)]),
-          () => new ListBuilder<num>()))
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(num)]),
+          () => new ListBuilder<num>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(num)]),
+          () => new ListBuilder<num>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(num)]),
+          () => new ListBuilder<num>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(num)]),
+          () => new ListBuilder<num>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(num)]),
+          () => new ListBuilder<num>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(num)]),
+          () => new ListBuilder<num>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(num)]),
+          () => new ListBuilder<num>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(num)]),
+          () => new ListBuilder<num>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(num)]),
+          () => new ListBuilder<num>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(num)]),
+          () => new ListBuilder<num>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltMap, const [const FullType(String), const FullType(String)]),
+          () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>())
+      ..addBuilderFactory(const FullType(BuiltMap, const [const FullType(String), const FullType(String)]), () => new MapBuilder<String, String>()))
     .build();
