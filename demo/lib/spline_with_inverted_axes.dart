@@ -39,7 +39,5 @@ void spline_with_inverted_axes(_) {
           new BuiltList<num>([80, -76.5]),
         ]))
     ]));
-  var options = toJsObject(chartOptions);
-  window.console.log(options);
-  new hc.HighchartsChart(options);
+  new hc.HighchartsChart(toJsObject(chartOptions));
 }

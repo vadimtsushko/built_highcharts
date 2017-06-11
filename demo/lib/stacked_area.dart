@@ -2,74 +2,45 @@ part of highcharts_options.samples;
 
 void stacked_area (_) {
   clearOutput();
-  ChartOptions chartOptions = new ChartOptions ()
-    ..chart = (
-        new Chart()
-          ..renderTo = "output"
-          ..type = "area"
-    )
-    ..title = (
-        new Title()..text = 'Historic and Estimated Worldwide Population Growth by Region'
-    )
-    ..subtitle = (
-        new Subtitle()..text = 'Source: Wikipedia.org'
-    )
-    ..credits = (
-      new Credits()..enabled = false
-    )
-    ..xAxis = (
-      new XAxis()
-        ..categories = ['1750', '1800', '1850', '1900', '1950', '1999', '2050']
-        ..tickmarkPlacement = 'on'
-    )
-    ..yAxis = (
-      new YAxis()
-        ..title = (
-          new YAxisTitle()..text = 'Billions'
-        )
-        ..labels = (
-          new YAxisLabels()
-            ..formatter = allowInteropCaptureThis((t) {
+  ChartOptions chartOptions = new ChartOptions ((b) => b
+    ..chart.renderTo = "output"
+    ..chart.type = "area"
+    ..title.text = 'Historic and Estimated Worldwide Population Growth by Region'
+    ..subtitle.text = 'Source: Wikipedia.org'
+    ..credits.enabled = false
+    ..xAxis.categories.addAll(['1750', '1800', '1850', '1900', '1950', '1999', '2050'])
+    ..xAxis.tickmarkPlacement = 'on'
+    ..yAxis.title.text = 'Billions'
+    ..yAxis.labels.formatter = allowInteropCaptureThis((t) {
               return "${t.value / 1000}";
             })
-        )
-    )
-    ..tooltip = (
-      new Tooltip()
-        ..shared = true
-        ..valueSuffix = ' millions'
-    )
-    ..plotOptions = (
-      new PlotOptions()
-        ..area = (
-          new PlotOptionsArea()
+    ..tooltip.shared = true
+    ..tooltip.valueSuffix = ' millions'
+    ..plotOptions.area = (
+          new PlotOptionsAreaBuilder()
             ..stacking = 'normal'
             ..lineColor = '#666666'
             ..lineWidth = 1
-            ..marker = (
-              new PlotOptionsAreaMarker()
-                ..lineWidth = 1
-                ..lineColor = '#666666'
-            )
+            ..marker.lineWidth = 1
+            ..marker.lineColor = '#666666'
         )
-    )
-    ..series = [
-      new AreaSeries ()
+    ..series.addAll([
+      new Series((b) => b
         ..name = 'Asia'
-        ..data = [502, 635, 809, 947, 1402, 3634, 5268],
-      new AreaSeries ()
+        ..data.addAll([502, 635, 809, 947, 1402, 3634, 5268])),
+      new Series ((b) => b
         ..name = 'Africa'
-        ..data = [106, 107, 111, 133, 221, 767, 1766],
-      new AreaSeries ()
+        ..data.addAll([106, 107, 111, 133, 221, 767, 1766])),
+      new Series ((b) => b
         ..name = 'Europe'
-        ..data = [163, 203, 276, 408, 547, 729, 628],
-      new AreaSeries ()
+        ..data.addAll([163, 203, 276, 408, 547, 729, 628])),
+      new Series ((b) => b
         ..name = 'America'
-        ..data = [18, 31, 54, 156, 339, 818, 1201],
-      new AreaSeries ()
+        ..data.addAll([18, 31, 54, 156, 339, 818, 1201])),
+      new Series ((b) => b
         ..name = 'Oceania'
-        ..data = [2, 2, 2, 6, 13, 30, 46]
-    ];
+        ..data.addAll([2, 2, 2, 6, 13, 30, 46]))
+    ]));
 
-  HighchartsChart chart = new HighchartsChart(chartOptions);
+  new hc.HighchartsChart(toJsObject(chartOptions));
 }
