@@ -36,6 +36,12 @@ class _$ExportingSerializer implements StructuredSerializer<Exporting> {
         ..add(serializers.serialize(object.buttons,
             specifiedType: const FullType(ExportingButtons)));
     }
+    if (object.chartOptions != null) {
+      result
+        ..add('chartOptions')
+        ..add(serializers.serialize(object.chartOptions,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
@@ -59,6 +65,12 @@ class _$ExportingSerializer implements StructuredSerializer<Exporting> {
         ..add('filename')
         ..add(serializers.serialize(object.filename,
             specifiedType: const FullType(String)));
+    }
+    if (object.formAttributes != null) {
+      result
+        ..add('formAttributes')
+        ..add(serializers.serialize(object.formAttributes,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.libURL != null) {
       result
@@ -132,6 +144,10 @@ class _$ExportingSerializer implements StructuredSerializer<Exporting> {
                   specifiedType: const FullType(ExportingButtons))
               as ExportingButtons);
           break;
+        case 'chartOptions':
+          result.chartOptions = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -147,6 +163,10 @@ class _$ExportingSerializer implements StructuredSerializer<Exporting> {
         case 'filename':
           result.filename = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'formAttributes':
+          result.formAttributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'libURL':
           result.libURL = serializers.deserialize(value,
@@ -264,6 +284,12 @@ class _$ExportingButtonsContextButtonSerializer
         ..add(serializers.serialize(object.height,
             specifiedType: const FullType(num)));
     }
+    if (object.menuItems != null) {
+      result
+        ..add('menuItems')
+        ..add(serializers.serialize(object.menuItems,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.onclick != null) {
       result
         ..add('onclick')
@@ -318,6 +344,12 @@ class _$ExportingButtonsContextButtonSerializer
         ..add(serializers.serialize(object.text,
             specifiedType: const FullType(String)));
     }
+    if (object.theme != null) {
+      result
+        ..add('theme')
+        ..add(serializers.serialize(object.theme,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.verticalAlign != null) {
       result
         ..add('verticalAlign')
@@ -370,6 +402,10 @@ class _$ExportingButtonsContextButtonSerializer
           result.height = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'menuItems':
+          result.menuItems = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'onclick':
           result.onclick = serializers.deserialize(value,
               specifiedType: const FullType(Function)) as Function;
@@ -406,6 +442,10 @@ class _$ExportingButtonsContextButtonSerializer
           result.text = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'theme':
+          result.theme = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'verticalAlign':
           result.verticalAlign = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -440,6 +480,8 @@ class _$Exporting extends Exporting {
   @override
   final ExportingButtons buttons;
   @override
+  final JsonObject chartOptions;
+  @override
   final bool enabled;
   @override
   final Function error;
@@ -447,6 +489,8 @@ class _$Exporting extends Exporting {
   final bool fallbackToExportServer;
   @override
   final String filename;
+  @override
+  final JsonObject formAttributes;
   @override
   final String libURL;
   @override
@@ -470,10 +514,12 @@ class _$Exporting extends Exporting {
   _$Exporting._(
       {this.allowHTML,
       this.buttons,
+      this.chartOptions,
       this.enabled,
       this.error,
       this.fallbackToExportServer,
       this.filename,
+      this.formAttributes,
       this.libURL,
       this.printMaxWidth,
       this.scale,
@@ -497,10 +543,12 @@ class _$Exporting extends Exporting {
     if (other is! Exporting) return false;
     return allowHTML == other.allowHTML &&
         buttons == other.buttons &&
+        chartOptions == other.chartOptions &&
         enabled == other.enabled &&
         error == other.error &&
         fallbackToExportServer == other.fallbackToExportServer &&
         filename == other.filename &&
+        formAttributes == other.formAttributes &&
         libURL == other.libURL &&
         printMaxWidth == other.printMaxWidth &&
         scale == other.scale &&
@@ -526,13 +574,22 @@ class _$Exporting extends Exporting {
                                             $jc(
                                                 $jc(
                                                     $jc(
-                                                        $jc(0,
-                                                            allowHTML.hashCode),
-                                                        buttons.hashCode),
-                                                    enabled.hashCode),
-                                                error.hashCode),
-                                            fallbackToExportServer.hashCode),
-                                        filename.hashCode),
+                                                        $jc(
+                                                            $jc(
+                                                                $jc(
+                                                                    0,
+                                                                    allowHTML
+                                                                        .hashCode),
+                                                                buttons
+                                                                    .hashCode),
+                                                            chartOptions
+                                                                .hashCode),
+                                                        enabled.hashCode),
+                                                    error.hashCode),
+                                                fallbackToExportServer
+                                                    .hashCode),
+                                            filename.hashCode),
+                                        formAttributes.hashCode),
                                     libURL.hashCode),
                                 printMaxWidth.hashCode),
                             scale.hashCode),
@@ -548,10 +605,12 @@ class _$Exporting extends Exporting {
     return (newBuiltValueToStringHelper('Exporting')
           ..add('allowHTML', allowHTML)
           ..add('buttons', buttons)
+          ..add('chartOptions', chartOptions)
           ..add('enabled', enabled)
           ..add('error', error)
           ..add('fallbackToExportServer', fallbackToExportServer)
           ..add('filename', filename)
+          ..add('formAttributes', formAttributes)
           ..add('libURL', libURL)
           ..add('printMaxWidth', printMaxWidth)
           ..add('scale', scale)
@@ -576,6 +635,11 @@ class ExportingBuilder implements Builder<Exporting, ExportingBuilder> {
       _$this._buttons ??= new ExportingButtonsBuilder();
   set buttons(ExportingButtonsBuilder buttons) => _$this._buttons = buttons;
 
+  JsonObject _chartOptions;
+  JsonObject get chartOptions => _$this._chartOptions;
+  set chartOptions(JsonObject chartOptions) =>
+      _$this._chartOptions = chartOptions;
+
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
@@ -592,6 +656,11 @@ class ExportingBuilder implements Builder<Exporting, ExportingBuilder> {
   String _filename;
   String get filename => _$this._filename;
   set filename(String filename) => _$this._filename = filename;
+
+  JsonObject _formAttributes;
+  JsonObject get formAttributes => _$this._formAttributes;
+  set formAttributes(JsonObject formAttributes) =>
+      _$this._formAttributes = formAttributes;
 
   String _libURL;
   String get libURL => _$this._libURL;
@@ -631,10 +700,12 @@ class ExportingBuilder implements Builder<Exporting, ExportingBuilder> {
     if (_$v != null) {
       _allowHTML = _$v.allowHTML;
       _buttons = _$v.buttons?.toBuilder();
+      _chartOptions = _$v.chartOptions;
       _enabled = _$v.enabled;
       _error = _$v.error;
       _fallbackToExportServer = _$v.fallbackToExportServer;
       _filename = _$v.filename;
+      _formAttributes = _$v.formAttributes;
       _libURL = _$v.libURL;
       _printMaxWidth = _$v.printMaxWidth;
       _scale = _$v.scale;
@@ -665,10 +736,12 @@ class ExportingBuilder implements Builder<Exporting, ExportingBuilder> {
         new _$Exporting._(
             allowHTML: allowHTML,
             buttons: _buttons?.build(),
+            chartOptions: chartOptions,
             enabled: enabled,
             error: error,
             fallbackToExportServer: fallbackToExportServer,
             filename: filename,
+            formAttributes: formAttributes,
             libURL: libURL,
             printMaxWidth: printMaxWidth,
             scale: scale,
@@ -777,6 +850,8 @@ class _$ExportingButtonsContextButton extends ExportingButtonsContextButton {
   @override
   final num height;
   @override
+  final JsonObject menuItems;
+  @override
   final Function onclick;
   @override
   final String symbol;
@@ -795,6 +870,8 @@ class _$ExportingButtonsContextButton extends ExportingButtonsContextButton {
   @override
   final String text;
   @override
+  final JsonObject theme;
+  @override
   final String verticalAlign;
   @override
   final num width;
@@ -811,6 +888,7 @@ class _$ExportingButtonsContextButton extends ExportingButtonsContextButton {
       {this.align,
       this.enabled,
       this.height,
+      this.menuItems,
       this.onclick,
       this.symbol,
       this.symbolFill,
@@ -820,6 +898,7 @@ class _$ExportingButtonsContextButton extends ExportingButtonsContextButton {
       this.symbolX,
       this.symbolY,
       this.text,
+      this.theme,
       this.verticalAlign,
       this.width,
       this.x,
@@ -842,6 +921,7 @@ class _$ExportingButtonsContextButton extends ExportingButtonsContextButton {
     return align == other.align &&
         enabled == other.enabled &&
         height == other.height &&
+        menuItems == other.menuItems &&
         onclick == other.onclick &&
         symbol == other.symbol &&
         symbolFill == other.symbolFill &&
@@ -851,6 +931,7 @@ class _$ExportingButtonsContextButton extends ExportingButtonsContextButton {
         symbolX == other.symbolX &&
         symbolY == other.symbolY &&
         text == other.text &&
+        theme == other.theme &&
         verticalAlign == other.verticalAlign &&
         width == other.width &&
         x == other.x &&
@@ -875,21 +956,27 @@ class _$ExportingButtonsContextButton extends ExportingButtonsContextButton {
                                                         $jc(
                                                             $jc(
                                                                 $jc(
-                                                                    0,
-                                                                    align
+                                                                    $jc(
+                                                                        $jc(
+                                                                            0,
+                                                                            align
+                                                                                .hashCode),
+                                                                        enabled
+                                                                            .hashCode),
+                                                                    height
                                                                         .hashCode),
-                                                                enabled
+                                                                menuItems
                                                                     .hashCode),
-                                                            height.hashCode),
-                                                        onclick.hashCode),
-                                                    symbol.hashCode),
-                                                symbolFill.hashCode),
-                                            symbolSize.hashCode),
-                                        symbolStroke.hashCode),
-                                    symbolStrokeWidth.hashCode),
-                                symbolX.hashCode),
-                            symbolY.hashCode),
-                        text.hashCode),
+                                                            onclick.hashCode),
+                                                        symbol.hashCode),
+                                                    symbolFill.hashCode),
+                                                symbolSize.hashCode),
+                                            symbolStroke.hashCode),
+                                        symbolStrokeWidth.hashCode),
+                                    symbolX.hashCode),
+                                symbolY.hashCode),
+                            text.hashCode),
+                        theme.hashCode),
                     verticalAlign.hashCode),
                 width.hashCode),
             x.hashCode),
@@ -902,6 +989,7 @@ class _$ExportingButtonsContextButton extends ExportingButtonsContextButton {
           ..add('align', align)
           ..add('enabled', enabled)
           ..add('height', height)
+          ..add('menuItems', menuItems)
           ..add('onclick', onclick)
           ..add('symbol', symbol)
           ..add('symbolFill', symbolFill)
@@ -911,6 +999,7 @@ class _$ExportingButtonsContextButton extends ExportingButtonsContextButton {
           ..add('symbolX', symbolX)
           ..add('symbolY', symbolY)
           ..add('text', text)
+          ..add('theme', theme)
           ..add('verticalAlign', verticalAlign)
           ..add('width', width)
           ..add('x', x)
@@ -936,6 +1025,10 @@ class ExportingButtonsContextButtonBuilder
   num _height;
   num get height => _$this._height;
   set height(num height) => _$this._height = height;
+
+  JsonObject _menuItems;
+  JsonObject get menuItems => _$this._menuItems;
+  set menuItems(JsonObject menuItems) => _$this._menuItems = menuItems;
 
   Function _onclick;
   Function get onclick => _$this._onclick;
@@ -974,6 +1067,10 @@ class ExportingButtonsContextButtonBuilder
   String get text => _$this._text;
   set text(String text) => _$this._text = text;
 
+  JsonObject _theme;
+  JsonObject get theme => _$this._theme;
+  set theme(JsonObject theme) => _$this._theme = theme;
+
   String _verticalAlign;
   String get verticalAlign => _$this._verticalAlign;
   set verticalAlign(String verticalAlign) =>
@@ -998,6 +1095,7 @@ class ExportingButtonsContextButtonBuilder
       _align = _$v.align;
       _enabled = _$v.enabled;
       _height = _$v.height;
+      _menuItems = _$v.menuItems;
       _onclick = _$v.onclick;
       _symbol = _$v.symbol;
       _symbolFill = _$v.symbolFill;
@@ -1007,6 +1105,7 @@ class ExportingButtonsContextButtonBuilder
       _symbolX = _$v.symbolX;
       _symbolY = _$v.symbolY;
       _text = _$v.text;
+      _theme = _$v.theme;
       _verticalAlign = _$v.verticalAlign;
       _width = _$v.width;
       _x = _$v.x;
@@ -1034,6 +1133,7 @@ class ExportingButtonsContextButtonBuilder
             align: align,
             enabled: enabled,
             height: height,
+            menuItems: menuItems,
             onclick: onclick,
             symbol: symbol,
             symbolFill: symbolFill,
@@ -1043,6 +1143,7 @@ class ExportingButtonsContextButtonBuilder
             symbolX: symbolX,
             symbolY: symbolY,
             text: text,
+            theme: theme,
             verticalAlign: verticalAlign,
             width: width,
             x: x,

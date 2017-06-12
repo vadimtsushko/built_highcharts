@@ -3,6 +3,7 @@ library bar_series;
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 
 part 'bar_series.g.dart';
     
@@ -127,7 +128,7 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
  </ol> 
    */
   @nullable
-  BuiltList<num> get data;
+  JsonObject get data;
   /** 
    * null 
    */
@@ -276,8 +277,8 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 <p>Note that pointPlacement needs a <a href="#plotOptions.series.pointRange">pointRange</a> to work. For column series this is computed, but for line-type series it needs to be set.</p>
 <p>Defaults to <code>null</code> in cartesian charts, <code>"between"</code> in polar charts. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get pointPlacement;
+  @nullable
+  JsonObject get pointPlacement;
   /** 
    * The X axis range that each point is valid for. This determines the width of the column. On a categorized axis, the range will be 1 by default (one category unit). On linear and datetime axes, the range will be computed as the distance between the two closest data points. 
    */
@@ -301,8 +302,8 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
   /** 
    * Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get shadow;
+  @nullable
+  JsonObject get shadow;
   /** 
    * If true, a checkbox is displayed next to the legend item to allow selecting the series. The state of the checkbox is determined by the <code>selected</code> option. 
    */
@@ -338,8 +339,8 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
   /** 
    * A wrapper object for all the series options in specific states. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get states;
+  @nullable
+  JsonObject get states;
   /** 
    * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event on a series isn't triggered until the mouse moves over another series, or out of the plot area. When false, the <code>mouseOut</code> event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the  tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc. 
    */
@@ -353,8 +354,8 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
   /** 
    * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get tooltip;
+  @nullable
+  JsonObject get tooltip;
   /** 
    * When a series contains a data array that is longer than this, only one dimensional arrays of numbers, or two dimensional arrays with x and y values are allowed. Also, only the first point is tested, and the rest are assumed to be the same format. This saves expensive data checking and indexing in long series. Set it to <code>0</code> disable. 
    */
@@ -373,13 +374,13 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
   /** 
    * When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the <a href="#xAxis.id">axis id</a> or the index of the axis in the xAxis array, with 0 being the first. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get xAxis;
+  @nullable
+  JsonObject get xAxis;
   /** 
    * When using dual or multiple y axes, this number defines which yAxis the particular series is connected to. It refers to either the <a href="#yAxis.id">axis id</a> or the index of the axis in the yAxis array, with 0 being the first. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get yAxis;
+  @nullable
+  JsonObject get yAxis;
   /** 
    * Define the visual z index of the series. 
    */
@@ -395,8 +396,8 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 
 <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the color zones are styled with the <code>.highcharts-zone-{n}</code> class, or custom classed from the <code>className</code> option (<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/">view live demo</a>).</p> 
    */
-  ///TODO Разобратья с типом
-  ///BuiltList<dynamic> get zones;
+  @nullable
+  JsonObject get zones;
   factory BarSeries([updates(BarSeriesBuilder b)]) = _$BarSeries;
   BarSeries._();
 }
@@ -420,8 +421,8 @@ abstract class BarSeriesData implements Built<BarSeriesData, BarSeriesDataBuilde
   /** 
    * Individual data label for each point. The options are the same as the ones for  <a class="internal" href="#plotOptions.series.dataLabels">plotOptions.series.dataLabels</a> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get dataLabels;
+  @nullable
+  JsonObject get dataLabels;
   /** 
    * <p><i>Requires Accessibility module</i></p>
 <p>A description of the point to add to the screen reader information about the point.</p> 
@@ -436,8 +437,8 @@ abstract class BarSeriesData implements Built<BarSeriesData, BarSeriesDataBuilde
   /** 
    * Individual point events 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get events;
+  @nullable
+  JsonObject get events;
   /** 
    * An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>. 
    */
@@ -631,8 +632,8 @@ through <code>this.series.name</code>.</td>
   /** 
    * The shadow of the box. Works best with <code>borderWidth</code> or <code>backgroundColor</code>. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get shadow;
+  @nullable
+  JsonObject get shadow;
   /** 
    * The name of a symbol to use for the border around the label. Symbols are predefined functions on the Renderer object. 
    */
@@ -781,8 +782,8 @@ abstract class BarSeriesStatesHover implements Built<BarSeriesStatesHover, BarSe
   /** 
    * Animation setting for hovering the graph in line-type series. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get animation;
+  @nullable
+  JsonObject get animation;
   /** 
    * A specific border color for the hovered point. Defaults to inherit the normal state border color. 
    */
@@ -810,8 +811,8 @@ abstract class BarSeriesStatesHover implements Built<BarSeriesStatesHover, BarSe
 
 <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the halo is styled with the <code>.highcharts-halo</code> class, with colors inherited from <code>.highcharts-color-{n}</code>.</p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get halo;
+  @nullable
+  JsonObject get halo;
   factory BarSeriesStatesHover([updates(BarSeriesStatesHoverBuilder b)]) = _$BarSeriesStatesHover;
   BarSeriesStatesHover._();
 }
@@ -820,8 +821,8 @@ abstract class BarSeriesStatesHoverHalo implements Built<BarSeriesStatesHoverHal
   /** 
    * A collection of SVG attributes to override the appearance of the halo, for example <code>fill</code>, <code>stroke</code> and <code>stroke-width</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get attributes;
+  @nullable
+  JsonObject get attributes;
   /** 
    * Opacity for the halo unless a specific fill is overridden using the <code>attributes</code> setting. Note that Highcharts is only able to apply opacity to colors of hex or rgb(a) formats. 
    */
@@ -853,8 +854,8 @@ abstract class BarSeriesTooltip implements Built<BarSeriesTooltip, BarSeriesTool
 }</pre>
 </p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get dateTimeLabelFormats;
+  @nullable
+  JsonObject get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 

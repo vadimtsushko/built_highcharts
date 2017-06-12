@@ -73,11 +73,29 @@ class _$GaugeSeriesSerializer implements StructuredSerializer<GaugeSeries> {
         ..add(serializers.serialize(object.cursor,
             specifiedType: const FullType(String)));
     }
+    if (object.data != null) {
+      result
+        ..add('data')
+        ..add(serializers.serialize(object.data,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.description != null) {
       result
         ..add('description')
         ..add(serializers.serialize(object.description,
             specifiedType: const FullType(String)));
+    }
+    if (object.dial != null) {
+      result
+        ..add('dial')
+        ..add(serializers.serialize(object.dial,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.enableMouseTracking != null) {
       result
@@ -158,6 +176,12 @@ class _$GaugeSeriesSerializer implements StructuredSerializer<GaugeSeries> {
         ..add(serializers.serialize(object.overshoot,
             specifiedType: const FullType(num)));
     }
+    if (object.pivot != null) {
+      result
+        ..add('pivot')
+        ..add(serializers.serialize(object.pivot,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.point != null) {
       result
         ..add('point')
@@ -206,6 +230,12 @@ class _$GaugeSeriesSerializer implements StructuredSerializer<GaugeSeries> {
         ..add(serializers.serialize(object.threshold,
             specifiedType: const FullType(num)));
     }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.type != null) {
       result
         ..add('type')
@@ -223,6 +253,18 @@ class _$GaugeSeriesSerializer implements StructuredSerializer<GaugeSeries> {
         ..add('wrap')
         ..add(serializers.serialize(object.wrap,
             specifiedType: const FullType(bool)));
+    }
+    if (object.xAxis != null) {
+      result
+        ..add('xAxis')
+        ..add(serializers.serialize(object.xAxis,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.yAxis != null) {
+      result
+        ..add('yAxis')
+        ..add(serializers.serialize(object.yAxis,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.zIndex != null) {
       result
@@ -269,9 +311,21 @@ class _$GaugeSeriesSerializer implements StructuredSerializer<GaugeSeries> {
           result.cursor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'data':
+          result.data = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'description':
           result.description = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'dial':
+          result.dial = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'enableMouseTracking':
           result.enableMouseTracking = serializers.deserialize(value,
@@ -328,6 +382,10 @@ class _$GaugeSeriesSerializer implements StructuredSerializer<GaugeSeries> {
           result.overshoot = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'pivot':
+          result.pivot = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'point':
           result.point.replace(serializers.deserialize(value,
                   specifiedType: const FullType(GaugeSeriesPoint))
@@ -361,6 +419,10 @@ class _$GaugeSeriesSerializer implements StructuredSerializer<GaugeSeries> {
           result.threshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'type':
           result.type = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -372,6 +434,14 @@ class _$GaugeSeriesSerializer implements StructuredSerializer<GaugeSeries> {
         case 'wrap':
           result.wrap = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'xAxis':
+          result.xAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'yAxis':
+          result.yAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'zIndex':
           result.zIndex = serializers.deserialize(value,
@@ -413,11 +483,23 @@ class _$GaugeSeriesDataSerializer
         ..add(serializers.serialize(object.colorIndex,
             specifiedType: const FullType(num)));
     }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.description != null) {
       result
         ..add('description')
         ..add(serializers.serialize(object.description,
             specifiedType: const FullType(String)));
+    }
+    if (object.events != null) {
+      result
+        ..add('events')
+        ..add(serializers.serialize(object.events,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.id != null) {
       result
@@ -476,9 +558,17 @@ class _$GaugeSeriesDataSerializer
           result.colorIndex = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'description':
           result.description = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'events':
+          result.events = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -730,6 +820,12 @@ class _$GaugeSeriesDataLabelsSerializer
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.shape != null) {
       result
         ..add('shape')
@@ -856,6 +952,10 @@ class _$GaugeSeriesDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -1356,6 +1456,12 @@ class _$GaugeSeriesTooltipSerializer
   Iterable serialize(Serializers serializers, GaugeSeriesTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -1449,6 +1555,10 @@ class _$GaugeSeriesTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -1527,7 +1637,13 @@ class _$GaugeSeries extends GaugeSeries {
   @override
   final String cursor;
   @override
+  final JsonObject data;
+  @override
+  final JsonObject dataLabels;
+  @override
   final String description;
+  @override
+  final JsonObject dial;
   @override
   final bool enableMouseTracking;
   @override
@@ -1555,6 +1671,8 @@ class _$GaugeSeries extends GaugeSeries {
   @override
   final num overshoot;
   @override
+  final JsonObject pivot;
+  @override
   final GaugeSeriesPoint point;
   @override
   final Function pointDescriptionFormatter;
@@ -1571,11 +1689,17 @@ class _$GaugeSeries extends GaugeSeries {
   @override
   final num threshold;
   @override
+  final JsonObject tooltip;
+  @override
   final String type;
   @override
   final bool visible;
   @override
   final bool wrap;
+  @override
+  final JsonObject xAxis;
+  @override
+  final JsonObject yAxis;
   @override
   final num zIndex;
 
@@ -1589,7 +1713,10 @@ class _$GaugeSeries extends GaugeSeries {
       this.color,
       this.colorIndex,
       this.cursor,
+      this.data,
+      this.dataLabels,
       this.description,
+      this.dial,
       this.enableMouseTracking,
       this.events,
       this.exposeElementToA11y,
@@ -1603,6 +1730,7 @@ class _$GaugeSeries extends GaugeSeries {
       this.name,
       this.negativeColor,
       this.overshoot,
+      this.pivot,
       this.point,
       this.pointDescriptionFormatter,
       this.selected,
@@ -1611,9 +1739,12 @@ class _$GaugeSeries extends GaugeSeries {
       this.skipKeyboardNavigation,
       this.stickyTracking,
       this.threshold,
+      this.tooltip,
       this.type,
       this.visible,
       this.wrap,
+      this.xAxis,
+      this.yAxis,
       this.zIndex})
       : super._();
 
@@ -1634,7 +1765,10 @@ class _$GaugeSeries extends GaugeSeries {
         color == other.color &&
         colorIndex == other.colorIndex &&
         cursor == other.cursor &&
+        data == other.data &&
+        dataLabels == other.dataLabels &&
         description == other.description &&
+        dial == other.dial &&
         enableMouseTracking == other.enableMouseTracking &&
         events == other.events &&
         exposeElementToA11y == other.exposeElementToA11y &&
@@ -1648,6 +1782,7 @@ class _$GaugeSeries extends GaugeSeries {
         name == other.name &&
         negativeColor == other.negativeColor &&
         overshoot == other.overshoot &&
+        pivot == other.pivot &&
         point == other.point &&
         pointDescriptionFormatter == other.pointDescriptionFormatter &&
         selected == other.selected &&
@@ -1656,9 +1791,12 @@ class _$GaugeSeries extends GaugeSeries {
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         stickyTracking == other.stickyTracking &&
         threshold == other.threshold &&
+        tooltip == other.tooltip &&
         type == other.type &&
         visible == other.visible &&
         wrap == other.wrap &&
+        xAxis == other.xAxis &&
+        yAxis == other.yAxis &&
         zIndex == other.zIndex;
   }
 
@@ -1682,25 +1820,25 @@ class _$GaugeSeries extends GaugeSeries {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), cursor.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), id.hashCode),
-                                                                                index.hashCode),
-                                                                            keys.hashCode),
-                                                                        legendIndex.hashCode),
-                                                                    linkedTo.hashCode),
-                                                                name.hashCode),
-                                                            negativeColor.hashCode),
-                                                        overshoot.hashCode),
-                                                    point.hashCode),
-                                                pointDescriptionFormatter.hashCode),
-                                            selected.hashCode),
-                                        showCheckbox.hashCode),
-                                    showInLegend.hashCode),
-                                skipKeyboardNavigation.hashCode),
-                            stickyTracking.hashCode),
-                        threshold.hashCode),
-                    type.hashCode),
-                visible.hashCode),
-            wrap.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), cursor.hashCode), data.hashCode), dataLabels.hashCode), description.hashCode), dial.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), id.hashCode), index.hashCode), keys.hashCode), legendIndex.hashCode), linkedTo.hashCode),
+                                                                                name.hashCode),
+                                                                            negativeColor.hashCode),
+                                                                        overshoot.hashCode),
+                                                                    pivot.hashCode),
+                                                                point.hashCode),
+                                                            pointDescriptionFormatter.hashCode),
+                                                        selected.hashCode),
+                                                    showCheckbox.hashCode),
+                                                showInLegend.hashCode),
+                                            skipKeyboardNavigation.hashCode),
+                                        stickyTracking.hashCode),
+                                    threshold.hashCode),
+                                tooltip.hashCode),
+                            type.hashCode),
+                        visible.hashCode),
+                    wrap.hashCode),
+                xAxis.hashCode),
+            yAxis.hashCode),
         zIndex.hashCode));
   }
 
@@ -1713,7 +1851,10 @@ class _$GaugeSeries extends GaugeSeries {
           ..add('color', color)
           ..add('colorIndex', colorIndex)
           ..add('cursor', cursor)
+          ..add('data', data)
+          ..add('dataLabels', dataLabels)
           ..add('description', description)
+          ..add('dial', dial)
           ..add('enableMouseTracking', enableMouseTracking)
           ..add('events', events)
           ..add('exposeElementToA11y', exposeElementToA11y)
@@ -1727,6 +1868,7 @@ class _$GaugeSeries extends GaugeSeries {
           ..add('name', name)
           ..add('negativeColor', negativeColor)
           ..add('overshoot', overshoot)
+          ..add('pivot', pivot)
           ..add('point', point)
           ..add('pointDescriptionFormatter', pointDescriptionFormatter)
           ..add('selected', selected)
@@ -1735,9 +1877,12 @@ class _$GaugeSeries extends GaugeSeries {
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('stickyTracking', stickyTracking)
           ..add('threshold', threshold)
+          ..add('tooltip', tooltip)
           ..add('type', type)
           ..add('visible', visible)
           ..add('wrap', wrap)
+          ..add('xAxis', xAxis)
+          ..add('yAxis', yAxis)
           ..add('zIndex', zIndex))
         .toString();
   }
@@ -1771,9 +1916,21 @@ class GaugeSeriesBuilder implements Builder<GaugeSeries, GaugeSeriesBuilder> {
   String get cursor => _$this._cursor;
   set cursor(String cursor) => _$this._cursor = cursor;
 
+  JsonObject _data;
+  JsonObject get data => _$this._data;
+  set data(JsonObject data) => _$this._data = data;
+
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
+
   String _description;
   String get description => _$this._description;
   set description(String description) => _$this._description = description;
+
+  JsonObject _dial;
+  JsonObject get dial => _$this._dial;
+  set dial(JsonObject dial) => _$this._dial = dial;
 
   bool _enableMouseTracking;
   bool get enableMouseTracking => _$this._enableMouseTracking;
@@ -1833,6 +1990,10 @@ class GaugeSeriesBuilder implements Builder<GaugeSeries, GaugeSeriesBuilder> {
   num get overshoot => _$this._overshoot;
   set overshoot(num overshoot) => _$this._overshoot = overshoot;
 
+  JsonObject _pivot;
+  JsonObject get pivot => _$this._pivot;
+  set pivot(JsonObject pivot) => _$this._pivot = pivot;
+
   GaugeSeriesPointBuilder _point;
   GaugeSeriesPointBuilder get point =>
       _$this._point ??= new GaugeSeriesPointBuilder();
@@ -1869,6 +2030,10 @@ class GaugeSeriesBuilder implements Builder<GaugeSeries, GaugeSeriesBuilder> {
   num get threshold => _$this._threshold;
   set threshold(num threshold) => _$this._threshold = threshold;
 
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
+
   String _type;
   String get type => _$this._type;
   set type(String type) => _$this._type = type;
@@ -1880,6 +2045,14 @@ class GaugeSeriesBuilder implements Builder<GaugeSeries, GaugeSeriesBuilder> {
   bool _wrap;
   bool get wrap => _$this._wrap;
   set wrap(bool wrap) => _$this._wrap = wrap;
+
+  JsonObject _xAxis;
+  JsonObject get xAxis => _$this._xAxis;
+  set xAxis(JsonObject xAxis) => _$this._xAxis = xAxis;
+
+  JsonObject _yAxis;
+  JsonObject get yAxis => _$this._yAxis;
+  set yAxis(JsonObject yAxis) => _$this._yAxis = yAxis;
 
   num _zIndex;
   num get zIndex => _$this._zIndex;
@@ -1895,7 +2068,10 @@ class GaugeSeriesBuilder implements Builder<GaugeSeries, GaugeSeriesBuilder> {
       _color = _$v.color;
       _colorIndex = _$v.colorIndex;
       _cursor = _$v.cursor;
+      _data = _$v.data;
+      _dataLabels = _$v.dataLabels;
       _description = _$v.description;
+      _dial = _$v.dial;
       _enableMouseTracking = _$v.enableMouseTracking;
       _events = _$v.events?.toBuilder();
       _exposeElementToA11y = _$v.exposeElementToA11y;
@@ -1909,6 +2085,7 @@ class GaugeSeriesBuilder implements Builder<GaugeSeries, GaugeSeriesBuilder> {
       _name = _$v.name;
       _negativeColor = _$v.negativeColor;
       _overshoot = _$v.overshoot;
+      _pivot = _$v.pivot;
       _point = _$v.point?.toBuilder();
       _pointDescriptionFormatter = _$v.pointDescriptionFormatter;
       _selected = _$v.selected;
@@ -1917,9 +2094,12 @@ class GaugeSeriesBuilder implements Builder<GaugeSeries, GaugeSeriesBuilder> {
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _stickyTracking = _$v.stickyTracking;
       _threshold = _$v.threshold;
+      _tooltip = _$v.tooltip;
       _type = _$v.type;
       _visible = _$v.visible;
       _wrap = _$v.wrap;
+      _xAxis = _$v.xAxis;
+      _yAxis = _$v.yAxis;
       _zIndex = _$v.zIndex;
       _$v = null;
     }
@@ -1947,7 +2127,10 @@ class GaugeSeriesBuilder implements Builder<GaugeSeries, GaugeSeriesBuilder> {
             color: color,
             colorIndex: colorIndex,
             cursor: cursor,
+            data: data,
+            dataLabels: dataLabels,
             description: description,
+            dial: dial,
             enableMouseTracking: enableMouseTracking,
             events: _events?.build(),
             exposeElementToA11y: exposeElementToA11y,
@@ -1961,6 +2144,7 @@ class GaugeSeriesBuilder implements Builder<GaugeSeries, GaugeSeriesBuilder> {
             name: name,
             negativeColor: negativeColor,
             overshoot: overshoot,
+            pivot: pivot,
             point: _point?.build(),
             pointDescriptionFormatter: pointDescriptionFormatter,
             selected: selected,
@@ -1969,9 +2153,12 @@ class GaugeSeriesBuilder implements Builder<GaugeSeries, GaugeSeriesBuilder> {
             skipKeyboardNavigation: skipKeyboardNavigation,
             stickyTracking: stickyTracking,
             threshold: threshold,
+            tooltip: tooltip,
             type: type,
             visible: visible,
             wrap: wrap,
+            xAxis: xAxis,
+            yAxis: yAxis,
             zIndex: zIndex);
     replace(result);
     return result;
@@ -1991,7 +2178,11 @@ class _$GaugeSeriesData extends GaugeSeriesData {
   @override
   final num colorIndex;
   @override
+  final JsonObject dataLabels;
+  @override
   final String description;
+  @override
+  final JsonObject events;
   @override
   final String id;
   @override
@@ -2010,7 +2201,9 @@ class _$GaugeSeriesData extends GaugeSeriesData {
       {this.className,
       this.color,
       this.colorIndex,
+      this.dataLabels,
       this.description,
+      this.events,
       this.id,
       this.labelrank,
       this.name,
@@ -2033,7 +2226,9 @@ class _$GaugeSeriesData extends GaugeSeriesData {
     return className == other.className &&
         color == other.color &&
         colorIndex == other.colorIndex &&
+        dataLabels == other.dataLabels &&
         description == other.description &&
+        events == other.events &&
         id == other.id &&
         labelrank == other.labelrank &&
         name == other.name &&
@@ -2049,9 +2244,15 @@ class _$GaugeSeriesData extends GaugeSeriesData {
                 $jc(
                     $jc(
                         $jc(
-                            $jc($jc($jc(0, className.hashCode), color.hashCode),
-                                colorIndex.hashCode),
-                            description.hashCode),
+                            $jc(
+                                $jc(
+                                    $jc(
+                                        $jc($jc(0, className.hashCode),
+                                            color.hashCode),
+                                        colorIndex.hashCode),
+                                    dataLabels.hashCode),
+                                description.hashCode),
+                            events.hashCode),
                         id.hashCode),
                     labelrank.hashCode),
                 name.hashCode),
@@ -2065,7 +2266,9 @@ class _$GaugeSeriesData extends GaugeSeriesData {
           ..add('className', className)
           ..add('color', color)
           ..add('colorIndex', colorIndex)
+          ..add('dataLabels', dataLabels)
           ..add('description', description)
+          ..add('events', events)
           ..add('id', id)
           ..add('labelrank', labelrank)
           ..add('name', name)
@@ -2091,9 +2294,17 @@ class GaugeSeriesDataBuilder
   num get colorIndex => _$this._colorIndex;
   set colorIndex(num colorIndex) => _$this._colorIndex = colorIndex;
 
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
+
   String _description;
   String get description => _$this._description;
   set description(String description) => _$this._description = description;
+
+  JsonObject _events;
+  JsonObject get events => _$this._events;
+  set events(JsonObject events) => _$this._events = events;
 
   String _id;
   String get id => _$this._id;
@@ -2122,7 +2333,9 @@ class GaugeSeriesDataBuilder
       _className = _$v.className;
       _color = _$v.color;
       _colorIndex = _$v.colorIndex;
+      _dataLabels = _$v.dataLabels;
       _description = _$v.description;
+      _events = _$v.events;
       _id = _$v.id;
       _labelrank = _$v.labelrank;
       _name = _$v.name;
@@ -2151,7 +2364,9 @@ class GaugeSeriesDataBuilder
             className: className,
             color: color,
             colorIndex: colorIndex,
+            dataLabels: dataLabels,
             description: description,
+            events: events,
             id: id,
             labelrank: labelrank,
             name: name,
@@ -2362,6 +2577,8 @@ class _$GaugeSeriesDataLabels extends GaugeSeriesDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -2398,6 +2615,7 @@ class _$GaugeSeriesDataLabels extends GaugeSeriesDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -2436,6 +2654,7 @@ class _$GaugeSeriesDataLabels extends GaugeSeriesDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -2465,19 +2684,19 @@ class _$GaugeSeriesDataLabels extends GaugeSeriesDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -2507,6 +2726,7 @@ class _$GaugeSeriesDataLabels extends GaugeSeriesDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -2591,6 +2811,10 @@ class GaugeSeriesDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -2642,6 +2866,7 @@ class GaugeSeriesDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -2686,6 +2911,7 @@ class GaugeSeriesDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -3412,6 +3638,8 @@ class GaugeSeriesPointEventsBuilder
 
 class _$GaugeSeriesTooltip extends GaugeSeriesTooltip {
   @override
+  final JsonObject dateTimeLabelFormats;
+  @override
   final bool followPointer;
   @override
   final bool followTouchMove;
@@ -3442,7 +3670,8 @@ class _$GaugeSeriesTooltip extends GaugeSeriesTooltip {
       (new GaugeSeriesTooltipBuilder()..update(updates)).build();
 
   _$GaugeSeriesTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -3469,7 +3698,8 @@ class _$GaugeSeriesTooltip extends GaugeSeriesTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! GaugeSeriesTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -3498,7 +3728,11 @@ class _$GaugeSeriesTooltip extends GaugeSeriesTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -3517,6 +3751,7 @@ class _$GaugeSeriesTooltip extends GaugeSeriesTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('GaugeSeriesTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -3537,6 +3772,11 @@ class _$GaugeSeriesTooltip extends GaugeSeriesTooltip {
 class GaugeSeriesTooltipBuilder
     implements Builder<GaugeSeriesTooltip, GaugeSeriesTooltipBuilder> {
   _$GaugeSeriesTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -3597,6 +3837,7 @@ class GaugeSeriesTooltipBuilder
 
   GaugeSeriesTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -3630,6 +3871,7 @@ class GaugeSeriesTooltipBuilder
   _$GaugeSeriesTooltip build() {
     final result = _$v ??
         new _$GaugeSeriesTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,

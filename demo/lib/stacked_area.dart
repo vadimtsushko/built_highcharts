@@ -16,8 +16,7 @@ void stacked_area (_) {
             })
     ..tooltip.shared = true
     ..tooltip.valueSuffix = ' millions'
-    ..plotOptions.area = (
-          new PlotOptionsAreaBuilder()
+    ..plotOptions.area.update((b) =>b
             ..stacking = 'normal'
             ..lineColor = '#666666'
             ..lineWidth = 1

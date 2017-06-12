@@ -9,7 +9,8 @@ void x_date_format (_) {
     ..xAxis.type = "datetime"
     ..tooltip.xDateFormat = "%Y-%m-%d"
     ..tooltip.shared = true
-    ..plotOptions.series.pointStart = new DateTime(2012).millisecondsSinceEpoch
+    ..plotOptions.line.pointStart = new DateTime(2012).millisecondsSinceEpoch
+//    ..plotOptions.series.pointStart = new DateTime(2012).millisecondsSinceEpoch
     ..plotOptions.series.pointInterval = 1
     ..plotOptions.series.pointIntervalUnit = "month"
     ..series.addAll([

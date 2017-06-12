@@ -66,6 +66,18 @@ class _$SolidgaugeSeriesSerializer
         ..add(serializers.serialize(object.cursor,
             specifiedType: const FullType(String)));
     }
+    if (object.data != null) {
+      result
+        ..add('data')
+        ..add(serializers.serialize(object.data,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.description != null) {
       result
         ..add('description')
@@ -199,6 +211,12 @@ class _$SolidgaugeSeriesSerializer
         ..add(serializers.serialize(object.threshold,
             specifiedType: const FullType(num)));
     }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.type != null) {
       result
         ..add('type')
@@ -216,6 +234,18 @@ class _$SolidgaugeSeriesSerializer
         ..add('wrap')
         ..add(serializers.serialize(object.wrap,
             specifiedType: const FullType(bool)));
+    }
+    if (object.xAxis != null) {
+      result
+        ..add('xAxis')
+        ..add(serializers.serialize(object.xAxis,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.yAxis != null) {
+      result
+        ..add('yAxis')
+        ..add(serializers.serialize(object.yAxis,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.zIndex != null) {
       result
@@ -257,6 +287,14 @@ class _$SolidgaugeSeriesSerializer
         case 'cursor':
           result.cursor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'data':
+          result.data = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'description':
           result.description = serializers.deserialize(value,
@@ -350,6 +388,10 @@ class _$SolidgaugeSeriesSerializer
           result.threshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'type':
           result.type = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -361,6 +403,14 @@ class _$SolidgaugeSeriesSerializer
         case 'wrap':
           result.wrap = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'xAxis':
+          result.xAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'yAxis':
+          result.yAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'zIndex':
           result.zIndex = serializers.deserialize(value,
@@ -405,17 +455,35 @@ class _$SolidgaugeSeriesDataSerializer
         ..add(serializers.serialize(object.colorIndex,
             specifiedType: const FullType(num)));
     }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.description != null) {
       result
         ..add('description')
         ..add(serializers.serialize(object.description,
             specifiedType: const FullType(String)));
     }
+    if (object.events != null) {
+      result
+        ..add('events')
+        ..add(serializers.serialize(object.events,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.id != null) {
       result
         ..add('id')
         ..add(serializers.serialize(object.id,
             specifiedType: const FullType(String)));
+    }
+    if (object.innerRadius != null) {
+      result
+        ..add('innerRadius')
+        ..add(serializers.serialize(object.innerRadius,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.labelrank != null) {
       result
@@ -428,6 +496,12 @@ class _$SolidgaugeSeriesDataSerializer
         ..add('name')
         ..add(serializers.serialize(object.name,
             specifiedType: const FullType(String)));
+    }
+    if (object.radius != null) {
+      result
+        ..add('radius')
+        ..add(serializers.serialize(object.radius,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.selected != null) {
       result
@@ -468,13 +542,25 @@ class _$SolidgaugeSeriesDataSerializer
           result.colorIndex = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'description':
           result.description = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'events':
+          result.events = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'id':
           result.id = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'innerRadius':
+          result.innerRadius = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'labelrank':
           result.labelrank = serializers.deserialize(value,
@@ -483,6 +569,10 @@ class _$SolidgaugeSeriesDataSerializer
         case 'name':
           result.name = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'radius':
+          result.radius = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'selected':
           result.selected = serializers.deserialize(value,
@@ -722,6 +812,12 @@ class _$SolidgaugeSeriesDataLabelsSerializer
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.shape != null) {
       result
         ..add('shape')
@@ -848,6 +944,10 @@ class _$SolidgaugeSeriesDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -1174,6 +1274,12 @@ class _$SolidgaugeSeriesTooltipSerializer
   Iterable serialize(Serializers serializers, SolidgaugeSeriesTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -1268,6 +1374,10 @@ class _$SolidgaugeSeriesTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -1344,6 +1454,10 @@ class _$SolidgaugeSeries extends SolidgaugeSeries {
   @override
   final String cursor;
   @override
+  final JsonObject data;
+  @override
+  final JsonObject dataLabels;
+  @override
   final String description;
   @override
   final bool enableMouseTracking;
@@ -1388,11 +1502,17 @@ class _$SolidgaugeSeries extends SolidgaugeSeries {
   @override
   final num threshold;
   @override
+  final JsonObject tooltip;
+  @override
   final String type;
   @override
   final bool visible;
   @override
   final bool wrap;
+  @override
+  final JsonObject xAxis;
+  @override
+  final JsonObject yAxis;
   @override
   final num zIndex;
 
@@ -1405,6 +1525,8 @@ class _$SolidgaugeSeries extends SolidgaugeSeries {
       this.className,
       this.colorIndex,
       this.cursor,
+      this.data,
+      this.dataLabels,
       this.description,
       this.enableMouseTracking,
       this.events,
@@ -1427,9 +1549,12 @@ class _$SolidgaugeSeries extends SolidgaugeSeries {
       this.skipKeyboardNavigation,
       this.stickyTracking,
       this.threshold,
+      this.tooltip,
       this.type,
       this.visible,
       this.wrap,
+      this.xAxis,
+      this.yAxis,
       this.zIndex})
       : super._();
 
@@ -1450,6 +1575,8 @@ class _$SolidgaugeSeries extends SolidgaugeSeries {
         className == other.className &&
         colorIndex == other.colorIndex &&
         cursor == other.cursor &&
+        data == other.data &&
+        dataLabels == other.dataLabels &&
         description == other.description &&
         enableMouseTracking == other.enableMouseTracking &&
         events == other.events &&
@@ -1472,9 +1599,12 @@ class _$SolidgaugeSeries extends SolidgaugeSeries {
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         stickyTracking == other.stickyTracking &&
         threshold == other.threshold &&
+        tooltip == other.tooltip &&
         type == other.type &&
         visible == other.visible &&
         wrap == other.wrap &&
+        xAxis == other.xAxis &&
+        yAxis == other.yAxis &&
         zIndex == other.zIndex;
   }
 
@@ -1498,25 +1628,25 @@ class _$SolidgaugeSeries extends SolidgaugeSeries {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, animation.hashCode), animationLimit.hashCode), className.hashCode), colorIndex.hashCode), cursor.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), id.hashCode),
-                                                                                index.hashCode),
-                                                                            keys.hashCode),
-                                                                        legendIndex.hashCode),
-                                                                    linecap.hashCode),
-                                                                name.hashCode),
-                                                            overshoot.hashCode),
-                                                        point.hashCode),
-                                                    pointDescriptionFormatter.hashCode),
-                                                rounded.hashCode),
-                                            selected.hashCode),
-                                        showCheckbox.hashCode),
-                                    showInLegend.hashCode),
-                                skipKeyboardNavigation.hashCode),
-                            stickyTracking.hashCode),
-                        threshold.hashCode),
-                    type.hashCode),
-                visible.hashCode),
-            wrap.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, animation.hashCode), animationLimit.hashCode), className.hashCode), colorIndex.hashCode), cursor.hashCode), data.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), id.hashCode), index.hashCode), keys.hashCode), legendIndex.hashCode),
+                                                                                linecap.hashCode),
+                                                                            name.hashCode),
+                                                                        overshoot.hashCode),
+                                                                    point.hashCode),
+                                                                pointDescriptionFormatter.hashCode),
+                                                            rounded.hashCode),
+                                                        selected.hashCode),
+                                                    showCheckbox.hashCode),
+                                                showInLegend.hashCode),
+                                            skipKeyboardNavigation.hashCode),
+                                        stickyTracking.hashCode),
+                                    threshold.hashCode),
+                                tooltip.hashCode),
+                            type.hashCode),
+                        visible.hashCode),
+                    wrap.hashCode),
+                xAxis.hashCode),
+            yAxis.hashCode),
         zIndex.hashCode));
   }
 
@@ -1528,6 +1658,8 @@ class _$SolidgaugeSeries extends SolidgaugeSeries {
           ..add('className', className)
           ..add('colorIndex', colorIndex)
           ..add('cursor', cursor)
+          ..add('data', data)
+          ..add('dataLabels', dataLabels)
           ..add('description', description)
           ..add('enableMouseTracking', enableMouseTracking)
           ..add('events', events)
@@ -1550,9 +1682,12 @@ class _$SolidgaugeSeries extends SolidgaugeSeries {
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('stickyTracking', stickyTracking)
           ..add('threshold', threshold)
+          ..add('tooltip', tooltip)
           ..add('type', type)
           ..add('visible', visible)
           ..add('wrap', wrap)
+          ..add('xAxis', xAxis)
+          ..add('yAxis', yAxis)
           ..add('zIndex', zIndex))
         .toString();
   }
@@ -1582,6 +1717,14 @@ class SolidgaugeSeriesBuilder
   String _cursor;
   String get cursor => _$this._cursor;
   set cursor(String cursor) => _$this._cursor = cursor;
+
+  JsonObject _data;
+  JsonObject get data => _$this._data;
+  set data(JsonObject data) => _$this._data = data;
+
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
 
   String _description;
   String get description => _$this._description;
@@ -1680,6 +1823,10 @@ class SolidgaugeSeriesBuilder
   num get threshold => _$this._threshold;
   set threshold(num threshold) => _$this._threshold = threshold;
 
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
+
   String _type;
   String get type => _$this._type;
   set type(String type) => _$this._type = type;
@@ -1691,6 +1838,14 @@ class SolidgaugeSeriesBuilder
   bool _wrap;
   bool get wrap => _$this._wrap;
   set wrap(bool wrap) => _$this._wrap = wrap;
+
+  JsonObject _xAxis;
+  JsonObject get xAxis => _$this._xAxis;
+  set xAxis(JsonObject xAxis) => _$this._xAxis = xAxis;
+
+  JsonObject _yAxis;
+  JsonObject get yAxis => _$this._yAxis;
+  set yAxis(JsonObject yAxis) => _$this._yAxis = yAxis;
 
   num _zIndex;
   num get zIndex => _$this._zIndex;
@@ -1705,6 +1860,8 @@ class SolidgaugeSeriesBuilder
       _className = _$v.className;
       _colorIndex = _$v.colorIndex;
       _cursor = _$v.cursor;
+      _data = _$v.data;
+      _dataLabels = _$v.dataLabels;
       _description = _$v.description;
       _enableMouseTracking = _$v.enableMouseTracking;
       _events = _$v.events?.toBuilder();
@@ -1727,9 +1884,12 @@ class SolidgaugeSeriesBuilder
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _stickyTracking = _$v.stickyTracking;
       _threshold = _$v.threshold;
+      _tooltip = _$v.tooltip;
       _type = _$v.type;
       _visible = _$v.visible;
       _wrap = _$v.wrap;
+      _xAxis = _$v.xAxis;
+      _yAxis = _$v.yAxis;
       _zIndex = _$v.zIndex;
       _$v = null;
     }
@@ -1756,6 +1916,8 @@ class SolidgaugeSeriesBuilder
             className: className,
             colorIndex: colorIndex,
             cursor: cursor,
+            data: data,
+            dataLabels: dataLabels,
             description: description,
             enableMouseTracking: enableMouseTracking,
             events: _events?.build(),
@@ -1778,9 +1940,12 @@ class SolidgaugeSeriesBuilder
             skipKeyboardNavigation: skipKeyboardNavigation,
             stickyTracking: stickyTracking,
             threshold: threshold,
+            tooltip: tooltip,
             type: type,
             visible: visible,
             wrap: wrap,
+            xAxis: xAxis,
+            yAxis: yAxis,
             zIndex: zIndex);
     replace(result);
     return result;
@@ -1800,13 +1965,21 @@ class _$SolidgaugeSeriesData extends SolidgaugeSeriesData {
   @override
   final num colorIndex;
   @override
+  final JsonObject dataLabels;
+  @override
   final String description;
   @override
+  final JsonObject events;
+  @override
   final String id;
+  @override
+  final JsonObject innerRadius;
   @override
   final num labelrank;
   @override
   final String name;
+  @override
+  final JsonObject radius;
   @override
   final bool selected;
   @override
@@ -1820,10 +1993,14 @@ class _$SolidgaugeSeriesData extends SolidgaugeSeriesData {
       {this.className,
       this.color,
       this.colorIndex,
+      this.dataLabels,
       this.description,
+      this.events,
       this.id,
+      this.innerRadius,
       this.labelrank,
       this.name,
+      this.radius,
       this.selected,
       this.y})
       : super._();
@@ -1843,10 +2020,14 @@ class _$SolidgaugeSeriesData extends SolidgaugeSeriesData {
     return className == other.className &&
         color == other.color &&
         colorIndex == other.colorIndex &&
+        dataLabels == other.dataLabels &&
         description == other.description &&
+        events == other.events &&
         id == other.id &&
+        innerRadius == other.innerRadius &&
         labelrank == other.labelrank &&
         name == other.name &&
+        radius == other.radius &&
         selected == other.selected &&
         y == other.y;
   }
@@ -1859,12 +2040,22 @@ class _$SolidgaugeSeriesData extends SolidgaugeSeriesData {
                 $jc(
                     $jc(
                         $jc(
-                            $jc($jc($jc(0, className.hashCode), color.hashCode),
-                                colorIndex.hashCode),
-                            description.hashCode),
-                        id.hashCode),
-                    labelrank.hashCode),
-                name.hashCode),
+                            $jc(
+                                $jc(
+                                    $jc(
+                                        $jc(
+                                            $jc(
+                                                $jc($jc(0, className.hashCode),
+                                                    color.hashCode),
+                                                colorIndex.hashCode),
+                                            dataLabels.hashCode),
+                                        description.hashCode),
+                                    events.hashCode),
+                                id.hashCode),
+                            innerRadius.hashCode),
+                        labelrank.hashCode),
+                    name.hashCode),
+                radius.hashCode),
             selected.hashCode),
         y.hashCode));
   }
@@ -1875,10 +2066,14 @@ class _$SolidgaugeSeriesData extends SolidgaugeSeriesData {
           ..add('className', className)
           ..add('color', color)
           ..add('colorIndex', colorIndex)
+          ..add('dataLabels', dataLabels)
           ..add('description', description)
+          ..add('events', events)
           ..add('id', id)
+          ..add('innerRadius', innerRadius)
           ..add('labelrank', labelrank)
           ..add('name', name)
+          ..add('radius', radius)
           ..add('selected', selected)
           ..add('y', y))
         .toString();
@@ -1901,13 +2096,25 @@ class SolidgaugeSeriesDataBuilder
   num get colorIndex => _$this._colorIndex;
   set colorIndex(num colorIndex) => _$this._colorIndex = colorIndex;
 
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
+
   String _description;
   String get description => _$this._description;
   set description(String description) => _$this._description = description;
 
+  JsonObject _events;
+  JsonObject get events => _$this._events;
+  set events(JsonObject events) => _$this._events = events;
+
   String _id;
   String get id => _$this._id;
   set id(String id) => _$this._id = id;
+
+  JsonObject _innerRadius;
+  JsonObject get innerRadius => _$this._innerRadius;
+  set innerRadius(JsonObject innerRadius) => _$this._innerRadius = innerRadius;
 
   num _labelrank;
   num get labelrank => _$this._labelrank;
@@ -1916,6 +2123,10 @@ class SolidgaugeSeriesDataBuilder
   String _name;
   String get name => _$this._name;
   set name(String name) => _$this._name = name;
+
+  JsonObject _radius;
+  JsonObject get radius => _$this._radius;
+  set radius(JsonObject radius) => _$this._radius = radius;
 
   bool _selected;
   bool get selected => _$this._selected;
@@ -1932,10 +2143,14 @@ class SolidgaugeSeriesDataBuilder
       _className = _$v.className;
       _color = _$v.color;
       _colorIndex = _$v.colorIndex;
+      _dataLabels = _$v.dataLabels;
       _description = _$v.description;
+      _events = _$v.events;
       _id = _$v.id;
+      _innerRadius = _$v.innerRadius;
       _labelrank = _$v.labelrank;
       _name = _$v.name;
+      _radius = _$v.radius;
       _selected = _$v.selected;
       _y = _$v.y;
       _$v = null;
@@ -1961,10 +2176,14 @@ class SolidgaugeSeriesDataBuilder
             className: className,
             color: color,
             colorIndex: colorIndex,
+            dataLabels: dataLabels,
             description: description,
+            events: events,
             id: id,
+            innerRadius: innerRadius,
             labelrank: labelrank,
             name: name,
+            radius: radius,
             selected: selected,
             y: y);
     replace(result);
@@ -2174,6 +2393,8 @@ class _$SolidgaugeSeriesDataLabels extends SolidgaugeSeriesDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -2210,6 +2431,7 @@ class _$SolidgaugeSeriesDataLabels extends SolidgaugeSeriesDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -2249,6 +2471,7 @@ class _$SolidgaugeSeriesDataLabels extends SolidgaugeSeriesDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -2278,19 +2501,19 @@ class _$SolidgaugeSeriesDataLabels extends SolidgaugeSeriesDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -2320,6 +2543,7 @@ class _$SolidgaugeSeriesDataLabels extends SolidgaugeSeriesDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -2405,6 +2629,10 @@ class SolidgaugeSeriesDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -2456,6 +2684,7 @@ class SolidgaugeSeriesDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -2500,6 +2729,7 @@ class SolidgaugeSeriesDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -2942,6 +3172,8 @@ class SolidgaugeSeriesPointEventsBuilder
 
 class _$SolidgaugeSeriesTooltip extends SolidgaugeSeriesTooltip {
   @override
+  final JsonObject dateTimeLabelFormats;
+  @override
   final bool followPointer;
   @override
   final bool followTouchMove;
@@ -2973,7 +3205,8 @@ class _$SolidgaugeSeriesTooltip extends SolidgaugeSeriesTooltip {
       (new SolidgaugeSeriesTooltipBuilder()..update(updates)).build();
 
   _$SolidgaugeSeriesTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -3001,7 +3234,8 @@ class _$SolidgaugeSeriesTooltip extends SolidgaugeSeriesTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! SolidgaugeSeriesTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -3030,7 +3264,11 @@ class _$SolidgaugeSeriesTooltip extends SolidgaugeSeriesTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -3049,6 +3287,7 @@ class _$SolidgaugeSeriesTooltip extends SolidgaugeSeriesTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('SolidgaugeSeriesTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -3070,6 +3309,11 @@ class SolidgaugeSeriesTooltipBuilder
     implements
         Builder<SolidgaugeSeriesTooltip, SolidgaugeSeriesTooltipBuilder> {
   _$SolidgaugeSeriesTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -3130,6 +3374,7 @@ class SolidgaugeSeriesTooltipBuilder
 
   SolidgaugeSeriesTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -3163,6 +3408,7 @@ class SolidgaugeSeriesTooltipBuilder
   _$SolidgaugeSeriesTooltip build() {
     final result = _$v ??
         new _$SolidgaugeSeriesTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,

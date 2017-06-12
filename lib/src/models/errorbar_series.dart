@@ -3,6 +3,7 @@ library errorbar_series;
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 
 part 'errorbar_series.g.dart';
     
@@ -84,8 +85,8 @@ abstract class ErrorbarSeries implements Built<ErrorbarSeries, ErrorbarSeriesBui
 }]</pre></li>
  </ol> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get data;
+  @nullable
+  JsonObject get data;
   /** 
    * Depth of the columns in a 3D column chart. Requires <code>highcharts-3d.js</code>. 
    */
@@ -219,8 +220,8 @@ abstract class ErrorbarSeries implements Built<ErrorbarSeries, ErrorbarSeriesBui
 <p>Note that pointPlacement needs a <a href="#plotOptions.series.pointRange">pointRange</a> to work. For column series this is computed, but for line-type series it needs to be set.</p>
 <p>Defaults to <code>null</code> in cartesian charts, <code>"between"</code> in polar charts. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get pointPlacement;
+  @nullable
+  JsonObject get pointPlacement;
   /** 
    * The X axis range that each point is valid for. This determines the width of the column. On a categorized axis, the range will be 1 by default (one category unit). On linear and datetime axes, the range will be computed as the distance between the two closest data points. 
    */
@@ -249,8 +250,8 @@ abstract class ErrorbarSeries implements Built<ErrorbarSeries, ErrorbarSeriesBui
   /** 
    * A wrapper object for all the series options in specific states. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get states;
+  @nullable
+  JsonObject get states;
   /** 
    * The color of the stem, the vertical line extending from the box to the whiskers. If <code>null</code>, the series color is used. 
    */
@@ -274,8 +275,8 @@ abstract class ErrorbarSeries implements Built<ErrorbarSeries, ErrorbarSeriesBui
   /** 
    * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get tooltip;
+  @nullable
+  JsonObject get tooltip;
   /** 
    * When a series contains a data array that is longer than this, only one dimensional arrays of numbers, or two dimensional arrays with x and y values are allowed. Also, only the first point is tested, and the rest are assumed to be the same format. This saves expensive data checking and indexing in long series. Set it to <code>0</code> disable. 
    */
@@ -299,8 +300,8 @@ abstract class ErrorbarSeries implements Built<ErrorbarSeries, ErrorbarSeriesBui
   /** 
    * The length of the whiskers, the horizontal lines marking low and high values. It can be a numerical pixel value, or a percentage value of the box width. Set <code>0</code> to disable whiskers. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get whiskerLength;
+  @nullable
+  JsonObject get whiskerLength;
   /** 
    * The line width of the whiskers, the horizontal lines marking low and high values. When <code>null</code>, the general <a href="#plotOptions.errorbar.lineWidth">lineWidth</a> applies. 
    */
@@ -309,13 +310,13 @@ abstract class ErrorbarSeries implements Built<ErrorbarSeries, ErrorbarSeriesBui
   /** 
    * When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the <a href="#xAxis.id">axis id</a> or the index of the axis in the xAxis array, with 0 being the first. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get xAxis;
+  @nullable
+  JsonObject get xAxis;
   /** 
    * When using dual or multiple y axes, this number defines which yAxis the particular series is connected to. It refers to either the <a href="#yAxis.id">axis id</a> or the index of the axis in the yAxis array, with 0 being the first. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get yAxis;
+  @nullable
+  JsonObject get yAxis;
   /** 
    * Define the visual z index of the series. 
    */
@@ -331,8 +332,8 @@ abstract class ErrorbarSeries implements Built<ErrorbarSeries, ErrorbarSeriesBui
 
 <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the color zones are styled with the <code>.highcharts-zone-{n}</code> class, or custom classed from the <code>className</code> option (<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/">view live demo</a>).</p> 
    */
-  ///TODO Разобратья с типом
-  ///BuiltList<dynamic> get zones;
+  @nullable
+  JsonObject get zones;
   factory ErrorbarSeries([updates(ErrorbarSeriesBuilder b)]) = _$ErrorbarSeries;
   ErrorbarSeries._();
 }
@@ -362,8 +363,8 @@ abstract class ErrorbarSeriesData implements Built<ErrorbarSeriesData, ErrorbarS
   /** 
    * Individual point events 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get events;
+  @nullable
+  JsonObject get events;
   /** 
    * The high or maximum value for each data point. 
    */
@@ -554,8 +555,8 @@ abstract class ErrorbarSeriesStatesHover implements Built<ErrorbarSeriesStatesHo
   /** 
    * Animation setting for hovering the graph in line-type series. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get animation;
+  @nullable
+  JsonObject get animation;
   /** 
    * A specific border color for the hovered point. Defaults to inherit the normal state border color. 
    */
@@ -583,8 +584,8 @@ abstract class ErrorbarSeriesStatesHover implements Built<ErrorbarSeriesStatesHo
 
 <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the halo is styled with the <code>.highcharts-halo</code> class, with colors inherited from <code>.highcharts-color-{n}</code>.</p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get halo;
+  @nullable
+  JsonObject get halo;
   factory ErrorbarSeriesStatesHover([updates(ErrorbarSeriesStatesHoverBuilder b)]) = _$ErrorbarSeriesStatesHover;
   ErrorbarSeriesStatesHover._();
 }
@@ -593,8 +594,8 @@ abstract class ErrorbarSeriesStatesHoverHalo implements Built<ErrorbarSeriesStat
   /** 
    * A collection of SVG attributes to override the appearance of the halo, for example <code>fill</code>, <code>stroke</code> and <code>stroke-width</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get attributes;
+  @nullable
+  JsonObject get attributes;
   /** 
    * Opacity for the halo unless a specific fill is overridden using the <code>attributes</code> setting. Note that Highcharts is only able to apply opacity to colors of hex or rgb(a) formats. 
    */
@@ -626,8 +627,8 @@ abstract class ErrorbarSeriesTooltip implements Built<ErrorbarSeriesTooltip, Err
 }</pre>
 </p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get dateTimeLabelFormats;
+  @nullable
+  JsonObject get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 

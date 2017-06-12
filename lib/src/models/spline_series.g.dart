@@ -140,8 +140,7 @@ class _$SplineSeriesSerializer implements StructuredSerializer<SplineSeries> {
       result
         ..add('data')
         ..add(serializers.serialize(object.data,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(num)])));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.dataLabels != null) {
       result
@@ -270,6 +269,12 @@ class _$SplineSeriesSerializer implements StructuredSerializer<SplineSeries> {
         ..add(serializers.serialize(object.pointIntervalUnit,
             specifiedType: const FullType(String)));
     }
+    if (object.pointPlacement != null) {
+      result
+        ..add('pointPlacement')
+        ..add(serializers.serialize(object.pointPlacement,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.pointStart != null) {
       result
         ..add('pointStart')
@@ -281,6 +286,12 @@ class _$SplineSeriesSerializer implements StructuredSerializer<SplineSeries> {
         ..add('selected')
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.showCheckbox != null) {
       result
@@ -318,6 +329,12 @@ class _$SplineSeriesSerializer implements StructuredSerializer<SplineSeries> {
         ..add(serializers.serialize(object.stacking,
             specifiedType: const FullType(String)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
@@ -329,6 +346,12 @@ class _$SplineSeriesSerializer implements StructuredSerializer<SplineSeries> {
         ..add('threshold')
         ..add(serializers.serialize(object.threshold,
             specifiedType: const FullType(num)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.turboThreshold != null) {
       result
@@ -348,6 +371,18 @@ class _$SplineSeriesSerializer implements StructuredSerializer<SplineSeries> {
         ..add(serializers.serialize(object.visible,
             specifiedType: const FullType(bool)));
     }
+    if (object.xAxis != null) {
+      result
+        ..add('xAxis')
+        ..add(serializers.serialize(object.xAxis,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.yAxis != null) {
+      result
+        ..add('yAxis')
+        ..add(serializers.serialize(object.yAxis,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.zIndex != null) {
       result
         ..add('zIndex')
@@ -359,6 +394,12 @@ class _$SplineSeriesSerializer implements StructuredSerializer<SplineSeries> {
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -420,10 +461,8 @@ class _$SplineSeriesSerializer implements StructuredSerializer<SplineSeries> {
               specifiedType: const FullType(String)) as String;
           break;
         case 'data':
-          result.data.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(num)]))
-              as BuiltList<num>);
+          result.data = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'dataLabels':
           result.dataLabels.replace(serializers.deserialize(value,
@@ -515,6 +554,10 @@ class _$SplineSeriesSerializer implements StructuredSerializer<SplineSeries> {
           result.pointIntervalUnit = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'pointPlacement':
+          result.pointPlacement = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'pointStart':
           result.pointStart = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -522,6 +565,10 @@ class _$SplineSeriesSerializer implements StructuredSerializer<SplineSeries> {
         case 'selected':
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
@@ -547,6 +594,10 @@ class _$SplineSeriesSerializer implements StructuredSerializer<SplineSeries> {
           result.stacking = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -554,6 +605,10 @@ class _$SplineSeriesSerializer implements StructuredSerializer<SplineSeries> {
         case 'threshold':
           result.threshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'turboThreshold':
           result.turboThreshold = serializers.deserialize(value,
@@ -567,6 +622,14 @@ class _$SplineSeriesSerializer implements StructuredSerializer<SplineSeries> {
           result.visible = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'xAxis':
+          result.xAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'yAxis':
+          result.yAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'zIndex':
           result.zIndex = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -574,6 +637,10 @@ class _$SplineSeriesSerializer implements StructuredSerializer<SplineSeries> {
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -611,6 +678,12 @@ class _$SplineSeriesDataSerializer
         ..add(serializers.serialize(object.colorIndex,
             specifiedType: const FullType(num)));
     }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.description != null) {
       result
         ..add('description')
@@ -622,6 +695,12 @@ class _$SplineSeriesDataSerializer
         ..add('drilldown')
         ..add(serializers.serialize(object.drilldown,
             specifiedType: const FullType(String)));
+    }
+    if (object.events != null) {
+      result
+        ..add('events')
+        ..add(serializers.serialize(object.events,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.id != null) {
       result
@@ -692,6 +771,10 @@ class _$SplineSeriesDataSerializer
           result.colorIndex = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'description':
           result.description = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -699,6 +782,10 @@ class _$SplineSeriesDataSerializer
         case 'drilldown':
           result.drilldown = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'events':
+          result.events = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -1036,11 +1123,23 @@ class _$SplineSeriesDataMarkerStatesHoverSerializer
       Serializers serializers, SplineSeriesDataMarkerStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -1077,9 +1176,17 @@ class _$SplineSeriesDataMarkerStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -1117,6 +1224,12 @@ class _$SplineSeriesDataMarkerStatesHoverHaloSerializer
       Serializers serializers, SplineSeriesDataMarkerStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -1145,6 +1258,10 @@ class _$SplineSeriesDataMarkerStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -1211,6 +1328,12 @@ class _$SplineSeriesDataMarkerStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -1262,6 +1385,10 @@ class _$SplineSeriesDataMarkerStatesHoverMarkerSerializer
         case 'radius':
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
@@ -1394,6 +1521,12 @@ class _$SplineSeriesDataLabelsSerializer
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.shape != null) {
       result
         ..add('shape')
@@ -1520,6 +1653,10 @@ class _$SplineSeriesDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -2260,11 +2397,23 @@ class _$SplineSeriesStatesHoverSerializer
   Iterable serialize(Serializers serializers, SplineSeriesStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -2300,9 +2449,17 @@ class _$SplineSeriesStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -2339,6 +2496,12 @@ class _$SplineSeriesStatesHoverHaloSerializer
       Serializers serializers, SplineSeriesStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -2367,6 +2530,10 @@ class _$SplineSeriesStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -2433,6 +2600,12 @@ class _$SplineSeriesStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -2485,6 +2658,10 @@ class _$SplineSeriesStatesHoverMarkerSerializer
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -2514,6 +2691,12 @@ class _$SplineSeriesTooltipSerializer
   Iterable serialize(Serializers serializers, SplineSeriesTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -2607,6 +2790,10 @@ class _$SplineSeriesTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -2778,7 +2965,7 @@ class _$SplineSeries extends SplineSeries {
   @override
   final String dashStyle;
   @override
-  final BuiltList<num> data;
+  final JsonObject data;
   @override
   final SplineSeriesDataLabels dataLabels;
   @override
@@ -2822,9 +3009,13 @@ class _$SplineSeries extends SplineSeries {
   @override
   final String pointIntervalUnit;
   @override
+  final JsonObject pointPlacement;
+  @override
   final num pointStart;
   @override
   final bool selected;
+  @override
+  final JsonObject shadow;
   @override
   final bool showCheckbox;
   @override
@@ -2838,9 +3029,13 @@ class _$SplineSeries extends SplineSeries {
   @override
   final String stacking;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
   @override
   final num threshold;
+  @override
+  final JsonObject tooltip;
   @override
   final num turboThreshold;
   @override
@@ -2848,9 +3043,15 @@ class _$SplineSeries extends SplineSeries {
   @override
   final bool visible;
   @override
+  final JsonObject xAxis;
+  @override
+  final JsonObject yAxis;
+  @override
   final num zIndex;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$SplineSeries([void updates(SplineSeriesBuilder b)]) =>
       (new SplineSeriesBuilder()..update(updates)).build();
@@ -2889,21 +3090,28 @@ class _$SplineSeries extends SplineSeries {
       this.pointDescriptionFormatter,
       this.pointInterval,
       this.pointIntervalUnit,
+      this.pointPlacement,
       this.pointStart,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
       this.softThreshold,
       this.stack,
       this.stacking,
+      this.states,
       this.stickyTracking,
       this.threshold,
+      this.tooltip,
       this.turboThreshold,
       this.type,
       this.visible,
+      this.xAxis,
+      this.yAxis,
       this.zIndex,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -2950,21 +3158,28 @@ class _$SplineSeries extends SplineSeries {
         pointDescriptionFormatter == other.pointDescriptionFormatter &&
         pointInterval == other.pointInterval &&
         pointIntervalUnit == other.pointIntervalUnit &&
+        pointPlacement == other.pointPlacement &&
         pointStart == other.pointStart &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         softThreshold == other.softThreshold &&
         stack == other.stack &&
         stacking == other.stacking &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
         threshold == other.threshold &&
+        tooltip == other.tooltip &&
         turboThreshold == other.turboThreshold &&
         type == other.type &&
         visible == other.visible &&
+        xAxis == other.xAxis &&
+        yAxis == other.yAxis &&
         zIndex == other.zIndex &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -2987,26 +3202,26 @@ class _$SplineSeries extends SplineSeries {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), connectEnds.hashCode), connectNulls.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), data.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), id.hashCode), index.hashCode), keys.hashCode), legendIndex.hashCode), lineWidth.hashCode), linecap.hashCode), linkedTo.hashCode), marker.hashCode), name.hashCode), negativeColor.hashCode),
-                                                                                point.hashCode),
-                                                                            pointDescriptionFormatter.hashCode),
-                                                                        pointInterval.hashCode),
-                                                                    pointIntervalUnit.hashCode),
-                                                                pointStart.hashCode),
-                                                            selected.hashCode),
-                                                        showCheckbox.hashCode),
-                                                    showInLegend.hashCode),
-                                                skipKeyboardNavigation.hashCode),
-                                            softThreshold.hashCode),
-                                        stack.hashCode),
-                                    stacking.hashCode),
-                                stickyTracking.hashCode),
-                            threshold.hashCode),
-                        turboThreshold.hashCode),
-                    type.hashCode),
-                visible.hashCode),
-            zIndex.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), connectEnds.hashCode), connectNulls.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), data.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), id.hashCode), index.hashCode), keys.hashCode), legendIndex.hashCode), lineWidth.hashCode), linecap.hashCode), linkedTo.hashCode), marker.hashCode), name.hashCode), negativeColor.hashCode), point.hashCode), pointDescriptionFormatter.hashCode), pointInterval.hashCode), pointIntervalUnit.hashCode), pointPlacement.hashCode), pointStart.hashCode), selected.hashCode),
+                                                                                shadow.hashCode),
+                                                                            showCheckbox.hashCode),
+                                                                        showInLegend.hashCode),
+                                                                    skipKeyboardNavigation.hashCode),
+                                                                softThreshold.hashCode),
+                                                            stack.hashCode),
+                                                        stacking.hashCode),
+                                                    states.hashCode),
+                                                stickyTracking.hashCode),
+                                            threshold.hashCode),
+                                        tooltip.hashCode),
+                                    turboThreshold.hashCode),
+                                type.hashCode),
+                            visible.hashCode),
+                        xAxis.hashCode),
+                    yAxis.hashCode),
+                zIndex.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -3045,21 +3260,28 @@ class _$SplineSeries extends SplineSeries {
           ..add('pointDescriptionFormatter', pointDescriptionFormatter)
           ..add('pointInterval', pointInterval)
           ..add('pointIntervalUnit', pointIntervalUnit)
+          ..add('pointPlacement', pointPlacement)
           ..add('pointStart', pointStart)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('softThreshold', softThreshold)
           ..add('stack', stack)
           ..add('stacking', stacking)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
           ..add('threshold', threshold)
+          ..add('tooltip', tooltip)
           ..add('turboThreshold', turboThreshold)
           ..add('type', type)
           ..add('visible', visible)
+          ..add('xAxis', xAxis)
+          ..add('yAxis', yAxis)
           ..add('zIndex', zIndex)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -3114,9 +3336,9 @@ class SplineSeriesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  ListBuilder<num> _data;
-  ListBuilder<num> get data => _$this._data ??= new ListBuilder<num>();
-  set data(ListBuilder<num> data) => _$this._data = data;
+  JsonObject _data;
+  JsonObject get data => _$this._data;
+  set data(JsonObject data) => _$this._data = data;
 
   SplineSeriesDataLabelsBuilder _dataLabels;
   SplineSeriesDataLabelsBuilder get dataLabels =>
@@ -3214,6 +3436,11 @@ class SplineSeriesBuilder
   set pointIntervalUnit(String pointIntervalUnit) =>
       _$this._pointIntervalUnit = pointIntervalUnit;
 
+  JsonObject _pointPlacement;
+  JsonObject get pointPlacement => _$this._pointPlacement;
+  set pointPlacement(JsonObject pointPlacement) =>
+      _$this._pointPlacement = pointPlacement;
+
   num _pointStart;
   num get pointStart => _$this._pointStart;
   set pointStart(num pointStart) => _$this._pointStart = pointStart;
@@ -3221,6 +3448,10 @@ class SplineSeriesBuilder
   bool _selected;
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
+
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
 
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
@@ -3248,6 +3479,10 @@ class SplineSeriesBuilder
   String get stacking => _$this._stacking;
   set stacking(String stacking) => _$this._stacking = stacking;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
@@ -3256,6 +3491,10 @@ class SplineSeriesBuilder
   num _threshold;
   num get threshold => _$this._threshold;
   set threshold(num threshold) => _$this._threshold = threshold;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   num _turboThreshold;
   num get turboThreshold => _$this._turboThreshold;
@@ -3270,6 +3509,14 @@ class SplineSeriesBuilder
   bool get visible => _$this._visible;
   set visible(bool visible) => _$this._visible = visible;
 
+  JsonObject _xAxis;
+  JsonObject get xAxis => _$this._xAxis;
+  set xAxis(JsonObject xAxis) => _$this._xAxis = xAxis;
+
+  JsonObject _yAxis;
+  JsonObject get yAxis => _$this._yAxis;
+  set yAxis(JsonObject yAxis) => _$this._yAxis = yAxis;
+
   num _zIndex;
   num get zIndex => _$this._zIndex;
   set zIndex(num zIndex) => _$this._zIndex = zIndex;
@@ -3277,6 +3524,10 @@ class SplineSeriesBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   SplineSeriesBuilder();
 
@@ -3293,7 +3544,7 @@ class SplineSeriesBuilder
       _cropThreshold = _$v.cropThreshold;
       _cursor = _$v.cursor;
       _dashStyle = _$v.dashStyle;
-      _data = _$v.data?.toBuilder();
+      _data = _$v.data;
       _dataLabels = _$v.dataLabels?.toBuilder();
       _description = _$v.description;
       _enableMouseTracking = _$v.enableMouseTracking;
@@ -3315,21 +3566,28 @@ class SplineSeriesBuilder
       _pointDescriptionFormatter = _$v.pointDescriptionFormatter;
       _pointInterval = _$v.pointInterval;
       _pointIntervalUnit = _$v.pointIntervalUnit;
+      _pointPlacement = _$v.pointPlacement;
       _pointStart = _$v.pointStart;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _softThreshold = _$v.softThreshold;
       _stack = _$v.stack;
       _stacking = _$v.stacking;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
       _threshold = _$v.threshold;
+      _tooltip = _$v.tooltip;
       _turboThreshold = _$v.turboThreshold;
       _type = _$v.type;
       _visible = _$v.visible;
+      _xAxis = _$v.xAxis;
+      _yAxis = _$v.yAxis;
       _zIndex = _$v.zIndex;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -3361,7 +3619,7 @@ class SplineSeriesBuilder
             cropThreshold: cropThreshold,
             cursor: cursor,
             dashStyle: dashStyle,
-            data: _data?.build(),
+            data: data,
             dataLabels: _dataLabels?.build(),
             description: description,
             enableMouseTracking: enableMouseTracking,
@@ -3383,21 +3641,28 @@ class SplineSeriesBuilder
             pointDescriptionFormatter: pointDescriptionFormatter,
             pointInterval: pointInterval,
             pointIntervalUnit: pointIntervalUnit,
+            pointPlacement: pointPlacement,
             pointStart: pointStart,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
             softThreshold: softThreshold,
             stack: stack,
             stacking: stacking,
+            states: states,
             stickyTracking: stickyTracking,
             threshold: threshold,
+            tooltip: tooltip,
             turboThreshold: turboThreshold,
             type: type,
             visible: visible,
+            xAxis: xAxis,
+            yAxis: yAxis,
             zIndex: zIndex,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -3416,9 +3681,13 @@ class _$SplineSeriesData extends SplineSeriesData {
   @override
   final num colorIndex;
   @override
+  final JsonObject dataLabels;
+  @override
   final String description;
   @override
   final String drilldown;
+  @override
+  final JsonObject events;
   @override
   final String id;
   @override
@@ -3441,8 +3710,10 @@ class _$SplineSeriesData extends SplineSeriesData {
       {this.className,
       this.color,
       this.colorIndex,
+      this.dataLabels,
       this.description,
       this.drilldown,
+      this.events,
       this.id,
       this.labelrank,
       this.marker,
@@ -3467,8 +3738,10 @@ class _$SplineSeriesData extends SplineSeriesData {
     return className == other.className &&
         color == other.color &&
         colorIndex == other.colorIndex &&
+        dataLabels == other.dataLabels &&
         description == other.description &&
         drilldown == other.drilldown &&
+        events == other.events &&
         id == other.id &&
         labelrank == other.labelrank &&
         marker == other.marker &&
@@ -3490,11 +3763,17 @@ class _$SplineSeriesData extends SplineSeriesData {
                                 $jc(
                                     $jc(
                                         $jc(
-                                            $jc($jc(0, className.hashCode),
-                                                color.hashCode),
-                                            colorIndex.hashCode),
-                                        description.hashCode),
-                                    drilldown.hashCode),
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc(0,
+                                                            className.hashCode),
+                                                        color.hashCode),
+                                                    colorIndex.hashCode),
+                                                dataLabels.hashCode),
+                                            description.hashCode),
+                                        drilldown.hashCode),
+                                    events.hashCode),
                                 id.hashCode),
                             labelrank.hashCode),
                         marker.hashCode),
@@ -3510,8 +3789,10 @@ class _$SplineSeriesData extends SplineSeriesData {
           ..add('className', className)
           ..add('color', color)
           ..add('colorIndex', colorIndex)
+          ..add('dataLabels', dataLabels)
           ..add('description', description)
           ..add('drilldown', drilldown)
+          ..add('events', events)
           ..add('id', id)
           ..add('labelrank', labelrank)
           ..add('marker', marker)
@@ -3539,6 +3820,10 @@ class SplineSeriesDataBuilder
   num get colorIndex => _$this._colorIndex;
   set colorIndex(num colorIndex) => _$this._colorIndex = colorIndex;
 
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
+
   String _description;
   String get description => _$this._description;
   set description(String description) => _$this._description = description;
@@ -3546,6 +3831,10 @@ class SplineSeriesDataBuilder
   String _drilldown;
   String get drilldown => _$this._drilldown;
   set drilldown(String drilldown) => _$this._drilldown = drilldown;
+
+  JsonObject _events;
+  JsonObject get events => _$this._events;
+  set events(JsonObject events) => _$this._events = events;
 
   String _id;
   String get id => _$this._id;
@@ -3583,8 +3872,10 @@ class SplineSeriesDataBuilder
       _className = _$v.className;
       _color = _$v.color;
       _colorIndex = _$v.colorIndex;
+      _dataLabels = _$v.dataLabels;
       _description = _$v.description;
       _drilldown = _$v.drilldown;
+      _events = _$v.events;
       _id = _$v.id;
       _labelrank = _$v.labelrank;
       _marker = _$v.marker?.toBuilder();
@@ -3615,8 +3906,10 @@ class SplineSeriesDataBuilder
             className: className,
             color: color,
             colorIndex: colorIndex,
+            dataLabels: dataLabels,
             description: description,
             drilldown: drilldown,
+            events: events,
             id: id,
             labelrank: labelrank,
             marker: _marker?.build(),
@@ -4073,7 +4366,11 @@ class SplineSeriesDataMarkerStatesBuilder
 class _$SplineSeriesDataMarkerStatesHover
     extends SplineSeriesDataMarkerStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -4086,7 +4383,12 @@ class _$SplineSeriesDataMarkerStatesHover
       (new SplineSeriesDataMarkerStatesHoverBuilder()..update(updates)).build();
 
   _$SplineSeriesDataMarkerStatesHover._(
-      {this.enabled, this.lineWidth, this.lineWidthPlus, this.marker})
+      {this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker})
       : super._();
 
   @override
@@ -4102,7 +4404,9 @@ class _$SplineSeriesDataMarkerStatesHover
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! SplineSeriesDataMarkerStatesHover) return false;
-    return enabled == other.enabled &&
+    return animation == other.animation &&
+        enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -4111,7 +4415,11 @@ class _$SplineSeriesDataMarkerStatesHover
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, enabled.hashCode), lineWidth.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), enabled.hashCode),
+                    halo.hashCode),
+                lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
   }
@@ -4119,7 +4427,9 @@ class _$SplineSeriesDataMarkerStatesHover
   @override
   String toString() {
     return (newBuiltValueToStringHelper('SplineSeriesDataMarkerStatesHover')
+          ..add('animation', animation)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -4133,9 +4443,17 @@ class SplineSeriesDataMarkerStatesHoverBuilder
             SplineSeriesDataMarkerStatesHoverBuilder> {
   _$SplineSeriesDataMarkerStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -4155,7 +4473,9 @@ class SplineSeriesDataMarkerStatesHoverBuilder
 
   SplineSeriesDataMarkerStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -4179,7 +4499,9 @@ class SplineSeriesDataMarkerStatesHoverBuilder
   _$SplineSeriesDataMarkerStatesHover build() {
     final result = _$v ??
         new _$SplineSeriesDataMarkerStatesHover._(
+            animation: animation,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -4196,6 +4518,8 @@ class SplineSeriesDataMarkerStatesHoverBuilder
 class _$SplineSeriesDataMarkerStatesHoverHalo
     extends SplineSeriesDataMarkerStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -4205,7 +4529,8 @@ class _$SplineSeriesDataMarkerStatesHoverHalo
       (new SplineSeriesDataMarkerStatesHoverHaloBuilder()..update(updates))
           .build();
 
-  _$SplineSeriesDataMarkerStatesHoverHalo._({this.opacity, this.size})
+  _$SplineSeriesDataMarkerStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
       : super._();
 
   @override
@@ -4221,17 +4546,21 @@ class _$SplineSeriesDataMarkerStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! SplineSeriesDataMarkerStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('SplineSeriesDataMarkerStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -4243,6 +4572,10 @@ class SplineSeriesDataMarkerStatesHoverHaloBuilder
         Builder<SplineSeriesDataMarkerStatesHoverHalo,
             SplineSeriesDataMarkerStatesHoverHaloBuilder> {
   _$SplineSeriesDataMarkerStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -4256,6 +4589,7 @@ class SplineSeriesDataMarkerStatesHoverHaloBuilder
 
   SplineSeriesDataMarkerStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -4278,7 +4612,7 @@ class SplineSeriesDataMarkerStatesHoverHaloBuilder
   _$SplineSeriesDataMarkerStatesHoverHalo build() {
     final result = _$v ??
         new _$SplineSeriesDataMarkerStatesHoverHalo._(
-            opacity: opacity, size: size);
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -4304,6 +4638,8 @@ class _$SplineSeriesDataMarkerStatesHoverMarker
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -4320,6 +4656,7 @@ class _$SplineSeriesDataMarkerStatesHoverMarker
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -4343,6 +4680,7 @@ class _$SplineSeriesDataMarkerStatesHoverMarker
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -4354,11 +4692,15 @@ class _$SplineSeriesDataMarkerStatesHoverMarker
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -4373,6 +4715,7 @@ class _$SplineSeriesDataMarkerStatesHoverMarker
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -4409,6 +4752,10 @@ class SplineSeriesDataMarkerStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -4427,6 +4774,7 @@ class SplineSeriesDataMarkerStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -4455,6 +4803,7 @@ class SplineSeriesDataMarkerStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -4503,6 +4852,8 @@ class _$SplineSeriesDataLabels extends SplineSeriesDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -4539,6 +4890,7 @@ class _$SplineSeriesDataLabels extends SplineSeriesDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -4578,6 +4930,7 @@ class _$SplineSeriesDataLabels extends SplineSeriesDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -4607,19 +4960,19 @@ class _$SplineSeriesDataLabels extends SplineSeriesDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -4649,6 +5002,7 @@ class _$SplineSeriesDataLabels extends SplineSeriesDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -4733,6 +5087,10 @@ class SplineSeriesDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -4784,6 +5142,7 @@ class SplineSeriesDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -4828,6 +5187,7 @@ class SplineSeriesDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -5925,7 +6285,11 @@ class SplineSeriesStatesBuilder
 
 class _$SplineSeriesStatesHover extends SplineSeriesStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -5938,7 +6302,12 @@ class _$SplineSeriesStatesHover extends SplineSeriesStatesHover {
       (new SplineSeriesStatesHoverBuilder()..update(updates)).build();
 
   _$SplineSeriesStatesHover._(
-      {this.enabled, this.lineWidth, this.lineWidthPlus, this.marker})
+      {this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker})
       : super._();
 
   @override
@@ -5954,7 +6323,9 @@ class _$SplineSeriesStatesHover extends SplineSeriesStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! SplineSeriesStatesHover) return false;
-    return enabled == other.enabled &&
+    return animation == other.animation &&
+        enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -5963,7 +6334,11 @@ class _$SplineSeriesStatesHover extends SplineSeriesStatesHover {
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, enabled.hashCode), lineWidth.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), enabled.hashCode),
+                    halo.hashCode),
+                lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
   }
@@ -5971,7 +6346,9 @@ class _$SplineSeriesStatesHover extends SplineSeriesStatesHover {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('SplineSeriesStatesHover')
+          ..add('animation', animation)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -5984,9 +6361,17 @@ class SplineSeriesStatesHoverBuilder
         Builder<SplineSeriesStatesHover, SplineSeriesStatesHoverBuilder> {
   _$SplineSeriesStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -6006,7 +6391,9 @@ class SplineSeriesStatesHoverBuilder
 
   SplineSeriesStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -6030,7 +6417,9 @@ class SplineSeriesStatesHoverBuilder
   _$SplineSeriesStatesHover build() {
     final result = _$v ??
         new _$SplineSeriesStatesHover._(
+            animation: animation,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -6046,6 +6435,8 @@ class SplineSeriesStatesHoverBuilder
 
 class _$SplineSeriesStatesHoverHalo extends SplineSeriesStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -6054,7 +6445,8 @@ class _$SplineSeriesStatesHoverHalo extends SplineSeriesStatesHoverHalo {
           [void updates(SplineSeriesStatesHoverHaloBuilder b)]) =>
       (new SplineSeriesStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$SplineSeriesStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$SplineSeriesStatesHoverHalo._({this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   SplineSeriesStatesHoverHalo rebuild(
@@ -6069,17 +6461,21 @@ class _$SplineSeriesStatesHoverHalo extends SplineSeriesStatesHoverHalo {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! SplineSeriesStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('SplineSeriesStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -6091,6 +6487,10 @@ class SplineSeriesStatesHoverHaloBuilder
         Builder<SplineSeriesStatesHoverHalo,
             SplineSeriesStatesHoverHaloBuilder> {
   _$SplineSeriesStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -6104,6 +6504,7 @@ class SplineSeriesStatesHoverHaloBuilder
 
   SplineSeriesStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -6125,7 +6526,8 @@ class SplineSeriesStatesHoverHaloBuilder
   @override
   _$SplineSeriesStatesHoverHalo build() {
     final result = _$v ??
-        new _$SplineSeriesStatesHoverHalo._(opacity: opacity, size: size);
+        new _$SplineSeriesStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -6150,6 +6552,8 @@ class _$SplineSeriesStatesHoverMarker extends SplineSeriesStatesHoverMarker {
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -6165,6 +6569,7 @@ class _$SplineSeriesStatesHoverMarker extends SplineSeriesStatesHoverMarker {
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -6188,6 +6593,7 @@ class _$SplineSeriesStatesHoverMarker extends SplineSeriesStatesHoverMarker {
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -6199,11 +6605,15 @@ class _$SplineSeriesStatesHoverMarker extends SplineSeriesStatesHoverMarker {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -6217,6 +6627,7 @@ class _$SplineSeriesStatesHoverMarker extends SplineSeriesStatesHoverMarker {
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -6253,6 +6664,10 @@ class SplineSeriesStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -6271,6 +6686,7 @@ class SplineSeriesStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -6299,6 +6715,7 @@ class SplineSeriesStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -6312,6 +6729,8 @@ class SplineSeriesStatesHoverMarkerBuilder
 // **************************************************************************
 
 class _$SplineSeriesTooltip extends SplineSeriesTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -6343,7 +6762,8 @@ class _$SplineSeriesTooltip extends SplineSeriesTooltip {
       (new SplineSeriesTooltipBuilder()..update(updates)).build();
 
   _$SplineSeriesTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -6370,7 +6790,8 @@ class _$SplineSeriesTooltip extends SplineSeriesTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! SplineSeriesTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -6399,7 +6820,11 @@ class _$SplineSeriesTooltip extends SplineSeriesTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -6418,6 +6843,7 @@ class _$SplineSeriesTooltip extends SplineSeriesTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('SplineSeriesTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -6438,6 +6864,11 @@ class _$SplineSeriesTooltip extends SplineSeriesTooltip {
 class SplineSeriesTooltipBuilder
     implements Builder<SplineSeriesTooltip, SplineSeriesTooltipBuilder> {
   _$SplineSeriesTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -6498,6 +6929,7 @@ class SplineSeriesTooltipBuilder
 
   SplineSeriesTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -6531,6 +6963,7 @@ class SplineSeriesTooltipBuilder
   _$SplineSeriesTooltip build() {
     final result = _$v ??
         new _$SplineSeriesTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,

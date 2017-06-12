@@ -70,6 +70,12 @@ class _$FunnelSeriesSerializer implements StructuredSerializer<FunnelSeries> {
         ..add(serializers.serialize(object.borderWidth,
             specifiedType: const FullType(num)));
     }
+    if (object.center != null) {
+      result
+        ..add('center')
+        ..add(serializers.serialize(object.center,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.className != null) {
       result
         ..add('className')
@@ -94,6 +100,12 @@ class _$FunnelSeriesSerializer implements StructuredSerializer<FunnelSeries> {
         ..add('cursor')
         ..add(serializers.serialize(object.cursor,
             specifiedType: const FullType(String)));
+    }
+    if (object.data != null) {
+      result
+        ..add('data')
+        ..add(serializers.serialize(object.data,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.dataLabels != null) {
       result
@@ -143,6 +155,12 @@ class _$FunnelSeriesSerializer implements StructuredSerializer<FunnelSeries> {
         ..add(serializers.serialize(object.getExtremesFromAll,
             specifiedType: const FullType(bool)));
     }
+    if (object.height != null) {
+      result
+        ..add('height')
+        ..add(serializers.serialize(object.height,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.id != null) {
       result
         ..add('id')
@@ -186,6 +204,18 @@ class _$FunnelSeriesSerializer implements StructuredSerializer<FunnelSeries> {
         ..add(serializers.serialize(object.name,
             specifiedType: const FullType(String)));
     }
+    if (object.neckHeight != null) {
+      result
+        ..add('neckHeight')
+        ..add(serializers.serialize(object.neckHeight,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.neckWidth != null) {
+      result
+        ..add('neckWidth')
+        ..add(serializers.serialize(object.neckWidth,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.point != null) {
       result
         ..add('point')
@@ -210,6 +240,12 @@ class _$FunnelSeriesSerializer implements StructuredSerializer<FunnelSeries> {
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.showInLegend != null) {
       result
         ..add('showInLegend')
@@ -228,11 +264,23 @@ class _$FunnelSeriesSerializer implements StructuredSerializer<FunnelSeries> {
         ..add(serializers.serialize(object.slicedOffset,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
         ..add(serializers.serialize(object.stickyTracking,
             specifiedType: const FullType(bool)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.type != null) {
       result
@@ -246,6 +294,12 @@ class _$FunnelSeriesSerializer implements StructuredSerializer<FunnelSeries> {
         ..add(serializers.serialize(object.visible,
             specifiedType: const FullType(bool)));
     }
+    if (object.width != null) {
+      result
+        ..add('width')
+        ..add(serializers.serialize(object.width,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.zIndex != null) {
       result
         ..add('zIndex')
@@ -257,6 +311,12 @@ class _$FunnelSeriesSerializer implements StructuredSerializer<FunnelSeries> {
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -289,6 +349,10 @@ class _$FunnelSeriesSerializer implements StructuredSerializer<FunnelSeries> {
           result.borderWidth = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'center':
+          result.center = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'className':
           result.className = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -306,6 +370,10 @@ class _$FunnelSeriesSerializer implements StructuredSerializer<FunnelSeries> {
         case 'cursor':
           result.cursor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'data':
+          result.data = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'dataLabels':
           result.dataLabels.replace(serializers.deserialize(value,
@@ -341,6 +409,10 @@ class _$FunnelSeriesSerializer implements StructuredSerializer<FunnelSeries> {
           result.getExtremesFromAll = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'height':
+          result.height = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'id':
           result.id = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -371,6 +443,14 @@ class _$FunnelSeriesSerializer implements StructuredSerializer<FunnelSeries> {
           result.name = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'neckHeight':
+          result.neckHeight = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'neckWidth':
+          result.neckWidth = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'point':
           result.point.replace(serializers.deserialize(value,
                   specifiedType: const FullType(FunnelSeriesPoint))
@@ -388,6 +468,10 @@ class _$FunnelSeriesSerializer implements StructuredSerializer<FunnelSeries> {
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'showInLegend':
           result.showInLegend = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -400,9 +484,17 @@ class _$FunnelSeriesSerializer implements StructuredSerializer<FunnelSeries> {
           result.slicedOffset = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'type':
           result.type = serializers.deserialize(value,
@@ -412,6 +504,10 @@ class _$FunnelSeriesSerializer implements StructuredSerializer<FunnelSeries> {
           result.visible = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'width':
+          result.width = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'zIndex':
           result.zIndex = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -419,6 +515,10 @@ class _$FunnelSeriesSerializer implements StructuredSerializer<FunnelSeries> {
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -456,6 +556,12 @@ class _$FunnelSeriesDataSerializer
         ..add(serializers.serialize(object.colorIndex,
             specifiedType: const FullType(num)));
     }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.description != null) {
       result
         ..add('description')
@@ -467,6 +573,12 @@ class _$FunnelSeriesDataSerializer
         ..add('drilldown')
         ..add(serializers.serialize(object.drilldown,
             specifiedType: const FullType(String)));
+    }
+    if (object.events != null) {
+      result
+        ..add('events')
+        ..add(serializers.serialize(object.events,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.id != null) {
       result
@@ -531,6 +643,10 @@ class _$FunnelSeriesDataSerializer
           result.colorIndex = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'description':
           result.description = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -538,6 +654,10 @@ class _$FunnelSeriesDataSerializer
         case 'drilldown':
           result.drilldown = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'events':
+          result.events = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -805,6 +925,12 @@ class _$FunnelSeriesDataLabelsSerializer
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.shape != null) {
       result
         ..add('shape')
@@ -945,6 +1071,10 @@ class _$FunnelSeriesDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -1320,6 +1450,12 @@ class _$FunnelSeriesStatesHoverSerializer
   Iterable serialize(Serializers serializers, FunnelSeriesStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.brightness != null) {
       result
         ..add('brightness')
@@ -1331,6 +1467,12 @@ class _$FunnelSeriesStatesHoverSerializer
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -1366,6 +1508,10 @@ class _$FunnelSeriesStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'brightness':
           result.brightness = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -1373,6 +1519,10 @@ class _$FunnelSeriesStatesHoverSerializer
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -1409,6 +1559,12 @@ class _$FunnelSeriesStatesHoverHaloSerializer
       Serializers serializers, FunnelSeriesStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -1437,6 +1593,10 @@ class _$FunnelSeriesStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -1503,6 +1663,12 @@ class _$FunnelSeriesStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -1555,6 +1721,10 @@ class _$FunnelSeriesStatesHoverMarkerSerializer
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -1584,6 +1754,12 @@ class _$FunnelSeriesTooltipSerializer
   Iterable serialize(Serializers serializers, FunnelSeriesTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -1677,6 +1853,10 @@ class _$FunnelSeriesTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -1834,6 +2014,8 @@ class _$FunnelSeries extends FunnelSeries {
   @override
   final num borderWidth;
   @override
+  final JsonObject center;
+  @override
   final String className;
   @override
   final num colorIndex;
@@ -1841,6 +2023,8 @@ class _$FunnelSeries extends FunnelSeries {
   final BuiltList<String> colors;
   @override
   final String cursor;
+  @override
+  final JsonObject data;
   @override
   final FunnelSeriesDataLabels dataLabels;
   @override
@@ -1858,6 +2042,8 @@ class _$FunnelSeries extends FunnelSeries {
   @override
   final bool getExtremesFromAll;
   @override
+  final JsonObject height;
+  @override
   final String id;
   @override
   final num index;
@@ -1872,6 +2058,10 @@ class _$FunnelSeries extends FunnelSeries {
   @override
   final String name;
   @override
+  final JsonObject neckHeight;
+  @override
+  final JsonObject neckWidth;
+  @override
   final FunnelSeriesPoint point;
   @override
   final Function pointDescriptionFormatter;
@@ -1880,21 +2070,31 @@ class _$FunnelSeries extends FunnelSeries {
   @override
   final bool selected;
   @override
+  final JsonObject shadow;
+  @override
   final bool showInLegend;
   @override
   final bool skipKeyboardNavigation;
   @override
   final num slicedOffset;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
+  @override
+  final JsonObject tooltip;
   @override
   final String type;
   @override
   final bool visible;
   @override
+  final JsonObject width;
+  @override
   final num zIndex;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$FunnelSeries([void updates(FunnelSeriesBuilder b)]) =>
       (new FunnelSeriesBuilder()..update(updates)).build();
@@ -1904,10 +2104,12 @@ class _$FunnelSeries extends FunnelSeries {
       this.animationLimit,
       this.borderColor,
       this.borderWidth,
+      this.center,
       this.className,
       this.colorIndex,
       this.colors,
       this.cursor,
+      this.data,
       this.dataLabels,
       this.depth,
       this.description,
@@ -1916,6 +2118,7 @@ class _$FunnelSeries extends FunnelSeries {
       this.exposeElementToA11y,
       this.findNearestPointBy,
       this.getExtremesFromAll,
+      this.height,
       this.id,
       this.index,
       this.keys,
@@ -1923,18 +2126,25 @@ class _$FunnelSeries extends FunnelSeries {
       this.linkedTo,
       this.minSize,
       this.name,
+      this.neckHeight,
+      this.neckWidth,
       this.point,
       this.pointDescriptionFormatter,
       this.reversed,
       this.selected,
+      this.shadow,
       this.showInLegend,
       this.skipKeyboardNavigation,
       this.slicedOffset,
+      this.states,
       this.stickyTracking,
+      this.tooltip,
       this.type,
       this.visible,
+      this.width,
       this.zIndex,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -1952,10 +2162,12 @@ class _$FunnelSeries extends FunnelSeries {
         animationLimit == other.animationLimit &&
         borderColor == other.borderColor &&
         borderWidth == other.borderWidth &&
+        center == other.center &&
         className == other.className &&
         colorIndex == other.colorIndex &&
         colors == other.colors &&
         cursor == other.cursor &&
+        data == other.data &&
         dataLabels == other.dataLabels &&
         depth == other.depth &&
         description == other.description &&
@@ -1964,6 +2176,7 @@ class _$FunnelSeries extends FunnelSeries {
         exposeElementToA11y == other.exposeElementToA11y &&
         findNearestPointBy == other.findNearestPointBy &&
         getExtremesFromAll == other.getExtremesFromAll &&
+        height == other.height &&
         id == other.id &&
         index == other.index &&
         keys == other.keys &&
@@ -1971,18 +2184,25 @@ class _$FunnelSeries extends FunnelSeries {
         linkedTo == other.linkedTo &&
         minSize == other.minSize &&
         name == other.name &&
+        neckHeight == other.neckHeight &&
+        neckWidth == other.neckWidth &&
         point == other.point &&
         pointDescriptionFormatter == other.pointDescriptionFormatter &&
         reversed == other.reversed &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         slicedOffset == other.slicedOffset &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
+        tooltip == other.tooltip &&
         type == other.type &&
         visible == other.visible &&
+        width == other.width &&
         zIndex == other.zIndex &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -2005,26 +2225,26 @@ class _$FunnelSeries extends FunnelSeries {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animationLimit.hashCode), borderColor.hashCode), borderWidth.hashCode), className.hashCode), colorIndex.hashCode), colors.hashCode), cursor.hashCode), dataLabels.hashCode), depth.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode),
-                                                                                id.hashCode),
-                                                                            index.hashCode),
-                                                                        keys.hashCode),
-                                                                    legendIndex.hashCode),
-                                                                linkedTo.hashCode),
-                                                            minSize.hashCode),
-                                                        name.hashCode),
-                                                    point.hashCode),
-                                                pointDescriptionFormatter.hashCode),
-                                            reversed.hashCode),
-                                        selected.hashCode),
-                                    showInLegend.hashCode),
-                                skipKeyboardNavigation.hashCode),
-                            slicedOffset.hashCode),
-                        stickyTracking.hashCode),
-                    type.hashCode),
-                visible.hashCode),
-            zIndex.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animationLimit.hashCode), borderColor.hashCode), borderWidth.hashCode), center.hashCode), className.hashCode), colorIndex.hashCode), colors.hashCode), cursor.hashCode), data.hashCode), dataLabels.hashCode), depth.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), height.hashCode), id.hashCode), index.hashCode), keys.hashCode), legendIndex.hashCode), linkedTo.hashCode), minSize.hashCode), name.hashCode),
+                                                                                neckHeight.hashCode),
+                                                                            neckWidth.hashCode),
+                                                                        point.hashCode),
+                                                                    pointDescriptionFormatter.hashCode),
+                                                                reversed.hashCode),
+                                                            selected.hashCode),
+                                                        shadow.hashCode),
+                                                    showInLegend.hashCode),
+                                                skipKeyboardNavigation.hashCode),
+                                            slicedOffset.hashCode),
+                                        states.hashCode),
+                                    stickyTracking.hashCode),
+                                tooltip.hashCode),
+                            type.hashCode),
+                        visible.hashCode),
+                    width.hashCode),
+                zIndex.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -2034,10 +2254,12 @@ class _$FunnelSeries extends FunnelSeries {
           ..add('animationLimit', animationLimit)
           ..add('borderColor', borderColor)
           ..add('borderWidth', borderWidth)
+          ..add('center', center)
           ..add('className', className)
           ..add('colorIndex', colorIndex)
           ..add('colors', colors)
           ..add('cursor', cursor)
+          ..add('data', data)
           ..add('dataLabels', dataLabels)
           ..add('depth', depth)
           ..add('description', description)
@@ -2046,6 +2268,7 @@ class _$FunnelSeries extends FunnelSeries {
           ..add('exposeElementToA11y', exposeElementToA11y)
           ..add('findNearestPointBy', findNearestPointBy)
           ..add('getExtremesFromAll', getExtremesFromAll)
+          ..add('height', height)
           ..add('id', id)
           ..add('index', index)
           ..add('keys', keys)
@@ -2053,18 +2276,25 @@ class _$FunnelSeries extends FunnelSeries {
           ..add('linkedTo', linkedTo)
           ..add('minSize', minSize)
           ..add('name', name)
+          ..add('neckHeight', neckHeight)
+          ..add('neckWidth', neckWidth)
           ..add('point', point)
           ..add('pointDescriptionFormatter', pointDescriptionFormatter)
           ..add('reversed', reversed)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('slicedOffset', slicedOffset)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
+          ..add('tooltip', tooltip)
           ..add('type', type)
           ..add('visible', visible)
+          ..add('width', width)
           ..add('zIndex', zIndex)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -2091,6 +2321,10 @@ class FunnelSeriesBuilder
   num get borderWidth => _$this._borderWidth;
   set borderWidth(num borderWidth) => _$this._borderWidth = borderWidth;
 
+  JsonObject _center;
+  JsonObject get center => _$this._center;
+  set center(JsonObject center) => _$this._center = center;
+
   String _className;
   String get className => _$this._className;
   set className(String className) => _$this._className = className;
@@ -2107,6 +2341,10 @@ class FunnelSeriesBuilder
   String _cursor;
   String get cursor => _$this._cursor;
   set cursor(String cursor) => _$this._cursor = cursor;
+
+  JsonObject _data;
+  JsonObject get data => _$this._data;
+  set data(JsonObject data) => _$this._data = data;
 
   FunnelSeriesDataLabelsBuilder _dataLabels;
   FunnelSeriesDataLabelsBuilder get dataLabels =>
@@ -2147,6 +2385,10 @@ class FunnelSeriesBuilder
   set getExtremesFromAll(bool getExtremesFromAll) =>
       _$this._getExtremesFromAll = getExtremesFromAll;
 
+  JsonObject _height;
+  JsonObject get height => _$this._height;
+  set height(JsonObject height) => _$this._height = height;
+
   String _id;
   String get id => _$this._id;
   set id(String id) => _$this._id = id;
@@ -2175,6 +2417,14 @@ class FunnelSeriesBuilder
   String get name => _$this._name;
   set name(String name) => _$this._name = name;
 
+  JsonObject _neckHeight;
+  JsonObject get neckHeight => _$this._neckHeight;
+  set neckHeight(JsonObject neckHeight) => _$this._neckHeight = neckHeight;
+
+  JsonObject _neckWidth;
+  JsonObject get neckWidth => _$this._neckWidth;
+  set neckWidth(JsonObject neckWidth) => _$this._neckWidth = neckWidth;
+
   FunnelSeriesPointBuilder _point;
   FunnelSeriesPointBuilder get point =>
       _$this._point ??= new FunnelSeriesPointBuilder();
@@ -2193,6 +2443,10 @@ class FunnelSeriesBuilder
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   bool _showInLegend;
   bool get showInLegend => _$this._showInLegend;
   set showInLegend(bool showInLegend) => _$this._showInLegend = showInLegend;
@@ -2206,10 +2460,18 @@ class FunnelSeriesBuilder
   num get slicedOffset => _$this._slicedOffset;
   set slicedOffset(num slicedOffset) => _$this._slicedOffset = slicedOffset;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
       _$this._stickyTracking = stickyTracking;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   String _type;
   String get type => _$this._type;
@@ -2219,6 +2481,10 @@ class FunnelSeriesBuilder
   bool get visible => _$this._visible;
   set visible(bool visible) => _$this._visible = visible;
 
+  JsonObject _width;
+  JsonObject get width => _$this._width;
+  set width(JsonObject width) => _$this._width = width;
+
   num _zIndex;
   num get zIndex => _$this._zIndex;
   set zIndex(num zIndex) => _$this._zIndex = zIndex;
@@ -2226,6 +2492,10 @@ class FunnelSeriesBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   FunnelSeriesBuilder();
 
@@ -2235,10 +2505,12 @@ class FunnelSeriesBuilder
       _animationLimit = _$v.animationLimit;
       _borderColor = _$v.borderColor;
       _borderWidth = _$v.borderWidth;
+      _center = _$v.center;
       _className = _$v.className;
       _colorIndex = _$v.colorIndex;
       _colors = _$v.colors?.toBuilder();
       _cursor = _$v.cursor;
+      _data = _$v.data;
       _dataLabels = _$v.dataLabels?.toBuilder();
       _depth = _$v.depth;
       _description = _$v.description;
@@ -2247,6 +2519,7 @@ class FunnelSeriesBuilder
       _exposeElementToA11y = _$v.exposeElementToA11y;
       _findNearestPointBy = _$v.findNearestPointBy;
       _getExtremesFromAll = _$v.getExtremesFromAll;
+      _height = _$v.height;
       _id = _$v.id;
       _index = _$v.index;
       _keys = _$v.keys?.toBuilder();
@@ -2254,18 +2527,25 @@ class FunnelSeriesBuilder
       _linkedTo = _$v.linkedTo;
       _minSize = _$v.minSize;
       _name = _$v.name;
+      _neckHeight = _$v.neckHeight;
+      _neckWidth = _$v.neckWidth;
       _point = _$v.point?.toBuilder();
       _pointDescriptionFormatter = _$v.pointDescriptionFormatter;
       _reversed = _$v.reversed;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _slicedOffset = _$v.slicedOffset;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
+      _tooltip = _$v.tooltip;
       _type = _$v.type;
       _visible = _$v.visible;
+      _width = _$v.width;
       _zIndex = _$v.zIndex;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -2290,10 +2570,12 @@ class FunnelSeriesBuilder
             animationLimit: animationLimit,
             borderColor: borderColor,
             borderWidth: borderWidth,
+            center: center,
             className: className,
             colorIndex: colorIndex,
             colors: _colors?.build(),
             cursor: cursor,
+            data: data,
             dataLabels: _dataLabels?.build(),
             depth: depth,
             description: description,
@@ -2302,6 +2584,7 @@ class FunnelSeriesBuilder
             exposeElementToA11y: exposeElementToA11y,
             findNearestPointBy: findNearestPointBy,
             getExtremesFromAll: getExtremesFromAll,
+            height: height,
             id: id,
             index: index,
             keys: _keys?.build(),
@@ -2309,18 +2592,25 @@ class FunnelSeriesBuilder
             linkedTo: linkedTo,
             minSize: minSize,
             name: name,
+            neckHeight: neckHeight,
+            neckWidth: neckWidth,
             point: _point?.build(),
             pointDescriptionFormatter: pointDescriptionFormatter,
             reversed: reversed,
             selected: selected,
+            shadow: shadow,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
             slicedOffset: slicedOffset,
+            states: states,
             stickyTracking: stickyTracking,
+            tooltip: tooltip,
             type: type,
             visible: visible,
+            width: width,
             zIndex: zIndex,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -2339,9 +2629,13 @@ class _$FunnelSeriesData extends FunnelSeriesData {
   @override
   final num colorIndex;
   @override
+  final JsonObject dataLabels;
+  @override
   final String description;
   @override
   final String drilldown;
+  @override
+  final JsonObject events;
   @override
   final String id;
   @override
@@ -2362,8 +2656,10 @@ class _$FunnelSeriesData extends FunnelSeriesData {
       {this.className,
       this.color,
       this.colorIndex,
+      this.dataLabels,
       this.description,
       this.drilldown,
+      this.events,
       this.id,
       this.labelrank,
       this.legendIndex,
@@ -2387,8 +2683,10 @@ class _$FunnelSeriesData extends FunnelSeriesData {
     return className == other.className &&
         color == other.color &&
         colorIndex == other.colorIndex &&
+        dataLabels == other.dataLabels &&
         description == other.description &&
         drilldown == other.drilldown &&
+        events == other.events &&
         id == other.id &&
         labelrank == other.labelrank &&
         legendIndex == other.legendIndex &&
@@ -2408,11 +2706,15 @@ class _$FunnelSeriesData extends FunnelSeriesData {
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, className.hashCode),
-                                            color.hashCode),
-                                        colorIndex.hashCode),
-                                    description.hashCode),
-                                drilldown.hashCode),
+                                        $jc(
+                                            $jc(
+                                                $jc($jc(0, className.hashCode),
+                                                    color.hashCode),
+                                                colorIndex.hashCode),
+                                            dataLabels.hashCode),
+                                        description.hashCode),
+                                    drilldown.hashCode),
+                                events.hashCode),
                             id.hashCode),
                         labelrank.hashCode),
                     legendIndex.hashCode),
@@ -2427,8 +2729,10 @@ class _$FunnelSeriesData extends FunnelSeriesData {
           ..add('className', className)
           ..add('color', color)
           ..add('colorIndex', colorIndex)
+          ..add('dataLabels', dataLabels)
           ..add('description', description)
           ..add('drilldown', drilldown)
+          ..add('events', events)
           ..add('id', id)
           ..add('labelrank', labelrank)
           ..add('legendIndex', legendIndex)
@@ -2455,6 +2759,10 @@ class FunnelSeriesDataBuilder
   num get colorIndex => _$this._colorIndex;
   set colorIndex(num colorIndex) => _$this._colorIndex = colorIndex;
 
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
+
   String _description;
   String get description => _$this._description;
   set description(String description) => _$this._description = description;
@@ -2462,6 +2770,10 @@ class FunnelSeriesDataBuilder
   String _drilldown;
   String get drilldown => _$this._drilldown;
   set drilldown(String drilldown) => _$this._drilldown = drilldown;
+
+  JsonObject _events;
+  JsonObject get events => _$this._events;
+  set events(JsonObject events) => _$this._events = events;
 
   String _id;
   String get id => _$this._id;
@@ -2494,8 +2806,10 @@ class FunnelSeriesDataBuilder
       _className = _$v.className;
       _color = _$v.color;
       _colorIndex = _$v.colorIndex;
+      _dataLabels = _$v.dataLabels;
       _description = _$v.description;
       _drilldown = _$v.drilldown;
+      _events = _$v.events;
       _id = _$v.id;
       _labelrank = _$v.labelrank;
       _legendIndex = _$v.legendIndex;
@@ -2525,8 +2839,10 @@ class FunnelSeriesDataBuilder
             className: className,
             color: color,
             colorIndex: colorIndex,
+            dataLabels: dataLabels,
             description: description,
             drilldown: drilldown,
+            events: events,
             id: id,
             labelrank: labelrank,
             legendIndex: legendIndex,
@@ -2743,6 +3059,8 @@ class _$FunnelSeriesDataLabels extends FunnelSeriesDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final bool softConnector;
@@ -2783,6 +3101,7 @@ class _$FunnelSeriesDataLabels extends FunnelSeriesDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.softConnector,
       this.style,
@@ -2825,6 +3144,7 @@ class _$FunnelSeriesDataLabels extends FunnelSeriesDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         softConnector == other.softConnector &&
         style == other.style &&
@@ -2855,18 +3175,18 @@ class _$FunnelSeriesDataLabels extends FunnelSeriesDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc(0, backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), connectorColor.hashCode), connectorPadding.hashCode),
-                                                                                connectorWidth.hashCode),
-                                                                            crop.hashCode),
-                                                                        defer.hashCode),
-                                                                    distance.hashCode),
-                                                                enabled.hashCode),
-                                                            format.hashCode),
-                                                        formatter.hashCode),
-                                                    inside.hashCode),
-                                                overflow.hashCode),
-                                            padding.hashCode),
-                                        rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), connectorColor.hashCode), connectorPadding.hashCode), connectorWidth.hashCode),
+                                                                                crop.hashCode),
+                                                                            defer.hashCode),
+                                                                        distance.hashCode),
+                                                                    enabled.hashCode),
+                                                                format.hashCode),
+                                                            formatter.hashCode),
+                                                        inside.hashCode),
+                                                    overflow.hashCode),
+                                                padding.hashCode),
+                                            rotation.hashCode),
+                                        shadow.hashCode),
                                     shape.hashCode),
                                 softConnector.hashCode),
                             style.hashCode),
@@ -2899,6 +3219,7 @@ class _$FunnelSeriesDataLabels extends FunnelSeriesDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('softConnector', softConnector)
           ..add('style', style)
@@ -2995,6 +3316,10 @@ class FunnelSeriesDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -3053,6 +3378,7 @@ class FunnelSeriesDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _softConnector = _$v.softConnector;
       _style = _$v.style?.toBuilder();
@@ -3100,6 +3426,7 @@ class FunnelSeriesDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             softConnector: softConnector,
             style: _style?.build(),
@@ -3633,9 +3960,13 @@ class FunnelSeriesStatesBuilder
 
 class _$FunnelSeriesStatesHover extends FunnelSeriesStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final num brightness;
   @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -3648,8 +3979,10 @@ class _$FunnelSeriesStatesHover extends FunnelSeriesStatesHover {
       (new FunnelSeriesStatesHoverBuilder()..update(updates)).build();
 
   _$FunnelSeriesStatesHover._(
-      {this.brightness,
+      {this.animation,
+      this.brightness,
       this.enabled,
+      this.halo,
       this.lineWidth,
       this.lineWidthPlus,
       this.marker})
@@ -3668,8 +4001,10 @@ class _$FunnelSeriesStatesHover extends FunnelSeriesStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! FunnelSeriesStatesHover) return false;
-    return brightness == other.brightness &&
+    return animation == other.animation &&
+        brightness == other.brightness &&
         enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -3679,7 +4014,11 @@ class _$FunnelSeriesStatesHover extends FunnelSeriesStatesHover {
   int get hashCode {
     return $jf($jc(
         $jc(
-            $jc($jc($jc(0, brightness.hashCode), enabled.hashCode),
+            $jc(
+                $jc(
+                    $jc($jc($jc(0, animation.hashCode), brightness.hashCode),
+                        enabled.hashCode),
+                    halo.hashCode),
                 lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
@@ -3688,8 +4027,10 @@ class _$FunnelSeriesStatesHover extends FunnelSeriesStatesHover {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('FunnelSeriesStatesHover')
+          ..add('animation', animation)
           ..add('brightness', brightness)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -3702,6 +4043,10 @@ class FunnelSeriesStatesHoverBuilder
         Builder<FunnelSeriesStatesHover, FunnelSeriesStatesHoverBuilder> {
   _$FunnelSeriesStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   num _brightness;
   num get brightness => _$this._brightness;
   set brightness(num brightness) => _$this._brightness = brightness;
@@ -3709,6 +4054,10 @@ class FunnelSeriesStatesHoverBuilder
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -3728,8 +4077,10 @@ class FunnelSeriesStatesHoverBuilder
 
   FunnelSeriesStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _brightness = _$v.brightness;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -3753,8 +4104,10 @@ class FunnelSeriesStatesHoverBuilder
   _$FunnelSeriesStatesHover build() {
     final result = _$v ??
         new _$FunnelSeriesStatesHover._(
+            animation: animation,
             brightness: brightness,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -3770,6 +4123,8 @@ class FunnelSeriesStatesHoverBuilder
 
 class _$FunnelSeriesStatesHoverHalo extends FunnelSeriesStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -3778,7 +4133,8 @@ class _$FunnelSeriesStatesHoverHalo extends FunnelSeriesStatesHoverHalo {
           [void updates(FunnelSeriesStatesHoverHaloBuilder b)]) =>
       (new FunnelSeriesStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$FunnelSeriesStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$FunnelSeriesStatesHoverHalo._({this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   FunnelSeriesStatesHoverHalo rebuild(
@@ -3793,17 +4149,21 @@ class _$FunnelSeriesStatesHoverHalo extends FunnelSeriesStatesHoverHalo {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! FunnelSeriesStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('FunnelSeriesStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -3815,6 +4175,10 @@ class FunnelSeriesStatesHoverHaloBuilder
         Builder<FunnelSeriesStatesHoverHalo,
             FunnelSeriesStatesHoverHaloBuilder> {
   _$FunnelSeriesStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -3828,6 +4192,7 @@ class FunnelSeriesStatesHoverHaloBuilder
 
   FunnelSeriesStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -3849,7 +4214,8 @@ class FunnelSeriesStatesHoverHaloBuilder
   @override
   _$FunnelSeriesStatesHoverHalo build() {
     final result = _$v ??
-        new _$FunnelSeriesStatesHoverHalo._(opacity: opacity, size: size);
+        new _$FunnelSeriesStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -3874,6 +4240,8 @@ class _$FunnelSeriesStatesHoverMarker extends FunnelSeriesStatesHoverMarker {
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -3889,6 +4257,7 @@ class _$FunnelSeriesStatesHoverMarker extends FunnelSeriesStatesHoverMarker {
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -3912,6 +4281,7 @@ class _$FunnelSeriesStatesHoverMarker extends FunnelSeriesStatesHoverMarker {
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -3923,11 +4293,15 @@ class _$FunnelSeriesStatesHoverMarker extends FunnelSeriesStatesHoverMarker {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -3941,6 +4315,7 @@ class _$FunnelSeriesStatesHoverMarker extends FunnelSeriesStatesHoverMarker {
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -3977,6 +4352,10 @@ class FunnelSeriesStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -3995,6 +4374,7 @@ class FunnelSeriesStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -4023,6 +4403,7 @@ class FunnelSeriesStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -4036,6 +4417,8 @@ class FunnelSeriesStatesHoverMarkerBuilder
 // **************************************************************************
 
 class _$FunnelSeriesTooltip extends FunnelSeriesTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -4067,7 +4450,8 @@ class _$FunnelSeriesTooltip extends FunnelSeriesTooltip {
       (new FunnelSeriesTooltipBuilder()..update(updates)).build();
 
   _$FunnelSeriesTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -4094,7 +4478,8 @@ class _$FunnelSeriesTooltip extends FunnelSeriesTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! FunnelSeriesTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -4123,7 +4508,11 @@ class _$FunnelSeriesTooltip extends FunnelSeriesTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -4142,6 +4531,7 @@ class _$FunnelSeriesTooltip extends FunnelSeriesTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('FunnelSeriesTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -4162,6 +4552,11 @@ class _$FunnelSeriesTooltip extends FunnelSeriesTooltip {
 class FunnelSeriesTooltipBuilder
     implements Builder<FunnelSeriesTooltip, FunnelSeriesTooltipBuilder> {
   _$FunnelSeriesTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -4222,6 +4617,7 @@ class FunnelSeriesTooltipBuilder
 
   FunnelSeriesTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -4255,6 +4651,7 @@ class FunnelSeriesTooltipBuilder
   _$FunnelSeriesTooltip build() {
     final result = _$v ??
         new _$FunnelSeriesTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,

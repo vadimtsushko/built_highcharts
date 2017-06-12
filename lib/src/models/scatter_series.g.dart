@@ -128,8 +128,7 @@ class _$ScatterSeriesSerializer implements StructuredSerializer<ScatterSeries> {
       result
         ..add('data')
         ..add(serializers.serialize(object.data,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(num)])));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.dataLabels != null) {
       result
@@ -264,6 +263,12 @@ class _$ScatterSeriesSerializer implements StructuredSerializer<ScatterSeries> {
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.showCheckbox != null) {
       result
         ..add('showCheckbox')
@@ -288,6 +293,12 @@ class _$ScatterSeriesSerializer implements StructuredSerializer<ScatterSeries> {
         ..add(serializers.serialize(object.softThreshold,
             specifiedType: const FullType(bool)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
@@ -299,6 +310,12 @@ class _$ScatterSeriesSerializer implements StructuredSerializer<ScatterSeries> {
         ..add('threshold')
         ..add(serializers.serialize(object.threshold,
             specifiedType: const FullType(num)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.turboThreshold != null) {
       result
@@ -318,6 +335,18 @@ class _$ScatterSeriesSerializer implements StructuredSerializer<ScatterSeries> {
         ..add(serializers.serialize(object.visible,
             specifiedType: const FullType(bool)));
     }
+    if (object.xAxis != null) {
+      result
+        ..add('xAxis')
+        ..add(serializers.serialize(object.xAxis,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.yAxis != null) {
+      result
+        ..add('yAxis')
+        ..add(serializers.serialize(object.yAxis,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.zIndex != null) {
       result
         ..add('zIndex')
@@ -329,6 +358,12 @@ class _$ScatterSeriesSerializer implements StructuredSerializer<ScatterSeries> {
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -382,10 +417,8 @@ class _$ScatterSeriesSerializer implements StructuredSerializer<ScatterSeries> {
               specifiedType: const FullType(String)) as String;
           break;
         case 'data':
-          result.data.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(num)]))
-              as BuiltList<num>);
+          result.data = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'dataLabels':
           result.dataLabels.replace(serializers.deserialize(value,
@@ -481,6 +514,10 @@ class _$ScatterSeriesSerializer implements StructuredSerializer<ScatterSeries> {
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -497,6 +534,10 @@ class _$ScatterSeriesSerializer implements StructuredSerializer<ScatterSeries> {
           result.softThreshold = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -504,6 +545,10 @@ class _$ScatterSeriesSerializer implements StructuredSerializer<ScatterSeries> {
         case 'threshold':
           result.threshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'turboThreshold':
           result.turboThreshold = serializers.deserialize(value,
@@ -517,6 +562,14 @@ class _$ScatterSeriesSerializer implements StructuredSerializer<ScatterSeries> {
           result.visible = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'xAxis':
+          result.xAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'yAxis':
+          result.yAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'zIndex':
           result.zIndex = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -524,6 +577,10 @@ class _$ScatterSeriesSerializer implements StructuredSerializer<ScatterSeries> {
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -561,6 +618,12 @@ class _$ScatterSeriesDataSerializer
         ..add(serializers.serialize(object.colorIndex,
             specifiedType: const FullType(num)));
     }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.description != null) {
       result
         ..add('description')
@@ -572,6 +635,12 @@ class _$ScatterSeriesDataSerializer
         ..add('drilldown')
         ..add(serializers.serialize(object.drilldown,
             specifiedType: const FullType(String)));
+    }
+    if (object.events != null) {
+      result
+        ..add('events')
+        ..add(serializers.serialize(object.events,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.id != null) {
       result
@@ -642,6 +711,10 @@ class _$ScatterSeriesDataSerializer
           result.colorIndex = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'description':
           result.description = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -649,6 +722,10 @@ class _$ScatterSeriesDataSerializer
         case 'drilldown':
           result.drilldown = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'events':
+          result.events = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -986,11 +1063,23 @@ class _$ScatterSeriesDataMarkerStatesHoverSerializer
       Serializers serializers, ScatterSeriesDataMarkerStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -1027,9 +1116,17 @@ class _$ScatterSeriesDataMarkerStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -1067,6 +1164,12 @@ class _$ScatterSeriesDataMarkerStatesHoverHaloSerializer
       Serializers serializers, ScatterSeriesDataMarkerStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -1095,6 +1198,10 @@ class _$ScatterSeriesDataMarkerStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -1161,6 +1268,12 @@ class _$ScatterSeriesDataMarkerStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -1212,6 +1325,10 @@ class _$ScatterSeriesDataMarkerStatesHoverMarkerSerializer
         case 'radius':
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
@@ -1344,6 +1461,12 @@ class _$ScatterSeriesDataLabelsSerializer
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.shape != null) {
       result
         ..add('shape')
@@ -1470,6 +1593,10 @@ class _$ScatterSeriesDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -2220,11 +2347,23 @@ class _$ScatterSeriesStatesHoverSerializer
   Iterable serialize(Serializers serializers, ScatterSeriesStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -2260,9 +2399,17 @@ class _$ScatterSeriesStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -2299,6 +2446,12 @@ class _$ScatterSeriesStatesHoverHaloSerializer
       Serializers serializers, ScatterSeriesStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -2327,6 +2480,10 @@ class _$ScatterSeriesStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -2393,6 +2550,12 @@ class _$ScatterSeriesStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -2445,6 +2608,10 @@ class _$ScatterSeriesStatesHoverMarkerSerializer
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -2474,6 +2641,12 @@ class _$ScatterSeriesTooltipSerializer
   Iterable serialize(Serializers serializers, ScatterSeriesTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -2567,6 +2740,10 @@ class _$ScatterSeriesTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -2734,7 +2911,7 @@ class _$ScatterSeries extends ScatterSeries {
   @override
   final String dashStyle;
   @override
-  final BuiltList<num> data;
+  final JsonObject data;
   @override
   final ScatterSeriesDataLabels dataLabels;
   @override
@@ -2780,6 +2957,8 @@ class _$ScatterSeries extends ScatterSeries {
   @override
   final bool selected;
   @override
+  final JsonObject shadow;
+  @override
   final bool showCheckbox;
   @override
   final bool showInLegend;
@@ -2788,9 +2967,13 @@ class _$ScatterSeries extends ScatterSeries {
   @override
   final bool softThreshold;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
   @override
   final num threshold;
+  @override
+  final JsonObject tooltip;
   @override
   final num turboThreshold;
   @override
@@ -2798,9 +2981,15 @@ class _$ScatterSeries extends ScatterSeries {
   @override
   final bool visible;
   @override
+  final JsonObject xAxis;
+  @override
+  final JsonObject yAxis;
+  @override
   final num zIndex;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$ScatterSeries([void updates(ScatterSeriesBuilder b)]) =>
       (new ScatterSeriesBuilder()..update(updates)).build();
@@ -2838,17 +3027,23 @@ class _$ScatterSeries extends ScatterSeries {
       this.pointIntervalUnit,
       this.pointStart,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
       this.softThreshold,
+      this.states,
       this.stickyTracking,
       this.threshold,
+      this.tooltip,
       this.turboThreshold,
       this.type,
       this.visible,
+      this.xAxis,
+      this.yAxis,
       this.zIndex,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -2894,17 +3089,23 @@ class _$ScatterSeries extends ScatterSeries {
         pointIntervalUnit == other.pointIntervalUnit &&
         pointStart == other.pointStart &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         softThreshold == other.softThreshold &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
         threshold == other.threshold &&
+        tooltip == other.tooltip &&
         turboThreshold == other.turboThreshold &&
         type == other.type &&
         visible == other.visible &&
+        xAxis == other.xAxis &&
+        yAxis == other.yAxis &&
         zIndex == other.zIndex &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -2927,26 +3128,26 @@ class _$ScatterSeries extends ScatterSeries {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), data.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), id.hashCode), index.hashCode), keys.hashCode), legendIndex.hashCode), lineWidth.hashCode), linkedTo.hashCode), marker.hashCode),
-                                                                                name.hashCode),
-                                                                            negativeColor.hashCode),
-                                                                        point.hashCode),
-                                                                    pointDescriptionFormatter.hashCode),
-                                                                pointInterval.hashCode),
-                                                            pointIntervalUnit.hashCode),
-                                                        pointStart.hashCode),
-                                                    selected.hashCode),
-                                                showCheckbox.hashCode),
-                                            showInLegend.hashCode),
-                                        skipKeyboardNavigation.hashCode),
-                                    softThreshold.hashCode),
-                                stickyTracking.hashCode),
-                            threshold.hashCode),
-                        turboThreshold.hashCode),
-                    type.hashCode),
-                visible.hashCode),
-            zIndex.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), data.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), id.hashCode), index.hashCode), keys.hashCode), legendIndex.hashCode), lineWidth.hashCode), linkedTo.hashCode), marker.hashCode), name.hashCode), negativeColor.hashCode), point.hashCode), pointDescriptionFormatter.hashCode), pointInterval.hashCode), pointIntervalUnit.hashCode),
+                                                                                pointStart.hashCode),
+                                                                            selected.hashCode),
+                                                                        shadow.hashCode),
+                                                                    showCheckbox.hashCode),
+                                                                showInLegend.hashCode),
+                                                            skipKeyboardNavigation.hashCode),
+                                                        softThreshold.hashCode),
+                                                    states.hashCode),
+                                                stickyTracking.hashCode),
+                                            threshold.hashCode),
+                                        tooltip.hashCode),
+                                    turboThreshold.hashCode),
+                                type.hashCode),
+                            visible.hashCode),
+                        xAxis.hashCode),
+                    yAxis.hashCode),
+                zIndex.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -2984,17 +3185,23 @@ class _$ScatterSeries extends ScatterSeries {
           ..add('pointIntervalUnit', pointIntervalUnit)
           ..add('pointStart', pointStart)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('softThreshold', softThreshold)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
           ..add('threshold', threshold)
+          ..add('tooltip', tooltip)
           ..add('turboThreshold', turboThreshold)
           ..add('type', type)
           ..add('visible', visible)
+          ..add('xAxis', xAxis)
+          ..add('yAxis', yAxis)
           ..add('zIndex', zIndex)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -3041,9 +3248,9 @@ class ScatterSeriesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  ListBuilder<num> _data;
-  ListBuilder<num> get data => _$this._data ??= new ListBuilder<num>();
-  set data(ListBuilder<num> data) => _$this._data = data;
+  JsonObject _data;
+  JsonObject get data => _$this._data;
+  set data(JsonObject data) => _$this._data = data;
 
   ScatterSeriesDataLabelsBuilder _dataLabels;
   ScatterSeriesDataLabelsBuilder get dataLabels =>
@@ -3145,6 +3352,10 @@ class ScatterSeriesBuilder
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
   set showCheckbox(bool showCheckbox) => _$this._showCheckbox = showCheckbox;
@@ -3163,6 +3374,10 @@ class ScatterSeriesBuilder
   set softThreshold(bool softThreshold) =>
       _$this._softThreshold = softThreshold;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
@@ -3171,6 +3386,10 @@ class ScatterSeriesBuilder
   num _threshold;
   num get threshold => _$this._threshold;
   set threshold(num threshold) => _$this._threshold = threshold;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   num _turboThreshold;
   num get turboThreshold => _$this._turboThreshold;
@@ -3185,6 +3404,14 @@ class ScatterSeriesBuilder
   bool get visible => _$this._visible;
   set visible(bool visible) => _$this._visible = visible;
 
+  JsonObject _xAxis;
+  JsonObject get xAxis => _$this._xAxis;
+  set xAxis(JsonObject xAxis) => _$this._xAxis = xAxis;
+
+  JsonObject _yAxis;
+  JsonObject get yAxis => _$this._yAxis;
+  set yAxis(JsonObject yAxis) => _$this._yAxis = yAxis;
+
   num _zIndex;
   num get zIndex => _$this._zIndex;
   set zIndex(num zIndex) => _$this._zIndex = zIndex;
@@ -3192,6 +3419,10 @@ class ScatterSeriesBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   ScatterSeriesBuilder();
 
@@ -3206,7 +3437,7 @@ class ScatterSeriesBuilder
       _cropThreshold = _$v.cropThreshold;
       _cursor = _$v.cursor;
       _dashStyle = _$v.dashStyle;
-      _data = _$v.data?.toBuilder();
+      _data = _$v.data;
       _dataLabels = _$v.dataLabels?.toBuilder();
       _description = _$v.description;
       _enableMouseTracking = _$v.enableMouseTracking;
@@ -3229,17 +3460,23 @@ class ScatterSeriesBuilder
       _pointIntervalUnit = _$v.pointIntervalUnit;
       _pointStart = _$v.pointStart;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _softThreshold = _$v.softThreshold;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
       _threshold = _$v.threshold;
+      _tooltip = _$v.tooltip;
       _turboThreshold = _$v.turboThreshold;
       _type = _$v.type;
       _visible = _$v.visible;
+      _xAxis = _$v.xAxis;
+      _yAxis = _$v.yAxis;
       _zIndex = _$v.zIndex;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -3269,7 +3506,7 @@ class ScatterSeriesBuilder
             cropThreshold: cropThreshold,
             cursor: cursor,
             dashStyle: dashStyle,
-            data: _data?.build(),
+            data: data,
             dataLabels: _dataLabels?.build(),
             description: description,
             enableMouseTracking: enableMouseTracking,
@@ -3292,17 +3529,23 @@ class ScatterSeriesBuilder
             pointIntervalUnit: pointIntervalUnit,
             pointStart: pointStart,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
             softThreshold: softThreshold,
+            states: states,
             stickyTracking: stickyTracking,
             threshold: threshold,
+            tooltip: tooltip,
             turboThreshold: turboThreshold,
             type: type,
             visible: visible,
+            xAxis: xAxis,
+            yAxis: yAxis,
             zIndex: zIndex,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -3321,9 +3564,13 @@ class _$ScatterSeriesData extends ScatterSeriesData {
   @override
   final num colorIndex;
   @override
+  final JsonObject dataLabels;
+  @override
   final String description;
   @override
   final String drilldown;
+  @override
+  final JsonObject events;
   @override
   final String id;
   @override
@@ -3346,8 +3593,10 @@ class _$ScatterSeriesData extends ScatterSeriesData {
       {this.className,
       this.color,
       this.colorIndex,
+      this.dataLabels,
       this.description,
       this.drilldown,
+      this.events,
       this.id,
       this.labelrank,
       this.marker,
@@ -3372,8 +3621,10 @@ class _$ScatterSeriesData extends ScatterSeriesData {
     return className == other.className &&
         color == other.color &&
         colorIndex == other.colorIndex &&
+        dataLabels == other.dataLabels &&
         description == other.description &&
         drilldown == other.drilldown &&
+        events == other.events &&
         id == other.id &&
         labelrank == other.labelrank &&
         marker == other.marker &&
@@ -3395,11 +3646,17 @@ class _$ScatterSeriesData extends ScatterSeriesData {
                                 $jc(
                                     $jc(
                                         $jc(
-                                            $jc($jc(0, className.hashCode),
-                                                color.hashCode),
-                                            colorIndex.hashCode),
-                                        description.hashCode),
-                                    drilldown.hashCode),
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc(0,
+                                                            className.hashCode),
+                                                        color.hashCode),
+                                                    colorIndex.hashCode),
+                                                dataLabels.hashCode),
+                                            description.hashCode),
+                                        drilldown.hashCode),
+                                    events.hashCode),
                                 id.hashCode),
                             labelrank.hashCode),
                         marker.hashCode),
@@ -3415,8 +3672,10 @@ class _$ScatterSeriesData extends ScatterSeriesData {
           ..add('className', className)
           ..add('color', color)
           ..add('colorIndex', colorIndex)
+          ..add('dataLabels', dataLabels)
           ..add('description', description)
           ..add('drilldown', drilldown)
+          ..add('events', events)
           ..add('id', id)
           ..add('labelrank', labelrank)
           ..add('marker', marker)
@@ -3444,6 +3703,10 @@ class ScatterSeriesDataBuilder
   num get colorIndex => _$this._colorIndex;
   set colorIndex(num colorIndex) => _$this._colorIndex = colorIndex;
 
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
+
   String _description;
   String get description => _$this._description;
   set description(String description) => _$this._description = description;
@@ -3451,6 +3714,10 @@ class ScatterSeriesDataBuilder
   String _drilldown;
   String get drilldown => _$this._drilldown;
   set drilldown(String drilldown) => _$this._drilldown = drilldown;
+
+  JsonObject _events;
+  JsonObject get events => _$this._events;
+  set events(JsonObject events) => _$this._events = events;
 
   String _id;
   String get id => _$this._id;
@@ -3488,8 +3755,10 @@ class ScatterSeriesDataBuilder
       _className = _$v.className;
       _color = _$v.color;
       _colorIndex = _$v.colorIndex;
+      _dataLabels = _$v.dataLabels;
       _description = _$v.description;
       _drilldown = _$v.drilldown;
+      _events = _$v.events;
       _id = _$v.id;
       _labelrank = _$v.labelrank;
       _marker = _$v.marker?.toBuilder();
@@ -3520,8 +3789,10 @@ class ScatterSeriesDataBuilder
             className: className,
             color: color,
             colorIndex: colorIndex,
+            dataLabels: dataLabels,
             description: description,
             drilldown: drilldown,
+            events: events,
             id: id,
             labelrank: labelrank,
             marker: _marker?.build(),
@@ -3980,7 +4251,11 @@ class ScatterSeriesDataMarkerStatesBuilder
 class _$ScatterSeriesDataMarkerStatesHover
     extends ScatterSeriesDataMarkerStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -3994,7 +4269,12 @@ class _$ScatterSeriesDataMarkerStatesHover
           .build();
 
   _$ScatterSeriesDataMarkerStatesHover._(
-      {this.enabled, this.lineWidth, this.lineWidthPlus, this.marker})
+      {this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker})
       : super._();
 
   @override
@@ -4010,7 +4290,9 @@ class _$ScatterSeriesDataMarkerStatesHover
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! ScatterSeriesDataMarkerStatesHover) return false;
-    return enabled == other.enabled &&
+    return animation == other.animation &&
+        enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -4019,7 +4301,11 @@ class _$ScatterSeriesDataMarkerStatesHover
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, enabled.hashCode), lineWidth.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), enabled.hashCode),
+                    halo.hashCode),
+                lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
   }
@@ -4027,7 +4313,9 @@ class _$ScatterSeriesDataMarkerStatesHover
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ScatterSeriesDataMarkerStatesHover')
+          ..add('animation', animation)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -4041,9 +4329,17 @@ class ScatterSeriesDataMarkerStatesHoverBuilder
             ScatterSeriesDataMarkerStatesHoverBuilder> {
   _$ScatterSeriesDataMarkerStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -4063,7 +4359,9 @@ class ScatterSeriesDataMarkerStatesHoverBuilder
 
   ScatterSeriesDataMarkerStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -4087,7 +4385,9 @@ class ScatterSeriesDataMarkerStatesHoverBuilder
   _$ScatterSeriesDataMarkerStatesHover build() {
     final result = _$v ??
         new _$ScatterSeriesDataMarkerStatesHover._(
+            animation: animation,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -4104,6 +4404,8 @@ class ScatterSeriesDataMarkerStatesHoverBuilder
 class _$ScatterSeriesDataMarkerStatesHoverHalo
     extends ScatterSeriesDataMarkerStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -4113,7 +4415,8 @@ class _$ScatterSeriesDataMarkerStatesHoverHalo
       (new ScatterSeriesDataMarkerStatesHoverHaloBuilder()..update(updates))
           .build();
 
-  _$ScatterSeriesDataMarkerStatesHoverHalo._({this.opacity, this.size})
+  _$ScatterSeriesDataMarkerStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
       : super._();
 
   @override
@@ -4129,18 +4432,22 @@ class _$ScatterSeriesDataMarkerStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! ScatterSeriesDataMarkerStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
             'ScatterSeriesDataMarkerStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -4152,6 +4459,10 @@ class ScatterSeriesDataMarkerStatesHoverHaloBuilder
         Builder<ScatterSeriesDataMarkerStatesHoverHalo,
             ScatterSeriesDataMarkerStatesHoverHaloBuilder> {
   _$ScatterSeriesDataMarkerStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -4165,6 +4476,7 @@ class ScatterSeriesDataMarkerStatesHoverHaloBuilder
 
   ScatterSeriesDataMarkerStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -4187,7 +4499,7 @@ class ScatterSeriesDataMarkerStatesHoverHaloBuilder
   _$ScatterSeriesDataMarkerStatesHoverHalo build() {
     final result = _$v ??
         new _$ScatterSeriesDataMarkerStatesHoverHalo._(
-            opacity: opacity, size: size);
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -4213,6 +4525,8 @@ class _$ScatterSeriesDataMarkerStatesHoverMarker
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -4229,6 +4543,7 @@ class _$ScatterSeriesDataMarkerStatesHoverMarker
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -4252,6 +4567,7 @@ class _$ScatterSeriesDataMarkerStatesHoverMarker
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -4263,11 +4579,15 @@ class _$ScatterSeriesDataMarkerStatesHoverMarker
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -4282,6 +4602,7 @@ class _$ScatterSeriesDataMarkerStatesHoverMarker
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -4318,6 +4639,10 @@ class ScatterSeriesDataMarkerStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -4336,6 +4661,7 @@ class ScatterSeriesDataMarkerStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -4364,6 +4690,7 @@ class ScatterSeriesDataMarkerStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -4412,6 +4739,8 @@ class _$ScatterSeriesDataLabels extends ScatterSeriesDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -4448,6 +4777,7 @@ class _$ScatterSeriesDataLabels extends ScatterSeriesDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -4487,6 +4817,7 @@ class _$ScatterSeriesDataLabels extends ScatterSeriesDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -4516,19 +4847,19 @@ class _$ScatterSeriesDataLabels extends ScatterSeriesDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -4558,6 +4889,7 @@ class _$ScatterSeriesDataLabels extends ScatterSeriesDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -4643,6 +4975,10 @@ class ScatterSeriesDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -4694,6 +5030,7 @@ class ScatterSeriesDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -4738,6 +5075,7 @@ class ScatterSeriesDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -5837,7 +6175,11 @@ class ScatterSeriesStatesBuilder
 
 class _$ScatterSeriesStatesHover extends ScatterSeriesStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -5850,7 +6192,12 @@ class _$ScatterSeriesStatesHover extends ScatterSeriesStatesHover {
       (new ScatterSeriesStatesHoverBuilder()..update(updates)).build();
 
   _$ScatterSeriesStatesHover._(
-      {this.enabled, this.lineWidth, this.lineWidthPlus, this.marker})
+      {this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker})
       : super._();
 
   @override
@@ -5866,7 +6213,9 @@ class _$ScatterSeriesStatesHover extends ScatterSeriesStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! ScatterSeriesStatesHover) return false;
-    return enabled == other.enabled &&
+    return animation == other.animation &&
+        enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -5875,7 +6224,11 @@ class _$ScatterSeriesStatesHover extends ScatterSeriesStatesHover {
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, enabled.hashCode), lineWidth.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), enabled.hashCode),
+                    halo.hashCode),
+                lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
   }
@@ -5883,7 +6236,9 @@ class _$ScatterSeriesStatesHover extends ScatterSeriesStatesHover {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ScatterSeriesStatesHover')
+          ..add('animation', animation)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -5896,9 +6251,17 @@ class ScatterSeriesStatesHoverBuilder
         Builder<ScatterSeriesStatesHover, ScatterSeriesStatesHoverBuilder> {
   _$ScatterSeriesStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -5918,7 +6281,9 @@ class ScatterSeriesStatesHoverBuilder
 
   ScatterSeriesStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -5942,7 +6307,9 @@ class ScatterSeriesStatesHoverBuilder
   _$ScatterSeriesStatesHover build() {
     final result = _$v ??
         new _$ScatterSeriesStatesHover._(
+            animation: animation,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -5958,6 +6325,8 @@ class ScatterSeriesStatesHoverBuilder
 
 class _$ScatterSeriesStatesHoverHalo extends ScatterSeriesStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -5966,7 +6335,8 @@ class _$ScatterSeriesStatesHoverHalo extends ScatterSeriesStatesHoverHalo {
           [void updates(ScatterSeriesStatesHoverHaloBuilder b)]) =>
       (new ScatterSeriesStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$ScatterSeriesStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$ScatterSeriesStatesHoverHalo._({this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   ScatterSeriesStatesHoverHalo rebuild(
@@ -5981,17 +6351,21 @@ class _$ScatterSeriesStatesHoverHalo extends ScatterSeriesStatesHoverHalo {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! ScatterSeriesStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ScatterSeriesStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -6003,6 +6377,10 @@ class ScatterSeriesStatesHoverHaloBuilder
         Builder<ScatterSeriesStatesHoverHalo,
             ScatterSeriesStatesHoverHaloBuilder> {
   _$ScatterSeriesStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -6016,6 +6394,7 @@ class ScatterSeriesStatesHoverHaloBuilder
 
   ScatterSeriesStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -6037,7 +6416,8 @@ class ScatterSeriesStatesHoverHaloBuilder
   @override
   _$ScatterSeriesStatesHoverHalo build() {
     final result = _$v ??
-        new _$ScatterSeriesStatesHoverHalo._(opacity: opacity, size: size);
+        new _$ScatterSeriesStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -6062,6 +6442,8 @@ class _$ScatterSeriesStatesHoverMarker extends ScatterSeriesStatesHoverMarker {
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -6077,6 +6459,7 @@ class _$ScatterSeriesStatesHoverMarker extends ScatterSeriesStatesHoverMarker {
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -6100,6 +6483,7 @@ class _$ScatterSeriesStatesHoverMarker extends ScatterSeriesStatesHoverMarker {
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -6111,11 +6495,15 @@ class _$ScatterSeriesStatesHoverMarker extends ScatterSeriesStatesHoverMarker {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -6129,6 +6517,7 @@ class _$ScatterSeriesStatesHoverMarker extends ScatterSeriesStatesHoverMarker {
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -6165,6 +6554,10 @@ class ScatterSeriesStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -6183,6 +6576,7 @@ class ScatterSeriesStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -6211,6 +6605,7 @@ class ScatterSeriesStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -6224,6 +6619,8 @@ class ScatterSeriesStatesHoverMarkerBuilder
 // **************************************************************************
 
 class _$ScatterSeriesTooltip extends ScatterSeriesTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -6256,7 +6653,8 @@ class _$ScatterSeriesTooltip extends ScatterSeriesTooltip {
       (new ScatterSeriesTooltipBuilder()..update(updates)).build();
 
   _$ScatterSeriesTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -6283,7 +6681,8 @@ class _$ScatterSeriesTooltip extends ScatterSeriesTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! ScatterSeriesTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -6312,7 +6711,11 @@ class _$ScatterSeriesTooltip extends ScatterSeriesTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -6331,6 +6734,7 @@ class _$ScatterSeriesTooltip extends ScatterSeriesTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ScatterSeriesTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -6351,6 +6755,11 @@ class _$ScatterSeriesTooltip extends ScatterSeriesTooltip {
 class ScatterSeriesTooltipBuilder
     implements Builder<ScatterSeriesTooltip, ScatterSeriesTooltipBuilder> {
   _$ScatterSeriesTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -6411,6 +6820,7 @@ class ScatterSeriesTooltipBuilder
 
   ScatterSeriesTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -6444,6 +6854,7 @@ class ScatterSeriesTooltipBuilder
   _$ScatterSeriesTooltip build() {
     final result = _$v ??
         new _$ScatterSeriesTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,

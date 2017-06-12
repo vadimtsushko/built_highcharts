@@ -19,6 +19,12 @@ class _$DataSerializer implements StructuredSerializer<Data> {
   Iterable serialize(Serializers serializers, Data object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.columns != null) {
+      result
+        ..add('columns')
+        ..add(serializers.serialize(object.columns,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.complete != null) {
       result
         ..add('complete')
@@ -97,6 +103,18 @@ class _$DataSerializer implements StructuredSerializer<Data> {
         ..add(serializers.serialize(object.parsed,
             specifiedType: const FullType(Function)));
     }
+    if (object.rows != null) {
+      result
+        ..add('rows')
+        ..add(serializers.serialize(object.rows,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.seriesMapping != null) {
+      result
+        ..add('seriesMapping')
+        ..add(serializers.serialize(object.seriesMapping,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.startColumn != null) {
       result
         ..add('startColumn')
@@ -115,6 +133,12 @@ class _$DataSerializer implements StructuredSerializer<Data> {
         ..add(serializers.serialize(object.switchRowsAndColumns,
             specifiedType: const FullType(bool)));
     }
+    if (object.table != null) {
+      result
+        ..add('table')
+        ..add(serializers.serialize(object.table,
+            specifiedType: const FullType(JsonObject)));
+    }
 
     return result;
   }
@@ -130,6 +154,10 @@ class _$DataSerializer implements StructuredSerializer<Data> {
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'columns':
+          result.columns = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'complete':
           result.complete = serializers.deserialize(value,
               specifiedType: const FullType(Function)) as Function;
@@ -182,6 +210,14 @@ class _$DataSerializer implements StructuredSerializer<Data> {
           result.parsed = serializers.deserialize(value,
               specifiedType: const FullType(Function)) as Function;
           break;
+        case 'rows':
+          result.rows = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'seriesMapping':
+          result.seriesMapping = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'startColumn':
           result.startColumn = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -193,6 +229,10 @@ class _$DataSerializer implements StructuredSerializer<Data> {
         case 'switchRowsAndColumns':
           result.switchRowsAndColumns = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'table':
+          result.table = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -207,6 +247,8 @@ class _$DataSerializer implements StructuredSerializer<Data> {
 // **************************************************************************
 
 class _$Data extends Data {
+  @override
+  final JsonObject columns;
   @override
   final Function complete;
   @override
@@ -234,17 +276,24 @@ class _$Data extends Data {
   @override
   final Function parsed;
   @override
+  final JsonObject rows;
+  @override
+  final JsonObject seriesMapping;
+  @override
   final num startColumn;
   @override
   final num startRow;
   @override
   final bool switchRowsAndColumns;
+  @override
+  final JsonObject table;
 
   factory _$Data([void updates(DataBuilder b)]) =>
       (new DataBuilder()..update(updates)).build();
 
   _$Data._(
-      {this.complete,
+      {this.columns,
+      this.complete,
       this.csv,
       this.dateFormat,
       this.decimalPoint,
@@ -257,9 +306,12 @@ class _$Data extends Data {
       this.lineDelimiter,
       this.parseDate,
       this.parsed,
+      this.rows,
+      this.seriesMapping,
       this.startColumn,
       this.startRow,
-      this.switchRowsAndColumns})
+      this.switchRowsAndColumns,
+      this.table})
       : super._();
 
   @override
@@ -273,7 +325,8 @@ class _$Data extends Data {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! Data) return false;
-    return complete == other.complete &&
+    return columns == other.columns &&
+        complete == other.complete &&
         csv == other.csv &&
         dateFormat == other.dateFormat &&
         decimalPoint == other.decimalPoint &&
@@ -286,9 +339,12 @@ class _$Data extends Data {
         lineDelimiter == other.lineDelimiter &&
         parseDate == other.parseDate &&
         parsed == other.parsed &&
+        rows == other.rows &&
+        seriesMapping == other.seriesMapping &&
         startColumn == other.startColumn &&
         startRow == other.startRow &&
-        switchRowsAndColumns == other.switchRowsAndColumns;
+        switchRowsAndColumns == other.switchRowsAndColumns &&
+        table == other.table;
   }
 
   @override
@@ -309,30 +365,46 @@ class _$Data extends Data {
                                                         $jc(
                                                             $jc(
                                                                 $jc(
-                                                                    0,
-                                                                    complete
+                                                                    $jc(
+                                                                        $jc(
+                                                                            $jc(
+                                                                                $jc(
+                                                                                    0,
+                                                                                    columns
+                                                                                        .hashCode),
+                                                                                complete
+                                                                                    .hashCode),
+                                                                            csv
+                                                                                .hashCode),
+                                                                        dateFormat
+                                                                            .hashCode),
+                                                                    decimalPoint
                                                                         .hashCode),
-                                                                csv.hashCode),
-                                                            dateFormat
-                                                                .hashCode),
-                                                        decimalPoint.hashCode),
-                                                    endColumn.hashCode),
-                                                endRow.hashCode),
-                                            firstRowAsNames.hashCode),
-                                        googleSpreadsheetKey.hashCode),
-                                    googleSpreadsheetWorksheet.hashCode),
-                                itemDelimiter.hashCode),
-                            lineDelimiter.hashCode),
-                        parseDate.hashCode),
-                    parsed.hashCode),
-                startColumn.hashCode),
-            startRow.hashCode),
-        switchRowsAndColumns.hashCode));
+                                                                endColumn
+                                                                    .hashCode),
+                                                            endRow.hashCode),
+                                                        firstRowAsNames
+                                                            .hashCode),
+                                                    googleSpreadsheetKey
+                                                        .hashCode),
+                                                googleSpreadsheetWorksheet
+                                                    .hashCode),
+                                            itemDelimiter.hashCode),
+                                        lineDelimiter.hashCode),
+                                    parseDate.hashCode),
+                                parsed.hashCode),
+                            rows.hashCode),
+                        seriesMapping.hashCode),
+                    startColumn.hashCode),
+                startRow.hashCode),
+            switchRowsAndColumns.hashCode),
+        table.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('Data')
+          ..add('columns', columns)
           ..add('complete', complete)
           ..add('csv', csv)
           ..add('dateFormat', dateFormat)
@@ -346,15 +418,22 @@ class _$Data extends Data {
           ..add('lineDelimiter', lineDelimiter)
           ..add('parseDate', parseDate)
           ..add('parsed', parsed)
+          ..add('rows', rows)
+          ..add('seriesMapping', seriesMapping)
           ..add('startColumn', startColumn)
           ..add('startRow', startRow)
-          ..add('switchRowsAndColumns', switchRowsAndColumns))
+          ..add('switchRowsAndColumns', switchRowsAndColumns)
+          ..add('table', table))
         .toString();
   }
 }
 
 class DataBuilder implements Builder<Data, DataBuilder> {
   _$Data _$v;
+
+  JsonObject _columns;
+  JsonObject get columns => _$this._columns;
+  set columns(JsonObject columns) => _$this._columns = columns;
 
   Function _complete;
   Function get complete => _$this._complete;
@@ -413,6 +492,15 @@ class DataBuilder implements Builder<Data, DataBuilder> {
   Function get parsed => _$this._parsed;
   set parsed(Function parsed) => _$this._parsed = parsed;
 
+  JsonObject _rows;
+  JsonObject get rows => _$this._rows;
+  set rows(JsonObject rows) => _$this._rows = rows;
+
+  JsonObject _seriesMapping;
+  JsonObject get seriesMapping => _$this._seriesMapping;
+  set seriesMapping(JsonObject seriesMapping) =>
+      _$this._seriesMapping = seriesMapping;
+
   num _startColumn;
   num get startColumn => _$this._startColumn;
   set startColumn(num startColumn) => _$this._startColumn = startColumn;
@@ -426,10 +514,15 @@ class DataBuilder implements Builder<Data, DataBuilder> {
   set switchRowsAndColumns(bool switchRowsAndColumns) =>
       _$this._switchRowsAndColumns = switchRowsAndColumns;
 
+  JsonObject _table;
+  JsonObject get table => _$this._table;
+  set table(JsonObject table) => _$this._table = table;
+
   DataBuilder();
 
   DataBuilder get _$this {
     if (_$v != null) {
+      _columns = _$v.columns;
       _complete = _$v.complete;
       _csv = _$v.csv;
       _dateFormat = _$v.dateFormat;
@@ -443,9 +536,12 @@ class DataBuilder implements Builder<Data, DataBuilder> {
       _lineDelimiter = _$v.lineDelimiter;
       _parseDate = _$v.parseDate;
       _parsed = _$v.parsed;
+      _rows = _$v.rows;
+      _seriesMapping = _$v.seriesMapping;
       _startColumn = _$v.startColumn;
       _startRow = _$v.startRow;
       _switchRowsAndColumns = _$v.switchRowsAndColumns;
+      _table = _$v.table;
       _$v = null;
     }
     return this;
@@ -466,6 +562,7 @@ class DataBuilder implements Builder<Data, DataBuilder> {
   _$Data build() {
     final result = _$v ??
         new _$Data._(
+            columns: columns,
             complete: complete,
             csv: csv,
             dateFormat: dateFormat,
@@ -479,9 +576,12 @@ class DataBuilder implements Builder<Data, DataBuilder> {
             lineDelimiter: lineDelimiter,
             parseDate: parseDate,
             parsed: parsed,
+            rows: rows,
+            seriesMapping: seriesMapping,
             startColumn: startColumn,
             startRow: startRow,
-            switchRowsAndColumns: switchRowsAndColumns);
+            switchRowsAndColumns: switchRowsAndColumns,
+            table: table);
     replace(result);
     return result;
   }

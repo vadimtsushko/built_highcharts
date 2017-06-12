@@ -21,6 +21,18 @@ class _$NoDataSerializer implements StructuredSerializer<NoData> {
   Iterable serialize(Serializers serializers, NoData object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attr != null) {
+      result
+        ..add('attr')
+        ..add(serializers.serialize(object.attr,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.position != null) {
+      result
+        ..add('position')
+        ..add(serializers.serialize(object.position,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.style != null) {
       result
         ..add('style')
@@ -49,6 +61,14 @@ class _$NoDataSerializer implements StructuredSerializer<NoData> {
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attr':
+          result.attr = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'position':
+          result.position = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'style':
           result.style.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltMap, const [
@@ -147,6 +167,10 @@ class _$NoDataPositionSerializer
 
 class _$NoData extends NoData {
   @override
+  final JsonObject attr;
+  @override
+  final JsonObject position;
+  @override
   final BuiltMap<String, String> style;
   @override
   final bool useHTML;
@@ -154,7 +178,7 @@ class _$NoData extends NoData {
   factory _$NoData([void updates(NoDataBuilder b)]) =>
       (new NoDataBuilder()..update(updates)).build();
 
-  _$NoData._({this.style, this.useHTML}) : super._();
+  _$NoData._({this.attr, this.position, this.style, this.useHTML}) : super._();
 
   @override
   NoData rebuild(void updates(NoDataBuilder b)) =>
@@ -167,17 +191,24 @@ class _$NoData extends NoData {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! NoData) return false;
-    return style == other.style && useHTML == other.useHTML;
+    return attr == other.attr &&
+        position == other.position &&
+        style == other.style &&
+        useHTML == other.useHTML;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, style.hashCode), useHTML.hashCode));
+    return $jf($jc(
+        $jc($jc($jc(0, attr.hashCode), position.hashCode), style.hashCode),
+        useHTML.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('NoData')
+          ..add('attr', attr)
+          ..add('position', position)
           ..add('style', style)
           ..add('useHTML', useHTML))
         .toString();
@@ -186,6 +217,14 @@ class _$NoData extends NoData {
 
 class NoDataBuilder implements Builder<NoData, NoDataBuilder> {
   _$NoData _$v;
+
+  JsonObject _attr;
+  JsonObject get attr => _$this._attr;
+  set attr(JsonObject attr) => _$this._attr = attr;
+
+  JsonObject _position;
+  JsonObject get position => _$this._position;
+  set position(JsonObject position) => _$this._position = position;
 
   MapBuilder<String, String> _style;
   MapBuilder<String, String> get style =>
@@ -200,6 +239,8 @@ class NoDataBuilder implements Builder<NoData, NoDataBuilder> {
 
   NoDataBuilder get _$this {
     if (_$v != null) {
+      _attr = _$v.attr;
+      _position = _$v.position;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
       _$v = null;
@@ -220,8 +261,12 @@ class NoDataBuilder implements Builder<NoData, NoDataBuilder> {
 
   @override
   _$NoData build() {
-    final result =
-        _$v ?? new _$NoData._(style: _style?.build(), useHTML: useHTML);
+    final result = _$v ??
+        new _$NoData._(
+            attr: attr,
+            position: position,
+            style: _style?.build(),
+            useHTML: useHTML);
     replace(result);
     return result;
   }

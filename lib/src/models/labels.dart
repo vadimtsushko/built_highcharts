@@ -3,6 +3,7 @@ library labels;
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 
 part 'labels.g.dart';
     
@@ -11,8 +12,8 @@ abstract class Labels implements Built<Labels, LabelsBuilder> {
   /** 
    * A HTML label that can be positioned anywhere in the chart area. 
    */
-  ///TODO Разобратья с типом
-  ///BuiltList<dynamic> get items;
+  @nullable
+  JsonObject get items;
   /** 
    * Shared CSS styles for all labels. 
    */

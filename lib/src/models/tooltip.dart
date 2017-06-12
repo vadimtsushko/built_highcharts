@@ -3,6 +3,7 @@ library tooltip;
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 
 part 'tooltip.g.dart';
     
@@ -41,8 +42,8 @@ abstract class Tooltip implements Built<Tooltip, TooltipBuilder> {
    * Since 4.1, the crosshair definitions are moved to the Axis object in order for a better separation from the tooltip. See <a href="#xAxis.crosshair">xAxis.crosshair<a>. 
    */
   @deprecated
-  ///TODO Разобратья с типом
-  ///dynamic get crosshairs;
+  @nullable
+  JsonObject get crosshairs;
   @deprecated
   /** 
    * <p>For series on a datetime axes, the date format in the tooltip's header will by default be guessed based on the closest data points. This member gives the default string representations used for each unit. For an overview of the replacement codes, see <a href="#Highcharts.dateFormat">dateFormat</a>.</p>
@@ -60,8 +61,8 @@ abstract class Tooltip implements Built<Tooltip, TooltipBuilder> {
 }</pre>
 </p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get dateTimeLabelFormats;
+  @nullable
+  JsonObject get dateTimeLabelFormats;
   /** 
    * Enable or disable the tooltip. 
    */

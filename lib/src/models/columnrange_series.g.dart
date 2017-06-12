@@ -133,6 +133,18 @@ class _$ColumnrangeSeriesSerializer
         ..add(serializers.serialize(object.cursor,
             specifiedType: const FullType(String)));
     }
+    if (object.data != null) {
+      result
+        ..add('data')
+        ..add(serializers.serialize(object.data,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.depth != null) {
       result
         ..add('depth')
@@ -284,6 +296,12 @@ class _$ColumnrangeSeriesSerializer
         ..add(serializers.serialize(object.pointPadding,
             specifiedType: const FullType(num)));
     }
+    if (object.pointPlacement != null) {
+      result
+        ..add('pointPlacement')
+        ..add(serializers.serialize(object.pointPlacement,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.pointRange != null) {
       result
         ..add('pointRange')
@@ -308,6 +326,12 @@ class _$ColumnrangeSeriesSerializer
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.showCheckbox != null) {
       result
         ..add('showCheckbox')
@@ -326,11 +350,23 @@ class _$ColumnrangeSeriesSerializer
         ..add(serializers.serialize(object.skipKeyboardNavigation,
             specifiedType: const FullType(bool)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
         ..add(serializers.serialize(object.stickyTracking,
             specifiedType: const FullType(bool)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.turboThreshold != null) {
       result
@@ -350,6 +386,18 @@ class _$ColumnrangeSeriesSerializer
         ..add(serializers.serialize(object.visible,
             specifiedType: const FullType(bool)));
     }
+    if (object.xAxis != null) {
+      result
+        ..add('xAxis')
+        ..add(serializers.serialize(object.xAxis,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.yAxis != null) {
+      result
+        ..add('yAxis')
+        ..add(serializers.serialize(object.yAxis,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.zIndex != null) {
       result
         ..add('zIndex')
@@ -361,6 +409,12 @@ class _$ColumnrangeSeriesSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -434,6 +488,14 @@ class _$ColumnrangeSeriesSerializer
         case 'cursor':
           result.cursor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'data':
+          result.data = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'depth':
           result.depth = serializers.deserialize(value,
@@ -539,6 +601,10 @@ class _$ColumnrangeSeriesSerializer
           result.pointPadding = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'pointPlacement':
+          result.pointPlacement = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'pointRange':
           result.pointRange = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -555,6 +621,10 @@ class _$ColumnrangeSeriesSerializer
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -567,9 +637,17 @@ class _$ColumnrangeSeriesSerializer
           result.skipKeyboardNavigation = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'turboThreshold':
           result.turboThreshold = serializers.deserialize(value,
@@ -583,6 +661,14 @@ class _$ColumnrangeSeriesSerializer
           result.visible = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'xAxis':
+          result.xAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'yAxis':
+          result.yAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'zIndex':
           result.zIndex = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -590,6 +676,10 @@ class _$ColumnrangeSeriesSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -630,6 +720,12 @@ class _$ColumnrangeSeriesDataSerializer
         ..add(serializers.serialize(object.colorIndex,
             specifiedType: const FullType(num)));
     }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.description != null) {
       result
         ..add('description')
@@ -641,6 +737,12 @@ class _$ColumnrangeSeriesDataSerializer
         ..add('drilldown')
         ..add(serializers.serialize(object.drilldown,
             specifiedType: const FullType(String)));
+    }
+    if (object.events != null) {
+      result
+        ..add('events')
+        ..add(serializers.serialize(object.events,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.high != null) {
       result
@@ -712,6 +814,10 @@ class _$ColumnrangeSeriesDataSerializer
           result.colorIndex = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'description':
           result.description = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -719,6 +825,10 @@ class _$ColumnrangeSeriesDataSerializer
         case 'drilldown':
           result.drilldown = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'events':
+          result.events = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'high':
           result.high = serializers.deserialize(value,
@@ -980,6 +1090,12 @@ class _$ColumnrangeSeriesDataLabelsSerializer
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.shape != null) {
       result
         ..add('shape')
@@ -1118,6 +1234,10 @@ class _$ColumnrangeSeriesDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -1501,6 +1621,12 @@ class _$ColumnrangeSeriesStatesHoverSerializer
       Serializers serializers, ColumnrangeSeriesStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.borderColor != null) {
       result
         ..add('borderColor')
@@ -1525,6 +1651,12 @@ class _$ColumnrangeSeriesStatesHoverSerializer
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
     }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
+    }
 
     return result;
   }
@@ -1541,6 +1673,10 @@ class _$ColumnrangeSeriesStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'borderColor':
           result.borderColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -1556,6 +1692,10 @@ class _$ColumnrangeSeriesStatesHoverSerializer
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -1579,6 +1719,12 @@ class _$ColumnrangeSeriesStatesHoverHaloSerializer
       Serializers serializers, ColumnrangeSeriesStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -1607,6 +1753,10 @@ class _$ColumnrangeSeriesStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -1636,6 +1786,12 @@ class _$ColumnrangeSeriesTooltipSerializer
   Iterable serialize(Serializers serializers, ColumnrangeSeriesTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -1730,6 +1886,10 @@ class _$ColumnrangeSeriesTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -1911,6 +2071,10 @@ class _$ColumnrangeSeries extends ColumnrangeSeries {
   @override
   final String cursor;
   @override
+  final JsonObject data;
+  @override
+  final JsonObject dataLabels;
+  @override
   final num depth;
   @override
   final String description;
@@ -1961,6 +2125,8 @@ class _$ColumnrangeSeries extends ColumnrangeSeries {
   @override
   final num pointPadding;
   @override
+  final JsonObject pointPlacement;
+  @override
   final num pointRange;
   @override
   final num pointStart;
@@ -1969,13 +2135,19 @@ class _$ColumnrangeSeries extends ColumnrangeSeries {
   @override
   final bool selected;
   @override
+  final JsonObject shadow;
+  @override
   final bool showCheckbox;
   @override
   final bool showInLegend;
   @override
   final bool skipKeyboardNavigation;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
+  @override
+  final JsonObject tooltip;
   @override
   final num turboThreshold;
   @override
@@ -1983,9 +2155,15 @@ class _$ColumnrangeSeries extends ColumnrangeSeries {
   @override
   final bool visible;
   @override
+  final JsonObject xAxis;
+  @override
+  final JsonObject yAxis;
+  @override
   final num zIndex;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$ColumnrangeSeries([void updates(ColumnrangeSeriesBuilder b)]) =>
       (new ColumnrangeSeriesBuilder()..update(updates)).build();
@@ -2005,6 +2183,8 @@ class _$ColumnrangeSeries extends ColumnrangeSeries {
       this.crisp,
       this.cropThreshold,
       this.cursor,
+      this.data,
+      this.dataLabels,
       this.depth,
       this.description,
       this.edgeColor,
@@ -2030,19 +2210,26 @@ class _$ColumnrangeSeries extends ColumnrangeSeries {
       this.pointInterval,
       this.pointIntervalUnit,
       this.pointPadding,
+      this.pointPlacement,
       this.pointRange,
       this.pointStart,
       this.pointWidth,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
+      this.states,
       this.stickyTracking,
+      this.tooltip,
       this.turboThreshold,
       this.type,
       this.visible,
+      this.xAxis,
+      this.yAxis,
       this.zIndex,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -2071,6 +2258,8 @@ class _$ColumnrangeSeries extends ColumnrangeSeries {
         crisp == other.crisp &&
         cropThreshold == other.cropThreshold &&
         cursor == other.cursor &&
+        data == other.data &&
+        dataLabels == other.dataLabels &&
         depth == other.depth &&
         description == other.description &&
         edgeColor == other.edgeColor &&
@@ -2096,19 +2285,26 @@ class _$ColumnrangeSeries extends ColumnrangeSeries {
         pointInterval == other.pointInterval &&
         pointIntervalUnit == other.pointIntervalUnit &&
         pointPadding == other.pointPadding &&
+        pointPlacement == other.pointPlacement &&
         pointRange == other.pointRange &&
         pointStart == other.pointStart &&
         pointWidth == other.pointWidth &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
+        tooltip == other.tooltip &&
         turboThreshold == other.turboThreshold &&
         type == other.type &&
         visible == other.visible &&
+        xAxis == other.xAxis &&
+        yAxis == other.yAxis &&
         zIndex == other.zIndex &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -2131,26 +2327,26 @@ class _$ColumnrangeSeries extends ColumnrangeSeries {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), crisp.hashCode), cropThreshold.hashCode), cursor.hashCode), depth.hashCode), description.hashCode), edgeColor.hashCode), edgeWidth.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), groupPadding.hashCode), groupZPadding.hashCode), grouping.hashCode), id.hashCode), index.hashCode), keys.hashCode), legendIndex.hashCode), linkedTo.hashCode), maxPointWidth.hashCode), minPointLength.hashCode),
-                                                                                name.hashCode),
-                                                                            point.hashCode),
-                                                                        pointDescriptionFormatter.hashCode),
-                                                                    pointInterval.hashCode),
-                                                                pointIntervalUnit.hashCode),
-                                                            pointPadding.hashCode),
-                                                        pointRange.hashCode),
-                                                    pointStart.hashCode),
-                                                pointWidth.hashCode),
-                                            selected.hashCode),
-                                        showCheckbox.hashCode),
-                                    showInLegend.hashCode),
-                                skipKeyboardNavigation.hashCode),
-                            stickyTracking.hashCode),
-                        turboThreshold.hashCode),
-                    type.hashCode),
-                visible.hashCode),
-            zIndex.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), crisp.hashCode), cropThreshold.hashCode), cursor.hashCode), data.hashCode), dataLabels.hashCode), depth.hashCode), description.hashCode), edgeColor.hashCode), edgeWidth.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), groupPadding.hashCode), groupZPadding.hashCode), grouping.hashCode), id.hashCode), index.hashCode), keys.hashCode), legendIndex.hashCode), linkedTo.hashCode), maxPointWidth.hashCode), minPointLength.hashCode), name.hashCode), point.hashCode), pointDescriptionFormatter.hashCode), pointInterval.hashCode), pointIntervalUnit.hashCode), pointPadding.hashCode), pointPlacement.hashCode),
+                                                                                pointRange.hashCode),
+                                                                            pointStart.hashCode),
+                                                                        pointWidth.hashCode),
+                                                                    selected.hashCode),
+                                                                shadow.hashCode),
+                                                            showCheckbox.hashCode),
+                                                        showInLegend.hashCode),
+                                                    skipKeyboardNavigation.hashCode),
+                                                states.hashCode),
+                                            stickyTracking.hashCode),
+                                        tooltip.hashCode),
+                                    turboThreshold.hashCode),
+                                type.hashCode),
+                            visible.hashCode),
+                        xAxis.hashCode),
+                    yAxis.hashCode),
+                zIndex.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -2170,6 +2366,8 @@ class _$ColumnrangeSeries extends ColumnrangeSeries {
           ..add('crisp', crisp)
           ..add('cropThreshold', cropThreshold)
           ..add('cursor', cursor)
+          ..add('data', data)
+          ..add('dataLabels', dataLabels)
           ..add('depth', depth)
           ..add('description', description)
           ..add('edgeColor', edgeColor)
@@ -2195,19 +2393,26 @@ class _$ColumnrangeSeries extends ColumnrangeSeries {
           ..add('pointInterval', pointInterval)
           ..add('pointIntervalUnit', pointIntervalUnit)
           ..add('pointPadding', pointPadding)
+          ..add('pointPlacement', pointPlacement)
           ..add('pointRange', pointRange)
           ..add('pointStart', pointStart)
           ..add('pointWidth', pointWidth)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
+          ..add('tooltip', tooltip)
           ..add('turboThreshold', turboThreshold)
           ..add('type', type)
           ..add('visible', visible)
+          ..add('xAxis', xAxis)
+          ..add('yAxis', yAxis)
           ..add('zIndex', zIndex)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -2274,6 +2479,14 @@ class ColumnrangeSeriesBuilder
   String _cursor;
   String get cursor => _$this._cursor;
   set cursor(String cursor) => _$this._cursor = cursor;
+
+  JsonObject _data;
+  JsonObject get data => _$this._data;
+  set data(JsonObject data) => _$this._data = data;
+
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
 
   num _depth;
   num get depth => _$this._depth;
@@ -2384,6 +2597,11 @@ class ColumnrangeSeriesBuilder
   num get pointPadding => _$this._pointPadding;
   set pointPadding(num pointPadding) => _$this._pointPadding = pointPadding;
 
+  JsonObject _pointPlacement;
+  JsonObject get pointPlacement => _$this._pointPlacement;
+  set pointPlacement(JsonObject pointPlacement) =>
+      _$this._pointPlacement = pointPlacement;
+
   num _pointRange;
   num get pointRange => _$this._pointRange;
   set pointRange(num pointRange) => _$this._pointRange = pointRange;
@@ -2400,6 +2618,10 @@ class ColumnrangeSeriesBuilder
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
   set showCheckbox(bool showCheckbox) => _$this._showCheckbox = showCheckbox;
@@ -2413,10 +2635,18 @@ class ColumnrangeSeriesBuilder
   set skipKeyboardNavigation(bool skipKeyboardNavigation) =>
       _$this._skipKeyboardNavigation = skipKeyboardNavigation;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
       _$this._stickyTracking = stickyTracking;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   num _turboThreshold;
   num get turboThreshold => _$this._turboThreshold;
@@ -2431,6 +2661,14 @@ class ColumnrangeSeriesBuilder
   bool get visible => _$this._visible;
   set visible(bool visible) => _$this._visible = visible;
 
+  JsonObject _xAxis;
+  JsonObject get xAxis => _$this._xAxis;
+  set xAxis(JsonObject xAxis) => _$this._xAxis = xAxis;
+
+  JsonObject _yAxis;
+  JsonObject get yAxis => _$this._yAxis;
+  set yAxis(JsonObject yAxis) => _$this._yAxis = yAxis;
+
   num _zIndex;
   num get zIndex => _$this._zIndex;
   set zIndex(num zIndex) => _$this._zIndex = zIndex;
@@ -2438,6 +2676,10 @@ class ColumnrangeSeriesBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   ColumnrangeSeriesBuilder();
 
@@ -2457,6 +2699,8 @@ class ColumnrangeSeriesBuilder
       _crisp = _$v.crisp;
       _cropThreshold = _$v.cropThreshold;
       _cursor = _$v.cursor;
+      _data = _$v.data;
+      _dataLabels = _$v.dataLabels;
       _depth = _$v.depth;
       _description = _$v.description;
       _edgeColor = _$v.edgeColor;
@@ -2482,19 +2726,26 @@ class ColumnrangeSeriesBuilder
       _pointInterval = _$v.pointInterval;
       _pointIntervalUnit = _$v.pointIntervalUnit;
       _pointPadding = _$v.pointPadding;
+      _pointPlacement = _$v.pointPlacement;
       _pointRange = _$v.pointRange;
       _pointStart = _$v.pointStart;
       _pointWidth = _$v.pointWidth;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
+      _tooltip = _$v.tooltip;
       _turboThreshold = _$v.turboThreshold;
       _type = _$v.type;
       _visible = _$v.visible;
+      _xAxis = _$v.xAxis;
+      _yAxis = _$v.yAxis;
       _zIndex = _$v.zIndex;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -2529,6 +2780,8 @@ class ColumnrangeSeriesBuilder
             crisp: crisp,
             cropThreshold: cropThreshold,
             cursor: cursor,
+            data: data,
+            dataLabels: dataLabels,
             depth: depth,
             description: description,
             edgeColor: edgeColor,
@@ -2554,19 +2807,26 @@ class ColumnrangeSeriesBuilder
             pointInterval: pointInterval,
             pointIntervalUnit: pointIntervalUnit,
             pointPadding: pointPadding,
+            pointPlacement: pointPlacement,
             pointRange: pointRange,
             pointStart: pointStart,
             pointWidth: pointWidth,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
+            states: states,
             stickyTracking: stickyTracking,
+            tooltip: tooltip,
             turboThreshold: turboThreshold,
             type: type,
             visible: visible,
+            xAxis: xAxis,
+            yAxis: yAxis,
             zIndex: zIndex,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -2585,9 +2845,13 @@ class _$ColumnrangeSeriesData extends ColumnrangeSeriesData {
   @override
   final num colorIndex;
   @override
+  final JsonObject dataLabels;
+  @override
   final String description;
   @override
   final String drilldown;
+  @override
+  final JsonObject events;
   @override
   final num high;
   @override
@@ -2611,8 +2875,10 @@ class _$ColumnrangeSeriesData extends ColumnrangeSeriesData {
       {this.className,
       this.color,
       this.colorIndex,
+      this.dataLabels,
       this.description,
       this.drilldown,
+      this.events,
       this.high,
       this.id,
       this.labelrank,
@@ -2637,8 +2903,10 @@ class _$ColumnrangeSeriesData extends ColumnrangeSeriesData {
     return className == other.className &&
         color == other.color &&
         colorIndex == other.colorIndex &&
+        dataLabels == other.dataLabels &&
         description == other.description &&
         drilldown == other.drilldown &&
+        events == other.events &&
         high == other.high &&
         id == other.id &&
         labelrank == other.labelrank &&
@@ -2660,11 +2928,17 @@ class _$ColumnrangeSeriesData extends ColumnrangeSeriesData {
                                 $jc(
                                     $jc(
                                         $jc(
-                                            $jc($jc(0, className.hashCode),
-                                                color.hashCode),
-                                            colorIndex.hashCode),
-                                        description.hashCode),
-                                    drilldown.hashCode),
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc(0,
+                                                            className.hashCode),
+                                                        color.hashCode),
+                                                    colorIndex.hashCode),
+                                                dataLabels.hashCode),
+                                            description.hashCode),
+                                        drilldown.hashCode),
+                                    events.hashCode),
                                 high.hashCode),
                             id.hashCode),
                         labelrank.hashCode),
@@ -2680,8 +2954,10 @@ class _$ColumnrangeSeriesData extends ColumnrangeSeriesData {
           ..add('className', className)
           ..add('color', color)
           ..add('colorIndex', colorIndex)
+          ..add('dataLabels', dataLabels)
           ..add('description', description)
           ..add('drilldown', drilldown)
+          ..add('events', events)
           ..add('high', high)
           ..add('id', id)
           ..add('labelrank', labelrank)
@@ -2709,6 +2985,10 @@ class ColumnrangeSeriesDataBuilder
   num get colorIndex => _$this._colorIndex;
   set colorIndex(num colorIndex) => _$this._colorIndex = colorIndex;
 
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
+
   String _description;
   String get description => _$this._description;
   set description(String description) => _$this._description = description;
@@ -2716,6 +2996,10 @@ class ColumnrangeSeriesDataBuilder
   String _drilldown;
   String get drilldown => _$this._drilldown;
   set drilldown(String drilldown) => _$this._drilldown = drilldown;
+
+  JsonObject _events;
+  JsonObject get events => _$this._events;
+  set events(JsonObject events) => _$this._events = events;
 
   num _high;
   num get high => _$this._high;
@@ -2752,8 +3036,10 @@ class ColumnrangeSeriesDataBuilder
       _className = _$v.className;
       _color = _$v.color;
       _colorIndex = _$v.colorIndex;
+      _dataLabels = _$v.dataLabels;
       _description = _$v.description;
       _drilldown = _$v.drilldown;
+      _events = _$v.events;
       _high = _$v.high;
       _id = _$v.id;
       _labelrank = _$v.labelrank;
@@ -2784,8 +3070,10 @@ class ColumnrangeSeriesDataBuilder
             className: className,
             color: color,
             colorIndex: colorIndex,
+            dataLabels: dataLabels,
             description: description,
             drilldown: drilldown,
+            events: events,
             high: high,
             id: id,
             labelrank: labelrank,
@@ -3001,6 +3289,8 @@ class _$ColumnrangeSeriesDataLabels extends ColumnrangeSeriesDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -3041,6 +3331,7 @@ class _$ColumnrangeSeriesDataLabels extends ColumnrangeSeriesDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -3082,6 +3373,7 @@ class _$ColumnrangeSeriesDataLabels extends ColumnrangeSeriesDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -3113,17 +3405,17 @@ class _$ColumnrangeSeriesDataLabels extends ColumnrangeSeriesDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode),
-                                                                                color.hashCode),
-                                                                            crop.hashCode),
-                                                                        defer.hashCode),
-                                                                    enabled.hashCode),
-                                                                format.hashCode),
-                                                            formatter.hashCode),
-                                                        inside.hashCode),
-                                                    overflow.hashCode),
-                                                padding.hashCode),
-                                            rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode),
+                                                                                crop.hashCode),
+                                                                            defer.hashCode),
+                                                                        enabled.hashCode),
+                                                                    format.hashCode),
+                                                                formatter.hashCode),
+                                                            inside.hashCode),
+                                                        overflow.hashCode),
+                                                    padding.hashCode),
+                                                rotation.hashCode),
+                                            shadow.hashCode),
                                         shape.hashCode),
                                     style.hashCode),
                                 useHTML.hashCode),
@@ -3155,6 +3447,7 @@ class _$ColumnrangeSeriesDataLabels extends ColumnrangeSeriesDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -3243,6 +3536,10 @@ class ColumnrangeSeriesDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -3302,6 +3599,7 @@ class ColumnrangeSeriesDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -3348,6 +3646,7 @@ class ColumnrangeSeriesDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -3878,6 +4177,8 @@ class ColumnrangeSeriesStatesBuilder
 
 class _$ColumnrangeSeriesStatesHover extends ColumnrangeSeriesStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final String borderColor;
   @override
   final num brightness;
@@ -3885,13 +4186,20 @@ class _$ColumnrangeSeriesStatesHover extends ColumnrangeSeriesStatesHover {
   final String color;
   @override
   final bool enabled;
+  @override
+  final JsonObject halo;
 
   factory _$ColumnrangeSeriesStatesHover(
           [void updates(ColumnrangeSeriesStatesHoverBuilder b)]) =>
       (new ColumnrangeSeriesStatesHoverBuilder()..update(updates)).build();
 
   _$ColumnrangeSeriesStatesHover._(
-      {this.borderColor, this.brightness, this.color, this.enabled})
+      {this.animation,
+      this.borderColor,
+      this.brightness,
+      this.color,
+      this.enabled,
+      this.halo})
       : super._();
 
   @override
@@ -3907,27 +4215,35 @@ class _$ColumnrangeSeriesStatesHover extends ColumnrangeSeriesStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! ColumnrangeSeriesStatesHover) return false;
-    return borderColor == other.borderColor &&
+    return animation == other.animation &&
+        borderColor == other.borderColor &&
         brightness == other.brightness &&
         color == other.color &&
-        enabled == other.enabled;
+        enabled == other.enabled &&
+        halo == other.halo;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, borderColor.hashCode), brightness.hashCode),
-            color.hashCode),
-        enabled.hashCode));
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), borderColor.hashCode),
+                    brightness.hashCode),
+                color.hashCode),
+            enabled.hashCode),
+        halo.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ColumnrangeSeriesStatesHover')
+          ..add('animation', animation)
           ..add('borderColor', borderColor)
           ..add('brightness', brightness)
           ..add('color', color)
-          ..add('enabled', enabled))
+          ..add('enabled', enabled)
+          ..add('halo', halo))
         .toString();
   }
 }
@@ -3937,6 +4253,10 @@ class ColumnrangeSeriesStatesHoverBuilder
         Builder<ColumnrangeSeriesStatesHover,
             ColumnrangeSeriesStatesHoverBuilder> {
   _$ColumnrangeSeriesStatesHover _$v;
+
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
 
   String _borderColor;
   String get borderColor => _$this._borderColor;
@@ -3954,14 +4274,20 @@ class ColumnrangeSeriesStatesHoverBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
+
   ColumnrangeSeriesStatesHoverBuilder();
 
   ColumnrangeSeriesStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _borderColor = _$v.borderColor;
       _brightness = _$v.brightness;
       _color = _$v.color;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _$v = null;
     }
     return this;
@@ -3982,10 +4308,12 @@ class ColumnrangeSeriesStatesHoverBuilder
   _$ColumnrangeSeriesStatesHover build() {
     final result = _$v ??
         new _$ColumnrangeSeriesStatesHover._(
+            animation: animation,
             borderColor: borderColor,
             brightness: brightness,
             color: color,
-            enabled: enabled);
+            enabled: enabled,
+            halo: halo);
     replace(result);
     return result;
   }
@@ -3999,6 +4327,8 @@ class ColumnrangeSeriesStatesHoverBuilder
 class _$ColumnrangeSeriesStatesHoverHalo
     extends ColumnrangeSeriesStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -4007,7 +4337,9 @@ class _$ColumnrangeSeriesStatesHoverHalo
           [void updates(ColumnrangeSeriesStatesHoverHaloBuilder b)]) =>
       (new ColumnrangeSeriesStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$ColumnrangeSeriesStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$ColumnrangeSeriesStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   ColumnrangeSeriesStatesHoverHalo rebuild(
@@ -4022,17 +4354,21 @@ class _$ColumnrangeSeriesStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! ColumnrangeSeriesStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ColumnrangeSeriesStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -4044,6 +4380,10 @@ class ColumnrangeSeriesStatesHoverHaloBuilder
         Builder<ColumnrangeSeriesStatesHoverHalo,
             ColumnrangeSeriesStatesHoverHaloBuilder> {
   _$ColumnrangeSeriesStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -4057,6 +4397,7 @@ class ColumnrangeSeriesStatesHoverHaloBuilder
 
   ColumnrangeSeriesStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -4078,7 +4419,8 @@ class ColumnrangeSeriesStatesHoverHaloBuilder
   @override
   _$ColumnrangeSeriesStatesHoverHalo build() {
     final result = _$v ??
-        new _$ColumnrangeSeriesStatesHoverHalo._(opacity: opacity, size: size);
+        new _$ColumnrangeSeriesStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -4090,6 +4432,8 @@ class ColumnrangeSeriesStatesHoverHaloBuilder
 // **************************************************************************
 
 class _$ColumnrangeSeriesTooltip extends ColumnrangeSeriesTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -4122,7 +4466,8 @@ class _$ColumnrangeSeriesTooltip extends ColumnrangeSeriesTooltip {
       (new ColumnrangeSeriesTooltipBuilder()..update(updates)).build();
 
   _$ColumnrangeSeriesTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -4150,7 +4495,8 @@ class _$ColumnrangeSeriesTooltip extends ColumnrangeSeriesTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! ColumnrangeSeriesTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -4179,7 +4525,11 @@ class _$ColumnrangeSeriesTooltip extends ColumnrangeSeriesTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -4198,6 +4548,7 @@ class _$ColumnrangeSeriesTooltip extends ColumnrangeSeriesTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ColumnrangeSeriesTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -4219,6 +4570,11 @@ class ColumnrangeSeriesTooltipBuilder
     implements
         Builder<ColumnrangeSeriesTooltip, ColumnrangeSeriesTooltipBuilder> {
   _$ColumnrangeSeriesTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -4279,6 +4635,7 @@ class ColumnrangeSeriesTooltipBuilder
 
   ColumnrangeSeriesTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -4312,6 +4669,7 @@ class ColumnrangeSeriesTooltipBuilder
   _$ColumnrangeSeriesTooltip build() {
     final result = _$v ??
         new _$ColumnrangeSeriesTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,

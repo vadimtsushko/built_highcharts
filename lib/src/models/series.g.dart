@@ -26,14 +26,6 @@ class _$SeriesSerializer implements StructuredSerializer<Series> {
         ..add(serializers.serialize(object.data,
             specifiedType: const FullType(JsonObject)));
     }
-    if (object.dataNumPairs != null) {
-      result
-        ..add('dataNumPairs')
-        ..add(serializers.serialize(object.dataNumPairs,
-            specifiedType: const FullType(BuiltList, const [
-              const FullType(BuiltList, const [const FullType(num)])
-            ])));
-    }
     if (object.dataParser != null) {
       result
         ..add('dataParser')
@@ -82,6 +74,18 @@ class _$SeriesSerializer implements StructuredSerializer<Series> {
         ..add(serializers.serialize(object.type,
             specifiedType: const FullType(String)));
     }
+    if (object.xAxis != null) {
+      result
+        ..add('xAxis')
+        ..add(serializers.serialize(object.xAxis,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.yAxis != null) {
+      result
+        ..add('yAxis')
+        ..add(serializers.serialize(object.yAxis,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.zIndex != null) {
       result
         ..add('zIndex')
@@ -106,12 +110,6 @@ class _$SeriesSerializer implements StructuredSerializer<Series> {
         case 'data':
           result.data = serializers.deserialize(value,
               specifiedType: const FullType(JsonObject)) as JsonObject;
-          break;
-        case 'dataNumPairs':
-          result.dataNumPairs.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(BuiltList, const [const FullType(num)])
-              ])) as BuiltList<BuiltList<num>>);
           break;
         case 'dataParser':
           result.dataParser = serializers.deserialize(value,
@@ -144,6 +142,14 @@ class _$SeriesSerializer implements StructuredSerializer<Series> {
         case 'type':
           result.type = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'xAxis':
+          result.xAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'yAxis':
+          result.yAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'zIndex':
           result.zIndex = serializers.deserialize(value,
@@ -184,8 +190,6 @@ class _$Series extends Series {
   @override
   final JsonObject data;
   @override
-  final BuiltList<BuiltList<num>> dataNumPairs;
-  @override
   final Function dataParser;
   @override
   final String dataURL;
@@ -202,6 +206,10 @@ class _$Series extends Series {
   @override
   final String type;
   @override
+  final JsonObject xAxis;
+  @override
+  final JsonObject yAxis;
+  @override
   final num zIndex;
 
   factory _$Series([void updates(SeriesBuilder b)]) =>
@@ -209,7 +217,6 @@ class _$Series extends Series {
 
   _$Series._(
       {this.data,
-      this.dataNumPairs,
       this.dataParser,
       this.dataURL,
       this.id,
@@ -218,6 +225,8 @@ class _$Series extends Series {
       this.name,
       this.stack,
       this.type,
+      this.xAxis,
+      this.yAxis,
       this.zIndex})
       : super._();
 
@@ -233,7 +242,6 @@ class _$Series extends Series {
     if (identical(other, this)) return true;
     if (other is! Series) return false;
     return data == other.data &&
-        dataNumPairs == other.dataNumPairs &&
         dataParser == other.dataParser &&
         dataURL == other.dataURL &&
         id == other.id &&
@@ -242,6 +250,8 @@ class _$Series extends Series {
         name == other.name &&
         stack == other.stack &&
         type == other.type &&
+        xAxis == other.xAxis &&
+        yAxis == other.yAxis &&
         zIndex == other.zIndex;
   }
 
@@ -256,16 +266,18 @@ class _$Series extends Series {
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, data.hashCode),
-                                            dataNumPairs.hashCode),
-                                        dataParser.hashCode),
-                                    dataURL.hashCode),
-                                id.hashCode),
-                            index.hashCode),
-                        legendIndex.hashCode),
-                    name.hashCode),
-                stack.hashCode),
-            type.hashCode),
+                                        $jc(
+                                            $jc($jc(0, data.hashCode),
+                                                dataParser.hashCode),
+                                            dataURL.hashCode),
+                                        id.hashCode),
+                                    index.hashCode),
+                                legendIndex.hashCode),
+                            name.hashCode),
+                        stack.hashCode),
+                    type.hashCode),
+                xAxis.hashCode),
+            yAxis.hashCode),
         zIndex.hashCode));
   }
 
@@ -273,7 +285,6 @@ class _$Series extends Series {
   String toString() {
     return (newBuiltValueToStringHelper('Series')
           ..add('data', data)
-          ..add('dataNumPairs', dataNumPairs)
           ..add('dataParser', dataParser)
           ..add('dataURL', dataURL)
           ..add('id', id)
@@ -282,6 +293,8 @@ class _$Series extends Series {
           ..add('name', name)
           ..add('stack', stack)
           ..add('type', type)
+          ..add('xAxis', xAxis)
+          ..add('yAxis', yAxis)
           ..add('zIndex', zIndex))
         .toString();
   }
@@ -293,12 +306,6 @@ class SeriesBuilder implements Builder<Series, SeriesBuilder> {
   JsonObject _data;
   JsonObject get data => _$this._data;
   set data(JsonObject data) => _$this._data = data;
-
-  ListBuilder<BuiltList<num>> _dataNumPairs;
-  ListBuilder<BuiltList<num>> get dataNumPairs =>
-      _$this._dataNumPairs ??= new ListBuilder<BuiltList<num>>();
-  set dataNumPairs(ListBuilder<BuiltList<num>> dataNumPairs) =>
-      _$this._dataNumPairs = dataNumPairs;
 
   Function _dataParser;
   Function get dataParser => _$this._dataParser;
@@ -332,6 +339,14 @@ class SeriesBuilder implements Builder<Series, SeriesBuilder> {
   String get type => _$this._type;
   set type(String type) => _$this._type = type;
 
+  JsonObject _xAxis;
+  JsonObject get xAxis => _$this._xAxis;
+  set xAxis(JsonObject xAxis) => _$this._xAxis = xAxis;
+
+  JsonObject _yAxis;
+  JsonObject get yAxis => _$this._yAxis;
+  set yAxis(JsonObject yAxis) => _$this._yAxis = yAxis;
+
   num _zIndex;
   num get zIndex => _$this._zIndex;
   set zIndex(num zIndex) => _$this._zIndex = zIndex;
@@ -341,7 +356,6 @@ class SeriesBuilder implements Builder<Series, SeriesBuilder> {
   SeriesBuilder get _$this {
     if (_$v != null) {
       _data = _$v.data;
-      _dataNumPairs = _$v.dataNumPairs?.toBuilder();
       _dataParser = _$v.dataParser;
       _dataURL = _$v.dataURL;
       _id = _$v.id;
@@ -350,6 +364,8 @@ class SeriesBuilder implements Builder<Series, SeriesBuilder> {
       _name = _$v.name;
       _stack = _$v.stack;
       _type = _$v.type;
+      _xAxis = _$v.xAxis;
+      _yAxis = _$v.yAxis;
       _zIndex = _$v.zIndex;
       _$v = null;
     }
@@ -372,7 +388,6 @@ class SeriesBuilder implements Builder<Series, SeriesBuilder> {
     final result = _$v ??
         new _$Series._(
             data: data,
-            dataNumPairs: _dataNumPairs?.build(),
             dataParser: dataParser,
             dataURL: dataURL,
             id: id,
@@ -381,6 +396,8 @@ class SeriesBuilder implements Builder<Series, SeriesBuilder> {
             name: name,
             stack: stack,
             type: type,
+            xAxis: xAxis,
+            yAxis: yAxis,
             zIndex: zIndex);
     replace(result);
     return result;

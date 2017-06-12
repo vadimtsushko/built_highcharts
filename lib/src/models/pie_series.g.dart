@@ -73,6 +73,12 @@ class _$PieSeriesSerializer implements StructuredSerializer<PieSeries> {
         ..add(serializers.serialize(object.borderWidth,
             specifiedType: const FullType(num)));
     }
+    if (object.center != null) {
+      result
+        ..add('center')
+        ..add(serializers.serialize(object.center,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.className != null) {
       result
         ..add('className')
@@ -97,6 +103,12 @@ class _$PieSeriesSerializer implements StructuredSerializer<PieSeries> {
         ..add('cursor')
         ..add(serializers.serialize(object.cursor,
             specifiedType: const FullType(String)));
+    }
+    if (object.data != null) {
+      result
+        ..add('data')
+        ..add(serializers.serialize(object.data,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.dataLabels != null) {
       result
@@ -170,6 +182,12 @@ class _$PieSeriesSerializer implements StructuredSerializer<PieSeries> {
         ..add(serializers.serialize(object.index,
             specifiedType: const FullType(num)));
     }
+    if (object.innerSize != null) {
+      result
+        ..add('innerSize')
+        ..add(serializers.serialize(object.innerSize,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.keys != null) {
       result
         ..add('keys')
@@ -219,11 +237,23 @@ class _$PieSeriesSerializer implements StructuredSerializer<PieSeries> {
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.showInLegend != null) {
       result
         ..add('showInLegend')
         ..add(serializers.serialize(object.showInLegend,
             specifiedType: const FullType(bool)));
+    }
+    if (object.size != null) {
+      result
+        ..add('size')
+        ..add(serializers.serialize(object.size,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.skipKeyboardNavigation != null) {
       result
@@ -243,11 +273,23 @@ class _$PieSeriesSerializer implements StructuredSerializer<PieSeries> {
         ..add(serializers.serialize(object.startAngle,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
         ..add(serializers.serialize(object.stickyTracking,
             specifiedType: const FullType(bool)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.type != null) {
       result
@@ -272,6 +314,12 @@ class _$PieSeriesSerializer implements StructuredSerializer<PieSeries> {
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -308,6 +356,10 @@ class _$PieSeriesSerializer implements StructuredSerializer<PieSeries> {
           result.borderWidth = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'center':
+          result.center = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'className':
           result.className = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -325,6 +377,10 @@ class _$PieSeriesSerializer implements StructuredSerializer<PieSeries> {
         case 'cursor':
           result.cursor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'data':
+          result.data = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'dataLabels':
           result.dataLabels.replace(serializers.deserialize(value,
@@ -376,6 +432,10 @@ class _$PieSeriesSerializer implements StructuredSerializer<PieSeries> {
           result.index = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'innerSize':
+          result.innerSize = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'keys':
           result.keys.replace(serializers.deserialize(value,
                   specifiedType:
@@ -410,9 +470,17 @@ class _$PieSeriesSerializer implements StructuredSerializer<PieSeries> {
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'showInLegend':
           result.showInLegend = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'size':
+          result.size = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'skipKeyboardNavigation':
           result.skipKeyboardNavigation = serializers.deserialize(value,
@@ -426,9 +494,17 @@ class _$PieSeriesSerializer implements StructuredSerializer<PieSeries> {
           result.startAngle = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'type':
           result.type = serializers.deserialize(value,
@@ -445,6 +521,10 @@ class _$PieSeriesSerializer implements StructuredSerializer<PieSeries> {
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -481,6 +561,12 @@ class _$PieSeriesDataSerializer implements StructuredSerializer<PieSeriesData> {
         ..add(serializers.serialize(object.colorIndex,
             specifiedType: const FullType(num)));
     }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.description != null) {
       result
         ..add('description')
@@ -492,6 +578,12 @@ class _$PieSeriesDataSerializer implements StructuredSerializer<PieSeriesData> {
         ..add('drilldown')
         ..add(serializers.serialize(object.drilldown,
             specifiedType: const FullType(String)));
+    }
+    if (object.events != null) {
+      result
+        ..add('events')
+        ..add(serializers.serialize(object.events,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.id != null) {
       result
@@ -562,6 +654,10 @@ class _$PieSeriesDataSerializer implements StructuredSerializer<PieSeriesData> {
           result.colorIndex = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'description':
           result.description = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -569,6 +665,10 @@ class _$PieSeriesDataSerializer implements StructuredSerializer<PieSeriesData> {
         case 'drilldown':
           result.drilldown = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'events':
+          result.events = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -839,6 +939,12 @@ class _$PieSeriesDataLabelsSerializer
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.shape != null) {
       result
         ..add('shape')
@@ -978,6 +1084,10 @@ class _$PieSeriesDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -1352,6 +1462,12 @@ class _$PieSeriesStatesHoverSerializer
   Iterable serialize(Serializers serializers, PieSeriesStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.brightness != null) {
       result
         ..add('brightness')
@@ -1363,6 +1479,12 @@ class _$PieSeriesStatesHoverSerializer
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -1397,6 +1519,10 @@ class _$PieSeriesStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'brightness':
           result.brightness = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -1404,6 +1530,10 @@ class _$PieSeriesStatesHoverSerializer
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -1439,6 +1569,12 @@ class _$PieSeriesStatesHoverHaloSerializer
   Iterable serialize(Serializers serializers, PieSeriesStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -1467,6 +1603,10 @@ class _$PieSeriesStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -1532,6 +1672,12 @@ class _$PieSeriesStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -1584,6 +1730,10 @@ class _$PieSeriesStatesHoverMarkerSerializer
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -1610,6 +1760,12 @@ class _$PieSeriesTooltipSerializer
   Iterable serialize(Serializers serializers, PieSeriesTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -1703,6 +1859,10 @@ class _$PieSeriesTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -1862,6 +2022,8 @@ class _$PieSeries extends PieSeries {
   @override
   final num borderWidth;
   @override
+  final JsonObject center;
+  @override
   final String className;
   @override
   final num colorIndex;
@@ -1869,6 +2031,8 @@ class _$PieSeries extends PieSeries {
   final BuiltList<String> colors;
   @override
   final String cursor;
+  @override
+  final JsonObject data;
   @override
   final PieSeriesDataLabels dataLabels;
   @override
@@ -1894,6 +2058,8 @@ class _$PieSeries extends PieSeries {
   @override
   final num index;
   @override
+  final JsonObject innerSize;
+  @override
   final BuiltList<String> keys;
   @override
   final num legendIndex;
@@ -1910,7 +2076,11 @@ class _$PieSeries extends PieSeries {
   @override
   final bool selected;
   @override
+  final JsonObject shadow;
+  @override
   final bool showInLegend;
+  @override
+  final JsonObject size;
   @override
   final bool skipKeyboardNavigation;
   @override
@@ -1918,7 +2088,11 @@ class _$PieSeries extends PieSeries {
   @override
   final num startAngle;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
+  @override
+  final JsonObject tooltip;
   @override
   final String type;
   @override
@@ -1927,6 +2101,8 @@ class _$PieSeries extends PieSeries {
   final num zIndex;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PieSeries([void updates(PieSeriesBuilder b)]) =>
       (new PieSeriesBuilder()..update(updates)).build();
@@ -1937,10 +2113,12 @@ class _$PieSeries extends PieSeries {
       this.animationLimit,
       this.borderColor,
       this.borderWidth,
+      this.center,
       this.className,
       this.colorIndex,
       this.colors,
       this.cursor,
+      this.data,
       this.dataLabels,
       this.depth,
       this.description,
@@ -1953,6 +2131,7 @@ class _$PieSeries extends PieSeries {
       this.id,
       this.ignoreHiddenPoint,
       this.index,
+      this.innerSize,
       this.keys,
       this.legendIndex,
       this.linkedTo,
@@ -1961,15 +2140,20 @@ class _$PieSeries extends PieSeries {
       this.point,
       this.pointDescriptionFormatter,
       this.selected,
+      this.shadow,
       this.showInLegend,
+      this.size,
       this.skipKeyboardNavigation,
       this.slicedOffset,
       this.startAngle,
+      this.states,
       this.stickyTracking,
+      this.tooltip,
       this.type,
       this.visible,
       this.zIndex,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -1988,10 +2172,12 @@ class _$PieSeries extends PieSeries {
         animationLimit == other.animationLimit &&
         borderColor == other.borderColor &&
         borderWidth == other.borderWidth &&
+        center == other.center &&
         className == other.className &&
         colorIndex == other.colorIndex &&
         colors == other.colors &&
         cursor == other.cursor &&
+        data == other.data &&
         dataLabels == other.dataLabels &&
         depth == other.depth &&
         description == other.description &&
@@ -2004,6 +2190,7 @@ class _$PieSeries extends PieSeries {
         id == other.id &&
         ignoreHiddenPoint == other.ignoreHiddenPoint &&
         index == other.index &&
+        innerSize == other.innerSize &&
         keys == other.keys &&
         legendIndex == other.legendIndex &&
         linkedTo == other.linkedTo &&
@@ -2012,15 +2199,20 @@ class _$PieSeries extends PieSeries {
         point == other.point &&
         pointDescriptionFormatter == other.pointDescriptionFormatter &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showInLegend == other.showInLegend &&
+        size == other.size &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         slicedOffset == other.slicedOffset &&
         startAngle == other.startAngle &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
+        tooltip == other.tooltip &&
         type == other.type &&
         visible == other.visible &&
         zIndex == other.zIndex &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -2043,26 +2235,26 @@ class _$PieSeries extends PieSeries {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), borderColor.hashCode), borderWidth.hashCode), className.hashCode), colorIndex.hashCode), colors.hashCode), cursor.hashCode), dataLabels.hashCode), depth.hashCode), description.hashCode), enableMouseTracking.hashCode), endAngle.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), id.hashCode),
-                                                                                ignoreHiddenPoint.hashCode),
-                                                                            index.hashCode),
-                                                                        keys.hashCode),
-                                                                    legendIndex.hashCode),
-                                                                linkedTo.hashCode),
-                                                            minSize.hashCode),
-                                                        name.hashCode),
-                                                    point.hashCode),
-                                                pointDescriptionFormatter.hashCode),
-                                            selected.hashCode),
-                                        showInLegend.hashCode),
-                                    skipKeyboardNavigation.hashCode),
-                                slicedOffset.hashCode),
-                            startAngle.hashCode),
-                        stickyTracking.hashCode),
-                    type.hashCode),
-                visible.hashCode),
-            zIndex.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), borderColor.hashCode), borderWidth.hashCode), center.hashCode), className.hashCode), colorIndex.hashCode), colors.hashCode), cursor.hashCode), data.hashCode), dataLabels.hashCode), depth.hashCode), description.hashCode), enableMouseTracking.hashCode), endAngle.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), id.hashCode), ignoreHiddenPoint.hashCode), index.hashCode), innerSize.hashCode), keys.hashCode), legendIndex.hashCode), linkedTo.hashCode),
+                                                                                minSize.hashCode),
+                                                                            name.hashCode),
+                                                                        point.hashCode),
+                                                                    pointDescriptionFormatter.hashCode),
+                                                                selected.hashCode),
+                                                            shadow.hashCode),
+                                                        showInLegend.hashCode),
+                                                    size.hashCode),
+                                                skipKeyboardNavigation.hashCode),
+                                            slicedOffset.hashCode),
+                                        startAngle.hashCode),
+                                    states.hashCode),
+                                stickyTracking.hashCode),
+                            tooltip.hashCode),
+                        type.hashCode),
+                    visible.hashCode),
+                zIndex.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -2073,10 +2265,12 @@ class _$PieSeries extends PieSeries {
           ..add('animationLimit', animationLimit)
           ..add('borderColor', borderColor)
           ..add('borderWidth', borderWidth)
+          ..add('center', center)
           ..add('className', className)
           ..add('colorIndex', colorIndex)
           ..add('colors', colors)
           ..add('cursor', cursor)
+          ..add('data', data)
           ..add('dataLabels', dataLabels)
           ..add('depth', depth)
           ..add('description', description)
@@ -2089,6 +2283,7 @@ class _$PieSeries extends PieSeries {
           ..add('id', id)
           ..add('ignoreHiddenPoint', ignoreHiddenPoint)
           ..add('index', index)
+          ..add('innerSize', innerSize)
           ..add('keys', keys)
           ..add('legendIndex', legendIndex)
           ..add('linkedTo', linkedTo)
@@ -2097,15 +2292,20 @@ class _$PieSeries extends PieSeries {
           ..add('point', point)
           ..add('pointDescriptionFormatter', pointDescriptionFormatter)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showInLegend', showInLegend)
+          ..add('size', size)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('slicedOffset', slicedOffset)
           ..add('startAngle', startAngle)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
+          ..add('tooltip', tooltip)
           ..add('type', type)
           ..add('visible', visible)
           ..add('zIndex', zIndex)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -2135,6 +2335,10 @@ class PieSeriesBuilder implements Builder<PieSeries, PieSeriesBuilder> {
   num get borderWidth => _$this._borderWidth;
   set borderWidth(num borderWidth) => _$this._borderWidth = borderWidth;
 
+  JsonObject _center;
+  JsonObject get center => _$this._center;
+  set center(JsonObject center) => _$this._center = center;
+
   String _className;
   String get className => _$this._className;
   set className(String className) => _$this._className = className;
@@ -2151,6 +2355,10 @@ class PieSeriesBuilder implements Builder<PieSeries, PieSeriesBuilder> {
   String _cursor;
   String get cursor => _$this._cursor;
   set cursor(String cursor) => _$this._cursor = cursor;
+
+  JsonObject _data;
+  JsonObject get data => _$this._data;
+  set data(JsonObject data) => _$this._data = data;
 
   PieSeriesDataLabelsBuilder _dataLabels;
   PieSeriesDataLabelsBuilder get dataLabels =>
@@ -2208,6 +2416,10 @@ class PieSeriesBuilder implements Builder<PieSeries, PieSeriesBuilder> {
   num get index => _$this._index;
   set index(num index) => _$this._index = index;
 
+  JsonObject _innerSize;
+  JsonObject get innerSize => _$this._innerSize;
+  set innerSize(JsonObject innerSize) => _$this._innerSize = innerSize;
+
   ListBuilder<String> _keys;
   ListBuilder<String> get keys => _$this._keys ??= new ListBuilder<String>();
   set keys(ListBuilder<String> keys) => _$this._keys = keys;
@@ -2242,9 +2454,17 @@ class PieSeriesBuilder implements Builder<PieSeries, PieSeriesBuilder> {
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   bool _showInLegend;
   bool get showInLegend => _$this._showInLegend;
   set showInLegend(bool showInLegend) => _$this._showInLegend = showInLegend;
+
+  JsonObject _size;
+  JsonObject get size => _$this._size;
+  set size(JsonObject size) => _$this._size = size;
 
   bool _skipKeyboardNavigation;
   bool get skipKeyboardNavigation => _$this._skipKeyboardNavigation;
@@ -2259,10 +2479,18 @@ class PieSeriesBuilder implements Builder<PieSeries, PieSeriesBuilder> {
   num get startAngle => _$this._startAngle;
   set startAngle(num startAngle) => _$this._startAngle = startAngle;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
       _$this._stickyTracking = stickyTracking;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   String _type;
   String get type => _$this._type;
@@ -2280,6 +2508,10 @@ class PieSeriesBuilder implements Builder<PieSeries, PieSeriesBuilder> {
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
 
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
+
   PieSeriesBuilder();
 
   PieSeriesBuilder get _$this {
@@ -2289,10 +2521,12 @@ class PieSeriesBuilder implements Builder<PieSeries, PieSeriesBuilder> {
       _animationLimit = _$v.animationLimit;
       _borderColor = _$v.borderColor;
       _borderWidth = _$v.borderWidth;
+      _center = _$v.center;
       _className = _$v.className;
       _colorIndex = _$v.colorIndex;
       _colors = _$v.colors?.toBuilder();
       _cursor = _$v.cursor;
+      _data = _$v.data;
       _dataLabels = _$v.dataLabels?.toBuilder();
       _depth = _$v.depth;
       _description = _$v.description;
@@ -2305,6 +2539,7 @@ class PieSeriesBuilder implements Builder<PieSeries, PieSeriesBuilder> {
       _id = _$v.id;
       _ignoreHiddenPoint = _$v.ignoreHiddenPoint;
       _index = _$v.index;
+      _innerSize = _$v.innerSize;
       _keys = _$v.keys?.toBuilder();
       _legendIndex = _$v.legendIndex;
       _linkedTo = _$v.linkedTo;
@@ -2313,15 +2548,20 @@ class PieSeriesBuilder implements Builder<PieSeries, PieSeriesBuilder> {
       _point = _$v.point?.toBuilder();
       _pointDescriptionFormatter = _$v.pointDescriptionFormatter;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showInLegend = _$v.showInLegend;
+      _size = _$v.size;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _slicedOffset = _$v.slicedOffset;
       _startAngle = _$v.startAngle;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
+      _tooltip = _$v.tooltip;
       _type = _$v.type;
       _visible = _$v.visible;
       _zIndex = _$v.zIndex;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -2347,10 +2587,12 @@ class PieSeriesBuilder implements Builder<PieSeries, PieSeriesBuilder> {
             animationLimit: animationLimit,
             borderColor: borderColor,
             borderWidth: borderWidth,
+            center: center,
             className: className,
             colorIndex: colorIndex,
             colors: _colors?.build(),
             cursor: cursor,
+            data: data,
             dataLabels: _dataLabels?.build(),
             depth: depth,
             description: description,
@@ -2363,6 +2605,7 @@ class PieSeriesBuilder implements Builder<PieSeries, PieSeriesBuilder> {
             id: id,
             ignoreHiddenPoint: ignoreHiddenPoint,
             index: index,
+            innerSize: innerSize,
             keys: _keys?.build(),
             legendIndex: legendIndex,
             linkedTo: linkedTo,
@@ -2371,15 +2614,20 @@ class PieSeriesBuilder implements Builder<PieSeries, PieSeriesBuilder> {
             point: _point?.build(),
             pointDescriptionFormatter: pointDescriptionFormatter,
             selected: selected,
+            shadow: shadow,
             showInLegend: showInLegend,
+            size: size,
             skipKeyboardNavigation: skipKeyboardNavigation,
             slicedOffset: slicedOffset,
             startAngle: startAngle,
+            states: states,
             stickyTracking: stickyTracking,
+            tooltip: tooltip,
             type: type,
             visible: visible,
             zIndex: zIndex,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -2398,9 +2646,13 @@ class _$PieSeriesData extends PieSeriesData {
   @override
   final num colorIndex;
   @override
+  final JsonObject dataLabels;
+  @override
   final String description;
   @override
   final String drilldown;
+  @override
+  final JsonObject events;
   @override
   final String id;
   @override
@@ -2423,8 +2675,10 @@ class _$PieSeriesData extends PieSeriesData {
       {this.className,
       this.color,
       this.colorIndex,
+      this.dataLabels,
       this.description,
       this.drilldown,
+      this.events,
       this.id,
       this.labelrank,
       this.legendIndex,
@@ -2448,8 +2702,10 @@ class _$PieSeriesData extends PieSeriesData {
     return className == other.className &&
         color == other.color &&
         colorIndex == other.colorIndex &&
+        dataLabels == other.dataLabels &&
         description == other.description &&
         drilldown == other.drilldown &&
+        events == other.events &&
         id == other.id &&
         labelrank == other.labelrank &&
         legendIndex == other.legendIndex &&
@@ -2471,11 +2727,17 @@ class _$PieSeriesData extends PieSeriesData {
                                 $jc(
                                     $jc(
                                         $jc(
-                                            $jc($jc(0, className.hashCode),
-                                                color.hashCode),
-                                            colorIndex.hashCode),
-                                        description.hashCode),
-                                    drilldown.hashCode),
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc(0,
+                                                            className.hashCode),
+                                                        color.hashCode),
+                                                    colorIndex.hashCode),
+                                                dataLabels.hashCode),
+                                            description.hashCode),
+                                        drilldown.hashCode),
+                                    events.hashCode),
                                 id.hashCode),
                             labelrank.hashCode),
                         legendIndex.hashCode),
@@ -2491,8 +2753,10 @@ class _$PieSeriesData extends PieSeriesData {
           ..add('className', className)
           ..add('color', color)
           ..add('colorIndex', colorIndex)
+          ..add('dataLabels', dataLabels)
           ..add('description', description)
           ..add('drilldown', drilldown)
+          ..add('events', events)
           ..add('id', id)
           ..add('labelrank', labelrank)
           ..add('legendIndex', legendIndex)
@@ -2520,6 +2784,10 @@ class PieSeriesDataBuilder
   num get colorIndex => _$this._colorIndex;
   set colorIndex(num colorIndex) => _$this._colorIndex = colorIndex;
 
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
+
   String _description;
   String get description => _$this._description;
   set description(String description) => _$this._description = description;
@@ -2527,6 +2795,10 @@ class PieSeriesDataBuilder
   String _drilldown;
   String get drilldown => _$this._drilldown;
   set drilldown(String drilldown) => _$this._drilldown = drilldown;
+
+  JsonObject _events;
+  JsonObject get events => _$this._events;
+  set events(JsonObject events) => _$this._events = events;
 
   String _id;
   String get id => _$this._id;
@@ -2563,8 +2835,10 @@ class PieSeriesDataBuilder
       _className = _$v.className;
       _color = _$v.color;
       _colorIndex = _$v.colorIndex;
+      _dataLabels = _$v.dataLabels;
       _description = _$v.description;
       _drilldown = _$v.drilldown;
+      _events = _$v.events;
       _id = _$v.id;
       _labelrank = _$v.labelrank;
       _legendIndex = _$v.legendIndex;
@@ -2595,8 +2869,10 @@ class PieSeriesDataBuilder
             className: className,
             color: color,
             colorIndex: colorIndex,
+            dataLabels: dataLabels,
             description: description,
             drilldown: drilldown,
+            events: events,
             id: id,
             labelrank: labelrank,
             legendIndex: legendIndex,
@@ -2812,6 +3088,8 @@ class _$PieSeriesDataLabels extends PieSeriesDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final bool softConnector;
@@ -2851,6 +3129,7 @@ class _$PieSeriesDataLabels extends PieSeriesDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.softConnector,
       this.style,
@@ -2892,6 +3171,7 @@ class _$PieSeriesDataLabels extends PieSeriesDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         softConnector == other.softConnector &&
         style == other.style &&
@@ -2922,18 +3202,18 @@ class _$PieSeriesDataLabels extends PieSeriesDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc(0, backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), connectorColor.hashCode), connectorPadding.hashCode),
-                                                                                connectorWidth.hashCode),
-                                                                            crop.hashCode),
-                                                                        defer.hashCode),
-                                                                    distance.hashCode),
-                                                                enabled.hashCode),
-                                                            format.hashCode),
-                                                        formatter.hashCode),
-                                                    inside.hashCode),
-                                                overflow.hashCode),
-                                            padding.hashCode),
-                                        rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), connectorColor.hashCode), connectorPadding.hashCode), connectorWidth.hashCode),
+                                                                                crop.hashCode),
+                                                                            defer.hashCode),
+                                                                        distance.hashCode),
+                                                                    enabled.hashCode),
+                                                                format.hashCode),
+                                                            formatter.hashCode),
+                                                        inside.hashCode),
+                                                    overflow.hashCode),
+                                                padding.hashCode),
+                                            rotation.hashCode),
+                                        shadow.hashCode),
                                     shape.hashCode),
                                 softConnector.hashCode),
                             style.hashCode),
@@ -2966,6 +3246,7 @@ class _$PieSeriesDataLabels extends PieSeriesDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('softConnector', softConnector)
           ..add('style', style)
@@ -3062,6 +3343,10 @@ class PieSeriesDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -3120,6 +3405,7 @@ class PieSeriesDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _softConnector = _$v.softConnector;
       _style = _$v.style?.toBuilder();
@@ -3167,6 +3453,7 @@ class PieSeriesDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             softConnector: softConnector,
             style: _style?.build(),
@@ -3697,9 +3984,13 @@ class PieSeriesStatesBuilder
 
 class _$PieSeriesStatesHover extends PieSeriesStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final num brightness;
   @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -3712,8 +4003,10 @@ class _$PieSeriesStatesHover extends PieSeriesStatesHover {
       (new PieSeriesStatesHoverBuilder()..update(updates)).build();
 
   _$PieSeriesStatesHover._(
-      {this.brightness,
+      {this.animation,
+      this.brightness,
       this.enabled,
+      this.halo,
       this.lineWidth,
       this.lineWidthPlus,
       this.marker})
@@ -3731,8 +4024,10 @@ class _$PieSeriesStatesHover extends PieSeriesStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PieSeriesStatesHover) return false;
-    return brightness == other.brightness &&
+    return animation == other.animation &&
+        brightness == other.brightness &&
         enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -3742,7 +4037,11 @@ class _$PieSeriesStatesHover extends PieSeriesStatesHover {
   int get hashCode {
     return $jf($jc(
         $jc(
-            $jc($jc($jc(0, brightness.hashCode), enabled.hashCode),
+            $jc(
+                $jc(
+                    $jc($jc($jc(0, animation.hashCode), brightness.hashCode),
+                        enabled.hashCode),
+                    halo.hashCode),
                 lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
@@ -3751,8 +4050,10 @@ class _$PieSeriesStatesHover extends PieSeriesStatesHover {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PieSeriesStatesHover')
+          ..add('animation', animation)
           ..add('brightness', brightness)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -3764,6 +4065,10 @@ class PieSeriesStatesHoverBuilder
     implements Builder<PieSeriesStatesHover, PieSeriesStatesHoverBuilder> {
   _$PieSeriesStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   num _brightness;
   num get brightness => _$this._brightness;
   set brightness(num brightness) => _$this._brightness = brightness;
@@ -3771,6 +4076,10 @@ class PieSeriesStatesHoverBuilder
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -3790,8 +4099,10 @@ class PieSeriesStatesHoverBuilder
 
   PieSeriesStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _brightness = _$v.brightness;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -3815,8 +4126,10 @@ class PieSeriesStatesHoverBuilder
   _$PieSeriesStatesHover build() {
     final result = _$v ??
         new _$PieSeriesStatesHover._(
+            animation: animation,
             brightness: brightness,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -3832,6 +4145,8 @@ class PieSeriesStatesHoverBuilder
 
 class _$PieSeriesStatesHoverHalo extends PieSeriesStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -3840,7 +4155,8 @@ class _$PieSeriesStatesHoverHalo extends PieSeriesStatesHoverHalo {
           [void updates(PieSeriesStatesHoverHaloBuilder b)]) =>
       (new PieSeriesStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$PieSeriesStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$PieSeriesStatesHoverHalo._({this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   PieSeriesStatesHoverHalo rebuild(
@@ -3855,17 +4171,21 @@ class _$PieSeriesStatesHoverHalo extends PieSeriesStatesHoverHalo {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PieSeriesStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PieSeriesStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -3876,6 +4196,10 @@ class PieSeriesStatesHoverHaloBuilder
     implements
         Builder<PieSeriesStatesHoverHalo, PieSeriesStatesHoverHaloBuilder> {
   _$PieSeriesStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -3889,6 +4213,7 @@ class PieSeriesStatesHoverHaloBuilder
 
   PieSeriesStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -3909,8 +4234,9 @@ class PieSeriesStatesHoverHaloBuilder
 
   @override
   _$PieSeriesStatesHoverHalo build() {
-    final result =
-        _$v ?? new _$PieSeriesStatesHoverHalo._(opacity: opacity, size: size);
+    final result = _$v ??
+        new _$PieSeriesStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -3935,6 +4261,8 @@ class _$PieSeriesStatesHoverMarker extends PieSeriesStatesHoverMarker {
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -3950,6 +4278,7 @@ class _$PieSeriesStatesHoverMarker extends PieSeriesStatesHoverMarker {
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -3973,6 +4302,7 @@ class _$PieSeriesStatesHoverMarker extends PieSeriesStatesHoverMarker {
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -3984,11 +4314,15 @@ class _$PieSeriesStatesHoverMarker extends PieSeriesStatesHoverMarker {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -4002,6 +4336,7 @@ class _$PieSeriesStatesHoverMarker extends PieSeriesStatesHoverMarker {
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -4037,6 +4372,10 @@ class PieSeriesStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -4055,6 +4394,7 @@ class PieSeriesStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -4083,6 +4423,7 @@ class PieSeriesStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -4096,6 +4437,8 @@ class PieSeriesStatesHoverMarkerBuilder
 // **************************************************************************
 
 class _$PieSeriesTooltip extends PieSeriesTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -4127,7 +4470,8 @@ class _$PieSeriesTooltip extends PieSeriesTooltip {
       (new PieSeriesTooltipBuilder()..update(updates)).build();
 
   _$PieSeriesTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -4154,7 +4498,8 @@ class _$PieSeriesTooltip extends PieSeriesTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PieSeriesTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -4183,7 +4528,11 @@ class _$PieSeriesTooltip extends PieSeriesTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -4202,6 +4551,7 @@ class _$PieSeriesTooltip extends PieSeriesTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PieSeriesTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -4222,6 +4572,11 @@ class _$PieSeriesTooltip extends PieSeriesTooltip {
 class PieSeriesTooltipBuilder
     implements Builder<PieSeriesTooltip, PieSeriesTooltipBuilder> {
   _$PieSeriesTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -4282,6 +4637,7 @@ class PieSeriesTooltipBuilder
 
   PieSeriesTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -4315,6 +4671,7 @@ class PieSeriesTooltipBuilder
   _$PieSeriesTooltip build() {
     final result = _$v ??
         new _$PieSeriesTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,

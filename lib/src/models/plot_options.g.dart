@@ -710,11 +710,53 @@ class _$PlotOptionsSerializer implements StructuredSerializer<PlotOptions> {
         ..add(serializers.serialize(object.bar,
             specifiedType: const FullType(PlotOptionsBar)));
     }
+    if (object.boxplot != null) {
+      result
+        ..add('boxplot')
+        ..add(serializers.serialize(object.boxplot,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.bubble != null) {
+      result
+        ..add('bubble')
+        ..add(serializers.serialize(object.bubble,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.column != null) {
       result
         ..add('column')
         ..add(serializers.serialize(object.column,
             specifiedType: const FullType(PlotOptionsColumn)));
+    }
+    if (object.columnrange != null) {
+      result
+        ..add('columnrange')
+        ..add(serializers.serialize(object.columnrange,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.errorbar != null) {
+      result
+        ..add('errorbar')
+        ..add(serializers.serialize(object.errorbar,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.funnel != null) {
+      result
+        ..add('funnel')
+        ..add(serializers.serialize(object.funnel,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.gauge != null) {
+      result
+        ..add('gauge')
+        ..add(serializers.serialize(object.gauge,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.heatmap != null) {
+      result
+        ..add('heatmap')
+        ..add(serializers.serialize(object.heatmap,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.line != null) {
       result
@@ -728,6 +770,18 @@ class _$PlotOptionsSerializer implements StructuredSerializer<PlotOptions> {
         ..add(serializers.serialize(object.pie,
             specifiedType: const FullType(PlotOptionsPie)));
     }
+    if (object.polygon != null) {
+      result
+        ..add('polygon')
+        ..add(serializers.serialize(object.polygon,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.pyramid != null) {
+      result
+        ..add('pyramid')
+        ..add(serializers.serialize(object.pyramid,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.scatter != null) {
       result
         ..add('scatter')
@@ -740,11 +794,29 @@ class _$PlotOptionsSerializer implements StructuredSerializer<PlotOptions> {
         ..add(serializers.serialize(object.series,
             specifiedType: const FullType(PlotOptionsSeries)));
     }
+    if (object.solidgauge != null) {
+      result
+        ..add('solidgauge')
+        ..add(serializers.serialize(object.solidgauge,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.spline != null) {
       result
         ..add('spline')
         ..add(serializers.serialize(object.spline,
             specifiedType: const FullType(PlotOptionsSpline)));
+    }
+    if (object.treemap != null) {
+      result
+        ..add('treemap')
+        ..add(serializers.serialize(object.treemap,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.waterfall != null) {
+      result
+        ..add('waterfall')
+        ..add(serializers.serialize(object.waterfall,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -785,10 +857,38 @@ class _$PlotOptionsSerializer implements StructuredSerializer<PlotOptions> {
           result.bar.replace(serializers.deserialize(value,
               specifiedType: const FullType(PlotOptionsBar)) as PlotOptionsBar);
           break;
+        case 'boxplot':
+          result.boxplot = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'bubble':
+          result.bubble = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'column':
           result.column.replace(serializers.deserialize(value,
                   specifiedType: const FullType(PlotOptionsColumn))
               as PlotOptionsColumn);
+          break;
+        case 'columnrange':
+          result.columnrange = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'errorbar':
+          result.errorbar = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'funnel':
+          result.funnel = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'gauge':
+          result.gauge = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'heatmap':
+          result.heatmap = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'line':
           result.line.replace(serializers.deserialize(value,
@@ -798,6 +898,14 @@ class _$PlotOptionsSerializer implements StructuredSerializer<PlotOptions> {
         case 'pie':
           result.pie.replace(serializers.deserialize(value,
               specifiedType: const FullType(PlotOptionsPie)) as PlotOptionsPie);
+          break;
+        case 'polygon':
+          result.polygon = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'pyramid':
+          result.pyramid = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'scatter':
           result.scatter.replace(serializers.deserialize(value,
@@ -809,10 +917,22 @@ class _$PlotOptionsSerializer implements StructuredSerializer<PlotOptions> {
                   specifiedType: const FullType(PlotOptionsSeries))
               as PlotOptionsSeries);
           break;
+        case 'solidgauge':
+          result.solidgauge = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'spline':
           result.spline.replace(serializers.deserialize(value,
                   specifiedType: const FullType(PlotOptionsSpline))
               as PlotOptionsSpline);
+          break;
+        case 'treemap':
+          result.treemap = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'waterfall':
+          result.waterfall = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -1025,6 +1145,12 @@ class _$PlotOptionsAreaSerializer
         ..add(serializers.serialize(object.pointIntervalUnit,
             specifiedType: const FullType(String)));
     }
+    if (object.pointPlacement != null) {
+      result
+        ..add('pointPlacement')
+        ..add(serializers.serialize(object.pointPlacement,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.pointStart != null) {
       result
         ..add('pointStart')
@@ -1036,6 +1162,12 @@ class _$PlotOptionsAreaSerializer
         ..add('selected')
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.showCheckbox != null) {
       result
@@ -1067,6 +1199,12 @@ class _$PlotOptionsAreaSerializer
         ..add(serializers.serialize(object.stacking,
             specifiedType: const FullType(String)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.step != null) {
       result
         ..add('step')
@@ -1084,6 +1222,12 @@ class _$PlotOptionsAreaSerializer
         ..add('threshold')
         ..add(serializers.serialize(object.threshold,
             specifiedType: const FullType(num)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.trackByArea != null) {
       result
@@ -1108,6 +1252,12 @@ class _$PlotOptionsAreaSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -1258,6 +1408,10 @@ class _$PlotOptionsAreaSerializer
           result.pointIntervalUnit = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'pointPlacement':
+          result.pointPlacement = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'pointStart':
           result.pointStart = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -1265,6 +1419,10 @@ class _$PlotOptionsAreaSerializer
         case 'selected':
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
@@ -1286,6 +1444,10 @@ class _$PlotOptionsAreaSerializer
           result.stacking = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'step':
           result.step = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -1297,6 +1459,10 @@ class _$PlotOptionsAreaSerializer
         case 'threshold':
           result.threshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'trackByArea':
           result.trackByArea = serializers.deserialize(value,
@@ -1313,6 +1479,10 @@ class _$PlotOptionsAreaSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -1436,6 +1606,12 @@ class _$PlotOptionsAreaDataLabelsSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.shape != null) {
       result
@@ -1563,6 +1739,10 @@ class _$PlotOptionsAreaDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -2321,11 +2501,23 @@ class _$PlotOptionsAreaStatesHoverSerializer
   Iterable serialize(Serializers serializers, PlotOptionsAreaStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -2361,9 +2553,17 @@ class _$PlotOptionsAreaStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -2401,6 +2601,12 @@ class _$PlotOptionsAreaStatesHoverHaloSerializer
       Serializers serializers, PlotOptionsAreaStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -2429,6 +2635,10 @@ class _$PlotOptionsAreaStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -2495,6 +2705,12 @@ class _$PlotOptionsAreaStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -2547,6 +2763,10 @@ class _$PlotOptionsAreaStatesHoverMarkerSerializer
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -2576,6 +2796,12 @@ class _$PlotOptionsAreaTooltipSerializer
   Iterable serialize(Serializers serializers, PlotOptionsAreaTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -2670,6 +2896,10 @@ class _$PlotOptionsAreaTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -2889,6 +3119,12 @@ class _$PlotOptionsArearangeSerializer
         ..add(serializers.serialize(object.dashStyle,
             specifiedType: const FullType(String)));
     }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.description != null) {
       result
         ..add('description')
@@ -3004,6 +3240,12 @@ class _$PlotOptionsArearangeSerializer
         ..add(serializers.serialize(object.pointIntervalUnit,
             specifiedType: const FullType(String)));
     }
+    if (object.pointPlacement != null) {
+      result
+        ..add('pointPlacement')
+        ..add(serializers.serialize(object.pointPlacement,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.pointStart != null) {
       result
         ..add('pointStart')
@@ -3015,6 +3257,12 @@ class _$PlotOptionsArearangeSerializer
         ..add('selected')
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.showCheckbox != null) {
       result
@@ -3034,6 +3282,12 @@ class _$PlotOptionsArearangeSerializer
         ..add(serializers.serialize(object.skipKeyboardNavigation,
             specifiedType: const FullType(bool)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.step != null) {
       result
         ..add('step')
@@ -3045,6 +3299,12 @@ class _$PlotOptionsArearangeSerializer
         ..add('stickyTracking')
         ..add(serializers.serialize(object.stickyTracking,
             specifiedType: const FullType(bool)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.trackByArea != null) {
       result
@@ -3069,6 +3329,12 @@ class _$PlotOptionsArearangeSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -3124,6 +3390,10 @@ class _$PlotOptionsArearangeSerializer
         case 'dashStyle':
           result.dashStyle = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'description':
           result.description = serializers.deserialize(value,
@@ -3205,6 +3475,10 @@ class _$PlotOptionsArearangeSerializer
           result.pointIntervalUnit = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'pointPlacement':
+          result.pointPlacement = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'pointStart':
           result.pointStart = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -3212,6 +3486,10 @@ class _$PlotOptionsArearangeSerializer
         case 'selected':
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
@@ -3225,6 +3503,10 @@ class _$PlotOptionsArearangeSerializer
           result.skipKeyboardNavigation = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'step':
           result.step = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -3232,6 +3514,10 @@ class _$PlotOptionsArearangeSerializer
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'trackByArea':
           result.trackByArea = serializers.deserialize(value,
@@ -3248,6 +3534,10 @@ class _$PlotOptionsArearangeSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -3372,6 +3662,12 @@ class _$PlotOptionsArearangeDataLabelsSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.shape != null) {
       result
@@ -3511,6 +3807,10 @@ class _$PlotOptionsArearangeDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -3896,11 +4196,23 @@ class _$PlotOptionsArearangeStatesHoverSerializer
       Serializers serializers, PlotOptionsArearangeStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -3937,9 +4249,17 @@ class _$PlotOptionsArearangeStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -3977,6 +4297,12 @@ class _$PlotOptionsArearangeStatesHoverHaloSerializer
       Serializers serializers, PlotOptionsArearangeStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -4005,6 +4331,10 @@ class _$PlotOptionsArearangeStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -4071,6 +4401,12 @@ class _$PlotOptionsArearangeStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -4123,6 +4459,10 @@ class _$PlotOptionsArearangeStatesHoverMarkerSerializer
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -4153,6 +4493,12 @@ class _$PlotOptionsArearangeTooltipSerializer
       Serializers serializers, PlotOptionsArearangeTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -4247,6 +4593,10 @@ class _$PlotOptionsArearangeTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -4600,6 +4950,12 @@ class _$PlotOptionsAreasplineSerializer
         ..add(serializers.serialize(object.pointIntervalUnit,
             specifiedType: const FullType(String)));
     }
+    if (object.pointPlacement != null) {
+      result
+        ..add('pointPlacement')
+        ..add(serializers.serialize(object.pointPlacement,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.pointStart != null) {
       result
         ..add('pointStart')
@@ -4611,6 +4967,12 @@ class _$PlotOptionsAreasplineSerializer
         ..add('selected')
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.showCheckbox != null) {
       result
@@ -4642,6 +5004,12 @@ class _$PlotOptionsAreasplineSerializer
         ..add(serializers.serialize(object.stacking,
             specifiedType: const FullType(String)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
@@ -4653,6 +5021,12 @@ class _$PlotOptionsAreasplineSerializer
         ..add('threshold')
         ..add(serializers.serialize(object.threshold,
             specifiedType: const FullType(num)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.trackByArea != null) {
       result
@@ -4677,6 +5051,12 @@ class _$PlotOptionsAreasplineSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -4829,6 +5209,10 @@ class _$PlotOptionsAreasplineSerializer
           result.pointIntervalUnit = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'pointPlacement':
+          result.pointPlacement = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'pointStart':
           result.pointStart = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -4836,6 +5220,10 @@ class _$PlotOptionsAreasplineSerializer
         case 'selected':
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
@@ -4857,6 +5245,10 @@ class _$PlotOptionsAreasplineSerializer
           result.stacking = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -4864,6 +5256,10 @@ class _$PlotOptionsAreasplineSerializer
         case 'threshold':
           result.threshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'trackByArea':
           result.trackByArea = serializers.deserialize(value,
@@ -4880,6 +5276,10 @@ class _$PlotOptionsAreasplineSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -5004,6 +5404,12 @@ class _$PlotOptionsAreasplineDataLabelsSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.shape != null) {
       result
@@ -5131,6 +5537,10 @@ class _$PlotOptionsAreasplineDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -5900,11 +6310,23 @@ class _$PlotOptionsAreasplineStatesHoverSerializer
       Serializers serializers, PlotOptionsAreasplineStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -5941,9 +6363,17 @@ class _$PlotOptionsAreasplineStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -5981,6 +6411,12 @@ class _$PlotOptionsAreasplineStatesHoverHaloSerializer
       Serializers serializers, PlotOptionsAreasplineStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -6009,6 +6445,10 @@ class _$PlotOptionsAreasplineStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -6075,6 +6515,12 @@ class _$PlotOptionsAreasplineStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -6127,6 +6573,10 @@ class _$PlotOptionsAreasplineStatesHoverMarkerSerializer
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -6157,6 +6607,12 @@ class _$PlotOptionsAreasplineTooltipSerializer
       Serializers serializers, PlotOptionsAreasplineTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -6251,6 +6707,10 @@ class _$PlotOptionsAreasplineTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -6471,6 +6931,12 @@ class _$PlotOptionsAreasplinerangeSerializer
         ..add(serializers.serialize(object.dashStyle,
             specifiedType: const FullType(String)));
     }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.description != null) {
       result
         ..add('description')
@@ -6586,6 +7052,12 @@ class _$PlotOptionsAreasplinerangeSerializer
         ..add(serializers.serialize(object.pointIntervalUnit,
             specifiedType: const FullType(String)));
     }
+    if (object.pointPlacement != null) {
+      result
+        ..add('pointPlacement')
+        ..add(serializers.serialize(object.pointPlacement,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.pointStart != null) {
       result
         ..add('pointStart')
@@ -6597,6 +7069,12 @@ class _$PlotOptionsAreasplinerangeSerializer
         ..add('selected')
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.showCheckbox != null) {
       result
@@ -6616,11 +7094,23 @@ class _$PlotOptionsAreasplinerangeSerializer
         ..add(serializers.serialize(object.skipKeyboardNavigation,
             specifiedType: const FullType(bool)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
         ..add(serializers.serialize(object.stickyTracking,
             specifiedType: const FullType(bool)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.trackByArea != null) {
       result
@@ -6645,6 +7135,12 @@ class _$PlotOptionsAreasplinerangeSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -6701,6 +7197,10 @@ class _$PlotOptionsAreasplinerangeSerializer
         case 'dashStyle':
           result.dashStyle = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'description':
           result.description = serializers.deserialize(value,
@@ -6784,6 +7284,10 @@ class _$PlotOptionsAreasplinerangeSerializer
           result.pointIntervalUnit = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'pointPlacement':
+          result.pointPlacement = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'pointStart':
           result.pointStart = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -6791,6 +7295,10 @@ class _$PlotOptionsAreasplinerangeSerializer
         case 'selected':
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
@@ -6804,9 +7312,17 @@ class _$PlotOptionsAreasplinerangeSerializer
           result.skipKeyboardNavigation = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'trackByArea':
           result.trackByArea = serializers.deserialize(value,
@@ -6823,6 +7339,10 @@ class _$PlotOptionsAreasplinerangeSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -6947,6 +7467,12 @@ class _$PlotOptionsAreasplinerangeDataLabelsSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.shape != null) {
       result
@@ -7086,6 +7612,10 @@ class _$PlotOptionsAreasplinerangeDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -7476,11 +8006,23 @@ class _$PlotOptionsAreasplinerangeStatesHoverSerializer
       Serializers serializers, PlotOptionsAreasplinerangeStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -7517,9 +8059,17 @@ class _$PlotOptionsAreasplinerangeStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -7557,6 +8107,12 @@ class _$PlotOptionsAreasplinerangeStatesHoverHaloSerializer
       Serializers serializers, PlotOptionsAreasplinerangeStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -7585,6 +8141,10 @@ class _$PlotOptionsAreasplinerangeStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -7652,6 +8212,12 @@ class _$PlotOptionsAreasplinerangeStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -7704,6 +8270,10 @@ class _$PlotOptionsAreasplinerangeStatesHoverMarkerSerializer
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -7734,6 +8304,12 @@ class _$PlotOptionsAreasplinerangeTooltipSerializer
       Serializers serializers, PlotOptionsAreasplinerangeTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -7828,6 +8404,10 @@ class _$PlotOptionsAreasplinerangeTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -8210,6 +8790,12 @@ class _$PlotOptionsBarSerializer
         ..add(serializers.serialize(object.pointPadding,
             specifiedType: const FullType(num)));
     }
+    if (object.pointPlacement != null) {
+      result
+        ..add('pointPlacement')
+        ..add(serializers.serialize(object.pointPlacement,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.pointRange != null) {
       result
         ..add('pointRange')
@@ -8233,6 +8819,12 @@ class _$PlotOptionsBarSerializer
         ..add('selected')
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.showCheckbox != null) {
       result
@@ -8264,6 +8856,12 @@ class _$PlotOptionsBarSerializer
         ..add(serializers.serialize(object.stacking,
             specifiedType: const FullType(String)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
@@ -8275,6 +8873,12 @@ class _$PlotOptionsBarSerializer
         ..add('threshold')
         ..add(serializers.serialize(object.threshold,
             specifiedType: const FullType(num)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.turboThreshold != null) {
       result
@@ -8293,6 +8897,12 @@ class _$PlotOptionsBarSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -8464,6 +9074,10 @@ class _$PlotOptionsBarSerializer
           result.pointPadding = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'pointPlacement':
+          result.pointPlacement = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'pointRange':
           result.pointRange = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -8479,6 +9093,10 @@ class _$PlotOptionsBarSerializer
         case 'selected':
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
@@ -8500,6 +9118,10 @@ class _$PlotOptionsBarSerializer
           result.stacking = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -8507,6 +9129,10 @@ class _$PlotOptionsBarSerializer
         case 'threshold':
           result.threshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'turboThreshold':
           result.turboThreshold = serializers.deserialize(value,
@@ -8519,6 +9145,10 @@ class _$PlotOptionsBarSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -8642,6 +9272,12 @@ class _$PlotOptionsBarDataLabelsSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.shape != null) {
       result
@@ -8769,6 +9405,10 @@ class _$PlotOptionsBarDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -9139,6 +9779,12 @@ class _$PlotOptionsBarStatesHoverSerializer
   Iterable serialize(Serializers serializers, PlotOptionsBarStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.borderColor != null) {
       result
         ..add('borderColor')
@@ -9163,6 +9809,12 @@ class _$PlotOptionsBarStatesHoverSerializer
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
     }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
+    }
 
     return result;
   }
@@ -9179,6 +9831,10 @@ class _$PlotOptionsBarStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'borderColor':
           result.borderColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -9194,6 +9850,10 @@ class _$PlotOptionsBarStatesHoverSerializer
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -9217,6 +9877,12 @@ class _$PlotOptionsBarStatesHoverHaloSerializer
       Serializers serializers, PlotOptionsBarStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -9245,6 +9911,10 @@ class _$PlotOptionsBarStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -9274,6 +9944,12 @@ class _$PlotOptionsBarTooltipSerializer
   Iterable serialize(Serializers serializers, PlotOptionsBarTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -9368,6 +10044,10 @@ class _$PlotOptionsBarTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -9730,6 +10410,12 @@ class _$PlotOptionsBoxplotSerializer
         ..add(serializers.serialize(object.pointPadding,
             specifiedType: const FullType(num)));
     }
+    if (object.pointPlacement != null) {
+      result
+        ..add('pointPlacement')
+        ..add(serializers.serialize(object.pointPlacement,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.pointRange != null) {
       result
         ..add('pointRange')
@@ -9772,6 +10458,12 @@ class _$PlotOptionsBoxplotSerializer
         ..add(serializers.serialize(object.skipKeyboardNavigation,
             specifiedType: const FullType(bool)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stemColor != null) {
       result
         ..add('stemColor')
@@ -9796,6 +10488,12 @@ class _$PlotOptionsBoxplotSerializer
         ..add(serializers.serialize(object.stickyTracking,
             specifiedType: const FullType(bool)));
     }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.turboThreshold != null) {
       result
         ..add('turboThreshold')
@@ -9814,6 +10512,12 @@ class _$PlotOptionsBoxplotSerializer
         ..add(serializers.serialize(object.whiskerColor,
             specifiedType: const FullType(String)));
     }
+    if (object.whiskerLength != null) {
+      result
+        ..add('whiskerLength')
+        ..add(serializers.serialize(object.whiskerLength,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.whiskerWidth != null) {
       result
         ..add('whiskerWidth')
@@ -9825,6 +10529,12 @@ class _$PlotOptionsBoxplotSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -9983,6 +10693,10 @@ class _$PlotOptionsBoxplotSerializer
           result.pointPadding = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'pointPlacement':
+          result.pointPlacement = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'pointRange':
           result.pointRange = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -10011,6 +10725,10 @@ class _$PlotOptionsBoxplotSerializer
           result.skipKeyboardNavigation = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stemColor':
           result.stemColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -10027,6 +10745,10 @@ class _$PlotOptionsBoxplotSerializer
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'turboThreshold':
           result.turboThreshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -10039,6 +10761,10 @@ class _$PlotOptionsBoxplotSerializer
           result.whiskerColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'whiskerLength':
+          result.whiskerLength = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'whiskerWidth':
           result.whiskerWidth = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -10046,6 +10772,10 @@ class _$PlotOptionsBoxplotSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -10390,6 +11120,12 @@ class _$PlotOptionsBoxplotStatesHoverSerializer
       Serializers serializers, PlotOptionsBoxplotStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.borderColor != null) {
       result
         ..add('borderColor')
@@ -10414,6 +11150,12 @@ class _$PlotOptionsBoxplotStatesHoverSerializer
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
     }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
+    }
 
     return result;
   }
@@ -10430,6 +11172,10 @@ class _$PlotOptionsBoxplotStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'borderColor':
           result.borderColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -10445,6 +11191,10 @@ class _$PlotOptionsBoxplotStatesHoverSerializer
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -10468,6 +11218,12 @@ class _$PlotOptionsBoxplotStatesHoverHaloSerializer
       Serializers serializers, PlotOptionsBoxplotStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -10496,6 +11252,10 @@ class _$PlotOptionsBoxplotStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -10525,6 +11285,12 @@ class _$PlotOptionsBoxplotTooltipSerializer
   Iterable serialize(Serializers serializers, PlotOptionsBoxplotTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -10619,6 +11385,10 @@ class _$PlotOptionsBoxplotTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -10897,6 +11667,12 @@ class _$PlotOptionsBubbleSerializer
         ..add(serializers.serialize(object.linkedTo,
             specifiedType: const FullType(String)));
     }
+    if (object.marker != null) {
+      result
+        ..add('marker')
+        ..add(serializers.serialize(object.marker,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.maxSize != null) {
       result
         ..add('maxSize')
@@ -10951,6 +11727,12 @@ class _$PlotOptionsBubbleSerializer
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.showCheckbox != null) {
       result
         ..add('showCheckbox')
@@ -10987,6 +11769,12 @@ class _$PlotOptionsBubbleSerializer
         ..add(serializers.serialize(object.softThreshold,
             specifiedType: const FullType(bool)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
@@ -10998,6 +11786,12 @@ class _$PlotOptionsBubbleSerializer
         ..add('threshold')
         ..add(serializers.serialize(object.threshold,
             specifiedType: const FullType(num)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.visible != null) {
       result
@@ -11028,6 +11822,12 @@ class _$PlotOptionsBubbleSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -11128,6 +11928,10 @@ class _$PlotOptionsBubbleSerializer
           result.linkedTo = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'marker':
+          result.marker = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'maxSize':
           result.maxSize = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -11165,6 +11969,10 @@ class _$PlotOptionsBubbleSerializer
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -11189,6 +11997,10 @@ class _$PlotOptionsBubbleSerializer
           result.softThreshold = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -11196,6 +12008,10 @@ class _$PlotOptionsBubbleSerializer
         case 'threshold':
           result.threshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'visible':
           result.visible = serializers.deserialize(value,
@@ -11216,6 +12032,10 @@ class _$PlotOptionsBubbleSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -11340,6 +12160,12 @@ class _$PlotOptionsBubbleDataLabelsSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.shape != null) {
       result
@@ -11467,6 +12293,10 @@ class _$PlotOptionsBubbleDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -12219,11 +13049,23 @@ class _$PlotOptionsBubbleStatesHoverSerializer
       Serializers serializers, PlotOptionsBubbleStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -12259,9 +13101,17 @@ class _$PlotOptionsBubbleStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -12299,6 +13149,12 @@ class _$PlotOptionsBubbleStatesHoverHaloSerializer
       Serializers serializers, PlotOptionsBubbleStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -12327,6 +13183,10 @@ class _$PlotOptionsBubbleStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -12393,6 +13253,12 @@ class _$PlotOptionsBubbleStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -12445,6 +13311,10 @@ class _$PlotOptionsBubbleStatesHoverMarkerSerializer
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -12474,6 +13344,12 @@ class _$PlotOptionsBubbleTooltipSerializer
   Iterable serialize(Serializers serializers, PlotOptionsBubbleTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -12568,6 +13444,10 @@ class _$PlotOptionsBubbleTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -12949,6 +13829,12 @@ class _$PlotOptionsColumnSerializer
         ..add(serializers.serialize(object.pointPadding,
             specifiedType: const FullType(num)));
     }
+    if (object.pointPlacement != null) {
+      result
+        ..add('pointPlacement')
+        ..add(serializers.serialize(object.pointPlacement,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.pointRange != null) {
       result
         ..add('pointRange')
@@ -12972,6 +13858,12 @@ class _$PlotOptionsColumnSerializer
         ..add('selected')
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.showCheckbox != null) {
       result
@@ -13003,6 +13895,12 @@ class _$PlotOptionsColumnSerializer
         ..add(serializers.serialize(object.stacking,
             specifiedType: const FullType(String)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
@@ -13014,6 +13912,12 @@ class _$PlotOptionsColumnSerializer
         ..add('threshold')
         ..add(serializers.serialize(object.threshold,
             specifiedType: const FullType(num)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.turboThreshold != null) {
       result
@@ -13032,6 +13936,12 @@ class _$PlotOptionsColumnSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -13203,6 +14113,10 @@ class _$PlotOptionsColumnSerializer
           result.pointPadding = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'pointPlacement':
+          result.pointPlacement = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'pointRange':
           result.pointRange = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -13218,6 +14132,10 @@ class _$PlotOptionsColumnSerializer
         case 'selected':
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
@@ -13239,6 +14157,10 @@ class _$PlotOptionsColumnSerializer
           result.stacking = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -13246,6 +14168,10 @@ class _$PlotOptionsColumnSerializer
         case 'threshold':
           result.threshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'turboThreshold':
           result.turboThreshold = serializers.deserialize(value,
@@ -13258,6 +14184,10 @@ class _$PlotOptionsColumnSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -13382,6 +14312,12 @@ class _$PlotOptionsColumnDataLabelsSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.shape != null) {
       result
@@ -13509,6 +14445,10 @@ class _$PlotOptionsColumnDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -13884,6 +14824,12 @@ class _$PlotOptionsColumnStatesHoverSerializer
       Serializers serializers, PlotOptionsColumnStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.borderColor != null) {
       result
         ..add('borderColor')
@@ -13908,6 +14854,12 @@ class _$PlotOptionsColumnStatesHoverSerializer
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
     }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
+    }
 
     return result;
   }
@@ -13924,6 +14876,10 @@ class _$PlotOptionsColumnStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'borderColor':
           result.borderColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -13939,6 +14895,10 @@ class _$PlotOptionsColumnStatesHoverSerializer
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -13962,6 +14922,12 @@ class _$PlotOptionsColumnStatesHoverHaloSerializer
       Serializers serializers, PlotOptionsColumnStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -13990,6 +14956,10 @@ class _$PlotOptionsColumnStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -14019,6 +14989,12 @@ class _$PlotOptionsColumnTooltipSerializer
   Iterable serialize(Serializers serializers, PlotOptionsColumnTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -14113,6 +15089,10 @@ class _$PlotOptionsColumnTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -14358,6 +15338,12 @@ class _$PlotOptionsColumnrangeSerializer
         ..add(serializers.serialize(object.cursor,
             specifiedType: const FullType(String)));
     }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.depth != null) {
       result
         ..add('depth')
@@ -14485,6 +15471,12 @@ class _$PlotOptionsColumnrangeSerializer
         ..add(serializers.serialize(object.pointPadding,
             specifiedType: const FullType(num)));
     }
+    if (object.pointPlacement != null) {
+      result
+        ..add('pointPlacement')
+        ..add(serializers.serialize(object.pointPlacement,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.pointRange != null) {
       result
         ..add('pointRange')
@@ -14509,6 +15501,12 @@ class _$PlotOptionsColumnrangeSerializer
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.showCheckbox != null) {
       result
         ..add('showCheckbox')
@@ -14527,11 +15525,23 @@ class _$PlotOptionsColumnrangeSerializer
         ..add(serializers.serialize(object.skipKeyboardNavigation,
             specifiedType: const FullType(bool)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
         ..add(serializers.serialize(object.stickyTracking,
             specifiedType: const FullType(bool)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.turboThreshold != null) {
       result
@@ -14550,6 +15560,12 @@ class _$PlotOptionsColumnrangeSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -14624,6 +15640,10 @@ class _$PlotOptionsColumnrangeSerializer
         case 'cursor':
           result.cursor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'depth':
           result.depth = serializers.deserialize(value,
@@ -14713,6 +15733,10 @@ class _$PlotOptionsColumnrangeSerializer
           result.pointPadding = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'pointPlacement':
+          result.pointPlacement = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'pointRange':
           result.pointRange = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -14729,6 +15753,10 @@ class _$PlotOptionsColumnrangeSerializer
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -14741,9 +15769,17 @@ class _$PlotOptionsColumnrangeSerializer
           result.skipKeyboardNavigation = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'turboThreshold':
           result.turboThreshold = serializers.deserialize(value,
@@ -14756,6 +15792,10 @@ class _$PlotOptionsColumnrangeSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -14880,6 +15920,12 @@ class _$PlotOptionsColumnrangeDataLabelsSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.shape != null) {
       result
@@ -15019,6 +16065,10 @@ class _$PlotOptionsColumnrangeDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -15407,6 +16457,12 @@ class _$PlotOptionsColumnrangeStatesHoverSerializer
       Serializers serializers, PlotOptionsColumnrangeStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.borderColor != null) {
       result
         ..add('borderColor')
@@ -15431,6 +16487,12 @@ class _$PlotOptionsColumnrangeStatesHoverSerializer
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
     }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
+    }
 
     return result;
   }
@@ -15447,6 +16509,10 @@ class _$PlotOptionsColumnrangeStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'borderColor':
           result.borderColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -15462,6 +16528,10 @@ class _$PlotOptionsColumnrangeStatesHoverSerializer
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -15485,6 +16555,12 @@ class _$PlotOptionsColumnrangeStatesHoverHaloSerializer
       Serializers serializers, PlotOptionsColumnrangeStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -15513,6 +16589,10 @@ class _$PlotOptionsColumnrangeStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -15543,6 +16623,12 @@ class _$PlotOptionsColumnrangeTooltipSerializer
       Serializers serializers, PlotOptionsColumnrangeTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -15637,6 +16723,10 @@ class _$PlotOptionsColumnrangeTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -15974,6 +17064,12 @@ class _$PlotOptionsErrorbarSerializer
         ..add(serializers.serialize(object.pointPadding,
             specifiedType: const FullType(num)));
     }
+    if (object.pointPlacement != null) {
+      result
+        ..add('pointPlacement')
+        ..add(serializers.serialize(object.pointPlacement,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.pointRange != null) {
       result
         ..add('pointRange')
@@ -16004,6 +17100,12 @@ class _$PlotOptionsErrorbarSerializer
         ..add(serializers.serialize(object.skipKeyboardNavigation,
             specifiedType: const FullType(bool)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stemColor != null) {
       result
         ..add('stemColor')
@@ -16028,6 +17130,12 @@ class _$PlotOptionsErrorbarSerializer
         ..add(serializers.serialize(object.stickyTracking,
             specifiedType: const FullType(bool)));
     }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.turboThreshold != null) {
       result
         ..add('turboThreshold')
@@ -16046,6 +17154,12 @@ class _$PlotOptionsErrorbarSerializer
         ..add(serializers.serialize(object.whiskerColor,
             specifiedType: const FullType(String)));
     }
+    if (object.whiskerLength != null) {
+      result
+        ..add('whiskerLength')
+        ..add(serializers.serialize(object.whiskerLength,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.whiskerWidth != null) {
       result
         ..add('whiskerWidth')
@@ -16057,6 +17171,12 @@ class _$PlotOptionsErrorbarSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -16195,6 +17315,10 @@ class _$PlotOptionsErrorbarSerializer
           result.pointPadding = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'pointPlacement':
+          result.pointPlacement = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'pointRange':
           result.pointRange = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -16215,6 +17339,10 @@ class _$PlotOptionsErrorbarSerializer
           result.skipKeyboardNavigation = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stemColor':
           result.stemColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -16231,6 +17359,10 @@ class _$PlotOptionsErrorbarSerializer
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'turboThreshold':
           result.turboThreshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -16243,6 +17375,10 @@ class _$PlotOptionsErrorbarSerializer
           result.whiskerColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'whiskerLength':
+          result.whiskerLength = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'whiskerWidth':
           result.whiskerWidth = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -16250,6 +17386,10 @@ class _$PlotOptionsErrorbarSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -16594,6 +17734,12 @@ class _$PlotOptionsErrorbarStatesHoverSerializer
       Serializers serializers, PlotOptionsErrorbarStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.borderColor != null) {
       result
         ..add('borderColor')
@@ -16618,6 +17764,12 @@ class _$PlotOptionsErrorbarStatesHoverSerializer
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
     }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
+    }
 
     return result;
   }
@@ -16634,6 +17786,10 @@ class _$PlotOptionsErrorbarStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'borderColor':
           result.borderColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -16649,6 +17805,10 @@ class _$PlotOptionsErrorbarStatesHoverSerializer
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -16672,6 +17832,12 @@ class _$PlotOptionsErrorbarStatesHoverHaloSerializer
       Serializers serializers, PlotOptionsErrorbarStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -16700,6 +17866,10 @@ class _$PlotOptionsErrorbarStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -16729,6 +17899,12 @@ class _$PlotOptionsErrorbarTooltipSerializer
   Iterable serialize(Serializers serializers, PlotOptionsErrorbarTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -16823,6 +17999,10 @@ class _$PlotOptionsErrorbarTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -17004,6 +18184,12 @@ class _$PlotOptionsFunnelSerializer
         ..add(serializers.serialize(object.borderWidth,
             specifiedType: const FullType(num)));
     }
+    if (object.center != null) {
+      result
+        ..add('center')
+        ..add(serializers.serialize(object.center,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.className != null) {
       result
         ..add('className')
@@ -17077,6 +18263,12 @@ class _$PlotOptionsFunnelSerializer
         ..add(serializers.serialize(object.getExtremesFromAll,
             specifiedType: const FullType(bool)));
     }
+    if (object.height != null) {
+      result
+        ..add('height')
+        ..add(serializers.serialize(object.height,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.keys != null) {
       result
         ..add('keys')
@@ -17095,6 +18287,18 @@ class _$PlotOptionsFunnelSerializer
         ..add('minSize')
         ..add(serializers.serialize(object.minSize,
             specifiedType: const FullType(num)));
+    }
+    if (object.neckHeight != null) {
+      result
+        ..add('neckHeight')
+        ..add(serializers.serialize(object.neckHeight,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.neckWidth != null) {
+      result
+        ..add('neckWidth')
+        ..add(serializers.serialize(object.neckWidth,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.point != null) {
       result
@@ -17120,6 +18324,12 @@ class _$PlotOptionsFunnelSerializer
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.showInLegend != null) {
       result
         ..add('showInLegend')
@@ -17138,11 +18348,23 @@ class _$PlotOptionsFunnelSerializer
         ..add(serializers.serialize(object.slicedOffset,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
         ..add(serializers.serialize(object.stickyTracking,
             specifiedType: const FullType(bool)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.visible != null) {
       result
@@ -17150,11 +18372,23 @@ class _$PlotOptionsFunnelSerializer
         ..add(serializers.serialize(object.visible,
             specifiedType: const FullType(bool)));
     }
+    if (object.width != null) {
+      result
+        ..add('width')
+        ..add(serializers.serialize(object.width,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.zoneAxis != null) {
       result
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -17186,6 +18420,10 @@ class _$PlotOptionsFunnelSerializer
         case 'borderWidth':
           result.borderWidth = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'center':
+          result.center = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'className':
           result.className = serializers.deserialize(value,
@@ -17239,6 +18477,10 @@ class _$PlotOptionsFunnelSerializer
           result.getExtremesFromAll = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'height':
+          result.height = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'keys':
           result.keys.replace(serializers.deserialize(value,
                   specifiedType:
@@ -17252,6 +18494,14 @@ class _$PlotOptionsFunnelSerializer
         case 'minSize':
           result.minSize = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'neckHeight':
+          result.neckHeight = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'neckWidth':
+          result.neckWidth = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'point':
           result.point.replace(serializers.deserialize(value,
@@ -17270,6 +18520,10 @@ class _$PlotOptionsFunnelSerializer
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'showInLegend':
           result.showInLegend = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -17282,17 +18536,33 @@ class _$PlotOptionsFunnelSerializer
           result.slicedOffset = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'visible':
           result.visible = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'width':
+          result.width = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -17429,6 +18699,12 @@ class _$PlotOptionsFunnelDataLabelsSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.shape != null) {
       result
@@ -17570,6 +18846,10 @@ class _$PlotOptionsFunnelDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -17959,6 +19239,12 @@ class _$PlotOptionsFunnelStatesHoverSerializer
       Serializers serializers, PlotOptionsFunnelStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.brightness != null) {
       result
         ..add('brightness')
@@ -17970,6 +19256,12 @@ class _$PlotOptionsFunnelStatesHoverSerializer
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -18005,6 +19297,10 @@ class _$PlotOptionsFunnelStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'brightness':
           result.brightness = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -18012,6 +19308,10 @@ class _$PlotOptionsFunnelStatesHoverSerializer
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -18049,6 +19349,12 @@ class _$PlotOptionsFunnelStatesHoverHaloSerializer
       Serializers serializers, PlotOptionsFunnelStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -18077,6 +19383,10 @@ class _$PlotOptionsFunnelStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -18143,6 +19453,12 @@ class _$PlotOptionsFunnelStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -18195,6 +19511,10 @@ class _$PlotOptionsFunnelStatesHoverMarkerSerializer
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -18224,6 +19544,12 @@ class _$PlotOptionsFunnelTooltipSerializer
   Iterable serialize(Serializers serializers, PlotOptionsFunnelTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -18318,6 +19644,10 @@ class _$PlotOptionsFunnelTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -18511,11 +19841,23 @@ class _$PlotOptionsGaugeSerializer
         ..add(serializers.serialize(object.cursor,
             specifiedType: const FullType(String)));
     }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.description != null) {
       result
         ..add('description')
         ..add(serializers.serialize(object.description,
             specifiedType: const FullType(String)));
+    }
+    if (object.dial != null) {
+      result
+        ..add('dial')
+        ..add(serializers.serialize(object.dial,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.enableMouseTracking != null) {
       result
@@ -18572,6 +19914,12 @@ class _$PlotOptionsGaugeSerializer
         ..add(serializers.serialize(object.overshoot,
             specifiedType: const FullType(num)));
     }
+    if (object.pivot != null) {
+      result
+        ..add('pivot')
+        ..add(serializers.serialize(object.pivot,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.point != null) {
       result
         ..add('point')
@@ -18619,6 +19967,12 @@ class _$PlotOptionsGaugeSerializer
         ..add('threshold')
         ..add(serializers.serialize(object.threshold,
             specifiedType: const FullType(num)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.visible != null) {
       result
@@ -18671,9 +20025,17 @@ class _$PlotOptionsGaugeSerializer
           result.cursor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'description':
           result.description = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'dial':
+          result.dial = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'enableMouseTracking':
           result.enableMouseTracking = serializers.deserialize(value,
@@ -18714,6 +20076,10 @@ class _$PlotOptionsGaugeSerializer
           result.overshoot = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'pivot':
+          result.pivot = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'point':
           result.point.replace(serializers.deserialize(value,
                   specifiedType: const FullType(PlotOptionsGaugePoint))
@@ -18746,6 +20112,10 @@ class _$PlotOptionsGaugeSerializer
         case 'threshold':
           result.threshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'visible':
           result.visible = serializers.deserialize(value,
@@ -18878,6 +20248,12 @@ class _$PlotOptionsGaugeDataLabelsSerializer
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.shape != null) {
       result
         ..add('shape')
@@ -19004,6 +20380,10 @@ class _$PlotOptionsGaugeDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -19523,6 +20903,12 @@ class _$PlotOptionsGaugeTooltipSerializer
   Iterable serialize(Serializers serializers, PlotOptionsGaugeTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -19617,6 +21003,10 @@ class _$PlotOptionsGaugeTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -19863,6 +21253,12 @@ class _$PlotOptionsHeatmapSerializer
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.showCheckbox != null) {
       result
         ..add('showCheckbox')
@@ -19881,11 +21277,23 @@ class _$PlotOptionsHeatmapSerializer
         ..add(serializers.serialize(object.skipKeyboardNavigation,
             specifiedType: const FullType(bool)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
         ..add(serializers.serialize(object.stickyTracking,
             specifiedType: const FullType(bool)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.turboThreshold != null) {
       result
@@ -19904,6 +21312,12 @@ class _$PlotOptionsHeatmapSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -20043,6 +21457,10 @@ class _$PlotOptionsHeatmapSerializer
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -20055,9 +21473,17 @@ class _$PlotOptionsHeatmapSerializer
           result.skipKeyboardNavigation = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'turboThreshold':
           result.turboThreshold = serializers.deserialize(value,
@@ -20070,6 +21496,10 @@ class _$PlotOptionsHeatmapSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -20194,6 +21624,12 @@ class _$PlotOptionsHeatmapDataLabelsSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.shape != null) {
       result
@@ -20321,6 +21757,10 @@ class _$PlotOptionsHeatmapDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -20696,6 +22136,12 @@ class _$PlotOptionsHeatmapStatesHoverSerializer
       Serializers serializers, PlotOptionsHeatmapStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.borderColor != null) {
       result
         ..add('borderColor')
@@ -20720,6 +22166,12 @@ class _$PlotOptionsHeatmapStatesHoverSerializer
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
     }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
+    }
 
     return result;
   }
@@ -20736,6 +22188,10 @@ class _$PlotOptionsHeatmapStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'borderColor':
           result.borderColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -20751,6 +22207,10 @@ class _$PlotOptionsHeatmapStatesHoverSerializer
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -20774,6 +22234,12 @@ class _$PlotOptionsHeatmapStatesHoverHaloSerializer
       Serializers serializers, PlotOptionsHeatmapStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -20802,6 +22268,10 @@ class _$PlotOptionsHeatmapStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -20831,6 +22301,12 @@ class _$PlotOptionsHeatmapTooltipSerializer
   Iterable serialize(Serializers serializers, PlotOptionsHeatmapTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -20925,6 +22401,10 @@ class _$PlotOptionsHeatmapTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -21251,6 +22731,12 @@ class _$PlotOptionsLineSerializer
         ..add(serializers.serialize(object.pointIntervalUnit,
             specifiedType: const FullType(String)));
     }
+    if (object.pointPlacement != null) {
+      result
+        ..add('pointPlacement')
+        ..add(serializers.serialize(object.pointPlacement,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.pointStart != null) {
       result
         ..add('pointStart')
@@ -21262,6 +22748,12 @@ class _$PlotOptionsLineSerializer
         ..add('selected')
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.showCheckbox != null) {
       result
@@ -21293,6 +22785,12 @@ class _$PlotOptionsLineSerializer
         ..add(serializers.serialize(object.stacking,
             specifiedType: const FullType(String)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.step != null) {
       result
         ..add('step')
@@ -21311,6 +22809,12 @@ class _$PlotOptionsLineSerializer
         ..add(serializers.serialize(object.threshold,
             specifiedType: const FullType(num)));
     }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.turboThreshold != null) {
       result
         ..add('turboThreshold')
@@ -21328,6 +22832,12 @@ class _$PlotOptionsLineSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -21462,6 +22972,10 @@ class _$PlotOptionsLineSerializer
           result.pointIntervalUnit = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'pointPlacement':
+          result.pointPlacement = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'pointStart':
           result.pointStart = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -21469,6 +22983,10 @@ class _$PlotOptionsLineSerializer
         case 'selected':
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
@@ -21490,6 +23008,10 @@ class _$PlotOptionsLineSerializer
           result.stacking = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'step':
           result.step = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -21502,6 +23024,10 @@ class _$PlotOptionsLineSerializer
           result.threshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'turboThreshold':
           result.turboThreshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -21513,6 +23039,10 @@ class _$PlotOptionsLineSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -21636,6 +23166,12 @@ class _$PlotOptionsLineDataLabelsSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.shape != null) {
       result
@@ -21763,6 +23299,10 @@ class _$PlotOptionsLineDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -22521,11 +24061,23 @@ class _$PlotOptionsLineStatesHoverSerializer
   Iterable serialize(Serializers serializers, PlotOptionsLineStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -22561,9 +24113,17 @@ class _$PlotOptionsLineStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -22601,6 +24161,12 @@ class _$PlotOptionsLineStatesHoverHaloSerializer
       Serializers serializers, PlotOptionsLineStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -22629,6 +24195,10 @@ class _$PlotOptionsLineStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -22695,6 +24265,12 @@ class _$PlotOptionsLineStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -22747,6 +24323,10 @@ class _$PlotOptionsLineStatesHoverMarkerSerializer
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -22776,6 +24356,12 @@ class _$PlotOptionsLineTooltipSerializer
   Iterable serialize(Serializers serializers, PlotOptionsLineTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -22870,6 +24456,10 @@ class _$PlotOptionsLineTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -23056,6 +24646,12 @@ class _$PlotOptionsPieSerializer
         ..add(serializers.serialize(object.borderWidth,
             specifiedType: const FullType(num)));
     }
+    if (object.center != null) {
+      result
+        ..add('center')
+        ..add(serializers.serialize(object.center,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.className != null) {
       result
         ..add('className')
@@ -23141,6 +24737,12 @@ class _$PlotOptionsPieSerializer
         ..add(serializers.serialize(object.ignoreHiddenPoint,
             specifiedType: const FullType(bool)));
     }
+    if (object.innerSize != null) {
+      result
+        ..add('innerSize')
+        ..add(serializers.serialize(object.innerSize,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.keys != null) {
       result
         ..add('keys')
@@ -23178,11 +24780,23 @@ class _$PlotOptionsPieSerializer
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.showInLegend != null) {
       result
         ..add('showInLegend')
         ..add(serializers.serialize(object.showInLegend,
             specifiedType: const FullType(bool)));
+    }
+    if (object.size != null) {
+      result
+        ..add('size')
+        ..add(serializers.serialize(object.size,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.skipKeyboardNavigation != null) {
       result
@@ -23202,11 +24816,23 @@ class _$PlotOptionsPieSerializer
         ..add(serializers.serialize(object.startAngle,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
         ..add(serializers.serialize(object.stickyTracking,
             specifiedType: const FullType(bool)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.visible != null) {
       result
@@ -23219,6 +24845,12 @@ class _$PlotOptionsPieSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -23254,6 +24886,10 @@ class _$PlotOptionsPieSerializer
         case 'borderWidth':
           result.borderWidth = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'center':
+          result.center = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'className':
           result.className = serializers.deserialize(value,
@@ -23315,6 +24951,10 @@ class _$PlotOptionsPieSerializer
           result.ignoreHiddenPoint = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'innerSize':
+          result.innerSize = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'keys':
           result.keys.replace(serializers.deserialize(value,
                   specifiedType:
@@ -23342,9 +24982,17 @@ class _$PlotOptionsPieSerializer
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'showInLegend':
           result.showInLegend = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'size':
+          result.size = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'skipKeyboardNavigation':
           result.skipKeyboardNavigation = serializers.deserialize(value,
@@ -23358,9 +25006,17 @@ class _$PlotOptionsPieSerializer
           result.startAngle = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'visible':
           result.visible = serializers.deserialize(value,
@@ -23369,6 +25025,10 @@ class _$PlotOptionsPieSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -23504,6 +25164,12 @@ class _$PlotOptionsPieDataLabelsSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.shape != null) {
       result
@@ -23645,6 +25311,10 @@ class _$PlotOptionsPieDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -24029,6 +25699,12 @@ class _$PlotOptionsPieStatesHoverSerializer
   Iterable serialize(Serializers serializers, PlotOptionsPieStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.brightness != null) {
       result
         ..add('brightness')
@@ -24040,6 +25716,12 @@ class _$PlotOptionsPieStatesHoverSerializer
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -24075,6 +25757,10 @@ class _$PlotOptionsPieStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'brightness':
           result.brightness = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -24082,6 +25768,10 @@ class _$PlotOptionsPieStatesHoverSerializer
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -24119,6 +25809,12 @@ class _$PlotOptionsPieStatesHoverHaloSerializer
       Serializers serializers, PlotOptionsPieStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -24147,6 +25843,10 @@ class _$PlotOptionsPieStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -24213,6 +25913,12 @@ class _$PlotOptionsPieStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -24265,6 +25971,10 @@ class _$PlotOptionsPieStatesHoverMarkerSerializer
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -24294,6 +26004,12 @@ class _$PlotOptionsPieTooltipSerializer
   Iterable serialize(Serializers serializers, PlotOptionsPieTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -24388,6 +26104,10 @@ class _$PlotOptionsPieTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -24707,6 +26427,12 @@ class _$PlotOptionsPolygonSerializer
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.showCheckbox != null) {
       result
         ..add('showCheckbox')
@@ -24725,11 +26451,23 @@ class _$PlotOptionsPolygonSerializer
         ..add(serializers.serialize(object.skipKeyboardNavigation,
             specifiedType: const FullType(bool)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
         ..add(serializers.serialize(object.stickyTracking,
             specifiedType: const FullType(bool)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.turboThreshold != null) {
       result
@@ -24748,6 +26486,12 @@ class _$PlotOptionsPolygonSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -24878,6 +26622,10 @@ class _$PlotOptionsPolygonSerializer
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -24890,9 +26638,17 @@ class _$PlotOptionsPolygonSerializer
           result.skipKeyboardNavigation = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'turboThreshold':
           result.turboThreshold = serializers.deserialize(value,
@@ -24905,6 +26661,10 @@ class _$PlotOptionsPolygonSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -25029,6 +26789,12 @@ class _$PlotOptionsPolygonDataLabelsSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.shape != null) {
       result
@@ -25156,6 +26922,10 @@ class _$PlotOptionsPolygonDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -25919,11 +27689,23 @@ class _$PlotOptionsPolygonStatesHoverSerializer
       Serializers serializers, PlotOptionsPolygonStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -25960,9 +27742,17 @@ class _$PlotOptionsPolygonStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -26000,6 +27790,12 @@ class _$PlotOptionsPolygonStatesHoverHaloSerializer
       Serializers serializers, PlotOptionsPolygonStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -26028,6 +27824,10 @@ class _$PlotOptionsPolygonStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -26094,6 +27894,12 @@ class _$PlotOptionsPolygonStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -26146,6 +27952,10 @@ class _$PlotOptionsPolygonStatesHoverMarkerSerializer
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -26175,6 +27985,12 @@ class _$PlotOptionsPolygonTooltipSerializer
   Iterable serialize(Serializers serializers, PlotOptionsPolygonTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -26269,6 +28085,10 @@ class _$PlotOptionsPolygonTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -26450,6 +28270,12 @@ class _$PlotOptionsPyramidSerializer
         ..add(serializers.serialize(object.borderWidth,
             specifiedType: const FullType(num)));
     }
+    if (object.center != null) {
+      result
+        ..add('center')
+        ..add(serializers.serialize(object.center,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.className != null) {
       result
         ..add('className')
@@ -26523,6 +28349,12 @@ class _$PlotOptionsPyramidSerializer
         ..add(serializers.serialize(object.getExtremesFromAll,
             specifiedType: const FullType(bool)));
     }
+    if (object.height != null) {
+      result
+        ..add('height')
+        ..add(serializers.serialize(object.height,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.keys != null) {
       result
         ..add('keys')
@@ -26566,6 +28398,12 @@ class _$PlotOptionsPyramidSerializer
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.showInLegend != null) {
       result
         ..add('showInLegend')
@@ -26584,11 +28422,23 @@ class _$PlotOptionsPyramidSerializer
         ..add(serializers.serialize(object.slicedOffset,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
         ..add(serializers.serialize(object.stickyTracking,
             specifiedType: const FullType(bool)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.visible != null) {
       result
@@ -26596,11 +28446,23 @@ class _$PlotOptionsPyramidSerializer
         ..add(serializers.serialize(object.visible,
             specifiedType: const FullType(bool)));
     }
+    if (object.width != null) {
+      result
+        ..add('width')
+        ..add(serializers.serialize(object.width,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.zoneAxis != null) {
       result
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -26632,6 +28494,10 @@ class _$PlotOptionsPyramidSerializer
         case 'borderWidth':
           result.borderWidth = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'center':
+          result.center = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'className':
           result.className = serializers.deserialize(value,
@@ -26685,6 +28551,10 @@ class _$PlotOptionsPyramidSerializer
           result.getExtremesFromAll = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'height':
+          result.height = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'keys':
           result.keys.replace(serializers.deserialize(value,
                   specifiedType:
@@ -26716,6 +28586,10 @@ class _$PlotOptionsPyramidSerializer
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'showInLegend':
           result.showInLegend = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -26728,17 +28602,33 @@ class _$PlotOptionsPyramidSerializer
           result.slicedOffset = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'visible':
           result.visible = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'width':
+          result.width = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -26875,6 +28765,12 @@ class _$PlotOptionsPyramidDataLabelsSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.shape != null) {
       result
@@ -27016,6 +28912,10 @@ class _$PlotOptionsPyramidDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -27405,6 +29305,12 @@ class _$PlotOptionsPyramidStatesHoverSerializer
       Serializers serializers, PlotOptionsPyramidStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.brightness != null) {
       result
         ..add('brightness')
@@ -27416,6 +29322,12 @@ class _$PlotOptionsPyramidStatesHoverSerializer
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -27452,6 +29364,10 @@ class _$PlotOptionsPyramidStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'brightness':
           result.brightness = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -27459,6 +29375,10 @@ class _$PlotOptionsPyramidStatesHoverSerializer
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -27496,6 +29416,12 @@ class _$PlotOptionsPyramidStatesHoverHaloSerializer
       Serializers serializers, PlotOptionsPyramidStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -27524,6 +29450,10 @@ class _$PlotOptionsPyramidStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -27590,6 +29520,12 @@ class _$PlotOptionsPyramidStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -27642,6 +29578,10 @@ class _$PlotOptionsPyramidStatesHoverMarkerSerializer
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -27671,6 +29611,12 @@ class _$PlotOptionsPyramidTooltipSerializer
   Iterable serialize(Serializers serializers, PlotOptionsPyramidTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -27765,6 +29711,10 @@ class _$PlotOptionsPyramidTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -28085,6 +30035,12 @@ class _$PlotOptionsScatterSerializer
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.showCheckbox != null) {
       result
         ..add('showCheckbox')
@@ -28109,6 +30065,12 @@ class _$PlotOptionsScatterSerializer
         ..add(serializers.serialize(object.softThreshold,
             specifiedType: const FullType(bool)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
@@ -28120,6 +30082,12 @@ class _$PlotOptionsScatterSerializer
         ..add('threshold')
         ..add(serializers.serialize(object.threshold,
             specifiedType: const FullType(num)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.turboThreshold != null) {
       result
@@ -28138,6 +30106,12 @@ class _$PlotOptionsScatterSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -28268,6 +30242,10 @@ class _$PlotOptionsScatterSerializer
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -28284,6 +30262,10 @@ class _$PlotOptionsScatterSerializer
           result.softThreshold = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -28291,6 +30273,10 @@ class _$PlotOptionsScatterSerializer
         case 'threshold':
           result.threshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'turboThreshold':
           result.turboThreshold = serializers.deserialize(value,
@@ -28303,6 +30289,10 @@ class _$PlotOptionsScatterSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -28427,6 +30417,12 @@ class _$PlotOptionsScatterDataLabelsSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.shape != null) {
       result
@@ -28554,6 +30550,10 @@ class _$PlotOptionsScatterDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -29317,11 +31317,23 @@ class _$PlotOptionsScatterStatesHoverSerializer
       Serializers serializers, PlotOptionsScatterStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -29358,9 +31370,17 @@ class _$PlotOptionsScatterStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -29398,6 +31418,12 @@ class _$PlotOptionsScatterStatesHoverHaloSerializer
       Serializers serializers, PlotOptionsScatterStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -29426,6 +31452,10 @@ class _$PlotOptionsScatterStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -29492,6 +31522,12 @@ class _$PlotOptionsScatterStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -29544,6 +31580,10 @@ class _$PlotOptionsScatterStatesHoverMarkerSerializer
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -29573,6 +31613,12 @@ class _$PlotOptionsScatterTooltipSerializer
   Iterable serialize(Serializers serializers, PlotOptionsScatterTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -29667,6 +31713,10 @@ class _$PlotOptionsScatterTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -29993,6 +32043,12 @@ class _$PlotOptionsSeriesSerializer
         ..add(serializers.serialize(object.pointIntervalUnit,
             specifiedType: const FullType(String)));
     }
+    if (object.pointPlacement != null) {
+      result
+        ..add('pointPlacement')
+        ..add(serializers.serialize(object.pointPlacement,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.pointStart != null) {
       result
         ..add('pointStart')
@@ -30004,6 +32060,12 @@ class _$PlotOptionsSeriesSerializer
         ..add('selected')
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.showCheckbox != null) {
       result
@@ -30035,6 +32097,12 @@ class _$PlotOptionsSeriesSerializer
         ..add(serializers.serialize(object.stacking,
             specifiedType: const FullType(String)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.step != null) {
       result
         ..add('step')
@@ -30053,6 +32121,12 @@ class _$PlotOptionsSeriesSerializer
         ..add(serializers.serialize(object.threshold,
             specifiedType: const FullType(num)));
     }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.turboThreshold != null) {
       result
         ..add('turboThreshold')
@@ -30070,6 +32144,12 @@ class _$PlotOptionsSeriesSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -30204,6 +32284,10 @@ class _$PlotOptionsSeriesSerializer
           result.pointIntervalUnit = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'pointPlacement':
+          result.pointPlacement = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'pointStart':
           result.pointStart = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -30211,6 +32295,10 @@ class _$PlotOptionsSeriesSerializer
         case 'selected':
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
@@ -30232,6 +32320,10 @@ class _$PlotOptionsSeriesSerializer
           result.stacking = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'step':
           result.step = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -30244,6 +32336,10 @@ class _$PlotOptionsSeriesSerializer
           result.threshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'turboThreshold':
           result.turboThreshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -30255,6 +32351,10 @@ class _$PlotOptionsSeriesSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -30379,6 +32479,12 @@ class _$PlotOptionsSeriesDataLabelsSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.shape != null) {
       result
@@ -30506,6 +32612,10 @@ class _$PlotOptionsSeriesDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -31268,11 +33378,23 @@ class _$PlotOptionsSeriesStatesHoverSerializer
       Serializers serializers, PlotOptionsSeriesStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -31308,9 +33430,17 @@ class _$PlotOptionsSeriesStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -31348,6 +33478,12 @@ class _$PlotOptionsSeriesStatesHoverHaloSerializer
       Serializers serializers, PlotOptionsSeriesStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -31376,6 +33512,10 @@ class _$PlotOptionsSeriesStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -31442,6 +33582,12 @@ class _$PlotOptionsSeriesStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -31494,6 +33640,10 @@ class _$PlotOptionsSeriesStatesHoverMarkerSerializer
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -31523,6 +33673,12 @@ class _$PlotOptionsSeriesTooltipSerializer
   Iterable serialize(Serializers serializers, PlotOptionsSeriesTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -31617,6 +33773,10 @@ class _$PlotOptionsSeriesTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -31807,6 +33967,12 @@ class _$PlotOptionsSolidgaugeSerializer
         ..add(serializers.serialize(object.cursor,
             specifiedType: const FullType(String)));
     }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.description != null) {
       result
         ..add('description')
@@ -31916,6 +34082,12 @@ class _$PlotOptionsSolidgaugeSerializer
         ..add(serializers.serialize(object.threshold,
             specifiedType: const FullType(num)));
     }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.visible != null) {
       result
         ..add('visible')
@@ -31963,6 +34135,10 @@ class _$PlotOptionsSolidgaugeSerializer
         case 'cursor':
           result.cursor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'description':
           result.description = serializers.deserialize(value,
@@ -32039,6 +34215,10 @@ class _$PlotOptionsSolidgaugeSerializer
         case 'threshold':
           result.threshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'visible':
           result.visible = serializers.deserialize(value,
@@ -32172,6 +34352,12 @@ class _$PlotOptionsSolidgaugeDataLabelsSerializer
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.shape != null) {
       result
         ..add('shape')
@@ -32298,6 +34484,10 @@ class _$PlotOptionsSolidgaugeDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -32627,6 +34817,12 @@ class _$PlotOptionsSolidgaugeTooltipSerializer
       Serializers serializers, PlotOptionsSolidgaugeTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -32721,6 +34917,10 @@ class _$PlotOptionsSolidgaugeTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -32960,6 +35160,12 @@ class _$PlotOptionsSplineSerializer
         ..add(serializers.serialize(object.pointIntervalUnit,
             specifiedType: const FullType(String)));
     }
+    if (object.pointPlacement != null) {
+      result
+        ..add('pointPlacement')
+        ..add(serializers.serialize(object.pointPlacement,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.pointStart != null) {
       result
         ..add('pointStart')
@@ -32971,6 +35177,12 @@ class _$PlotOptionsSplineSerializer
         ..add('selected')
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.showCheckbox != null) {
       result
@@ -33002,6 +35214,12 @@ class _$PlotOptionsSplineSerializer
         ..add(serializers.serialize(object.stacking,
             specifiedType: const FullType(String)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
@@ -33013,6 +35231,12 @@ class _$PlotOptionsSplineSerializer
         ..add('threshold')
         ..add(serializers.serialize(object.threshold,
             specifiedType: const FullType(num)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.turboThreshold != null) {
       result
@@ -33031,6 +35255,12 @@ class _$PlotOptionsSplineSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -33165,6 +35395,10 @@ class _$PlotOptionsSplineSerializer
           result.pointIntervalUnit = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'pointPlacement':
+          result.pointPlacement = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'pointStart':
           result.pointStart = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -33172,6 +35406,10 @@ class _$PlotOptionsSplineSerializer
         case 'selected':
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
@@ -33193,6 +35431,10 @@ class _$PlotOptionsSplineSerializer
           result.stacking = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -33200,6 +35442,10 @@ class _$PlotOptionsSplineSerializer
         case 'threshold':
           result.threshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'turboThreshold':
           result.turboThreshold = serializers.deserialize(value,
@@ -33212,6 +35458,10 @@ class _$PlotOptionsSplineSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -33336,6 +35586,12 @@ class _$PlotOptionsSplineDataLabelsSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.shape != null) {
       result
@@ -33463,6 +35719,10 @@ class _$PlotOptionsSplineDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -34225,11 +36485,23 @@ class _$PlotOptionsSplineStatesHoverSerializer
       Serializers serializers, PlotOptionsSplineStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -34265,9 +36537,17 @@ class _$PlotOptionsSplineStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -34305,6 +36585,12 @@ class _$PlotOptionsSplineStatesHoverHaloSerializer
       Serializers serializers, PlotOptionsSplineStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -34333,6 +36619,10 @@ class _$PlotOptionsSplineStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -34399,6 +36689,12 @@ class _$PlotOptionsSplineStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -34451,6 +36747,10 @@ class _$PlotOptionsSplineStatesHoverMarkerSerializer
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -34480,6 +36780,12 @@ class _$PlotOptionsSplineTooltipSerializer
   Iterable serialize(Serializers serializers, PlotOptionsSplineTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -34574,6 +36880,10 @@ class _$PlotOptionsSplineTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -34822,6 +37132,12 @@ class _$PlotOptionsTreemapSerializer
         ..add(serializers.serialize(object.cursor,
             specifiedType: const FullType(String)));
     }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.description != null) {
       result
         ..add('description')
@@ -34895,6 +37211,12 @@ class _$PlotOptionsTreemapSerializer
         ..add(serializers.serialize(object.levelIsConstant,
             specifiedType: const FullType(bool)));
     }
+    if (object.levels != null) {
+      result
+        ..add('levels')
+        ..add(serializers.serialize(object.levels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.linkedTo != null) {
       result
         ..add('linkedTo')
@@ -34931,6 +37253,12 @@ class _$PlotOptionsTreemapSerializer
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.showCheckbox != null) {
       result
         ..add('showCheckbox')
@@ -34955,11 +37283,23 @@ class _$PlotOptionsTreemapSerializer
         ..add(serializers.serialize(object.sortIndex,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
         ..add(serializers.serialize(object.stickyTracking,
             specifiedType: const FullType(bool)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.turboThreshold != null) {
       result
@@ -34978,6 +37318,12 @@ class _$PlotOptionsTreemapSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -35056,6 +37402,10 @@ class _$PlotOptionsTreemapSerializer
           result.cursor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'description':
           result.description = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -35107,6 +37457,10 @@ class _$PlotOptionsTreemapSerializer
           result.levelIsConstant = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'levels':
+          result.levels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'linkedTo':
           result.linkedTo = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -35132,6 +37486,10 @@ class _$PlotOptionsTreemapSerializer
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -35148,9 +37506,17 @@ class _$PlotOptionsTreemapSerializer
           result.sortIndex = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'turboThreshold':
           result.turboThreshold = serializers.deserialize(value,
@@ -35163,6 +37529,10 @@ class _$PlotOptionsTreemapSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -35287,6 +37657,12 @@ class _$PlotOptionsTreemapDataLabelsSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.shape != null) {
       result
@@ -35414,6 +37790,10 @@ class _$PlotOptionsTreemapDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -35608,6 +37988,12 @@ class _$PlotOptionsTreemapLevelsSerializer
         ..add(serializers.serialize(object.color,
             specifiedType: const FullType(String)));
     }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.layoutAlgorithm != null) {
       result
         ..add('layoutAlgorithm')
@@ -35657,6 +38043,10 @@ class _$PlotOptionsTreemapLevelsSerializer
         case 'color':
           result.color = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'layoutAlgorithm':
           result.layoutAlgorithm = serializers.deserialize(value,
@@ -35896,6 +38286,12 @@ class _$PlotOptionsTreemapStatesHoverSerializer
       Serializers serializers, PlotOptionsTreemapStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.borderColor != null) {
       result
         ..add('borderColor')
@@ -35942,6 +38338,10 @@ class _$PlotOptionsTreemapStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'borderColor':
           result.borderColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -35983,6 +38383,12 @@ class _$PlotOptionsTreemapTooltipSerializer
   Iterable serialize(Serializers serializers, PlotOptionsTreemapTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -36077,6 +38483,10 @@ class _$PlotOptionsTreemapTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -36467,6 +38877,12 @@ class _$PlotOptionsWaterfallSerializer
         ..add(serializers.serialize(object.pointPadding,
             specifiedType: const FullType(num)));
     }
+    if (object.pointPlacement != null) {
+      result
+        ..add('pointPlacement')
+        ..add(serializers.serialize(object.pointPlacement,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.pointRange != null) {
       result
         ..add('pointRange')
@@ -36490,6 +38906,12 @@ class _$PlotOptionsWaterfallSerializer
         ..add('selected')
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.showCheckbox != null) {
       result
@@ -36515,6 +38937,12 @@ class _$PlotOptionsWaterfallSerializer
         ..add(serializers.serialize(object.softThreshold,
             specifiedType: const FullType(bool)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
@@ -36526,6 +38954,12 @@ class _$PlotOptionsWaterfallSerializer
         ..add('threshold')
         ..add(serializers.serialize(object.threshold,
             specifiedType: const FullType(num)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.upColor != null) {
       result
@@ -36544,6 +38978,12 @@ class _$PlotOptionsWaterfallSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -36719,6 +39159,10 @@ class _$PlotOptionsWaterfallSerializer
           result.pointPadding = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'pointPlacement':
+          result.pointPlacement = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'pointRange':
           result.pointRange = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -36734,6 +39178,10 @@ class _$PlotOptionsWaterfallSerializer
         case 'selected':
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
@@ -36751,6 +39199,10 @@ class _$PlotOptionsWaterfallSerializer
           result.softThreshold = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -36758,6 +39210,10 @@ class _$PlotOptionsWaterfallSerializer
         case 'threshold':
           result.threshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'upColor':
           result.upColor = serializers.deserialize(value,
@@ -36770,6 +39226,10 @@ class _$PlotOptionsWaterfallSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -36894,6 +39354,12 @@ class _$PlotOptionsWaterfallDataLabelsSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.shape != null) {
       result
@@ -37021,6 +39487,10 @@ class _$PlotOptionsWaterfallDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -37398,6 +39868,12 @@ class _$PlotOptionsWaterfallStatesHoverSerializer
       Serializers serializers, PlotOptionsWaterfallStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.borderColor != null) {
       result
         ..add('borderColor')
@@ -37422,6 +39898,12 @@ class _$PlotOptionsWaterfallStatesHoverSerializer
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
     }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
+    }
 
     return result;
   }
@@ -37438,6 +39920,10 @@ class _$PlotOptionsWaterfallStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'borderColor':
           result.borderColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -37453,6 +39939,10 @@ class _$PlotOptionsWaterfallStatesHoverSerializer
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -37476,6 +39966,12 @@ class _$PlotOptionsWaterfallStatesHoverHaloSerializer
       Serializers serializers, PlotOptionsWaterfallStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -37504,6 +40000,10 @@ class _$PlotOptionsWaterfallStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -37534,6 +40034,12 @@ class _$PlotOptionsWaterfallTooltipSerializer
       Serializers serializers, PlotOptionsWaterfallTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -37628,6 +40134,10 @@ class _$PlotOptionsWaterfallTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -37791,17 +40301,41 @@ class _$PlotOptions extends PlotOptions {
   @override
   final PlotOptionsBar bar;
   @override
+  final JsonObject boxplot;
+  @override
+  final JsonObject bubble;
+  @override
   final PlotOptionsColumn column;
+  @override
+  final JsonObject columnrange;
+  @override
+  final JsonObject errorbar;
+  @override
+  final JsonObject funnel;
+  @override
+  final JsonObject gauge;
+  @override
+  final JsonObject heatmap;
   @override
   final PlotOptionsLine line;
   @override
   final PlotOptionsPie pie;
   @override
+  final JsonObject polygon;
+  @override
+  final JsonObject pyramid;
+  @override
   final PlotOptionsScatter scatter;
   @override
   final PlotOptionsSeries series;
   @override
+  final JsonObject solidgauge;
+  @override
   final PlotOptionsSpline spline;
+  @override
+  final JsonObject treemap;
+  @override
+  final JsonObject waterfall;
 
   factory _$PlotOptions([void updates(PlotOptionsBuilder b)]) =>
       (new PlotOptionsBuilder()..update(updates)).build();
@@ -37812,12 +40346,24 @@ class _$PlotOptions extends PlotOptions {
       this.areaspline,
       this.areasplinerange,
       this.bar,
+      this.boxplot,
+      this.bubble,
       this.column,
+      this.columnrange,
+      this.errorbar,
+      this.funnel,
+      this.gauge,
+      this.heatmap,
       this.line,
       this.pie,
+      this.polygon,
+      this.pyramid,
       this.scatter,
       this.series,
-      this.spline})
+      this.solidgauge,
+      this.spline,
+      this.treemap,
+      this.waterfall})
       : super._();
 
   @override
@@ -37836,12 +40382,24 @@ class _$PlotOptions extends PlotOptions {
         areaspline == other.areaspline &&
         areasplinerange == other.areasplinerange &&
         bar == other.bar &&
+        boxplot == other.boxplot &&
+        bubble == other.bubble &&
         column == other.column &&
+        columnrange == other.columnrange &&
+        errorbar == other.errorbar &&
+        funnel == other.funnel &&
+        gauge == other.gauge &&
+        heatmap == other.heatmap &&
         line == other.line &&
         pie == other.pie &&
+        polygon == other.polygon &&
+        pyramid == other.pyramid &&
         scatter == other.scatter &&
         series == other.series &&
-        spline == other.spline;
+        solidgauge == other.solidgauge &&
+        spline == other.spline &&
+        treemap == other.treemap &&
+        waterfall == other.waterfall;
   }
 
   @override
@@ -37855,17 +40413,35 @@ class _$PlotOptions extends PlotOptions {
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, area.hashCode),
-                                            arearange.hashCode),
-                                        areaspline.hashCode),
-                                    areasplinerange.hashCode),
-                                bar.hashCode),
-                            column.hashCode),
-                        line.hashCode),
-                    pie.hashCode),
-                scatter.hashCode),
-            series.hashCode),
-        spline.hashCode));
+                                        $jc(
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc(
+                                                            $jc(
+                                                                $jc(
+                                                                    $jc(
+                                                                        $jc(
+                                                                            $jc($jc($jc($jc($jc(0, area.hashCode), arearange.hashCode), areaspline.hashCode), areasplinerange.hashCode),
+                                                                                bar.hashCode),
+                                                                            boxplot.hashCode),
+                                                                        bubble.hashCode),
+                                                                    column.hashCode),
+                                                                columnrange.hashCode),
+                                                            errorbar.hashCode),
+                                                        funnel.hashCode),
+                                                    gauge.hashCode),
+                                                heatmap.hashCode),
+                                            line.hashCode),
+                                        pie.hashCode),
+                                    polygon.hashCode),
+                                pyramid.hashCode),
+                            scatter.hashCode),
+                        series.hashCode),
+                    solidgauge.hashCode),
+                spline.hashCode),
+            treemap.hashCode),
+        waterfall.hashCode));
   }
 
   @override
@@ -37876,12 +40452,24 @@ class _$PlotOptions extends PlotOptions {
           ..add('areaspline', areaspline)
           ..add('areasplinerange', areasplinerange)
           ..add('bar', bar)
+          ..add('boxplot', boxplot)
+          ..add('bubble', bubble)
           ..add('column', column)
+          ..add('columnrange', columnrange)
+          ..add('errorbar', errorbar)
+          ..add('funnel', funnel)
+          ..add('gauge', gauge)
+          ..add('heatmap', heatmap)
           ..add('line', line)
           ..add('pie', pie)
+          ..add('polygon', polygon)
+          ..add('pyramid', pyramid)
           ..add('scatter', scatter)
           ..add('series', series)
-          ..add('spline', spline))
+          ..add('solidgauge', solidgauge)
+          ..add('spline', spline)
+          ..add('treemap', treemap)
+          ..add('waterfall', waterfall))
         .toString();
   }
 }
@@ -37916,10 +40504,38 @@ class PlotOptionsBuilder implements Builder<PlotOptions, PlotOptionsBuilder> {
   PlotOptionsBarBuilder get bar => _$this._bar ??= new PlotOptionsBarBuilder();
   set bar(PlotOptionsBarBuilder bar) => _$this._bar = bar;
 
+  JsonObject _boxplot;
+  JsonObject get boxplot => _$this._boxplot;
+  set boxplot(JsonObject boxplot) => _$this._boxplot = boxplot;
+
+  JsonObject _bubble;
+  JsonObject get bubble => _$this._bubble;
+  set bubble(JsonObject bubble) => _$this._bubble = bubble;
+
   PlotOptionsColumnBuilder _column;
   PlotOptionsColumnBuilder get column =>
       _$this._column ??= new PlotOptionsColumnBuilder();
   set column(PlotOptionsColumnBuilder column) => _$this._column = column;
+
+  JsonObject _columnrange;
+  JsonObject get columnrange => _$this._columnrange;
+  set columnrange(JsonObject columnrange) => _$this._columnrange = columnrange;
+
+  JsonObject _errorbar;
+  JsonObject get errorbar => _$this._errorbar;
+  set errorbar(JsonObject errorbar) => _$this._errorbar = errorbar;
+
+  JsonObject _funnel;
+  JsonObject get funnel => _$this._funnel;
+  set funnel(JsonObject funnel) => _$this._funnel = funnel;
+
+  JsonObject _gauge;
+  JsonObject get gauge => _$this._gauge;
+  set gauge(JsonObject gauge) => _$this._gauge = gauge;
+
+  JsonObject _heatmap;
+  JsonObject get heatmap => _$this._heatmap;
+  set heatmap(JsonObject heatmap) => _$this._heatmap = heatmap;
 
   PlotOptionsLineBuilder _line;
   PlotOptionsLineBuilder get line =>
@@ -37929,6 +40545,14 @@ class PlotOptionsBuilder implements Builder<PlotOptions, PlotOptionsBuilder> {
   PlotOptionsPieBuilder _pie;
   PlotOptionsPieBuilder get pie => _$this._pie ??= new PlotOptionsPieBuilder();
   set pie(PlotOptionsPieBuilder pie) => _$this._pie = pie;
+
+  JsonObject _polygon;
+  JsonObject get polygon => _$this._polygon;
+  set polygon(JsonObject polygon) => _$this._polygon = polygon;
+
+  JsonObject _pyramid;
+  JsonObject get pyramid => _$this._pyramid;
+  set pyramid(JsonObject pyramid) => _$this._pyramid = pyramid;
 
   PlotOptionsScatterBuilder _scatter;
   PlotOptionsScatterBuilder get scatter =>
@@ -37940,10 +40564,22 @@ class PlotOptionsBuilder implements Builder<PlotOptions, PlotOptionsBuilder> {
       _$this._series ??= new PlotOptionsSeriesBuilder();
   set series(PlotOptionsSeriesBuilder series) => _$this._series = series;
 
+  JsonObject _solidgauge;
+  JsonObject get solidgauge => _$this._solidgauge;
+  set solidgauge(JsonObject solidgauge) => _$this._solidgauge = solidgauge;
+
   PlotOptionsSplineBuilder _spline;
   PlotOptionsSplineBuilder get spline =>
       _$this._spline ??= new PlotOptionsSplineBuilder();
   set spline(PlotOptionsSplineBuilder spline) => _$this._spline = spline;
+
+  JsonObject _treemap;
+  JsonObject get treemap => _$this._treemap;
+  set treemap(JsonObject treemap) => _$this._treemap = treemap;
+
+  JsonObject _waterfall;
+  JsonObject get waterfall => _$this._waterfall;
+  set waterfall(JsonObject waterfall) => _$this._waterfall = waterfall;
 
   PlotOptionsBuilder();
 
@@ -37954,12 +40590,24 @@ class PlotOptionsBuilder implements Builder<PlotOptions, PlotOptionsBuilder> {
       _areaspline = _$v.areaspline?.toBuilder();
       _areasplinerange = _$v.areasplinerange?.toBuilder();
       _bar = _$v.bar?.toBuilder();
+      _boxplot = _$v.boxplot;
+      _bubble = _$v.bubble;
       _column = _$v.column?.toBuilder();
+      _columnrange = _$v.columnrange;
+      _errorbar = _$v.errorbar;
+      _funnel = _$v.funnel;
+      _gauge = _$v.gauge;
+      _heatmap = _$v.heatmap;
       _line = _$v.line?.toBuilder();
       _pie = _$v.pie?.toBuilder();
+      _polygon = _$v.polygon;
+      _pyramid = _$v.pyramid;
       _scatter = _$v.scatter?.toBuilder();
       _series = _$v.series?.toBuilder();
+      _solidgauge = _$v.solidgauge;
       _spline = _$v.spline?.toBuilder();
+      _treemap = _$v.treemap;
+      _waterfall = _$v.waterfall;
       _$v = null;
     }
     return this;
@@ -37985,12 +40633,24 @@ class PlotOptionsBuilder implements Builder<PlotOptions, PlotOptionsBuilder> {
             areaspline: _areaspline?.build(),
             areasplinerange: _areasplinerange?.build(),
             bar: _bar?.build(),
+            boxplot: boxplot,
+            bubble: bubble,
             column: _column?.build(),
+            columnrange: columnrange,
+            errorbar: errorbar,
+            funnel: funnel,
+            gauge: gauge,
+            heatmap: heatmap,
             line: _line?.build(),
             pie: _pie?.build(),
+            polygon: polygon,
+            pyramid: pyramid,
             scatter: _scatter?.build(),
             series: _series?.build(),
-            spline: _spline?.build());
+            solidgauge: solidgauge,
+            spline: _spline?.build(),
+            treemap: treemap,
+            waterfall: waterfall);
     replace(result);
     return result;
   }
@@ -38067,9 +40727,13 @@ class _$PlotOptionsArea extends PlotOptionsArea {
   @override
   final String pointIntervalUnit;
   @override
+  final JsonObject pointPlacement;
+  @override
   final num pointStart;
   @override
   final bool selected;
+  @override
+  final JsonObject shadow;
   @override
   final bool showCheckbox;
   @override
@@ -38081,11 +40745,15 @@ class _$PlotOptionsArea extends PlotOptionsArea {
   @override
   final String stacking;
   @override
+  final JsonObject states;
+  @override
   final String step;
   @override
   final bool stickyTracking;
   @override
   final num threshold;
+  @override
+  final JsonObject tooltip;
   @override
   final bool trackByArea;
   @override
@@ -38094,6 +40762,8 @@ class _$PlotOptionsArea extends PlotOptionsArea {
   final bool visible;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsArea([void updates(PlotOptionsAreaBuilder b)]) =>
       (new PlotOptionsAreaBuilder()..update(updates)).build();
@@ -38131,20 +40801,25 @@ class _$PlotOptionsArea extends PlotOptionsArea {
       this.pointDescriptionFormatter,
       this.pointInterval,
       this.pointIntervalUnit,
+      this.pointPlacement,
       this.pointStart,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
       this.softThreshold,
       this.stacking,
+      this.states,
       this.step,
       this.stickyTracking,
       this.threshold,
+      this.tooltip,
       this.trackByArea,
       this.turboThreshold,
       this.visible,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -38191,20 +40866,25 @@ class _$PlotOptionsArea extends PlotOptionsArea {
         pointDescriptionFormatter == other.pointDescriptionFormatter &&
         pointInterval == other.pointInterval &&
         pointIntervalUnit == other.pointIntervalUnit &&
+        pointPlacement == other.pointPlacement &&
         pointStart == other.pointStart &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         softThreshold == other.softThreshold &&
         stacking == other.stacking &&
+        states == other.states &&
         step == other.step &&
         stickyTracking == other.stickyTracking &&
         threshold == other.threshold &&
+        tooltip == other.tooltip &&
         trackByArea == other.trackByArea &&
         turboThreshold == other.turboThreshold &&
         visible == other.visible &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -38227,26 +40907,26 @@ class _$PlotOptionsArea extends PlotOptionsArea {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), connectEnds.hashCode), connectNulls.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), fillColor.hashCode), fillOpacity.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode), lineColor.hashCode), lineWidth.hashCode), linecap.hashCode), linkedTo.hashCode), marker.hashCode), negativeColor.hashCode),
-                                                                                negativeFillColor.hashCode),
-                                                                            point.hashCode),
-                                                                        pointDescriptionFormatter.hashCode),
-                                                                    pointInterval.hashCode),
-                                                                pointIntervalUnit.hashCode),
-                                                            pointStart.hashCode),
-                                                        selected.hashCode),
-                                                    showCheckbox.hashCode),
-                                                showInLegend.hashCode),
-                                            skipKeyboardNavigation.hashCode),
-                                        softThreshold.hashCode),
-                                    stacking.hashCode),
-                                step.hashCode),
-                            stickyTracking.hashCode),
-                        threshold.hashCode),
-                    trackByArea.hashCode),
-                turboThreshold.hashCode),
-            visible.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), connectEnds.hashCode), connectNulls.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), fillColor.hashCode), fillOpacity.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode), lineColor.hashCode), lineWidth.hashCode), linecap.hashCode), linkedTo.hashCode), marker.hashCode), negativeColor.hashCode), negativeFillColor.hashCode), point.hashCode), pointDescriptionFormatter.hashCode), pointInterval.hashCode), pointIntervalUnit.hashCode),
+                                                                                pointPlacement.hashCode),
+                                                                            pointStart.hashCode),
+                                                                        selected.hashCode),
+                                                                    shadow.hashCode),
+                                                                showCheckbox.hashCode),
+                                                            showInLegend.hashCode),
+                                                        skipKeyboardNavigation.hashCode),
+                                                    softThreshold.hashCode),
+                                                stacking.hashCode),
+                                            states.hashCode),
+                                        step.hashCode),
+                                    stickyTracking.hashCode),
+                                threshold.hashCode),
+                            tooltip.hashCode),
+                        trackByArea.hashCode),
+                    turboThreshold.hashCode),
+                visible.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -38284,20 +40964,25 @@ class _$PlotOptionsArea extends PlotOptionsArea {
           ..add('pointDescriptionFormatter', pointDescriptionFormatter)
           ..add('pointInterval', pointInterval)
           ..add('pointIntervalUnit', pointIntervalUnit)
+          ..add('pointPlacement', pointPlacement)
           ..add('pointStart', pointStart)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('softThreshold', softThreshold)
           ..add('stacking', stacking)
+          ..add('states', states)
           ..add('step', step)
           ..add('stickyTracking', stickyTracking)
           ..add('threshold', threshold)
+          ..add('tooltip', tooltip)
           ..add('trackByArea', trackByArea)
           ..add('turboThreshold', turboThreshold)
           ..add('visible', visible)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -38449,6 +41134,11 @@ class PlotOptionsAreaBuilder
   set pointIntervalUnit(String pointIntervalUnit) =>
       _$this._pointIntervalUnit = pointIntervalUnit;
 
+  JsonObject _pointPlacement;
+  JsonObject get pointPlacement => _$this._pointPlacement;
+  set pointPlacement(JsonObject pointPlacement) =>
+      _$this._pointPlacement = pointPlacement;
+
   num _pointStart;
   num get pointStart => _$this._pointStart;
   set pointStart(num pointStart) => _$this._pointStart = pointStart;
@@ -38456,6 +41146,10 @@ class PlotOptionsAreaBuilder
   bool _selected;
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
+
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
 
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
@@ -38479,6 +41173,10 @@ class PlotOptionsAreaBuilder
   String get stacking => _$this._stacking;
   set stacking(String stacking) => _$this._stacking = stacking;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _step;
   String get step => _$this._step;
   set step(String step) => _$this._step = step;
@@ -38491,6 +41189,10 @@ class PlotOptionsAreaBuilder
   num _threshold;
   num get threshold => _$this._threshold;
   set threshold(num threshold) => _$this._threshold = threshold;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   bool _trackByArea;
   bool get trackByArea => _$this._trackByArea;
@@ -38508,6 +41210,10 @@ class PlotOptionsAreaBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   PlotOptionsAreaBuilder();
 
@@ -38545,20 +41251,25 @@ class PlotOptionsAreaBuilder
       _pointDescriptionFormatter = _$v.pointDescriptionFormatter;
       _pointInterval = _$v.pointInterval;
       _pointIntervalUnit = _$v.pointIntervalUnit;
+      _pointPlacement = _$v.pointPlacement;
       _pointStart = _$v.pointStart;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _softThreshold = _$v.softThreshold;
       _stacking = _$v.stacking;
+      _states = _$v.states;
       _step = _$v.step;
       _stickyTracking = _$v.stickyTracking;
       _threshold = _$v.threshold;
+      _tooltip = _$v.tooltip;
       _trackByArea = _$v.trackByArea;
       _turboThreshold = _$v.turboThreshold;
       _visible = _$v.visible;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -38611,20 +41322,25 @@ class PlotOptionsAreaBuilder
             pointDescriptionFormatter: pointDescriptionFormatter,
             pointInterval: pointInterval,
             pointIntervalUnit: pointIntervalUnit,
+            pointPlacement: pointPlacement,
             pointStart: pointStart,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
             softThreshold: softThreshold,
             stacking: stacking,
+            states: states,
             step: step,
             stickyTracking: stickyTracking,
             threshold: threshold,
+            tooltip: tooltip,
             trackByArea: trackByArea,
             turboThreshold: turboThreshold,
             visible: visible,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -38671,6 +41387,8 @@ class _$PlotOptionsAreaDataLabels extends PlotOptionsAreaDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -38707,6 +41425,7 @@ class _$PlotOptionsAreaDataLabels extends PlotOptionsAreaDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -38746,6 +41465,7 @@ class _$PlotOptionsAreaDataLabels extends PlotOptionsAreaDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -38775,19 +41495,19 @@ class _$PlotOptionsAreaDataLabels extends PlotOptionsAreaDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -38817,6 +41537,7 @@ class _$PlotOptionsAreaDataLabels extends PlotOptionsAreaDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -38902,6 +41623,10 @@ class PlotOptionsAreaDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -38953,6 +41678,7 @@ class PlotOptionsAreaDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -38997,6 +41723,7 @@ class PlotOptionsAreaDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -40104,7 +42831,11 @@ class PlotOptionsAreaStatesBuilder
 
 class _$PlotOptionsAreaStatesHover extends PlotOptionsAreaStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -40117,7 +42848,12 @@ class _$PlotOptionsAreaStatesHover extends PlotOptionsAreaStatesHover {
       (new PlotOptionsAreaStatesHoverBuilder()..update(updates)).build();
 
   _$PlotOptionsAreaStatesHover._(
-      {this.enabled, this.lineWidth, this.lineWidthPlus, this.marker})
+      {this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker})
       : super._();
 
   @override
@@ -40133,7 +42869,9 @@ class _$PlotOptionsAreaStatesHover extends PlotOptionsAreaStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsAreaStatesHover) return false;
-    return enabled == other.enabled &&
+    return animation == other.animation &&
+        enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -40142,7 +42880,11 @@ class _$PlotOptionsAreaStatesHover extends PlotOptionsAreaStatesHover {
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, enabled.hashCode), lineWidth.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), enabled.hashCode),
+                    halo.hashCode),
+                lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
   }
@@ -40150,7 +42892,9 @@ class _$PlotOptionsAreaStatesHover extends PlotOptionsAreaStatesHover {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsAreaStatesHover')
+          ..add('animation', animation)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -40163,9 +42907,17 @@ class PlotOptionsAreaStatesHoverBuilder
         Builder<PlotOptionsAreaStatesHover, PlotOptionsAreaStatesHoverBuilder> {
   _$PlotOptionsAreaStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -40185,7 +42937,9 @@ class PlotOptionsAreaStatesHoverBuilder
 
   PlotOptionsAreaStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -40209,7 +42963,9 @@ class PlotOptionsAreaStatesHoverBuilder
   _$PlotOptionsAreaStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsAreaStatesHover._(
+            animation: animation,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -40225,6 +42981,8 @@ class PlotOptionsAreaStatesHoverBuilder
 
 class _$PlotOptionsAreaStatesHoverHalo extends PlotOptionsAreaStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -40233,7 +42991,8 @@ class _$PlotOptionsAreaStatesHoverHalo extends PlotOptionsAreaStatesHoverHalo {
           [void updates(PlotOptionsAreaStatesHoverHaloBuilder b)]) =>
       (new PlotOptionsAreaStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$PlotOptionsAreaStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$PlotOptionsAreaStatesHoverHalo._({this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   PlotOptionsAreaStatesHoverHalo rebuild(
@@ -40248,17 +43007,21 @@ class _$PlotOptionsAreaStatesHoverHalo extends PlotOptionsAreaStatesHoverHalo {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsAreaStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsAreaStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -40270,6 +43033,10 @@ class PlotOptionsAreaStatesHoverHaloBuilder
         Builder<PlotOptionsAreaStatesHoverHalo,
             PlotOptionsAreaStatesHoverHaloBuilder> {
   _$PlotOptionsAreaStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -40283,6 +43050,7 @@ class PlotOptionsAreaStatesHoverHaloBuilder
 
   PlotOptionsAreaStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -40304,7 +43072,8 @@ class PlotOptionsAreaStatesHoverHaloBuilder
   @override
   _$PlotOptionsAreaStatesHoverHalo build() {
     final result = _$v ??
-        new _$PlotOptionsAreaStatesHoverHalo._(opacity: opacity, size: size);
+        new _$PlotOptionsAreaStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -40330,6 +43099,8 @@ class _$PlotOptionsAreaStatesHoverMarker
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -40345,6 +43116,7 @@ class _$PlotOptionsAreaStatesHoverMarker
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -40368,6 +43140,7 @@ class _$PlotOptionsAreaStatesHoverMarker
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -40379,11 +43152,15 @@ class _$PlotOptionsAreaStatesHoverMarker
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -40397,6 +43174,7 @@ class _$PlotOptionsAreaStatesHoverMarker
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -40433,6 +43211,10 @@ class PlotOptionsAreaStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -40451,6 +43233,7 @@ class PlotOptionsAreaStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -40479,6 +43262,7 @@ class PlotOptionsAreaStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -40492,6 +43276,8 @@ class PlotOptionsAreaStatesHoverMarkerBuilder
 // **************************************************************************
 
 class _$PlotOptionsAreaTooltip extends PlotOptionsAreaTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -40524,7 +43310,8 @@ class _$PlotOptionsAreaTooltip extends PlotOptionsAreaTooltip {
       (new PlotOptionsAreaTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsAreaTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -40552,7 +43339,8 @@ class _$PlotOptionsAreaTooltip extends PlotOptionsAreaTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsAreaTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -40581,7 +43369,11 @@ class _$PlotOptionsAreaTooltip extends PlotOptionsAreaTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -40600,6 +43392,7 @@ class _$PlotOptionsAreaTooltip extends PlotOptionsAreaTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsAreaTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -40620,6 +43413,11 @@ class _$PlotOptionsAreaTooltip extends PlotOptionsAreaTooltip {
 class PlotOptionsAreaTooltipBuilder
     implements Builder<PlotOptionsAreaTooltip, PlotOptionsAreaTooltipBuilder> {
   _$PlotOptionsAreaTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -40680,6 +43478,7 @@ class PlotOptionsAreaTooltipBuilder
 
   PlotOptionsAreaTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -40713,6 +43512,7 @@ class PlotOptionsAreaTooltipBuilder
   _$PlotOptionsAreaTooltip build() {
     final result = _$v ??
         new _$PlotOptionsAreaTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -40887,6 +43687,8 @@ class _$PlotOptionsArearange extends PlotOptionsArearange {
   @override
   final String dashStyle;
   @override
+  final JsonObject dataLabels;
+  @override
   final String description;
   @override
   final bool enableMouseTracking;
@@ -40925,9 +43727,13 @@ class _$PlotOptionsArearange extends PlotOptionsArearange {
   @override
   final String pointIntervalUnit;
   @override
+  final JsonObject pointPlacement;
+  @override
   final num pointStart;
   @override
   final bool selected;
+  @override
+  final JsonObject shadow;
   @override
   final bool showCheckbox;
   @override
@@ -40935,9 +43741,13 @@ class _$PlotOptionsArearange extends PlotOptionsArearange {
   @override
   final bool skipKeyboardNavigation;
   @override
+  final JsonObject states;
+  @override
   final String step;
   @override
   final bool stickyTracking;
+  @override
+  final JsonObject tooltip;
   @override
   final bool trackByArea;
   @override
@@ -40946,6 +43756,8 @@ class _$PlotOptionsArearange extends PlotOptionsArearange {
   final bool visible;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsArearange(
           [void updates(PlotOptionsArearangeBuilder b)]) =>
@@ -40962,6 +43774,7 @@ class _$PlotOptionsArearange extends PlotOptionsArearange {
       this.cropThreshold,
       this.cursor,
       this.dashStyle,
+      this.dataLabels,
       this.description,
       this.enableMouseTracking,
       this.events,
@@ -40981,17 +43794,22 @@ class _$PlotOptionsArearange extends PlotOptionsArearange {
       this.pointDescriptionFormatter,
       this.pointInterval,
       this.pointIntervalUnit,
+      this.pointPlacement,
       this.pointStart,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
+      this.states,
       this.step,
       this.stickyTracking,
+      this.tooltip,
       this.trackByArea,
       this.turboThreshold,
       this.visible,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -41016,6 +43834,7 @@ class _$PlotOptionsArearange extends PlotOptionsArearange {
         cropThreshold == other.cropThreshold &&
         cursor == other.cursor &&
         dashStyle == other.dashStyle &&
+        dataLabels == other.dataLabels &&
         description == other.description &&
         enableMouseTracking == other.enableMouseTracking &&
         events == other.events &&
@@ -41035,17 +43854,22 @@ class _$PlotOptionsArearange extends PlotOptionsArearange {
         pointDescriptionFormatter == other.pointDescriptionFormatter &&
         pointInterval == other.pointInterval &&
         pointIntervalUnit == other.pointIntervalUnit &&
+        pointPlacement == other.pointPlacement &&
         pointStart == other.pointStart &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
+        states == other.states &&
         step == other.step &&
         stickyTracking == other.stickyTracking &&
+        tooltip == other.tooltip &&
         trackByArea == other.trackByArea &&
         turboThreshold == other.turboThreshold &&
         visible == other.visible &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -41068,26 +43892,26 @@ class _$PlotOptionsArearange extends PlotOptionsArearange {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), connectNulls.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), fillColor.hashCode), fillOpacity.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode), lineColor.hashCode), lineWidth.hashCode),
-                                                                                linecap.hashCode),
-                                                                            linkedTo.hashCode),
-                                                                        negativeColor.hashCode),
-                                                                    negativeFillColor.hashCode),
-                                                                point.hashCode),
-                                                            pointDescriptionFormatter.hashCode),
-                                                        pointInterval.hashCode),
-                                                    pointIntervalUnit.hashCode),
-                                                pointStart.hashCode),
-                                            selected.hashCode),
-                                        showCheckbox.hashCode),
-                                    showInLegend.hashCode),
-                                skipKeyboardNavigation.hashCode),
-                            step.hashCode),
-                        stickyTracking.hashCode),
-                    trackByArea.hashCode),
-                turboThreshold.hashCode),
-            visible.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), connectNulls.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), fillColor.hashCode), fillOpacity.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode), lineColor.hashCode), lineWidth.hashCode), linecap.hashCode), linkedTo.hashCode), negativeColor.hashCode), negativeFillColor.hashCode), point.hashCode),
+                                                                                pointDescriptionFormatter.hashCode),
+                                                                            pointInterval.hashCode),
+                                                                        pointIntervalUnit.hashCode),
+                                                                    pointPlacement.hashCode),
+                                                                pointStart.hashCode),
+                                                            selected.hashCode),
+                                                        shadow.hashCode),
+                                                    showCheckbox.hashCode),
+                                                showInLegend.hashCode),
+                                            skipKeyboardNavigation.hashCode),
+                                        states.hashCode),
+                                    step.hashCode),
+                                stickyTracking.hashCode),
+                            tooltip.hashCode),
+                        trackByArea.hashCode),
+                    turboThreshold.hashCode),
+                visible.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -41103,6 +43927,7 @@ class _$PlotOptionsArearange extends PlotOptionsArearange {
           ..add('cropThreshold', cropThreshold)
           ..add('cursor', cursor)
           ..add('dashStyle', dashStyle)
+          ..add('dataLabels', dataLabels)
           ..add('description', description)
           ..add('enableMouseTracking', enableMouseTracking)
           ..add('events', events)
@@ -41122,17 +43947,22 @@ class _$PlotOptionsArearange extends PlotOptionsArearange {
           ..add('pointDescriptionFormatter', pointDescriptionFormatter)
           ..add('pointInterval', pointInterval)
           ..add('pointIntervalUnit', pointIntervalUnit)
+          ..add('pointPlacement', pointPlacement)
           ..add('pointStart', pointStart)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
+          ..add('states', states)
           ..add('step', step)
           ..add('stickyTracking', stickyTracking)
+          ..add('tooltip', tooltip)
           ..add('trackByArea', trackByArea)
           ..add('turboThreshold', turboThreshold)
           ..add('visible', visible)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -41182,6 +44012,10 @@ class PlotOptionsArearangeBuilder
   String _dashStyle;
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
+
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
 
   String _description;
   String get description => _$this._description;
@@ -41270,6 +44104,11 @@ class PlotOptionsArearangeBuilder
   set pointIntervalUnit(String pointIntervalUnit) =>
       _$this._pointIntervalUnit = pointIntervalUnit;
 
+  JsonObject _pointPlacement;
+  JsonObject get pointPlacement => _$this._pointPlacement;
+  set pointPlacement(JsonObject pointPlacement) =>
+      _$this._pointPlacement = pointPlacement;
+
   num _pointStart;
   num get pointStart => _$this._pointStart;
   set pointStart(num pointStart) => _$this._pointStart = pointStart;
@@ -41277,6 +44116,10 @@ class PlotOptionsArearangeBuilder
   bool _selected;
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
+
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
 
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
@@ -41291,6 +44134,10 @@ class PlotOptionsArearangeBuilder
   set skipKeyboardNavigation(bool skipKeyboardNavigation) =>
       _$this._skipKeyboardNavigation = skipKeyboardNavigation;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _step;
   String get step => _$this._step;
   set step(String step) => _$this._step = step;
@@ -41299,6 +44146,10 @@ class PlotOptionsArearangeBuilder
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
       _$this._stickyTracking = stickyTracking;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   bool _trackByArea;
   bool get trackByArea => _$this._trackByArea;
@@ -41317,6 +44168,10 @@ class PlotOptionsArearangeBuilder
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
 
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
+
   PlotOptionsArearangeBuilder();
 
   PlotOptionsArearangeBuilder get _$this {
@@ -41331,6 +44186,7 @@ class PlotOptionsArearangeBuilder
       _cropThreshold = _$v.cropThreshold;
       _cursor = _$v.cursor;
       _dashStyle = _$v.dashStyle;
+      _dataLabels = _$v.dataLabels;
       _description = _$v.description;
       _enableMouseTracking = _$v.enableMouseTracking;
       _events = _$v.events?.toBuilder();
@@ -41350,17 +44206,22 @@ class PlotOptionsArearangeBuilder
       _pointDescriptionFormatter = _$v.pointDescriptionFormatter;
       _pointInterval = _$v.pointInterval;
       _pointIntervalUnit = _$v.pointIntervalUnit;
+      _pointPlacement = _$v.pointPlacement;
       _pointStart = _$v.pointStart;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
+      _states = _$v.states;
       _step = _$v.step;
       _stickyTracking = _$v.stickyTracking;
+      _tooltip = _$v.tooltip;
       _trackByArea = _$v.trackByArea;
       _turboThreshold = _$v.turboThreshold;
       _visible = _$v.visible;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -41391,6 +44252,7 @@ class PlotOptionsArearangeBuilder
             cropThreshold: cropThreshold,
             cursor: cursor,
             dashStyle: dashStyle,
+            dataLabels: dataLabels,
             description: description,
             enableMouseTracking: enableMouseTracking,
             events: _events?.build(),
@@ -41410,17 +44272,22 @@ class PlotOptionsArearangeBuilder
             pointDescriptionFormatter: pointDescriptionFormatter,
             pointInterval: pointInterval,
             pointIntervalUnit: pointIntervalUnit,
+            pointPlacement: pointPlacement,
             pointStart: pointStart,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
+            states: states,
             step: step,
             stickyTracking: stickyTracking,
+            tooltip: tooltip,
             trackByArea: trackByArea,
             turboThreshold: turboThreshold,
             visible: visible,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -41467,6 +44334,8 @@ class _$PlotOptionsArearangeDataLabels extends PlotOptionsArearangeDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -41507,6 +44376,7 @@ class _$PlotOptionsArearangeDataLabels extends PlotOptionsArearangeDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -41548,6 +44418,7 @@ class _$PlotOptionsArearangeDataLabels extends PlotOptionsArearangeDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -41579,17 +44450,17 @@ class _$PlotOptionsArearangeDataLabels extends PlotOptionsArearangeDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode),
-                                                                                color.hashCode),
-                                                                            crop.hashCode),
-                                                                        defer.hashCode),
-                                                                    enabled.hashCode),
-                                                                format.hashCode),
-                                                            formatter.hashCode),
-                                                        inside.hashCode),
-                                                    overflow.hashCode),
-                                                padding.hashCode),
-                                            rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode),
+                                                                                crop.hashCode),
+                                                                            defer.hashCode),
+                                                                        enabled.hashCode),
+                                                                    format.hashCode),
+                                                                formatter.hashCode),
+                                                            inside.hashCode),
+                                                        overflow.hashCode),
+                                                    padding.hashCode),
+                                                rotation.hashCode),
+                                            shadow.hashCode),
                                         shape.hashCode),
                                     style.hashCode),
                                 useHTML.hashCode),
@@ -41621,6 +44492,7 @@ class _$PlotOptionsArearangeDataLabels extends PlotOptionsArearangeDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -41709,6 +44581,10 @@ class PlotOptionsArearangeDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -41768,6 +44644,7 @@ class PlotOptionsArearangeDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -41814,6 +44691,7 @@ class PlotOptionsArearangeDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -42348,7 +45226,11 @@ class PlotOptionsArearangeStatesBuilder
 class _$PlotOptionsArearangeStatesHover
     extends PlotOptionsArearangeStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -42361,7 +45243,12 @@ class _$PlotOptionsArearangeStatesHover
       (new PlotOptionsArearangeStatesHoverBuilder()..update(updates)).build();
 
   _$PlotOptionsArearangeStatesHover._(
-      {this.enabled, this.lineWidth, this.lineWidthPlus, this.marker})
+      {this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker})
       : super._();
 
   @override
@@ -42377,7 +45264,9 @@ class _$PlotOptionsArearangeStatesHover
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsArearangeStatesHover) return false;
-    return enabled == other.enabled &&
+    return animation == other.animation &&
+        enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -42386,7 +45275,11 @@ class _$PlotOptionsArearangeStatesHover
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, enabled.hashCode), lineWidth.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), enabled.hashCode),
+                    halo.hashCode),
+                lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
   }
@@ -42394,7 +45287,9 @@ class _$PlotOptionsArearangeStatesHover
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsArearangeStatesHover')
+          ..add('animation', animation)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -42408,9 +45303,17 @@ class PlotOptionsArearangeStatesHoverBuilder
             PlotOptionsArearangeStatesHoverBuilder> {
   _$PlotOptionsArearangeStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -42430,7 +45333,9 @@ class PlotOptionsArearangeStatesHoverBuilder
 
   PlotOptionsArearangeStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -42454,7 +45359,9 @@ class PlotOptionsArearangeStatesHoverBuilder
   _$PlotOptionsArearangeStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsArearangeStatesHover._(
+            animation: animation,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -42471,6 +45378,8 @@ class PlotOptionsArearangeStatesHoverBuilder
 class _$PlotOptionsArearangeStatesHoverHalo
     extends PlotOptionsArearangeStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -42480,7 +45389,8 @@ class _$PlotOptionsArearangeStatesHoverHalo
       (new PlotOptionsArearangeStatesHoverHaloBuilder()..update(updates))
           .build();
 
-  _$PlotOptionsArearangeStatesHoverHalo._({this.opacity, this.size})
+  _$PlotOptionsArearangeStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
       : super._();
 
   @override
@@ -42496,17 +45406,21 @@ class _$PlotOptionsArearangeStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsArearangeStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsArearangeStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -42518,6 +45432,10 @@ class PlotOptionsArearangeStatesHoverHaloBuilder
         Builder<PlotOptionsArearangeStatesHoverHalo,
             PlotOptionsArearangeStatesHoverHaloBuilder> {
   _$PlotOptionsArearangeStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -42531,6 +45449,7 @@ class PlotOptionsArearangeStatesHoverHaloBuilder
 
   PlotOptionsArearangeStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -42553,7 +45472,7 @@ class PlotOptionsArearangeStatesHoverHaloBuilder
   _$PlotOptionsArearangeStatesHoverHalo build() {
     final result = _$v ??
         new _$PlotOptionsArearangeStatesHoverHalo._(
-            opacity: opacity, size: size);
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -42579,6 +45498,8 @@ class _$PlotOptionsArearangeStatesHoverMarker
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -42595,6 +45516,7 @@ class _$PlotOptionsArearangeStatesHoverMarker
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -42618,6 +45540,7 @@ class _$PlotOptionsArearangeStatesHoverMarker
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -42629,11 +45552,15 @@ class _$PlotOptionsArearangeStatesHoverMarker
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -42647,6 +45574,7 @@ class _$PlotOptionsArearangeStatesHoverMarker
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -42683,6 +45611,10 @@ class PlotOptionsArearangeStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -42701,6 +45633,7 @@ class PlotOptionsArearangeStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -42729,6 +45662,7 @@ class PlotOptionsArearangeStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -42742,6 +45676,8 @@ class PlotOptionsArearangeStatesHoverMarkerBuilder
 // **************************************************************************
 
 class _$PlotOptionsArearangeTooltip extends PlotOptionsArearangeTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -42774,7 +45710,8 @@ class _$PlotOptionsArearangeTooltip extends PlotOptionsArearangeTooltip {
       (new PlotOptionsArearangeTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsArearangeTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -42802,7 +45739,8 @@ class _$PlotOptionsArearangeTooltip extends PlotOptionsArearangeTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsArearangeTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -42831,7 +45769,11 @@ class _$PlotOptionsArearangeTooltip extends PlotOptionsArearangeTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -42850,6 +45792,7 @@ class _$PlotOptionsArearangeTooltip extends PlotOptionsArearangeTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsArearangeTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -42872,6 +45815,11 @@ class PlotOptionsArearangeTooltipBuilder
         Builder<PlotOptionsArearangeTooltip,
             PlotOptionsArearangeTooltipBuilder> {
   _$PlotOptionsArearangeTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -42932,6 +45880,7 @@ class PlotOptionsArearangeTooltipBuilder
 
   PlotOptionsArearangeTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -42965,6 +45914,7 @@ class PlotOptionsArearangeTooltipBuilder
   _$PlotOptionsArearangeTooltip build() {
     final result = _$v ??
         new _$PlotOptionsArearangeTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -43185,9 +46135,13 @@ class _$PlotOptionsAreaspline extends PlotOptionsAreaspline {
   @override
   final String pointIntervalUnit;
   @override
+  final JsonObject pointPlacement;
+  @override
   final num pointStart;
   @override
   final bool selected;
+  @override
+  final JsonObject shadow;
   @override
   final bool showCheckbox;
   @override
@@ -43199,9 +46153,13 @@ class _$PlotOptionsAreaspline extends PlotOptionsAreaspline {
   @override
   final String stacking;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
   @override
   final num threshold;
+  @override
+  final JsonObject tooltip;
   @override
   final bool trackByArea;
   @override
@@ -43210,6 +46168,8 @@ class _$PlotOptionsAreaspline extends PlotOptionsAreaspline {
   final bool visible;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsAreaspline(
           [void updates(PlotOptionsAreasplineBuilder b)]) =>
@@ -43248,19 +46208,24 @@ class _$PlotOptionsAreaspline extends PlotOptionsAreaspline {
       this.pointDescriptionFormatter,
       this.pointInterval,
       this.pointIntervalUnit,
+      this.pointPlacement,
       this.pointStart,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
       this.softThreshold,
       this.stacking,
+      this.states,
       this.stickyTracking,
       this.threshold,
+      this.tooltip,
       this.trackByArea,
       this.turboThreshold,
       this.visible,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -43307,19 +46272,24 @@ class _$PlotOptionsAreaspline extends PlotOptionsAreaspline {
         pointDescriptionFormatter == other.pointDescriptionFormatter &&
         pointInterval == other.pointInterval &&
         pointIntervalUnit == other.pointIntervalUnit &&
+        pointPlacement == other.pointPlacement &&
         pointStart == other.pointStart &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         softThreshold == other.softThreshold &&
         stacking == other.stacking &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
         threshold == other.threshold &&
+        tooltip == other.tooltip &&
         trackByArea == other.trackByArea &&
         turboThreshold == other.turboThreshold &&
         visible == other.visible &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -43342,26 +46312,26 @@ class _$PlotOptionsAreaspline extends PlotOptionsAreaspline {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), connectEnds.hashCode), connectNulls.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), fillColor.hashCode), fillOpacity.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode), lineColor.hashCode), lineWidth.hashCode), linecap.hashCode), linkedTo.hashCode), marker.hashCode),
-                                                                                negativeColor.hashCode),
-                                                                            negativeFillColor.hashCode),
-                                                                        point.hashCode),
-                                                                    pointDescriptionFormatter.hashCode),
-                                                                pointInterval.hashCode),
-                                                            pointIntervalUnit.hashCode),
-                                                        pointStart.hashCode),
-                                                    selected.hashCode),
-                                                showCheckbox.hashCode),
-                                            showInLegend.hashCode),
-                                        skipKeyboardNavigation.hashCode),
-                                    softThreshold.hashCode),
-                                stacking.hashCode),
-                            stickyTracking.hashCode),
-                        threshold.hashCode),
-                    trackByArea.hashCode),
-                turboThreshold.hashCode),
-            visible.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), connectEnds.hashCode), connectNulls.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), fillColor.hashCode), fillOpacity.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode), lineColor.hashCode), lineWidth.hashCode), linecap.hashCode), linkedTo.hashCode), marker.hashCode), negativeColor.hashCode), negativeFillColor.hashCode), point.hashCode), pointDescriptionFormatter.hashCode), pointInterval.hashCode),
+                                                                                pointIntervalUnit.hashCode),
+                                                                            pointPlacement.hashCode),
+                                                                        pointStart.hashCode),
+                                                                    selected.hashCode),
+                                                                shadow.hashCode),
+                                                            showCheckbox.hashCode),
+                                                        showInLegend.hashCode),
+                                                    skipKeyboardNavigation.hashCode),
+                                                softThreshold.hashCode),
+                                            stacking.hashCode),
+                                        states.hashCode),
+                                    stickyTracking.hashCode),
+                                threshold.hashCode),
+                            tooltip.hashCode),
+                        trackByArea.hashCode),
+                    turboThreshold.hashCode),
+                visible.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -43399,19 +46369,24 @@ class _$PlotOptionsAreaspline extends PlotOptionsAreaspline {
           ..add('pointDescriptionFormatter', pointDescriptionFormatter)
           ..add('pointInterval', pointInterval)
           ..add('pointIntervalUnit', pointIntervalUnit)
+          ..add('pointPlacement', pointPlacement)
           ..add('pointStart', pointStart)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('softThreshold', softThreshold)
           ..add('stacking', stacking)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
           ..add('threshold', threshold)
+          ..add('tooltip', tooltip)
           ..add('trackByArea', trackByArea)
           ..add('turboThreshold', turboThreshold)
           ..add('visible', visible)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -43565,6 +46540,11 @@ class PlotOptionsAreasplineBuilder
   set pointIntervalUnit(String pointIntervalUnit) =>
       _$this._pointIntervalUnit = pointIntervalUnit;
 
+  JsonObject _pointPlacement;
+  JsonObject get pointPlacement => _$this._pointPlacement;
+  set pointPlacement(JsonObject pointPlacement) =>
+      _$this._pointPlacement = pointPlacement;
+
   num _pointStart;
   num get pointStart => _$this._pointStart;
   set pointStart(num pointStart) => _$this._pointStart = pointStart;
@@ -43572,6 +46552,10 @@ class PlotOptionsAreasplineBuilder
   bool _selected;
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
+
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
 
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
@@ -43595,6 +46579,10 @@ class PlotOptionsAreasplineBuilder
   String get stacking => _$this._stacking;
   set stacking(String stacking) => _$this._stacking = stacking;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
@@ -43603,6 +46591,10 @@ class PlotOptionsAreasplineBuilder
   num _threshold;
   num get threshold => _$this._threshold;
   set threshold(num threshold) => _$this._threshold = threshold;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   bool _trackByArea;
   bool get trackByArea => _$this._trackByArea;
@@ -43620,6 +46612,10 @@ class PlotOptionsAreasplineBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   PlotOptionsAreasplineBuilder();
 
@@ -43657,19 +46653,24 @@ class PlotOptionsAreasplineBuilder
       _pointDescriptionFormatter = _$v.pointDescriptionFormatter;
       _pointInterval = _$v.pointInterval;
       _pointIntervalUnit = _$v.pointIntervalUnit;
+      _pointPlacement = _$v.pointPlacement;
       _pointStart = _$v.pointStart;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _softThreshold = _$v.softThreshold;
       _stacking = _$v.stacking;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
       _threshold = _$v.threshold;
+      _tooltip = _$v.tooltip;
       _trackByArea = _$v.trackByArea;
       _turboThreshold = _$v.turboThreshold;
       _visible = _$v.visible;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -43722,19 +46723,24 @@ class PlotOptionsAreasplineBuilder
             pointDescriptionFormatter: pointDescriptionFormatter,
             pointInterval: pointInterval,
             pointIntervalUnit: pointIntervalUnit,
+            pointPlacement: pointPlacement,
             pointStart: pointStart,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
             softThreshold: softThreshold,
             stacking: stacking,
+            states: states,
             stickyTracking: stickyTracking,
             threshold: threshold,
+            tooltip: tooltip,
             trackByArea: trackByArea,
             turboThreshold: turboThreshold,
             visible: visible,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -43782,6 +46788,8 @@ class _$PlotOptionsAreasplineDataLabels
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -43818,6 +46826,7 @@ class _$PlotOptionsAreasplineDataLabels
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -43857,6 +46866,7 @@ class _$PlotOptionsAreasplineDataLabels
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -43886,19 +46896,19 @@ class _$PlotOptionsAreasplineDataLabels
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -43928,6 +46938,7 @@ class _$PlotOptionsAreasplineDataLabels
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -44014,6 +47025,10 @@ class PlotOptionsAreasplineDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -44065,6 +47080,7 @@ class PlotOptionsAreasplineDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -44109,6 +47125,7 @@ class PlotOptionsAreasplineDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -45237,7 +48254,11 @@ class PlotOptionsAreasplineStatesBuilder
 class _$PlotOptionsAreasplineStatesHover
     extends PlotOptionsAreasplineStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -45250,7 +48271,12 @@ class _$PlotOptionsAreasplineStatesHover
       (new PlotOptionsAreasplineStatesHoverBuilder()..update(updates)).build();
 
   _$PlotOptionsAreasplineStatesHover._(
-      {this.enabled, this.lineWidth, this.lineWidthPlus, this.marker})
+      {this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker})
       : super._();
 
   @override
@@ -45266,7 +48292,9 @@ class _$PlotOptionsAreasplineStatesHover
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsAreasplineStatesHover) return false;
-    return enabled == other.enabled &&
+    return animation == other.animation &&
+        enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -45275,7 +48303,11 @@ class _$PlotOptionsAreasplineStatesHover
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, enabled.hashCode), lineWidth.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), enabled.hashCode),
+                    halo.hashCode),
+                lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
   }
@@ -45283,7 +48315,9 @@ class _$PlotOptionsAreasplineStatesHover
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsAreasplineStatesHover')
+          ..add('animation', animation)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -45297,9 +48331,17 @@ class PlotOptionsAreasplineStatesHoverBuilder
             PlotOptionsAreasplineStatesHoverBuilder> {
   _$PlotOptionsAreasplineStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -45319,7 +48361,9 @@ class PlotOptionsAreasplineStatesHoverBuilder
 
   PlotOptionsAreasplineStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -45343,7 +48387,9 @@ class PlotOptionsAreasplineStatesHoverBuilder
   _$PlotOptionsAreasplineStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsAreasplineStatesHover._(
+            animation: animation,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -45360,6 +48406,8 @@ class PlotOptionsAreasplineStatesHoverBuilder
 class _$PlotOptionsAreasplineStatesHoverHalo
     extends PlotOptionsAreasplineStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -45369,7 +48417,8 @@ class _$PlotOptionsAreasplineStatesHoverHalo
       (new PlotOptionsAreasplineStatesHoverHaloBuilder()..update(updates))
           .build();
 
-  _$PlotOptionsAreasplineStatesHoverHalo._({this.opacity, this.size})
+  _$PlotOptionsAreasplineStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
       : super._();
 
   @override
@@ -45385,17 +48434,21 @@ class _$PlotOptionsAreasplineStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsAreasplineStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsAreasplineStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -45407,6 +48460,10 @@ class PlotOptionsAreasplineStatesHoverHaloBuilder
         Builder<PlotOptionsAreasplineStatesHoverHalo,
             PlotOptionsAreasplineStatesHoverHaloBuilder> {
   _$PlotOptionsAreasplineStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -45420,6 +48477,7 @@ class PlotOptionsAreasplineStatesHoverHaloBuilder
 
   PlotOptionsAreasplineStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -45442,7 +48500,7 @@ class PlotOptionsAreasplineStatesHoverHaloBuilder
   _$PlotOptionsAreasplineStatesHoverHalo build() {
     final result = _$v ??
         new _$PlotOptionsAreasplineStatesHoverHalo._(
-            opacity: opacity, size: size);
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -45468,6 +48526,8 @@ class _$PlotOptionsAreasplineStatesHoverMarker
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -45484,6 +48544,7 @@ class _$PlotOptionsAreasplineStatesHoverMarker
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -45507,6 +48568,7 @@ class _$PlotOptionsAreasplineStatesHoverMarker
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -45518,11 +48580,15 @@ class _$PlotOptionsAreasplineStatesHoverMarker
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -45537,6 +48603,7 @@ class _$PlotOptionsAreasplineStatesHoverMarker
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -45573,6 +48640,10 @@ class PlotOptionsAreasplineStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -45591,6 +48662,7 @@ class PlotOptionsAreasplineStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -45619,6 +48691,7 @@ class PlotOptionsAreasplineStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -45632,6 +48705,8 @@ class PlotOptionsAreasplineStatesHoverMarkerBuilder
 // **************************************************************************
 
 class _$PlotOptionsAreasplineTooltip extends PlotOptionsAreasplineTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -45664,7 +48739,8 @@ class _$PlotOptionsAreasplineTooltip extends PlotOptionsAreasplineTooltip {
       (new PlotOptionsAreasplineTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsAreasplineTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -45692,7 +48768,8 @@ class _$PlotOptionsAreasplineTooltip extends PlotOptionsAreasplineTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsAreasplineTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -45721,7 +48798,11 @@ class _$PlotOptionsAreasplineTooltip extends PlotOptionsAreasplineTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -45740,6 +48821,7 @@ class _$PlotOptionsAreasplineTooltip extends PlotOptionsAreasplineTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsAreasplineTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -45762,6 +48844,11 @@ class PlotOptionsAreasplineTooltipBuilder
         Builder<PlotOptionsAreasplineTooltip,
             PlotOptionsAreasplineTooltipBuilder> {
   _$PlotOptionsAreasplineTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -45822,6 +48909,7 @@ class PlotOptionsAreasplineTooltipBuilder
 
   PlotOptionsAreasplineTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -45855,6 +48943,7 @@ class PlotOptionsAreasplineTooltipBuilder
   _$PlotOptionsAreasplineTooltip build() {
     final result = _$v ??
         new _$PlotOptionsAreasplineTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -46031,6 +49120,8 @@ class _$PlotOptionsAreasplinerange extends PlotOptionsAreasplinerange {
   @override
   final String dashStyle;
   @override
+  final JsonObject dataLabels;
+  @override
   final String description;
   @override
   final bool enableMouseTracking;
@@ -46069,9 +49160,13 @@ class _$PlotOptionsAreasplinerange extends PlotOptionsAreasplinerange {
   @override
   final String pointIntervalUnit;
   @override
+  final JsonObject pointPlacement;
+  @override
   final num pointStart;
   @override
   final bool selected;
+  @override
+  final JsonObject shadow;
   @override
   final bool showCheckbox;
   @override
@@ -46079,7 +49174,11 @@ class _$PlotOptionsAreasplinerange extends PlotOptionsAreasplinerange {
   @override
   final bool skipKeyboardNavigation;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
+  @override
+  final JsonObject tooltip;
   @override
   final bool trackByArea;
   @override
@@ -46088,6 +49187,8 @@ class _$PlotOptionsAreasplinerange extends PlotOptionsAreasplinerange {
   final bool visible;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsAreasplinerange(
           [void updates(PlotOptionsAreasplinerangeBuilder b)]) =>
@@ -46104,6 +49205,7 @@ class _$PlotOptionsAreasplinerange extends PlotOptionsAreasplinerange {
       this.cropThreshold,
       this.cursor,
       this.dashStyle,
+      this.dataLabels,
       this.description,
       this.enableMouseTracking,
       this.events,
@@ -46123,16 +49225,21 @@ class _$PlotOptionsAreasplinerange extends PlotOptionsAreasplinerange {
       this.pointDescriptionFormatter,
       this.pointInterval,
       this.pointIntervalUnit,
+      this.pointPlacement,
       this.pointStart,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
+      this.states,
       this.stickyTracking,
+      this.tooltip,
       this.trackByArea,
       this.turboThreshold,
       this.visible,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -46158,6 +49265,7 @@ class _$PlotOptionsAreasplinerange extends PlotOptionsAreasplinerange {
         cropThreshold == other.cropThreshold &&
         cursor == other.cursor &&
         dashStyle == other.dashStyle &&
+        dataLabels == other.dataLabels &&
         description == other.description &&
         enableMouseTracking == other.enableMouseTracking &&
         events == other.events &&
@@ -46177,16 +49285,21 @@ class _$PlotOptionsAreasplinerange extends PlotOptionsAreasplinerange {
         pointDescriptionFormatter == other.pointDescriptionFormatter &&
         pointInterval == other.pointInterval &&
         pointIntervalUnit == other.pointIntervalUnit &&
+        pointPlacement == other.pointPlacement &&
         pointStart == other.pointStart &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
+        tooltip == other.tooltip &&
         trackByArea == other.trackByArea &&
         turboThreshold == other.turboThreshold &&
         visible == other.visible &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -46209,26 +49322,26 @@ class _$PlotOptionsAreasplinerange extends PlotOptionsAreasplinerange {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), connectNulls.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), fillColor.hashCode), fillOpacity.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode), lineColor.hashCode),
-                                                                                lineWidth.hashCode),
-                                                                            linecap.hashCode),
-                                                                        linkedTo.hashCode),
-                                                                    negativeColor.hashCode),
-                                                                negativeFillColor.hashCode),
-                                                            point.hashCode),
-                                                        pointDescriptionFormatter.hashCode),
-                                                    pointInterval.hashCode),
-                                                pointIntervalUnit.hashCode),
-                                            pointStart.hashCode),
-                                        selected.hashCode),
-                                    showCheckbox.hashCode),
-                                showInLegend.hashCode),
-                            skipKeyboardNavigation.hashCode),
-                        stickyTracking.hashCode),
-                    trackByArea.hashCode),
-                turboThreshold.hashCode),
-            visible.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), connectNulls.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), fillColor.hashCode), fillOpacity.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode), lineColor.hashCode), lineWidth.hashCode), linecap.hashCode), linkedTo.hashCode), negativeColor.hashCode), negativeFillColor.hashCode),
+                                                                                point.hashCode),
+                                                                            pointDescriptionFormatter.hashCode),
+                                                                        pointInterval.hashCode),
+                                                                    pointIntervalUnit.hashCode),
+                                                                pointPlacement.hashCode),
+                                                            pointStart.hashCode),
+                                                        selected.hashCode),
+                                                    shadow.hashCode),
+                                                showCheckbox.hashCode),
+                                            showInLegend.hashCode),
+                                        skipKeyboardNavigation.hashCode),
+                                    states.hashCode),
+                                stickyTracking.hashCode),
+                            tooltip.hashCode),
+                        trackByArea.hashCode),
+                    turboThreshold.hashCode),
+                visible.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -46244,6 +49357,7 @@ class _$PlotOptionsAreasplinerange extends PlotOptionsAreasplinerange {
           ..add('cropThreshold', cropThreshold)
           ..add('cursor', cursor)
           ..add('dashStyle', dashStyle)
+          ..add('dataLabels', dataLabels)
           ..add('description', description)
           ..add('enableMouseTracking', enableMouseTracking)
           ..add('events', events)
@@ -46263,16 +49377,21 @@ class _$PlotOptionsAreasplinerange extends PlotOptionsAreasplinerange {
           ..add('pointDescriptionFormatter', pointDescriptionFormatter)
           ..add('pointInterval', pointInterval)
           ..add('pointIntervalUnit', pointIntervalUnit)
+          ..add('pointPlacement', pointPlacement)
           ..add('pointStart', pointStart)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
+          ..add('tooltip', tooltip)
           ..add('trackByArea', trackByArea)
           ..add('turboThreshold', turboThreshold)
           ..add('visible', visible)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -46323,6 +49442,10 @@ class PlotOptionsAreasplinerangeBuilder
   String _dashStyle;
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
+
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
 
   String _description;
   String get description => _$this._description;
@@ -46412,6 +49535,11 @@ class PlotOptionsAreasplinerangeBuilder
   set pointIntervalUnit(String pointIntervalUnit) =>
       _$this._pointIntervalUnit = pointIntervalUnit;
 
+  JsonObject _pointPlacement;
+  JsonObject get pointPlacement => _$this._pointPlacement;
+  set pointPlacement(JsonObject pointPlacement) =>
+      _$this._pointPlacement = pointPlacement;
+
   num _pointStart;
   num get pointStart => _$this._pointStart;
   set pointStart(num pointStart) => _$this._pointStart = pointStart;
@@ -46419,6 +49547,10 @@ class PlotOptionsAreasplinerangeBuilder
   bool _selected;
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
+
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
 
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
@@ -46433,10 +49565,18 @@ class PlotOptionsAreasplinerangeBuilder
   set skipKeyboardNavigation(bool skipKeyboardNavigation) =>
       _$this._skipKeyboardNavigation = skipKeyboardNavigation;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
       _$this._stickyTracking = stickyTracking;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   bool _trackByArea;
   bool get trackByArea => _$this._trackByArea;
@@ -46455,6 +49595,10 @@ class PlotOptionsAreasplinerangeBuilder
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
 
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
+
   PlotOptionsAreasplinerangeBuilder();
 
   PlotOptionsAreasplinerangeBuilder get _$this {
@@ -46469,6 +49613,7 @@ class PlotOptionsAreasplinerangeBuilder
       _cropThreshold = _$v.cropThreshold;
       _cursor = _$v.cursor;
       _dashStyle = _$v.dashStyle;
+      _dataLabels = _$v.dataLabels;
       _description = _$v.description;
       _enableMouseTracking = _$v.enableMouseTracking;
       _events = _$v.events?.toBuilder();
@@ -46488,16 +49633,21 @@ class PlotOptionsAreasplinerangeBuilder
       _pointDescriptionFormatter = _$v.pointDescriptionFormatter;
       _pointInterval = _$v.pointInterval;
       _pointIntervalUnit = _$v.pointIntervalUnit;
+      _pointPlacement = _$v.pointPlacement;
       _pointStart = _$v.pointStart;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
+      _tooltip = _$v.tooltip;
       _trackByArea = _$v.trackByArea;
       _turboThreshold = _$v.turboThreshold;
       _visible = _$v.visible;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -46528,6 +49678,7 @@ class PlotOptionsAreasplinerangeBuilder
             cropThreshold: cropThreshold,
             cursor: cursor,
             dashStyle: dashStyle,
+            dataLabels: dataLabels,
             description: description,
             enableMouseTracking: enableMouseTracking,
             events: _events?.build(),
@@ -46547,16 +49698,21 @@ class PlotOptionsAreasplinerangeBuilder
             pointDescriptionFormatter: pointDescriptionFormatter,
             pointInterval: pointInterval,
             pointIntervalUnit: pointIntervalUnit,
+            pointPlacement: pointPlacement,
             pointStart: pointStart,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
+            states: states,
             stickyTracking: stickyTracking,
+            tooltip: tooltip,
             trackByArea: trackByArea,
             turboThreshold: turboThreshold,
             visible: visible,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -46604,6 +49760,8 @@ class _$PlotOptionsAreasplinerangeDataLabels
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -46645,6 +49803,7 @@ class _$PlotOptionsAreasplinerangeDataLabels
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -46686,6 +49845,7 @@ class _$PlotOptionsAreasplinerangeDataLabels
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -46717,17 +49877,17 @@ class _$PlotOptionsAreasplinerangeDataLabels
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode),
-                                                                                color.hashCode),
-                                                                            crop.hashCode),
-                                                                        defer.hashCode),
-                                                                    enabled.hashCode),
-                                                                format.hashCode),
-                                                            formatter.hashCode),
-                                                        inside.hashCode),
-                                                    overflow.hashCode),
-                                                padding.hashCode),
-                                            rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode),
+                                                                                crop.hashCode),
+                                                                            defer.hashCode),
+                                                                        enabled.hashCode),
+                                                                    format.hashCode),
+                                                                formatter.hashCode),
+                                                            inside.hashCode),
+                                                        overflow.hashCode),
+                                                    padding.hashCode),
+                                                rotation.hashCode),
+                                            shadow.hashCode),
                                         shape.hashCode),
                                     style.hashCode),
                                 useHTML.hashCode),
@@ -46759,6 +49919,7 @@ class _$PlotOptionsAreasplinerangeDataLabels
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -46847,6 +50008,10 @@ class PlotOptionsAreasplinerangeDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -46906,6 +50071,7 @@ class PlotOptionsAreasplinerangeDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -46952,6 +50118,7 @@ class PlotOptionsAreasplinerangeDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -47493,7 +50660,11 @@ class PlotOptionsAreasplinerangeStatesBuilder
 class _$PlotOptionsAreasplinerangeStatesHover
     extends PlotOptionsAreasplinerangeStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -47507,7 +50678,12 @@ class _$PlotOptionsAreasplinerangeStatesHover
           .build();
 
   _$PlotOptionsAreasplinerangeStatesHover._(
-      {this.enabled, this.lineWidth, this.lineWidthPlus, this.marker})
+      {this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker})
       : super._();
 
   @override
@@ -47523,7 +50699,9 @@ class _$PlotOptionsAreasplinerangeStatesHover
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsAreasplinerangeStatesHover) return false;
-    return enabled == other.enabled &&
+    return animation == other.animation &&
+        enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -47532,7 +50710,11 @@ class _$PlotOptionsAreasplinerangeStatesHover
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, enabled.hashCode), lineWidth.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), enabled.hashCode),
+                    halo.hashCode),
+                lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
   }
@@ -47540,7 +50722,9 @@ class _$PlotOptionsAreasplinerangeStatesHover
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsAreasplinerangeStatesHover')
+          ..add('animation', animation)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -47554,9 +50738,17 @@ class PlotOptionsAreasplinerangeStatesHoverBuilder
             PlotOptionsAreasplinerangeStatesHoverBuilder> {
   _$PlotOptionsAreasplinerangeStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -47577,7 +50769,9 @@ class PlotOptionsAreasplinerangeStatesHoverBuilder
 
   PlotOptionsAreasplinerangeStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -47601,7 +50795,9 @@ class PlotOptionsAreasplinerangeStatesHoverBuilder
   _$PlotOptionsAreasplinerangeStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsAreasplinerangeStatesHover._(
+            animation: animation,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -47618,6 +50814,8 @@ class PlotOptionsAreasplinerangeStatesHoverBuilder
 class _$PlotOptionsAreasplinerangeStatesHoverHalo
     extends PlotOptionsAreasplinerangeStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -47627,7 +50825,8 @@ class _$PlotOptionsAreasplinerangeStatesHoverHalo
       (new PlotOptionsAreasplinerangeStatesHoverHaloBuilder()..update(updates))
           .build();
 
-  _$PlotOptionsAreasplinerangeStatesHoverHalo._({this.opacity, this.size})
+  _$PlotOptionsAreasplinerangeStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
       : super._();
 
   @override
@@ -47643,18 +50842,22 @@ class _$PlotOptionsAreasplinerangeStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsAreasplinerangeStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
             'PlotOptionsAreasplinerangeStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -47666,6 +50869,10 @@ class PlotOptionsAreasplinerangeStatesHoverHaloBuilder
         Builder<PlotOptionsAreasplinerangeStatesHoverHalo,
             PlotOptionsAreasplinerangeStatesHoverHaloBuilder> {
   _$PlotOptionsAreasplinerangeStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -47679,6 +50886,7 @@ class PlotOptionsAreasplinerangeStatesHoverHaloBuilder
 
   PlotOptionsAreasplinerangeStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -47702,7 +50910,7 @@ class PlotOptionsAreasplinerangeStatesHoverHaloBuilder
   _$PlotOptionsAreasplinerangeStatesHoverHalo build() {
     final result = _$v ??
         new _$PlotOptionsAreasplinerangeStatesHoverHalo._(
-            opacity: opacity, size: size);
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -47728,6 +50936,8 @@ class _$PlotOptionsAreasplinerangeStatesHoverMarker
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -47746,6 +50956,7 @@ class _$PlotOptionsAreasplinerangeStatesHoverMarker
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -47769,6 +50980,7 @@ class _$PlotOptionsAreasplinerangeStatesHoverMarker
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -47780,11 +50992,15 @@ class _$PlotOptionsAreasplinerangeStatesHoverMarker
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -47799,6 +51015,7 @@ class _$PlotOptionsAreasplinerangeStatesHoverMarker
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -47835,6 +51052,10 @@ class PlotOptionsAreasplinerangeStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -47853,6 +51074,7 @@ class PlotOptionsAreasplinerangeStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -47882,6 +51104,7 @@ class PlotOptionsAreasplinerangeStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -47896,6 +51119,8 @@ class PlotOptionsAreasplinerangeStatesHoverMarkerBuilder
 
 class _$PlotOptionsAreasplinerangeTooltip
     extends PlotOptionsAreasplinerangeTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -47928,7 +51153,8 @@ class _$PlotOptionsAreasplinerangeTooltip
       (new PlotOptionsAreasplinerangeTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsAreasplinerangeTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -47956,7 +51182,8 @@ class _$PlotOptionsAreasplinerangeTooltip
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsAreasplinerangeTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -47985,7 +51212,11 @@ class _$PlotOptionsAreasplinerangeTooltip
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -48004,6 +51235,7 @@ class _$PlotOptionsAreasplinerangeTooltip
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsAreasplinerangeTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -48026,6 +51258,11 @@ class PlotOptionsAreasplinerangeTooltipBuilder
         Builder<PlotOptionsAreasplinerangeTooltip,
             PlotOptionsAreasplinerangeTooltipBuilder> {
   _$PlotOptionsAreasplinerangeTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -48086,6 +51323,7 @@ class PlotOptionsAreasplinerangeTooltipBuilder
 
   PlotOptionsAreasplinerangeTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -48119,6 +51357,7 @@ class PlotOptionsAreasplinerangeTooltipBuilder
   _$PlotOptionsAreasplinerangeTooltip build() {
     final result = _$v ??
         new _$PlotOptionsAreasplinerangeTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -48351,6 +51590,8 @@ class _$PlotOptionsBar extends PlotOptionsBar {
   @override
   final num pointPadding;
   @override
+  final JsonObject pointPlacement;
+  @override
   final num pointRange;
   @override
   final num pointStart;
@@ -48358,6 +51599,8 @@ class _$PlotOptionsBar extends PlotOptionsBar {
   final num pointWidth;
   @override
   final bool selected;
+  @override
+  final JsonObject shadow;
   @override
   final bool showCheckbox;
   @override
@@ -48369,15 +51612,21 @@ class _$PlotOptionsBar extends PlotOptionsBar {
   @override
   final String stacking;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
   @override
   final num threshold;
+  @override
+  final JsonObject tooltip;
   @override
   final num turboThreshold;
   @override
   final bool visible;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsBar([void updates(PlotOptionsBarBuilder b)]) =>
       (new PlotOptionsBarBuilder()..update(updates)).build();
@@ -48420,20 +51669,25 @@ class _$PlotOptionsBar extends PlotOptionsBar {
       this.pointInterval,
       this.pointIntervalUnit,
       this.pointPadding,
+      this.pointPlacement,
       this.pointRange,
       this.pointStart,
       this.pointWidth,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
       this.softThreshold,
       this.stacking,
+      this.states,
       this.stickyTracking,
       this.threshold,
+      this.tooltip,
       this.turboThreshold,
       this.visible,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -48485,20 +51739,25 @@ class _$PlotOptionsBar extends PlotOptionsBar {
         pointInterval == other.pointInterval &&
         pointIntervalUnit == other.pointIntervalUnit &&
         pointPadding == other.pointPadding &&
+        pointPlacement == other.pointPlacement &&
         pointRange == other.pointRange &&
         pointStart == other.pointStart &&
         pointWidth == other.pointWidth &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         softThreshold == other.softThreshold &&
         stacking == other.stacking &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
         threshold == other.threshold &&
+        tooltip == other.tooltip &&
         turboThreshold == other.turboThreshold &&
         visible == other.visible &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -48521,26 +51780,26 @@ class _$PlotOptionsBar extends PlotOptionsBar {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), crisp.hashCode), cropThreshold.hashCode), cursor.hashCode), dataLabels.hashCode), depth.hashCode), description.hashCode), edgeColor.hashCode), edgeWidth.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), groupPadding.hashCode), groupZPadding.hashCode), grouping.hashCode), keys.hashCode), linkedTo.hashCode), maxPointWidth.hashCode), minPointLength.hashCode), negativeColor.hashCode),
-                                                                                point.hashCode),
-                                                                            pointDescriptionFormatter.hashCode),
-                                                                        pointInterval.hashCode),
-                                                                    pointIntervalUnit.hashCode),
-                                                                pointPadding.hashCode),
-                                                            pointRange.hashCode),
-                                                        pointStart.hashCode),
-                                                    pointWidth.hashCode),
-                                                selected.hashCode),
-                                            showCheckbox.hashCode),
-                                        showInLegend.hashCode),
-                                    skipKeyboardNavigation.hashCode),
-                                softThreshold.hashCode),
-                            stacking.hashCode),
-                        stickyTracking.hashCode),
-                    threshold.hashCode),
-                turboThreshold.hashCode),
-            visible.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), crisp.hashCode), cropThreshold.hashCode), cursor.hashCode), dataLabels.hashCode), depth.hashCode), description.hashCode), edgeColor.hashCode), edgeWidth.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), groupPadding.hashCode), groupZPadding.hashCode), grouping.hashCode), keys.hashCode), linkedTo.hashCode), maxPointWidth.hashCode), minPointLength.hashCode), negativeColor.hashCode), point.hashCode), pointDescriptionFormatter.hashCode), pointInterval.hashCode), pointIntervalUnit.hashCode), pointPadding.hashCode),
+                                                                                pointPlacement.hashCode),
+                                                                            pointRange.hashCode),
+                                                                        pointStart.hashCode),
+                                                                    pointWidth.hashCode),
+                                                                selected.hashCode),
+                                                            shadow.hashCode),
+                                                        showCheckbox.hashCode),
+                                                    showInLegend.hashCode),
+                                                skipKeyboardNavigation.hashCode),
+                                            softThreshold.hashCode),
+                                        stacking.hashCode),
+                                    states.hashCode),
+                                stickyTracking.hashCode),
+                            threshold.hashCode),
+                        tooltip.hashCode),
+                    turboThreshold.hashCode),
+                visible.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -48583,20 +51842,25 @@ class _$PlotOptionsBar extends PlotOptionsBar {
           ..add('pointInterval', pointInterval)
           ..add('pointIntervalUnit', pointIntervalUnit)
           ..add('pointPadding', pointPadding)
+          ..add('pointPlacement', pointPlacement)
           ..add('pointRange', pointRange)
           ..add('pointStart', pointStart)
           ..add('pointWidth', pointWidth)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('softThreshold', softThreshold)
           ..add('stacking', stacking)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
           ..add('threshold', threshold)
+          ..add('tooltip', tooltip)
           ..add('turboThreshold', turboThreshold)
           ..add('visible', visible)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -48768,6 +52032,11 @@ class PlotOptionsBarBuilder
   num get pointPadding => _$this._pointPadding;
   set pointPadding(num pointPadding) => _$this._pointPadding = pointPadding;
 
+  JsonObject _pointPlacement;
+  JsonObject get pointPlacement => _$this._pointPlacement;
+  set pointPlacement(JsonObject pointPlacement) =>
+      _$this._pointPlacement = pointPlacement;
+
   num _pointRange;
   num get pointRange => _$this._pointRange;
   set pointRange(num pointRange) => _$this._pointRange = pointRange;
@@ -48783,6 +52052,10 @@ class PlotOptionsBarBuilder
   bool _selected;
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
+
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
 
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
@@ -48806,6 +52079,10 @@ class PlotOptionsBarBuilder
   String get stacking => _$this._stacking;
   set stacking(String stacking) => _$this._stacking = stacking;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
@@ -48814,6 +52091,10 @@ class PlotOptionsBarBuilder
   num _threshold;
   num get threshold => _$this._threshold;
   set threshold(num threshold) => _$this._threshold = threshold;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   num _turboThreshold;
   num get turboThreshold => _$this._turboThreshold;
@@ -48827,6 +52108,10 @@ class PlotOptionsBarBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   PlotOptionsBarBuilder();
 
@@ -48869,20 +52154,25 @@ class PlotOptionsBarBuilder
       _pointInterval = _$v.pointInterval;
       _pointIntervalUnit = _$v.pointIntervalUnit;
       _pointPadding = _$v.pointPadding;
+      _pointPlacement = _$v.pointPlacement;
       _pointRange = _$v.pointRange;
       _pointStart = _$v.pointStart;
       _pointWidth = _$v.pointWidth;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _softThreshold = _$v.softThreshold;
       _stacking = _$v.stacking;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
       _threshold = _$v.threshold;
+      _tooltip = _$v.tooltip;
       _turboThreshold = _$v.turboThreshold;
       _visible = _$v.visible;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -48940,20 +52230,25 @@ class PlotOptionsBarBuilder
             pointInterval: pointInterval,
             pointIntervalUnit: pointIntervalUnit,
             pointPadding: pointPadding,
+            pointPlacement: pointPlacement,
             pointRange: pointRange,
             pointStart: pointStart,
             pointWidth: pointWidth,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
             softThreshold: softThreshold,
             stacking: stacking,
+            states: states,
             stickyTracking: stickyTracking,
             threshold: threshold,
+            tooltip: tooltip,
             turboThreshold: turboThreshold,
             visible: visible,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -49000,6 +52295,8 @@ class _$PlotOptionsBarDataLabels extends PlotOptionsBarDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -49036,6 +52333,7 @@ class _$PlotOptionsBarDataLabels extends PlotOptionsBarDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -49075,6 +52373,7 @@ class _$PlotOptionsBarDataLabels extends PlotOptionsBarDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -49104,19 +52403,19 @@ class _$PlotOptionsBarDataLabels extends PlotOptionsBarDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -49146,6 +52445,7 @@ class _$PlotOptionsBarDataLabels extends PlotOptionsBarDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -49231,6 +52531,10 @@ class PlotOptionsBarDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -49282,6 +52586,7 @@ class PlotOptionsBarDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -49326,6 +52631,7 @@ class PlotOptionsBarDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -49845,6 +53151,8 @@ class PlotOptionsBarStatesBuilder
 
 class _$PlotOptionsBarStatesHover extends PlotOptionsBarStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final String borderColor;
   @override
   final num brightness;
@@ -49852,13 +53160,20 @@ class _$PlotOptionsBarStatesHover extends PlotOptionsBarStatesHover {
   final String color;
   @override
   final bool enabled;
+  @override
+  final JsonObject halo;
 
   factory _$PlotOptionsBarStatesHover(
           [void updates(PlotOptionsBarStatesHoverBuilder b)]) =>
       (new PlotOptionsBarStatesHoverBuilder()..update(updates)).build();
 
   _$PlotOptionsBarStatesHover._(
-      {this.borderColor, this.brightness, this.color, this.enabled})
+      {this.animation,
+      this.borderColor,
+      this.brightness,
+      this.color,
+      this.enabled,
+      this.halo})
       : super._();
 
   @override
@@ -49874,27 +53189,35 @@ class _$PlotOptionsBarStatesHover extends PlotOptionsBarStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsBarStatesHover) return false;
-    return borderColor == other.borderColor &&
+    return animation == other.animation &&
+        borderColor == other.borderColor &&
         brightness == other.brightness &&
         color == other.color &&
-        enabled == other.enabled;
+        enabled == other.enabled &&
+        halo == other.halo;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, borderColor.hashCode), brightness.hashCode),
-            color.hashCode),
-        enabled.hashCode));
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), borderColor.hashCode),
+                    brightness.hashCode),
+                color.hashCode),
+            enabled.hashCode),
+        halo.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsBarStatesHover')
+          ..add('animation', animation)
           ..add('borderColor', borderColor)
           ..add('brightness', brightness)
           ..add('color', color)
-          ..add('enabled', enabled))
+          ..add('enabled', enabled)
+          ..add('halo', halo))
         .toString();
   }
 }
@@ -49903,6 +53226,10 @@ class PlotOptionsBarStatesHoverBuilder
     implements
         Builder<PlotOptionsBarStatesHover, PlotOptionsBarStatesHoverBuilder> {
   _$PlotOptionsBarStatesHover _$v;
+
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
 
   String _borderColor;
   String get borderColor => _$this._borderColor;
@@ -49920,14 +53247,20 @@ class PlotOptionsBarStatesHoverBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
+
   PlotOptionsBarStatesHoverBuilder();
 
   PlotOptionsBarStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _borderColor = _$v.borderColor;
       _brightness = _$v.brightness;
       _color = _$v.color;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _$v = null;
     }
     return this;
@@ -49948,10 +53281,12 @@ class PlotOptionsBarStatesHoverBuilder
   _$PlotOptionsBarStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsBarStatesHover._(
+            animation: animation,
             borderColor: borderColor,
             brightness: brightness,
             color: color,
-            enabled: enabled);
+            enabled: enabled,
+            halo: halo);
     replace(result);
     return result;
   }
@@ -49964,6 +53299,8 @@ class PlotOptionsBarStatesHoverBuilder
 
 class _$PlotOptionsBarStatesHoverHalo extends PlotOptionsBarStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -49972,7 +53309,8 @@ class _$PlotOptionsBarStatesHoverHalo extends PlotOptionsBarStatesHoverHalo {
           [void updates(PlotOptionsBarStatesHoverHaloBuilder b)]) =>
       (new PlotOptionsBarStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$PlotOptionsBarStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$PlotOptionsBarStatesHoverHalo._({this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   PlotOptionsBarStatesHoverHalo rebuild(
@@ -49987,17 +53325,21 @@ class _$PlotOptionsBarStatesHoverHalo extends PlotOptionsBarStatesHoverHalo {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsBarStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsBarStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -50009,6 +53351,10 @@ class PlotOptionsBarStatesHoverHaloBuilder
         Builder<PlotOptionsBarStatesHoverHalo,
             PlotOptionsBarStatesHoverHaloBuilder> {
   _$PlotOptionsBarStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -50022,6 +53368,7 @@ class PlotOptionsBarStatesHoverHaloBuilder
 
   PlotOptionsBarStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -50043,7 +53390,8 @@ class PlotOptionsBarStatesHoverHaloBuilder
   @override
   _$PlotOptionsBarStatesHoverHalo build() {
     final result = _$v ??
-        new _$PlotOptionsBarStatesHoverHalo._(opacity: opacity, size: size);
+        new _$PlotOptionsBarStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -50055,6 +53403,8 @@ class PlotOptionsBarStatesHoverHaloBuilder
 // **************************************************************************
 
 class _$PlotOptionsBarTooltip extends PlotOptionsBarTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -50087,7 +53437,8 @@ class _$PlotOptionsBarTooltip extends PlotOptionsBarTooltip {
       (new PlotOptionsBarTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsBarTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -50114,7 +53465,8 @@ class _$PlotOptionsBarTooltip extends PlotOptionsBarTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsBarTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -50143,7 +53495,11 @@ class _$PlotOptionsBarTooltip extends PlotOptionsBarTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -50162,6 +53518,7 @@ class _$PlotOptionsBarTooltip extends PlotOptionsBarTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsBarTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -50182,6 +53539,11 @@ class _$PlotOptionsBarTooltip extends PlotOptionsBarTooltip {
 class PlotOptionsBarTooltipBuilder
     implements Builder<PlotOptionsBarTooltip, PlotOptionsBarTooltipBuilder> {
   _$PlotOptionsBarTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -50242,6 +53604,7 @@ class PlotOptionsBarTooltipBuilder
 
   PlotOptionsBarTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -50275,6 +53638,7 @@ class PlotOptionsBarTooltipBuilder
   _$PlotOptionsBarTooltip build() {
     final result = _$v ??
         new _$PlotOptionsBarTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -50496,6 +53860,8 @@ class _$PlotOptionsBoxplot extends PlotOptionsBoxplot {
   @override
   final num pointPadding;
   @override
+  final JsonObject pointPlacement;
+  @override
   final num pointRange;
   @override
   final num pointStart;
@@ -50510,6 +53876,8 @@ class _$PlotOptionsBoxplot extends PlotOptionsBoxplot {
   @override
   final bool skipKeyboardNavigation;
   @override
+  final JsonObject states;
+  @override
   final String stemColor;
   @override
   final String stemDashStyle;
@@ -50518,15 +53886,21 @@ class _$PlotOptionsBoxplot extends PlotOptionsBoxplot {
   @override
   final bool stickyTracking;
   @override
+  final JsonObject tooltip;
+  @override
   final num turboThreshold;
   @override
   final bool visible;
   @override
   final String whiskerColor;
   @override
+  final JsonObject whiskerLength;
+  @override
   final num whiskerWidth;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsBoxplot([void updates(PlotOptionsBoxplotBuilder b)]) =>
       (new PlotOptionsBoxplotBuilder()..update(updates)).build();
@@ -50566,6 +53940,7 @@ class _$PlotOptionsBoxplot extends PlotOptionsBoxplot {
       this.pointInterval,
       this.pointIntervalUnit,
       this.pointPadding,
+      this.pointPlacement,
       this.pointRange,
       this.pointStart,
       this.pointWidth,
@@ -50573,15 +53948,19 @@ class _$PlotOptionsBoxplot extends PlotOptionsBoxplot {
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
+      this.states,
       this.stemColor,
       this.stemDashStyle,
       this.stemWidth,
       this.stickyTracking,
+      this.tooltip,
       this.turboThreshold,
       this.visible,
       this.whiskerColor,
+      this.whiskerLength,
       this.whiskerWidth,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -50630,6 +54009,7 @@ class _$PlotOptionsBoxplot extends PlotOptionsBoxplot {
         pointInterval == other.pointInterval &&
         pointIntervalUnit == other.pointIntervalUnit &&
         pointPadding == other.pointPadding &&
+        pointPlacement == other.pointPlacement &&
         pointRange == other.pointRange &&
         pointStart == other.pointStart &&
         pointWidth == other.pointWidth &&
@@ -50637,15 +54017,19 @@ class _$PlotOptionsBoxplot extends PlotOptionsBoxplot {
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
+        states == other.states &&
         stemColor == other.stemColor &&
         stemDashStyle == other.stemDashStyle &&
         stemWidth == other.stemWidth &&
         stickyTracking == other.stickyTracking &&
+        tooltip == other.tooltip &&
         turboThreshold == other.turboThreshold &&
         visible == other.visible &&
         whiskerColor == other.whiskerColor &&
+        whiskerLength == other.whiskerLength &&
         whiskerWidth == other.whiskerWidth &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -50668,26 +54052,26 @@ class _$PlotOptionsBoxplot extends PlotOptionsBoxplot {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), crisp.hashCode), cursor.hashCode), depth.hashCode), description.hashCode), edgeColor.hashCode), edgeWidth.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), fillColor.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), groupPadding.hashCode), groupZPadding.hashCode), grouping.hashCode), keys.hashCode), lineWidth.hashCode), linkedTo.hashCode), maxPointWidth.hashCode), medianColor.hashCode), medianWidth.hashCode), negativeColor.hashCode), point.hashCode), pointDescriptionFormatter.hashCode),
-                                                                                pointInterval.hashCode),
-                                                                            pointIntervalUnit.hashCode),
-                                                                        pointPadding.hashCode),
-                                                                    pointRange.hashCode),
-                                                                pointStart.hashCode),
-                                                            pointWidth.hashCode),
-                                                        selected.hashCode),
-                                                    showCheckbox.hashCode),
-                                                showInLegend.hashCode),
-                                            skipKeyboardNavigation.hashCode),
-                                        stemColor.hashCode),
-                                    stemDashStyle.hashCode),
-                                stemWidth.hashCode),
-                            stickyTracking.hashCode),
-                        turboThreshold.hashCode),
-                    visible.hashCode),
-                whiskerColor.hashCode),
-            whiskerWidth.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), crisp.hashCode), cursor.hashCode), depth.hashCode), description.hashCode), edgeColor.hashCode), edgeWidth.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), fillColor.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), groupPadding.hashCode), groupZPadding.hashCode), grouping.hashCode), keys.hashCode), lineWidth.hashCode), linkedTo.hashCode), maxPointWidth.hashCode), medianColor.hashCode), medianWidth.hashCode), negativeColor.hashCode), point.hashCode), pointDescriptionFormatter.hashCode), pointInterval.hashCode), pointIntervalUnit.hashCode), pointPadding.hashCode), pointPlacement.hashCode), pointRange.hashCode),
+                                                                                pointStart.hashCode),
+                                                                            pointWidth.hashCode),
+                                                                        selected.hashCode),
+                                                                    showCheckbox.hashCode),
+                                                                showInLegend.hashCode),
+                                                            skipKeyboardNavigation.hashCode),
+                                                        states.hashCode),
+                                                    stemColor.hashCode),
+                                                stemDashStyle.hashCode),
+                                            stemWidth.hashCode),
+                                        stickyTracking.hashCode),
+                                    tooltip.hashCode),
+                                turboThreshold.hashCode),
+                            visible.hashCode),
+                        whiskerColor.hashCode),
+                    whiskerLength.hashCode),
+                whiskerWidth.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -50727,6 +54111,7 @@ class _$PlotOptionsBoxplot extends PlotOptionsBoxplot {
           ..add('pointInterval', pointInterval)
           ..add('pointIntervalUnit', pointIntervalUnit)
           ..add('pointPadding', pointPadding)
+          ..add('pointPlacement', pointPlacement)
           ..add('pointRange', pointRange)
           ..add('pointStart', pointStart)
           ..add('pointWidth', pointWidth)
@@ -50734,15 +54119,19 @@ class _$PlotOptionsBoxplot extends PlotOptionsBoxplot {
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
+          ..add('states', states)
           ..add('stemColor', stemColor)
           ..add('stemDashStyle', stemDashStyle)
           ..add('stemWidth', stemWidth)
           ..add('stickyTracking', stickyTracking)
+          ..add('tooltip', tooltip)
           ..add('turboThreshold', turboThreshold)
           ..add('visible', visible)
           ..add('whiskerColor', whiskerColor)
+          ..add('whiskerLength', whiskerLength)
           ..add('whiskerWidth', whiskerWidth)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -50899,6 +54288,11 @@ class PlotOptionsBoxplotBuilder
   num get pointPadding => _$this._pointPadding;
   set pointPadding(num pointPadding) => _$this._pointPadding = pointPadding;
 
+  JsonObject _pointPlacement;
+  JsonObject get pointPlacement => _$this._pointPlacement;
+  set pointPlacement(JsonObject pointPlacement) =>
+      _$this._pointPlacement = pointPlacement;
+
   num _pointRange;
   num get pointRange => _$this._pointRange;
   set pointRange(num pointRange) => _$this._pointRange = pointRange;
@@ -50928,6 +54322,10 @@ class PlotOptionsBoxplotBuilder
   set skipKeyboardNavigation(bool skipKeyboardNavigation) =>
       _$this._skipKeyboardNavigation = skipKeyboardNavigation;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _stemColor;
   String get stemColor => _$this._stemColor;
   set stemColor(String stemColor) => _$this._stemColor = stemColor;
@@ -50946,6 +54344,10 @@ class PlotOptionsBoxplotBuilder
   set stickyTracking(bool stickyTracking) =>
       _$this._stickyTracking = stickyTracking;
 
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
+
   num _turboThreshold;
   num get turboThreshold => _$this._turboThreshold;
   set turboThreshold(num turboThreshold) =>
@@ -50959,6 +54361,11 @@ class PlotOptionsBoxplotBuilder
   String get whiskerColor => _$this._whiskerColor;
   set whiskerColor(String whiskerColor) => _$this._whiskerColor = whiskerColor;
 
+  JsonObject _whiskerLength;
+  JsonObject get whiskerLength => _$this._whiskerLength;
+  set whiskerLength(JsonObject whiskerLength) =>
+      _$this._whiskerLength = whiskerLength;
+
   num _whiskerWidth;
   num get whiskerWidth => _$this._whiskerWidth;
   set whiskerWidth(num whiskerWidth) => _$this._whiskerWidth = whiskerWidth;
@@ -50966,6 +54373,10 @@ class PlotOptionsBoxplotBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   PlotOptionsBoxplotBuilder();
 
@@ -51005,6 +54416,7 @@ class PlotOptionsBoxplotBuilder
       _pointInterval = _$v.pointInterval;
       _pointIntervalUnit = _$v.pointIntervalUnit;
       _pointPadding = _$v.pointPadding;
+      _pointPlacement = _$v.pointPlacement;
       _pointRange = _$v.pointRange;
       _pointStart = _$v.pointStart;
       _pointWidth = _$v.pointWidth;
@@ -51012,15 +54424,19 @@ class PlotOptionsBoxplotBuilder
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
+      _states = _$v.states;
       _stemColor = _$v.stemColor;
       _stemDashStyle = _$v.stemDashStyle;
       _stemWidth = _$v.stemWidth;
       _stickyTracking = _$v.stickyTracking;
+      _tooltip = _$v.tooltip;
       _turboThreshold = _$v.turboThreshold;
       _visible = _$v.visible;
       _whiskerColor = _$v.whiskerColor;
+      _whiskerLength = _$v.whiskerLength;
       _whiskerWidth = _$v.whiskerWidth;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -51075,6 +54491,7 @@ class PlotOptionsBoxplotBuilder
             pointInterval: pointInterval,
             pointIntervalUnit: pointIntervalUnit,
             pointPadding: pointPadding,
+            pointPlacement: pointPlacement,
             pointRange: pointRange,
             pointStart: pointStart,
             pointWidth: pointWidth,
@@ -51082,15 +54499,19 @@ class PlotOptionsBoxplotBuilder
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
+            states: states,
             stemColor: stemColor,
             stemDashStyle: stemDashStyle,
             stemWidth: stemWidth,
             stickyTracking: stickyTracking,
+            tooltip: tooltip,
             turboThreshold: turboThreshold,
             visible: visible,
             whiskerColor: whiskerColor,
+            whiskerLength: whiskerLength,
             whiskerWidth: whiskerWidth,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -51614,6 +55035,8 @@ class PlotOptionsBoxplotStatesBuilder
 
 class _$PlotOptionsBoxplotStatesHover extends PlotOptionsBoxplotStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final String borderColor;
   @override
   final num brightness;
@@ -51621,13 +55044,20 @@ class _$PlotOptionsBoxplotStatesHover extends PlotOptionsBoxplotStatesHover {
   final String color;
   @override
   final bool enabled;
+  @override
+  final JsonObject halo;
 
   factory _$PlotOptionsBoxplotStatesHover(
           [void updates(PlotOptionsBoxplotStatesHoverBuilder b)]) =>
       (new PlotOptionsBoxplotStatesHoverBuilder()..update(updates)).build();
 
   _$PlotOptionsBoxplotStatesHover._(
-      {this.borderColor, this.brightness, this.color, this.enabled})
+      {this.animation,
+      this.borderColor,
+      this.brightness,
+      this.color,
+      this.enabled,
+      this.halo})
       : super._();
 
   @override
@@ -51643,27 +55073,35 @@ class _$PlotOptionsBoxplotStatesHover extends PlotOptionsBoxplotStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsBoxplotStatesHover) return false;
-    return borderColor == other.borderColor &&
+    return animation == other.animation &&
+        borderColor == other.borderColor &&
         brightness == other.brightness &&
         color == other.color &&
-        enabled == other.enabled;
+        enabled == other.enabled &&
+        halo == other.halo;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, borderColor.hashCode), brightness.hashCode),
-            color.hashCode),
-        enabled.hashCode));
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), borderColor.hashCode),
+                    brightness.hashCode),
+                color.hashCode),
+            enabled.hashCode),
+        halo.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsBoxplotStatesHover')
+          ..add('animation', animation)
           ..add('borderColor', borderColor)
           ..add('brightness', brightness)
           ..add('color', color)
-          ..add('enabled', enabled))
+          ..add('enabled', enabled)
+          ..add('halo', halo))
         .toString();
   }
 }
@@ -51673,6 +55111,10 @@ class PlotOptionsBoxplotStatesHoverBuilder
         Builder<PlotOptionsBoxplotStatesHover,
             PlotOptionsBoxplotStatesHoverBuilder> {
   _$PlotOptionsBoxplotStatesHover _$v;
+
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
 
   String _borderColor;
   String get borderColor => _$this._borderColor;
@@ -51690,14 +55132,20 @@ class PlotOptionsBoxplotStatesHoverBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
+
   PlotOptionsBoxplotStatesHoverBuilder();
 
   PlotOptionsBoxplotStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _borderColor = _$v.borderColor;
       _brightness = _$v.brightness;
       _color = _$v.color;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _$v = null;
     }
     return this;
@@ -51718,10 +55166,12 @@ class PlotOptionsBoxplotStatesHoverBuilder
   _$PlotOptionsBoxplotStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsBoxplotStatesHover._(
+            animation: animation,
             borderColor: borderColor,
             brightness: brightness,
             color: color,
-            enabled: enabled);
+            enabled: enabled,
+            halo: halo);
     replace(result);
     return result;
   }
@@ -51735,6 +55185,8 @@ class PlotOptionsBoxplotStatesHoverBuilder
 class _$PlotOptionsBoxplotStatesHoverHalo
     extends PlotOptionsBoxplotStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -51743,7 +55195,9 @@ class _$PlotOptionsBoxplotStatesHoverHalo
           [void updates(PlotOptionsBoxplotStatesHoverHaloBuilder b)]) =>
       (new PlotOptionsBoxplotStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$PlotOptionsBoxplotStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$PlotOptionsBoxplotStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   PlotOptionsBoxplotStatesHoverHalo rebuild(
@@ -51758,17 +55212,21 @@ class _$PlotOptionsBoxplotStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsBoxplotStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsBoxplotStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -51780,6 +55238,10 @@ class PlotOptionsBoxplotStatesHoverHaloBuilder
         Builder<PlotOptionsBoxplotStatesHoverHalo,
             PlotOptionsBoxplotStatesHoverHaloBuilder> {
   _$PlotOptionsBoxplotStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -51793,6 +55255,7 @@ class PlotOptionsBoxplotStatesHoverHaloBuilder
 
   PlotOptionsBoxplotStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -51814,7 +55277,8 @@ class PlotOptionsBoxplotStatesHoverHaloBuilder
   @override
   _$PlotOptionsBoxplotStatesHoverHalo build() {
     final result = _$v ??
-        new _$PlotOptionsBoxplotStatesHoverHalo._(opacity: opacity, size: size);
+        new _$PlotOptionsBoxplotStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -51826,6 +55290,8 @@ class PlotOptionsBoxplotStatesHoverHaloBuilder
 // **************************************************************************
 
 class _$PlotOptionsBoxplotTooltip extends PlotOptionsBoxplotTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -51858,7 +55324,8 @@ class _$PlotOptionsBoxplotTooltip extends PlotOptionsBoxplotTooltip {
       (new PlotOptionsBoxplotTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsBoxplotTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -51886,7 +55353,8 @@ class _$PlotOptionsBoxplotTooltip extends PlotOptionsBoxplotTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsBoxplotTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -51915,7 +55383,11 @@ class _$PlotOptionsBoxplotTooltip extends PlotOptionsBoxplotTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -51934,6 +55406,7 @@ class _$PlotOptionsBoxplotTooltip extends PlotOptionsBoxplotTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsBoxplotTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -51955,6 +55428,11 @@ class PlotOptionsBoxplotTooltipBuilder
     implements
         Builder<PlotOptionsBoxplotTooltip, PlotOptionsBoxplotTooltipBuilder> {
   _$PlotOptionsBoxplotTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -52015,6 +55493,7 @@ class PlotOptionsBoxplotTooltipBuilder
 
   PlotOptionsBoxplotTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -52048,6 +55527,7 @@ class PlotOptionsBoxplotTooltipBuilder
   _$PlotOptionsBoxplotTooltip build() {
     final result = _$v ??
         new _$PlotOptionsBoxplotTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -52244,6 +55724,8 @@ class _$PlotOptionsBubble extends PlotOptionsBubble {
   @override
   final String linkedTo;
   @override
+  final JsonObject marker;
+  @override
   final String maxSize;
   @override
   final String minSize;
@@ -52262,6 +55744,8 @@ class _$PlotOptionsBubble extends PlotOptionsBubble {
   @override
   final bool selected;
   @override
+  final JsonObject shadow;
+  @override
   final bool showCheckbox;
   @override
   final bool showInLegend;
@@ -52274,9 +55758,13 @@ class _$PlotOptionsBubble extends PlotOptionsBubble {
   @override
   final bool softThreshold;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
   @override
   final num threshold;
+  @override
+  final JsonObject tooltip;
   @override
   final bool visible;
   @override
@@ -52287,6 +55775,8 @@ class _$PlotOptionsBubble extends PlotOptionsBubble {
   final num zThreshold;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsBubble([void updates(PlotOptionsBubbleBuilder b)]) =>
       (new PlotOptionsBubbleBuilder()..update(updates)).build();
@@ -52312,6 +55802,7 @@ class _$PlotOptionsBubble extends PlotOptionsBubble {
       this.keys,
       this.lineWidth,
       this.linkedTo,
+      this.marker,
       this.maxSize,
       this.minSize,
       this.negativeColor,
@@ -52321,19 +55812,23 @@ class _$PlotOptionsBubble extends PlotOptionsBubble {
       this.pointIntervalUnit,
       this.pointStart,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.sizeBy,
       this.sizeByAbsoluteValue,
       this.skipKeyboardNavigation,
       this.softThreshold,
+      this.states,
       this.stickyTracking,
       this.threshold,
+      this.tooltip,
       this.visible,
       this.zMax,
       this.zMin,
       this.zThreshold,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -52368,6 +55863,7 @@ class _$PlotOptionsBubble extends PlotOptionsBubble {
         keys == other.keys &&
         lineWidth == other.lineWidth &&
         linkedTo == other.linkedTo &&
+        marker == other.marker &&
         maxSize == other.maxSize &&
         minSize == other.minSize &&
         negativeColor == other.negativeColor &&
@@ -52377,19 +55873,23 @@ class _$PlotOptionsBubble extends PlotOptionsBubble {
         pointIntervalUnit == other.pointIntervalUnit &&
         pointStart == other.pointStart &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         sizeBy == other.sizeBy &&
         sizeByAbsoluteValue == other.sizeByAbsoluteValue &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         softThreshold == other.softThreshold &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
         threshold == other.threshold &&
+        tooltip == other.tooltip &&
         visible == other.visible &&
         zMax == other.zMax &&
         zMin == other.zMin &&
         zThreshold == other.zThreshold &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -52412,26 +55912,26 @@ class _$PlotOptionsBubble extends PlotOptionsBubble {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), displayNegative.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode), lineWidth.hashCode), linkedTo.hashCode), maxSize.hashCode), minSize.hashCode), negativeColor.hashCode),
-                                                                                point.hashCode),
-                                                                            pointDescriptionFormatter.hashCode),
-                                                                        pointInterval.hashCode),
-                                                                    pointIntervalUnit.hashCode),
-                                                                pointStart.hashCode),
-                                                            selected.hashCode),
-                                                        showCheckbox.hashCode),
-                                                    showInLegend.hashCode),
-                                                sizeBy.hashCode),
-                                            sizeByAbsoluteValue.hashCode),
-                                        skipKeyboardNavigation.hashCode),
-                                    softThreshold.hashCode),
-                                stickyTracking.hashCode),
-                            threshold.hashCode),
-                        visible.hashCode),
-                    zMax.hashCode),
-                zMin.hashCode),
-            zThreshold.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), displayNegative.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode), lineWidth.hashCode), linkedTo.hashCode), marker.hashCode), maxSize.hashCode), minSize.hashCode), negativeColor.hashCode), point.hashCode), pointDescriptionFormatter.hashCode), pointInterval.hashCode), pointIntervalUnit.hashCode),
+                                                                                pointStart.hashCode),
+                                                                            selected.hashCode),
+                                                                        shadow.hashCode),
+                                                                    showCheckbox.hashCode),
+                                                                showInLegend.hashCode),
+                                                            sizeBy.hashCode),
+                                                        sizeByAbsoluteValue.hashCode),
+                                                    skipKeyboardNavigation.hashCode),
+                                                softThreshold.hashCode),
+                                            states.hashCode),
+                                        stickyTracking.hashCode),
+                                    threshold.hashCode),
+                                tooltip.hashCode),
+                            visible.hashCode),
+                        zMax.hashCode),
+                    zMin.hashCode),
+                zThreshold.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -52457,6 +55957,7 @@ class _$PlotOptionsBubble extends PlotOptionsBubble {
           ..add('keys', keys)
           ..add('lineWidth', lineWidth)
           ..add('linkedTo', linkedTo)
+          ..add('marker', marker)
           ..add('maxSize', maxSize)
           ..add('minSize', minSize)
           ..add('negativeColor', negativeColor)
@@ -52466,19 +55967,23 @@ class _$PlotOptionsBubble extends PlotOptionsBubble {
           ..add('pointIntervalUnit', pointIntervalUnit)
           ..add('pointStart', pointStart)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('sizeBy', sizeBy)
           ..add('sizeByAbsoluteValue', sizeByAbsoluteValue)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('softThreshold', softThreshold)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
           ..add('threshold', threshold)
+          ..add('tooltip', tooltip)
           ..add('visible', visible)
           ..add('zMax', zMax)
           ..add('zMin', zMin)
           ..add('zThreshold', zThreshold)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -52577,6 +56082,10 @@ class PlotOptionsBubbleBuilder
   String get linkedTo => _$this._linkedTo;
   set linkedTo(String linkedTo) => _$this._linkedTo = linkedTo;
 
+  JsonObject _marker;
+  JsonObject get marker => _$this._marker;
+  set marker(JsonObject marker) => _$this._marker = marker;
+
   String _maxSize;
   String get maxSize => _$this._maxSize;
   set maxSize(String maxSize) => _$this._maxSize = maxSize;
@@ -52617,6 +56126,10 @@ class PlotOptionsBubbleBuilder
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
   set showCheckbox(bool showCheckbox) => _$this._showCheckbox = showCheckbox;
@@ -52644,6 +56157,10 @@ class PlotOptionsBubbleBuilder
   set softThreshold(bool softThreshold) =>
       _$this._softThreshold = softThreshold;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
@@ -52652,6 +56169,10 @@ class PlotOptionsBubbleBuilder
   num _threshold;
   num get threshold => _$this._threshold;
   set threshold(num threshold) => _$this._threshold = threshold;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   bool _visible;
   bool get visible => _$this._visible;
@@ -52672,6 +56193,10 @@ class PlotOptionsBubbleBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   PlotOptionsBubbleBuilder();
 
@@ -52697,6 +56222,7 @@ class PlotOptionsBubbleBuilder
       _keys = _$v.keys?.toBuilder();
       _lineWidth = _$v.lineWidth;
       _linkedTo = _$v.linkedTo;
+      _marker = _$v.marker;
       _maxSize = _$v.maxSize;
       _minSize = _$v.minSize;
       _negativeColor = _$v.negativeColor;
@@ -52706,19 +56232,23 @@ class PlotOptionsBubbleBuilder
       _pointIntervalUnit = _$v.pointIntervalUnit;
       _pointStart = _$v.pointStart;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _sizeBy = _$v.sizeBy;
       _sizeByAbsoluteValue = _$v.sizeByAbsoluteValue;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _softThreshold = _$v.softThreshold;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
       _threshold = _$v.threshold;
+      _tooltip = _$v.tooltip;
       _visible = _$v.visible;
       _zMax = _$v.zMax;
       _zMin = _$v.zMin;
       _zThreshold = _$v.zThreshold;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -52759,6 +56289,7 @@ class PlotOptionsBubbleBuilder
             keys: _keys?.build(),
             lineWidth: lineWidth,
             linkedTo: linkedTo,
+            marker: marker,
             maxSize: maxSize,
             minSize: minSize,
             negativeColor: negativeColor,
@@ -52768,19 +56299,23 @@ class PlotOptionsBubbleBuilder
             pointIntervalUnit: pointIntervalUnit,
             pointStart: pointStart,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             sizeBy: sizeBy,
             sizeByAbsoluteValue: sizeByAbsoluteValue,
             skipKeyboardNavigation: skipKeyboardNavigation,
             softThreshold: softThreshold,
+            states: states,
             stickyTracking: stickyTracking,
             threshold: threshold,
+            tooltip: tooltip,
             visible: visible,
             zMax: zMax,
             zMin: zMin,
             zThreshold: zThreshold,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -52827,6 +56362,8 @@ class _$PlotOptionsBubbleDataLabels extends PlotOptionsBubbleDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -52863,6 +56400,7 @@ class _$PlotOptionsBubbleDataLabels extends PlotOptionsBubbleDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -52902,6 +56440,7 @@ class _$PlotOptionsBubbleDataLabels extends PlotOptionsBubbleDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -52931,19 +56470,19 @@ class _$PlotOptionsBubbleDataLabels extends PlotOptionsBubbleDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -52973,6 +56512,7 @@ class _$PlotOptionsBubbleDataLabels extends PlotOptionsBubbleDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -53059,6 +56599,10 @@ class PlotOptionsBubbleDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -53110,6 +56654,7 @@ class PlotOptionsBubbleDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -53154,6 +56699,7 @@ class PlotOptionsBubbleDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -54257,7 +57803,11 @@ class PlotOptionsBubbleStatesBuilder
 
 class _$PlotOptionsBubbleStatesHover extends PlotOptionsBubbleStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -54270,7 +57820,12 @@ class _$PlotOptionsBubbleStatesHover extends PlotOptionsBubbleStatesHover {
       (new PlotOptionsBubbleStatesHoverBuilder()..update(updates)).build();
 
   _$PlotOptionsBubbleStatesHover._(
-      {this.enabled, this.lineWidth, this.lineWidthPlus, this.marker})
+      {this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker})
       : super._();
 
   @override
@@ -54286,7 +57841,9 @@ class _$PlotOptionsBubbleStatesHover extends PlotOptionsBubbleStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsBubbleStatesHover) return false;
-    return enabled == other.enabled &&
+    return animation == other.animation &&
+        enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -54295,7 +57852,11 @@ class _$PlotOptionsBubbleStatesHover extends PlotOptionsBubbleStatesHover {
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, enabled.hashCode), lineWidth.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), enabled.hashCode),
+                    halo.hashCode),
+                lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
   }
@@ -54303,7 +57864,9 @@ class _$PlotOptionsBubbleStatesHover extends PlotOptionsBubbleStatesHover {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsBubbleStatesHover')
+          ..add('animation', animation)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -54317,9 +57880,17 @@ class PlotOptionsBubbleStatesHoverBuilder
             PlotOptionsBubbleStatesHoverBuilder> {
   _$PlotOptionsBubbleStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -54339,7 +57910,9 @@ class PlotOptionsBubbleStatesHoverBuilder
 
   PlotOptionsBubbleStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -54363,7 +57936,9 @@ class PlotOptionsBubbleStatesHoverBuilder
   _$PlotOptionsBubbleStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsBubbleStatesHover._(
+            animation: animation,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -54380,6 +57955,8 @@ class PlotOptionsBubbleStatesHoverBuilder
 class _$PlotOptionsBubbleStatesHoverHalo
     extends PlotOptionsBubbleStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -54388,7 +57965,9 @@ class _$PlotOptionsBubbleStatesHoverHalo
           [void updates(PlotOptionsBubbleStatesHoverHaloBuilder b)]) =>
       (new PlotOptionsBubbleStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$PlotOptionsBubbleStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$PlotOptionsBubbleStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   PlotOptionsBubbleStatesHoverHalo rebuild(
@@ -54403,17 +57982,21 @@ class _$PlotOptionsBubbleStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsBubbleStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsBubbleStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -54425,6 +58008,10 @@ class PlotOptionsBubbleStatesHoverHaloBuilder
         Builder<PlotOptionsBubbleStatesHoverHalo,
             PlotOptionsBubbleStatesHoverHaloBuilder> {
   _$PlotOptionsBubbleStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -54438,6 +58025,7 @@ class PlotOptionsBubbleStatesHoverHaloBuilder
 
   PlotOptionsBubbleStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -54459,7 +58047,8 @@ class PlotOptionsBubbleStatesHoverHaloBuilder
   @override
   _$PlotOptionsBubbleStatesHoverHalo build() {
     final result = _$v ??
-        new _$PlotOptionsBubbleStatesHoverHalo._(opacity: opacity, size: size);
+        new _$PlotOptionsBubbleStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -54485,6 +58074,8 @@ class _$PlotOptionsBubbleStatesHoverMarker
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -54501,6 +58092,7 @@ class _$PlotOptionsBubbleStatesHoverMarker
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -54524,6 +58116,7 @@ class _$PlotOptionsBubbleStatesHoverMarker
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -54535,11 +58128,15 @@ class _$PlotOptionsBubbleStatesHoverMarker
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -54553,6 +58150,7 @@ class _$PlotOptionsBubbleStatesHoverMarker
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -54589,6 +58187,10 @@ class PlotOptionsBubbleStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -54607,6 +58209,7 @@ class PlotOptionsBubbleStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -54635,6 +58238,7 @@ class PlotOptionsBubbleStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -54648,6 +58252,8 @@ class PlotOptionsBubbleStatesHoverMarkerBuilder
 // **************************************************************************
 
 class _$PlotOptionsBubbleTooltip extends PlotOptionsBubbleTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -54680,7 +58286,8 @@ class _$PlotOptionsBubbleTooltip extends PlotOptionsBubbleTooltip {
       (new PlotOptionsBubbleTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsBubbleTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -54708,7 +58315,8 @@ class _$PlotOptionsBubbleTooltip extends PlotOptionsBubbleTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsBubbleTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -54737,7 +58345,11 @@ class _$PlotOptionsBubbleTooltip extends PlotOptionsBubbleTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -54756,6 +58368,7 @@ class _$PlotOptionsBubbleTooltip extends PlotOptionsBubbleTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsBubbleTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -54777,6 +58390,11 @@ class PlotOptionsBubbleTooltipBuilder
     implements
         Builder<PlotOptionsBubbleTooltip, PlotOptionsBubbleTooltipBuilder> {
   _$PlotOptionsBubbleTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -54837,6 +58455,7 @@ class PlotOptionsBubbleTooltipBuilder
 
   PlotOptionsBubbleTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -54870,6 +58489,7 @@ class PlotOptionsBubbleTooltipBuilder
   _$PlotOptionsBubbleTooltip build() {
     final result = _$v ??
         new _$PlotOptionsBubbleTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -55099,6 +58719,8 @@ class _$PlotOptionsColumn extends PlotOptionsColumn {
   @override
   final num pointPadding;
   @override
+  final JsonObject pointPlacement;
+  @override
   final num pointRange;
   @override
   final num pointStart;
@@ -55106,6 +58728,8 @@ class _$PlotOptionsColumn extends PlotOptionsColumn {
   final num pointWidth;
   @override
   final bool selected;
+  @override
+  final JsonObject shadow;
   @override
   final bool showCheckbox;
   @override
@@ -55117,15 +58741,21 @@ class _$PlotOptionsColumn extends PlotOptionsColumn {
   @override
   final String stacking;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
   @override
   final num threshold;
+  @override
+  final JsonObject tooltip;
   @override
   final num turboThreshold;
   @override
   final bool visible;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsColumn([void updates(PlotOptionsColumnBuilder b)]) =>
       (new PlotOptionsColumnBuilder()..update(updates)).build();
@@ -55168,20 +58798,25 @@ class _$PlotOptionsColumn extends PlotOptionsColumn {
       this.pointInterval,
       this.pointIntervalUnit,
       this.pointPadding,
+      this.pointPlacement,
       this.pointRange,
       this.pointStart,
       this.pointWidth,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
       this.softThreshold,
       this.stacking,
+      this.states,
       this.stickyTracking,
       this.threshold,
+      this.tooltip,
       this.turboThreshold,
       this.visible,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -55233,20 +58868,25 @@ class _$PlotOptionsColumn extends PlotOptionsColumn {
         pointInterval == other.pointInterval &&
         pointIntervalUnit == other.pointIntervalUnit &&
         pointPadding == other.pointPadding &&
+        pointPlacement == other.pointPlacement &&
         pointRange == other.pointRange &&
         pointStart == other.pointStart &&
         pointWidth == other.pointWidth &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         softThreshold == other.softThreshold &&
         stacking == other.stacking &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
         threshold == other.threshold &&
+        tooltip == other.tooltip &&
         turboThreshold == other.turboThreshold &&
         visible == other.visible &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -55269,26 +58909,26 @@ class _$PlotOptionsColumn extends PlotOptionsColumn {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), crisp.hashCode), cropThreshold.hashCode), cursor.hashCode), dataLabels.hashCode), depth.hashCode), description.hashCode), edgeColor.hashCode), edgeWidth.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), groupPadding.hashCode), groupZPadding.hashCode), grouping.hashCode), keys.hashCode), linkedTo.hashCode), maxPointWidth.hashCode), minPointLength.hashCode), negativeColor.hashCode),
-                                                                                point.hashCode),
-                                                                            pointDescriptionFormatter.hashCode),
-                                                                        pointInterval.hashCode),
-                                                                    pointIntervalUnit.hashCode),
-                                                                pointPadding.hashCode),
-                                                            pointRange.hashCode),
-                                                        pointStart.hashCode),
-                                                    pointWidth.hashCode),
-                                                selected.hashCode),
-                                            showCheckbox.hashCode),
-                                        showInLegend.hashCode),
-                                    skipKeyboardNavigation.hashCode),
-                                softThreshold.hashCode),
-                            stacking.hashCode),
-                        stickyTracking.hashCode),
-                    threshold.hashCode),
-                turboThreshold.hashCode),
-            visible.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), crisp.hashCode), cropThreshold.hashCode), cursor.hashCode), dataLabels.hashCode), depth.hashCode), description.hashCode), edgeColor.hashCode), edgeWidth.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), groupPadding.hashCode), groupZPadding.hashCode), grouping.hashCode), keys.hashCode), linkedTo.hashCode), maxPointWidth.hashCode), minPointLength.hashCode), negativeColor.hashCode), point.hashCode), pointDescriptionFormatter.hashCode), pointInterval.hashCode), pointIntervalUnit.hashCode), pointPadding.hashCode),
+                                                                                pointPlacement.hashCode),
+                                                                            pointRange.hashCode),
+                                                                        pointStart.hashCode),
+                                                                    pointWidth.hashCode),
+                                                                selected.hashCode),
+                                                            shadow.hashCode),
+                                                        showCheckbox.hashCode),
+                                                    showInLegend.hashCode),
+                                                skipKeyboardNavigation.hashCode),
+                                            softThreshold.hashCode),
+                                        stacking.hashCode),
+                                    states.hashCode),
+                                stickyTracking.hashCode),
+                            threshold.hashCode),
+                        tooltip.hashCode),
+                    turboThreshold.hashCode),
+                visible.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -55331,20 +58971,25 @@ class _$PlotOptionsColumn extends PlotOptionsColumn {
           ..add('pointInterval', pointInterval)
           ..add('pointIntervalUnit', pointIntervalUnit)
           ..add('pointPadding', pointPadding)
+          ..add('pointPlacement', pointPlacement)
           ..add('pointRange', pointRange)
           ..add('pointStart', pointStart)
           ..add('pointWidth', pointWidth)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('softThreshold', softThreshold)
           ..add('stacking', stacking)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
           ..add('threshold', threshold)
+          ..add('tooltip', tooltip)
           ..add('turboThreshold', turboThreshold)
           ..add('visible', visible)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -55516,6 +59161,11 @@ class PlotOptionsColumnBuilder
   num get pointPadding => _$this._pointPadding;
   set pointPadding(num pointPadding) => _$this._pointPadding = pointPadding;
 
+  JsonObject _pointPlacement;
+  JsonObject get pointPlacement => _$this._pointPlacement;
+  set pointPlacement(JsonObject pointPlacement) =>
+      _$this._pointPlacement = pointPlacement;
+
   num _pointRange;
   num get pointRange => _$this._pointRange;
   set pointRange(num pointRange) => _$this._pointRange = pointRange;
@@ -55531,6 +59181,10 @@ class PlotOptionsColumnBuilder
   bool _selected;
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
+
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
 
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
@@ -55554,6 +59208,10 @@ class PlotOptionsColumnBuilder
   String get stacking => _$this._stacking;
   set stacking(String stacking) => _$this._stacking = stacking;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
@@ -55562,6 +59220,10 @@ class PlotOptionsColumnBuilder
   num _threshold;
   num get threshold => _$this._threshold;
   set threshold(num threshold) => _$this._threshold = threshold;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   num _turboThreshold;
   num get turboThreshold => _$this._turboThreshold;
@@ -55575,6 +59237,10 @@ class PlotOptionsColumnBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   PlotOptionsColumnBuilder();
 
@@ -55617,20 +59283,25 @@ class PlotOptionsColumnBuilder
       _pointInterval = _$v.pointInterval;
       _pointIntervalUnit = _$v.pointIntervalUnit;
       _pointPadding = _$v.pointPadding;
+      _pointPlacement = _$v.pointPlacement;
       _pointRange = _$v.pointRange;
       _pointStart = _$v.pointStart;
       _pointWidth = _$v.pointWidth;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _softThreshold = _$v.softThreshold;
       _stacking = _$v.stacking;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
       _threshold = _$v.threshold;
+      _tooltip = _$v.tooltip;
       _turboThreshold = _$v.turboThreshold;
       _visible = _$v.visible;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -55688,20 +59359,25 @@ class PlotOptionsColumnBuilder
             pointInterval: pointInterval,
             pointIntervalUnit: pointIntervalUnit,
             pointPadding: pointPadding,
+            pointPlacement: pointPlacement,
             pointRange: pointRange,
             pointStart: pointStart,
             pointWidth: pointWidth,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
             softThreshold: softThreshold,
             stacking: stacking,
+            states: states,
             stickyTracking: stickyTracking,
             threshold: threshold,
+            tooltip: tooltip,
             turboThreshold: turboThreshold,
             visible: visible,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -55748,6 +59424,8 @@ class _$PlotOptionsColumnDataLabels extends PlotOptionsColumnDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -55784,6 +59462,7 @@ class _$PlotOptionsColumnDataLabels extends PlotOptionsColumnDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -55823,6 +59502,7 @@ class _$PlotOptionsColumnDataLabels extends PlotOptionsColumnDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -55852,19 +59532,19 @@ class _$PlotOptionsColumnDataLabels extends PlotOptionsColumnDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -55894,6 +59574,7 @@ class _$PlotOptionsColumnDataLabels extends PlotOptionsColumnDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -55980,6 +59661,10 @@ class PlotOptionsColumnDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -56031,6 +59716,7 @@ class PlotOptionsColumnDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -56075,6 +59761,7 @@ class PlotOptionsColumnDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -56603,6 +60290,8 @@ class PlotOptionsColumnStatesBuilder
 
 class _$PlotOptionsColumnStatesHover extends PlotOptionsColumnStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final String borderColor;
   @override
   final num brightness;
@@ -56610,13 +60299,20 @@ class _$PlotOptionsColumnStatesHover extends PlotOptionsColumnStatesHover {
   final String color;
   @override
   final bool enabled;
+  @override
+  final JsonObject halo;
 
   factory _$PlotOptionsColumnStatesHover(
           [void updates(PlotOptionsColumnStatesHoverBuilder b)]) =>
       (new PlotOptionsColumnStatesHoverBuilder()..update(updates)).build();
 
   _$PlotOptionsColumnStatesHover._(
-      {this.borderColor, this.brightness, this.color, this.enabled})
+      {this.animation,
+      this.borderColor,
+      this.brightness,
+      this.color,
+      this.enabled,
+      this.halo})
       : super._();
 
   @override
@@ -56632,27 +60328,35 @@ class _$PlotOptionsColumnStatesHover extends PlotOptionsColumnStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsColumnStatesHover) return false;
-    return borderColor == other.borderColor &&
+    return animation == other.animation &&
+        borderColor == other.borderColor &&
         brightness == other.brightness &&
         color == other.color &&
-        enabled == other.enabled;
+        enabled == other.enabled &&
+        halo == other.halo;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, borderColor.hashCode), brightness.hashCode),
-            color.hashCode),
-        enabled.hashCode));
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), borderColor.hashCode),
+                    brightness.hashCode),
+                color.hashCode),
+            enabled.hashCode),
+        halo.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsColumnStatesHover')
+          ..add('animation', animation)
           ..add('borderColor', borderColor)
           ..add('brightness', brightness)
           ..add('color', color)
-          ..add('enabled', enabled))
+          ..add('enabled', enabled)
+          ..add('halo', halo))
         .toString();
   }
 }
@@ -56662,6 +60366,10 @@ class PlotOptionsColumnStatesHoverBuilder
         Builder<PlotOptionsColumnStatesHover,
             PlotOptionsColumnStatesHoverBuilder> {
   _$PlotOptionsColumnStatesHover _$v;
+
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
 
   String _borderColor;
   String get borderColor => _$this._borderColor;
@@ -56679,14 +60387,20 @@ class PlotOptionsColumnStatesHoverBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
+
   PlotOptionsColumnStatesHoverBuilder();
 
   PlotOptionsColumnStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _borderColor = _$v.borderColor;
       _brightness = _$v.brightness;
       _color = _$v.color;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _$v = null;
     }
     return this;
@@ -56707,10 +60421,12 @@ class PlotOptionsColumnStatesHoverBuilder
   _$PlotOptionsColumnStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsColumnStatesHover._(
+            animation: animation,
             borderColor: borderColor,
             brightness: brightness,
             color: color,
-            enabled: enabled);
+            enabled: enabled,
+            halo: halo);
     replace(result);
     return result;
   }
@@ -56724,6 +60440,8 @@ class PlotOptionsColumnStatesHoverBuilder
 class _$PlotOptionsColumnStatesHoverHalo
     extends PlotOptionsColumnStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -56732,7 +60450,9 @@ class _$PlotOptionsColumnStatesHoverHalo
           [void updates(PlotOptionsColumnStatesHoverHaloBuilder b)]) =>
       (new PlotOptionsColumnStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$PlotOptionsColumnStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$PlotOptionsColumnStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   PlotOptionsColumnStatesHoverHalo rebuild(
@@ -56747,17 +60467,21 @@ class _$PlotOptionsColumnStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsColumnStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsColumnStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -56769,6 +60493,10 @@ class PlotOptionsColumnStatesHoverHaloBuilder
         Builder<PlotOptionsColumnStatesHoverHalo,
             PlotOptionsColumnStatesHoverHaloBuilder> {
   _$PlotOptionsColumnStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -56782,6 +60510,7 @@ class PlotOptionsColumnStatesHoverHaloBuilder
 
   PlotOptionsColumnStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -56803,7 +60532,8 @@ class PlotOptionsColumnStatesHoverHaloBuilder
   @override
   _$PlotOptionsColumnStatesHoverHalo build() {
     final result = _$v ??
-        new _$PlotOptionsColumnStatesHoverHalo._(opacity: opacity, size: size);
+        new _$PlotOptionsColumnStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -56815,6 +60545,8 @@ class PlotOptionsColumnStatesHoverHaloBuilder
 // **************************************************************************
 
 class _$PlotOptionsColumnTooltip extends PlotOptionsColumnTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -56847,7 +60579,8 @@ class _$PlotOptionsColumnTooltip extends PlotOptionsColumnTooltip {
       (new PlotOptionsColumnTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsColumnTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -56875,7 +60608,8 @@ class _$PlotOptionsColumnTooltip extends PlotOptionsColumnTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsColumnTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -56904,7 +60638,11 @@ class _$PlotOptionsColumnTooltip extends PlotOptionsColumnTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -56923,6 +60661,7 @@ class _$PlotOptionsColumnTooltip extends PlotOptionsColumnTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsColumnTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -56944,6 +60683,11 @@ class PlotOptionsColumnTooltipBuilder
     implements
         Builder<PlotOptionsColumnTooltip, PlotOptionsColumnTooltipBuilder> {
   _$PlotOptionsColumnTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -57004,6 +60748,7 @@ class PlotOptionsColumnTooltipBuilder
 
   PlotOptionsColumnTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -57037,6 +60782,7 @@ class PlotOptionsColumnTooltipBuilder
   _$PlotOptionsColumnTooltip build() {
     final result = _$v ??
         new _$PlotOptionsColumnTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -57220,6 +60966,8 @@ class _$PlotOptionsColumnrange extends PlotOptionsColumnrange {
   @override
   final String cursor;
   @override
+  final JsonObject dataLabels;
+  @override
   final num depth;
   @override
   final String description;
@@ -57262,6 +61010,8 @@ class _$PlotOptionsColumnrange extends PlotOptionsColumnrange {
   @override
   final num pointPadding;
   @override
+  final JsonObject pointPlacement;
+  @override
   final num pointRange;
   @override
   final num pointStart;
@@ -57270,19 +61020,27 @@ class _$PlotOptionsColumnrange extends PlotOptionsColumnrange {
   @override
   final bool selected;
   @override
+  final JsonObject shadow;
+  @override
   final bool showCheckbox;
   @override
   final bool showInLegend;
   @override
   final bool skipKeyboardNavigation;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
+  @override
+  final JsonObject tooltip;
   @override
   final num turboThreshold;
   @override
   final bool visible;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsColumnrange(
           [void updates(PlotOptionsColumnrangeBuilder b)]) =>
@@ -57303,6 +61061,7 @@ class _$PlotOptionsColumnrange extends PlotOptionsColumnrange {
       this.crisp,
       this.cropThreshold,
       this.cursor,
+      this.dataLabels,
       this.depth,
       this.description,
       this.edgeColor,
@@ -57324,17 +61083,22 @@ class _$PlotOptionsColumnrange extends PlotOptionsColumnrange {
       this.pointInterval,
       this.pointIntervalUnit,
       this.pointPadding,
+      this.pointPlacement,
       this.pointRange,
       this.pointStart,
       this.pointWidth,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
+      this.states,
       this.stickyTracking,
+      this.tooltip,
       this.turboThreshold,
       this.visible,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -57364,6 +61128,7 @@ class _$PlotOptionsColumnrange extends PlotOptionsColumnrange {
         crisp == other.crisp &&
         cropThreshold == other.cropThreshold &&
         cursor == other.cursor &&
+        dataLabels == other.dataLabels &&
         depth == other.depth &&
         description == other.description &&
         edgeColor == other.edgeColor &&
@@ -57385,17 +61150,22 @@ class _$PlotOptionsColumnrange extends PlotOptionsColumnrange {
         pointInterval == other.pointInterval &&
         pointIntervalUnit == other.pointIntervalUnit &&
         pointPadding == other.pointPadding &&
+        pointPlacement == other.pointPlacement &&
         pointRange == other.pointRange &&
         pointStart == other.pointStart &&
         pointWidth == other.pointWidth &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
+        tooltip == other.tooltip &&
         turboThreshold == other.turboThreshold &&
         visible == other.visible &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -57418,26 +61188,26 @@ class _$PlotOptionsColumnrange extends PlotOptionsColumnrange {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), crisp.hashCode), cropThreshold.hashCode), cursor.hashCode), depth.hashCode), description.hashCode), edgeColor.hashCode), edgeWidth.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), groupPadding.hashCode), groupZPadding.hashCode), grouping.hashCode), keys.hashCode),
-                                                                                linkedTo.hashCode),
-                                                                            maxPointWidth.hashCode),
-                                                                        minPointLength.hashCode),
-                                                                    point.hashCode),
-                                                                pointDescriptionFormatter.hashCode),
-                                                            pointInterval.hashCode),
-                                                        pointIntervalUnit.hashCode),
-                                                    pointPadding.hashCode),
-                                                pointRange.hashCode),
-                                            pointStart.hashCode),
-                                        pointWidth.hashCode),
-                                    selected.hashCode),
-                                showCheckbox.hashCode),
-                            showInLegend.hashCode),
-                        skipKeyboardNavigation.hashCode),
-                    stickyTracking.hashCode),
-                turboThreshold.hashCode),
-            visible.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), crisp.hashCode), cropThreshold.hashCode), cursor.hashCode), dataLabels.hashCode), depth.hashCode), description.hashCode), edgeColor.hashCode), edgeWidth.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), groupPadding.hashCode), groupZPadding.hashCode), grouping.hashCode), keys.hashCode), linkedTo.hashCode), maxPointWidth.hashCode), minPointLength.hashCode), point.hashCode), pointDescriptionFormatter.hashCode),
+                                                                                pointInterval.hashCode),
+                                                                            pointIntervalUnit.hashCode),
+                                                                        pointPadding.hashCode),
+                                                                    pointPlacement.hashCode),
+                                                                pointRange.hashCode),
+                                                            pointStart.hashCode),
+                                                        pointWidth.hashCode),
+                                                    selected.hashCode),
+                                                shadow.hashCode),
+                                            showCheckbox.hashCode),
+                                        showInLegend.hashCode),
+                                    skipKeyboardNavigation.hashCode),
+                                states.hashCode),
+                            stickyTracking.hashCode),
+                        tooltip.hashCode),
+                    turboThreshold.hashCode),
+                visible.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -57457,6 +61227,7 @@ class _$PlotOptionsColumnrange extends PlotOptionsColumnrange {
           ..add('crisp', crisp)
           ..add('cropThreshold', cropThreshold)
           ..add('cursor', cursor)
+          ..add('dataLabels', dataLabels)
           ..add('depth', depth)
           ..add('description', description)
           ..add('edgeColor', edgeColor)
@@ -57478,17 +61249,22 @@ class _$PlotOptionsColumnrange extends PlotOptionsColumnrange {
           ..add('pointInterval', pointInterval)
           ..add('pointIntervalUnit', pointIntervalUnit)
           ..add('pointPadding', pointPadding)
+          ..add('pointPlacement', pointPlacement)
           ..add('pointRange', pointRange)
           ..add('pointStart', pointStart)
           ..add('pointWidth', pointWidth)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
+          ..add('tooltip', tooltip)
           ..add('turboThreshold', turboThreshold)
           ..add('visible', visible)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -57555,6 +61331,10 @@ class PlotOptionsColumnrangeBuilder
   String _cursor;
   String get cursor => _$this._cursor;
   set cursor(String cursor) => _$this._cursor = cursor;
+
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
 
   num _depth;
   num get depth => _$this._depth;
@@ -57650,6 +61430,11 @@ class PlotOptionsColumnrangeBuilder
   num get pointPadding => _$this._pointPadding;
   set pointPadding(num pointPadding) => _$this._pointPadding = pointPadding;
 
+  JsonObject _pointPlacement;
+  JsonObject get pointPlacement => _$this._pointPlacement;
+  set pointPlacement(JsonObject pointPlacement) =>
+      _$this._pointPlacement = pointPlacement;
+
   num _pointRange;
   num get pointRange => _$this._pointRange;
   set pointRange(num pointRange) => _$this._pointRange = pointRange;
@@ -57666,6 +61451,10 @@ class PlotOptionsColumnrangeBuilder
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
   set showCheckbox(bool showCheckbox) => _$this._showCheckbox = showCheckbox;
@@ -57679,10 +61468,18 @@ class PlotOptionsColumnrangeBuilder
   set skipKeyboardNavigation(bool skipKeyboardNavigation) =>
       _$this._skipKeyboardNavigation = skipKeyboardNavigation;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
       _$this._stickyTracking = stickyTracking;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   num _turboThreshold;
   num get turboThreshold => _$this._turboThreshold;
@@ -57696,6 +61493,10 @@ class PlotOptionsColumnrangeBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   PlotOptionsColumnrangeBuilder();
 
@@ -57715,6 +61516,7 @@ class PlotOptionsColumnrangeBuilder
       _crisp = _$v.crisp;
       _cropThreshold = _$v.cropThreshold;
       _cursor = _$v.cursor;
+      _dataLabels = _$v.dataLabels;
       _depth = _$v.depth;
       _description = _$v.description;
       _edgeColor = _$v.edgeColor;
@@ -57736,17 +61538,22 @@ class PlotOptionsColumnrangeBuilder
       _pointInterval = _$v.pointInterval;
       _pointIntervalUnit = _$v.pointIntervalUnit;
       _pointPadding = _$v.pointPadding;
+      _pointPlacement = _$v.pointPlacement;
       _pointRange = _$v.pointRange;
       _pointStart = _$v.pointStart;
       _pointWidth = _$v.pointWidth;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
+      _tooltip = _$v.tooltip;
       _turboThreshold = _$v.turboThreshold;
       _visible = _$v.visible;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -57781,6 +61588,7 @@ class PlotOptionsColumnrangeBuilder
             crisp: crisp,
             cropThreshold: cropThreshold,
             cursor: cursor,
+            dataLabels: dataLabels,
             depth: depth,
             description: description,
             edgeColor: edgeColor,
@@ -57802,17 +61610,22 @@ class PlotOptionsColumnrangeBuilder
             pointInterval: pointInterval,
             pointIntervalUnit: pointIntervalUnit,
             pointPadding: pointPadding,
+            pointPlacement: pointPlacement,
             pointRange: pointRange,
             pointStart: pointStart,
             pointWidth: pointWidth,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
+            states: states,
             stickyTracking: stickyTracking,
+            tooltip: tooltip,
             turboThreshold: turboThreshold,
             visible: visible,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -57860,6 +61673,8 @@ class _$PlotOptionsColumnrangeDataLabels
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -57900,6 +61715,7 @@ class _$PlotOptionsColumnrangeDataLabels
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -57941,6 +61757,7 @@ class _$PlotOptionsColumnrangeDataLabels
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -57972,17 +61789,17 @@ class _$PlotOptionsColumnrangeDataLabels
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode),
-                                                                                color.hashCode),
-                                                                            crop.hashCode),
-                                                                        defer.hashCode),
-                                                                    enabled.hashCode),
-                                                                format.hashCode),
-                                                            formatter.hashCode),
-                                                        inside.hashCode),
-                                                    overflow.hashCode),
-                                                padding.hashCode),
-                                            rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode),
+                                                                                crop.hashCode),
+                                                                            defer.hashCode),
+                                                                        enabled.hashCode),
+                                                                    format.hashCode),
+                                                                formatter.hashCode),
+                                                            inside.hashCode),
+                                                        overflow.hashCode),
+                                                    padding.hashCode),
+                                                rotation.hashCode),
+                                            shadow.hashCode),
                                         shape.hashCode),
                                     style.hashCode),
                                 useHTML.hashCode),
@@ -58014,6 +61831,7 @@ class _$PlotOptionsColumnrangeDataLabels
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -58102,6 +61920,10 @@ class PlotOptionsColumnrangeDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -58161,6 +61983,7 @@ class PlotOptionsColumnrangeDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -58207,6 +62030,7 @@ class PlotOptionsColumnrangeDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -58744,6 +62568,8 @@ class PlotOptionsColumnrangeStatesBuilder
 class _$PlotOptionsColumnrangeStatesHover
     extends PlotOptionsColumnrangeStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final String borderColor;
   @override
   final num brightness;
@@ -58751,13 +62577,20 @@ class _$PlotOptionsColumnrangeStatesHover
   final String color;
   @override
   final bool enabled;
+  @override
+  final JsonObject halo;
 
   factory _$PlotOptionsColumnrangeStatesHover(
           [void updates(PlotOptionsColumnrangeStatesHoverBuilder b)]) =>
       (new PlotOptionsColumnrangeStatesHoverBuilder()..update(updates)).build();
 
   _$PlotOptionsColumnrangeStatesHover._(
-      {this.borderColor, this.brightness, this.color, this.enabled})
+      {this.animation,
+      this.borderColor,
+      this.brightness,
+      this.color,
+      this.enabled,
+      this.halo})
       : super._();
 
   @override
@@ -58773,27 +62606,35 @@ class _$PlotOptionsColumnrangeStatesHover
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsColumnrangeStatesHover) return false;
-    return borderColor == other.borderColor &&
+    return animation == other.animation &&
+        borderColor == other.borderColor &&
         brightness == other.brightness &&
         color == other.color &&
-        enabled == other.enabled;
+        enabled == other.enabled &&
+        halo == other.halo;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, borderColor.hashCode), brightness.hashCode),
-            color.hashCode),
-        enabled.hashCode));
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), borderColor.hashCode),
+                    brightness.hashCode),
+                color.hashCode),
+            enabled.hashCode),
+        halo.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsColumnrangeStatesHover')
+          ..add('animation', animation)
           ..add('borderColor', borderColor)
           ..add('brightness', brightness)
           ..add('color', color)
-          ..add('enabled', enabled))
+          ..add('enabled', enabled)
+          ..add('halo', halo))
         .toString();
   }
 }
@@ -58803,6 +62644,10 @@ class PlotOptionsColumnrangeStatesHoverBuilder
         Builder<PlotOptionsColumnrangeStatesHover,
             PlotOptionsColumnrangeStatesHoverBuilder> {
   _$PlotOptionsColumnrangeStatesHover _$v;
+
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
 
   String _borderColor;
   String get borderColor => _$this._borderColor;
@@ -58820,14 +62665,20 @@ class PlotOptionsColumnrangeStatesHoverBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
+
   PlotOptionsColumnrangeStatesHoverBuilder();
 
   PlotOptionsColumnrangeStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _borderColor = _$v.borderColor;
       _brightness = _$v.brightness;
       _color = _$v.color;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _$v = null;
     }
     return this;
@@ -58848,10 +62699,12 @@ class PlotOptionsColumnrangeStatesHoverBuilder
   _$PlotOptionsColumnrangeStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsColumnrangeStatesHover._(
+            animation: animation,
             borderColor: borderColor,
             brightness: brightness,
             color: color,
-            enabled: enabled);
+            enabled: enabled,
+            halo: halo);
     replace(result);
     return result;
   }
@@ -58865,6 +62718,8 @@ class PlotOptionsColumnrangeStatesHoverBuilder
 class _$PlotOptionsColumnrangeStatesHoverHalo
     extends PlotOptionsColumnrangeStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -58874,7 +62729,8 @@ class _$PlotOptionsColumnrangeStatesHoverHalo
       (new PlotOptionsColumnrangeStatesHoverHaloBuilder()..update(updates))
           .build();
 
-  _$PlotOptionsColumnrangeStatesHoverHalo._({this.opacity, this.size})
+  _$PlotOptionsColumnrangeStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
       : super._();
 
   @override
@@ -58890,17 +62746,21 @@ class _$PlotOptionsColumnrangeStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsColumnrangeStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsColumnrangeStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -58912,6 +62772,10 @@ class PlotOptionsColumnrangeStatesHoverHaloBuilder
         Builder<PlotOptionsColumnrangeStatesHoverHalo,
             PlotOptionsColumnrangeStatesHoverHaloBuilder> {
   _$PlotOptionsColumnrangeStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -58925,6 +62789,7 @@ class PlotOptionsColumnrangeStatesHoverHaloBuilder
 
   PlotOptionsColumnrangeStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -58947,7 +62812,7 @@ class PlotOptionsColumnrangeStatesHoverHaloBuilder
   _$PlotOptionsColumnrangeStatesHoverHalo build() {
     final result = _$v ??
         new _$PlotOptionsColumnrangeStatesHoverHalo._(
-            opacity: opacity, size: size);
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -58959,6 +62824,8 @@ class PlotOptionsColumnrangeStatesHoverHaloBuilder
 // **************************************************************************
 
 class _$PlotOptionsColumnrangeTooltip extends PlotOptionsColumnrangeTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -58991,7 +62858,8 @@ class _$PlotOptionsColumnrangeTooltip extends PlotOptionsColumnrangeTooltip {
       (new PlotOptionsColumnrangeTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsColumnrangeTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -59019,7 +62887,8 @@ class _$PlotOptionsColumnrangeTooltip extends PlotOptionsColumnrangeTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsColumnrangeTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -59048,7 +62917,11 @@ class _$PlotOptionsColumnrangeTooltip extends PlotOptionsColumnrangeTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -59067,6 +62940,7 @@ class _$PlotOptionsColumnrangeTooltip extends PlotOptionsColumnrangeTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsColumnrangeTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -59089,6 +62963,11 @@ class PlotOptionsColumnrangeTooltipBuilder
         Builder<PlotOptionsColumnrangeTooltip,
             PlotOptionsColumnrangeTooltipBuilder> {
   _$PlotOptionsColumnrangeTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -59149,6 +63028,7 @@ class PlotOptionsColumnrangeTooltipBuilder
 
   PlotOptionsColumnrangeTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -59182,6 +63062,7 @@ class PlotOptionsColumnrangeTooltipBuilder
   _$PlotOptionsColumnrangeTooltip build() {
     final result = _$v ??
         new _$PlotOptionsColumnrangeTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -59397,6 +63278,8 @@ class _$PlotOptionsErrorbar extends PlotOptionsErrorbar {
   @override
   final num pointPadding;
   @override
+  final JsonObject pointPlacement;
+  @override
   final num pointRange;
   @override
   final num pointStart;
@@ -59407,6 +63290,8 @@ class _$PlotOptionsErrorbar extends PlotOptionsErrorbar {
   @override
   final bool skipKeyboardNavigation;
   @override
+  final JsonObject states;
+  @override
   final String stemColor;
   @override
   final String stemDashStyle;
@@ -59415,15 +63300,21 @@ class _$PlotOptionsErrorbar extends PlotOptionsErrorbar {
   @override
   final bool stickyTracking;
   @override
+  final JsonObject tooltip;
+  @override
   final num turboThreshold;
   @override
   final bool visible;
   @override
   final String whiskerColor;
   @override
+  final JsonObject whiskerLength;
+  @override
   final num whiskerWidth;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsErrorbar([void updates(PlotOptionsErrorbarBuilder b)]) =>
       (new PlotOptionsErrorbarBuilder()..update(updates)).build();
@@ -59458,20 +63349,25 @@ class _$PlotOptionsErrorbar extends PlotOptionsErrorbar {
       this.pointInterval,
       this.pointIntervalUnit,
       this.pointPadding,
+      this.pointPlacement,
       this.pointRange,
       this.pointStart,
       this.pointWidth,
       this.selected,
       this.skipKeyboardNavigation,
+      this.states,
       this.stemColor,
       this.stemDashStyle,
       this.stemWidth,
       this.stickyTracking,
+      this.tooltip,
       this.turboThreshold,
       this.visible,
       this.whiskerColor,
+      this.whiskerLength,
       this.whiskerWidth,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -59515,20 +63411,25 @@ class _$PlotOptionsErrorbar extends PlotOptionsErrorbar {
         pointInterval == other.pointInterval &&
         pointIntervalUnit == other.pointIntervalUnit &&
         pointPadding == other.pointPadding &&
+        pointPlacement == other.pointPlacement &&
         pointRange == other.pointRange &&
         pointStart == other.pointStart &&
         pointWidth == other.pointWidth &&
         selected == other.selected &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
+        states == other.states &&
         stemColor == other.stemColor &&
         stemDashStyle == other.stemDashStyle &&
         stemWidth == other.stemWidth &&
         stickyTracking == other.stickyTracking &&
+        tooltip == other.tooltip &&
         turboThreshold == other.turboThreshold &&
         visible == other.visible &&
         whiskerColor == other.whiskerColor &&
+        whiskerLength == other.whiskerLength &&
         whiskerWidth == other.whiskerWidth &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -59551,26 +63452,26 @@ class _$PlotOptionsErrorbar extends PlotOptionsErrorbar {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), crisp.hashCode), cursor.hashCode), depth.hashCode), description.hashCode), edgeColor.hashCode), edgeWidth.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), groupZPadding.hashCode), keys.hashCode), lineWidth.hashCode), linkedTo.hashCode), maxPointWidth.hashCode), negativeColor.hashCode),
-                                                                                point.hashCode),
-                                                                            pointDescriptionFormatter.hashCode),
-                                                                        pointInterval.hashCode),
-                                                                    pointIntervalUnit.hashCode),
-                                                                pointPadding.hashCode),
-                                                            pointRange.hashCode),
-                                                        pointStart.hashCode),
-                                                    pointWidth.hashCode),
-                                                selected.hashCode),
-                                            skipKeyboardNavigation.hashCode),
-                                        stemColor.hashCode),
-                                    stemDashStyle.hashCode),
-                                stemWidth.hashCode),
-                            stickyTracking.hashCode),
-                        turboThreshold.hashCode),
-                    visible.hashCode),
-                whiskerColor.hashCode),
-            whiskerWidth.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), crisp.hashCode), cursor.hashCode), depth.hashCode), description.hashCode), edgeColor.hashCode), edgeWidth.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), groupZPadding.hashCode), keys.hashCode), lineWidth.hashCode), linkedTo.hashCode), maxPointWidth.hashCode), negativeColor.hashCode), point.hashCode), pointDescriptionFormatter.hashCode), pointInterval.hashCode), pointIntervalUnit.hashCode), pointPadding.hashCode),
+                                                                                pointPlacement.hashCode),
+                                                                            pointRange.hashCode),
+                                                                        pointStart.hashCode),
+                                                                    pointWidth.hashCode),
+                                                                selected.hashCode),
+                                                            skipKeyboardNavigation.hashCode),
+                                                        states.hashCode),
+                                                    stemColor.hashCode),
+                                                stemDashStyle.hashCode),
+                                            stemWidth.hashCode),
+                                        stickyTracking.hashCode),
+                                    tooltip.hashCode),
+                                turboThreshold.hashCode),
+                            visible.hashCode),
+                        whiskerColor.hashCode),
+                    whiskerLength.hashCode),
+                whiskerWidth.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -59605,20 +63506,25 @@ class _$PlotOptionsErrorbar extends PlotOptionsErrorbar {
           ..add('pointInterval', pointInterval)
           ..add('pointIntervalUnit', pointIntervalUnit)
           ..add('pointPadding', pointPadding)
+          ..add('pointPlacement', pointPlacement)
           ..add('pointRange', pointRange)
           ..add('pointStart', pointStart)
           ..add('pointWidth', pointWidth)
           ..add('selected', selected)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
+          ..add('states', states)
           ..add('stemColor', stemColor)
           ..add('stemDashStyle', stemDashStyle)
           ..add('stemWidth', stemWidth)
           ..add('stickyTracking', stickyTracking)
+          ..add('tooltip', tooltip)
           ..add('turboThreshold', turboThreshold)
           ..add('visible', visible)
           ..add('whiskerColor', whiskerColor)
+          ..add('whiskerLength', whiskerLength)
           ..add('whiskerWidth', whiskerWidth)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -59756,6 +63662,11 @@ class PlotOptionsErrorbarBuilder
   num get pointPadding => _$this._pointPadding;
   set pointPadding(num pointPadding) => _$this._pointPadding = pointPadding;
 
+  JsonObject _pointPlacement;
+  JsonObject get pointPlacement => _$this._pointPlacement;
+  set pointPlacement(JsonObject pointPlacement) =>
+      _$this._pointPlacement = pointPlacement;
+
   num _pointRange;
   num get pointRange => _$this._pointRange;
   set pointRange(num pointRange) => _$this._pointRange = pointRange;
@@ -59777,6 +63688,10 @@ class PlotOptionsErrorbarBuilder
   set skipKeyboardNavigation(bool skipKeyboardNavigation) =>
       _$this._skipKeyboardNavigation = skipKeyboardNavigation;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _stemColor;
   String get stemColor => _$this._stemColor;
   set stemColor(String stemColor) => _$this._stemColor = stemColor;
@@ -59795,6 +63710,10 @@ class PlotOptionsErrorbarBuilder
   set stickyTracking(bool stickyTracking) =>
       _$this._stickyTracking = stickyTracking;
 
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
+
   num _turboThreshold;
   num get turboThreshold => _$this._turboThreshold;
   set turboThreshold(num turboThreshold) =>
@@ -59808,6 +63727,11 @@ class PlotOptionsErrorbarBuilder
   String get whiskerColor => _$this._whiskerColor;
   set whiskerColor(String whiskerColor) => _$this._whiskerColor = whiskerColor;
 
+  JsonObject _whiskerLength;
+  JsonObject get whiskerLength => _$this._whiskerLength;
+  set whiskerLength(JsonObject whiskerLength) =>
+      _$this._whiskerLength = whiskerLength;
+
   num _whiskerWidth;
   num get whiskerWidth => _$this._whiskerWidth;
   set whiskerWidth(num whiskerWidth) => _$this._whiskerWidth = whiskerWidth;
@@ -59815,6 +63739,10 @@ class PlotOptionsErrorbarBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   PlotOptionsErrorbarBuilder();
 
@@ -59849,20 +63777,25 @@ class PlotOptionsErrorbarBuilder
       _pointInterval = _$v.pointInterval;
       _pointIntervalUnit = _$v.pointIntervalUnit;
       _pointPadding = _$v.pointPadding;
+      _pointPlacement = _$v.pointPlacement;
       _pointRange = _$v.pointRange;
       _pointStart = _$v.pointStart;
       _pointWidth = _$v.pointWidth;
       _selected = _$v.selected;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
+      _states = _$v.states;
       _stemColor = _$v.stemColor;
       _stemDashStyle = _$v.stemDashStyle;
       _stemWidth = _$v.stemWidth;
       _stickyTracking = _$v.stickyTracking;
+      _tooltip = _$v.tooltip;
       _turboThreshold = _$v.turboThreshold;
       _visible = _$v.visible;
       _whiskerColor = _$v.whiskerColor;
+      _whiskerLength = _$v.whiskerLength;
       _whiskerWidth = _$v.whiskerWidth;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -59912,20 +63845,25 @@ class PlotOptionsErrorbarBuilder
             pointInterval: pointInterval,
             pointIntervalUnit: pointIntervalUnit,
             pointPadding: pointPadding,
+            pointPlacement: pointPlacement,
             pointRange: pointRange,
             pointStart: pointStart,
             pointWidth: pointWidth,
             selected: selected,
             skipKeyboardNavigation: skipKeyboardNavigation,
+            states: states,
             stemColor: stemColor,
             stemDashStyle: stemDashStyle,
             stemWidth: stemWidth,
             stickyTracking: stickyTracking,
+            tooltip: tooltip,
             turboThreshold: turboThreshold,
             visible: visible,
             whiskerColor: whiskerColor,
+            whiskerLength: whiskerLength,
             whiskerWidth: whiskerWidth,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -60449,6 +64387,8 @@ class PlotOptionsErrorbarStatesBuilder
 
 class _$PlotOptionsErrorbarStatesHover extends PlotOptionsErrorbarStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final String borderColor;
   @override
   final num brightness;
@@ -60456,13 +64396,20 @@ class _$PlotOptionsErrorbarStatesHover extends PlotOptionsErrorbarStatesHover {
   final String color;
   @override
   final bool enabled;
+  @override
+  final JsonObject halo;
 
   factory _$PlotOptionsErrorbarStatesHover(
           [void updates(PlotOptionsErrorbarStatesHoverBuilder b)]) =>
       (new PlotOptionsErrorbarStatesHoverBuilder()..update(updates)).build();
 
   _$PlotOptionsErrorbarStatesHover._(
-      {this.borderColor, this.brightness, this.color, this.enabled})
+      {this.animation,
+      this.borderColor,
+      this.brightness,
+      this.color,
+      this.enabled,
+      this.halo})
       : super._();
 
   @override
@@ -60478,27 +64425,35 @@ class _$PlotOptionsErrorbarStatesHover extends PlotOptionsErrorbarStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsErrorbarStatesHover) return false;
-    return borderColor == other.borderColor &&
+    return animation == other.animation &&
+        borderColor == other.borderColor &&
         brightness == other.brightness &&
         color == other.color &&
-        enabled == other.enabled;
+        enabled == other.enabled &&
+        halo == other.halo;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, borderColor.hashCode), brightness.hashCode),
-            color.hashCode),
-        enabled.hashCode));
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), borderColor.hashCode),
+                    brightness.hashCode),
+                color.hashCode),
+            enabled.hashCode),
+        halo.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsErrorbarStatesHover')
+          ..add('animation', animation)
           ..add('borderColor', borderColor)
           ..add('brightness', brightness)
           ..add('color', color)
-          ..add('enabled', enabled))
+          ..add('enabled', enabled)
+          ..add('halo', halo))
         .toString();
   }
 }
@@ -60508,6 +64463,10 @@ class PlotOptionsErrorbarStatesHoverBuilder
         Builder<PlotOptionsErrorbarStatesHover,
             PlotOptionsErrorbarStatesHoverBuilder> {
   _$PlotOptionsErrorbarStatesHover _$v;
+
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
 
   String _borderColor;
   String get borderColor => _$this._borderColor;
@@ -60525,14 +64484,20 @@ class PlotOptionsErrorbarStatesHoverBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
+
   PlotOptionsErrorbarStatesHoverBuilder();
 
   PlotOptionsErrorbarStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _borderColor = _$v.borderColor;
       _brightness = _$v.brightness;
       _color = _$v.color;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _$v = null;
     }
     return this;
@@ -60553,10 +64518,12 @@ class PlotOptionsErrorbarStatesHoverBuilder
   _$PlotOptionsErrorbarStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsErrorbarStatesHover._(
+            animation: animation,
             borderColor: borderColor,
             brightness: brightness,
             color: color,
-            enabled: enabled);
+            enabled: enabled,
+            halo: halo);
     replace(result);
     return result;
   }
@@ -60570,6 +64537,8 @@ class PlotOptionsErrorbarStatesHoverBuilder
 class _$PlotOptionsErrorbarStatesHoverHalo
     extends PlotOptionsErrorbarStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -60579,7 +64548,9 @@ class _$PlotOptionsErrorbarStatesHoverHalo
       (new PlotOptionsErrorbarStatesHoverHaloBuilder()..update(updates))
           .build();
 
-  _$PlotOptionsErrorbarStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$PlotOptionsErrorbarStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   PlotOptionsErrorbarStatesHoverHalo rebuild(
@@ -60594,17 +64565,21 @@ class _$PlotOptionsErrorbarStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsErrorbarStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsErrorbarStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -60616,6 +64591,10 @@ class PlotOptionsErrorbarStatesHoverHaloBuilder
         Builder<PlotOptionsErrorbarStatesHoverHalo,
             PlotOptionsErrorbarStatesHoverHaloBuilder> {
   _$PlotOptionsErrorbarStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -60629,6 +64608,7 @@ class PlotOptionsErrorbarStatesHoverHaloBuilder
 
   PlotOptionsErrorbarStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -60651,7 +64631,7 @@ class PlotOptionsErrorbarStatesHoverHaloBuilder
   _$PlotOptionsErrorbarStatesHoverHalo build() {
     final result = _$v ??
         new _$PlotOptionsErrorbarStatesHoverHalo._(
-            opacity: opacity, size: size);
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -60663,6 +64643,8 @@ class PlotOptionsErrorbarStatesHoverHaloBuilder
 // **************************************************************************
 
 class _$PlotOptionsErrorbarTooltip extends PlotOptionsErrorbarTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -60695,7 +64677,8 @@ class _$PlotOptionsErrorbarTooltip extends PlotOptionsErrorbarTooltip {
       (new PlotOptionsErrorbarTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsErrorbarTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -60723,7 +64706,8 @@ class _$PlotOptionsErrorbarTooltip extends PlotOptionsErrorbarTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsErrorbarTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -60752,7 +64736,11 @@ class _$PlotOptionsErrorbarTooltip extends PlotOptionsErrorbarTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -60771,6 +64759,7 @@ class _$PlotOptionsErrorbarTooltip extends PlotOptionsErrorbarTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsErrorbarTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -60792,6 +64781,11 @@ class PlotOptionsErrorbarTooltipBuilder
     implements
         Builder<PlotOptionsErrorbarTooltip, PlotOptionsErrorbarTooltipBuilder> {
   _$PlotOptionsErrorbarTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -60852,6 +64846,7 @@ class PlotOptionsErrorbarTooltipBuilder
 
   PlotOptionsErrorbarTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -60885,6 +64880,7 @@ class PlotOptionsErrorbarTooltipBuilder
   _$PlotOptionsErrorbarTooltip build() {
     final result = _$v ??
         new _$PlotOptionsErrorbarTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -61049,6 +65045,8 @@ class _$PlotOptionsFunnel extends PlotOptionsFunnel {
   @override
   final num borderWidth;
   @override
+  final JsonObject center;
+  @override
   final String className;
   @override
   final num colorIndex;
@@ -61073,11 +65071,17 @@ class _$PlotOptionsFunnel extends PlotOptionsFunnel {
   @override
   final bool getExtremesFromAll;
   @override
+  final JsonObject height;
+  @override
   final BuiltList<String> keys;
   @override
   final String linkedTo;
   @override
   final num minSize;
+  @override
+  final JsonObject neckHeight;
+  @override
+  final JsonObject neckWidth;
   @override
   final PlotOptionsFunnelPoint point;
   @override
@@ -61087,17 +65091,27 @@ class _$PlotOptionsFunnel extends PlotOptionsFunnel {
   @override
   final bool selected;
   @override
+  final JsonObject shadow;
+  @override
   final bool showInLegend;
   @override
   final bool skipKeyboardNavigation;
   @override
   final num slicedOffset;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
+  @override
+  final JsonObject tooltip;
   @override
   final bool visible;
   @override
+  final JsonObject width;
+  @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsFunnel([void updates(PlotOptionsFunnelBuilder b)]) =>
       (new PlotOptionsFunnelBuilder()..update(updates)).build();
@@ -61107,6 +65121,7 @@ class _$PlotOptionsFunnel extends PlotOptionsFunnel {
       this.animationLimit,
       this.borderColor,
       this.borderWidth,
+      this.center,
       this.className,
       this.colorIndex,
       this.colors,
@@ -61119,19 +65134,27 @@ class _$PlotOptionsFunnel extends PlotOptionsFunnel {
       this.exposeElementToA11y,
       this.findNearestPointBy,
       this.getExtremesFromAll,
+      this.height,
       this.keys,
       this.linkedTo,
       this.minSize,
+      this.neckHeight,
+      this.neckWidth,
       this.point,
       this.pointDescriptionFormatter,
       this.reversed,
       this.selected,
+      this.shadow,
       this.showInLegend,
       this.skipKeyboardNavigation,
       this.slicedOffset,
+      this.states,
       this.stickyTracking,
+      this.tooltip,
       this.visible,
-      this.zoneAxis})
+      this.width,
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -61150,6 +65173,7 @@ class _$PlotOptionsFunnel extends PlotOptionsFunnel {
         animationLimit == other.animationLimit &&
         borderColor == other.borderColor &&
         borderWidth == other.borderWidth &&
+        center == other.center &&
         className == other.className &&
         colorIndex == other.colorIndex &&
         colors == other.colors &&
@@ -61162,19 +65186,27 @@ class _$PlotOptionsFunnel extends PlotOptionsFunnel {
         exposeElementToA11y == other.exposeElementToA11y &&
         findNearestPointBy == other.findNearestPointBy &&
         getExtremesFromAll == other.getExtremesFromAll &&
+        height == other.height &&
         keys == other.keys &&
         linkedTo == other.linkedTo &&
         minSize == other.minSize &&
+        neckHeight == other.neckHeight &&
+        neckWidth == other.neckWidth &&
         point == other.point &&
         pointDescriptionFormatter == other.pointDescriptionFormatter &&
         reversed == other.reversed &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         slicedOffset == other.slicedOffset &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
+        tooltip == other.tooltip &&
         visible == other.visible &&
-        zoneAxis == other.zoneAxis;
+        width == other.width &&
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -61197,26 +65229,26 @@ class _$PlotOptionsFunnel extends PlotOptionsFunnel {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animationLimit.hashCode), borderColor.hashCode), borderWidth.hashCode), className.hashCode), colorIndex.hashCode), colors.hashCode), cursor.hashCode), dataLabels.hashCode), depth.hashCode),
-                                                                                description.hashCode),
-                                                                            enableMouseTracking.hashCode),
-                                                                        events.hashCode),
-                                                                    exposeElementToA11y.hashCode),
-                                                                findNearestPointBy.hashCode),
-                                                            getExtremesFromAll.hashCode),
-                                                        keys.hashCode),
-                                                    linkedTo.hashCode),
-                                                minSize.hashCode),
-                                            point.hashCode),
-                                        pointDescriptionFormatter.hashCode),
-                                    reversed.hashCode),
-                                selected.hashCode),
-                            showInLegend.hashCode),
-                        skipKeyboardNavigation.hashCode),
-                    slicedOffset.hashCode),
-                stickyTracking.hashCode),
-            visible.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animationLimit.hashCode), borderColor.hashCode), borderWidth.hashCode), center.hashCode), className.hashCode), colorIndex.hashCode), colors.hashCode), cursor.hashCode), dataLabels.hashCode), depth.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), height.hashCode), keys.hashCode),
+                                                                                linkedTo.hashCode),
+                                                                            minSize.hashCode),
+                                                                        neckHeight.hashCode),
+                                                                    neckWidth.hashCode),
+                                                                point.hashCode),
+                                                            pointDescriptionFormatter.hashCode),
+                                                        reversed.hashCode),
+                                                    selected.hashCode),
+                                                shadow.hashCode),
+                                            showInLegend.hashCode),
+                                        skipKeyboardNavigation.hashCode),
+                                    slicedOffset.hashCode),
+                                states.hashCode),
+                            stickyTracking.hashCode),
+                        tooltip.hashCode),
+                    visible.hashCode),
+                width.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -61226,6 +65258,7 @@ class _$PlotOptionsFunnel extends PlotOptionsFunnel {
           ..add('animationLimit', animationLimit)
           ..add('borderColor', borderColor)
           ..add('borderWidth', borderWidth)
+          ..add('center', center)
           ..add('className', className)
           ..add('colorIndex', colorIndex)
           ..add('colors', colors)
@@ -61238,19 +65271,27 @@ class _$PlotOptionsFunnel extends PlotOptionsFunnel {
           ..add('exposeElementToA11y', exposeElementToA11y)
           ..add('findNearestPointBy', findNearestPointBy)
           ..add('getExtremesFromAll', getExtremesFromAll)
+          ..add('height', height)
           ..add('keys', keys)
           ..add('linkedTo', linkedTo)
           ..add('minSize', minSize)
+          ..add('neckHeight', neckHeight)
+          ..add('neckWidth', neckWidth)
           ..add('point', point)
           ..add('pointDescriptionFormatter', pointDescriptionFormatter)
           ..add('reversed', reversed)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('slicedOffset', slicedOffset)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
+          ..add('tooltip', tooltip)
           ..add('visible', visible)
-          ..add('zoneAxis', zoneAxis))
+          ..add('width', width)
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -61276,6 +65317,10 @@ class PlotOptionsFunnelBuilder
   num _borderWidth;
   num get borderWidth => _$this._borderWidth;
   set borderWidth(num borderWidth) => _$this._borderWidth = borderWidth;
+
+  JsonObject _center;
+  JsonObject get center => _$this._center;
+  set center(JsonObject center) => _$this._center = center;
 
   String _className;
   String get className => _$this._className;
@@ -61333,6 +65378,10 @@ class PlotOptionsFunnelBuilder
   set getExtremesFromAll(bool getExtremesFromAll) =>
       _$this._getExtremesFromAll = getExtremesFromAll;
 
+  JsonObject _height;
+  JsonObject get height => _$this._height;
+  set height(JsonObject height) => _$this._height = height;
+
   ListBuilder<String> _keys;
   ListBuilder<String> get keys => _$this._keys ??= new ListBuilder<String>();
   set keys(ListBuilder<String> keys) => _$this._keys = keys;
@@ -61344,6 +65393,14 @@ class PlotOptionsFunnelBuilder
   num _minSize;
   num get minSize => _$this._minSize;
   set minSize(num minSize) => _$this._minSize = minSize;
+
+  JsonObject _neckHeight;
+  JsonObject get neckHeight => _$this._neckHeight;
+  set neckHeight(JsonObject neckHeight) => _$this._neckHeight = neckHeight;
+
+  JsonObject _neckWidth;
+  JsonObject get neckWidth => _$this._neckWidth;
+  set neckWidth(JsonObject neckWidth) => _$this._neckWidth = neckWidth;
 
   PlotOptionsFunnelPointBuilder _point;
   PlotOptionsFunnelPointBuilder get point =>
@@ -61363,6 +65420,10 @@ class PlotOptionsFunnelBuilder
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   bool _showInLegend;
   bool get showInLegend => _$this._showInLegend;
   set showInLegend(bool showInLegend) => _$this._showInLegend = showInLegend;
@@ -61376,18 +65437,34 @@ class PlotOptionsFunnelBuilder
   num get slicedOffset => _$this._slicedOffset;
   set slicedOffset(num slicedOffset) => _$this._slicedOffset = slicedOffset;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
       _$this._stickyTracking = stickyTracking;
 
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
+
   bool _visible;
   bool get visible => _$this._visible;
   set visible(bool visible) => _$this._visible = visible;
 
+  JsonObject _width;
+  JsonObject get width => _$this._width;
+  set width(JsonObject width) => _$this._width = width;
+
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   PlotOptionsFunnelBuilder();
 
@@ -61397,6 +65474,7 @@ class PlotOptionsFunnelBuilder
       _animationLimit = _$v.animationLimit;
       _borderColor = _$v.borderColor;
       _borderWidth = _$v.borderWidth;
+      _center = _$v.center;
       _className = _$v.className;
       _colorIndex = _$v.colorIndex;
       _colors = _$v.colors?.toBuilder();
@@ -61409,19 +65487,27 @@ class PlotOptionsFunnelBuilder
       _exposeElementToA11y = _$v.exposeElementToA11y;
       _findNearestPointBy = _$v.findNearestPointBy;
       _getExtremesFromAll = _$v.getExtremesFromAll;
+      _height = _$v.height;
       _keys = _$v.keys?.toBuilder();
       _linkedTo = _$v.linkedTo;
       _minSize = _$v.minSize;
+      _neckHeight = _$v.neckHeight;
+      _neckWidth = _$v.neckWidth;
       _point = _$v.point?.toBuilder();
       _pointDescriptionFormatter = _$v.pointDescriptionFormatter;
       _reversed = _$v.reversed;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _slicedOffset = _$v.slicedOffset;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
+      _tooltip = _$v.tooltip;
       _visible = _$v.visible;
+      _width = _$v.width;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -61446,6 +65532,7 @@ class PlotOptionsFunnelBuilder
             animationLimit: animationLimit,
             borderColor: borderColor,
             borderWidth: borderWidth,
+            center: center,
             className: className,
             colorIndex: colorIndex,
             colors: _colors?.build(),
@@ -61458,19 +65545,27 @@ class PlotOptionsFunnelBuilder
             exposeElementToA11y: exposeElementToA11y,
             findNearestPointBy: findNearestPointBy,
             getExtremesFromAll: getExtremesFromAll,
+            height: height,
             keys: _keys?.build(),
             linkedTo: linkedTo,
             minSize: minSize,
+            neckHeight: neckHeight,
+            neckWidth: neckWidth,
             point: _point?.build(),
             pointDescriptionFormatter: pointDescriptionFormatter,
             reversed: reversed,
             selected: selected,
+            shadow: shadow,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
             slicedOffset: slicedOffset,
+            states: states,
             stickyTracking: stickyTracking,
+            tooltip: tooltip,
             visible: visible,
-            zoneAxis: zoneAxis);
+            width: width,
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -61521,6 +65616,8 @@ class _$PlotOptionsFunnelDataLabels extends PlotOptionsFunnelDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final bool softConnector;
@@ -61561,6 +65658,7 @@ class _$PlotOptionsFunnelDataLabels extends PlotOptionsFunnelDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.softConnector,
       this.style,
@@ -61603,6 +65701,7 @@ class _$PlotOptionsFunnelDataLabels extends PlotOptionsFunnelDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         softConnector == other.softConnector &&
         style == other.style &&
@@ -61633,18 +65732,18 @@ class _$PlotOptionsFunnelDataLabels extends PlotOptionsFunnelDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc(0, backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), connectorColor.hashCode), connectorPadding.hashCode),
-                                                                                connectorWidth.hashCode),
-                                                                            crop.hashCode),
-                                                                        defer.hashCode),
-                                                                    distance.hashCode),
-                                                                enabled.hashCode),
-                                                            format.hashCode),
-                                                        formatter.hashCode),
-                                                    inside.hashCode),
-                                                overflow.hashCode),
-                                            padding.hashCode),
-                                        rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), connectorColor.hashCode), connectorPadding.hashCode), connectorWidth.hashCode),
+                                                                                crop.hashCode),
+                                                                            defer.hashCode),
+                                                                        distance.hashCode),
+                                                                    enabled.hashCode),
+                                                                format.hashCode),
+                                                            formatter.hashCode),
+                                                        inside.hashCode),
+                                                    overflow.hashCode),
+                                                padding.hashCode),
+                                            rotation.hashCode),
+                                        shadow.hashCode),
                                     shape.hashCode),
                                 softConnector.hashCode),
                             style.hashCode),
@@ -61677,6 +65776,7 @@ class _$PlotOptionsFunnelDataLabels extends PlotOptionsFunnelDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('softConnector', softConnector)
           ..add('style', style)
@@ -61775,6 +65875,10 @@ class PlotOptionsFunnelDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -61833,6 +65937,7 @@ class PlotOptionsFunnelDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _softConnector = _$v.softConnector;
       _style = _$v.style?.toBuilder();
@@ -61880,6 +65985,7 @@ class PlotOptionsFunnelDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             softConnector: softConnector,
             style: _style?.build(),
@@ -62425,9 +66531,13 @@ class PlotOptionsFunnelStatesBuilder
 
 class _$PlotOptionsFunnelStatesHover extends PlotOptionsFunnelStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final num brightness;
   @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -62440,8 +66550,10 @@ class _$PlotOptionsFunnelStatesHover extends PlotOptionsFunnelStatesHover {
       (new PlotOptionsFunnelStatesHoverBuilder()..update(updates)).build();
 
   _$PlotOptionsFunnelStatesHover._(
-      {this.brightness,
+      {this.animation,
+      this.brightness,
       this.enabled,
+      this.halo,
       this.lineWidth,
       this.lineWidthPlus,
       this.marker})
@@ -62460,8 +66572,10 @@ class _$PlotOptionsFunnelStatesHover extends PlotOptionsFunnelStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsFunnelStatesHover) return false;
-    return brightness == other.brightness &&
+    return animation == other.animation &&
+        brightness == other.brightness &&
         enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -62471,7 +66585,11 @@ class _$PlotOptionsFunnelStatesHover extends PlotOptionsFunnelStatesHover {
   int get hashCode {
     return $jf($jc(
         $jc(
-            $jc($jc($jc(0, brightness.hashCode), enabled.hashCode),
+            $jc(
+                $jc(
+                    $jc($jc($jc(0, animation.hashCode), brightness.hashCode),
+                        enabled.hashCode),
+                    halo.hashCode),
                 lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
@@ -62480,8 +66598,10 @@ class _$PlotOptionsFunnelStatesHover extends PlotOptionsFunnelStatesHover {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsFunnelStatesHover')
+          ..add('animation', animation)
           ..add('brightness', brightness)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -62495,6 +66615,10 @@ class PlotOptionsFunnelStatesHoverBuilder
             PlotOptionsFunnelStatesHoverBuilder> {
   _$PlotOptionsFunnelStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   num _brightness;
   num get brightness => _$this._brightness;
   set brightness(num brightness) => _$this._brightness = brightness;
@@ -62502,6 +66626,10 @@ class PlotOptionsFunnelStatesHoverBuilder
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -62521,8 +66649,10 @@ class PlotOptionsFunnelStatesHoverBuilder
 
   PlotOptionsFunnelStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _brightness = _$v.brightness;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -62546,8 +66676,10 @@ class PlotOptionsFunnelStatesHoverBuilder
   _$PlotOptionsFunnelStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsFunnelStatesHover._(
+            animation: animation,
             brightness: brightness,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -62564,6 +66696,8 @@ class PlotOptionsFunnelStatesHoverBuilder
 class _$PlotOptionsFunnelStatesHoverHalo
     extends PlotOptionsFunnelStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -62572,7 +66706,9 @@ class _$PlotOptionsFunnelStatesHoverHalo
           [void updates(PlotOptionsFunnelStatesHoverHaloBuilder b)]) =>
       (new PlotOptionsFunnelStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$PlotOptionsFunnelStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$PlotOptionsFunnelStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   PlotOptionsFunnelStatesHoverHalo rebuild(
@@ -62587,17 +66723,21 @@ class _$PlotOptionsFunnelStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsFunnelStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsFunnelStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -62609,6 +66749,10 @@ class PlotOptionsFunnelStatesHoverHaloBuilder
         Builder<PlotOptionsFunnelStatesHoverHalo,
             PlotOptionsFunnelStatesHoverHaloBuilder> {
   _$PlotOptionsFunnelStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -62622,6 +66766,7 @@ class PlotOptionsFunnelStatesHoverHaloBuilder
 
   PlotOptionsFunnelStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -62643,7 +66788,8 @@ class PlotOptionsFunnelStatesHoverHaloBuilder
   @override
   _$PlotOptionsFunnelStatesHoverHalo build() {
     final result = _$v ??
-        new _$PlotOptionsFunnelStatesHoverHalo._(opacity: opacity, size: size);
+        new _$PlotOptionsFunnelStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -62669,6 +66815,8 @@ class _$PlotOptionsFunnelStatesHoverMarker
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -62685,6 +66833,7 @@ class _$PlotOptionsFunnelStatesHoverMarker
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -62708,6 +66857,7 @@ class _$PlotOptionsFunnelStatesHoverMarker
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -62719,11 +66869,15 @@ class _$PlotOptionsFunnelStatesHoverMarker
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -62737,6 +66891,7 @@ class _$PlotOptionsFunnelStatesHoverMarker
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -62773,6 +66928,10 @@ class PlotOptionsFunnelStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -62791,6 +66950,7 @@ class PlotOptionsFunnelStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -62819,6 +66979,7 @@ class PlotOptionsFunnelStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -62832,6 +66993,8 @@ class PlotOptionsFunnelStatesHoverMarkerBuilder
 // **************************************************************************
 
 class _$PlotOptionsFunnelTooltip extends PlotOptionsFunnelTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -62864,7 +67027,8 @@ class _$PlotOptionsFunnelTooltip extends PlotOptionsFunnelTooltip {
       (new PlotOptionsFunnelTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsFunnelTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -62892,7 +67056,8 @@ class _$PlotOptionsFunnelTooltip extends PlotOptionsFunnelTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsFunnelTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -62921,7 +67086,11 @@ class _$PlotOptionsFunnelTooltip extends PlotOptionsFunnelTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -62940,6 +67109,7 @@ class _$PlotOptionsFunnelTooltip extends PlotOptionsFunnelTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsFunnelTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -62961,6 +67131,11 @@ class PlotOptionsFunnelTooltipBuilder
     implements
         Builder<PlotOptionsFunnelTooltip, PlotOptionsFunnelTooltipBuilder> {
   _$PlotOptionsFunnelTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -63021,6 +67196,7 @@ class PlotOptionsFunnelTooltipBuilder
 
   PlotOptionsFunnelTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -63054,6 +67230,7 @@ class PlotOptionsFunnelTooltipBuilder
   _$PlotOptionsFunnelTooltip build() {
     final result = _$v ??
         new _$PlotOptionsFunnelTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -63221,7 +67398,11 @@ class _$PlotOptionsGauge extends PlotOptionsGauge {
   @override
   final String cursor;
   @override
+  final JsonObject dataLabels;
+  @override
   final String description;
+  @override
+  final JsonObject dial;
   @override
   final bool enableMouseTracking;
   @override
@@ -63241,6 +67422,8 @@ class _$PlotOptionsGauge extends PlotOptionsGauge {
   @override
   final num overshoot;
   @override
+  final JsonObject pivot;
+  @override
   final PlotOptionsGaugePoint point;
   @override
   final Function pointDescriptionFormatter;
@@ -63257,6 +67440,8 @@ class _$PlotOptionsGauge extends PlotOptionsGauge {
   @override
   final num threshold;
   @override
+  final JsonObject tooltip;
+  @override
   final bool visible;
   @override
   final bool wrap;
@@ -63271,7 +67456,9 @@ class _$PlotOptionsGauge extends PlotOptionsGauge {
       this.color,
       this.colorIndex,
       this.cursor,
+      this.dataLabels,
       this.description,
+      this.dial,
       this.enableMouseTracking,
       this.events,
       this.exposeElementToA11y,
@@ -63281,6 +67468,7 @@ class _$PlotOptionsGauge extends PlotOptionsGauge {
       this.linkedTo,
       this.negativeColor,
       this.overshoot,
+      this.pivot,
       this.point,
       this.pointDescriptionFormatter,
       this.selected,
@@ -63289,6 +67477,7 @@ class _$PlotOptionsGauge extends PlotOptionsGauge {
       this.skipKeyboardNavigation,
       this.stickyTracking,
       this.threshold,
+      this.tooltip,
       this.visible,
       this.wrap})
       : super._();
@@ -63311,7 +67500,9 @@ class _$PlotOptionsGauge extends PlotOptionsGauge {
         color == other.color &&
         colorIndex == other.colorIndex &&
         cursor == other.cursor &&
+        dataLabels == other.dataLabels &&
         description == other.description &&
+        dial == other.dial &&
         enableMouseTracking == other.enableMouseTracking &&
         events == other.events &&
         exposeElementToA11y == other.exposeElementToA11y &&
@@ -63321,6 +67512,7 @@ class _$PlotOptionsGauge extends PlotOptionsGauge {
         linkedTo == other.linkedTo &&
         negativeColor == other.negativeColor &&
         overshoot == other.overshoot &&
+        pivot == other.pivot &&
         point == other.point &&
         pointDescriptionFormatter == other.pointDescriptionFormatter &&
         selected == other.selected &&
@@ -63329,6 +67521,7 @@ class _$PlotOptionsGauge extends PlotOptionsGauge {
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         stickyTracking == other.stickyTracking &&
         threshold == other.threshold &&
+        tooltip == other.tooltip &&
         visible == other.visible &&
         wrap == other.wrap;
   }
@@ -63353,24 +67546,24 @@ class _$PlotOptionsGauge extends PlotOptionsGauge {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc(0, animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), cursor.hashCode), description.hashCode),
-                                                                                enableMouseTracking.hashCode),
-                                                                            events.hashCode),
-                                                                        exposeElementToA11y.hashCode),
-                                                                    findNearestPointBy.hashCode),
-                                                                getExtremesFromAll.hashCode),
-                                                            keys.hashCode),
-                                                        linkedTo.hashCode),
-                                                    negativeColor.hashCode),
-                                                overshoot.hashCode),
-                                            point.hashCode),
-                                        pointDescriptionFormatter.hashCode),
-                                    selected.hashCode),
-                                showCheckbox.hashCode),
-                            showInLegend.hashCode),
-                        skipKeyboardNavigation.hashCode),
-                    stickyTracking.hashCode),
-                threshold.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), cursor.hashCode), dataLabels.hashCode), description.hashCode), dial.hashCode), enableMouseTracking.hashCode), events.hashCode),
+                                                                                exposeElementToA11y.hashCode),
+                                                                            findNearestPointBy.hashCode),
+                                                                        getExtremesFromAll.hashCode),
+                                                                    keys.hashCode),
+                                                                linkedTo.hashCode),
+                                                            negativeColor.hashCode),
+                                                        overshoot.hashCode),
+                                                    pivot.hashCode),
+                                                point.hashCode),
+                                            pointDescriptionFormatter.hashCode),
+                                        selected.hashCode),
+                                    showCheckbox.hashCode),
+                                showInLegend.hashCode),
+                            skipKeyboardNavigation.hashCode),
+                        stickyTracking.hashCode),
+                    threshold.hashCode),
+                tooltip.hashCode),
             visible.hashCode),
         wrap.hashCode));
   }
@@ -63384,7 +67577,9 @@ class _$PlotOptionsGauge extends PlotOptionsGauge {
           ..add('color', color)
           ..add('colorIndex', colorIndex)
           ..add('cursor', cursor)
+          ..add('dataLabels', dataLabels)
           ..add('description', description)
+          ..add('dial', dial)
           ..add('enableMouseTracking', enableMouseTracking)
           ..add('events', events)
           ..add('exposeElementToA11y', exposeElementToA11y)
@@ -63394,6 +67589,7 @@ class _$PlotOptionsGauge extends PlotOptionsGauge {
           ..add('linkedTo', linkedTo)
           ..add('negativeColor', negativeColor)
           ..add('overshoot', overshoot)
+          ..add('pivot', pivot)
           ..add('point', point)
           ..add('pointDescriptionFormatter', pointDescriptionFormatter)
           ..add('selected', selected)
@@ -63402,6 +67598,7 @@ class _$PlotOptionsGauge extends PlotOptionsGauge {
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('stickyTracking', stickyTracking)
           ..add('threshold', threshold)
+          ..add('tooltip', tooltip)
           ..add('visible', visible)
           ..add('wrap', wrap))
         .toString();
@@ -63437,9 +67634,17 @@ class PlotOptionsGaugeBuilder
   String get cursor => _$this._cursor;
   set cursor(String cursor) => _$this._cursor = cursor;
 
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
+
   String _description;
   String get description => _$this._description;
   set description(String description) => _$this._description = description;
+
+  JsonObject _dial;
+  JsonObject get dial => _$this._dial;
+  set dial(JsonObject dial) => _$this._dial = dial;
 
   bool _enableMouseTracking;
   bool get enableMouseTracking => _$this._enableMouseTracking;
@@ -63483,6 +67688,10 @@ class PlotOptionsGaugeBuilder
   num get overshoot => _$this._overshoot;
   set overshoot(num overshoot) => _$this._overshoot = overshoot;
 
+  JsonObject _pivot;
+  JsonObject get pivot => _$this._pivot;
+  set pivot(JsonObject pivot) => _$this._pivot = pivot;
+
   PlotOptionsGaugePointBuilder _point;
   PlotOptionsGaugePointBuilder get point =>
       _$this._point ??= new PlotOptionsGaugePointBuilder();
@@ -63519,6 +67728,10 @@ class PlotOptionsGaugeBuilder
   num get threshold => _$this._threshold;
   set threshold(num threshold) => _$this._threshold = threshold;
 
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
+
   bool _visible;
   bool get visible => _$this._visible;
   set visible(bool visible) => _$this._visible = visible;
@@ -63537,7 +67750,9 @@ class PlotOptionsGaugeBuilder
       _color = _$v.color;
       _colorIndex = _$v.colorIndex;
       _cursor = _$v.cursor;
+      _dataLabels = _$v.dataLabels;
       _description = _$v.description;
+      _dial = _$v.dial;
       _enableMouseTracking = _$v.enableMouseTracking;
       _events = _$v.events?.toBuilder();
       _exposeElementToA11y = _$v.exposeElementToA11y;
@@ -63547,6 +67762,7 @@ class PlotOptionsGaugeBuilder
       _linkedTo = _$v.linkedTo;
       _negativeColor = _$v.negativeColor;
       _overshoot = _$v.overshoot;
+      _pivot = _$v.pivot;
       _point = _$v.point?.toBuilder();
       _pointDescriptionFormatter = _$v.pointDescriptionFormatter;
       _selected = _$v.selected;
@@ -63555,6 +67771,7 @@ class PlotOptionsGaugeBuilder
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _stickyTracking = _$v.stickyTracking;
       _threshold = _$v.threshold;
+      _tooltip = _$v.tooltip;
       _visible = _$v.visible;
       _wrap = _$v.wrap;
       _$v = null;
@@ -63583,7 +67800,9 @@ class PlotOptionsGaugeBuilder
             color: color,
             colorIndex: colorIndex,
             cursor: cursor,
+            dataLabels: dataLabels,
             description: description,
+            dial: dial,
             enableMouseTracking: enableMouseTracking,
             events: _events?.build(),
             exposeElementToA11y: exposeElementToA11y,
@@ -63593,6 +67812,7 @@ class PlotOptionsGaugeBuilder
             linkedTo: linkedTo,
             negativeColor: negativeColor,
             overshoot: overshoot,
+            pivot: pivot,
             point: _point?.build(),
             pointDescriptionFormatter: pointDescriptionFormatter,
             selected: selected,
@@ -63601,6 +67821,7 @@ class PlotOptionsGaugeBuilder
             skipKeyboardNavigation: skipKeyboardNavigation,
             stickyTracking: stickyTracking,
             threshold: threshold,
+            tooltip: tooltip,
             visible: visible,
             wrap: wrap);
     replace(result);
@@ -63649,6 +67870,8 @@ class _$PlotOptionsGaugeDataLabels extends PlotOptionsGaugeDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -63685,6 +67908,7 @@ class _$PlotOptionsGaugeDataLabels extends PlotOptionsGaugeDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -63724,6 +67948,7 @@ class _$PlotOptionsGaugeDataLabels extends PlotOptionsGaugeDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -63753,19 +67978,19 @@ class _$PlotOptionsGaugeDataLabels extends PlotOptionsGaugeDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -63795,6 +68020,7 @@ class _$PlotOptionsGaugeDataLabels extends PlotOptionsGaugeDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -63880,6 +68106,10 @@ class PlotOptionsGaugeDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -63931,6 +68161,7 @@ class PlotOptionsGaugeDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -63975,6 +68206,7 @@ class PlotOptionsGaugeDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -64710,6 +68942,8 @@ class PlotOptionsGaugePointEventsBuilder
 
 class _$PlotOptionsGaugeTooltip extends PlotOptionsGaugeTooltip {
   @override
+  final JsonObject dateTimeLabelFormats;
+  @override
   final bool followPointer;
   @override
   final bool followTouchMove;
@@ -64741,7 +68975,8 @@ class _$PlotOptionsGaugeTooltip extends PlotOptionsGaugeTooltip {
       (new PlotOptionsGaugeTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsGaugeTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -64769,7 +69004,8 @@ class _$PlotOptionsGaugeTooltip extends PlotOptionsGaugeTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsGaugeTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -64798,7 +69034,11 @@ class _$PlotOptionsGaugeTooltip extends PlotOptionsGaugeTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -64817,6 +69057,7 @@ class _$PlotOptionsGaugeTooltip extends PlotOptionsGaugeTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsGaugeTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -64838,6 +69079,11 @@ class PlotOptionsGaugeTooltipBuilder
     implements
         Builder<PlotOptionsGaugeTooltip, PlotOptionsGaugeTooltipBuilder> {
   _$PlotOptionsGaugeTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -64898,6 +69144,7 @@ class PlotOptionsGaugeTooltipBuilder
 
   PlotOptionsGaugeTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -64931,6 +69178,7 @@ class PlotOptionsGaugeTooltipBuilder
   _$PlotOptionsGaugeTooltip build() {
     final result = _$v ??
         new _$PlotOptionsGaugeTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -65014,19 +69262,27 @@ class _$PlotOptionsHeatmap extends PlotOptionsHeatmap {
   @override
   final bool selected;
   @override
+  final JsonObject shadow;
+  @override
   final bool showCheckbox;
   @override
   final bool showInLegend;
   @override
   final bool skipKeyboardNavigation;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
+  @override
+  final JsonObject tooltip;
   @override
   final num turboThreshold;
   @override
   final bool visible;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsHeatmap([void updates(PlotOptionsHeatmapBuilder b)]) =>
       (new PlotOptionsHeatmapBuilder()..update(updates)).build();
@@ -65061,13 +69317,17 @@ class _$PlotOptionsHeatmap extends PlotOptionsHeatmap {
       this.pointDescriptionFormatter,
       this.rowsize,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
+      this.states,
       this.stickyTracking,
+      this.tooltip,
       this.turboThreshold,
       this.visible,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -65111,13 +69371,17 @@ class _$PlotOptionsHeatmap extends PlotOptionsHeatmap {
         pointDescriptionFormatter == other.pointDescriptionFormatter &&
         rowsize == other.rowsize &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
+        tooltip == other.tooltip &&
         turboThreshold == other.turboThreshold &&
         visible == other.visible &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -65140,26 +69404,26 @@ class _$PlotOptionsHeatmap extends PlotOptionsHeatmap {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), colsize.hashCode), crisp.hashCode), cropThreshold.hashCode), cursor.hashCode), dataLabels.hashCode), description.hashCode),
-                                                                                enableMouseTracking.hashCode),
-                                                                            events.hashCode),
-                                                                        exposeElementToA11y.hashCode),
-                                                                    findNearestPointBy.hashCode),
-                                                                getExtremesFromAll.hashCode),
-                                                            keys.hashCode),
-                                                        linkedTo.hashCode),
-                                                    maxPointWidth.hashCode),
-                                                point.hashCode),
-                                            pointDescriptionFormatter.hashCode),
-                                        rowsize.hashCode),
-                                    selected.hashCode),
-                                showCheckbox.hashCode),
-                            showInLegend.hashCode),
-                        skipKeyboardNavigation.hashCode),
-                    stickyTracking.hashCode),
-                turboThreshold.hashCode),
-            visible.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), colsize.hashCode), crisp.hashCode), cropThreshold.hashCode), cursor.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode),
+                                                                                getExtremesFromAll.hashCode),
+                                                                            keys.hashCode),
+                                                                        linkedTo.hashCode),
+                                                                    maxPointWidth.hashCode),
+                                                                point.hashCode),
+                                                            pointDescriptionFormatter.hashCode),
+                                                        rowsize.hashCode),
+                                                    selected.hashCode),
+                                                shadow.hashCode),
+                                            showCheckbox.hashCode),
+                                        showInLegend.hashCode),
+                                    skipKeyboardNavigation.hashCode),
+                                states.hashCode),
+                            stickyTracking.hashCode),
+                        tooltip.hashCode),
+                    turboThreshold.hashCode),
+                visible.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -65194,13 +69458,17 @@ class _$PlotOptionsHeatmap extends PlotOptionsHeatmap {
           ..add('pointDescriptionFormatter', pointDescriptionFormatter)
           ..add('rowsize', rowsize)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
+          ..add('tooltip', tooltip)
           ..add('turboThreshold', turboThreshold)
           ..add('visible', visible)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -65337,6 +69605,10 @@ class PlotOptionsHeatmapBuilder
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
   set showCheckbox(bool showCheckbox) => _$this._showCheckbox = showCheckbox;
@@ -65350,10 +69622,18 @@ class PlotOptionsHeatmapBuilder
   set skipKeyboardNavigation(bool skipKeyboardNavigation) =>
       _$this._skipKeyboardNavigation = skipKeyboardNavigation;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
       _$this._stickyTracking = stickyTracking;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   num _turboThreshold;
   num get turboThreshold => _$this._turboThreshold;
@@ -65367,6 +69647,10 @@ class PlotOptionsHeatmapBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   PlotOptionsHeatmapBuilder();
 
@@ -65401,13 +69685,17 @@ class PlotOptionsHeatmapBuilder
       _pointDescriptionFormatter = _$v.pointDescriptionFormatter;
       _rowsize = _$v.rowsize;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
+      _tooltip = _$v.tooltip;
       _turboThreshold = _$v.turboThreshold;
       _visible = _$v.visible;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -65457,13 +69745,17 @@ class PlotOptionsHeatmapBuilder
             pointDescriptionFormatter: pointDescriptionFormatter,
             rowsize: rowsize,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
+            states: states,
             stickyTracking: stickyTracking,
+            tooltip: tooltip,
             turboThreshold: turboThreshold,
             visible: visible,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -65510,6 +69802,8 @@ class _$PlotOptionsHeatmapDataLabels extends PlotOptionsHeatmapDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -65546,6 +69840,7 @@ class _$PlotOptionsHeatmapDataLabels extends PlotOptionsHeatmapDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -65585,6 +69880,7 @@ class _$PlotOptionsHeatmapDataLabels extends PlotOptionsHeatmapDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -65614,19 +69910,19 @@ class _$PlotOptionsHeatmapDataLabels extends PlotOptionsHeatmapDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -65656,6 +69952,7 @@ class _$PlotOptionsHeatmapDataLabels extends PlotOptionsHeatmapDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -65742,6 +70039,10 @@ class PlotOptionsHeatmapDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -65793,6 +70094,7 @@ class PlotOptionsHeatmapDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -65837,6 +70139,7 @@ class PlotOptionsHeatmapDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -66367,6 +70670,8 @@ class PlotOptionsHeatmapStatesBuilder
 
 class _$PlotOptionsHeatmapStatesHover extends PlotOptionsHeatmapStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final String borderColor;
   @override
   final num brightness;
@@ -66374,13 +70679,20 @@ class _$PlotOptionsHeatmapStatesHover extends PlotOptionsHeatmapStatesHover {
   final String color;
   @override
   final bool enabled;
+  @override
+  final JsonObject halo;
 
   factory _$PlotOptionsHeatmapStatesHover(
           [void updates(PlotOptionsHeatmapStatesHoverBuilder b)]) =>
       (new PlotOptionsHeatmapStatesHoverBuilder()..update(updates)).build();
 
   _$PlotOptionsHeatmapStatesHover._(
-      {this.borderColor, this.brightness, this.color, this.enabled})
+      {this.animation,
+      this.borderColor,
+      this.brightness,
+      this.color,
+      this.enabled,
+      this.halo})
       : super._();
 
   @override
@@ -66396,27 +70708,35 @@ class _$PlotOptionsHeatmapStatesHover extends PlotOptionsHeatmapStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsHeatmapStatesHover) return false;
-    return borderColor == other.borderColor &&
+    return animation == other.animation &&
+        borderColor == other.borderColor &&
         brightness == other.brightness &&
         color == other.color &&
-        enabled == other.enabled;
+        enabled == other.enabled &&
+        halo == other.halo;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, borderColor.hashCode), brightness.hashCode),
-            color.hashCode),
-        enabled.hashCode));
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), borderColor.hashCode),
+                    brightness.hashCode),
+                color.hashCode),
+            enabled.hashCode),
+        halo.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsHeatmapStatesHover')
+          ..add('animation', animation)
           ..add('borderColor', borderColor)
           ..add('brightness', brightness)
           ..add('color', color)
-          ..add('enabled', enabled))
+          ..add('enabled', enabled)
+          ..add('halo', halo))
         .toString();
   }
 }
@@ -66426,6 +70746,10 @@ class PlotOptionsHeatmapStatesHoverBuilder
         Builder<PlotOptionsHeatmapStatesHover,
             PlotOptionsHeatmapStatesHoverBuilder> {
   _$PlotOptionsHeatmapStatesHover _$v;
+
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
 
   String _borderColor;
   String get borderColor => _$this._borderColor;
@@ -66443,14 +70767,20 @@ class PlotOptionsHeatmapStatesHoverBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
+
   PlotOptionsHeatmapStatesHoverBuilder();
 
   PlotOptionsHeatmapStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _borderColor = _$v.borderColor;
       _brightness = _$v.brightness;
       _color = _$v.color;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _$v = null;
     }
     return this;
@@ -66471,10 +70801,12 @@ class PlotOptionsHeatmapStatesHoverBuilder
   _$PlotOptionsHeatmapStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsHeatmapStatesHover._(
+            animation: animation,
             borderColor: borderColor,
             brightness: brightness,
             color: color,
-            enabled: enabled);
+            enabled: enabled,
+            halo: halo);
     replace(result);
     return result;
   }
@@ -66488,6 +70820,8 @@ class PlotOptionsHeatmapStatesHoverBuilder
 class _$PlotOptionsHeatmapStatesHoverHalo
     extends PlotOptionsHeatmapStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -66496,7 +70830,9 @@ class _$PlotOptionsHeatmapStatesHoverHalo
           [void updates(PlotOptionsHeatmapStatesHoverHaloBuilder b)]) =>
       (new PlotOptionsHeatmapStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$PlotOptionsHeatmapStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$PlotOptionsHeatmapStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   PlotOptionsHeatmapStatesHoverHalo rebuild(
@@ -66511,17 +70847,21 @@ class _$PlotOptionsHeatmapStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsHeatmapStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsHeatmapStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -66533,6 +70873,10 @@ class PlotOptionsHeatmapStatesHoverHaloBuilder
         Builder<PlotOptionsHeatmapStatesHoverHalo,
             PlotOptionsHeatmapStatesHoverHaloBuilder> {
   _$PlotOptionsHeatmapStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -66546,6 +70890,7 @@ class PlotOptionsHeatmapStatesHoverHaloBuilder
 
   PlotOptionsHeatmapStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -66567,7 +70912,8 @@ class PlotOptionsHeatmapStatesHoverHaloBuilder
   @override
   _$PlotOptionsHeatmapStatesHoverHalo build() {
     final result = _$v ??
-        new _$PlotOptionsHeatmapStatesHoverHalo._(opacity: opacity, size: size);
+        new _$PlotOptionsHeatmapStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -66579,6 +70925,8 @@ class PlotOptionsHeatmapStatesHoverHaloBuilder
 // **************************************************************************
 
 class _$PlotOptionsHeatmapTooltip extends PlotOptionsHeatmapTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -66611,7 +70959,8 @@ class _$PlotOptionsHeatmapTooltip extends PlotOptionsHeatmapTooltip {
       (new PlotOptionsHeatmapTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsHeatmapTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -66639,7 +70988,8 @@ class _$PlotOptionsHeatmapTooltip extends PlotOptionsHeatmapTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsHeatmapTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -66668,7 +71018,11 @@ class _$PlotOptionsHeatmapTooltip extends PlotOptionsHeatmapTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -66687,6 +71041,7 @@ class _$PlotOptionsHeatmapTooltip extends PlotOptionsHeatmapTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsHeatmapTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -66708,6 +71063,11 @@ class PlotOptionsHeatmapTooltipBuilder
     implements
         Builder<PlotOptionsHeatmapTooltip, PlotOptionsHeatmapTooltipBuilder> {
   _$PlotOptionsHeatmapTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -66768,6 +71128,7 @@ class PlotOptionsHeatmapTooltipBuilder
 
   PlotOptionsHeatmapTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -66801,6 +71162,7 @@ class PlotOptionsHeatmapTooltipBuilder
   _$PlotOptionsHeatmapTooltip build() {
     final result = _$v ??
         new _$PlotOptionsHeatmapTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -67013,9 +71375,13 @@ class _$PlotOptionsLine extends PlotOptionsLine {
   @override
   final String pointIntervalUnit;
   @override
+  final JsonObject pointPlacement;
+  @override
   final num pointStart;
   @override
   final bool selected;
+  @override
+  final JsonObject shadow;
   @override
   final bool showCheckbox;
   @override
@@ -67027,17 +71393,23 @@ class _$PlotOptionsLine extends PlotOptionsLine {
   @override
   final String stacking;
   @override
+  final JsonObject states;
+  @override
   final String step;
   @override
   final bool stickyTracking;
   @override
   final num threshold;
   @override
+  final JsonObject tooltip;
+  @override
   final num turboThreshold;
   @override
   final bool visible;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsLine([void updates(PlotOptionsLineBuilder b)]) =>
       (new PlotOptionsLineBuilder()..update(updates)).build();
@@ -67071,19 +71443,24 @@ class _$PlotOptionsLine extends PlotOptionsLine {
       this.pointDescriptionFormatter,
       this.pointInterval,
       this.pointIntervalUnit,
+      this.pointPlacement,
       this.pointStart,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
       this.softThreshold,
       this.stacking,
+      this.states,
       this.step,
       this.stickyTracking,
       this.threshold,
+      this.tooltip,
       this.turboThreshold,
       this.visible,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -67126,19 +71503,24 @@ class _$PlotOptionsLine extends PlotOptionsLine {
         pointDescriptionFormatter == other.pointDescriptionFormatter &&
         pointInterval == other.pointInterval &&
         pointIntervalUnit == other.pointIntervalUnit &&
+        pointPlacement == other.pointPlacement &&
         pointStart == other.pointStart &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         softThreshold == other.softThreshold &&
         stacking == other.stacking &&
+        states == other.states &&
         step == other.step &&
         stickyTracking == other.stickyTracking &&
         threshold == other.threshold &&
+        tooltip == other.tooltip &&
         turboThreshold == other.turboThreshold &&
         visible == other.visible &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -67161,26 +71543,26 @@ class _$PlotOptionsLine extends PlotOptionsLine {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), connectEnds.hashCode), connectNulls.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode), lineWidth.hashCode), linecap.hashCode), linkedTo.hashCode),
-                                                                                marker.hashCode),
-                                                                            negativeColor.hashCode),
-                                                                        point.hashCode),
-                                                                    pointDescriptionFormatter.hashCode),
-                                                                pointInterval.hashCode),
-                                                            pointIntervalUnit.hashCode),
-                                                        pointStart.hashCode),
-                                                    selected.hashCode),
-                                                showCheckbox.hashCode),
-                                            showInLegend.hashCode),
-                                        skipKeyboardNavigation.hashCode),
-                                    softThreshold.hashCode),
-                                stacking.hashCode),
-                            step.hashCode),
-                        stickyTracking.hashCode),
-                    threshold.hashCode),
-                turboThreshold.hashCode),
-            visible.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), connectEnds.hashCode), connectNulls.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode), lineWidth.hashCode), linecap.hashCode), linkedTo.hashCode), marker.hashCode), negativeColor.hashCode), point.hashCode), pointDescriptionFormatter.hashCode), pointInterval.hashCode),
+                                                                                pointIntervalUnit.hashCode),
+                                                                            pointPlacement.hashCode),
+                                                                        pointStart.hashCode),
+                                                                    selected.hashCode),
+                                                                shadow.hashCode),
+                                                            showCheckbox.hashCode),
+                                                        showInLegend.hashCode),
+                                                    skipKeyboardNavigation.hashCode),
+                                                softThreshold.hashCode),
+                                            stacking.hashCode),
+                                        states.hashCode),
+                                    step.hashCode),
+                                stickyTracking.hashCode),
+                            threshold.hashCode),
+                        tooltip.hashCode),
+                    turboThreshold.hashCode),
+                visible.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -67214,19 +71596,24 @@ class _$PlotOptionsLine extends PlotOptionsLine {
           ..add('pointDescriptionFormatter', pointDescriptionFormatter)
           ..add('pointInterval', pointInterval)
           ..add('pointIntervalUnit', pointIntervalUnit)
+          ..add('pointPlacement', pointPlacement)
           ..add('pointStart', pointStart)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('softThreshold', softThreshold)
           ..add('stacking', stacking)
+          ..add('states', states)
           ..add('step', step)
           ..add('stickyTracking', stickyTracking)
           ..add('threshold', threshold)
+          ..add('tooltip', tooltip)
           ..add('turboThreshold', turboThreshold)
           ..add('visible', visible)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -67361,6 +71748,11 @@ class PlotOptionsLineBuilder
   set pointIntervalUnit(String pointIntervalUnit) =>
       _$this._pointIntervalUnit = pointIntervalUnit;
 
+  JsonObject _pointPlacement;
+  JsonObject get pointPlacement => _$this._pointPlacement;
+  set pointPlacement(JsonObject pointPlacement) =>
+      _$this._pointPlacement = pointPlacement;
+
   num _pointStart;
   num get pointStart => _$this._pointStart;
   set pointStart(num pointStart) => _$this._pointStart = pointStart;
@@ -67368,6 +71760,10 @@ class PlotOptionsLineBuilder
   bool _selected;
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
+
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
 
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
@@ -67391,6 +71787,10 @@ class PlotOptionsLineBuilder
   String get stacking => _$this._stacking;
   set stacking(String stacking) => _$this._stacking = stacking;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _step;
   String get step => _$this._step;
   set step(String step) => _$this._step = step;
@@ -67404,6 +71804,10 @@ class PlotOptionsLineBuilder
   num get threshold => _$this._threshold;
   set threshold(num threshold) => _$this._threshold = threshold;
 
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
+
   num _turboThreshold;
   num get turboThreshold => _$this._turboThreshold;
   set turboThreshold(num turboThreshold) =>
@@ -67416,6 +71820,10 @@ class PlotOptionsLineBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   PlotOptionsLineBuilder();
 
@@ -67449,19 +71857,24 @@ class PlotOptionsLineBuilder
       _pointDescriptionFormatter = _$v.pointDescriptionFormatter;
       _pointInterval = _$v.pointInterval;
       _pointIntervalUnit = _$v.pointIntervalUnit;
+      _pointPlacement = _$v.pointPlacement;
       _pointStart = _$v.pointStart;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _softThreshold = _$v.softThreshold;
       _stacking = _$v.stacking;
+      _states = _$v.states;
       _step = _$v.step;
       _stickyTracking = _$v.stickyTracking;
       _threshold = _$v.threshold;
+      _tooltip = _$v.tooltip;
       _turboThreshold = _$v.turboThreshold;
       _visible = _$v.visible;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -67510,19 +71923,24 @@ class PlotOptionsLineBuilder
             pointDescriptionFormatter: pointDescriptionFormatter,
             pointInterval: pointInterval,
             pointIntervalUnit: pointIntervalUnit,
+            pointPlacement: pointPlacement,
             pointStart: pointStart,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
             softThreshold: softThreshold,
             stacking: stacking,
+            states: states,
             step: step,
             stickyTracking: stickyTracking,
             threshold: threshold,
+            tooltip: tooltip,
             turboThreshold: turboThreshold,
             visible: visible,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -67569,6 +71987,8 @@ class _$PlotOptionsLineDataLabels extends PlotOptionsLineDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -67605,6 +72025,7 @@ class _$PlotOptionsLineDataLabels extends PlotOptionsLineDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -67644,6 +72065,7 @@ class _$PlotOptionsLineDataLabels extends PlotOptionsLineDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -67673,19 +72095,19 @@ class _$PlotOptionsLineDataLabels extends PlotOptionsLineDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -67715,6 +72137,7 @@ class _$PlotOptionsLineDataLabels extends PlotOptionsLineDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -67800,6 +72223,10 @@ class PlotOptionsLineDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -67851,6 +72278,7 @@ class PlotOptionsLineDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -67895,6 +72323,7 @@ class PlotOptionsLineDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -69002,7 +73431,11 @@ class PlotOptionsLineStatesBuilder
 
 class _$PlotOptionsLineStatesHover extends PlotOptionsLineStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -69015,7 +73448,12 @@ class _$PlotOptionsLineStatesHover extends PlotOptionsLineStatesHover {
       (new PlotOptionsLineStatesHoverBuilder()..update(updates)).build();
 
   _$PlotOptionsLineStatesHover._(
-      {this.enabled, this.lineWidth, this.lineWidthPlus, this.marker})
+      {this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker})
       : super._();
 
   @override
@@ -69031,7 +73469,9 @@ class _$PlotOptionsLineStatesHover extends PlotOptionsLineStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsLineStatesHover) return false;
-    return enabled == other.enabled &&
+    return animation == other.animation &&
+        enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -69040,7 +73480,11 @@ class _$PlotOptionsLineStatesHover extends PlotOptionsLineStatesHover {
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, enabled.hashCode), lineWidth.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), enabled.hashCode),
+                    halo.hashCode),
+                lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
   }
@@ -69048,7 +73492,9 @@ class _$PlotOptionsLineStatesHover extends PlotOptionsLineStatesHover {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsLineStatesHover')
+          ..add('animation', animation)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -69061,9 +73507,17 @@ class PlotOptionsLineStatesHoverBuilder
         Builder<PlotOptionsLineStatesHover, PlotOptionsLineStatesHoverBuilder> {
   _$PlotOptionsLineStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -69083,7 +73537,9 @@ class PlotOptionsLineStatesHoverBuilder
 
   PlotOptionsLineStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -69107,7 +73563,9 @@ class PlotOptionsLineStatesHoverBuilder
   _$PlotOptionsLineStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsLineStatesHover._(
+            animation: animation,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -69123,6 +73581,8 @@ class PlotOptionsLineStatesHoverBuilder
 
 class _$PlotOptionsLineStatesHoverHalo extends PlotOptionsLineStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -69131,7 +73591,8 @@ class _$PlotOptionsLineStatesHoverHalo extends PlotOptionsLineStatesHoverHalo {
           [void updates(PlotOptionsLineStatesHoverHaloBuilder b)]) =>
       (new PlotOptionsLineStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$PlotOptionsLineStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$PlotOptionsLineStatesHoverHalo._({this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   PlotOptionsLineStatesHoverHalo rebuild(
@@ -69146,17 +73607,21 @@ class _$PlotOptionsLineStatesHoverHalo extends PlotOptionsLineStatesHoverHalo {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsLineStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsLineStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -69168,6 +73633,10 @@ class PlotOptionsLineStatesHoverHaloBuilder
         Builder<PlotOptionsLineStatesHoverHalo,
             PlotOptionsLineStatesHoverHaloBuilder> {
   _$PlotOptionsLineStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -69181,6 +73650,7 @@ class PlotOptionsLineStatesHoverHaloBuilder
 
   PlotOptionsLineStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -69202,7 +73672,8 @@ class PlotOptionsLineStatesHoverHaloBuilder
   @override
   _$PlotOptionsLineStatesHoverHalo build() {
     final result = _$v ??
-        new _$PlotOptionsLineStatesHoverHalo._(opacity: opacity, size: size);
+        new _$PlotOptionsLineStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -69228,6 +73699,8 @@ class _$PlotOptionsLineStatesHoverMarker
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -69243,6 +73716,7 @@ class _$PlotOptionsLineStatesHoverMarker
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -69266,6 +73740,7 @@ class _$PlotOptionsLineStatesHoverMarker
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -69277,11 +73752,15 @@ class _$PlotOptionsLineStatesHoverMarker
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -69295,6 +73774,7 @@ class _$PlotOptionsLineStatesHoverMarker
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -69331,6 +73811,10 @@ class PlotOptionsLineStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -69349,6 +73833,7 @@ class PlotOptionsLineStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -69377,6 +73862,7 @@ class PlotOptionsLineStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -69390,6 +73876,8 @@ class PlotOptionsLineStatesHoverMarkerBuilder
 // **************************************************************************
 
 class _$PlotOptionsLineTooltip extends PlotOptionsLineTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -69422,7 +73910,8 @@ class _$PlotOptionsLineTooltip extends PlotOptionsLineTooltip {
       (new PlotOptionsLineTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsLineTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -69450,7 +73939,8 @@ class _$PlotOptionsLineTooltip extends PlotOptionsLineTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsLineTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -69479,7 +73969,11 @@ class _$PlotOptionsLineTooltip extends PlotOptionsLineTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -69498,6 +73992,7 @@ class _$PlotOptionsLineTooltip extends PlotOptionsLineTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsLineTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -69518,6 +74013,11 @@ class _$PlotOptionsLineTooltip extends PlotOptionsLineTooltip {
 class PlotOptionsLineTooltipBuilder
     implements Builder<PlotOptionsLineTooltip, PlotOptionsLineTooltipBuilder> {
   _$PlotOptionsLineTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -69578,6 +74078,7 @@ class PlotOptionsLineTooltipBuilder
 
   PlotOptionsLineTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -69611,6 +74112,7 @@ class PlotOptionsLineTooltipBuilder
   _$PlotOptionsLineTooltip build() {
     final result = _$v ??
         new _$PlotOptionsLineTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -69775,6 +74277,8 @@ class _$PlotOptionsPie extends PlotOptionsPie {
   @override
   final num borderWidth;
   @override
+  final JsonObject center;
+  @override
   final String className;
   @override
   final num colorIndex;
@@ -69803,6 +74307,8 @@ class _$PlotOptionsPie extends PlotOptionsPie {
   @override
   final bool ignoreHiddenPoint;
   @override
+  final JsonObject innerSize;
+  @override
   final BuiltList<String> keys;
   @override
   final String linkedTo;
@@ -69815,7 +74321,11 @@ class _$PlotOptionsPie extends PlotOptionsPie {
   @override
   final bool selected;
   @override
+  final JsonObject shadow;
+  @override
   final bool showInLegend;
+  @override
+  final JsonObject size;
   @override
   final bool skipKeyboardNavigation;
   @override
@@ -69823,11 +74333,17 @@ class _$PlotOptionsPie extends PlotOptionsPie {
   @override
   final num startAngle;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
+  @override
+  final JsonObject tooltip;
   @override
   final bool visible;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsPie([void updates(PlotOptionsPieBuilder b)]) =>
       (new PlotOptionsPieBuilder()..update(updates)).build();
@@ -69838,6 +74354,7 @@ class _$PlotOptionsPie extends PlotOptionsPie {
       this.animationLimit,
       this.borderColor,
       this.borderWidth,
+      this.center,
       this.className,
       this.colorIndex,
       this.colors,
@@ -69852,19 +74369,25 @@ class _$PlotOptionsPie extends PlotOptionsPie {
       this.findNearestPointBy,
       this.getExtremesFromAll,
       this.ignoreHiddenPoint,
+      this.innerSize,
       this.keys,
       this.linkedTo,
       this.minSize,
       this.point,
       this.pointDescriptionFormatter,
       this.selected,
+      this.shadow,
       this.showInLegend,
+      this.size,
       this.skipKeyboardNavigation,
       this.slicedOffset,
       this.startAngle,
+      this.states,
       this.stickyTracking,
+      this.tooltip,
       this.visible,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -69884,6 +74407,7 @@ class _$PlotOptionsPie extends PlotOptionsPie {
         animationLimit == other.animationLimit &&
         borderColor == other.borderColor &&
         borderWidth == other.borderWidth &&
+        center == other.center &&
         className == other.className &&
         colorIndex == other.colorIndex &&
         colors == other.colors &&
@@ -69898,19 +74422,25 @@ class _$PlotOptionsPie extends PlotOptionsPie {
         findNearestPointBy == other.findNearestPointBy &&
         getExtremesFromAll == other.getExtremesFromAll &&
         ignoreHiddenPoint == other.ignoreHiddenPoint &&
+        innerSize == other.innerSize &&
         keys == other.keys &&
         linkedTo == other.linkedTo &&
         minSize == other.minSize &&
         point == other.point &&
         pointDescriptionFormatter == other.pointDescriptionFormatter &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showInLegend == other.showInLegend &&
+        size == other.size &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         slicedOffset == other.slicedOffset &&
         startAngle == other.startAngle &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
+        tooltip == other.tooltip &&
         visible == other.visible &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -69933,26 +74463,26 @@ class _$PlotOptionsPie extends PlotOptionsPie {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), borderColor.hashCode), borderWidth.hashCode), className.hashCode), colorIndex.hashCode), colors.hashCode), cursor.hashCode), dataLabels.hashCode), depth.hashCode), description.hashCode), enableMouseTracking.hashCode),
-                                                                                endAngle.hashCode),
-                                                                            events.hashCode),
-                                                                        exposeElementToA11y.hashCode),
-                                                                    findNearestPointBy.hashCode),
-                                                                getExtremesFromAll.hashCode),
-                                                            ignoreHiddenPoint.hashCode),
-                                                        keys.hashCode),
-                                                    linkedTo.hashCode),
-                                                minSize.hashCode),
-                                            point.hashCode),
-                                        pointDescriptionFormatter.hashCode),
-                                    selected.hashCode),
-                                showInLegend.hashCode),
-                            skipKeyboardNavigation.hashCode),
-                        slicedOffset.hashCode),
-                    startAngle.hashCode),
-                stickyTracking.hashCode),
-            visible.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), borderColor.hashCode), borderWidth.hashCode), center.hashCode), className.hashCode), colorIndex.hashCode), colors.hashCode), cursor.hashCode), dataLabels.hashCode), depth.hashCode), description.hashCode), enableMouseTracking.hashCode), endAngle.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), ignoreHiddenPoint.hashCode),
+                                                                                innerSize.hashCode),
+                                                                            keys.hashCode),
+                                                                        linkedTo.hashCode),
+                                                                    minSize.hashCode),
+                                                                point.hashCode),
+                                                            pointDescriptionFormatter.hashCode),
+                                                        selected.hashCode),
+                                                    shadow.hashCode),
+                                                showInLegend.hashCode),
+                                            size.hashCode),
+                                        skipKeyboardNavigation.hashCode),
+                                    slicedOffset.hashCode),
+                                startAngle.hashCode),
+                            states.hashCode),
+                        stickyTracking.hashCode),
+                    tooltip.hashCode),
+                visible.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -69963,6 +74493,7 @@ class _$PlotOptionsPie extends PlotOptionsPie {
           ..add('animationLimit', animationLimit)
           ..add('borderColor', borderColor)
           ..add('borderWidth', borderWidth)
+          ..add('center', center)
           ..add('className', className)
           ..add('colorIndex', colorIndex)
           ..add('colors', colors)
@@ -69977,19 +74508,25 @@ class _$PlotOptionsPie extends PlotOptionsPie {
           ..add('findNearestPointBy', findNearestPointBy)
           ..add('getExtremesFromAll', getExtremesFromAll)
           ..add('ignoreHiddenPoint', ignoreHiddenPoint)
+          ..add('innerSize', innerSize)
           ..add('keys', keys)
           ..add('linkedTo', linkedTo)
           ..add('minSize', minSize)
           ..add('point', point)
           ..add('pointDescriptionFormatter', pointDescriptionFormatter)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showInLegend', showInLegend)
+          ..add('size', size)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('slicedOffset', slicedOffset)
           ..add('startAngle', startAngle)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
+          ..add('tooltip', tooltip)
           ..add('visible', visible)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -70019,6 +74556,10 @@ class PlotOptionsPieBuilder
   num _borderWidth;
   num get borderWidth => _$this._borderWidth;
   set borderWidth(num borderWidth) => _$this._borderWidth = borderWidth;
+
+  JsonObject _center;
+  JsonObject get center => _$this._center;
+  set center(JsonObject center) => _$this._center = center;
 
   String _className;
   String get className => _$this._className;
@@ -70085,6 +74626,10 @@ class PlotOptionsPieBuilder
   set ignoreHiddenPoint(bool ignoreHiddenPoint) =>
       _$this._ignoreHiddenPoint = ignoreHiddenPoint;
 
+  JsonObject _innerSize;
+  JsonObject get innerSize => _$this._innerSize;
+  set innerSize(JsonObject innerSize) => _$this._innerSize = innerSize;
+
   ListBuilder<String> _keys;
   ListBuilder<String> get keys => _$this._keys ??= new ListBuilder<String>();
   set keys(ListBuilder<String> keys) => _$this._keys = keys;
@@ -70111,9 +74656,17 @@ class PlotOptionsPieBuilder
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   bool _showInLegend;
   bool get showInLegend => _$this._showInLegend;
   set showInLegend(bool showInLegend) => _$this._showInLegend = showInLegend;
+
+  JsonObject _size;
+  JsonObject get size => _$this._size;
+  set size(JsonObject size) => _$this._size = size;
 
   bool _skipKeyboardNavigation;
   bool get skipKeyboardNavigation => _$this._skipKeyboardNavigation;
@@ -70128,10 +74681,18 @@ class PlotOptionsPieBuilder
   num get startAngle => _$this._startAngle;
   set startAngle(num startAngle) => _$this._startAngle = startAngle;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
       _$this._stickyTracking = stickyTracking;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   bool _visible;
   bool get visible => _$this._visible;
@@ -70140,6 +74701,10 @@ class PlotOptionsPieBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   PlotOptionsPieBuilder();
 
@@ -70150,6 +74715,7 @@ class PlotOptionsPieBuilder
       _animationLimit = _$v.animationLimit;
       _borderColor = _$v.borderColor;
       _borderWidth = _$v.borderWidth;
+      _center = _$v.center;
       _className = _$v.className;
       _colorIndex = _$v.colorIndex;
       _colors = _$v.colors?.toBuilder();
@@ -70164,19 +74730,25 @@ class PlotOptionsPieBuilder
       _findNearestPointBy = _$v.findNearestPointBy;
       _getExtremesFromAll = _$v.getExtremesFromAll;
       _ignoreHiddenPoint = _$v.ignoreHiddenPoint;
+      _innerSize = _$v.innerSize;
       _keys = _$v.keys?.toBuilder();
       _linkedTo = _$v.linkedTo;
       _minSize = _$v.minSize;
       _point = _$v.point?.toBuilder();
       _pointDescriptionFormatter = _$v.pointDescriptionFormatter;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showInLegend = _$v.showInLegend;
+      _size = _$v.size;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _slicedOffset = _$v.slicedOffset;
       _startAngle = _$v.startAngle;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
+      _tooltip = _$v.tooltip;
       _visible = _$v.visible;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -70202,6 +74774,7 @@ class PlotOptionsPieBuilder
             animationLimit: animationLimit,
             borderColor: borderColor,
             borderWidth: borderWidth,
+            center: center,
             className: className,
             colorIndex: colorIndex,
             colors: _colors?.build(),
@@ -70216,19 +74789,25 @@ class PlotOptionsPieBuilder
             findNearestPointBy: findNearestPointBy,
             getExtremesFromAll: getExtremesFromAll,
             ignoreHiddenPoint: ignoreHiddenPoint,
+            innerSize: innerSize,
             keys: _keys?.build(),
             linkedTo: linkedTo,
             minSize: minSize,
             point: _point?.build(),
             pointDescriptionFormatter: pointDescriptionFormatter,
             selected: selected,
+            shadow: shadow,
             showInLegend: showInLegend,
+            size: size,
             skipKeyboardNavigation: skipKeyboardNavigation,
             slicedOffset: slicedOffset,
             startAngle: startAngle,
+            states: states,
             stickyTracking: stickyTracking,
+            tooltip: tooltip,
             visible: visible,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -70279,6 +74858,8 @@ class _$PlotOptionsPieDataLabels extends PlotOptionsPieDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final bool softConnector;
@@ -70319,6 +74900,7 @@ class _$PlotOptionsPieDataLabels extends PlotOptionsPieDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.softConnector,
       this.style,
@@ -70361,6 +74943,7 @@ class _$PlotOptionsPieDataLabels extends PlotOptionsPieDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         softConnector == other.softConnector &&
         style == other.style &&
@@ -70391,18 +74974,18 @@ class _$PlotOptionsPieDataLabels extends PlotOptionsPieDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc(0, backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), connectorColor.hashCode), connectorPadding.hashCode),
-                                                                                connectorWidth.hashCode),
-                                                                            crop.hashCode),
-                                                                        defer.hashCode),
-                                                                    distance.hashCode),
-                                                                enabled.hashCode),
-                                                            format.hashCode),
-                                                        formatter.hashCode),
-                                                    inside.hashCode),
-                                                overflow.hashCode),
-                                            padding.hashCode),
-                                        rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), connectorColor.hashCode), connectorPadding.hashCode), connectorWidth.hashCode),
+                                                                                crop.hashCode),
+                                                                            defer.hashCode),
+                                                                        distance.hashCode),
+                                                                    enabled.hashCode),
+                                                                format.hashCode),
+                                                            formatter.hashCode),
+                                                        inside.hashCode),
+                                                    overflow.hashCode),
+                                                padding.hashCode),
+                                            rotation.hashCode),
+                                        shadow.hashCode),
                                     shape.hashCode),
                                 softConnector.hashCode),
                             style.hashCode),
@@ -70435,6 +75018,7 @@ class _$PlotOptionsPieDataLabels extends PlotOptionsPieDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('softConnector', softConnector)
           ..add('style', style)
@@ -70532,6 +75116,10 @@ class PlotOptionsPieDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -70590,6 +75178,7 @@ class PlotOptionsPieDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _softConnector = _$v.softConnector;
       _style = _$v.style?.toBuilder();
@@ -70637,6 +75226,7 @@ class PlotOptionsPieDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             softConnector: softConnector,
             style: _style?.build(),
@@ -71173,9 +75763,13 @@ class PlotOptionsPieStatesBuilder
 
 class _$PlotOptionsPieStatesHover extends PlotOptionsPieStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final num brightness;
   @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -71188,8 +75782,10 @@ class _$PlotOptionsPieStatesHover extends PlotOptionsPieStatesHover {
       (new PlotOptionsPieStatesHoverBuilder()..update(updates)).build();
 
   _$PlotOptionsPieStatesHover._(
-      {this.brightness,
+      {this.animation,
+      this.brightness,
       this.enabled,
+      this.halo,
       this.lineWidth,
       this.lineWidthPlus,
       this.marker})
@@ -71208,8 +75804,10 @@ class _$PlotOptionsPieStatesHover extends PlotOptionsPieStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsPieStatesHover) return false;
-    return brightness == other.brightness &&
+    return animation == other.animation &&
+        brightness == other.brightness &&
         enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -71219,7 +75817,11 @@ class _$PlotOptionsPieStatesHover extends PlotOptionsPieStatesHover {
   int get hashCode {
     return $jf($jc(
         $jc(
-            $jc($jc($jc(0, brightness.hashCode), enabled.hashCode),
+            $jc(
+                $jc(
+                    $jc($jc($jc(0, animation.hashCode), brightness.hashCode),
+                        enabled.hashCode),
+                    halo.hashCode),
                 lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
@@ -71228,8 +75830,10 @@ class _$PlotOptionsPieStatesHover extends PlotOptionsPieStatesHover {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsPieStatesHover')
+          ..add('animation', animation)
           ..add('brightness', brightness)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -71242,6 +75846,10 @@ class PlotOptionsPieStatesHoverBuilder
         Builder<PlotOptionsPieStatesHover, PlotOptionsPieStatesHoverBuilder> {
   _$PlotOptionsPieStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   num _brightness;
   num get brightness => _$this._brightness;
   set brightness(num brightness) => _$this._brightness = brightness;
@@ -71249,6 +75857,10 @@ class PlotOptionsPieStatesHoverBuilder
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -71268,8 +75880,10 @@ class PlotOptionsPieStatesHoverBuilder
 
   PlotOptionsPieStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _brightness = _$v.brightness;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -71293,8 +75907,10 @@ class PlotOptionsPieStatesHoverBuilder
   _$PlotOptionsPieStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsPieStatesHover._(
+            animation: animation,
             brightness: brightness,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -71310,6 +75926,8 @@ class PlotOptionsPieStatesHoverBuilder
 
 class _$PlotOptionsPieStatesHoverHalo extends PlotOptionsPieStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -71318,7 +75936,8 @@ class _$PlotOptionsPieStatesHoverHalo extends PlotOptionsPieStatesHoverHalo {
           [void updates(PlotOptionsPieStatesHoverHaloBuilder b)]) =>
       (new PlotOptionsPieStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$PlotOptionsPieStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$PlotOptionsPieStatesHoverHalo._({this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   PlotOptionsPieStatesHoverHalo rebuild(
@@ -71333,17 +75952,21 @@ class _$PlotOptionsPieStatesHoverHalo extends PlotOptionsPieStatesHoverHalo {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsPieStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsPieStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -71355,6 +75978,10 @@ class PlotOptionsPieStatesHoverHaloBuilder
         Builder<PlotOptionsPieStatesHoverHalo,
             PlotOptionsPieStatesHoverHaloBuilder> {
   _$PlotOptionsPieStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -71368,6 +75995,7 @@ class PlotOptionsPieStatesHoverHaloBuilder
 
   PlotOptionsPieStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -71389,7 +76017,8 @@ class PlotOptionsPieStatesHoverHaloBuilder
   @override
   _$PlotOptionsPieStatesHoverHalo build() {
     final result = _$v ??
-        new _$PlotOptionsPieStatesHoverHalo._(opacity: opacity, size: size);
+        new _$PlotOptionsPieStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -71415,6 +76044,8 @@ class _$PlotOptionsPieStatesHoverMarker
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -71430,6 +76061,7 @@ class _$PlotOptionsPieStatesHoverMarker
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -71453,6 +76085,7 @@ class _$PlotOptionsPieStatesHoverMarker
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -71464,11 +76097,15 @@ class _$PlotOptionsPieStatesHoverMarker
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -71482,6 +76119,7 @@ class _$PlotOptionsPieStatesHoverMarker
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -71518,6 +76156,10 @@ class PlotOptionsPieStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -71536,6 +76178,7 @@ class PlotOptionsPieStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -71564,6 +76207,7 @@ class PlotOptionsPieStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -71577,6 +76221,8 @@ class PlotOptionsPieStatesHoverMarkerBuilder
 // **************************************************************************
 
 class _$PlotOptionsPieTooltip extends PlotOptionsPieTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -71609,7 +76255,8 @@ class _$PlotOptionsPieTooltip extends PlotOptionsPieTooltip {
       (new PlotOptionsPieTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsPieTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -71636,7 +76283,8 @@ class _$PlotOptionsPieTooltip extends PlotOptionsPieTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsPieTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -71665,7 +76313,11 @@ class _$PlotOptionsPieTooltip extends PlotOptionsPieTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -71684,6 +76336,7 @@ class _$PlotOptionsPieTooltip extends PlotOptionsPieTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsPieTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -71704,6 +76357,11 @@ class _$PlotOptionsPieTooltip extends PlotOptionsPieTooltip {
 class PlotOptionsPieTooltipBuilder
     implements Builder<PlotOptionsPieTooltip, PlotOptionsPieTooltipBuilder> {
   _$PlotOptionsPieTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -71764,6 +76422,7 @@ class PlotOptionsPieTooltipBuilder
 
   PlotOptionsPieTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -71797,6 +76456,7 @@ class PlotOptionsPieTooltipBuilder
   _$PlotOptionsPieTooltip build() {
     final result = _$v ??
         new _$PlotOptionsPieTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -72004,19 +76664,27 @@ class _$PlotOptionsPolygon extends PlotOptionsPolygon {
   @override
   final bool selected;
   @override
+  final JsonObject shadow;
+  @override
   final bool showCheckbox;
   @override
   final bool showInLegend;
   @override
   final bool skipKeyboardNavigation;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
+  @override
+  final JsonObject tooltip;
   @override
   final num turboThreshold;
   @override
   final bool visible;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsPolygon([void updates(PlotOptionsPolygonBuilder b)]) =>
       (new PlotOptionsPolygonBuilder()..update(updates)).build();
@@ -72049,13 +76717,17 @@ class _$PlotOptionsPolygon extends PlotOptionsPolygon {
       this.pointIntervalUnit,
       this.pointStart,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
+      this.states,
       this.stickyTracking,
+      this.tooltip,
       this.turboThreshold,
       this.visible,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -72097,13 +76769,17 @@ class _$PlotOptionsPolygon extends PlotOptionsPolygon {
         pointIntervalUnit == other.pointIntervalUnit &&
         pointStart == other.pointStart &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
+        tooltip == other.tooltip &&
         turboThreshold == other.turboThreshold &&
         visible == other.visible &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -72126,26 +76802,26 @@ class _$PlotOptionsPolygon extends PlotOptionsPolygon {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode),
-                                                                                getExtremesFromAll.hashCode),
-                                                                            keys.hashCode),
-                                                                        lineWidth.hashCode),
-                                                                    linkedTo.hashCode),
-                                                                marker.hashCode),
-                                                            negativeColor.hashCode),
-                                                        point.hashCode),
-                                                    pointDescriptionFormatter.hashCode),
-                                                pointInterval.hashCode),
-                                            pointIntervalUnit.hashCode),
-                                        pointStart.hashCode),
-                                    selected.hashCode),
-                                showCheckbox.hashCode),
-                            showInLegend.hashCode),
-                        skipKeyboardNavigation.hashCode),
-                    stickyTracking.hashCode),
-                turboThreshold.hashCode),
-            visible.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode), lineWidth.hashCode), linkedTo.hashCode),
+                                                                                marker.hashCode),
+                                                                            negativeColor.hashCode),
+                                                                        point.hashCode),
+                                                                    pointDescriptionFormatter.hashCode),
+                                                                pointInterval.hashCode),
+                                                            pointIntervalUnit.hashCode),
+                                                        pointStart.hashCode),
+                                                    selected.hashCode),
+                                                shadow.hashCode),
+                                            showCheckbox.hashCode),
+                                        showInLegend.hashCode),
+                                    skipKeyboardNavigation.hashCode),
+                                states.hashCode),
+                            stickyTracking.hashCode),
+                        tooltip.hashCode),
+                    turboThreshold.hashCode),
+                visible.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -72178,13 +76854,17 @@ class _$PlotOptionsPolygon extends PlotOptionsPolygon {
           ..add('pointIntervalUnit', pointIntervalUnit)
           ..add('pointStart', pointStart)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
+          ..add('tooltip', tooltip)
           ..add('turboThreshold', turboThreshold)
           ..add('visible', visible)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -72315,6 +76995,10 @@ class PlotOptionsPolygonBuilder
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
   set showCheckbox(bool showCheckbox) => _$this._showCheckbox = showCheckbox;
@@ -72328,10 +77012,18 @@ class PlotOptionsPolygonBuilder
   set skipKeyboardNavigation(bool skipKeyboardNavigation) =>
       _$this._skipKeyboardNavigation = skipKeyboardNavigation;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
       _$this._stickyTracking = stickyTracking;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   num _turboThreshold;
   num get turboThreshold => _$this._turboThreshold;
@@ -72345,6 +77037,10 @@ class PlotOptionsPolygonBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   PlotOptionsPolygonBuilder();
 
@@ -72377,13 +77073,17 @@ class PlotOptionsPolygonBuilder
       _pointIntervalUnit = _$v.pointIntervalUnit;
       _pointStart = _$v.pointStart;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
+      _tooltip = _$v.tooltip;
       _turboThreshold = _$v.turboThreshold;
       _visible = _$v.visible;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -72431,13 +77131,17 @@ class PlotOptionsPolygonBuilder
             pointIntervalUnit: pointIntervalUnit,
             pointStart: pointStart,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
+            states: states,
             stickyTracking: stickyTracking,
+            tooltip: tooltip,
             turboThreshold: turboThreshold,
             visible: visible,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -72484,6 +77188,8 @@ class _$PlotOptionsPolygonDataLabels extends PlotOptionsPolygonDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -72520,6 +77226,7 @@ class _$PlotOptionsPolygonDataLabels extends PlotOptionsPolygonDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -72559,6 +77266,7 @@ class _$PlotOptionsPolygonDataLabels extends PlotOptionsPolygonDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -72588,19 +77296,19 @@ class _$PlotOptionsPolygonDataLabels extends PlotOptionsPolygonDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -72630,6 +77338,7 @@ class _$PlotOptionsPolygonDataLabels extends PlotOptionsPolygonDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -72716,6 +77425,10 @@ class PlotOptionsPolygonDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -72767,6 +77480,7 @@ class PlotOptionsPolygonDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -72811,6 +77525,7 @@ class PlotOptionsPolygonDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -73931,7 +78646,11 @@ class PlotOptionsPolygonStatesBuilder
 
 class _$PlotOptionsPolygonStatesHover extends PlotOptionsPolygonStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -73944,7 +78663,12 @@ class _$PlotOptionsPolygonStatesHover extends PlotOptionsPolygonStatesHover {
       (new PlotOptionsPolygonStatesHoverBuilder()..update(updates)).build();
 
   _$PlotOptionsPolygonStatesHover._(
-      {this.enabled, this.lineWidth, this.lineWidthPlus, this.marker})
+      {this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker})
       : super._();
 
   @override
@@ -73960,7 +78684,9 @@ class _$PlotOptionsPolygonStatesHover extends PlotOptionsPolygonStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsPolygonStatesHover) return false;
-    return enabled == other.enabled &&
+    return animation == other.animation &&
+        enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -73969,7 +78695,11 @@ class _$PlotOptionsPolygonStatesHover extends PlotOptionsPolygonStatesHover {
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, enabled.hashCode), lineWidth.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), enabled.hashCode),
+                    halo.hashCode),
+                lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
   }
@@ -73977,7 +78707,9 @@ class _$PlotOptionsPolygonStatesHover extends PlotOptionsPolygonStatesHover {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsPolygonStatesHover')
+          ..add('animation', animation)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -73991,9 +78723,17 @@ class PlotOptionsPolygonStatesHoverBuilder
             PlotOptionsPolygonStatesHoverBuilder> {
   _$PlotOptionsPolygonStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -74013,7 +78753,9 @@ class PlotOptionsPolygonStatesHoverBuilder
 
   PlotOptionsPolygonStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -74037,7 +78779,9 @@ class PlotOptionsPolygonStatesHoverBuilder
   _$PlotOptionsPolygonStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsPolygonStatesHover._(
+            animation: animation,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -74054,6 +78798,8 @@ class PlotOptionsPolygonStatesHoverBuilder
 class _$PlotOptionsPolygonStatesHoverHalo
     extends PlotOptionsPolygonStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -74062,7 +78808,9 @@ class _$PlotOptionsPolygonStatesHoverHalo
           [void updates(PlotOptionsPolygonStatesHoverHaloBuilder b)]) =>
       (new PlotOptionsPolygonStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$PlotOptionsPolygonStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$PlotOptionsPolygonStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   PlotOptionsPolygonStatesHoverHalo rebuild(
@@ -74077,17 +78825,21 @@ class _$PlotOptionsPolygonStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsPolygonStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsPolygonStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -74099,6 +78851,10 @@ class PlotOptionsPolygonStatesHoverHaloBuilder
         Builder<PlotOptionsPolygonStatesHoverHalo,
             PlotOptionsPolygonStatesHoverHaloBuilder> {
   _$PlotOptionsPolygonStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -74112,6 +78868,7 @@ class PlotOptionsPolygonStatesHoverHaloBuilder
 
   PlotOptionsPolygonStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -74133,7 +78890,8 @@ class PlotOptionsPolygonStatesHoverHaloBuilder
   @override
   _$PlotOptionsPolygonStatesHoverHalo build() {
     final result = _$v ??
-        new _$PlotOptionsPolygonStatesHoverHalo._(opacity: opacity, size: size);
+        new _$PlotOptionsPolygonStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -74159,6 +78917,8 @@ class _$PlotOptionsPolygonStatesHoverMarker
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -74175,6 +78935,7 @@ class _$PlotOptionsPolygonStatesHoverMarker
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -74198,6 +78959,7 @@ class _$PlotOptionsPolygonStatesHoverMarker
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -74209,11 +78971,15 @@ class _$PlotOptionsPolygonStatesHoverMarker
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -74227,6 +78993,7 @@ class _$PlotOptionsPolygonStatesHoverMarker
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -74263,6 +79030,10 @@ class PlotOptionsPolygonStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -74281,6 +79052,7 @@ class PlotOptionsPolygonStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -74309,6 +79081,7 @@ class PlotOptionsPolygonStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -74322,6 +79095,8 @@ class PlotOptionsPolygonStatesHoverMarkerBuilder
 // **************************************************************************
 
 class _$PlotOptionsPolygonTooltip extends PlotOptionsPolygonTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -74354,7 +79129,8 @@ class _$PlotOptionsPolygonTooltip extends PlotOptionsPolygonTooltip {
       (new PlotOptionsPolygonTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsPolygonTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -74382,7 +79158,8 @@ class _$PlotOptionsPolygonTooltip extends PlotOptionsPolygonTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsPolygonTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -74411,7 +79188,11 @@ class _$PlotOptionsPolygonTooltip extends PlotOptionsPolygonTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -74430,6 +79211,7 @@ class _$PlotOptionsPolygonTooltip extends PlotOptionsPolygonTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsPolygonTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -74451,6 +79233,11 @@ class PlotOptionsPolygonTooltipBuilder
     implements
         Builder<PlotOptionsPolygonTooltip, PlotOptionsPolygonTooltipBuilder> {
   _$PlotOptionsPolygonTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -74511,6 +79298,7 @@ class PlotOptionsPolygonTooltipBuilder
 
   PlotOptionsPolygonTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -74544,6 +79332,7 @@ class PlotOptionsPolygonTooltipBuilder
   _$PlotOptionsPolygonTooltip build() {
     final result = _$v ??
         new _$PlotOptionsPolygonTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -74708,6 +79497,8 @@ class _$PlotOptionsPyramid extends PlotOptionsPyramid {
   @override
   final num borderWidth;
   @override
+  final JsonObject center;
+  @override
   final String className;
   @override
   final num colorIndex;
@@ -74732,6 +79523,8 @@ class _$PlotOptionsPyramid extends PlotOptionsPyramid {
   @override
   final bool getExtremesFromAll;
   @override
+  final JsonObject height;
+  @override
   final BuiltList<String> keys;
   @override
   final String linkedTo;
@@ -74746,17 +79539,27 @@ class _$PlotOptionsPyramid extends PlotOptionsPyramid {
   @override
   final bool selected;
   @override
+  final JsonObject shadow;
+  @override
   final bool showInLegend;
   @override
   final bool skipKeyboardNavigation;
   @override
   final num slicedOffset;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
+  @override
+  final JsonObject tooltip;
   @override
   final bool visible;
   @override
+  final JsonObject width;
+  @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsPyramid([void updates(PlotOptionsPyramidBuilder b)]) =>
       (new PlotOptionsPyramidBuilder()..update(updates)).build();
@@ -74766,6 +79569,7 @@ class _$PlotOptionsPyramid extends PlotOptionsPyramid {
       this.animationLimit,
       this.borderColor,
       this.borderWidth,
+      this.center,
       this.className,
       this.colorIndex,
       this.colors,
@@ -74778,6 +79582,7 @@ class _$PlotOptionsPyramid extends PlotOptionsPyramid {
       this.exposeElementToA11y,
       this.findNearestPointBy,
       this.getExtremesFromAll,
+      this.height,
       this.keys,
       this.linkedTo,
       this.minSize,
@@ -74785,12 +79590,17 @@ class _$PlotOptionsPyramid extends PlotOptionsPyramid {
       this.pointDescriptionFormatter,
       this.reversed,
       this.selected,
+      this.shadow,
       this.showInLegend,
       this.skipKeyboardNavigation,
       this.slicedOffset,
+      this.states,
       this.stickyTracking,
+      this.tooltip,
       this.visible,
-      this.zoneAxis})
+      this.width,
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -74809,6 +79619,7 @@ class _$PlotOptionsPyramid extends PlotOptionsPyramid {
         animationLimit == other.animationLimit &&
         borderColor == other.borderColor &&
         borderWidth == other.borderWidth &&
+        center == other.center &&
         className == other.className &&
         colorIndex == other.colorIndex &&
         colors == other.colors &&
@@ -74821,6 +79632,7 @@ class _$PlotOptionsPyramid extends PlotOptionsPyramid {
         exposeElementToA11y == other.exposeElementToA11y &&
         findNearestPointBy == other.findNearestPointBy &&
         getExtremesFromAll == other.getExtremesFromAll &&
+        height == other.height &&
         keys == other.keys &&
         linkedTo == other.linkedTo &&
         minSize == other.minSize &&
@@ -74828,12 +79640,17 @@ class _$PlotOptionsPyramid extends PlotOptionsPyramid {
         pointDescriptionFormatter == other.pointDescriptionFormatter &&
         reversed == other.reversed &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         slicedOffset == other.slicedOffset &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
+        tooltip == other.tooltip &&
         visible == other.visible &&
-        zoneAxis == other.zoneAxis;
+        width == other.width &&
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -74856,26 +79673,26 @@ class _$PlotOptionsPyramid extends PlotOptionsPyramid {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animationLimit.hashCode), borderColor.hashCode), borderWidth.hashCode), className.hashCode), colorIndex.hashCode), colors.hashCode), cursor.hashCode), dataLabels.hashCode), depth.hashCode),
-                                                                                description.hashCode),
-                                                                            enableMouseTracking.hashCode),
-                                                                        events.hashCode),
-                                                                    exposeElementToA11y.hashCode),
-                                                                findNearestPointBy.hashCode),
-                                                            getExtremesFromAll.hashCode),
-                                                        keys.hashCode),
-                                                    linkedTo.hashCode),
-                                                minSize.hashCode),
-                                            point.hashCode),
-                                        pointDescriptionFormatter.hashCode),
-                                    reversed.hashCode),
-                                selected.hashCode),
-                            showInLegend.hashCode),
-                        skipKeyboardNavigation.hashCode),
-                    slicedOffset.hashCode),
-                stickyTracking.hashCode),
-            visible.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animationLimit.hashCode), borderColor.hashCode), borderWidth.hashCode), center.hashCode), className.hashCode), colorIndex.hashCode), colors.hashCode), cursor.hashCode), dataLabels.hashCode), depth.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode),
+                                                                                height.hashCode),
+                                                                            keys.hashCode),
+                                                                        linkedTo.hashCode),
+                                                                    minSize.hashCode),
+                                                                point.hashCode),
+                                                            pointDescriptionFormatter.hashCode),
+                                                        reversed.hashCode),
+                                                    selected.hashCode),
+                                                shadow.hashCode),
+                                            showInLegend.hashCode),
+                                        skipKeyboardNavigation.hashCode),
+                                    slicedOffset.hashCode),
+                                states.hashCode),
+                            stickyTracking.hashCode),
+                        tooltip.hashCode),
+                    visible.hashCode),
+                width.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -74885,6 +79702,7 @@ class _$PlotOptionsPyramid extends PlotOptionsPyramid {
           ..add('animationLimit', animationLimit)
           ..add('borderColor', borderColor)
           ..add('borderWidth', borderWidth)
+          ..add('center', center)
           ..add('className', className)
           ..add('colorIndex', colorIndex)
           ..add('colors', colors)
@@ -74897,6 +79715,7 @@ class _$PlotOptionsPyramid extends PlotOptionsPyramid {
           ..add('exposeElementToA11y', exposeElementToA11y)
           ..add('findNearestPointBy', findNearestPointBy)
           ..add('getExtremesFromAll', getExtremesFromAll)
+          ..add('height', height)
           ..add('keys', keys)
           ..add('linkedTo', linkedTo)
           ..add('minSize', minSize)
@@ -74904,12 +79723,17 @@ class _$PlotOptionsPyramid extends PlotOptionsPyramid {
           ..add('pointDescriptionFormatter', pointDescriptionFormatter)
           ..add('reversed', reversed)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('slicedOffset', slicedOffset)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
+          ..add('tooltip', tooltip)
           ..add('visible', visible)
-          ..add('zoneAxis', zoneAxis))
+          ..add('width', width)
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -74935,6 +79759,10 @@ class PlotOptionsPyramidBuilder
   num _borderWidth;
   num get borderWidth => _$this._borderWidth;
   set borderWidth(num borderWidth) => _$this._borderWidth = borderWidth;
+
+  JsonObject _center;
+  JsonObject get center => _$this._center;
+  set center(JsonObject center) => _$this._center = center;
 
   String _className;
   String get className => _$this._className;
@@ -74992,6 +79820,10 @@ class PlotOptionsPyramidBuilder
   set getExtremesFromAll(bool getExtremesFromAll) =>
       _$this._getExtremesFromAll = getExtremesFromAll;
 
+  JsonObject _height;
+  JsonObject get height => _$this._height;
+  set height(JsonObject height) => _$this._height = height;
+
   ListBuilder<String> _keys;
   ListBuilder<String> get keys => _$this._keys ??= new ListBuilder<String>();
   set keys(ListBuilder<String> keys) => _$this._keys = keys;
@@ -75022,6 +79854,10 @@ class PlotOptionsPyramidBuilder
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   bool _showInLegend;
   bool get showInLegend => _$this._showInLegend;
   set showInLegend(bool showInLegend) => _$this._showInLegend = showInLegend;
@@ -75035,18 +79871,34 @@ class PlotOptionsPyramidBuilder
   num get slicedOffset => _$this._slicedOffset;
   set slicedOffset(num slicedOffset) => _$this._slicedOffset = slicedOffset;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
       _$this._stickyTracking = stickyTracking;
 
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
+
   bool _visible;
   bool get visible => _$this._visible;
   set visible(bool visible) => _$this._visible = visible;
 
+  JsonObject _width;
+  JsonObject get width => _$this._width;
+  set width(JsonObject width) => _$this._width = width;
+
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   PlotOptionsPyramidBuilder();
 
@@ -75056,6 +79908,7 @@ class PlotOptionsPyramidBuilder
       _animationLimit = _$v.animationLimit;
       _borderColor = _$v.borderColor;
       _borderWidth = _$v.borderWidth;
+      _center = _$v.center;
       _className = _$v.className;
       _colorIndex = _$v.colorIndex;
       _colors = _$v.colors?.toBuilder();
@@ -75068,6 +79921,7 @@ class PlotOptionsPyramidBuilder
       _exposeElementToA11y = _$v.exposeElementToA11y;
       _findNearestPointBy = _$v.findNearestPointBy;
       _getExtremesFromAll = _$v.getExtremesFromAll;
+      _height = _$v.height;
       _keys = _$v.keys?.toBuilder();
       _linkedTo = _$v.linkedTo;
       _minSize = _$v.minSize;
@@ -75075,12 +79929,17 @@ class PlotOptionsPyramidBuilder
       _pointDescriptionFormatter = _$v.pointDescriptionFormatter;
       _reversed = _$v.reversed;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _slicedOffset = _$v.slicedOffset;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
+      _tooltip = _$v.tooltip;
       _visible = _$v.visible;
+      _width = _$v.width;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -75105,6 +79964,7 @@ class PlotOptionsPyramidBuilder
             animationLimit: animationLimit,
             borderColor: borderColor,
             borderWidth: borderWidth,
+            center: center,
             className: className,
             colorIndex: colorIndex,
             colors: _colors?.build(),
@@ -75117,6 +79977,7 @@ class PlotOptionsPyramidBuilder
             exposeElementToA11y: exposeElementToA11y,
             findNearestPointBy: findNearestPointBy,
             getExtremesFromAll: getExtremesFromAll,
+            height: height,
             keys: _keys?.build(),
             linkedTo: linkedTo,
             minSize: minSize,
@@ -75124,12 +79985,17 @@ class PlotOptionsPyramidBuilder
             pointDescriptionFormatter: pointDescriptionFormatter,
             reversed: reversed,
             selected: selected,
+            shadow: shadow,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
             slicedOffset: slicedOffset,
+            states: states,
             stickyTracking: stickyTracking,
+            tooltip: tooltip,
             visible: visible,
-            zoneAxis: zoneAxis);
+            width: width,
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -75180,6 +80046,8 @@ class _$PlotOptionsPyramidDataLabels extends PlotOptionsPyramidDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final bool softConnector;
@@ -75220,6 +80088,7 @@ class _$PlotOptionsPyramidDataLabels extends PlotOptionsPyramidDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.softConnector,
       this.style,
@@ -75262,6 +80131,7 @@ class _$PlotOptionsPyramidDataLabels extends PlotOptionsPyramidDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         softConnector == other.softConnector &&
         style == other.style &&
@@ -75292,18 +80162,18 @@ class _$PlotOptionsPyramidDataLabels extends PlotOptionsPyramidDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc(0, backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), connectorColor.hashCode), connectorPadding.hashCode),
-                                                                                connectorWidth.hashCode),
-                                                                            crop.hashCode),
-                                                                        defer.hashCode),
-                                                                    distance.hashCode),
-                                                                enabled.hashCode),
-                                                            format.hashCode),
-                                                        formatter.hashCode),
-                                                    inside.hashCode),
-                                                overflow.hashCode),
-                                            padding.hashCode),
-                                        rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), connectorColor.hashCode), connectorPadding.hashCode), connectorWidth.hashCode),
+                                                                                crop.hashCode),
+                                                                            defer.hashCode),
+                                                                        distance.hashCode),
+                                                                    enabled.hashCode),
+                                                                format.hashCode),
+                                                            formatter.hashCode),
+                                                        inside.hashCode),
+                                                    overflow.hashCode),
+                                                padding.hashCode),
+                                            rotation.hashCode),
+                                        shadow.hashCode),
                                     shape.hashCode),
                                 softConnector.hashCode),
                             style.hashCode),
@@ -75336,6 +80206,7 @@ class _$PlotOptionsPyramidDataLabels extends PlotOptionsPyramidDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('softConnector', softConnector)
           ..add('style', style)
@@ -75434,6 +80305,10 @@ class PlotOptionsPyramidDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -75492,6 +80367,7 @@ class PlotOptionsPyramidDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _softConnector = _$v.softConnector;
       _style = _$v.style?.toBuilder();
@@ -75539,6 +80415,7 @@ class PlotOptionsPyramidDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             softConnector: softConnector,
             style: _style?.build(),
@@ -76086,9 +80963,13 @@ class PlotOptionsPyramidStatesBuilder
 
 class _$PlotOptionsPyramidStatesHover extends PlotOptionsPyramidStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final num brightness;
   @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -76101,8 +80982,10 @@ class _$PlotOptionsPyramidStatesHover extends PlotOptionsPyramidStatesHover {
       (new PlotOptionsPyramidStatesHoverBuilder()..update(updates)).build();
 
   _$PlotOptionsPyramidStatesHover._(
-      {this.brightness,
+      {this.animation,
+      this.brightness,
       this.enabled,
+      this.halo,
       this.lineWidth,
       this.lineWidthPlus,
       this.marker})
@@ -76121,8 +81004,10 @@ class _$PlotOptionsPyramidStatesHover extends PlotOptionsPyramidStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsPyramidStatesHover) return false;
-    return brightness == other.brightness &&
+    return animation == other.animation &&
+        brightness == other.brightness &&
         enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -76132,7 +81017,11 @@ class _$PlotOptionsPyramidStatesHover extends PlotOptionsPyramidStatesHover {
   int get hashCode {
     return $jf($jc(
         $jc(
-            $jc($jc($jc(0, brightness.hashCode), enabled.hashCode),
+            $jc(
+                $jc(
+                    $jc($jc($jc(0, animation.hashCode), brightness.hashCode),
+                        enabled.hashCode),
+                    halo.hashCode),
                 lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
@@ -76141,8 +81030,10 @@ class _$PlotOptionsPyramidStatesHover extends PlotOptionsPyramidStatesHover {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsPyramidStatesHover')
+          ..add('animation', animation)
           ..add('brightness', brightness)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -76156,6 +81047,10 @@ class PlotOptionsPyramidStatesHoverBuilder
             PlotOptionsPyramidStatesHoverBuilder> {
   _$PlotOptionsPyramidStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   num _brightness;
   num get brightness => _$this._brightness;
   set brightness(num brightness) => _$this._brightness = brightness;
@@ -76163,6 +81058,10 @@ class PlotOptionsPyramidStatesHoverBuilder
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -76182,8 +81081,10 @@ class PlotOptionsPyramidStatesHoverBuilder
 
   PlotOptionsPyramidStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _brightness = _$v.brightness;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -76207,8 +81108,10 @@ class PlotOptionsPyramidStatesHoverBuilder
   _$PlotOptionsPyramidStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsPyramidStatesHover._(
+            animation: animation,
             brightness: brightness,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -76225,6 +81128,8 @@ class PlotOptionsPyramidStatesHoverBuilder
 class _$PlotOptionsPyramidStatesHoverHalo
     extends PlotOptionsPyramidStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -76233,7 +81138,9 @@ class _$PlotOptionsPyramidStatesHoverHalo
           [void updates(PlotOptionsPyramidStatesHoverHaloBuilder b)]) =>
       (new PlotOptionsPyramidStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$PlotOptionsPyramidStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$PlotOptionsPyramidStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   PlotOptionsPyramidStatesHoverHalo rebuild(
@@ -76248,17 +81155,21 @@ class _$PlotOptionsPyramidStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsPyramidStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsPyramidStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -76270,6 +81181,10 @@ class PlotOptionsPyramidStatesHoverHaloBuilder
         Builder<PlotOptionsPyramidStatesHoverHalo,
             PlotOptionsPyramidStatesHoverHaloBuilder> {
   _$PlotOptionsPyramidStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -76283,6 +81198,7 @@ class PlotOptionsPyramidStatesHoverHaloBuilder
 
   PlotOptionsPyramidStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -76304,7 +81220,8 @@ class PlotOptionsPyramidStatesHoverHaloBuilder
   @override
   _$PlotOptionsPyramidStatesHoverHalo build() {
     final result = _$v ??
-        new _$PlotOptionsPyramidStatesHoverHalo._(opacity: opacity, size: size);
+        new _$PlotOptionsPyramidStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -76330,6 +81247,8 @@ class _$PlotOptionsPyramidStatesHoverMarker
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -76346,6 +81265,7 @@ class _$PlotOptionsPyramidStatesHoverMarker
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -76369,6 +81289,7 @@ class _$PlotOptionsPyramidStatesHoverMarker
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -76380,11 +81301,15 @@ class _$PlotOptionsPyramidStatesHoverMarker
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -76398,6 +81323,7 @@ class _$PlotOptionsPyramidStatesHoverMarker
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -76434,6 +81360,10 @@ class PlotOptionsPyramidStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -76452,6 +81382,7 @@ class PlotOptionsPyramidStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -76480,6 +81411,7 @@ class PlotOptionsPyramidStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -76493,6 +81425,8 @@ class PlotOptionsPyramidStatesHoverMarkerBuilder
 // **************************************************************************
 
 class _$PlotOptionsPyramidTooltip extends PlotOptionsPyramidTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -76525,7 +81459,8 @@ class _$PlotOptionsPyramidTooltip extends PlotOptionsPyramidTooltip {
       (new PlotOptionsPyramidTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsPyramidTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -76553,7 +81488,8 @@ class _$PlotOptionsPyramidTooltip extends PlotOptionsPyramidTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsPyramidTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -76582,7 +81518,11 @@ class _$PlotOptionsPyramidTooltip extends PlotOptionsPyramidTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -76601,6 +81541,7 @@ class _$PlotOptionsPyramidTooltip extends PlotOptionsPyramidTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsPyramidTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -76622,6 +81563,11 @@ class PlotOptionsPyramidTooltipBuilder
     implements
         Builder<PlotOptionsPyramidTooltip, PlotOptionsPyramidTooltipBuilder> {
   _$PlotOptionsPyramidTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -76682,6 +81628,7 @@ class PlotOptionsPyramidTooltipBuilder
 
   PlotOptionsPyramidTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -76715,6 +81662,7 @@ class PlotOptionsPyramidTooltipBuilder
   _$PlotOptionsPyramidTooltip build() {
     final result = _$v ??
         new _$PlotOptionsPyramidTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -76925,6 +81873,8 @@ class _$PlotOptionsScatter extends PlotOptionsScatter {
   @override
   final bool selected;
   @override
+  final JsonObject shadow;
+  @override
   final bool showCheckbox;
   @override
   final bool showInLegend;
@@ -76933,15 +81883,21 @@ class _$PlotOptionsScatter extends PlotOptionsScatter {
   @override
   final bool softThreshold;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
   @override
   final num threshold;
+  @override
+  final JsonObject tooltip;
   @override
   final num turboThreshold;
   @override
   final bool visible;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsScatter([void updates(PlotOptionsScatterBuilder b)]) =>
       (new PlotOptionsScatterBuilder()..update(updates)).build();
@@ -76974,15 +81930,19 @@ class _$PlotOptionsScatter extends PlotOptionsScatter {
       this.pointIntervalUnit,
       this.pointStart,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
       this.softThreshold,
+      this.states,
       this.stickyTracking,
       this.threshold,
+      this.tooltip,
       this.turboThreshold,
       this.visible,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -77024,15 +81984,19 @@ class _$PlotOptionsScatter extends PlotOptionsScatter {
         pointIntervalUnit == other.pointIntervalUnit &&
         pointStart == other.pointStart &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         softThreshold == other.softThreshold &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
         threshold == other.threshold &&
+        tooltip == other.tooltip &&
         turboThreshold == other.turboThreshold &&
         visible == other.visible &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -77055,26 +82019,26 @@ class _$PlotOptionsScatter extends PlotOptionsScatter {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode),
-                                                                                lineWidth.hashCode),
-                                                                            linkedTo.hashCode),
-                                                                        marker.hashCode),
-                                                                    negativeColor.hashCode),
-                                                                point.hashCode),
-                                                            pointDescriptionFormatter.hashCode),
-                                                        pointInterval.hashCode),
-                                                    pointIntervalUnit.hashCode),
-                                                pointStart.hashCode),
-                                            selected.hashCode),
-                                        showCheckbox.hashCode),
-                                    showInLegend.hashCode),
-                                skipKeyboardNavigation.hashCode),
-                            softThreshold.hashCode),
-                        stickyTracking.hashCode),
-                    threshold.hashCode),
-                turboThreshold.hashCode),
-            visible.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode), lineWidth.hashCode), linkedTo.hashCode), marker.hashCode), negativeColor.hashCode),
+                                                                                point.hashCode),
+                                                                            pointDescriptionFormatter.hashCode),
+                                                                        pointInterval.hashCode),
+                                                                    pointIntervalUnit.hashCode),
+                                                                pointStart.hashCode),
+                                                            selected.hashCode),
+                                                        shadow.hashCode),
+                                                    showCheckbox.hashCode),
+                                                showInLegend.hashCode),
+                                            skipKeyboardNavigation.hashCode),
+                                        softThreshold.hashCode),
+                                    states.hashCode),
+                                stickyTracking.hashCode),
+                            threshold.hashCode),
+                        tooltip.hashCode),
+                    turboThreshold.hashCode),
+                visible.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -77107,15 +82071,19 @@ class _$PlotOptionsScatter extends PlotOptionsScatter {
           ..add('pointIntervalUnit', pointIntervalUnit)
           ..add('pointStart', pointStart)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('softThreshold', softThreshold)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
           ..add('threshold', threshold)
+          ..add('tooltip', tooltip)
           ..add('turboThreshold', turboThreshold)
           ..add('visible', visible)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -77246,6 +82214,10 @@ class PlotOptionsScatterBuilder
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
   set showCheckbox(bool showCheckbox) => _$this._showCheckbox = showCheckbox;
@@ -77264,6 +82236,10 @@ class PlotOptionsScatterBuilder
   set softThreshold(bool softThreshold) =>
       _$this._softThreshold = softThreshold;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
@@ -77272,6 +82248,10 @@ class PlotOptionsScatterBuilder
   num _threshold;
   num get threshold => _$this._threshold;
   set threshold(num threshold) => _$this._threshold = threshold;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   num _turboThreshold;
   num get turboThreshold => _$this._turboThreshold;
@@ -77285,6 +82265,10 @@ class PlotOptionsScatterBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   PlotOptionsScatterBuilder();
 
@@ -77317,15 +82301,19 @@ class PlotOptionsScatterBuilder
       _pointIntervalUnit = _$v.pointIntervalUnit;
       _pointStart = _$v.pointStart;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _softThreshold = _$v.softThreshold;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
       _threshold = _$v.threshold;
+      _tooltip = _$v.tooltip;
       _turboThreshold = _$v.turboThreshold;
       _visible = _$v.visible;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -77373,15 +82361,19 @@ class PlotOptionsScatterBuilder
             pointIntervalUnit: pointIntervalUnit,
             pointStart: pointStart,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
             softThreshold: softThreshold,
+            states: states,
             stickyTracking: stickyTracking,
             threshold: threshold,
+            tooltip: tooltip,
             turboThreshold: turboThreshold,
             visible: visible,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -77428,6 +82420,8 @@ class _$PlotOptionsScatterDataLabels extends PlotOptionsScatterDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -77464,6 +82458,7 @@ class _$PlotOptionsScatterDataLabels extends PlotOptionsScatterDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -77503,6 +82498,7 @@ class _$PlotOptionsScatterDataLabels extends PlotOptionsScatterDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -77532,19 +82528,19 @@ class _$PlotOptionsScatterDataLabels extends PlotOptionsScatterDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -77574,6 +82570,7 @@ class _$PlotOptionsScatterDataLabels extends PlotOptionsScatterDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -77660,6 +82657,10 @@ class PlotOptionsScatterDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -77711,6 +82712,7 @@ class PlotOptionsScatterDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -77755,6 +82757,7 @@ class PlotOptionsScatterDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -78875,7 +83878,11 @@ class PlotOptionsScatterStatesBuilder
 
 class _$PlotOptionsScatterStatesHover extends PlotOptionsScatterStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -78888,7 +83895,12 @@ class _$PlotOptionsScatterStatesHover extends PlotOptionsScatterStatesHover {
       (new PlotOptionsScatterStatesHoverBuilder()..update(updates)).build();
 
   _$PlotOptionsScatterStatesHover._(
-      {this.enabled, this.lineWidth, this.lineWidthPlus, this.marker})
+      {this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker})
       : super._();
 
   @override
@@ -78904,7 +83916,9 @@ class _$PlotOptionsScatterStatesHover extends PlotOptionsScatterStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsScatterStatesHover) return false;
-    return enabled == other.enabled &&
+    return animation == other.animation &&
+        enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -78913,7 +83927,11 @@ class _$PlotOptionsScatterStatesHover extends PlotOptionsScatterStatesHover {
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, enabled.hashCode), lineWidth.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), enabled.hashCode),
+                    halo.hashCode),
+                lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
   }
@@ -78921,7 +83939,9 @@ class _$PlotOptionsScatterStatesHover extends PlotOptionsScatterStatesHover {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsScatterStatesHover')
+          ..add('animation', animation)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -78935,9 +83955,17 @@ class PlotOptionsScatterStatesHoverBuilder
             PlotOptionsScatterStatesHoverBuilder> {
   _$PlotOptionsScatterStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -78957,7 +83985,9 @@ class PlotOptionsScatterStatesHoverBuilder
 
   PlotOptionsScatterStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -78981,7 +84011,9 @@ class PlotOptionsScatterStatesHoverBuilder
   _$PlotOptionsScatterStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsScatterStatesHover._(
+            animation: animation,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -78998,6 +84030,8 @@ class PlotOptionsScatterStatesHoverBuilder
 class _$PlotOptionsScatterStatesHoverHalo
     extends PlotOptionsScatterStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -79006,7 +84040,9 @@ class _$PlotOptionsScatterStatesHoverHalo
           [void updates(PlotOptionsScatterStatesHoverHaloBuilder b)]) =>
       (new PlotOptionsScatterStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$PlotOptionsScatterStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$PlotOptionsScatterStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   PlotOptionsScatterStatesHoverHalo rebuild(
@@ -79021,17 +84057,21 @@ class _$PlotOptionsScatterStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsScatterStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsScatterStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -79043,6 +84083,10 @@ class PlotOptionsScatterStatesHoverHaloBuilder
         Builder<PlotOptionsScatterStatesHoverHalo,
             PlotOptionsScatterStatesHoverHaloBuilder> {
   _$PlotOptionsScatterStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -79056,6 +84100,7 @@ class PlotOptionsScatterStatesHoverHaloBuilder
 
   PlotOptionsScatterStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -79077,7 +84122,8 @@ class PlotOptionsScatterStatesHoverHaloBuilder
   @override
   _$PlotOptionsScatterStatesHoverHalo build() {
     final result = _$v ??
-        new _$PlotOptionsScatterStatesHoverHalo._(opacity: opacity, size: size);
+        new _$PlotOptionsScatterStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -79103,6 +84149,8 @@ class _$PlotOptionsScatterStatesHoverMarker
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -79119,6 +84167,7 @@ class _$PlotOptionsScatterStatesHoverMarker
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -79142,6 +84191,7 @@ class _$PlotOptionsScatterStatesHoverMarker
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -79153,11 +84203,15 @@ class _$PlotOptionsScatterStatesHoverMarker
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -79171,6 +84225,7 @@ class _$PlotOptionsScatterStatesHoverMarker
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -79207,6 +84262,10 @@ class PlotOptionsScatterStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -79225,6 +84284,7 @@ class PlotOptionsScatterStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -79253,6 +84313,7 @@ class PlotOptionsScatterStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -79266,6 +84327,8 @@ class PlotOptionsScatterStatesHoverMarkerBuilder
 // **************************************************************************
 
 class _$PlotOptionsScatterTooltip extends PlotOptionsScatterTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -79298,7 +84361,8 @@ class _$PlotOptionsScatterTooltip extends PlotOptionsScatterTooltip {
       (new PlotOptionsScatterTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsScatterTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -79326,7 +84390,8 @@ class _$PlotOptionsScatterTooltip extends PlotOptionsScatterTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsScatterTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -79355,7 +84420,11 @@ class _$PlotOptionsScatterTooltip extends PlotOptionsScatterTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -79374,6 +84443,7 @@ class _$PlotOptionsScatterTooltip extends PlotOptionsScatterTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsScatterTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -79395,6 +84465,11 @@ class PlotOptionsScatterTooltipBuilder
     implements
         Builder<PlotOptionsScatterTooltip, PlotOptionsScatterTooltipBuilder> {
   _$PlotOptionsScatterTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -79455,6 +84530,7 @@ class PlotOptionsScatterTooltipBuilder
 
   PlotOptionsScatterTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -79488,6 +84564,7 @@ class PlotOptionsScatterTooltipBuilder
   _$PlotOptionsScatterTooltip build() {
     final result = _$v ??
         new _$PlotOptionsScatterTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -79700,9 +84777,13 @@ class _$PlotOptionsSeries extends PlotOptionsSeries {
   @override
   final String pointIntervalUnit;
   @override
+  final JsonObject pointPlacement;
+  @override
   final num pointStart;
   @override
   final bool selected;
+  @override
+  final JsonObject shadow;
   @override
   final bool showCheckbox;
   @override
@@ -79714,17 +84795,23 @@ class _$PlotOptionsSeries extends PlotOptionsSeries {
   @override
   final String stacking;
   @override
+  final JsonObject states;
+  @override
   final String step;
   @override
   final bool stickyTracking;
   @override
   final num threshold;
   @override
+  final JsonObject tooltip;
+  @override
   final num turboThreshold;
   @override
   final bool visible;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsSeries([void updates(PlotOptionsSeriesBuilder b)]) =>
       (new PlotOptionsSeriesBuilder()..update(updates)).build();
@@ -79758,19 +84845,24 @@ class _$PlotOptionsSeries extends PlotOptionsSeries {
       this.pointDescriptionFormatter,
       this.pointInterval,
       this.pointIntervalUnit,
+      this.pointPlacement,
       this.pointStart,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
       this.softThreshold,
       this.stacking,
+      this.states,
       this.step,
       this.stickyTracking,
       this.threshold,
+      this.tooltip,
       this.turboThreshold,
       this.visible,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -79813,19 +84905,24 @@ class _$PlotOptionsSeries extends PlotOptionsSeries {
         pointDescriptionFormatter == other.pointDescriptionFormatter &&
         pointInterval == other.pointInterval &&
         pointIntervalUnit == other.pointIntervalUnit &&
+        pointPlacement == other.pointPlacement &&
         pointStart == other.pointStart &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         softThreshold == other.softThreshold &&
         stacking == other.stacking &&
+        states == other.states &&
         step == other.step &&
         stickyTracking == other.stickyTracking &&
         threshold == other.threshold &&
+        tooltip == other.tooltip &&
         turboThreshold == other.turboThreshold &&
         visible == other.visible &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -79848,26 +84945,26 @@ class _$PlotOptionsSeries extends PlotOptionsSeries {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), connectEnds.hashCode), connectNulls.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode), lineWidth.hashCode), linecap.hashCode), linkedTo.hashCode),
-                                                                                marker.hashCode),
-                                                                            negativeColor.hashCode),
-                                                                        point.hashCode),
-                                                                    pointDescriptionFormatter.hashCode),
-                                                                pointInterval.hashCode),
-                                                            pointIntervalUnit.hashCode),
-                                                        pointStart.hashCode),
-                                                    selected.hashCode),
-                                                showCheckbox.hashCode),
-                                            showInLegend.hashCode),
-                                        skipKeyboardNavigation.hashCode),
-                                    softThreshold.hashCode),
-                                stacking.hashCode),
-                            step.hashCode),
-                        stickyTracking.hashCode),
-                    threshold.hashCode),
-                turboThreshold.hashCode),
-            visible.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), connectEnds.hashCode), connectNulls.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode), lineWidth.hashCode), linecap.hashCode), linkedTo.hashCode), marker.hashCode), negativeColor.hashCode), point.hashCode), pointDescriptionFormatter.hashCode), pointInterval.hashCode),
+                                                                                pointIntervalUnit.hashCode),
+                                                                            pointPlacement.hashCode),
+                                                                        pointStart.hashCode),
+                                                                    selected.hashCode),
+                                                                shadow.hashCode),
+                                                            showCheckbox.hashCode),
+                                                        showInLegend.hashCode),
+                                                    skipKeyboardNavigation.hashCode),
+                                                softThreshold.hashCode),
+                                            stacking.hashCode),
+                                        states.hashCode),
+                                    step.hashCode),
+                                stickyTracking.hashCode),
+                            threshold.hashCode),
+                        tooltip.hashCode),
+                    turboThreshold.hashCode),
+                visible.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -79901,19 +84998,24 @@ class _$PlotOptionsSeries extends PlotOptionsSeries {
           ..add('pointDescriptionFormatter', pointDescriptionFormatter)
           ..add('pointInterval', pointInterval)
           ..add('pointIntervalUnit', pointIntervalUnit)
+          ..add('pointPlacement', pointPlacement)
           ..add('pointStart', pointStart)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('softThreshold', softThreshold)
           ..add('stacking', stacking)
+          ..add('states', states)
           ..add('step', step)
           ..add('stickyTracking', stickyTracking)
           ..add('threshold', threshold)
+          ..add('tooltip', tooltip)
           ..add('turboThreshold', turboThreshold)
           ..add('visible', visible)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -80048,6 +85150,11 @@ class PlotOptionsSeriesBuilder
   set pointIntervalUnit(String pointIntervalUnit) =>
       _$this._pointIntervalUnit = pointIntervalUnit;
 
+  JsonObject _pointPlacement;
+  JsonObject get pointPlacement => _$this._pointPlacement;
+  set pointPlacement(JsonObject pointPlacement) =>
+      _$this._pointPlacement = pointPlacement;
+
   num _pointStart;
   num get pointStart => _$this._pointStart;
   set pointStart(num pointStart) => _$this._pointStart = pointStart;
@@ -80055,6 +85162,10 @@ class PlotOptionsSeriesBuilder
   bool _selected;
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
+
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
 
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
@@ -80078,6 +85189,10 @@ class PlotOptionsSeriesBuilder
   String get stacking => _$this._stacking;
   set stacking(String stacking) => _$this._stacking = stacking;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _step;
   String get step => _$this._step;
   set step(String step) => _$this._step = step;
@@ -80091,6 +85206,10 @@ class PlotOptionsSeriesBuilder
   num get threshold => _$this._threshold;
   set threshold(num threshold) => _$this._threshold = threshold;
 
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
+
   num _turboThreshold;
   num get turboThreshold => _$this._turboThreshold;
   set turboThreshold(num turboThreshold) =>
@@ -80103,6 +85222,10 @@ class PlotOptionsSeriesBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   PlotOptionsSeriesBuilder();
 
@@ -80136,19 +85259,24 @@ class PlotOptionsSeriesBuilder
       _pointDescriptionFormatter = _$v.pointDescriptionFormatter;
       _pointInterval = _$v.pointInterval;
       _pointIntervalUnit = _$v.pointIntervalUnit;
+      _pointPlacement = _$v.pointPlacement;
       _pointStart = _$v.pointStart;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _softThreshold = _$v.softThreshold;
       _stacking = _$v.stacking;
+      _states = _$v.states;
       _step = _$v.step;
       _stickyTracking = _$v.stickyTracking;
       _threshold = _$v.threshold;
+      _tooltip = _$v.tooltip;
       _turboThreshold = _$v.turboThreshold;
       _visible = _$v.visible;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -80197,19 +85325,24 @@ class PlotOptionsSeriesBuilder
             pointDescriptionFormatter: pointDescriptionFormatter,
             pointInterval: pointInterval,
             pointIntervalUnit: pointIntervalUnit,
+            pointPlacement: pointPlacement,
             pointStart: pointStart,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
             softThreshold: softThreshold,
             stacking: stacking,
+            states: states,
             step: step,
             stickyTracking: stickyTracking,
             threshold: threshold,
+            tooltip: tooltip,
             turboThreshold: turboThreshold,
             visible: visible,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -80256,6 +85389,8 @@ class _$PlotOptionsSeriesDataLabels extends PlotOptionsSeriesDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -80292,6 +85427,7 @@ class _$PlotOptionsSeriesDataLabels extends PlotOptionsSeriesDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -80331,6 +85467,7 @@ class _$PlotOptionsSeriesDataLabels extends PlotOptionsSeriesDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -80360,19 +85497,19 @@ class _$PlotOptionsSeriesDataLabels extends PlotOptionsSeriesDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -80402,6 +85539,7 @@ class _$PlotOptionsSeriesDataLabels extends PlotOptionsSeriesDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -80488,6 +85626,10 @@ class PlotOptionsSeriesDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -80539,6 +85681,7 @@ class PlotOptionsSeriesDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -80583,6 +85726,7 @@ class PlotOptionsSeriesDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -81701,7 +86845,11 @@ class PlotOptionsSeriesStatesBuilder
 
 class _$PlotOptionsSeriesStatesHover extends PlotOptionsSeriesStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -81714,7 +86862,12 @@ class _$PlotOptionsSeriesStatesHover extends PlotOptionsSeriesStatesHover {
       (new PlotOptionsSeriesStatesHoverBuilder()..update(updates)).build();
 
   _$PlotOptionsSeriesStatesHover._(
-      {this.enabled, this.lineWidth, this.lineWidthPlus, this.marker})
+      {this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker})
       : super._();
 
   @override
@@ -81730,7 +86883,9 @@ class _$PlotOptionsSeriesStatesHover extends PlotOptionsSeriesStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsSeriesStatesHover) return false;
-    return enabled == other.enabled &&
+    return animation == other.animation &&
+        enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -81739,7 +86894,11 @@ class _$PlotOptionsSeriesStatesHover extends PlotOptionsSeriesStatesHover {
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, enabled.hashCode), lineWidth.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), enabled.hashCode),
+                    halo.hashCode),
+                lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
   }
@@ -81747,7 +86906,9 @@ class _$PlotOptionsSeriesStatesHover extends PlotOptionsSeriesStatesHover {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsSeriesStatesHover')
+          ..add('animation', animation)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -81761,9 +86922,17 @@ class PlotOptionsSeriesStatesHoverBuilder
             PlotOptionsSeriesStatesHoverBuilder> {
   _$PlotOptionsSeriesStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -81783,7 +86952,9 @@ class PlotOptionsSeriesStatesHoverBuilder
 
   PlotOptionsSeriesStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -81807,7 +86978,9 @@ class PlotOptionsSeriesStatesHoverBuilder
   _$PlotOptionsSeriesStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsSeriesStatesHover._(
+            animation: animation,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -81824,6 +86997,8 @@ class PlotOptionsSeriesStatesHoverBuilder
 class _$PlotOptionsSeriesStatesHoverHalo
     extends PlotOptionsSeriesStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -81832,7 +87007,9 @@ class _$PlotOptionsSeriesStatesHoverHalo
           [void updates(PlotOptionsSeriesStatesHoverHaloBuilder b)]) =>
       (new PlotOptionsSeriesStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$PlotOptionsSeriesStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$PlotOptionsSeriesStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   PlotOptionsSeriesStatesHoverHalo rebuild(
@@ -81847,17 +87024,21 @@ class _$PlotOptionsSeriesStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsSeriesStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsSeriesStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -81869,6 +87050,10 @@ class PlotOptionsSeriesStatesHoverHaloBuilder
         Builder<PlotOptionsSeriesStatesHoverHalo,
             PlotOptionsSeriesStatesHoverHaloBuilder> {
   _$PlotOptionsSeriesStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -81882,6 +87067,7 @@ class PlotOptionsSeriesStatesHoverHaloBuilder
 
   PlotOptionsSeriesStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -81903,7 +87089,8 @@ class PlotOptionsSeriesStatesHoverHaloBuilder
   @override
   _$PlotOptionsSeriesStatesHoverHalo build() {
     final result = _$v ??
-        new _$PlotOptionsSeriesStatesHoverHalo._(opacity: opacity, size: size);
+        new _$PlotOptionsSeriesStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -81929,6 +87116,8 @@ class _$PlotOptionsSeriesStatesHoverMarker
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -81945,6 +87134,7 @@ class _$PlotOptionsSeriesStatesHoverMarker
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -81968,6 +87158,7 @@ class _$PlotOptionsSeriesStatesHoverMarker
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -81979,11 +87170,15 @@ class _$PlotOptionsSeriesStatesHoverMarker
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -81997,6 +87192,7 @@ class _$PlotOptionsSeriesStatesHoverMarker
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -82033,6 +87229,10 @@ class PlotOptionsSeriesStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -82051,6 +87251,7 @@ class PlotOptionsSeriesStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -82079,6 +87280,7 @@ class PlotOptionsSeriesStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -82092,6 +87294,8 @@ class PlotOptionsSeriesStatesHoverMarkerBuilder
 // **************************************************************************
 
 class _$PlotOptionsSeriesTooltip extends PlotOptionsSeriesTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -82124,7 +87328,8 @@ class _$PlotOptionsSeriesTooltip extends PlotOptionsSeriesTooltip {
       (new PlotOptionsSeriesTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsSeriesTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -82152,7 +87357,8 @@ class _$PlotOptionsSeriesTooltip extends PlotOptionsSeriesTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsSeriesTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -82181,7 +87387,11 @@ class _$PlotOptionsSeriesTooltip extends PlotOptionsSeriesTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -82200,6 +87410,7 @@ class _$PlotOptionsSeriesTooltip extends PlotOptionsSeriesTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsSeriesTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -82221,6 +87432,11 @@ class PlotOptionsSeriesTooltipBuilder
     implements
         Builder<PlotOptionsSeriesTooltip, PlotOptionsSeriesTooltipBuilder> {
   _$PlotOptionsSeriesTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -82281,6 +87497,7 @@ class PlotOptionsSeriesTooltipBuilder
 
   PlotOptionsSeriesTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -82314,6 +87531,7 @@ class PlotOptionsSeriesTooltipBuilder
   _$PlotOptionsSeriesTooltip build() {
     final result = _$v ??
         new _$PlotOptionsSeriesTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -82479,6 +87697,8 @@ class _$PlotOptionsSolidgauge extends PlotOptionsSolidgauge {
   @override
   final String cursor;
   @override
+  final JsonObject dataLabels;
+  @override
   final String description;
   @override
   final bool enableMouseTracking;
@@ -82515,6 +87735,8 @@ class _$PlotOptionsSolidgauge extends PlotOptionsSolidgauge {
   @override
   final num threshold;
   @override
+  final JsonObject tooltip;
+  @override
   final bool visible;
   @override
   final bool wrap;
@@ -82529,6 +87751,7 @@ class _$PlotOptionsSolidgauge extends PlotOptionsSolidgauge {
       this.className,
       this.colorIndex,
       this.cursor,
+      this.dataLabels,
       this.description,
       this.enableMouseTracking,
       this.events,
@@ -82547,6 +87770,7 @@ class _$PlotOptionsSolidgauge extends PlotOptionsSolidgauge {
       this.skipKeyboardNavigation,
       this.stickyTracking,
       this.threshold,
+      this.tooltip,
       this.visible,
       this.wrap})
       : super._();
@@ -82568,6 +87792,7 @@ class _$PlotOptionsSolidgauge extends PlotOptionsSolidgauge {
         className == other.className &&
         colorIndex == other.colorIndex &&
         cursor == other.cursor &&
+        dataLabels == other.dataLabels &&
         description == other.description &&
         enableMouseTracking == other.enableMouseTracking &&
         events == other.events &&
@@ -82586,6 +87811,7 @@ class _$PlotOptionsSolidgauge extends PlotOptionsSolidgauge {
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         stickyTracking == other.stickyTracking &&
         threshold == other.threshold &&
+        tooltip == other.tooltip &&
         visible == other.visible &&
         wrap == other.wrap;
   }
@@ -82610,24 +87836,24 @@ class _$PlotOptionsSolidgauge extends PlotOptionsSolidgauge {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc(0, animation.hashCode), animationLimit.hashCode), className.hashCode), colorIndex.hashCode), cursor.hashCode), description.hashCode),
-                                                                                enableMouseTracking.hashCode),
-                                                                            events.hashCode),
-                                                                        exposeElementToA11y.hashCode),
-                                                                    findNearestPointBy.hashCode),
-                                                                getExtremesFromAll.hashCode),
-                                                            keys.hashCode),
-                                                        linecap.hashCode),
-                                                    overshoot.hashCode),
-                                                point.hashCode),
-                                            pointDescriptionFormatter.hashCode),
-                                        rounded.hashCode),
-                                    selected.hashCode),
-                                showCheckbox.hashCode),
-                            showInLegend.hashCode),
-                        skipKeyboardNavigation.hashCode),
-                    stickyTracking.hashCode),
-                threshold.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc(0, animation.hashCode), animationLimit.hashCode), className.hashCode), colorIndex.hashCode), cursor.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode),
+                                                                                events.hashCode),
+                                                                            exposeElementToA11y.hashCode),
+                                                                        findNearestPointBy.hashCode),
+                                                                    getExtremesFromAll.hashCode),
+                                                                keys.hashCode),
+                                                            linecap.hashCode),
+                                                        overshoot.hashCode),
+                                                    point.hashCode),
+                                                pointDescriptionFormatter.hashCode),
+                                            rounded.hashCode),
+                                        selected.hashCode),
+                                    showCheckbox.hashCode),
+                                showInLegend.hashCode),
+                            skipKeyboardNavigation.hashCode),
+                        stickyTracking.hashCode),
+                    threshold.hashCode),
+                tooltip.hashCode),
             visible.hashCode),
         wrap.hashCode));
   }
@@ -82640,6 +87866,7 @@ class _$PlotOptionsSolidgauge extends PlotOptionsSolidgauge {
           ..add('className', className)
           ..add('colorIndex', colorIndex)
           ..add('cursor', cursor)
+          ..add('dataLabels', dataLabels)
           ..add('description', description)
           ..add('enableMouseTracking', enableMouseTracking)
           ..add('events', events)
@@ -82658,6 +87885,7 @@ class _$PlotOptionsSolidgauge extends PlotOptionsSolidgauge {
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('stickyTracking', stickyTracking)
           ..add('threshold', threshold)
+          ..add('tooltip', tooltip)
           ..add('visible', visible)
           ..add('wrap', wrap))
         .toString();
@@ -82688,6 +87916,10 @@ class PlotOptionsSolidgaugeBuilder
   String _cursor;
   String get cursor => _$this._cursor;
   set cursor(String cursor) => _$this._cursor = cursor;
+
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
 
   String _description;
   String get description => _$this._description;
@@ -82771,6 +88003,10 @@ class PlotOptionsSolidgaugeBuilder
   num get threshold => _$this._threshold;
   set threshold(num threshold) => _$this._threshold = threshold;
 
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
+
   bool _visible;
   bool get visible => _$this._visible;
   set visible(bool visible) => _$this._visible = visible;
@@ -82788,6 +88024,7 @@ class PlotOptionsSolidgaugeBuilder
       _className = _$v.className;
       _colorIndex = _$v.colorIndex;
       _cursor = _$v.cursor;
+      _dataLabels = _$v.dataLabels;
       _description = _$v.description;
       _enableMouseTracking = _$v.enableMouseTracking;
       _events = _$v.events?.toBuilder();
@@ -82806,6 +88043,7 @@ class PlotOptionsSolidgaugeBuilder
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _stickyTracking = _$v.stickyTracking;
       _threshold = _$v.threshold;
+      _tooltip = _$v.tooltip;
       _visible = _$v.visible;
       _wrap = _$v.wrap;
       _$v = null;
@@ -82833,6 +88071,7 @@ class PlotOptionsSolidgaugeBuilder
             className: className,
             colorIndex: colorIndex,
             cursor: cursor,
+            dataLabels: dataLabels,
             description: description,
             enableMouseTracking: enableMouseTracking,
             events: _events?.build(),
@@ -82851,6 +88090,7 @@ class PlotOptionsSolidgaugeBuilder
             skipKeyboardNavigation: skipKeyboardNavigation,
             stickyTracking: stickyTracking,
             threshold: threshold,
+            tooltip: tooltip,
             visible: visible,
             wrap: wrap);
     replace(result);
@@ -82900,6 +88140,8 @@ class _$PlotOptionsSolidgaugeDataLabels
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -82936,6 +88178,7 @@ class _$PlotOptionsSolidgaugeDataLabels
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -82975,6 +88218,7 @@ class _$PlotOptionsSolidgaugeDataLabels
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -83004,19 +88248,19 @@ class _$PlotOptionsSolidgaugeDataLabels
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -83046,6 +88290,7 @@ class _$PlotOptionsSolidgaugeDataLabels
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -83132,6 +88377,10 @@ class PlotOptionsSolidgaugeDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -83183,6 +88432,7 @@ class PlotOptionsSolidgaugeDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -83227,6 +88477,7 @@ class PlotOptionsSolidgaugeDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -83674,6 +88925,8 @@ class PlotOptionsSolidgaugePointEventsBuilder
 
 class _$PlotOptionsSolidgaugeTooltip extends PlotOptionsSolidgaugeTooltip {
   @override
+  final JsonObject dateTimeLabelFormats;
+  @override
   final bool followPointer;
   @override
   final bool followTouchMove;
@@ -83705,7 +88958,8 @@ class _$PlotOptionsSolidgaugeTooltip extends PlotOptionsSolidgaugeTooltip {
       (new PlotOptionsSolidgaugeTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsSolidgaugeTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -83733,7 +88987,8 @@ class _$PlotOptionsSolidgaugeTooltip extends PlotOptionsSolidgaugeTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsSolidgaugeTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -83762,7 +89017,11 @@ class _$PlotOptionsSolidgaugeTooltip extends PlotOptionsSolidgaugeTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -83781,6 +89040,7 @@ class _$PlotOptionsSolidgaugeTooltip extends PlotOptionsSolidgaugeTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsSolidgaugeTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -83803,6 +89063,11 @@ class PlotOptionsSolidgaugeTooltipBuilder
         Builder<PlotOptionsSolidgaugeTooltip,
             PlotOptionsSolidgaugeTooltipBuilder> {
   _$PlotOptionsSolidgaugeTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -83863,6 +89128,7 @@ class PlotOptionsSolidgaugeTooltipBuilder
 
   PlotOptionsSolidgaugeTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -83896,6 +89162,7 @@ class PlotOptionsSolidgaugeTooltipBuilder
   _$PlotOptionsSolidgaugeTooltip build() {
     final result = _$v ??
         new _$PlotOptionsSolidgaugeTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -83977,9 +89244,13 @@ class _$PlotOptionsSpline extends PlotOptionsSpline {
   @override
   final String pointIntervalUnit;
   @override
+  final JsonObject pointPlacement;
+  @override
   final num pointStart;
   @override
   final bool selected;
+  @override
+  final JsonObject shadow;
   @override
   final bool showCheckbox;
   @override
@@ -83991,15 +89262,21 @@ class _$PlotOptionsSpline extends PlotOptionsSpline {
   @override
   final String stacking;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
   @override
   final num threshold;
+  @override
+  final JsonObject tooltip;
   @override
   final num turboThreshold;
   @override
   final bool visible;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsSpline([void updates(PlotOptionsSplineBuilder b)]) =>
       (new PlotOptionsSplineBuilder()..update(updates)).build();
@@ -84033,18 +89310,23 @@ class _$PlotOptionsSpline extends PlotOptionsSpline {
       this.pointDescriptionFormatter,
       this.pointInterval,
       this.pointIntervalUnit,
+      this.pointPlacement,
       this.pointStart,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
       this.softThreshold,
       this.stacking,
+      this.states,
       this.stickyTracking,
       this.threshold,
+      this.tooltip,
       this.turboThreshold,
       this.visible,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -84087,18 +89369,23 @@ class _$PlotOptionsSpline extends PlotOptionsSpline {
         pointDescriptionFormatter == other.pointDescriptionFormatter &&
         pointInterval == other.pointInterval &&
         pointIntervalUnit == other.pointIntervalUnit &&
+        pointPlacement == other.pointPlacement &&
         pointStart == other.pointStart &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         softThreshold == other.softThreshold &&
         stacking == other.stacking &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
         threshold == other.threshold &&
+        tooltip == other.tooltip &&
         turboThreshold == other.turboThreshold &&
         visible == other.visible &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -84121,26 +89408,26 @@ class _$PlotOptionsSpline extends PlotOptionsSpline {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), connectEnds.hashCode), connectNulls.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode), lineWidth.hashCode), linecap.hashCode),
-                                                                                linkedTo.hashCode),
-                                                                            marker.hashCode),
-                                                                        negativeColor.hashCode),
-                                                                    point.hashCode),
-                                                                pointDescriptionFormatter.hashCode),
-                                                            pointInterval.hashCode),
-                                                        pointIntervalUnit.hashCode),
-                                                    pointStart.hashCode),
-                                                selected.hashCode),
-                                            showCheckbox.hashCode),
-                                        showInLegend.hashCode),
-                                    skipKeyboardNavigation.hashCode),
-                                softThreshold.hashCode),
-                            stacking.hashCode),
-                        stickyTracking.hashCode),
-                    threshold.hashCode),
-                turboThreshold.hashCode),
-            visible.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), connectEnds.hashCode), connectNulls.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode), lineWidth.hashCode), linecap.hashCode), linkedTo.hashCode), marker.hashCode), negativeColor.hashCode), point.hashCode), pointDescriptionFormatter.hashCode),
+                                                                                pointInterval.hashCode),
+                                                                            pointIntervalUnit.hashCode),
+                                                                        pointPlacement.hashCode),
+                                                                    pointStart.hashCode),
+                                                                selected.hashCode),
+                                                            shadow.hashCode),
+                                                        showCheckbox.hashCode),
+                                                    showInLegend.hashCode),
+                                                skipKeyboardNavigation.hashCode),
+                                            softThreshold.hashCode),
+                                        stacking.hashCode),
+                                    states.hashCode),
+                                stickyTracking.hashCode),
+                            threshold.hashCode),
+                        tooltip.hashCode),
+                    turboThreshold.hashCode),
+                visible.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -84174,18 +89461,23 @@ class _$PlotOptionsSpline extends PlotOptionsSpline {
           ..add('pointDescriptionFormatter', pointDescriptionFormatter)
           ..add('pointInterval', pointInterval)
           ..add('pointIntervalUnit', pointIntervalUnit)
+          ..add('pointPlacement', pointPlacement)
           ..add('pointStart', pointStart)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('softThreshold', softThreshold)
           ..add('stacking', stacking)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
           ..add('threshold', threshold)
+          ..add('tooltip', tooltip)
           ..add('turboThreshold', turboThreshold)
           ..add('visible', visible)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -84320,6 +89612,11 @@ class PlotOptionsSplineBuilder
   set pointIntervalUnit(String pointIntervalUnit) =>
       _$this._pointIntervalUnit = pointIntervalUnit;
 
+  JsonObject _pointPlacement;
+  JsonObject get pointPlacement => _$this._pointPlacement;
+  set pointPlacement(JsonObject pointPlacement) =>
+      _$this._pointPlacement = pointPlacement;
+
   num _pointStart;
   num get pointStart => _$this._pointStart;
   set pointStart(num pointStart) => _$this._pointStart = pointStart;
@@ -84327,6 +89624,10 @@ class PlotOptionsSplineBuilder
   bool _selected;
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
+
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
 
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
@@ -84350,6 +89651,10 @@ class PlotOptionsSplineBuilder
   String get stacking => _$this._stacking;
   set stacking(String stacking) => _$this._stacking = stacking;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
@@ -84358,6 +89663,10 @@ class PlotOptionsSplineBuilder
   num _threshold;
   num get threshold => _$this._threshold;
   set threshold(num threshold) => _$this._threshold = threshold;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   num _turboThreshold;
   num get turboThreshold => _$this._turboThreshold;
@@ -84371,6 +89680,10 @@ class PlotOptionsSplineBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   PlotOptionsSplineBuilder();
 
@@ -84404,18 +89717,23 @@ class PlotOptionsSplineBuilder
       _pointDescriptionFormatter = _$v.pointDescriptionFormatter;
       _pointInterval = _$v.pointInterval;
       _pointIntervalUnit = _$v.pointIntervalUnit;
+      _pointPlacement = _$v.pointPlacement;
       _pointStart = _$v.pointStart;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _softThreshold = _$v.softThreshold;
       _stacking = _$v.stacking;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
       _threshold = _$v.threshold;
+      _tooltip = _$v.tooltip;
       _turboThreshold = _$v.turboThreshold;
       _visible = _$v.visible;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -84464,18 +89782,23 @@ class PlotOptionsSplineBuilder
             pointDescriptionFormatter: pointDescriptionFormatter,
             pointInterval: pointInterval,
             pointIntervalUnit: pointIntervalUnit,
+            pointPlacement: pointPlacement,
             pointStart: pointStart,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
             softThreshold: softThreshold,
             stacking: stacking,
+            states: states,
             stickyTracking: stickyTracking,
             threshold: threshold,
+            tooltip: tooltip,
             turboThreshold: turboThreshold,
             visible: visible,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -84522,6 +89845,8 @@ class _$PlotOptionsSplineDataLabels extends PlotOptionsSplineDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -84558,6 +89883,7 @@ class _$PlotOptionsSplineDataLabels extends PlotOptionsSplineDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -84597,6 +89923,7 @@ class _$PlotOptionsSplineDataLabels extends PlotOptionsSplineDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -84626,19 +89953,19 @@ class _$PlotOptionsSplineDataLabels extends PlotOptionsSplineDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -84668,6 +89995,7 @@ class _$PlotOptionsSplineDataLabels extends PlotOptionsSplineDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -84754,6 +90082,10 @@ class PlotOptionsSplineDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -84805,6 +90137,7 @@ class PlotOptionsSplineDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -84849,6 +90182,7 @@ class PlotOptionsSplineDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -85967,7 +91301,11 @@ class PlotOptionsSplineStatesBuilder
 
 class _$PlotOptionsSplineStatesHover extends PlotOptionsSplineStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -85980,7 +91318,12 @@ class _$PlotOptionsSplineStatesHover extends PlotOptionsSplineStatesHover {
       (new PlotOptionsSplineStatesHoverBuilder()..update(updates)).build();
 
   _$PlotOptionsSplineStatesHover._(
-      {this.enabled, this.lineWidth, this.lineWidthPlus, this.marker})
+      {this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker})
       : super._();
 
   @override
@@ -85996,7 +91339,9 @@ class _$PlotOptionsSplineStatesHover extends PlotOptionsSplineStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsSplineStatesHover) return false;
-    return enabled == other.enabled &&
+    return animation == other.animation &&
+        enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -86005,7 +91350,11 @@ class _$PlotOptionsSplineStatesHover extends PlotOptionsSplineStatesHover {
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, enabled.hashCode), lineWidth.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), enabled.hashCode),
+                    halo.hashCode),
+                lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
   }
@@ -86013,7 +91362,9 @@ class _$PlotOptionsSplineStatesHover extends PlotOptionsSplineStatesHover {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsSplineStatesHover')
+          ..add('animation', animation)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -86027,9 +91378,17 @@ class PlotOptionsSplineStatesHoverBuilder
             PlotOptionsSplineStatesHoverBuilder> {
   _$PlotOptionsSplineStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -86049,7 +91408,9 @@ class PlotOptionsSplineStatesHoverBuilder
 
   PlotOptionsSplineStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -86073,7 +91434,9 @@ class PlotOptionsSplineStatesHoverBuilder
   _$PlotOptionsSplineStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsSplineStatesHover._(
+            animation: animation,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -86090,6 +91453,8 @@ class PlotOptionsSplineStatesHoverBuilder
 class _$PlotOptionsSplineStatesHoverHalo
     extends PlotOptionsSplineStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -86098,7 +91463,9 @@ class _$PlotOptionsSplineStatesHoverHalo
           [void updates(PlotOptionsSplineStatesHoverHaloBuilder b)]) =>
       (new PlotOptionsSplineStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$PlotOptionsSplineStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$PlotOptionsSplineStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   PlotOptionsSplineStatesHoverHalo rebuild(
@@ -86113,17 +91480,21 @@ class _$PlotOptionsSplineStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsSplineStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsSplineStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -86135,6 +91506,10 @@ class PlotOptionsSplineStatesHoverHaloBuilder
         Builder<PlotOptionsSplineStatesHoverHalo,
             PlotOptionsSplineStatesHoverHaloBuilder> {
   _$PlotOptionsSplineStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -86148,6 +91523,7 @@ class PlotOptionsSplineStatesHoverHaloBuilder
 
   PlotOptionsSplineStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -86169,7 +91545,8 @@ class PlotOptionsSplineStatesHoverHaloBuilder
   @override
   _$PlotOptionsSplineStatesHoverHalo build() {
     final result = _$v ??
-        new _$PlotOptionsSplineStatesHoverHalo._(opacity: opacity, size: size);
+        new _$PlotOptionsSplineStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -86195,6 +91572,8 @@ class _$PlotOptionsSplineStatesHoverMarker
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -86211,6 +91590,7 @@ class _$PlotOptionsSplineStatesHoverMarker
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -86234,6 +91614,7 @@ class _$PlotOptionsSplineStatesHoverMarker
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -86245,11 +91626,15 @@ class _$PlotOptionsSplineStatesHoverMarker
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -86263,6 +91648,7 @@ class _$PlotOptionsSplineStatesHoverMarker
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -86299,6 +91685,10 @@ class PlotOptionsSplineStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -86317,6 +91707,7 @@ class PlotOptionsSplineStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -86345,6 +91736,7 @@ class PlotOptionsSplineStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -86358,6 +91750,8 @@ class PlotOptionsSplineStatesHoverMarkerBuilder
 // **************************************************************************
 
 class _$PlotOptionsSplineTooltip extends PlotOptionsSplineTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -86390,7 +91784,8 @@ class _$PlotOptionsSplineTooltip extends PlotOptionsSplineTooltip {
       (new PlotOptionsSplineTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsSplineTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -86418,7 +91813,8 @@ class _$PlotOptionsSplineTooltip extends PlotOptionsSplineTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsSplineTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -86447,7 +91843,11 @@ class _$PlotOptionsSplineTooltip extends PlotOptionsSplineTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -86466,6 +91866,7 @@ class _$PlotOptionsSplineTooltip extends PlotOptionsSplineTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsSplineTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -86487,6 +91888,11 @@ class PlotOptionsSplineTooltipBuilder
     implements
         Builder<PlotOptionsSplineTooltip, PlotOptionsSplineTooltipBuilder> {
   _$PlotOptionsSplineTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -86547,6 +91953,7 @@ class PlotOptionsSplineTooltipBuilder
 
   PlotOptionsSplineTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -86580,6 +91987,7 @@ class PlotOptionsSplineTooltipBuilder
   _$PlotOptionsSplineTooltip build() {
     final result = _$v ??
         new _$PlotOptionsSplineTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -86765,6 +92173,8 @@ class _$PlotOptionsTreemap extends PlotOptionsTreemap {
   @override
   final String cursor;
   @override
+  final JsonObject dataLabels;
+  @override
   final String description;
   @override
   final bool enableMouseTracking;
@@ -86789,6 +92199,8 @@ class _$PlotOptionsTreemap extends PlotOptionsTreemap {
   @override
   final bool levelIsConstant;
   @override
+  final JsonObject levels;
+  @override
   final String linkedTo;
   @override
   final num maxPointWidth;
@@ -86801,6 +92213,8 @@ class _$PlotOptionsTreemap extends PlotOptionsTreemap {
   @override
   final bool selected;
   @override
+  final JsonObject shadow;
+  @override
   final bool showCheckbox;
   @override
   final bool showInLegend;
@@ -86809,13 +92223,19 @@ class _$PlotOptionsTreemap extends PlotOptionsTreemap {
   @override
   final num sortIndex;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
+  @override
+  final JsonObject tooltip;
   @override
   final num turboThreshold;
   @override
   final bool visible;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsTreemap([void updates(PlotOptionsTreemapBuilder b)]) =>
       (new PlotOptionsTreemapBuilder()..update(updates)).build();
@@ -86836,6 +92256,7 @@ class _$PlotOptionsTreemap extends PlotOptionsTreemap {
       this.crisp,
       this.cropThreshold,
       this.cursor,
+      this.dataLabels,
       this.description,
       this.enableMouseTracking,
       this.events,
@@ -86848,20 +92269,25 @@ class _$PlotOptionsTreemap extends PlotOptionsTreemap {
       this.layoutAlgorithm,
       this.layoutStartingDirection,
       this.levelIsConstant,
+      this.levels,
       this.linkedTo,
       this.maxPointWidth,
       this.opacity,
       this.point,
       this.pointDescriptionFormatter,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
       this.sortIndex,
+      this.states,
       this.stickyTracking,
+      this.tooltip,
       this.turboThreshold,
       this.visible,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -86891,6 +92317,7 @@ class _$PlotOptionsTreemap extends PlotOptionsTreemap {
         crisp == other.crisp &&
         cropThreshold == other.cropThreshold &&
         cursor == other.cursor &&
+        dataLabels == other.dataLabels &&
         description == other.description &&
         enableMouseTracking == other.enableMouseTracking &&
         events == other.events &&
@@ -86903,20 +92330,25 @@ class _$PlotOptionsTreemap extends PlotOptionsTreemap {
         layoutAlgorithm == other.layoutAlgorithm &&
         layoutStartingDirection == other.layoutStartingDirection &&
         levelIsConstant == other.levelIsConstant &&
+        levels == other.levels &&
         linkedTo == other.linkedTo &&
         maxPointWidth == other.maxPointWidth &&
         opacity == other.opacity &&
         point == other.point &&
         pointDescriptionFormatter == other.pointDescriptionFormatter &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         sortIndex == other.sortIndex &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
+        tooltip == other.tooltip &&
         turboThreshold == other.turboThreshold &&
         visible == other.visible &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -86939,26 +92371,26 @@ class _$PlotOptionsTreemap extends PlotOptionsTreemap {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowDrillToNode.hashCode), allowPointSelect.hashCode), alternateStartingDirection.hashCode), animation.hashCode), animationLimit.hashCode), borderColor.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), crisp.hashCode), cropThreshold.hashCode), cursor.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), ignoreHiddenPoint.hashCode),
-                                                                                interactByLeaf.hashCode),
-                                                                            keys.hashCode),
-                                                                        layoutAlgorithm.hashCode),
-                                                                    layoutStartingDirection.hashCode),
-                                                                levelIsConstant.hashCode),
-                                                            linkedTo.hashCode),
-                                                        maxPointWidth.hashCode),
-                                                    opacity.hashCode),
-                                                point.hashCode),
-                                            pointDescriptionFormatter.hashCode),
-                                        selected.hashCode),
-                                    showCheckbox.hashCode),
-                                showInLegend.hashCode),
-                            skipKeyboardNavigation.hashCode),
-                        sortIndex.hashCode),
-                    stickyTracking.hashCode),
-                turboThreshold.hashCode),
-            visible.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowDrillToNode.hashCode), allowPointSelect.hashCode), alternateStartingDirection.hashCode), animation.hashCode), animationLimit.hashCode), borderColor.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), crisp.hashCode), cropThreshold.hashCode), cursor.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), ignoreHiddenPoint.hashCode), interactByLeaf.hashCode), keys.hashCode), layoutAlgorithm.hashCode), layoutStartingDirection.hashCode), levelIsConstant.hashCode),
+                                                                                levels.hashCode),
+                                                                            linkedTo.hashCode),
+                                                                        maxPointWidth.hashCode),
+                                                                    opacity.hashCode),
+                                                                point.hashCode),
+                                                            pointDescriptionFormatter.hashCode),
+                                                        selected.hashCode),
+                                                    shadow.hashCode),
+                                                showCheckbox.hashCode),
+                                            showInLegend.hashCode),
+                                        skipKeyboardNavigation.hashCode),
+                                    sortIndex.hashCode),
+                                states.hashCode),
+                            stickyTracking.hashCode),
+                        tooltip.hashCode),
+                    turboThreshold.hashCode),
+                visible.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -86979,6 +92411,7 @@ class _$PlotOptionsTreemap extends PlotOptionsTreemap {
           ..add('crisp', crisp)
           ..add('cropThreshold', cropThreshold)
           ..add('cursor', cursor)
+          ..add('dataLabels', dataLabels)
           ..add('description', description)
           ..add('enableMouseTracking', enableMouseTracking)
           ..add('events', events)
@@ -86991,20 +92424,25 @@ class _$PlotOptionsTreemap extends PlotOptionsTreemap {
           ..add('layoutAlgorithm', layoutAlgorithm)
           ..add('layoutStartingDirection', layoutStartingDirection)
           ..add('levelIsConstant', levelIsConstant)
+          ..add('levels', levels)
           ..add('linkedTo', linkedTo)
           ..add('maxPointWidth', maxPointWidth)
           ..add('opacity', opacity)
           ..add('point', point)
           ..add('pointDescriptionFormatter', pointDescriptionFormatter)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('sortIndex', sortIndex)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
+          ..add('tooltip', tooltip)
           ..add('turboThreshold', turboThreshold)
           ..add('visible', visible)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -87078,6 +92516,10 @@ class PlotOptionsTreemapBuilder
   String get cursor => _$this._cursor;
   set cursor(String cursor) => _$this._cursor = cursor;
 
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
+
   String _description;
   String get description => _$this._description;
   set description(String description) => _$this._description = description;
@@ -87136,6 +92578,10 @@ class PlotOptionsTreemapBuilder
   set levelIsConstant(bool levelIsConstant) =>
       _$this._levelIsConstant = levelIsConstant;
 
+  JsonObject _levels;
+  JsonObject get levels => _$this._levels;
+  set levels(JsonObject levels) => _$this._levels = levels;
+
   String _linkedTo;
   String get linkedTo => _$this._linkedTo;
   set linkedTo(String linkedTo) => _$this._linkedTo = linkedTo;
@@ -87162,6 +92608,10 @@ class PlotOptionsTreemapBuilder
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
   set showCheckbox(bool showCheckbox) => _$this._showCheckbox = showCheckbox;
@@ -87179,10 +92629,18 @@ class PlotOptionsTreemapBuilder
   num get sortIndex => _$this._sortIndex;
   set sortIndex(num sortIndex) => _$this._sortIndex = sortIndex;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
       _$this._stickyTracking = stickyTracking;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   num _turboThreshold;
   num get turboThreshold => _$this._turboThreshold;
@@ -87196,6 +92654,10 @@ class PlotOptionsTreemapBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   PlotOptionsTreemapBuilder();
 
@@ -87216,6 +92678,7 @@ class PlotOptionsTreemapBuilder
       _crisp = _$v.crisp;
       _cropThreshold = _$v.cropThreshold;
       _cursor = _$v.cursor;
+      _dataLabels = _$v.dataLabels;
       _description = _$v.description;
       _enableMouseTracking = _$v.enableMouseTracking;
       _events = _$v.events?.toBuilder();
@@ -87228,20 +92691,25 @@ class PlotOptionsTreemapBuilder
       _layoutAlgorithm = _$v.layoutAlgorithm;
       _layoutStartingDirection = _$v.layoutStartingDirection;
       _levelIsConstant = _$v.levelIsConstant;
+      _levels = _$v.levels;
       _linkedTo = _$v.linkedTo;
       _maxPointWidth = _$v.maxPointWidth;
       _opacity = _$v.opacity;
       _point = _$v.point?.toBuilder();
       _pointDescriptionFormatter = _$v.pointDescriptionFormatter;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _sortIndex = _$v.sortIndex;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
+      _tooltip = _$v.tooltip;
       _turboThreshold = _$v.turboThreshold;
       _visible = _$v.visible;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -87277,6 +92745,7 @@ class PlotOptionsTreemapBuilder
             crisp: crisp,
             cropThreshold: cropThreshold,
             cursor: cursor,
+            dataLabels: dataLabels,
             description: description,
             enableMouseTracking: enableMouseTracking,
             events: _events?.build(),
@@ -87289,20 +92758,25 @@ class PlotOptionsTreemapBuilder
             layoutAlgorithm: layoutAlgorithm,
             layoutStartingDirection: layoutStartingDirection,
             levelIsConstant: levelIsConstant,
+            levels: levels,
             linkedTo: linkedTo,
             maxPointWidth: maxPointWidth,
             opacity: opacity,
             point: _point?.build(),
             pointDescriptionFormatter: pointDescriptionFormatter,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
             sortIndex: sortIndex,
+            states: states,
             stickyTracking: stickyTracking,
+            tooltip: tooltip,
             turboThreshold: turboThreshold,
             visible: visible,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -87349,6 +92823,8 @@ class _$PlotOptionsTreemapDataLabels extends PlotOptionsTreemapDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -87385,6 +92861,7 @@ class _$PlotOptionsTreemapDataLabels extends PlotOptionsTreemapDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -87424,6 +92901,7 @@ class _$PlotOptionsTreemapDataLabels extends PlotOptionsTreemapDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -87453,19 +92931,19 @@ class _$PlotOptionsTreemapDataLabels extends PlotOptionsTreemapDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -87495,6 +92973,7 @@ class _$PlotOptionsTreemapDataLabels extends PlotOptionsTreemapDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -87581,6 +93060,10 @@ class PlotOptionsTreemapDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -87632,6 +93115,7 @@ class PlotOptionsTreemapDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -87676,6 +93160,7 @@ class PlotOptionsTreemapDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -87882,6 +93367,8 @@ class _$PlotOptionsTreemapLevels extends PlotOptionsTreemapLevels {
   @override
   final String color;
   @override
+  final JsonObject dataLabels;
+  @override
   final String layoutAlgorithm;
   @override
   final String layoutStartingDirection;
@@ -87897,6 +93384,7 @@ class _$PlotOptionsTreemapLevels extends PlotOptionsTreemapLevels {
       this.borderDashStyle,
       this.borderWidth,
       this.color,
+      this.dataLabels,
       this.layoutAlgorithm,
       this.layoutStartingDirection,
       this.level})
@@ -87919,6 +93407,7 @@ class _$PlotOptionsTreemapLevels extends PlotOptionsTreemapLevels {
         borderDashStyle == other.borderDashStyle &&
         borderWidth == other.borderWidth &&
         color == other.color &&
+        dataLabels == other.dataLabels &&
         layoutAlgorithm == other.layoutAlgorithm &&
         layoutStartingDirection == other.layoutStartingDirection &&
         level == other.level;
@@ -87931,10 +93420,12 @@ class _$PlotOptionsTreemapLevels extends PlotOptionsTreemapLevels {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc(0, borderColor.hashCode),
-                            borderDashStyle.hashCode),
-                        borderWidth.hashCode),
-                    color.hashCode),
+                        $jc(
+                            $jc($jc(0, borderColor.hashCode),
+                                borderDashStyle.hashCode),
+                            borderWidth.hashCode),
+                        color.hashCode),
+                    dataLabels.hashCode),
                 layoutAlgorithm.hashCode),
             layoutStartingDirection.hashCode),
         level.hashCode));
@@ -87947,6 +93438,7 @@ class _$PlotOptionsTreemapLevels extends PlotOptionsTreemapLevels {
           ..add('borderDashStyle', borderDashStyle)
           ..add('borderWidth', borderWidth)
           ..add('color', color)
+          ..add('dataLabels', dataLabels)
           ..add('layoutAlgorithm', layoutAlgorithm)
           ..add('layoutStartingDirection', layoutStartingDirection)
           ..add('level', level))
@@ -87976,6 +93468,10 @@ class PlotOptionsTreemapLevelsBuilder
   String get color => _$this._color;
   set color(String color) => _$this._color = color;
 
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
+
   String _layoutAlgorithm;
   String get layoutAlgorithm => _$this._layoutAlgorithm;
   set layoutAlgorithm(String layoutAlgorithm) =>
@@ -87998,6 +93494,7 @@ class PlotOptionsTreemapLevelsBuilder
       _borderDashStyle = _$v.borderDashStyle;
       _borderWidth = _$v.borderWidth;
       _color = _$v.color;
+      _dataLabels = _$v.dataLabels;
       _layoutAlgorithm = _$v.layoutAlgorithm;
       _layoutStartingDirection = _$v.layoutStartingDirection;
       _level = _$v.level;
@@ -88025,6 +93522,7 @@ class PlotOptionsTreemapLevelsBuilder
             borderDashStyle: borderDashStyle,
             borderWidth: borderWidth,
             color: color,
+            dataLabels: dataLabels,
             layoutAlgorithm: layoutAlgorithm,
             layoutStartingDirection: layoutStartingDirection,
             level: level);
@@ -88372,6 +93870,8 @@ class PlotOptionsTreemapStatesBuilder
 
 class _$PlotOptionsTreemapStatesHover extends PlotOptionsTreemapStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final String borderColor;
   @override
   final num brightness;
@@ -88387,7 +93887,8 @@ class _$PlotOptionsTreemapStatesHover extends PlotOptionsTreemapStatesHover {
       (new PlotOptionsTreemapStatesHoverBuilder()..update(updates)).build();
 
   _$PlotOptionsTreemapStatesHover._(
-      {this.borderColor,
+      {this.animation,
+      this.borderColor,
       this.brightness,
       this.color,
       this.enabled,
@@ -88407,7 +93908,8 @@ class _$PlotOptionsTreemapStatesHover extends PlotOptionsTreemapStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsTreemapStatesHover) return false;
-    return borderColor == other.borderColor &&
+    return animation == other.animation &&
+        borderColor == other.borderColor &&
         brightness == other.brightness &&
         color == other.color &&
         enabled == other.enabled &&
@@ -88418,7 +93920,9 @@ class _$PlotOptionsTreemapStatesHover extends PlotOptionsTreemapStatesHover {
   int get hashCode {
     return $jf($jc(
         $jc(
-            $jc($jc($jc(0, borderColor.hashCode), brightness.hashCode),
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), borderColor.hashCode),
+                    brightness.hashCode),
                 color.hashCode),
             enabled.hashCode),
         opacity.hashCode));
@@ -88427,6 +93931,7 @@ class _$PlotOptionsTreemapStatesHover extends PlotOptionsTreemapStatesHover {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsTreemapStatesHover')
+          ..add('animation', animation)
           ..add('borderColor', borderColor)
           ..add('brightness', brightness)
           ..add('color', color)
@@ -88441,6 +93946,10 @@ class PlotOptionsTreemapStatesHoverBuilder
         Builder<PlotOptionsTreemapStatesHover,
             PlotOptionsTreemapStatesHoverBuilder> {
   _$PlotOptionsTreemapStatesHover _$v;
+
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
 
   String _borderColor;
   String get borderColor => _$this._borderColor;
@@ -88466,6 +93975,7 @@ class PlotOptionsTreemapStatesHoverBuilder
 
   PlotOptionsTreemapStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _borderColor = _$v.borderColor;
       _brightness = _$v.brightness;
       _color = _$v.color;
@@ -88491,6 +94001,7 @@ class PlotOptionsTreemapStatesHoverBuilder
   _$PlotOptionsTreemapStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsTreemapStatesHover._(
+            animation: animation,
             borderColor: borderColor,
             brightness: brightness,
             color: color,
@@ -88507,6 +94018,8 @@ class PlotOptionsTreemapStatesHoverBuilder
 // **************************************************************************
 
 class _$PlotOptionsTreemapTooltip extends PlotOptionsTreemapTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -88539,7 +94052,8 @@ class _$PlotOptionsTreemapTooltip extends PlotOptionsTreemapTooltip {
       (new PlotOptionsTreemapTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsTreemapTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -88567,7 +94081,8 @@ class _$PlotOptionsTreemapTooltip extends PlotOptionsTreemapTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsTreemapTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -88596,7 +94111,11 @@ class _$PlotOptionsTreemapTooltip extends PlotOptionsTreemapTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -88615,6 +94134,7 @@ class _$PlotOptionsTreemapTooltip extends PlotOptionsTreemapTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsTreemapTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -88636,6 +94156,11 @@ class PlotOptionsTreemapTooltipBuilder
     implements
         Builder<PlotOptionsTreemapTooltip, PlotOptionsTreemapTooltipBuilder> {
   _$PlotOptionsTreemapTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -88696,6 +94221,7 @@ class PlotOptionsTreemapTooltipBuilder
 
   PlotOptionsTreemapTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -88729,6 +94255,7 @@ class PlotOptionsTreemapTooltipBuilder
   _$PlotOptionsTreemapTooltip build() {
     final result = _$v ??
         new _$PlotOptionsTreemapTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -88961,6 +94488,8 @@ class _$PlotOptionsWaterfall extends PlotOptionsWaterfall {
   @override
   final num pointPadding;
   @override
+  final JsonObject pointPlacement;
+  @override
   final num pointRange;
   @override
   final num pointStart;
@@ -88968,6 +94497,8 @@ class _$PlotOptionsWaterfall extends PlotOptionsWaterfall {
   final num pointWidth;
   @override
   final bool selected;
+  @override
+  final JsonObject shadow;
   @override
   final bool showCheckbox;
   @override
@@ -88977,15 +94508,21 @@ class _$PlotOptionsWaterfall extends PlotOptionsWaterfall {
   @override
   final bool softThreshold;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
   @override
   final num threshold;
+  @override
+  final JsonObject tooltip;
   @override
   final String upColor;
   @override
   final bool visible;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PlotOptionsWaterfall(
           [void updates(PlotOptionsWaterfallBuilder b)]) =>
@@ -89030,19 +94567,24 @@ class _$PlotOptionsWaterfall extends PlotOptionsWaterfall {
       this.pointInterval,
       this.pointIntervalUnit,
       this.pointPadding,
+      this.pointPlacement,
       this.pointRange,
       this.pointStart,
       this.pointWidth,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
       this.softThreshold,
+      this.states,
       this.stickyTracking,
       this.threshold,
+      this.tooltip,
       this.upColor,
       this.visible,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -89095,19 +94637,24 @@ class _$PlotOptionsWaterfall extends PlotOptionsWaterfall {
         pointInterval == other.pointInterval &&
         pointIntervalUnit == other.pointIntervalUnit &&
         pointPadding == other.pointPadding &&
+        pointPlacement == other.pointPlacement &&
         pointRange == other.pointRange &&
         pointStart == other.pointStart &&
         pointWidth == other.pointWidth &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         softThreshold == other.softThreshold &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
         threshold == other.threshold &&
+        tooltip == other.tooltip &&
         upColor == other.upColor &&
         visible == other.visible &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -89130,26 +94677,26 @@ class _$PlotOptionsWaterfall extends PlotOptionsWaterfall {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), crisp.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), depth.hashCode), description.hashCode), edgeColor.hashCode), edgeWidth.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), groupPadding.hashCode), groupZPadding.hashCode), grouping.hashCode), keys.hashCode), lineColor.hashCode), lineWidth.hashCode), linkedTo.hashCode), maxPointWidth.hashCode),
-                                                                                minPointLength.hashCode),
-                                                                            point.hashCode),
-                                                                        pointDescriptionFormatter.hashCode),
-                                                                    pointInterval.hashCode),
-                                                                pointIntervalUnit.hashCode),
-                                                            pointPadding.hashCode),
-                                                        pointRange.hashCode),
-                                                    pointStart.hashCode),
-                                                pointWidth.hashCode),
-                                            selected.hashCode),
-                                        showCheckbox.hashCode),
-                                    showInLegend.hashCode),
-                                skipKeyboardNavigation.hashCode),
-                            softThreshold.hashCode),
-                        stickyTracking.hashCode),
-                    threshold.hashCode),
-                upColor.hashCode),
-            visible.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), crisp.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), depth.hashCode), description.hashCode), edgeColor.hashCode), edgeWidth.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), groupPadding.hashCode), groupZPadding.hashCode), grouping.hashCode), keys.hashCode), lineColor.hashCode), lineWidth.hashCode), linkedTo.hashCode), maxPointWidth.hashCode), minPointLength.hashCode), point.hashCode), pointDescriptionFormatter.hashCode), pointInterval.hashCode), pointIntervalUnit.hashCode),
+                                                                                pointPadding.hashCode),
+                                                                            pointPlacement.hashCode),
+                                                                        pointRange.hashCode),
+                                                                    pointStart.hashCode),
+                                                                pointWidth.hashCode),
+                                                            selected.hashCode),
+                                                        shadow.hashCode),
+                                                    showCheckbox.hashCode),
+                                                showInLegend.hashCode),
+                                            skipKeyboardNavigation.hashCode),
+                                        softThreshold.hashCode),
+                                    states.hashCode),
+                                stickyTracking.hashCode),
+                            threshold.hashCode),
+                        tooltip.hashCode),
+                    upColor.hashCode),
+                visible.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -89193,19 +94740,24 @@ class _$PlotOptionsWaterfall extends PlotOptionsWaterfall {
           ..add('pointInterval', pointInterval)
           ..add('pointIntervalUnit', pointIntervalUnit)
           ..add('pointPadding', pointPadding)
+          ..add('pointPlacement', pointPlacement)
           ..add('pointRange', pointRange)
           ..add('pointStart', pointStart)
           ..add('pointWidth', pointWidth)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('softThreshold', softThreshold)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
           ..add('threshold', threshold)
+          ..add('tooltip', tooltip)
           ..add('upColor', upColor)
           ..add('visible', visible)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -89381,6 +94933,11 @@ class PlotOptionsWaterfallBuilder
   num get pointPadding => _$this._pointPadding;
   set pointPadding(num pointPadding) => _$this._pointPadding = pointPadding;
 
+  JsonObject _pointPlacement;
+  JsonObject get pointPlacement => _$this._pointPlacement;
+  set pointPlacement(JsonObject pointPlacement) =>
+      _$this._pointPlacement = pointPlacement;
+
   num _pointRange;
   num get pointRange => _$this._pointRange;
   set pointRange(num pointRange) => _$this._pointRange = pointRange;
@@ -89396,6 +94953,10 @@ class PlotOptionsWaterfallBuilder
   bool _selected;
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
+
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
 
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
@@ -89415,6 +94976,10 @@ class PlotOptionsWaterfallBuilder
   set softThreshold(bool softThreshold) =>
       _$this._softThreshold = softThreshold;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
@@ -89423,6 +94988,10 @@ class PlotOptionsWaterfallBuilder
   num _threshold;
   num get threshold => _$this._threshold;
   set threshold(num threshold) => _$this._threshold = threshold;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   String _upColor;
   String get upColor => _$this._upColor;
@@ -89435,6 +95004,10 @@ class PlotOptionsWaterfallBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   PlotOptionsWaterfallBuilder();
 
@@ -89478,19 +95051,24 @@ class PlotOptionsWaterfallBuilder
       _pointInterval = _$v.pointInterval;
       _pointIntervalUnit = _$v.pointIntervalUnit;
       _pointPadding = _$v.pointPadding;
+      _pointPlacement = _$v.pointPlacement;
       _pointRange = _$v.pointRange;
       _pointStart = _$v.pointStart;
       _pointWidth = _$v.pointWidth;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _softThreshold = _$v.softThreshold;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
       _threshold = _$v.threshold;
+      _tooltip = _$v.tooltip;
       _upColor = _$v.upColor;
       _visible = _$v.visible;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -89549,19 +95127,24 @@ class PlotOptionsWaterfallBuilder
             pointInterval: pointInterval,
             pointIntervalUnit: pointIntervalUnit,
             pointPadding: pointPadding,
+            pointPlacement: pointPlacement,
             pointRange: pointRange,
             pointStart: pointStart,
             pointWidth: pointWidth,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
             softThreshold: softThreshold,
+            states: states,
             stickyTracking: stickyTracking,
             threshold: threshold,
+            tooltip: tooltip,
             upColor: upColor,
             visible: visible,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -89608,6 +95191,8 @@ class _$PlotOptionsWaterfallDataLabels extends PlotOptionsWaterfallDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -89644,6 +95229,7 @@ class _$PlotOptionsWaterfallDataLabels extends PlotOptionsWaterfallDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -89683,6 +95269,7 @@ class _$PlotOptionsWaterfallDataLabels extends PlotOptionsWaterfallDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -89712,19 +95299,19 @@ class _$PlotOptionsWaterfallDataLabels extends PlotOptionsWaterfallDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -89754,6 +95341,7 @@ class _$PlotOptionsWaterfallDataLabels extends PlotOptionsWaterfallDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -89840,6 +95428,10 @@ class PlotOptionsWaterfallDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -89891,6 +95483,7 @@ class PlotOptionsWaterfallDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -89935,6 +95528,7 @@ class PlotOptionsWaterfallDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -90467,6 +96061,8 @@ class PlotOptionsWaterfallStatesBuilder
 class _$PlotOptionsWaterfallStatesHover
     extends PlotOptionsWaterfallStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final String borderColor;
   @override
   final num brightness;
@@ -90474,13 +96070,20 @@ class _$PlotOptionsWaterfallStatesHover
   final String color;
   @override
   final bool enabled;
+  @override
+  final JsonObject halo;
 
   factory _$PlotOptionsWaterfallStatesHover(
           [void updates(PlotOptionsWaterfallStatesHoverBuilder b)]) =>
       (new PlotOptionsWaterfallStatesHoverBuilder()..update(updates)).build();
 
   _$PlotOptionsWaterfallStatesHover._(
-      {this.borderColor, this.brightness, this.color, this.enabled})
+      {this.animation,
+      this.borderColor,
+      this.brightness,
+      this.color,
+      this.enabled,
+      this.halo})
       : super._();
 
   @override
@@ -90496,27 +96099,35 @@ class _$PlotOptionsWaterfallStatesHover
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsWaterfallStatesHover) return false;
-    return borderColor == other.borderColor &&
+    return animation == other.animation &&
+        borderColor == other.borderColor &&
         brightness == other.brightness &&
         color == other.color &&
-        enabled == other.enabled;
+        enabled == other.enabled &&
+        halo == other.halo;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, borderColor.hashCode), brightness.hashCode),
-            color.hashCode),
-        enabled.hashCode));
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), borderColor.hashCode),
+                    brightness.hashCode),
+                color.hashCode),
+            enabled.hashCode),
+        halo.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsWaterfallStatesHover')
+          ..add('animation', animation)
           ..add('borderColor', borderColor)
           ..add('brightness', brightness)
           ..add('color', color)
-          ..add('enabled', enabled))
+          ..add('enabled', enabled)
+          ..add('halo', halo))
         .toString();
   }
 }
@@ -90526,6 +96137,10 @@ class PlotOptionsWaterfallStatesHoverBuilder
         Builder<PlotOptionsWaterfallStatesHover,
             PlotOptionsWaterfallStatesHoverBuilder> {
   _$PlotOptionsWaterfallStatesHover _$v;
+
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
 
   String _borderColor;
   String get borderColor => _$this._borderColor;
@@ -90543,14 +96158,20 @@ class PlotOptionsWaterfallStatesHoverBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
+
   PlotOptionsWaterfallStatesHoverBuilder();
 
   PlotOptionsWaterfallStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _borderColor = _$v.borderColor;
       _brightness = _$v.brightness;
       _color = _$v.color;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _$v = null;
     }
     return this;
@@ -90571,10 +96192,12 @@ class PlotOptionsWaterfallStatesHoverBuilder
   _$PlotOptionsWaterfallStatesHover build() {
     final result = _$v ??
         new _$PlotOptionsWaterfallStatesHover._(
+            animation: animation,
             borderColor: borderColor,
             brightness: brightness,
             color: color,
-            enabled: enabled);
+            enabled: enabled,
+            halo: halo);
     replace(result);
     return result;
   }
@@ -90588,6 +96211,8 @@ class PlotOptionsWaterfallStatesHoverBuilder
 class _$PlotOptionsWaterfallStatesHoverHalo
     extends PlotOptionsWaterfallStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -90597,7 +96222,8 @@ class _$PlotOptionsWaterfallStatesHoverHalo
       (new PlotOptionsWaterfallStatesHoverHaloBuilder()..update(updates))
           .build();
 
-  _$PlotOptionsWaterfallStatesHoverHalo._({this.opacity, this.size})
+  _$PlotOptionsWaterfallStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
       : super._();
 
   @override
@@ -90613,17 +96239,21 @@ class _$PlotOptionsWaterfallStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsWaterfallStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsWaterfallStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -90635,6 +96265,10 @@ class PlotOptionsWaterfallStatesHoverHaloBuilder
         Builder<PlotOptionsWaterfallStatesHoverHalo,
             PlotOptionsWaterfallStatesHoverHaloBuilder> {
   _$PlotOptionsWaterfallStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -90648,6 +96282,7 @@ class PlotOptionsWaterfallStatesHoverHaloBuilder
 
   PlotOptionsWaterfallStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -90670,7 +96305,7 @@ class PlotOptionsWaterfallStatesHoverHaloBuilder
   _$PlotOptionsWaterfallStatesHoverHalo build() {
     final result = _$v ??
         new _$PlotOptionsWaterfallStatesHoverHalo._(
-            opacity: opacity, size: size);
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -90682,6 +96317,8 @@ class PlotOptionsWaterfallStatesHoverHaloBuilder
 // **************************************************************************
 
 class _$PlotOptionsWaterfallTooltip extends PlotOptionsWaterfallTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -90714,7 +96351,8 @@ class _$PlotOptionsWaterfallTooltip extends PlotOptionsWaterfallTooltip {
       (new PlotOptionsWaterfallTooltipBuilder()..update(updates)).build();
 
   _$PlotOptionsWaterfallTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -90742,7 +96380,8 @@ class _$PlotOptionsWaterfallTooltip extends PlotOptionsWaterfallTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PlotOptionsWaterfallTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -90771,7 +96410,11 @@ class _$PlotOptionsWaterfallTooltip extends PlotOptionsWaterfallTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -90790,6 +96433,7 @@ class _$PlotOptionsWaterfallTooltip extends PlotOptionsWaterfallTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PlotOptionsWaterfallTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -90812,6 +96456,11 @@ class PlotOptionsWaterfallTooltipBuilder
         Builder<PlotOptionsWaterfallTooltip,
             PlotOptionsWaterfallTooltipBuilder> {
   _$PlotOptionsWaterfallTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -90872,6 +96521,7 @@ class PlotOptionsWaterfallTooltipBuilder
 
   PlotOptionsWaterfallTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -90905,6 +96555,7 @@ class PlotOptionsWaterfallTooltipBuilder
   _$PlotOptionsWaterfallTooltip build() {
     final result = _$v ??
         new _$PlotOptionsWaterfallTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,

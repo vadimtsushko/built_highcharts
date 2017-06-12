@@ -45,6 +45,12 @@ class _$XAxisSerializer implements StructuredSerializer<XAxis> {
         ..add(serializers.serialize(object.alternateGridColor,
             specifiedType: const FullType(String)));
     }
+    if (object.breaks != null) {
+      result
+        ..add('breaks')
+        ..add(serializers.serialize(object.breaks,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.categories != null) {
       result
         ..add('categories')
@@ -63,6 +69,12 @@ class _$XAxisSerializer implements StructuredSerializer<XAxis> {
         ..add('className')
         ..add(serializers.serialize(object.className,
             specifiedType: const FullType(String)));
+    }
+    if (object.crosshair != null) {
+      result
+        ..add('crosshair')
+        ..add(serializers.serialize(object.crosshair,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.dateTimeLabelFormats != null) {
       result
@@ -214,6 +226,12 @@ class _$XAxisSerializer implements StructuredSerializer<XAxis> {
         ..add(serializers.serialize(object.minorTickColor,
             specifiedType: const FullType(String)));
     }
+    if (object.minorTickInterval != null) {
+      result
+        ..add('minorTickInterval')
+        ..add(serializers.serialize(object.minorTickInterval,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.minorTickLength != null) {
       result
         ..add('minorTickLength')
@@ -243,6 +261,18 @@ class _$XAxisSerializer implements StructuredSerializer<XAxis> {
         ..add('opposite')
         ..add(serializers.serialize(object.opposite,
             specifiedType: const FullType(bool)));
+    }
+    if (object.plotBands != null) {
+      result
+        ..add('plotBands')
+        ..add(serializers.serialize(object.plotBands,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.plotLines != null) {
+      result
+        ..add('plotLines')
+        ..add(serializers.serialize(object.plotLines,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.reversed != null) {
       result
@@ -371,6 +401,12 @@ class _$XAxisSerializer implements StructuredSerializer<XAxis> {
         ..add(serializers.serialize(object.uniqueNames,
             specifiedType: const FullType(bool)));
     }
+    if (object.units != null) {
+      result
+        ..add('units')
+        ..add(serializers.serialize(object.units,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.visible != null) {
       result
         ..add('visible')
@@ -400,6 +436,10 @@ class _$XAxisSerializer implements StructuredSerializer<XAxis> {
           result.alternateGridColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'breaks':
+          result.breaks = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'categories':
           result.categories.replace(serializers.deserialize(value,
                   specifiedType:
@@ -413,6 +453,10 @@ class _$XAxisSerializer implements StructuredSerializer<XAxis> {
         case 'className':
           result.className = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'crosshair':
+          result.crosshair = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'dateTimeLabelFormats':
           result.dateTimeLabelFormats = serializers.deserialize(value,
@@ -514,6 +558,10 @@ class _$XAxisSerializer implements StructuredSerializer<XAxis> {
           result.minorTickColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'minorTickInterval':
+          result.minorTickInterval = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'minorTickLength':
           result.minorTickLength = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -533,6 +581,14 @@ class _$XAxisSerializer implements StructuredSerializer<XAxis> {
         case 'opposite':
           result.opposite = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'plotBands':
+          result.plotBands = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'plotLines':
+          result.plotLines = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'reversed':
           result.reversed = serializers.deserialize(value,
@@ -619,6 +675,10 @@ class _$XAxisSerializer implements StructuredSerializer<XAxis> {
         case 'uniqueNames':
           result.uniqueNames = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'units':
+          result.units = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'visible':
           result.visible = serializers.deserialize(value,
@@ -1142,6 +1202,12 @@ class _$XAxisPlotBandsSerializer
         ..add(serializers.serialize(object.color,
             specifiedType: const FullType(String)));
     }
+    if (object.events != null) {
+      result
+        ..add('events')
+        ..add(serializers.serialize(object.events,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.from != null) {
       result
         ..add('from')
@@ -1203,6 +1269,10 @@ class _$XAxisPlotBandsSerializer
           result.color = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'events':
+          result.events = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'from':
           result.from = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -1256,6 +1326,12 @@ class _$XAxisPlotBandsLabelSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.style != null) {
+      result
+        ..add('style')
+        ..add(serializers.serialize(object.style,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.text != null) {
       result
@@ -1315,6 +1391,10 @@ class _$XAxisPlotBandsLabelSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'style':
+          result.style = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'text':
           result.text = serializers.deserialize(value,
@@ -1376,6 +1456,12 @@ class _$XAxisPlotLinesSerializer
         ..add(serializers.serialize(object.dashStyle,
             specifiedType: const FullType(String)));
     }
+    if (object.events != null) {
+      result
+        ..add('events')
+        ..add(serializers.serialize(object.events,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.id != null) {
       result
         ..add('id')
@@ -1433,6 +1519,10 @@ class _$XAxisPlotLinesSerializer
           result.dashStyle = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'events':
+          result.events = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'id':
           result.id = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -1486,6 +1576,12 @@ class _$XAxisPlotLinesLabelSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.style != null) {
+      result
+        ..add('style')
+        ..add(serializers.serialize(object.style,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.text != null) {
       result
@@ -1545,6 +1641,10 @@ class _$XAxisPlotLinesLabelSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'style':
+          result.style = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'text':
           result.text = serializers.deserialize(value,
@@ -1724,11 +1824,15 @@ class _$XAxis extends XAxis {
   @override
   final String alternateGridColor;
   @override
+  final JsonObject breaks;
+  @override
   final BuiltList<String> categories;
   @override
   final num ceiling;
   @override
   final String className;
+  @override
+  final JsonObject crosshair;
   @override
   final JsonObject dateTimeLabelFormats;
   @override
@@ -1780,6 +1884,8 @@ class _$XAxis extends XAxis {
   @override
   final String minorTickColor;
   @override
+  final JsonObject minorTickInterval;
+  @override
   final num minorTickLength;
   @override
   final String minorTickPosition;
@@ -1789,6 +1895,10 @@ class _$XAxis extends XAxis {
   final num offset;
   @override
   final bool opposite;
+  @override
+  final JsonObject plotBands;
+  @override
+  final JsonObject plotLines;
   @override
   final bool reversed;
   @override
@@ -1832,6 +1942,8 @@ class _$XAxis extends XAxis {
   @override
   final bool uniqueNames;
   @override
+  final JsonObject units;
+  @override
   final bool visible;
 
   factory _$XAxis([void updates(XAxisBuilder b)]) =>
@@ -1840,9 +1952,11 @@ class _$XAxis extends XAxis {
   _$XAxis._(
       {this.allowDecimals,
       this.alternateGridColor,
+      this.breaks,
       this.categories,
       this.ceiling,
       this.className,
+      this.crosshair,
       this.dateTimeLabelFormats,
       this.description,
       this.endOnTick,
@@ -1868,11 +1982,14 @@ class _$XAxis extends XAxis {
       this.minorGridLineDashStyle,
       this.minorGridLineWidth,
       this.minorTickColor,
+      this.minorTickInterval,
       this.minorTickLength,
       this.minorTickPosition,
       this.minorTickWidth,
       this.offset,
       this.opposite,
+      this.plotBands,
+      this.plotLines,
       this.reversed,
       this.showEmpty,
       this.showFirstLabel,
@@ -1894,6 +2011,7 @@ class _$XAxis extends XAxis {
       this.title,
       this.type,
       this.uniqueNames,
+      this.units,
       this.visible})
       : super._();
 
@@ -1910,9 +2028,11 @@ class _$XAxis extends XAxis {
     if (other is! XAxis) return false;
     return allowDecimals == other.allowDecimals &&
         alternateGridColor == other.alternateGridColor &&
+        breaks == other.breaks &&
         categories == other.categories &&
         ceiling == other.ceiling &&
         className == other.className &&
+        crosshair == other.crosshair &&
         dateTimeLabelFormats == other.dateTimeLabelFormats &&
         description == other.description &&
         endOnTick == other.endOnTick &&
@@ -1938,11 +2058,14 @@ class _$XAxis extends XAxis {
         minorGridLineDashStyle == other.minorGridLineDashStyle &&
         minorGridLineWidth == other.minorGridLineWidth &&
         minorTickColor == other.minorTickColor &&
+        minorTickInterval == other.minorTickInterval &&
         minorTickLength == other.minorTickLength &&
         minorTickPosition == other.minorTickPosition &&
         minorTickWidth == other.minorTickWidth &&
         offset == other.offset &&
         opposite == other.opposite &&
+        plotBands == other.plotBands &&
+        plotLines == other.plotLines &&
         reversed == other.reversed &&
         showEmpty == other.showEmpty &&
         showFirstLabel == other.showFirstLabel &&
@@ -1964,6 +2087,7 @@ class _$XAxis extends XAxis {
         title == other.title &&
         type == other.type &&
         uniqueNames == other.uniqueNames &&
+        units == other.units &&
         visible == other.visible;
   }
 
@@ -1987,25 +2111,25 @@ class _$XAxis extends XAxis {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowDecimals.hashCode), alternateGridColor.hashCode), categories.hashCode), ceiling.hashCode), className.hashCode), dateTimeLabelFormats.hashCode), description.hashCode), endOnTick.hashCode), events.hashCode), floor.hashCode), gridLineColor.hashCode), gridLineDashStyle.hashCode), gridLineWidth.hashCode), gridZIndex.hashCode), id.hashCode), labels.hashCode), lineColor.hashCode), lineWidth.hashCode), linkedTo.hashCode), max.hashCode), maxPadding.hashCode), maxZoom.hashCode), min.hashCode), minPadding.hashCode), minRange.hashCode), minTickInterval.hashCode), minorGridLineColor.hashCode), minorGridLineDashStyle.hashCode), minorGridLineWidth.hashCode), minorTickColor.hashCode), minorTickLength.hashCode), minorTickPosition.hashCode), minorTickWidth.hashCode), offset.hashCode), opposite.hashCode), reversed.hashCode), showEmpty.hashCode), showFirstLabel.hashCode),
-                                                                                showLastLabel.hashCode),
-                                                                            softMax.hashCode),
-                                                                        softMin.hashCode),
-                                                                    startOfWeek.hashCode),
-                                                                startOnTick.hashCode),
-                                                            tickAmount.hashCode),
-                                                        tickColor.hashCode),
-                                                    tickInterval.hashCode),
-                                                tickLength.hashCode),
-                                            tickPixelInterval.hashCode),
-                                        tickPosition.hashCode),
-                                    tickPositioner.hashCode),
-                                tickPositions.hashCode),
-                            tickWidth.hashCode),
-                        tickmarkPlacement.hashCode),
-                    title.hashCode),
-                type.hashCode),
-            uniqueNames.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowDecimals.hashCode), alternateGridColor.hashCode), breaks.hashCode), categories.hashCode), ceiling.hashCode), className.hashCode), crosshair.hashCode), dateTimeLabelFormats.hashCode), description.hashCode), endOnTick.hashCode), events.hashCode), floor.hashCode), gridLineColor.hashCode), gridLineDashStyle.hashCode), gridLineWidth.hashCode), gridZIndex.hashCode), id.hashCode), labels.hashCode), lineColor.hashCode), lineWidth.hashCode), linkedTo.hashCode), max.hashCode), maxPadding.hashCode), maxZoom.hashCode), min.hashCode), minPadding.hashCode), minRange.hashCode), minTickInterval.hashCode), minorGridLineColor.hashCode), minorGridLineDashStyle.hashCode), minorGridLineWidth.hashCode), minorTickColor.hashCode), minorTickInterval.hashCode), minorTickLength.hashCode), minorTickPosition.hashCode), minorTickWidth.hashCode), offset.hashCode), opposite.hashCode), plotBands.hashCode), plotLines.hashCode), reversed.hashCode), showEmpty.hashCode), showFirstLabel.hashCode), showLastLabel.hashCode),
+                                                                                softMax.hashCode),
+                                                                            softMin.hashCode),
+                                                                        startOfWeek.hashCode),
+                                                                    startOnTick.hashCode),
+                                                                tickAmount.hashCode),
+                                                            tickColor.hashCode),
+                                                        tickInterval.hashCode),
+                                                    tickLength.hashCode),
+                                                tickPixelInterval.hashCode),
+                                            tickPosition.hashCode),
+                                        tickPositioner.hashCode),
+                                    tickPositions.hashCode),
+                                tickWidth.hashCode),
+                            tickmarkPlacement.hashCode),
+                        title.hashCode),
+                    type.hashCode),
+                uniqueNames.hashCode),
+            units.hashCode),
         visible.hashCode));
   }
 
@@ -2014,9 +2138,11 @@ class _$XAxis extends XAxis {
     return (newBuiltValueToStringHelper('XAxis')
           ..add('allowDecimals', allowDecimals)
           ..add('alternateGridColor', alternateGridColor)
+          ..add('breaks', breaks)
           ..add('categories', categories)
           ..add('ceiling', ceiling)
           ..add('className', className)
+          ..add('crosshair', crosshair)
           ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('description', description)
           ..add('endOnTick', endOnTick)
@@ -2042,11 +2168,14 @@ class _$XAxis extends XAxis {
           ..add('minorGridLineDashStyle', minorGridLineDashStyle)
           ..add('minorGridLineWidth', minorGridLineWidth)
           ..add('minorTickColor', minorTickColor)
+          ..add('minorTickInterval', minorTickInterval)
           ..add('minorTickLength', minorTickLength)
           ..add('minorTickPosition', minorTickPosition)
           ..add('minorTickWidth', minorTickWidth)
           ..add('offset', offset)
           ..add('opposite', opposite)
+          ..add('plotBands', plotBands)
+          ..add('plotLines', plotLines)
           ..add('reversed', reversed)
           ..add('showEmpty', showEmpty)
           ..add('showFirstLabel', showFirstLabel)
@@ -2068,6 +2197,7 @@ class _$XAxis extends XAxis {
           ..add('title', title)
           ..add('type', type)
           ..add('uniqueNames', uniqueNames)
+          ..add('units', units)
           ..add('visible', visible))
         .toString();
   }
@@ -2086,6 +2216,10 @@ class XAxisBuilder implements Builder<XAxis, XAxisBuilder> {
   set alternateGridColor(String alternateGridColor) =>
       _$this._alternateGridColor = alternateGridColor;
 
+  JsonObject _breaks;
+  JsonObject get breaks => _$this._breaks;
+  set breaks(JsonObject breaks) => _$this._breaks = breaks;
+
   ListBuilder<String> _categories;
   ListBuilder<String> get categories =>
       _$this._categories ??= new ListBuilder<String>();
@@ -2099,6 +2233,10 @@ class XAxisBuilder implements Builder<XAxis, XAxisBuilder> {
   String _className;
   String get className => _$this._className;
   set className(String className) => _$this._className = className;
+
+  JsonObject _crosshair;
+  JsonObject get crosshair => _$this._crosshair;
+  set crosshair(JsonObject crosshair) => _$this._crosshair = crosshair;
 
   JsonObject _dateTimeLabelFormats;
   JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
@@ -2208,6 +2346,11 @@ class XAxisBuilder implements Builder<XAxis, XAxisBuilder> {
   set minorTickColor(String minorTickColor) =>
       _$this._minorTickColor = minorTickColor;
 
+  JsonObject _minorTickInterval;
+  JsonObject get minorTickInterval => _$this._minorTickInterval;
+  set minorTickInterval(JsonObject minorTickInterval) =>
+      _$this._minorTickInterval = minorTickInterval;
+
   num _minorTickLength;
   num get minorTickLength => _$this._minorTickLength;
   set minorTickLength(num minorTickLength) =>
@@ -2230,6 +2373,14 @@ class XAxisBuilder implements Builder<XAxis, XAxisBuilder> {
   bool _opposite;
   bool get opposite => _$this._opposite;
   set opposite(bool opposite) => _$this._opposite = opposite;
+
+  JsonObject _plotBands;
+  JsonObject get plotBands => _$this._plotBands;
+  set plotBands(JsonObject plotBands) => _$this._plotBands = plotBands;
+
+  JsonObject _plotLines;
+  JsonObject get plotLines => _$this._plotLines;
+  set plotLines(JsonObject plotLines) => _$this._plotLines = plotLines;
 
   bool _reversed;
   bool get reversed => _$this._reversed;
@@ -2322,6 +2473,10 @@ class XAxisBuilder implements Builder<XAxis, XAxisBuilder> {
   bool get uniqueNames => _$this._uniqueNames;
   set uniqueNames(bool uniqueNames) => _$this._uniqueNames = uniqueNames;
 
+  JsonObject _units;
+  JsonObject get units => _$this._units;
+  set units(JsonObject units) => _$this._units = units;
+
   bool _visible;
   bool get visible => _$this._visible;
   set visible(bool visible) => _$this._visible = visible;
@@ -2332,9 +2487,11 @@ class XAxisBuilder implements Builder<XAxis, XAxisBuilder> {
     if (_$v != null) {
       _allowDecimals = _$v.allowDecimals;
       _alternateGridColor = _$v.alternateGridColor;
+      _breaks = _$v.breaks;
       _categories = _$v.categories?.toBuilder();
       _ceiling = _$v.ceiling;
       _className = _$v.className;
+      _crosshair = _$v.crosshair;
       _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _description = _$v.description;
       _endOnTick = _$v.endOnTick;
@@ -2360,11 +2517,14 @@ class XAxisBuilder implements Builder<XAxis, XAxisBuilder> {
       _minorGridLineDashStyle = _$v.minorGridLineDashStyle;
       _minorGridLineWidth = _$v.minorGridLineWidth;
       _minorTickColor = _$v.minorTickColor;
+      _minorTickInterval = _$v.minorTickInterval;
       _minorTickLength = _$v.minorTickLength;
       _minorTickPosition = _$v.minorTickPosition;
       _minorTickWidth = _$v.minorTickWidth;
       _offset = _$v.offset;
       _opposite = _$v.opposite;
+      _plotBands = _$v.plotBands;
+      _plotLines = _$v.plotLines;
       _reversed = _$v.reversed;
       _showEmpty = _$v.showEmpty;
       _showFirstLabel = _$v.showFirstLabel;
@@ -2386,6 +2546,7 @@ class XAxisBuilder implements Builder<XAxis, XAxisBuilder> {
       _title = _$v.title?.toBuilder();
       _type = _$v.type;
       _uniqueNames = _$v.uniqueNames;
+      _units = _$v.units;
       _visible = _$v.visible;
       _$v = null;
     }
@@ -2409,9 +2570,11 @@ class XAxisBuilder implements Builder<XAxis, XAxisBuilder> {
         new _$XAxis._(
             allowDecimals: allowDecimals,
             alternateGridColor: alternateGridColor,
+            breaks: breaks,
             categories: _categories?.build(),
             ceiling: ceiling,
             className: className,
+            crosshair: crosshair,
             dateTimeLabelFormats: dateTimeLabelFormats,
             description: description,
             endOnTick: endOnTick,
@@ -2437,11 +2600,14 @@ class XAxisBuilder implements Builder<XAxis, XAxisBuilder> {
             minorGridLineDashStyle: minorGridLineDashStyle,
             minorGridLineWidth: minorGridLineWidth,
             minorTickColor: minorTickColor,
+            minorTickInterval: minorTickInterval,
             minorTickLength: minorTickLength,
             minorTickPosition: minorTickPosition,
             minorTickWidth: minorTickWidth,
             offset: offset,
             opposite: opposite,
+            plotBands: plotBands,
+            plotLines: plotLines,
             reversed: reversed,
             showEmpty: showEmpty,
             showFirstLabel: showFirstLabel,
@@ -2463,6 +2629,7 @@ class XAxisBuilder implements Builder<XAxis, XAxisBuilder> {
             title: _title?.build(),
             type: type,
             uniqueNames: uniqueNames,
+            units: units,
             visible: visible);
     replace(result);
     return result;
@@ -3197,6 +3364,8 @@ class _$XAxisPlotBands extends XAxisPlotBands {
   @override
   final String color;
   @override
+  final JsonObject events;
+  @override
   final num from;
   @override
   final String id;
@@ -3215,6 +3384,7 @@ class _$XAxisPlotBands extends XAxisPlotBands {
       this.borderWidth,
       this.className,
       this.color,
+      this.events,
       this.from,
       this.id,
       this.label,
@@ -3238,6 +3408,7 @@ class _$XAxisPlotBands extends XAxisPlotBands {
         borderWidth == other.borderWidth &&
         className == other.className &&
         color == other.color &&
+        events == other.events &&
         from == other.from &&
         id == other.id &&
         label == other.label &&
@@ -3254,10 +3425,12 @@ class _$XAxisPlotBands extends XAxisPlotBands {
                     $jc(
                         $jc(
                             $jc(
-                                $jc($jc(0, borderColor.hashCode),
-                                    borderWidth.hashCode),
-                                className.hashCode),
-                            color.hashCode),
+                                $jc(
+                                    $jc($jc(0, borderColor.hashCode),
+                                        borderWidth.hashCode),
+                                    className.hashCode),
+                                color.hashCode),
+                            events.hashCode),
                         from.hashCode),
                     id.hashCode),
                 label.hashCode),
@@ -3272,6 +3445,7 @@ class _$XAxisPlotBands extends XAxisPlotBands {
           ..add('borderWidth', borderWidth)
           ..add('className', className)
           ..add('color', color)
+          ..add('events', events)
           ..add('from', from)
           ..add('id', id)
           ..add('label', label)
@@ -3300,6 +3474,10 @@ class XAxisPlotBandsBuilder
   String _color;
   String get color => _$this._color;
   set color(String color) => _$this._color = color;
+
+  JsonObject _events;
+  JsonObject get events => _$this._events;
+  set events(JsonObject events) => _$this._events = events;
 
   num _from;
   num get from => _$this._from;
@@ -3330,6 +3508,7 @@ class XAxisPlotBandsBuilder
       _borderWidth = _$v.borderWidth;
       _className = _$v.className;
       _color = _$v.color;
+      _events = _$v.events;
       _from = _$v.from;
       _id = _$v.id;
       _label = _$v.label?.toBuilder();
@@ -3359,6 +3538,7 @@ class XAxisPlotBandsBuilder
             borderWidth: borderWidth,
             className: className,
             color: color,
+            events: events,
             from: from,
             id: id,
             label: _label?.build(),
@@ -3380,6 +3560,8 @@ class _$XAxisPlotBandsLabel extends XAxisPlotBandsLabel {
   @override
   final num rotation;
   @override
+  final JsonObject style;
+  @override
   final String text;
   @override
   final String textAlign;
@@ -3398,6 +3580,7 @@ class _$XAxisPlotBandsLabel extends XAxisPlotBandsLabel {
   _$XAxisPlotBandsLabel._(
       {this.align,
       this.rotation,
+      this.style,
       this.text,
       this.textAlign,
       this.useHTML,
@@ -3420,6 +3603,7 @@ class _$XAxisPlotBandsLabel extends XAxisPlotBandsLabel {
     if (other is! XAxisPlotBandsLabel) return false;
     return align == other.align &&
         rotation == other.rotation &&
+        style == other.style &&
         text == other.text &&
         textAlign == other.textAlign &&
         useHTML == other.useHTML &&
@@ -3435,7 +3619,9 @@ class _$XAxisPlotBandsLabel extends XAxisPlotBandsLabel {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, align.hashCode), rotation.hashCode),
+                        $jc(
+                            $jc($jc($jc(0, align.hashCode), rotation.hashCode),
+                                style.hashCode),
                             text.hashCode),
                         textAlign.hashCode),
                     useHTML.hashCode),
@@ -3449,6 +3635,7 @@ class _$XAxisPlotBandsLabel extends XAxisPlotBandsLabel {
     return (newBuiltValueToStringHelper('XAxisPlotBandsLabel')
           ..add('align', align)
           ..add('rotation', rotation)
+          ..add('style', style)
           ..add('text', text)
           ..add('textAlign', textAlign)
           ..add('useHTML', useHTML)
@@ -3470,6 +3657,10 @@ class XAxisPlotBandsLabelBuilder
   num _rotation;
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
+
+  JsonObject _style;
+  JsonObject get style => _$this._style;
+  set style(JsonObject style) => _$this._style = style;
 
   String _text;
   String get text => _$this._text;
@@ -3502,6 +3693,7 @@ class XAxisPlotBandsLabelBuilder
     if (_$v != null) {
       _align = _$v.align;
       _rotation = _$v.rotation;
+      _style = _$v.style;
       _text = _$v.text;
       _textAlign = _$v.textAlign;
       _useHTML = _$v.useHTML;
@@ -3530,6 +3722,7 @@ class XAxisPlotBandsLabelBuilder
         new _$XAxisPlotBandsLabel._(
             align: align,
             rotation: rotation,
+            style: style,
             text: text,
             textAlign: textAlign,
             useHTML: useHTML,
@@ -3554,6 +3747,8 @@ class _$XAxisPlotLines extends XAxisPlotLines {
   @override
   final String dashStyle;
   @override
+  final JsonObject events;
+  @override
   final String id;
   @override
   final XAxisPlotLinesLabel label;
@@ -3571,6 +3766,7 @@ class _$XAxisPlotLines extends XAxisPlotLines {
       {this.className,
       this.color,
       this.dashStyle,
+      this.events,
       this.id,
       this.label,
       this.value,
@@ -3593,6 +3789,7 @@ class _$XAxisPlotLines extends XAxisPlotLines {
     return className == other.className &&
         color == other.color &&
         dashStyle == other.dashStyle &&
+        events == other.events &&
         id == other.id &&
         label == other.label &&
         value == other.value &&
@@ -3607,8 +3804,10 @@ class _$XAxisPlotLines extends XAxisPlotLines {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, className.hashCode), color.hashCode),
-                            dashStyle.hashCode),
+                        $jc(
+                            $jc($jc($jc(0, className.hashCode), color.hashCode),
+                                dashStyle.hashCode),
+                            events.hashCode),
                         id.hashCode),
                     label.hashCode),
                 value.hashCode),
@@ -3622,6 +3821,7 @@ class _$XAxisPlotLines extends XAxisPlotLines {
           ..add('className', className)
           ..add('color', color)
           ..add('dashStyle', dashStyle)
+          ..add('events', events)
           ..add('id', id)
           ..add('label', label)
           ..add('value', value)
@@ -3646,6 +3846,10 @@ class XAxisPlotLinesBuilder
   String _dashStyle;
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
+
+  JsonObject _events;
+  JsonObject get events => _$this._events;
+  set events(JsonObject events) => _$this._events = events;
 
   String _id;
   String get id => _$this._id;
@@ -3675,6 +3879,7 @@ class XAxisPlotLinesBuilder
       _className = _$v.className;
       _color = _$v.color;
       _dashStyle = _$v.dashStyle;
+      _events = _$v.events;
       _id = _$v.id;
       _label = _$v.label?.toBuilder();
       _value = _$v.value;
@@ -3703,6 +3908,7 @@ class XAxisPlotLinesBuilder
             className: className,
             color: color,
             dashStyle: dashStyle,
+            events: events,
             id: id,
             label: _label?.build(),
             value: value,
@@ -3724,6 +3930,8 @@ class _$XAxisPlotLinesLabel extends XAxisPlotLinesLabel {
   @override
   final num rotation;
   @override
+  final JsonObject style;
+  @override
   final String text;
   @override
   final String textAlign;
@@ -3742,6 +3950,7 @@ class _$XAxisPlotLinesLabel extends XAxisPlotLinesLabel {
   _$XAxisPlotLinesLabel._(
       {this.align,
       this.rotation,
+      this.style,
       this.text,
       this.textAlign,
       this.useHTML,
@@ -3764,6 +3973,7 @@ class _$XAxisPlotLinesLabel extends XAxisPlotLinesLabel {
     if (other is! XAxisPlotLinesLabel) return false;
     return align == other.align &&
         rotation == other.rotation &&
+        style == other.style &&
         text == other.text &&
         textAlign == other.textAlign &&
         useHTML == other.useHTML &&
@@ -3779,7 +3989,9 @@ class _$XAxisPlotLinesLabel extends XAxisPlotLinesLabel {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, align.hashCode), rotation.hashCode),
+                        $jc(
+                            $jc($jc($jc(0, align.hashCode), rotation.hashCode),
+                                style.hashCode),
                             text.hashCode),
                         textAlign.hashCode),
                     useHTML.hashCode),
@@ -3793,6 +4005,7 @@ class _$XAxisPlotLinesLabel extends XAxisPlotLinesLabel {
     return (newBuiltValueToStringHelper('XAxisPlotLinesLabel')
           ..add('align', align)
           ..add('rotation', rotation)
+          ..add('style', style)
           ..add('text', text)
           ..add('textAlign', textAlign)
           ..add('useHTML', useHTML)
@@ -3814,6 +4027,10 @@ class XAxisPlotLinesLabelBuilder
   num _rotation;
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
+
+  JsonObject _style;
+  JsonObject get style => _$this._style;
+  set style(JsonObject style) => _$this._style = style;
 
   String _text;
   String get text => _$this._text;
@@ -3846,6 +4063,7 @@ class XAxisPlotLinesLabelBuilder
     if (_$v != null) {
       _align = _$v.align;
       _rotation = _$v.rotation;
+      _style = _$v.style;
       _text = _$v.text;
       _textAlign = _$v.textAlign;
       _useHTML = _$v.useHTML;
@@ -3874,6 +4092,7 @@ class XAxisPlotLinesLabelBuilder
         new _$XAxisPlotLinesLabel._(
             align: align,
             rotation: rotation,
+            style: style,
             text: text,
             textAlign: textAlign,
             useHTML: useHTML,

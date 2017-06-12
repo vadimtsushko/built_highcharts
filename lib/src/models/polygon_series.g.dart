@@ -124,6 +124,12 @@ class _$PolygonSeriesSerializer implements StructuredSerializer<PolygonSeries> {
         ..add(serializers.serialize(object.dashStyle,
             specifiedType: const FullType(String)));
     }
+    if (object.data != null) {
+      result
+        ..add('data')
+        ..add(serializers.serialize(object.data,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.dataLabels != null) {
       result
         ..add('dataLabels')
@@ -257,6 +263,12 @@ class _$PolygonSeriesSerializer implements StructuredSerializer<PolygonSeries> {
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.showCheckbox != null) {
       result
         ..add('showCheckbox')
@@ -275,11 +287,23 @@ class _$PolygonSeriesSerializer implements StructuredSerializer<PolygonSeries> {
         ..add(serializers.serialize(object.skipKeyboardNavigation,
             specifiedType: const FullType(bool)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
         ..add(serializers.serialize(object.stickyTracking,
             specifiedType: const FullType(bool)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.turboThreshold != null) {
       result
@@ -299,6 +323,18 @@ class _$PolygonSeriesSerializer implements StructuredSerializer<PolygonSeries> {
         ..add(serializers.serialize(object.visible,
             specifiedType: const FullType(bool)));
     }
+    if (object.xAxis != null) {
+      result
+        ..add('xAxis')
+        ..add(serializers.serialize(object.xAxis,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.yAxis != null) {
+      result
+        ..add('yAxis')
+        ..add(serializers.serialize(object.yAxis,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.zIndex != null) {
       result
         ..add('zIndex')
@@ -310,6 +346,12 @@ class _$PolygonSeriesSerializer implements StructuredSerializer<PolygonSeries> {
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -361,6 +403,10 @@ class _$PolygonSeriesSerializer implements StructuredSerializer<PolygonSeries> {
         case 'dashStyle':
           result.dashStyle = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'data':
+          result.data = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'dataLabels':
           result.dataLabels.replace(serializers.deserialize(value,
@@ -456,6 +502,10 @@ class _$PolygonSeriesSerializer implements StructuredSerializer<PolygonSeries> {
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -468,9 +518,17 @@ class _$PolygonSeriesSerializer implements StructuredSerializer<PolygonSeries> {
           result.skipKeyboardNavigation = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'turboThreshold':
           result.turboThreshold = serializers.deserialize(value,
@@ -484,6 +542,14 @@ class _$PolygonSeriesSerializer implements StructuredSerializer<PolygonSeries> {
           result.visible = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'xAxis':
+          result.xAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'yAxis':
+          result.yAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'zIndex':
           result.zIndex = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -491,6 +557,10 @@ class _$PolygonSeriesSerializer implements StructuredSerializer<PolygonSeries> {
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -528,6 +598,12 @@ class _$PolygonSeriesDataSerializer
         ..add(serializers.serialize(object.colorIndex,
             specifiedType: const FullType(num)));
     }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.description != null) {
       result
         ..add('description')
@@ -539,6 +615,12 @@ class _$PolygonSeriesDataSerializer
         ..add('drilldown')
         ..add(serializers.serialize(object.drilldown,
             specifiedType: const FullType(String)));
+    }
+    if (object.events != null) {
+      result
+        ..add('events')
+        ..add(serializers.serialize(object.events,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.id != null) {
       result
@@ -609,6 +691,10 @@ class _$PolygonSeriesDataSerializer
           result.colorIndex = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'description':
           result.description = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -616,6 +702,10 @@ class _$PolygonSeriesDataSerializer
         case 'drilldown':
           result.drilldown = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'events':
+          result.events = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -953,11 +1043,23 @@ class _$PolygonSeriesDataMarkerStatesHoverSerializer
       Serializers serializers, PolygonSeriesDataMarkerStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -994,9 +1096,17 @@ class _$PolygonSeriesDataMarkerStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -1034,6 +1144,12 @@ class _$PolygonSeriesDataMarkerStatesHoverHaloSerializer
       Serializers serializers, PolygonSeriesDataMarkerStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -1062,6 +1178,10 @@ class _$PolygonSeriesDataMarkerStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -1128,6 +1248,12 @@ class _$PolygonSeriesDataMarkerStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -1179,6 +1305,10 @@ class _$PolygonSeriesDataMarkerStatesHoverMarkerSerializer
         case 'radius':
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
@@ -1311,6 +1441,12 @@ class _$PolygonSeriesDataLabelsSerializer
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.shape != null) {
       result
         ..add('shape')
@@ -1437,6 +1573,10 @@ class _$PolygonSeriesDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -2187,11 +2327,23 @@ class _$PolygonSeriesStatesHoverSerializer
   Iterable serialize(Serializers serializers, PolygonSeriesStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -2227,9 +2379,17 @@ class _$PolygonSeriesStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -2266,6 +2426,12 @@ class _$PolygonSeriesStatesHoverHaloSerializer
       Serializers serializers, PolygonSeriesStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -2294,6 +2460,10 @@ class _$PolygonSeriesStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -2360,6 +2530,12 @@ class _$PolygonSeriesStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -2412,6 +2588,10 @@ class _$PolygonSeriesStatesHoverMarkerSerializer
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -2441,6 +2621,12 @@ class _$PolygonSeriesTooltipSerializer
   Iterable serialize(Serializers serializers, PolygonSeriesTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -2534,6 +2720,10 @@ class _$PolygonSeriesTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -2701,6 +2891,8 @@ class _$PolygonSeries extends PolygonSeries {
   @override
   final String dashStyle;
   @override
+  final JsonObject data;
+  @override
   final PolygonSeriesDataLabels dataLabels;
   @override
   final String description;
@@ -2745,13 +2937,19 @@ class _$PolygonSeries extends PolygonSeries {
   @override
   final bool selected;
   @override
+  final JsonObject shadow;
+  @override
   final bool showCheckbox;
   @override
   final bool showInLegend;
   @override
   final bool skipKeyboardNavigation;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
+  @override
+  final JsonObject tooltip;
   @override
   final num turboThreshold;
   @override
@@ -2759,9 +2957,15 @@ class _$PolygonSeries extends PolygonSeries {
   @override
   final bool visible;
   @override
+  final JsonObject xAxis;
+  @override
+  final JsonObject yAxis;
+  @override
   final num zIndex;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$PolygonSeries([void updates(PolygonSeriesBuilder b)]) =>
       (new PolygonSeriesBuilder()..update(updates)).build();
@@ -2776,6 +2980,7 @@ class _$PolygonSeries extends PolygonSeries {
       this.cropThreshold,
       this.cursor,
       this.dashStyle,
+      this.data,
       this.dataLabels,
       this.description,
       this.enableMouseTracking,
@@ -2798,15 +3003,21 @@ class _$PolygonSeries extends PolygonSeries {
       this.pointIntervalUnit,
       this.pointStart,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
+      this.states,
       this.stickyTracking,
+      this.tooltip,
       this.turboThreshold,
       this.type,
       this.visible,
+      this.xAxis,
+      this.yAxis,
       this.zIndex,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -2829,6 +3040,7 @@ class _$PolygonSeries extends PolygonSeries {
         cropThreshold == other.cropThreshold &&
         cursor == other.cursor &&
         dashStyle == other.dashStyle &&
+        data == other.data &&
         dataLabels == other.dataLabels &&
         description == other.description &&
         enableMouseTracking == other.enableMouseTracking &&
@@ -2851,15 +3063,21 @@ class _$PolygonSeries extends PolygonSeries {
         pointIntervalUnit == other.pointIntervalUnit &&
         pointStart == other.pointStart &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
+        tooltip == other.tooltip &&
         turboThreshold == other.turboThreshold &&
         type == other.type &&
         visible == other.visible &&
+        xAxis == other.xAxis &&
+        yAxis == other.yAxis &&
         zIndex == other.zIndex &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -2882,26 +3100,26 @@ class _$PolygonSeries extends PolygonSeries {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), id.hashCode), index.hashCode), keys.hashCode), legendIndex.hashCode), lineWidth.hashCode),
-                                                                                linkedTo.hashCode),
-                                                                            marker.hashCode),
-                                                                        name.hashCode),
-                                                                    negativeColor.hashCode),
-                                                                point.hashCode),
-                                                            pointDescriptionFormatter.hashCode),
-                                                        pointInterval.hashCode),
-                                                    pointIntervalUnit.hashCode),
-                                                pointStart.hashCode),
-                                            selected.hashCode),
-                                        showCheckbox.hashCode),
-                                    showInLegend.hashCode),
-                                skipKeyboardNavigation.hashCode),
-                            stickyTracking.hashCode),
-                        turboThreshold.hashCode),
-                    type.hashCode),
-                visible.hashCode),
-            zIndex.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), data.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), id.hashCode), index.hashCode), keys.hashCode), legendIndex.hashCode), lineWidth.hashCode), linkedTo.hashCode), marker.hashCode), name.hashCode), negativeColor.hashCode), point.hashCode), pointDescriptionFormatter.hashCode),
+                                                                                pointInterval.hashCode),
+                                                                            pointIntervalUnit.hashCode),
+                                                                        pointStart.hashCode),
+                                                                    selected.hashCode),
+                                                                shadow.hashCode),
+                                                            showCheckbox.hashCode),
+                                                        showInLegend.hashCode),
+                                                    skipKeyboardNavigation.hashCode),
+                                                states.hashCode),
+                                            stickyTracking.hashCode),
+                                        tooltip.hashCode),
+                                    turboThreshold.hashCode),
+                                type.hashCode),
+                            visible.hashCode),
+                        xAxis.hashCode),
+                    yAxis.hashCode),
+                zIndex.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -2916,6 +3134,7 @@ class _$PolygonSeries extends PolygonSeries {
           ..add('cropThreshold', cropThreshold)
           ..add('cursor', cursor)
           ..add('dashStyle', dashStyle)
+          ..add('data', data)
           ..add('dataLabels', dataLabels)
           ..add('description', description)
           ..add('enableMouseTracking', enableMouseTracking)
@@ -2938,15 +3157,21 @@ class _$PolygonSeries extends PolygonSeries {
           ..add('pointIntervalUnit', pointIntervalUnit)
           ..add('pointStart', pointStart)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
+          ..add('tooltip', tooltip)
           ..add('turboThreshold', turboThreshold)
           ..add('type', type)
           ..add('visible', visible)
+          ..add('xAxis', xAxis)
+          ..add('yAxis', yAxis)
           ..add('zIndex', zIndex)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -2992,6 +3217,10 @@ class PolygonSeriesBuilder
   String _dashStyle;
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
+
+  JsonObject _data;
+  JsonObject get data => _$this._data;
+  set data(JsonObject data) => _$this._data = data;
 
   PolygonSeriesDataLabelsBuilder _dataLabels;
   PolygonSeriesDataLabelsBuilder get dataLabels =>
@@ -3093,6 +3322,10 @@ class PolygonSeriesBuilder
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
   set showCheckbox(bool showCheckbox) => _$this._showCheckbox = showCheckbox;
@@ -3106,10 +3339,18 @@ class PolygonSeriesBuilder
   set skipKeyboardNavigation(bool skipKeyboardNavigation) =>
       _$this._skipKeyboardNavigation = skipKeyboardNavigation;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
       _$this._stickyTracking = stickyTracking;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   num _turboThreshold;
   num get turboThreshold => _$this._turboThreshold;
@@ -3124,6 +3365,14 @@ class PolygonSeriesBuilder
   bool get visible => _$this._visible;
   set visible(bool visible) => _$this._visible = visible;
 
+  JsonObject _xAxis;
+  JsonObject get xAxis => _$this._xAxis;
+  set xAxis(JsonObject xAxis) => _$this._xAxis = xAxis;
+
+  JsonObject _yAxis;
+  JsonObject get yAxis => _$this._yAxis;
+  set yAxis(JsonObject yAxis) => _$this._yAxis = yAxis;
+
   num _zIndex;
   num get zIndex => _$this._zIndex;
   set zIndex(num zIndex) => _$this._zIndex = zIndex;
@@ -3131,6 +3380,10 @@ class PolygonSeriesBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   PolygonSeriesBuilder();
 
@@ -3145,6 +3398,7 @@ class PolygonSeriesBuilder
       _cropThreshold = _$v.cropThreshold;
       _cursor = _$v.cursor;
       _dashStyle = _$v.dashStyle;
+      _data = _$v.data;
       _dataLabels = _$v.dataLabels?.toBuilder();
       _description = _$v.description;
       _enableMouseTracking = _$v.enableMouseTracking;
@@ -3167,15 +3421,21 @@ class PolygonSeriesBuilder
       _pointIntervalUnit = _$v.pointIntervalUnit;
       _pointStart = _$v.pointStart;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
+      _tooltip = _$v.tooltip;
       _turboThreshold = _$v.turboThreshold;
       _type = _$v.type;
       _visible = _$v.visible;
+      _xAxis = _$v.xAxis;
+      _yAxis = _$v.yAxis;
       _zIndex = _$v.zIndex;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -3205,6 +3465,7 @@ class PolygonSeriesBuilder
             cropThreshold: cropThreshold,
             cursor: cursor,
             dashStyle: dashStyle,
+            data: data,
             dataLabels: _dataLabels?.build(),
             description: description,
             enableMouseTracking: enableMouseTracking,
@@ -3227,15 +3488,21 @@ class PolygonSeriesBuilder
             pointIntervalUnit: pointIntervalUnit,
             pointStart: pointStart,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
+            states: states,
             stickyTracking: stickyTracking,
+            tooltip: tooltip,
             turboThreshold: turboThreshold,
             type: type,
             visible: visible,
+            xAxis: xAxis,
+            yAxis: yAxis,
             zIndex: zIndex,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -3254,9 +3521,13 @@ class _$PolygonSeriesData extends PolygonSeriesData {
   @override
   final num colorIndex;
   @override
+  final JsonObject dataLabels;
+  @override
   final String description;
   @override
   final String drilldown;
+  @override
+  final JsonObject events;
   @override
   final String id;
   @override
@@ -3279,8 +3550,10 @@ class _$PolygonSeriesData extends PolygonSeriesData {
       {this.className,
       this.color,
       this.colorIndex,
+      this.dataLabels,
       this.description,
       this.drilldown,
+      this.events,
       this.id,
       this.labelrank,
       this.marker,
@@ -3305,8 +3578,10 @@ class _$PolygonSeriesData extends PolygonSeriesData {
     return className == other.className &&
         color == other.color &&
         colorIndex == other.colorIndex &&
+        dataLabels == other.dataLabels &&
         description == other.description &&
         drilldown == other.drilldown &&
+        events == other.events &&
         id == other.id &&
         labelrank == other.labelrank &&
         marker == other.marker &&
@@ -3328,11 +3603,17 @@ class _$PolygonSeriesData extends PolygonSeriesData {
                                 $jc(
                                     $jc(
                                         $jc(
-                                            $jc($jc(0, className.hashCode),
-                                                color.hashCode),
-                                            colorIndex.hashCode),
-                                        description.hashCode),
-                                    drilldown.hashCode),
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc(0,
+                                                            className.hashCode),
+                                                        color.hashCode),
+                                                    colorIndex.hashCode),
+                                                dataLabels.hashCode),
+                                            description.hashCode),
+                                        drilldown.hashCode),
+                                    events.hashCode),
                                 id.hashCode),
                             labelrank.hashCode),
                         marker.hashCode),
@@ -3348,8 +3629,10 @@ class _$PolygonSeriesData extends PolygonSeriesData {
           ..add('className', className)
           ..add('color', color)
           ..add('colorIndex', colorIndex)
+          ..add('dataLabels', dataLabels)
           ..add('description', description)
           ..add('drilldown', drilldown)
+          ..add('events', events)
           ..add('id', id)
           ..add('labelrank', labelrank)
           ..add('marker', marker)
@@ -3377,6 +3660,10 @@ class PolygonSeriesDataBuilder
   num get colorIndex => _$this._colorIndex;
   set colorIndex(num colorIndex) => _$this._colorIndex = colorIndex;
 
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
+
   String _description;
   String get description => _$this._description;
   set description(String description) => _$this._description = description;
@@ -3384,6 +3671,10 @@ class PolygonSeriesDataBuilder
   String _drilldown;
   String get drilldown => _$this._drilldown;
   set drilldown(String drilldown) => _$this._drilldown = drilldown;
+
+  JsonObject _events;
+  JsonObject get events => _$this._events;
+  set events(JsonObject events) => _$this._events = events;
 
   String _id;
   String get id => _$this._id;
@@ -3421,8 +3712,10 @@ class PolygonSeriesDataBuilder
       _className = _$v.className;
       _color = _$v.color;
       _colorIndex = _$v.colorIndex;
+      _dataLabels = _$v.dataLabels;
       _description = _$v.description;
       _drilldown = _$v.drilldown;
+      _events = _$v.events;
       _id = _$v.id;
       _labelrank = _$v.labelrank;
       _marker = _$v.marker?.toBuilder();
@@ -3453,8 +3746,10 @@ class PolygonSeriesDataBuilder
             className: className,
             color: color,
             colorIndex: colorIndex,
+            dataLabels: dataLabels,
             description: description,
             drilldown: drilldown,
+            events: events,
             id: id,
             labelrank: labelrank,
             marker: _marker?.build(),
@@ -3913,7 +4208,11 @@ class PolygonSeriesDataMarkerStatesBuilder
 class _$PolygonSeriesDataMarkerStatesHover
     extends PolygonSeriesDataMarkerStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -3927,7 +4226,12 @@ class _$PolygonSeriesDataMarkerStatesHover
           .build();
 
   _$PolygonSeriesDataMarkerStatesHover._(
-      {this.enabled, this.lineWidth, this.lineWidthPlus, this.marker})
+      {this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker})
       : super._();
 
   @override
@@ -3943,7 +4247,9 @@ class _$PolygonSeriesDataMarkerStatesHover
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PolygonSeriesDataMarkerStatesHover) return false;
-    return enabled == other.enabled &&
+    return animation == other.animation &&
+        enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -3952,7 +4258,11 @@ class _$PolygonSeriesDataMarkerStatesHover
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, enabled.hashCode), lineWidth.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), enabled.hashCode),
+                    halo.hashCode),
+                lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
   }
@@ -3960,7 +4270,9 @@ class _$PolygonSeriesDataMarkerStatesHover
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PolygonSeriesDataMarkerStatesHover')
+          ..add('animation', animation)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -3974,9 +4286,17 @@ class PolygonSeriesDataMarkerStatesHoverBuilder
             PolygonSeriesDataMarkerStatesHoverBuilder> {
   _$PolygonSeriesDataMarkerStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -3996,7 +4316,9 @@ class PolygonSeriesDataMarkerStatesHoverBuilder
 
   PolygonSeriesDataMarkerStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -4020,7 +4342,9 @@ class PolygonSeriesDataMarkerStatesHoverBuilder
   _$PolygonSeriesDataMarkerStatesHover build() {
     final result = _$v ??
         new _$PolygonSeriesDataMarkerStatesHover._(
+            animation: animation,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -4037,6 +4361,8 @@ class PolygonSeriesDataMarkerStatesHoverBuilder
 class _$PolygonSeriesDataMarkerStatesHoverHalo
     extends PolygonSeriesDataMarkerStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -4046,7 +4372,8 @@ class _$PolygonSeriesDataMarkerStatesHoverHalo
       (new PolygonSeriesDataMarkerStatesHoverHaloBuilder()..update(updates))
           .build();
 
-  _$PolygonSeriesDataMarkerStatesHoverHalo._({this.opacity, this.size})
+  _$PolygonSeriesDataMarkerStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
       : super._();
 
   @override
@@ -4062,18 +4389,22 @@ class _$PolygonSeriesDataMarkerStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PolygonSeriesDataMarkerStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
             'PolygonSeriesDataMarkerStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -4085,6 +4416,10 @@ class PolygonSeriesDataMarkerStatesHoverHaloBuilder
         Builder<PolygonSeriesDataMarkerStatesHoverHalo,
             PolygonSeriesDataMarkerStatesHoverHaloBuilder> {
   _$PolygonSeriesDataMarkerStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -4098,6 +4433,7 @@ class PolygonSeriesDataMarkerStatesHoverHaloBuilder
 
   PolygonSeriesDataMarkerStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -4120,7 +4456,7 @@ class PolygonSeriesDataMarkerStatesHoverHaloBuilder
   _$PolygonSeriesDataMarkerStatesHoverHalo build() {
     final result = _$v ??
         new _$PolygonSeriesDataMarkerStatesHoverHalo._(
-            opacity: opacity, size: size);
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -4146,6 +4482,8 @@ class _$PolygonSeriesDataMarkerStatesHoverMarker
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -4162,6 +4500,7 @@ class _$PolygonSeriesDataMarkerStatesHoverMarker
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -4185,6 +4524,7 @@ class _$PolygonSeriesDataMarkerStatesHoverMarker
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -4196,11 +4536,15 @@ class _$PolygonSeriesDataMarkerStatesHoverMarker
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -4215,6 +4559,7 @@ class _$PolygonSeriesDataMarkerStatesHoverMarker
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -4251,6 +4596,10 @@ class PolygonSeriesDataMarkerStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -4269,6 +4618,7 @@ class PolygonSeriesDataMarkerStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -4297,6 +4647,7 @@ class PolygonSeriesDataMarkerStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -4345,6 +4696,8 @@ class _$PolygonSeriesDataLabels extends PolygonSeriesDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -4381,6 +4734,7 @@ class _$PolygonSeriesDataLabels extends PolygonSeriesDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -4420,6 +4774,7 @@ class _$PolygonSeriesDataLabels extends PolygonSeriesDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -4449,19 +4804,19 @@ class _$PolygonSeriesDataLabels extends PolygonSeriesDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -4491,6 +4846,7 @@ class _$PolygonSeriesDataLabels extends PolygonSeriesDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -4576,6 +4932,10 @@ class PolygonSeriesDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -4627,6 +4987,7 @@ class PolygonSeriesDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -4671,6 +5032,7 @@ class PolygonSeriesDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -5770,7 +6132,11 @@ class PolygonSeriesStatesBuilder
 
 class _$PolygonSeriesStatesHover extends PolygonSeriesStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -5783,7 +6149,12 @@ class _$PolygonSeriesStatesHover extends PolygonSeriesStatesHover {
       (new PolygonSeriesStatesHoverBuilder()..update(updates)).build();
 
   _$PolygonSeriesStatesHover._(
-      {this.enabled, this.lineWidth, this.lineWidthPlus, this.marker})
+      {this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker})
       : super._();
 
   @override
@@ -5799,7 +6170,9 @@ class _$PolygonSeriesStatesHover extends PolygonSeriesStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PolygonSeriesStatesHover) return false;
-    return enabled == other.enabled &&
+    return animation == other.animation &&
+        enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -5808,7 +6181,11 @@ class _$PolygonSeriesStatesHover extends PolygonSeriesStatesHover {
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, enabled.hashCode), lineWidth.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), enabled.hashCode),
+                    halo.hashCode),
+                lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
   }
@@ -5816,7 +6193,9 @@ class _$PolygonSeriesStatesHover extends PolygonSeriesStatesHover {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PolygonSeriesStatesHover')
+          ..add('animation', animation)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -5829,9 +6208,17 @@ class PolygonSeriesStatesHoverBuilder
         Builder<PolygonSeriesStatesHover, PolygonSeriesStatesHoverBuilder> {
   _$PolygonSeriesStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -5851,7 +6238,9 @@ class PolygonSeriesStatesHoverBuilder
 
   PolygonSeriesStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -5875,7 +6264,9 @@ class PolygonSeriesStatesHoverBuilder
   _$PolygonSeriesStatesHover build() {
     final result = _$v ??
         new _$PolygonSeriesStatesHover._(
+            animation: animation,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -5891,6 +6282,8 @@ class PolygonSeriesStatesHoverBuilder
 
 class _$PolygonSeriesStatesHoverHalo extends PolygonSeriesStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -5899,7 +6292,8 @@ class _$PolygonSeriesStatesHoverHalo extends PolygonSeriesStatesHoverHalo {
           [void updates(PolygonSeriesStatesHoverHaloBuilder b)]) =>
       (new PolygonSeriesStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$PolygonSeriesStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$PolygonSeriesStatesHoverHalo._({this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   PolygonSeriesStatesHoverHalo rebuild(
@@ -5914,17 +6308,21 @@ class _$PolygonSeriesStatesHoverHalo extends PolygonSeriesStatesHoverHalo {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PolygonSeriesStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PolygonSeriesStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -5936,6 +6334,10 @@ class PolygonSeriesStatesHoverHaloBuilder
         Builder<PolygonSeriesStatesHoverHalo,
             PolygonSeriesStatesHoverHaloBuilder> {
   _$PolygonSeriesStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -5949,6 +6351,7 @@ class PolygonSeriesStatesHoverHaloBuilder
 
   PolygonSeriesStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -5970,7 +6373,8 @@ class PolygonSeriesStatesHoverHaloBuilder
   @override
   _$PolygonSeriesStatesHoverHalo build() {
     final result = _$v ??
-        new _$PolygonSeriesStatesHoverHalo._(opacity: opacity, size: size);
+        new _$PolygonSeriesStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -5995,6 +6399,8 @@ class _$PolygonSeriesStatesHoverMarker extends PolygonSeriesStatesHoverMarker {
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -6010,6 +6416,7 @@ class _$PolygonSeriesStatesHoverMarker extends PolygonSeriesStatesHoverMarker {
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -6033,6 +6440,7 @@ class _$PolygonSeriesStatesHoverMarker extends PolygonSeriesStatesHoverMarker {
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -6044,11 +6452,15 @@ class _$PolygonSeriesStatesHoverMarker extends PolygonSeriesStatesHoverMarker {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -6062,6 +6474,7 @@ class _$PolygonSeriesStatesHoverMarker extends PolygonSeriesStatesHoverMarker {
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -6098,6 +6511,10 @@ class PolygonSeriesStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -6116,6 +6533,7 @@ class PolygonSeriesStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -6144,6 +6562,7 @@ class PolygonSeriesStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -6157,6 +6576,8 @@ class PolygonSeriesStatesHoverMarkerBuilder
 // **************************************************************************
 
 class _$PolygonSeriesTooltip extends PolygonSeriesTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -6189,7 +6610,8 @@ class _$PolygonSeriesTooltip extends PolygonSeriesTooltip {
       (new PolygonSeriesTooltipBuilder()..update(updates)).build();
 
   _$PolygonSeriesTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -6216,7 +6638,8 @@ class _$PolygonSeriesTooltip extends PolygonSeriesTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! PolygonSeriesTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -6245,7 +6668,11 @@ class _$PolygonSeriesTooltip extends PolygonSeriesTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -6264,6 +6691,7 @@ class _$PolygonSeriesTooltip extends PolygonSeriesTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PolygonSeriesTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -6284,6 +6712,11 @@ class _$PolygonSeriesTooltip extends PolygonSeriesTooltip {
 class PolygonSeriesTooltipBuilder
     implements Builder<PolygonSeriesTooltip, PolygonSeriesTooltipBuilder> {
   _$PolygonSeriesTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -6344,6 +6777,7 @@ class PolygonSeriesTooltipBuilder
 
   PolygonSeriesTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -6377,6 +6811,7 @@ class PolygonSeriesTooltipBuilder
   _$PolygonSeriesTooltip build() {
     final result = _$v ??
         new _$PolygonSeriesTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,

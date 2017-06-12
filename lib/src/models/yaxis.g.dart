@@ -53,6 +53,12 @@ class _$YAxisSerializer implements StructuredSerializer<YAxis> {
         ..add(serializers.serialize(object.angle,
             specifiedType: const FullType(num)));
     }
+    if (object.breaks != null) {
+      result
+        ..add('breaks')
+        ..add(serializers.serialize(object.breaks,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.categories != null) {
       result
         ..add('categories')
@@ -71,6 +77,18 @@ class _$YAxisSerializer implements StructuredSerializer<YAxis> {
         ..add('className')
         ..add(serializers.serialize(object.className,
             specifiedType: const FullType(String)));
+    }
+    if (object.crosshair != null) {
+      result
+        ..add('crosshair')
+        ..add(serializers.serialize(object.crosshair,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.description != null) {
       result
@@ -234,6 +252,12 @@ class _$YAxisSerializer implements StructuredSerializer<YAxis> {
         ..add(serializers.serialize(object.minorTickColor,
             specifiedType: const FullType(String)));
     }
+    if (object.minorTickInterval != null) {
+      result
+        ..add('minorTickInterval')
+        ..add(serializers.serialize(object.minorTickInterval,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.minorTickLength != null) {
       result
         ..add('minorTickLength')
@@ -264,12 +288,17 @@ class _$YAxisSerializer implements StructuredSerializer<YAxis> {
         ..add(serializers.serialize(object.opposite,
             specifiedType: const FullType(bool)));
     }
+    if (object.plotBands != null) {
+      result
+        ..add('plotBands')
+        ..add(serializers.serialize(object.plotBands,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.plotLines != null) {
       result
         ..add('plotLines')
         ..add(serializers.serialize(object.plotLines,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(YAxisPlotLines)])));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.reversed != null) {
       result
@@ -330,6 +359,12 @@ class _$YAxisSerializer implements StructuredSerializer<YAxis> {
         ..add('startOnTick')
         ..add(serializers.serialize(object.startOnTick,
             specifiedType: const FullType(bool)));
+    }
+    if (object.stops != null) {
+      result
+        ..add('stops')
+        ..add(serializers.serialize(object.stops,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.tickAmount != null) {
       result
@@ -410,6 +445,12 @@ class _$YAxisSerializer implements StructuredSerializer<YAxis> {
         ..add(serializers.serialize(object.uniqueNames,
             specifiedType: const FullType(bool)));
     }
+    if (object.units != null) {
+      result
+        ..add('units')
+        ..add(serializers.serialize(object.units,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.visible != null) {
       result
         ..add('visible')
@@ -443,6 +484,10 @@ class _$YAxisSerializer implements StructuredSerializer<YAxis> {
           result.angle = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'breaks':
+          result.breaks = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'categories':
           result.categories.replace(serializers.deserialize(value,
                   specifiedType:
@@ -456,6 +501,14 @@ class _$YAxisSerializer implements StructuredSerializer<YAxis> {
         case 'className':
           result.className = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'crosshair':
+          result.crosshair = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'description':
           result.description = serializers.deserialize(value,
@@ -565,6 +618,10 @@ class _$YAxisSerializer implements StructuredSerializer<YAxis> {
           result.minorTickColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'minorTickInterval':
+          result.minorTickInterval = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'minorTickLength':
           result.minorTickLength = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -585,11 +642,13 @@ class _$YAxisSerializer implements StructuredSerializer<YAxis> {
           result.opposite = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'plotBands':
+          result.plotBands = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'plotLines':
-          result.plotLines.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(YAxisPlotLines)]))
-              as BuiltList<YAxisPlotLines>);
+          result.plotLines = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'reversed':
           result.reversed = serializers.deserialize(value,
@@ -631,6 +690,10 @@ class _$YAxisSerializer implements StructuredSerializer<YAxis> {
         case 'startOnTick':
           result.startOnTick = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'stops':
+          result.stops = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'tickAmount':
           result.tickAmount = serializers.deserialize(value,
@@ -685,6 +748,10 @@ class _$YAxisSerializer implements StructuredSerializer<YAxis> {
         case 'uniqueNames':
           result.uniqueNames = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'units':
+          result.units = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'visible':
           result.visible = serializers.deserialize(value,
@@ -1208,6 +1275,12 @@ class _$YAxisPlotBandsSerializer
         ..add(serializers.serialize(object.color,
             specifiedType: const FullType(String)));
     }
+    if (object.events != null) {
+      result
+        ..add('events')
+        ..add(serializers.serialize(object.events,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.from != null) {
       result
         ..add('from')
@@ -1220,11 +1293,29 @@ class _$YAxisPlotBandsSerializer
         ..add(serializers.serialize(object.id,
             specifiedType: const FullType(String)));
     }
+    if (object.innerRadius != null) {
+      result
+        ..add('innerRadius')
+        ..add(serializers.serialize(object.innerRadius,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.label != null) {
       result
         ..add('label')
         ..add(serializers.serialize(object.label,
             specifiedType: const FullType(YAxisPlotBandsLabel)));
+    }
+    if (object.outerRadius != null) {
+      result
+        ..add('outerRadius')
+        ..add(serializers.serialize(object.outerRadius,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.thickness != null) {
+      result
+        ..add('thickness')
+        ..add(serializers.serialize(object.thickness,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.to != null) {
       result
@@ -1269,6 +1360,10 @@ class _$YAxisPlotBandsSerializer
           result.color = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'events':
+          result.events = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'from':
           result.from = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -1277,10 +1372,22 @@ class _$YAxisPlotBandsSerializer
           result.id = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'innerRadius':
+          result.innerRadius = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'label':
           result.label.replace(serializers.deserialize(value,
                   specifiedType: const FullType(YAxisPlotBandsLabel))
               as YAxisPlotBandsLabel);
+          break;
+        case 'outerRadius':
+          result.outerRadius = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'thickness':
+          result.thickness = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'to':
           result.to = serializers.deserialize(value,
@@ -1322,6 +1429,12 @@ class _$YAxisPlotBandsLabelSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.style != null) {
+      result
+        ..add('style')
+        ..add(serializers.serialize(object.style,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.text != null) {
       result
@@ -1381,6 +1494,10 @@ class _$YAxisPlotBandsLabelSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'style':
+          result.style = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'text':
           result.text = serializers.deserialize(value,
@@ -1442,6 +1559,12 @@ class _$YAxisPlotLinesSerializer
         ..add(serializers.serialize(object.dashStyle,
             specifiedType: const FullType(String)));
     }
+    if (object.events != null) {
+      result
+        ..add('events')
+        ..add(serializers.serialize(object.events,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.id != null) {
       result
         ..add('id')
@@ -1499,6 +1622,10 @@ class _$YAxisPlotLinesSerializer
           result.dashStyle = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'events':
+          result.events = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'id':
           result.id = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -1552,6 +1679,12 @@ class _$YAxisPlotLinesLabelSerializer
         ..add('rotation')
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
+    }
+    if (object.style != null) {
+      result
+        ..add('style')
+        ..add(serializers.serialize(object.style,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.text != null) {
       result
@@ -1611,6 +1744,10 @@ class _$YAxisPlotLinesLabelSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'style':
+          result.style = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'text':
           result.text = serializers.deserialize(value,
@@ -1939,11 +2076,17 @@ class _$YAxis extends YAxis {
   @override
   final num angle;
   @override
+  final JsonObject breaks;
+  @override
   final BuiltList<String> categories;
   @override
   final num ceiling;
   @override
   final String className;
+  @override
+  final JsonObject crosshair;
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final String description;
   @override
@@ -1999,6 +2142,8 @@ class _$YAxis extends YAxis {
   @override
   final String minorTickColor;
   @override
+  final JsonObject minorTickInterval;
+  @override
   final num minorTickLength;
   @override
   final String minorTickPosition;
@@ -2009,7 +2154,9 @@ class _$YAxis extends YAxis {
   @override
   final bool opposite;
   @override
-  final BuiltList<YAxisPlotLines> plotLines;
+  final JsonObject plotBands;
+  @override
+  final JsonObject plotLines;
   @override
   final bool reversed;
   @override
@@ -2030,6 +2177,8 @@ class _$YAxis extends YAxis {
   final num startOfWeek;
   @override
   final bool startOnTick;
+  @override
+  final JsonObject stops;
   @override
   final num tickAmount;
   @override
@@ -2057,6 +2206,8 @@ class _$YAxis extends YAxis {
   @override
   final bool uniqueNames;
   @override
+  final JsonObject units;
+  @override
   final bool visible;
 
   factory _$YAxis([void updates(YAxisBuilder b)]) =>
@@ -2066,9 +2217,12 @@ class _$YAxis extends YAxis {
       {this.allowDecimals,
       this.alternateGridColor,
       this.angle,
+      this.breaks,
       this.categories,
       this.ceiling,
       this.className,
+      this.crosshair,
+      this.dateTimeLabelFormats,
       this.description,
       this.endOnTick,
       this.events,
@@ -2096,11 +2250,13 @@ class _$YAxis extends YAxis {
       this.minorGridLineDashStyle,
       this.minorGridLineWidth,
       this.minorTickColor,
+      this.minorTickInterval,
       this.minorTickLength,
       this.minorTickPosition,
       this.minorTickWidth,
       this.offset,
       this.opposite,
+      this.plotBands,
       this.plotLines,
       this.reversed,
       this.reversedStacks,
@@ -2112,6 +2268,7 @@ class _$YAxis extends YAxis {
       this.stackLabels,
       this.startOfWeek,
       this.startOnTick,
+      this.stops,
       this.tickAmount,
       this.tickColor,
       this.tickInterval,
@@ -2125,6 +2282,7 @@ class _$YAxis extends YAxis {
       this.title,
       this.type,
       this.uniqueNames,
+      this.units,
       this.visible})
       : super._();
 
@@ -2142,9 +2300,12 @@ class _$YAxis extends YAxis {
     return allowDecimals == other.allowDecimals &&
         alternateGridColor == other.alternateGridColor &&
         angle == other.angle &&
+        breaks == other.breaks &&
         categories == other.categories &&
         ceiling == other.ceiling &&
         className == other.className &&
+        crosshair == other.crosshair &&
+        dateTimeLabelFormats == other.dateTimeLabelFormats &&
         description == other.description &&
         endOnTick == other.endOnTick &&
         events == other.events &&
@@ -2172,11 +2333,13 @@ class _$YAxis extends YAxis {
         minorGridLineDashStyle == other.minorGridLineDashStyle &&
         minorGridLineWidth == other.minorGridLineWidth &&
         minorTickColor == other.minorTickColor &&
+        minorTickInterval == other.minorTickInterval &&
         minorTickLength == other.minorTickLength &&
         minorTickPosition == other.minorTickPosition &&
         minorTickWidth == other.minorTickWidth &&
         offset == other.offset &&
         opposite == other.opposite &&
+        plotBands == other.plotBands &&
         plotLines == other.plotLines &&
         reversed == other.reversed &&
         reversedStacks == other.reversedStacks &&
@@ -2188,6 +2351,7 @@ class _$YAxis extends YAxis {
         stackLabels == other.stackLabels &&
         startOfWeek == other.startOfWeek &&
         startOnTick == other.startOnTick &&
+        stops == other.stops &&
         tickAmount == other.tickAmount &&
         tickColor == other.tickColor &&
         tickInterval == other.tickInterval &&
@@ -2201,6 +2365,7 @@ class _$YAxis extends YAxis {
         title == other.title &&
         type == other.type &&
         uniqueNames == other.uniqueNames &&
+        units == other.units &&
         visible == other.visible;
   }
 
@@ -2224,25 +2389,25 @@ class _$YAxis extends YAxis {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowDecimals.hashCode), alternateGridColor.hashCode), angle.hashCode), categories.hashCode), ceiling.hashCode), className.hashCode), description.hashCode), endOnTick.hashCode), events.hashCode), floor.hashCode), gridLineColor.hashCode), gridLineDashStyle.hashCode), gridLineInterpolation.hashCode), gridLineWidth.hashCode), gridZIndex.hashCode), id.hashCode), labels.hashCode), lineColor.hashCode), lineWidth.hashCode), linkedTo.hashCode), max.hashCode), maxColor.hashCode), maxPadding.hashCode), maxZoom.hashCode), min.hashCode), minColor.hashCode), minPadding.hashCode), minRange.hashCode), minTickInterval.hashCode), minorGridLineColor.hashCode), minorGridLineDashStyle.hashCode), minorGridLineWidth.hashCode), minorTickColor.hashCode), minorTickLength.hashCode), minorTickPosition.hashCode), minorTickWidth.hashCode), offset.hashCode), opposite.hashCode), plotLines.hashCode), reversed.hashCode), reversedStacks.hashCode), showEmpty.hashCode), showFirstLabel.hashCode), showLastLabel.hashCode),
-                                                                                softMax.hashCode),
-                                                                            softMin.hashCode),
-                                                                        stackLabels.hashCode),
-                                                                    startOfWeek.hashCode),
-                                                                startOnTick.hashCode),
-                                                            tickAmount.hashCode),
-                                                        tickColor.hashCode),
-                                                    tickInterval.hashCode),
-                                                tickLength.hashCode),
-                                            tickPixelInterval.hashCode),
-                                        tickPosition.hashCode),
-                                    tickPositioner.hashCode),
-                                tickPositions.hashCode),
-                            tickWidth.hashCode),
-                        tickmarkPlacement.hashCode),
-                    title.hashCode),
-                type.hashCode),
-            uniqueNames.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowDecimals.hashCode), alternateGridColor.hashCode), angle.hashCode), breaks.hashCode), categories.hashCode), ceiling.hashCode), className.hashCode), crosshair.hashCode), dateTimeLabelFormats.hashCode), description.hashCode), endOnTick.hashCode), events.hashCode), floor.hashCode), gridLineColor.hashCode), gridLineDashStyle.hashCode), gridLineInterpolation.hashCode), gridLineWidth.hashCode), gridZIndex.hashCode), id.hashCode), labels.hashCode), lineColor.hashCode), lineWidth.hashCode), linkedTo.hashCode), max.hashCode), maxColor.hashCode), maxPadding.hashCode), maxZoom.hashCode), min.hashCode), minColor.hashCode), minPadding.hashCode), minRange.hashCode), minTickInterval.hashCode), minorGridLineColor.hashCode), minorGridLineDashStyle.hashCode), minorGridLineWidth.hashCode), minorTickColor.hashCode), minorTickInterval.hashCode), minorTickLength.hashCode), minorTickPosition.hashCode), minorTickWidth.hashCode), offset.hashCode), opposite.hashCode), plotBands.hashCode), plotLines.hashCode), reversed.hashCode), reversedStacks.hashCode), showEmpty.hashCode), showFirstLabel.hashCode), showLastLabel.hashCode), softMax.hashCode), softMin.hashCode),
+                                                                                stackLabels.hashCode),
+                                                                            startOfWeek.hashCode),
+                                                                        startOnTick.hashCode),
+                                                                    stops.hashCode),
+                                                                tickAmount.hashCode),
+                                                            tickColor.hashCode),
+                                                        tickInterval.hashCode),
+                                                    tickLength.hashCode),
+                                                tickPixelInterval.hashCode),
+                                            tickPosition.hashCode),
+                                        tickPositioner.hashCode),
+                                    tickPositions.hashCode),
+                                tickWidth.hashCode),
+                            tickmarkPlacement.hashCode),
+                        title.hashCode),
+                    type.hashCode),
+                uniqueNames.hashCode),
+            units.hashCode),
         visible.hashCode));
   }
 
@@ -2252,9 +2417,12 @@ class _$YAxis extends YAxis {
           ..add('allowDecimals', allowDecimals)
           ..add('alternateGridColor', alternateGridColor)
           ..add('angle', angle)
+          ..add('breaks', breaks)
           ..add('categories', categories)
           ..add('ceiling', ceiling)
           ..add('className', className)
+          ..add('crosshair', crosshair)
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('description', description)
           ..add('endOnTick', endOnTick)
           ..add('events', events)
@@ -2282,11 +2450,13 @@ class _$YAxis extends YAxis {
           ..add('minorGridLineDashStyle', minorGridLineDashStyle)
           ..add('minorGridLineWidth', minorGridLineWidth)
           ..add('minorTickColor', minorTickColor)
+          ..add('minorTickInterval', minorTickInterval)
           ..add('minorTickLength', minorTickLength)
           ..add('minorTickPosition', minorTickPosition)
           ..add('minorTickWidth', minorTickWidth)
           ..add('offset', offset)
           ..add('opposite', opposite)
+          ..add('plotBands', plotBands)
           ..add('plotLines', plotLines)
           ..add('reversed', reversed)
           ..add('reversedStacks', reversedStacks)
@@ -2298,6 +2468,7 @@ class _$YAxis extends YAxis {
           ..add('stackLabels', stackLabels)
           ..add('startOfWeek', startOfWeek)
           ..add('startOnTick', startOnTick)
+          ..add('stops', stops)
           ..add('tickAmount', tickAmount)
           ..add('tickColor', tickColor)
           ..add('tickInterval', tickInterval)
@@ -2311,6 +2482,7 @@ class _$YAxis extends YAxis {
           ..add('title', title)
           ..add('type', type)
           ..add('uniqueNames', uniqueNames)
+          ..add('units', units)
           ..add('visible', visible))
         .toString();
   }
@@ -2333,6 +2505,10 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
   num get angle => _$this._angle;
   set angle(num angle) => _$this._angle = angle;
 
+  JsonObject _breaks;
+  JsonObject get breaks => _$this._breaks;
+  set breaks(JsonObject breaks) => _$this._breaks = breaks;
+
   ListBuilder<String> _categories;
   ListBuilder<String> get categories =>
       _$this._categories ??= new ListBuilder<String>();
@@ -2346,6 +2522,15 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
   String _className;
   String get className => _$this._className;
   set className(String className) => _$this._className = className;
+
+  JsonObject _crosshair;
+  JsonObject get crosshair => _$this._crosshair;
+  set crosshair(JsonObject crosshair) => _$this._crosshair = crosshair;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   String _description;
   String get description => _$this._description;
@@ -2463,6 +2648,11 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
   set minorTickColor(String minorTickColor) =>
       _$this._minorTickColor = minorTickColor;
 
+  JsonObject _minorTickInterval;
+  JsonObject get minorTickInterval => _$this._minorTickInterval;
+  set minorTickInterval(JsonObject minorTickInterval) =>
+      _$this._minorTickInterval = minorTickInterval;
+
   num _minorTickLength;
   num get minorTickLength => _$this._minorTickLength;
   set minorTickLength(num minorTickLength) =>
@@ -2486,11 +2676,13 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
   bool get opposite => _$this._opposite;
   set opposite(bool opposite) => _$this._opposite = opposite;
 
-  ListBuilder<YAxisPlotLines> _plotLines;
-  ListBuilder<YAxisPlotLines> get plotLines =>
-      _$this._plotLines ??= new ListBuilder<YAxisPlotLines>();
-  set plotLines(ListBuilder<YAxisPlotLines> plotLines) =>
-      _$this._plotLines = plotLines;
+  JsonObject _plotBands;
+  JsonObject get plotBands => _$this._plotBands;
+  set plotBands(JsonObject plotBands) => _$this._plotBands = plotBands;
+
+  JsonObject _plotLines;
+  JsonObject get plotLines => _$this._plotLines;
+  set plotLines(JsonObject plotLines) => _$this._plotLines = plotLines;
 
   bool _reversed;
   bool get reversed => _$this._reversed;
@@ -2536,6 +2728,10 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
   bool _startOnTick;
   bool get startOnTick => _$this._startOnTick;
   set startOnTick(bool startOnTick) => _$this._startOnTick = startOnTick;
+
+  JsonObject _stops;
+  JsonObject get stops => _$this._stops;
+  set stops(JsonObject stops) => _$this._stops = stops;
 
   num _tickAmount;
   num get tickAmount => _$this._tickAmount;
@@ -2594,6 +2790,10 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
   bool get uniqueNames => _$this._uniqueNames;
   set uniqueNames(bool uniqueNames) => _$this._uniqueNames = uniqueNames;
 
+  JsonObject _units;
+  JsonObject get units => _$this._units;
+  set units(JsonObject units) => _$this._units = units;
+
   bool _visible;
   bool get visible => _$this._visible;
   set visible(bool visible) => _$this._visible = visible;
@@ -2605,9 +2805,12 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
       _allowDecimals = _$v.allowDecimals;
       _alternateGridColor = _$v.alternateGridColor;
       _angle = _$v.angle;
+      _breaks = _$v.breaks;
       _categories = _$v.categories?.toBuilder();
       _ceiling = _$v.ceiling;
       _className = _$v.className;
+      _crosshair = _$v.crosshair;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _description = _$v.description;
       _endOnTick = _$v.endOnTick;
       _events = _$v.events?.toBuilder();
@@ -2635,12 +2838,14 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
       _minorGridLineDashStyle = _$v.minorGridLineDashStyle;
       _minorGridLineWidth = _$v.minorGridLineWidth;
       _minorTickColor = _$v.minorTickColor;
+      _minorTickInterval = _$v.minorTickInterval;
       _minorTickLength = _$v.minorTickLength;
       _minorTickPosition = _$v.minorTickPosition;
       _minorTickWidth = _$v.minorTickWidth;
       _offset = _$v.offset;
       _opposite = _$v.opposite;
-      _plotLines = _$v.plotLines?.toBuilder();
+      _plotBands = _$v.plotBands;
+      _plotLines = _$v.plotLines;
       _reversed = _$v.reversed;
       _reversedStacks = _$v.reversedStacks;
       _showEmpty = _$v.showEmpty;
@@ -2651,6 +2856,7 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
       _stackLabels = _$v.stackLabels?.toBuilder();
       _startOfWeek = _$v.startOfWeek;
       _startOnTick = _$v.startOnTick;
+      _stops = _$v.stops;
       _tickAmount = _$v.tickAmount;
       _tickColor = _$v.tickColor;
       _tickInterval = _$v.tickInterval;
@@ -2664,6 +2870,7 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
       _title = _$v.title?.toBuilder();
       _type = _$v.type;
       _uniqueNames = _$v.uniqueNames;
+      _units = _$v.units;
       _visible = _$v.visible;
       _$v = null;
     }
@@ -2688,9 +2895,12 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
             allowDecimals: allowDecimals,
             alternateGridColor: alternateGridColor,
             angle: angle,
+            breaks: breaks,
             categories: _categories?.build(),
             ceiling: ceiling,
             className: className,
+            crosshair: crosshair,
+            dateTimeLabelFormats: dateTimeLabelFormats,
             description: description,
             endOnTick: endOnTick,
             events: _events?.build(),
@@ -2718,12 +2928,14 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
             minorGridLineDashStyle: minorGridLineDashStyle,
             minorGridLineWidth: minorGridLineWidth,
             minorTickColor: minorTickColor,
+            minorTickInterval: minorTickInterval,
             minorTickLength: minorTickLength,
             minorTickPosition: minorTickPosition,
             minorTickWidth: minorTickWidth,
             offset: offset,
             opposite: opposite,
-            plotLines: _plotLines?.build(),
+            plotBands: plotBands,
+            plotLines: plotLines,
             reversed: reversed,
             reversedStacks: reversedStacks,
             showEmpty: showEmpty,
@@ -2734,6 +2946,7 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
             stackLabels: _stackLabels?.build(),
             startOfWeek: startOfWeek,
             startOnTick: startOnTick,
+            stops: stops,
             tickAmount: tickAmount,
             tickColor: tickColor,
             tickInterval: tickInterval,
@@ -2747,6 +2960,7 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
             title: _title?.build(),
             type: type,
             uniqueNames: uniqueNames,
+            units: units,
             visible: visible);
     replace(result);
     return result;
@@ -3481,11 +3695,19 @@ class _$YAxisPlotBands extends YAxisPlotBands {
   @override
   final String color;
   @override
+  final JsonObject events;
+  @override
   final num from;
   @override
   final String id;
   @override
+  final JsonObject innerRadius;
+  @override
   final YAxisPlotBandsLabel label;
+  @override
+  final JsonObject outerRadius;
+  @override
+  final JsonObject thickness;
   @override
   final num to;
   @override
@@ -3499,9 +3721,13 @@ class _$YAxisPlotBands extends YAxisPlotBands {
       this.borderWidth,
       this.className,
       this.color,
+      this.events,
       this.from,
       this.id,
+      this.innerRadius,
       this.label,
+      this.outerRadius,
+      this.thickness,
       this.to,
       this.zIndex})
       : super._();
@@ -3522,9 +3748,13 @@ class _$YAxisPlotBands extends YAxisPlotBands {
         borderWidth == other.borderWidth &&
         className == other.className &&
         color == other.color &&
+        events == other.events &&
         from == other.from &&
         id == other.id &&
+        innerRadius == other.innerRadius &&
         label == other.label &&
+        outerRadius == other.outerRadius &&
+        thickness == other.thickness &&
         to == other.to &&
         zIndex == other.zIndex;
   }
@@ -3538,13 +3768,23 @@ class _$YAxisPlotBands extends YAxisPlotBands {
                     $jc(
                         $jc(
                             $jc(
-                                $jc($jc(0, borderColor.hashCode),
-                                    borderWidth.hashCode),
-                                className.hashCode),
-                            color.hashCode),
-                        from.hashCode),
-                    id.hashCode),
-                label.hashCode),
+                                $jc(
+                                    $jc(
+                                        $jc(
+                                            $jc(
+                                                $jc(
+                                                    $jc(0,
+                                                        borderColor.hashCode),
+                                                    borderWidth.hashCode),
+                                                className.hashCode),
+                                            color.hashCode),
+                                        events.hashCode),
+                                    from.hashCode),
+                                id.hashCode),
+                            innerRadius.hashCode),
+                        label.hashCode),
+                    outerRadius.hashCode),
+                thickness.hashCode),
             to.hashCode),
         zIndex.hashCode));
   }
@@ -3556,9 +3796,13 @@ class _$YAxisPlotBands extends YAxisPlotBands {
           ..add('borderWidth', borderWidth)
           ..add('className', className)
           ..add('color', color)
+          ..add('events', events)
           ..add('from', from)
           ..add('id', id)
+          ..add('innerRadius', innerRadius)
           ..add('label', label)
+          ..add('outerRadius', outerRadius)
+          ..add('thickness', thickness)
           ..add('to', to)
           ..add('zIndex', zIndex))
         .toString();
@@ -3585,6 +3829,10 @@ class YAxisPlotBandsBuilder
   String get color => _$this._color;
   set color(String color) => _$this._color = color;
 
+  JsonObject _events;
+  JsonObject get events => _$this._events;
+  set events(JsonObject events) => _$this._events = events;
+
   num _from;
   num get from => _$this._from;
   set from(num from) => _$this._from = from;
@@ -3593,10 +3841,22 @@ class YAxisPlotBandsBuilder
   String get id => _$this._id;
   set id(String id) => _$this._id = id;
 
+  JsonObject _innerRadius;
+  JsonObject get innerRadius => _$this._innerRadius;
+  set innerRadius(JsonObject innerRadius) => _$this._innerRadius = innerRadius;
+
   YAxisPlotBandsLabelBuilder _label;
   YAxisPlotBandsLabelBuilder get label =>
       _$this._label ??= new YAxisPlotBandsLabelBuilder();
   set label(YAxisPlotBandsLabelBuilder label) => _$this._label = label;
+
+  JsonObject _outerRadius;
+  JsonObject get outerRadius => _$this._outerRadius;
+  set outerRadius(JsonObject outerRadius) => _$this._outerRadius = outerRadius;
+
+  JsonObject _thickness;
+  JsonObject get thickness => _$this._thickness;
+  set thickness(JsonObject thickness) => _$this._thickness = thickness;
 
   num _to;
   num get to => _$this._to;
@@ -3614,9 +3874,13 @@ class YAxisPlotBandsBuilder
       _borderWidth = _$v.borderWidth;
       _className = _$v.className;
       _color = _$v.color;
+      _events = _$v.events;
       _from = _$v.from;
       _id = _$v.id;
+      _innerRadius = _$v.innerRadius;
       _label = _$v.label?.toBuilder();
+      _outerRadius = _$v.outerRadius;
+      _thickness = _$v.thickness;
       _to = _$v.to;
       _zIndex = _$v.zIndex;
       _$v = null;
@@ -3643,9 +3907,13 @@ class YAxisPlotBandsBuilder
             borderWidth: borderWidth,
             className: className,
             color: color,
+            events: events,
             from: from,
             id: id,
+            innerRadius: innerRadius,
             label: _label?.build(),
+            outerRadius: outerRadius,
+            thickness: thickness,
             to: to,
             zIndex: zIndex);
     replace(result);
@@ -3663,6 +3931,8 @@ class _$YAxisPlotBandsLabel extends YAxisPlotBandsLabel {
   final String align;
   @override
   final num rotation;
+  @override
+  final JsonObject style;
   @override
   final String text;
   @override
@@ -3682,6 +3952,7 @@ class _$YAxisPlotBandsLabel extends YAxisPlotBandsLabel {
   _$YAxisPlotBandsLabel._(
       {this.align,
       this.rotation,
+      this.style,
       this.text,
       this.textAlign,
       this.useHTML,
@@ -3704,6 +3975,7 @@ class _$YAxisPlotBandsLabel extends YAxisPlotBandsLabel {
     if (other is! YAxisPlotBandsLabel) return false;
     return align == other.align &&
         rotation == other.rotation &&
+        style == other.style &&
         text == other.text &&
         textAlign == other.textAlign &&
         useHTML == other.useHTML &&
@@ -3719,7 +3991,9 @@ class _$YAxisPlotBandsLabel extends YAxisPlotBandsLabel {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, align.hashCode), rotation.hashCode),
+                        $jc(
+                            $jc($jc($jc(0, align.hashCode), rotation.hashCode),
+                                style.hashCode),
                             text.hashCode),
                         textAlign.hashCode),
                     useHTML.hashCode),
@@ -3733,6 +4007,7 @@ class _$YAxisPlotBandsLabel extends YAxisPlotBandsLabel {
     return (newBuiltValueToStringHelper('YAxisPlotBandsLabel')
           ..add('align', align)
           ..add('rotation', rotation)
+          ..add('style', style)
           ..add('text', text)
           ..add('textAlign', textAlign)
           ..add('useHTML', useHTML)
@@ -3754,6 +4029,10 @@ class YAxisPlotBandsLabelBuilder
   num _rotation;
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
+
+  JsonObject _style;
+  JsonObject get style => _$this._style;
+  set style(JsonObject style) => _$this._style = style;
 
   String _text;
   String get text => _$this._text;
@@ -3786,6 +4065,7 @@ class YAxisPlotBandsLabelBuilder
     if (_$v != null) {
       _align = _$v.align;
       _rotation = _$v.rotation;
+      _style = _$v.style;
       _text = _$v.text;
       _textAlign = _$v.textAlign;
       _useHTML = _$v.useHTML;
@@ -3814,6 +4094,7 @@ class YAxisPlotBandsLabelBuilder
         new _$YAxisPlotBandsLabel._(
             align: align,
             rotation: rotation,
+            style: style,
             text: text,
             textAlign: textAlign,
             useHTML: useHTML,
@@ -3838,6 +4119,8 @@ class _$YAxisPlotLines extends YAxisPlotLines {
   @override
   final String dashStyle;
   @override
+  final JsonObject events;
+  @override
   final String id;
   @override
   final YAxisPlotLinesLabel label;
@@ -3855,6 +4138,7 @@ class _$YAxisPlotLines extends YAxisPlotLines {
       {this.className,
       this.color,
       this.dashStyle,
+      this.events,
       this.id,
       this.label,
       this.value,
@@ -3877,6 +4161,7 @@ class _$YAxisPlotLines extends YAxisPlotLines {
     return className == other.className &&
         color == other.color &&
         dashStyle == other.dashStyle &&
+        events == other.events &&
         id == other.id &&
         label == other.label &&
         value == other.value &&
@@ -3891,8 +4176,10 @@ class _$YAxisPlotLines extends YAxisPlotLines {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, className.hashCode), color.hashCode),
-                            dashStyle.hashCode),
+                        $jc(
+                            $jc($jc($jc(0, className.hashCode), color.hashCode),
+                                dashStyle.hashCode),
+                            events.hashCode),
                         id.hashCode),
                     label.hashCode),
                 value.hashCode),
@@ -3906,6 +4193,7 @@ class _$YAxisPlotLines extends YAxisPlotLines {
           ..add('className', className)
           ..add('color', color)
           ..add('dashStyle', dashStyle)
+          ..add('events', events)
           ..add('id', id)
           ..add('label', label)
           ..add('value', value)
@@ -3930,6 +4218,10 @@ class YAxisPlotLinesBuilder
   String _dashStyle;
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
+
+  JsonObject _events;
+  JsonObject get events => _$this._events;
+  set events(JsonObject events) => _$this._events = events;
 
   String _id;
   String get id => _$this._id;
@@ -3959,6 +4251,7 @@ class YAxisPlotLinesBuilder
       _className = _$v.className;
       _color = _$v.color;
       _dashStyle = _$v.dashStyle;
+      _events = _$v.events;
       _id = _$v.id;
       _label = _$v.label?.toBuilder();
       _value = _$v.value;
@@ -3987,6 +4280,7 @@ class YAxisPlotLinesBuilder
             className: className,
             color: color,
             dashStyle: dashStyle,
+            events: events,
             id: id,
             label: _label?.build(),
             value: value,
@@ -4008,6 +4302,8 @@ class _$YAxisPlotLinesLabel extends YAxisPlotLinesLabel {
   @override
   final num rotation;
   @override
+  final JsonObject style;
+  @override
   final String text;
   @override
   final String textAlign;
@@ -4026,6 +4322,7 @@ class _$YAxisPlotLinesLabel extends YAxisPlotLinesLabel {
   _$YAxisPlotLinesLabel._(
       {this.align,
       this.rotation,
+      this.style,
       this.text,
       this.textAlign,
       this.useHTML,
@@ -4048,6 +4345,7 @@ class _$YAxisPlotLinesLabel extends YAxisPlotLinesLabel {
     if (other is! YAxisPlotLinesLabel) return false;
     return align == other.align &&
         rotation == other.rotation &&
+        style == other.style &&
         text == other.text &&
         textAlign == other.textAlign &&
         useHTML == other.useHTML &&
@@ -4063,7 +4361,9 @@ class _$YAxisPlotLinesLabel extends YAxisPlotLinesLabel {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, align.hashCode), rotation.hashCode),
+                        $jc(
+                            $jc($jc($jc(0, align.hashCode), rotation.hashCode),
+                                style.hashCode),
                             text.hashCode),
                         textAlign.hashCode),
                     useHTML.hashCode),
@@ -4077,6 +4377,7 @@ class _$YAxisPlotLinesLabel extends YAxisPlotLinesLabel {
     return (newBuiltValueToStringHelper('YAxisPlotLinesLabel')
           ..add('align', align)
           ..add('rotation', rotation)
+          ..add('style', style)
           ..add('text', text)
           ..add('textAlign', textAlign)
           ..add('useHTML', useHTML)
@@ -4098,6 +4399,10 @@ class YAxisPlotLinesLabelBuilder
   num _rotation;
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
+
+  JsonObject _style;
+  JsonObject get style => _$this._style;
+  set style(JsonObject style) => _$this._style = style;
 
   String _text;
   String get text => _$this._text;
@@ -4130,6 +4435,7 @@ class YAxisPlotLinesLabelBuilder
     if (_$v != null) {
       _align = _$v.align;
       _rotation = _$v.rotation;
+      _style = _$v.style;
       _text = _$v.text;
       _textAlign = _$v.textAlign;
       _useHTML = _$v.useHTML;
@@ -4158,6 +4464,7 @@ class YAxisPlotLinesLabelBuilder
         new _$YAxisPlotLinesLabel._(
             align: align,
             rotation: rotation,
+            style: style,
             text: text,
             textAlign: textAlign,
             useHTML: useHTML,

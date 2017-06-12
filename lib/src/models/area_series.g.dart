@@ -137,8 +137,7 @@ class _$AreaSeriesSerializer implements StructuredSerializer<AreaSeries> {
       result
         ..add('data')
         ..add(serializers.serialize(object.data,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(num)])));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.dataLabels != null) {
       result
@@ -291,6 +290,12 @@ class _$AreaSeriesSerializer implements StructuredSerializer<AreaSeries> {
         ..add(serializers.serialize(object.pointIntervalUnit,
             specifiedType: const FullType(String)));
     }
+    if (object.pointPlacement != null) {
+      result
+        ..add('pointPlacement')
+        ..add(serializers.serialize(object.pointPlacement,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.pointStart != null) {
       result
         ..add('pointStart')
@@ -302,6 +307,12 @@ class _$AreaSeriesSerializer implements StructuredSerializer<AreaSeries> {
         ..add('selected')
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.showCheckbox != null) {
       result
@@ -339,6 +350,12 @@ class _$AreaSeriesSerializer implements StructuredSerializer<AreaSeries> {
         ..add(serializers.serialize(object.stacking,
             specifiedType: const FullType(String)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.step != null) {
       result
         ..add('step')
@@ -356,6 +373,12 @@ class _$AreaSeriesSerializer implements StructuredSerializer<AreaSeries> {
         ..add('threshold')
         ..add(serializers.serialize(object.threshold,
             specifiedType: const FullType(num)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.trackByArea != null) {
       result
@@ -381,6 +404,18 @@ class _$AreaSeriesSerializer implements StructuredSerializer<AreaSeries> {
         ..add(serializers.serialize(object.visible,
             specifiedType: const FullType(bool)));
     }
+    if (object.xAxis != null) {
+      result
+        ..add('xAxis')
+        ..add(serializers.serialize(object.xAxis,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.yAxis != null) {
+      result
+        ..add('yAxis')
+        ..add(serializers.serialize(object.yAxis,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.zIndex != null) {
       result
         ..add('zIndex')
@@ -392,6 +427,12 @@ class _$AreaSeriesSerializer implements StructuredSerializer<AreaSeries> {
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -453,10 +494,8 @@ class _$AreaSeriesSerializer implements StructuredSerializer<AreaSeries> {
               specifiedType: const FullType(String)) as String;
           break;
         case 'data':
-          result.data.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(num)]))
-              as BuiltList<num>);
+          result.data = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'dataLabels':
           result.dataLabels.replace(serializers.deserialize(value,
@@ -564,6 +603,10 @@ class _$AreaSeriesSerializer implements StructuredSerializer<AreaSeries> {
           result.pointIntervalUnit = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'pointPlacement':
+          result.pointPlacement = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'pointStart':
           result.pointStart = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -571,6 +614,10 @@ class _$AreaSeriesSerializer implements StructuredSerializer<AreaSeries> {
         case 'selected':
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
@@ -596,6 +643,10 @@ class _$AreaSeriesSerializer implements StructuredSerializer<AreaSeries> {
           result.stacking = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'step':
           result.step = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -607,6 +658,10 @@ class _$AreaSeriesSerializer implements StructuredSerializer<AreaSeries> {
         case 'threshold':
           result.threshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'trackByArea':
           result.trackByArea = serializers.deserialize(value,
@@ -624,6 +679,14 @@ class _$AreaSeriesSerializer implements StructuredSerializer<AreaSeries> {
           result.visible = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'xAxis':
+          result.xAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'yAxis':
+          result.yAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'zIndex':
           result.zIndex = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -631,6 +694,10 @@ class _$AreaSeriesSerializer implements StructuredSerializer<AreaSeries> {
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -668,6 +735,12 @@ class _$AreaSeriesDataSerializer
         ..add(serializers.serialize(object.colorIndex,
             specifiedType: const FullType(num)));
     }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.description != null) {
       result
         ..add('description')
@@ -679,6 +752,12 @@ class _$AreaSeriesDataSerializer
         ..add('drilldown')
         ..add(serializers.serialize(object.drilldown,
             specifiedType: const FullType(String)));
+    }
+    if (object.events != null) {
+      result
+        ..add('events')
+        ..add(serializers.serialize(object.events,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.id != null) {
       result
@@ -749,6 +828,10 @@ class _$AreaSeriesDataSerializer
           result.colorIndex = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'description':
           result.description = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -756,6 +839,10 @@ class _$AreaSeriesDataSerializer
         case 'drilldown':
           result.drilldown = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'events':
+          result.events = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -1090,11 +1177,23 @@ class _$AreaSeriesDataMarkerStatesHoverSerializer
       Serializers serializers, AreaSeriesDataMarkerStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -1131,9 +1230,17 @@ class _$AreaSeriesDataMarkerStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -1171,6 +1278,12 @@ class _$AreaSeriesDataMarkerStatesHoverHaloSerializer
       Serializers serializers, AreaSeriesDataMarkerStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -1199,6 +1312,10 @@ class _$AreaSeriesDataMarkerStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -1265,6 +1382,12 @@ class _$AreaSeriesDataMarkerStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -1316,6 +1439,10 @@ class _$AreaSeriesDataMarkerStatesHoverMarkerSerializer
         case 'radius':
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
@@ -1448,6 +1575,12 @@ class _$AreaSeriesDataLabelsSerializer
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.shape != null) {
       result
         ..add('shape')
@@ -1573,6 +1706,10 @@ class _$AreaSeriesDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -2313,11 +2450,23 @@ class _$AreaSeriesStatesHoverSerializer
   Iterable serialize(Serializers serializers, AreaSeriesStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -2353,9 +2502,17 @@ class _$AreaSeriesStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -2391,6 +2548,12 @@ class _$AreaSeriesStatesHoverHaloSerializer
   Iterable serialize(Serializers serializers, AreaSeriesStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -2419,6 +2582,10 @@ class _$AreaSeriesStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -2485,6 +2652,12 @@ class _$AreaSeriesStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -2537,6 +2710,10 @@ class _$AreaSeriesStatesHoverMarkerSerializer
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -2563,6 +2740,12 @@ class _$AreaSeriesTooltipSerializer
   Iterable serialize(Serializers serializers, AreaSeriesTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -2656,6 +2839,10 @@ class _$AreaSeriesTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -2827,7 +3014,7 @@ class _$AreaSeries extends AreaSeries {
   @override
   final String dashStyle;
   @override
-  final BuiltList<num> data;
+  final JsonObject data;
   @override
   final AreaSeriesDataLabels dataLabels;
   @override
@@ -2879,9 +3066,13 @@ class _$AreaSeries extends AreaSeries {
   @override
   final String pointIntervalUnit;
   @override
+  final JsonObject pointPlacement;
+  @override
   final num pointStart;
   @override
   final bool selected;
+  @override
+  final JsonObject shadow;
   @override
   final bool showCheckbox;
   @override
@@ -2895,11 +3086,15 @@ class _$AreaSeries extends AreaSeries {
   @override
   final String stacking;
   @override
+  final JsonObject states;
+  @override
   final String step;
   @override
   final bool stickyTracking;
   @override
   final num threshold;
+  @override
+  final JsonObject tooltip;
   @override
   final bool trackByArea;
   @override
@@ -2909,9 +3104,15 @@ class _$AreaSeries extends AreaSeries {
   @override
   final bool visible;
   @override
+  final JsonObject xAxis;
+  @override
+  final JsonObject yAxis;
+  @override
   final num zIndex;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$AreaSeries([void updates(AreaSeriesBuilder b)]) =>
       (new AreaSeriesBuilder()..update(updates)).build();
@@ -2954,23 +3155,30 @@ class _$AreaSeries extends AreaSeries {
       this.pointDescriptionFormatter,
       this.pointInterval,
       this.pointIntervalUnit,
+      this.pointPlacement,
       this.pointStart,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
       this.softThreshold,
       this.stack,
       this.stacking,
+      this.states,
       this.step,
       this.stickyTracking,
       this.threshold,
+      this.tooltip,
       this.trackByArea,
       this.turboThreshold,
       this.type,
       this.visible,
+      this.xAxis,
+      this.yAxis,
       this.zIndex,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -3021,23 +3229,30 @@ class _$AreaSeries extends AreaSeries {
         pointDescriptionFormatter == other.pointDescriptionFormatter &&
         pointInterval == other.pointInterval &&
         pointIntervalUnit == other.pointIntervalUnit &&
+        pointPlacement == other.pointPlacement &&
         pointStart == other.pointStart &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         softThreshold == other.softThreshold &&
         stack == other.stack &&
         stacking == other.stacking &&
+        states == other.states &&
         step == other.step &&
         stickyTracking == other.stickyTracking &&
         threshold == other.threshold &&
+        tooltip == other.tooltip &&
         trackByArea == other.trackByArea &&
         turboThreshold == other.turboThreshold &&
         type == other.type &&
         visible == other.visible &&
+        xAxis == other.xAxis &&
+        yAxis == other.yAxis &&
         zIndex == other.zIndex &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -3060,26 +3275,26 @@ class _$AreaSeries extends AreaSeries {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), connectEnds.hashCode), connectNulls.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), data.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), fillColor.hashCode), fillOpacity.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), id.hashCode), index.hashCode), keys.hashCode), legendIndex.hashCode), lineColor.hashCode), lineWidth.hashCode), linecap.hashCode), linkedTo.hashCode), marker.hashCode), name.hashCode), negativeColor.hashCode), negativeFillColor.hashCode), point.hashCode), pointDescriptionFormatter.hashCode),
-                                                                                pointInterval.hashCode),
-                                                                            pointIntervalUnit.hashCode),
-                                                                        pointStart.hashCode),
-                                                                    selected.hashCode),
-                                                                showCheckbox.hashCode),
-                                                            showInLegend.hashCode),
-                                                        skipKeyboardNavigation.hashCode),
-                                                    softThreshold.hashCode),
-                                                stack.hashCode),
-                                            stacking.hashCode),
-                                        step.hashCode),
-                                    stickyTracking.hashCode),
-                                threshold.hashCode),
-                            trackByArea.hashCode),
-                        turboThreshold.hashCode),
-                    type.hashCode),
-                visible.hashCode),
-            zIndex.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), connectEnds.hashCode), connectNulls.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), data.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), fillColor.hashCode), fillOpacity.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), id.hashCode), index.hashCode), keys.hashCode), legendIndex.hashCode), lineColor.hashCode), lineWidth.hashCode), linecap.hashCode), linkedTo.hashCode), marker.hashCode), name.hashCode), negativeColor.hashCode), negativeFillColor.hashCode), point.hashCode), pointDescriptionFormatter.hashCode), pointInterval.hashCode), pointIntervalUnit.hashCode), pointPlacement.hashCode), pointStart.hashCode), selected.hashCode), shadow.hashCode), showCheckbox.hashCode),
+                                                                                showInLegend.hashCode),
+                                                                            skipKeyboardNavigation.hashCode),
+                                                                        softThreshold.hashCode),
+                                                                    stack.hashCode),
+                                                                stacking.hashCode),
+                                                            states.hashCode),
+                                                        step.hashCode),
+                                                    stickyTracking.hashCode),
+                                                threshold.hashCode),
+                                            tooltip.hashCode),
+                                        trackByArea.hashCode),
+                                    turboThreshold.hashCode),
+                                type.hashCode),
+                            visible.hashCode),
+                        xAxis.hashCode),
+                    yAxis.hashCode),
+                zIndex.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -3122,23 +3337,30 @@ class _$AreaSeries extends AreaSeries {
           ..add('pointDescriptionFormatter', pointDescriptionFormatter)
           ..add('pointInterval', pointInterval)
           ..add('pointIntervalUnit', pointIntervalUnit)
+          ..add('pointPlacement', pointPlacement)
           ..add('pointStart', pointStart)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('softThreshold', softThreshold)
           ..add('stack', stack)
           ..add('stacking', stacking)
+          ..add('states', states)
           ..add('step', step)
           ..add('stickyTracking', stickyTracking)
           ..add('threshold', threshold)
+          ..add('tooltip', tooltip)
           ..add('trackByArea', trackByArea)
           ..add('turboThreshold', turboThreshold)
           ..add('type', type)
           ..add('visible', visible)
+          ..add('xAxis', xAxis)
+          ..add('yAxis', yAxis)
           ..add('zIndex', zIndex)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -3192,9 +3414,9 @@ class AreaSeriesBuilder implements Builder<AreaSeries, AreaSeriesBuilder> {
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  ListBuilder<num> _data;
-  ListBuilder<num> get data => _$this._data ??= new ListBuilder<num>();
-  set data(ListBuilder<num> data) => _$this._data = data;
+  JsonObject _data;
+  JsonObject get data => _$this._data;
+  set data(JsonObject data) => _$this._data = data;
 
   AreaSeriesDataLabelsBuilder _dataLabels;
   AreaSeriesDataLabelsBuilder get dataLabels =>
@@ -3309,6 +3531,11 @@ class AreaSeriesBuilder implements Builder<AreaSeries, AreaSeriesBuilder> {
   set pointIntervalUnit(String pointIntervalUnit) =>
       _$this._pointIntervalUnit = pointIntervalUnit;
 
+  JsonObject _pointPlacement;
+  JsonObject get pointPlacement => _$this._pointPlacement;
+  set pointPlacement(JsonObject pointPlacement) =>
+      _$this._pointPlacement = pointPlacement;
+
   num _pointStart;
   num get pointStart => _$this._pointStart;
   set pointStart(num pointStart) => _$this._pointStart = pointStart;
@@ -3316,6 +3543,10 @@ class AreaSeriesBuilder implements Builder<AreaSeries, AreaSeriesBuilder> {
   bool _selected;
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
+
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
 
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
@@ -3343,6 +3574,10 @@ class AreaSeriesBuilder implements Builder<AreaSeries, AreaSeriesBuilder> {
   String get stacking => _$this._stacking;
   set stacking(String stacking) => _$this._stacking = stacking;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _step;
   String get step => _$this._step;
   set step(String step) => _$this._step = step;
@@ -3355,6 +3590,10 @@ class AreaSeriesBuilder implements Builder<AreaSeries, AreaSeriesBuilder> {
   num _threshold;
   num get threshold => _$this._threshold;
   set threshold(num threshold) => _$this._threshold = threshold;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   bool _trackByArea;
   bool get trackByArea => _$this._trackByArea;
@@ -3373,6 +3612,14 @@ class AreaSeriesBuilder implements Builder<AreaSeries, AreaSeriesBuilder> {
   bool get visible => _$this._visible;
   set visible(bool visible) => _$this._visible = visible;
 
+  JsonObject _xAxis;
+  JsonObject get xAxis => _$this._xAxis;
+  set xAxis(JsonObject xAxis) => _$this._xAxis = xAxis;
+
+  JsonObject _yAxis;
+  JsonObject get yAxis => _$this._yAxis;
+  set yAxis(JsonObject yAxis) => _$this._yAxis = yAxis;
+
   num _zIndex;
   num get zIndex => _$this._zIndex;
   set zIndex(num zIndex) => _$this._zIndex = zIndex;
@@ -3380,6 +3627,10 @@ class AreaSeriesBuilder implements Builder<AreaSeries, AreaSeriesBuilder> {
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   AreaSeriesBuilder();
 
@@ -3396,7 +3647,7 @@ class AreaSeriesBuilder implements Builder<AreaSeries, AreaSeriesBuilder> {
       _cropThreshold = _$v.cropThreshold;
       _cursor = _$v.cursor;
       _dashStyle = _$v.dashStyle;
-      _data = _$v.data?.toBuilder();
+      _data = _$v.data;
       _dataLabels = _$v.dataLabels?.toBuilder();
       _description = _$v.description;
       _enableMouseTracking = _$v.enableMouseTracking;
@@ -3422,23 +3673,30 @@ class AreaSeriesBuilder implements Builder<AreaSeries, AreaSeriesBuilder> {
       _pointDescriptionFormatter = _$v.pointDescriptionFormatter;
       _pointInterval = _$v.pointInterval;
       _pointIntervalUnit = _$v.pointIntervalUnit;
+      _pointPlacement = _$v.pointPlacement;
       _pointStart = _$v.pointStart;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _softThreshold = _$v.softThreshold;
       _stack = _$v.stack;
       _stacking = _$v.stacking;
+      _states = _$v.states;
       _step = _$v.step;
       _stickyTracking = _$v.stickyTracking;
       _threshold = _$v.threshold;
+      _tooltip = _$v.tooltip;
       _trackByArea = _$v.trackByArea;
       _turboThreshold = _$v.turboThreshold;
       _type = _$v.type;
       _visible = _$v.visible;
+      _xAxis = _$v.xAxis;
+      _yAxis = _$v.yAxis;
       _zIndex = _$v.zIndex;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -3470,7 +3728,7 @@ class AreaSeriesBuilder implements Builder<AreaSeries, AreaSeriesBuilder> {
             cropThreshold: cropThreshold,
             cursor: cursor,
             dashStyle: dashStyle,
-            data: _data?.build(),
+            data: data,
             dataLabels: _dataLabels?.build(),
             description: description,
             enableMouseTracking: enableMouseTracking,
@@ -3496,23 +3754,30 @@ class AreaSeriesBuilder implements Builder<AreaSeries, AreaSeriesBuilder> {
             pointDescriptionFormatter: pointDescriptionFormatter,
             pointInterval: pointInterval,
             pointIntervalUnit: pointIntervalUnit,
+            pointPlacement: pointPlacement,
             pointStart: pointStart,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
             softThreshold: softThreshold,
             stack: stack,
             stacking: stacking,
+            states: states,
             step: step,
             stickyTracking: stickyTracking,
             threshold: threshold,
+            tooltip: tooltip,
             trackByArea: trackByArea,
             turboThreshold: turboThreshold,
             type: type,
             visible: visible,
+            xAxis: xAxis,
+            yAxis: yAxis,
             zIndex: zIndex,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -3531,9 +3796,13 @@ class _$AreaSeriesData extends AreaSeriesData {
   @override
   final num colorIndex;
   @override
+  final JsonObject dataLabels;
+  @override
   final String description;
   @override
   final String drilldown;
+  @override
+  final JsonObject events;
   @override
   final String id;
   @override
@@ -3556,8 +3825,10 @@ class _$AreaSeriesData extends AreaSeriesData {
       {this.className,
       this.color,
       this.colorIndex,
+      this.dataLabels,
       this.description,
       this.drilldown,
+      this.events,
       this.id,
       this.labelrank,
       this.marker,
@@ -3582,8 +3853,10 @@ class _$AreaSeriesData extends AreaSeriesData {
     return className == other.className &&
         color == other.color &&
         colorIndex == other.colorIndex &&
+        dataLabels == other.dataLabels &&
         description == other.description &&
         drilldown == other.drilldown &&
+        events == other.events &&
         id == other.id &&
         labelrank == other.labelrank &&
         marker == other.marker &&
@@ -3605,11 +3878,17 @@ class _$AreaSeriesData extends AreaSeriesData {
                                 $jc(
                                     $jc(
                                         $jc(
-                                            $jc($jc(0, className.hashCode),
-                                                color.hashCode),
-                                            colorIndex.hashCode),
-                                        description.hashCode),
-                                    drilldown.hashCode),
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc(0,
+                                                            className.hashCode),
+                                                        color.hashCode),
+                                                    colorIndex.hashCode),
+                                                dataLabels.hashCode),
+                                            description.hashCode),
+                                        drilldown.hashCode),
+                                    events.hashCode),
                                 id.hashCode),
                             labelrank.hashCode),
                         marker.hashCode),
@@ -3625,8 +3904,10 @@ class _$AreaSeriesData extends AreaSeriesData {
           ..add('className', className)
           ..add('color', color)
           ..add('colorIndex', colorIndex)
+          ..add('dataLabels', dataLabels)
           ..add('description', description)
           ..add('drilldown', drilldown)
+          ..add('events', events)
           ..add('id', id)
           ..add('labelrank', labelrank)
           ..add('marker', marker)
@@ -3654,6 +3935,10 @@ class AreaSeriesDataBuilder
   num get colorIndex => _$this._colorIndex;
   set colorIndex(num colorIndex) => _$this._colorIndex = colorIndex;
 
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
+
   String _description;
   String get description => _$this._description;
   set description(String description) => _$this._description = description;
@@ -3661,6 +3946,10 @@ class AreaSeriesDataBuilder
   String _drilldown;
   String get drilldown => _$this._drilldown;
   set drilldown(String drilldown) => _$this._drilldown = drilldown;
+
+  JsonObject _events;
+  JsonObject get events => _$this._events;
+  set events(JsonObject events) => _$this._events = events;
 
   String _id;
   String get id => _$this._id;
@@ -3698,8 +3987,10 @@ class AreaSeriesDataBuilder
       _className = _$v.className;
       _color = _$v.color;
       _colorIndex = _$v.colorIndex;
+      _dataLabels = _$v.dataLabels;
       _description = _$v.description;
       _drilldown = _$v.drilldown;
+      _events = _$v.events;
       _id = _$v.id;
       _labelrank = _$v.labelrank;
       _marker = _$v.marker?.toBuilder();
@@ -3730,8 +4021,10 @@ class AreaSeriesDataBuilder
             className: className,
             color: color,
             colorIndex: colorIndex,
+            dataLabels: dataLabels,
             description: description,
             drilldown: drilldown,
+            events: events,
             id: id,
             labelrank: labelrank,
             marker: _marker?.build(),
@@ -4185,7 +4478,11 @@ class AreaSeriesDataMarkerStatesBuilder
 class _$AreaSeriesDataMarkerStatesHover
     extends AreaSeriesDataMarkerStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -4198,7 +4495,12 @@ class _$AreaSeriesDataMarkerStatesHover
       (new AreaSeriesDataMarkerStatesHoverBuilder()..update(updates)).build();
 
   _$AreaSeriesDataMarkerStatesHover._(
-      {this.enabled, this.lineWidth, this.lineWidthPlus, this.marker})
+      {this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker})
       : super._();
 
   @override
@@ -4214,7 +4516,9 @@ class _$AreaSeriesDataMarkerStatesHover
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! AreaSeriesDataMarkerStatesHover) return false;
-    return enabled == other.enabled &&
+    return animation == other.animation &&
+        enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -4223,7 +4527,11 @@ class _$AreaSeriesDataMarkerStatesHover
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, enabled.hashCode), lineWidth.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), enabled.hashCode),
+                    halo.hashCode),
+                lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
   }
@@ -4231,7 +4539,9 @@ class _$AreaSeriesDataMarkerStatesHover
   @override
   String toString() {
     return (newBuiltValueToStringHelper('AreaSeriesDataMarkerStatesHover')
+          ..add('animation', animation)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -4245,9 +4555,17 @@ class AreaSeriesDataMarkerStatesHoverBuilder
             AreaSeriesDataMarkerStatesHoverBuilder> {
   _$AreaSeriesDataMarkerStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -4267,7 +4585,9 @@ class AreaSeriesDataMarkerStatesHoverBuilder
 
   AreaSeriesDataMarkerStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -4291,7 +4611,9 @@ class AreaSeriesDataMarkerStatesHoverBuilder
   _$AreaSeriesDataMarkerStatesHover build() {
     final result = _$v ??
         new _$AreaSeriesDataMarkerStatesHover._(
+            animation: animation,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -4308,6 +4630,8 @@ class AreaSeriesDataMarkerStatesHoverBuilder
 class _$AreaSeriesDataMarkerStatesHoverHalo
     extends AreaSeriesDataMarkerStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -4317,7 +4641,8 @@ class _$AreaSeriesDataMarkerStatesHoverHalo
       (new AreaSeriesDataMarkerStatesHoverHaloBuilder()..update(updates))
           .build();
 
-  _$AreaSeriesDataMarkerStatesHoverHalo._({this.opacity, this.size})
+  _$AreaSeriesDataMarkerStatesHoverHalo._(
+      {this.attributes, this.opacity, this.size})
       : super._();
 
   @override
@@ -4333,17 +4658,21 @@ class _$AreaSeriesDataMarkerStatesHoverHalo
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! AreaSeriesDataMarkerStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('AreaSeriesDataMarkerStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -4355,6 +4684,10 @@ class AreaSeriesDataMarkerStatesHoverHaloBuilder
         Builder<AreaSeriesDataMarkerStatesHoverHalo,
             AreaSeriesDataMarkerStatesHoverHaloBuilder> {
   _$AreaSeriesDataMarkerStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -4368,6 +4701,7 @@ class AreaSeriesDataMarkerStatesHoverHaloBuilder
 
   AreaSeriesDataMarkerStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -4390,7 +4724,7 @@ class AreaSeriesDataMarkerStatesHoverHaloBuilder
   _$AreaSeriesDataMarkerStatesHoverHalo build() {
     final result = _$v ??
         new _$AreaSeriesDataMarkerStatesHoverHalo._(
-            opacity: opacity, size: size);
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -4416,6 +4750,8 @@ class _$AreaSeriesDataMarkerStatesHoverMarker
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -4432,6 +4768,7 @@ class _$AreaSeriesDataMarkerStatesHoverMarker
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -4455,6 +4792,7 @@ class _$AreaSeriesDataMarkerStatesHoverMarker
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -4466,11 +4804,15 @@ class _$AreaSeriesDataMarkerStatesHoverMarker
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -4484,6 +4826,7 @@ class _$AreaSeriesDataMarkerStatesHoverMarker
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -4520,6 +4863,10 @@ class AreaSeriesDataMarkerStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -4538,6 +4885,7 @@ class AreaSeriesDataMarkerStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -4566,6 +4914,7 @@ class AreaSeriesDataMarkerStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -4614,6 +4963,8 @@ class _$AreaSeriesDataLabels extends AreaSeriesDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -4650,6 +5001,7 @@ class _$AreaSeriesDataLabels extends AreaSeriesDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -4688,6 +5040,7 @@ class _$AreaSeriesDataLabels extends AreaSeriesDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -4717,19 +5070,19 @@ class _$AreaSeriesDataLabels extends AreaSeriesDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -4759,6 +5112,7 @@ class _$AreaSeriesDataLabels extends AreaSeriesDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -4843,6 +5197,10 @@ class AreaSeriesDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -4894,6 +5252,7 @@ class AreaSeriesDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -4938,6 +5297,7 @@ class AreaSeriesDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -6031,7 +6391,11 @@ class AreaSeriesStatesBuilder
 
 class _$AreaSeriesStatesHover extends AreaSeriesStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -6044,7 +6408,12 @@ class _$AreaSeriesStatesHover extends AreaSeriesStatesHover {
       (new AreaSeriesStatesHoverBuilder()..update(updates)).build();
 
   _$AreaSeriesStatesHover._(
-      {this.enabled, this.lineWidth, this.lineWidthPlus, this.marker})
+      {this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker})
       : super._();
 
   @override
@@ -6059,7 +6428,9 @@ class _$AreaSeriesStatesHover extends AreaSeriesStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! AreaSeriesStatesHover) return false;
-    return enabled == other.enabled &&
+    return animation == other.animation &&
+        enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -6068,7 +6439,11 @@ class _$AreaSeriesStatesHover extends AreaSeriesStatesHover {
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, enabled.hashCode), lineWidth.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), enabled.hashCode),
+                    halo.hashCode),
+                lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
   }
@@ -6076,7 +6451,9 @@ class _$AreaSeriesStatesHover extends AreaSeriesStatesHover {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('AreaSeriesStatesHover')
+          ..add('animation', animation)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -6088,9 +6465,17 @@ class AreaSeriesStatesHoverBuilder
     implements Builder<AreaSeriesStatesHover, AreaSeriesStatesHoverBuilder> {
   _$AreaSeriesStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -6110,7 +6495,9 @@ class AreaSeriesStatesHoverBuilder
 
   AreaSeriesStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -6134,7 +6521,9 @@ class AreaSeriesStatesHoverBuilder
   _$AreaSeriesStatesHover build() {
     final result = _$v ??
         new _$AreaSeriesStatesHover._(
+            animation: animation,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -6150,6 +6539,8 @@ class AreaSeriesStatesHoverBuilder
 
 class _$AreaSeriesStatesHoverHalo extends AreaSeriesStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -6158,7 +6549,8 @@ class _$AreaSeriesStatesHoverHalo extends AreaSeriesStatesHoverHalo {
           [void updates(AreaSeriesStatesHoverHaloBuilder b)]) =>
       (new AreaSeriesStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$AreaSeriesStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$AreaSeriesStatesHoverHalo._({this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   AreaSeriesStatesHoverHalo rebuild(
@@ -6173,17 +6565,21 @@ class _$AreaSeriesStatesHoverHalo extends AreaSeriesStatesHoverHalo {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! AreaSeriesStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('AreaSeriesStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -6194,6 +6590,10 @@ class AreaSeriesStatesHoverHaloBuilder
     implements
         Builder<AreaSeriesStatesHoverHalo, AreaSeriesStatesHoverHaloBuilder> {
   _$AreaSeriesStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -6207,6 +6607,7 @@ class AreaSeriesStatesHoverHaloBuilder
 
   AreaSeriesStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -6227,8 +6628,9 @@ class AreaSeriesStatesHoverHaloBuilder
 
   @override
   _$AreaSeriesStatesHoverHalo build() {
-    final result =
-        _$v ?? new _$AreaSeriesStatesHoverHalo._(opacity: opacity, size: size);
+    final result = _$v ??
+        new _$AreaSeriesStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -6253,6 +6655,8 @@ class _$AreaSeriesStatesHoverMarker extends AreaSeriesStatesHoverMarker {
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -6268,6 +6672,7 @@ class _$AreaSeriesStatesHoverMarker extends AreaSeriesStatesHoverMarker {
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -6291,6 +6696,7 @@ class _$AreaSeriesStatesHoverMarker extends AreaSeriesStatesHoverMarker {
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -6302,11 +6708,15 @@ class _$AreaSeriesStatesHoverMarker extends AreaSeriesStatesHoverMarker {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -6320,6 +6730,7 @@ class _$AreaSeriesStatesHoverMarker extends AreaSeriesStatesHoverMarker {
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -6356,6 +6767,10 @@ class AreaSeriesStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -6374,6 +6789,7 @@ class AreaSeriesStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -6402,6 +6818,7 @@ class AreaSeriesStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -6415,6 +6832,8 @@ class AreaSeriesStatesHoverMarkerBuilder
 // **************************************************************************
 
 class _$AreaSeriesTooltip extends AreaSeriesTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -6446,7 +6865,8 @@ class _$AreaSeriesTooltip extends AreaSeriesTooltip {
       (new AreaSeriesTooltipBuilder()..update(updates)).build();
 
   _$AreaSeriesTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -6473,7 +6893,8 @@ class _$AreaSeriesTooltip extends AreaSeriesTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! AreaSeriesTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -6502,7 +6923,11 @@ class _$AreaSeriesTooltip extends AreaSeriesTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -6521,6 +6946,7 @@ class _$AreaSeriesTooltip extends AreaSeriesTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('AreaSeriesTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -6541,6 +6967,11 @@ class _$AreaSeriesTooltip extends AreaSeriesTooltip {
 class AreaSeriesTooltipBuilder
     implements Builder<AreaSeriesTooltip, AreaSeriesTooltipBuilder> {
   _$AreaSeriesTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -6601,6 +7032,7 @@ class AreaSeriesTooltipBuilder
 
   AreaSeriesTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -6634,6 +7066,7 @@ class AreaSeriesTooltipBuilder
   _$AreaSeriesTooltip build() {
     final result = _$v ??
         new _$AreaSeriesTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,

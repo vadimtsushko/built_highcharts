@@ -33,6 +33,12 @@ class _$CreditsSerializer implements StructuredSerializer<Credits> {
         ..add(serializers.serialize(object.href,
             specifiedType: const FullType(String)));
     }
+    if (object.position != null) {
+      result
+        ..add('position')
+        ..add(serializers.serialize(object.position,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.style != null) {
       result
         ..add('style')
@@ -68,6 +74,10 @@ class _$CreditsSerializer implements StructuredSerializer<Credits> {
         case 'href':
           result.href = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'position':
+          result.position = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'style':
           result.style.replace(serializers.deserialize(value,
@@ -171,6 +181,8 @@ class _$Credits extends Credits {
   @override
   final String href;
   @override
+  final JsonObject position;
+  @override
   final BuiltMap<String, String> style;
   @override
   final String text;
@@ -178,7 +190,8 @@ class _$Credits extends Credits {
   factory _$Credits([void updates(CreditsBuilder b)]) =>
       (new CreditsBuilder()..update(updates)).build();
 
-  _$Credits._({this.enabled, this.href, this.style, this.text}) : super._();
+  _$Credits._({this.enabled, this.href, this.position, this.style, this.text})
+      : super._();
 
   @override
   Credits rebuild(void updates(CreditsBuilder b)) =>
@@ -193,6 +206,7 @@ class _$Credits extends Credits {
     if (other is! Credits) return false;
     return enabled == other.enabled &&
         href == other.href &&
+        position == other.position &&
         style == other.style &&
         text == other.text;
   }
@@ -200,7 +214,10 @@ class _$Credits extends Credits {
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, enabled.hashCode), href.hashCode), style.hashCode),
+        $jc(
+            $jc($jc($jc(0, enabled.hashCode), href.hashCode),
+                position.hashCode),
+            style.hashCode),
         text.hashCode));
   }
 
@@ -209,6 +226,7 @@ class _$Credits extends Credits {
     return (newBuiltValueToStringHelper('Credits')
           ..add('enabled', enabled)
           ..add('href', href)
+          ..add('position', position)
           ..add('style', style)
           ..add('text', text))
         .toString();
@@ -226,6 +244,10 @@ class CreditsBuilder implements Builder<Credits, CreditsBuilder> {
   String get href => _$this._href;
   set href(String href) => _$this._href = href;
 
+  JsonObject _position;
+  JsonObject get position => _$this._position;
+  set position(JsonObject position) => _$this._position = position;
+
   MapBuilder<String, String> _style;
   MapBuilder<String, String> get style =>
       _$this._style ??= new MapBuilder<String, String>();
@@ -241,6 +263,7 @@ class CreditsBuilder implements Builder<Credits, CreditsBuilder> {
     if (_$v != null) {
       _enabled = _$v.enabled;
       _href = _$v.href;
+      _position = _$v.position;
       _style = _$v.style?.toBuilder();
       _text = _$v.text;
       _$v = null;
@@ -263,7 +286,11 @@ class CreditsBuilder implements Builder<Credits, CreditsBuilder> {
   _$Credits build() {
     final result = _$v ??
         new _$Credits._(
-            enabled: enabled, href: href, style: _style?.build(), text: text);
+            enabled: enabled,
+            href: href,
+            position: position,
+            style: _style?.build(),
+            text: text);
     replace(result);
     return result;
   }

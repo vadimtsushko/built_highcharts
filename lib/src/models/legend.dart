@@ -3,6 +3,7 @@ library legend;
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 
 part 'legend.g.dart';
     
@@ -133,8 +134,8 @@ abstract class Legend implements Built<Legend, LegendBuilder> {
   /** 
    * Whether to apply a drop shadow to the legend. A <code>backgroundColor</code> also needs to be applied for this to take effect. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get shadow;
+  @nullable
+  JsonObject get shadow;
   /** 
    * When this is true, the legend symbol width will be the same as the symbol height, which in turn defaults to the font size of the legend items. 
    */
@@ -170,8 +171,8 @@ abstract class Legend implements Built<Legend, LegendBuilder> {
   /** 
    * A title to be added on top of the legend. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get title;
+  @nullable
+  JsonObject get title;
   /** 
    * <p>Whether to <a href="http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html">use HTML</a> to render the legend item texts. Prior to 4.1.7, when using HTML, <a href="#legend.navigation">legend.navigation</a> was disabled.</p> 
    */
@@ -212,8 +213,8 @@ abstract class LegendNavigation implements Built<LegendNavigation, LegendNavigat
   /** 
    * How to animate the pages when navigating up or down. A value of <code>true</code> applies the default navigation given in  the chart.animation option. Additional options can be given as an object containing values for easing and duration.  . 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get animation;
+  @nullable
+  JsonObject get animation;
   /** 
    * The pixel size of the up and down arrows in the legend paging navigation.  . 
    */

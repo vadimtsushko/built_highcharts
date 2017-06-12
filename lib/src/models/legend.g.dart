@@ -169,6 +169,12 @@ class _$LegendSerializer implements StructuredSerializer<Legend> {
         ..add(serializers.serialize(object.rtl,
             specifiedType: const FullType(bool)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.squareSymbol != null) {
       result
         ..add('squareSymbol')
@@ -205,6 +211,12 @@ class _$LegendSerializer implements StructuredSerializer<Legend> {
         ..add('symbolWidth')
         ..add(serializers.serialize(object.symbolWidth,
             specifiedType: const FullType(num)));
+    }
+    if (object.title != null) {
+      result
+        ..add('title')
+        ..add(serializers.serialize(object.title,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.useHTML != null) {
       result
@@ -357,6 +369,10 @@ class _$LegendSerializer implements StructuredSerializer<Legend> {
           result.rtl = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'squareSymbol':
           result.squareSymbol = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -383,6 +399,10 @@ class _$LegendSerializer implements StructuredSerializer<Legend> {
         case 'symbolWidth':
           result.symbolWidth = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'title':
+          result.title = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'useHTML':
           result.useHTML = serializers.deserialize(value,
@@ -428,6 +448,12 @@ class _$LegendNavigationSerializer
         ..add(serializers.serialize(object.activeColor,
             specifiedType: const FullType(String)));
     }
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.arrowSize != null) {
       result
         ..add('arrowSize')
@@ -471,6 +497,10 @@ class _$LegendNavigationSerializer
         case 'activeColor':
           result.activeColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'arrowSize':
           result.arrowSize = serializers.deserialize(value,
@@ -609,6 +639,8 @@ class _$Legend extends Legend {
   @override
   final bool rtl;
   @override
+  final JsonObject shadow;
+  @override
   final bool squareSymbol;
   @override
   final BuiltMap<String, String> style;
@@ -620,6 +652,8 @@ class _$Legend extends Legend {
   final num symbolRadius;
   @override
   final num symbolWidth;
+  @override
+  final JsonObject title;
   @override
   final bool useHTML;
   @override
@@ -659,12 +693,14 @@ class _$Legend extends Legend {
       this.padding,
       this.reversed,
       this.rtl,
+      this.shadow,
       this.squareSymbol,
       this.style,
       this.symbolHeight,
       this.symbolPadding,
       this.symbolRadius,
       this.symbolWidth,
+      this.title,
       this.useHTML,
       this.verticalAlign,
       this.width,
@@ -707,12 +743,14 @@ class _$Legend extends Legend {
         padding == other.padding &&
         reversed == other.reversed &&
         rtl == other.rtl &&
+        shadow == other.shadow &&
         squareSymbol == other.squareSymbol &&
         style == other.style &&
         symbolHeight == other.symbolHeight &&
         symbolPadding == other.symbolPadding &&
         symbolRadius == other.symbolRadius &&
         symbolWidth == other.symbolWidth &&
+        title == other.title &&
         useHTML == other.useHTML &&
         verticalAlign == other.verticalAlign &&
         width == other.width &&
@@ -740,21 +778,21 @@ class _$Legend extends Legend {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), enabled.hashCode), floating.hashCode), itemDistance.hashCode), itemHiddenStyle.hashCode), itemHoverStyle.hashCode), itemMarginBottom.hashCode), itemMarginTop.hashCode), itemStyle.hashCode), itemWidth.hashCode), labelFormat.hashCode), labelFormatter.hashCode),
-                                                                                layout.hashCode),
-                                                                            lineHeight.hashCode),
-                                                                        margin.hashCode),
-                                                                    maxHeight.hashCode),
-                                                                navigation.hashCode),
-                                                            padding.hashCode),
-                                                        reversed.hashCode),
-                                                    rtl.hashCode),
-                                                squareSymbol.hashCode),
-                                            style.hashCode),
-                                        symbolHeight.hashCode),
-                                    symbolPadding.hashCode),
-                                symbolRadius.hashCode),
-                            symbolWidth.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), enabled.hashCode), floating.hashCode), itemDistance.hashCode), itemHiddenStyle.hashCode), itemHoverStyle.hashCode), itemMarginBottom.hashCode), itemMarginTop.hashCode), itemStyle.hashCode), itemWidth.hashCode), labelFormat.hashCode), labelFormatter.hashCode), layout.hashCode), lineHeight.hashCode),
+                                                                                margin.hashCode),
+                                                                            maxHeight.hashCode),
+                                                                        navigation.hashCode),
+                                                                    padding.hashCode),
+                                                                reversed.hashCode),
+                                                            rtl.hashCode),
+                                                        shadow.hashCode),
+                                                    squareSymbol.hashCode),
+                                                style.hashCode),
+                                            symbolHeight.hashCode),
+                                        symbolPadding.hashCode),
+                                    symbolRadius.hashCode),
+                                symbolWidth.hashCode),
+                            title.hashCode),
                         useHTML.hashCode),
                     verticalAlign.hashCode),
                 width.hashCode),
@@ -789,12 +827,14 @@ class _$Legend extends Legend {
           ..add('padding', padding)
           ..add('reversed', reversed)
           ..add('rtl', rtl)
+          ..add('shadow', shadow)
           ..add('squareSymbol', squareSymbol)
           ..add('style', style)
           ..add('symbolHeight', symbolHeight)
           ..add('symbolPadding', symbolPadding)
           ..add('symbolRadius', symbolRadius)
           ..add('symbolWidth', symbolWidth)
+          ..add('title', title)
           ..add('useHTML', useHTML)
           ..add('verticalAlign', verticalAlign)
           ..add('width', width)
@@ -914,6 +954,10 @@ class LegendBuilder implements Builder<Legend, LegendBuilder> {
   bool get rtl => _$this._rtl;
   set rtl(bool rtl) => _$this._rtl = rtl;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   bool _squareSymbol;
   bool get squareSymbol => _$this._squareSymbol;
   set squareSymbol(bool squareSymbol) => _$this._squareSymbol = squareSymbol;
@@ -938,6 +982,10 @@ class LegendBuilder implements Builder<Legend, LegendBuilder> {
   num _symbolWidth;
   num get symbolWidth => _$this._symbolWidth;
   set symbolWidth(num symbolWidth) => _$this._symbolWidth = symbolWidth;
+
+  JsonObject _title;
+  JsonObject get title => _$this._title;
+  set title(JsonObject title) => _$this._title = title;
 
   bool _useHTML;
   bool get useHTML => _$this._useHTML;
@@ -988,12 +1036,14 @@ class LegendBuilder implements Builder<Legend, LegendBuilder> {
       _padding = _$v.padding;
       _reversed = _$v.reversed;
       _rtl = _$v.rtl;
+      _shadow = _$v.shadow;
       _squareSymbol = _$v.squareSymbol;
       _style = _$v.style?.toBuilder();
       _symbolHeight = _$v.symbolHeight;
       _symbolPadding = _$v.symbolPadding;
       _symbolRadius = _$v.symbolRadius;
       _symbolWidth = _$v.symbolWidth;
+      _title = _$v.title;
       _useHTML = _$v.useHTML;
       _verticalAlign = _$v.verticalAlign;
       _width = _$v.width;
@@ -1043,12 +1093,14 @@ class LegendBuilder implements Builder<Legend, LegendBuilder> {
             padding: padding,
             reversed: reversed,
             rtl: rtl,
+            shadow: shadow,
             squareSymbol: squareSymbol,
             style: _style?.build(),
             symbolHeight: symbolHeight,
             symbolPadding: symbolPadding,
             symbolRadius: symbolRadius,
             symbolWidth: symbolWidth,
+            title: title,
             useHTML: useHTML,
             verticalAlign: verticalAlign,
             width: width,
@@ -1068,6 +1120,8 @@ class _$LegendNavigation extends LegendNavigation {
   @override
   final String activeColor;
   @override
+  final JsonObject animation;
+  @override
   final num arrowSize;
   @override
   final bool enabled;
@@ -1081,6 +1135,7 @@ class _$LegendNavigation extends LegendNavigation {
 
   _$LegendNavigation._(
       {this.activeColor,
+      this.animation,
       this.arrowSize,
       this.enabled,
       this.inactiveColor,
@@ -1100,6 +1155,7 @@ class _$LegendNavigation extends LegendNavigation {
     if (identical(other, this)) return true;
     if (other is! LegendNavigation) return false;
     return activeColor == other.activeColor &&
+        animation == other.animation &&
         arrowSize == other.arrowSize &&
         enabled == other.enabled &&
         inactiveColor == other.inactiveColor &&
@@ -1110,7 +1166,9 @@ class _$LegendNavigation extends LegendNavigation {
   int get hashCode {
     return $jf($jc(
         $jc(
-            $jc($jc($jc(0, activeColor.hashCode), arrowSize.hashCode),
+            $jc(
+                $jc($jc($jc(0, activeColor.hashCode), animation.hashCode),
+                    arrowSize.hashCode),
                 enabled.hashCode),
             inactiveColor.hashCode),
         style.hashCode));
@@ -1120,6 +1178,7 @@ class _$LegendNavigation extends LegendNavigation {
   String toString() {
     return (newBuiltValueToStringHelper('LegendNavigation')
           ..add('activeColor', activeColor)
+          ..add('animation', animation)
           ..add('arrowSize', arrowSize)
           ..add('enabled', enabled)
           ..add('inactiveColor', inactiveColor)
@@ -1135,6 +1194,10 @@ class LegendNavigationBuilder
   String _activeColor;
   String get activeColor => _$this._activeColor;
   set activeColor(String activeColor) => _$this._activeColor = activeColor;
+
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
 
   num _arrowSize;
   num get arrowSize => _$this._arrowSize;
@@ -1159,6 +1222,7 @@ class LegendNavigationBuilder
   LegendNavigationBuilder get _$this {
     if (_$v != null) {
       _activeColor = _$v.activeColor;
+      _animation = _$v.animation;
       _arrowSize = _$v.arrowSize;
       _enabled = _$v.enabled;
       _inactiveColor = _$v.inactiveColor;
@@ -1184,6 +1248,7 @@ class LegendNavigationBuilder
     final result = _$v ??
         new _$LegendNavigation._(
             activeColor: activeColor,
+            animation: animation,
             arrowSize: arrowSize,
             enabled: enabled,
             inactiveColor: inactiveColor,

@@ -3,6 +3,7 @@ library drilldown;
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 
 part 'drilldown.g.dart';
     
@@ -37,18 +38,18 @@ abstract class Drilldown implements Built<Drilldown, DrilldownBuilder> {
  	<dd>A string reference to an easing function set on the <code>Math</code> object. See <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/">the easing demo</a>.</dd>
  </dl> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get animation;
+  @nullable
+  JsonObject get animation;
   /** 
    * Options for the drill up button that appears when drilling down on a series. The text for the button is defined in <a href="#lang.drillUpText">lang.drillUpText</a>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get drillUpButton;
+  @nullable
+  JsonObject get drillUpButton;
   /** 
    * An array of series configurations for the drill down. Each series configuration uses the same syntax as the <a href="#series">series</a> option set. These drilldown series are hidden by default. The drilldown series is linked to the parent series' point by its <code>id</code>. 
    */
-  ///TODO Разобратья с типом
-  ///BuiltList<dynamic> get series;
+  @nullable
+  JsonObject get series;
   factory Drilldown([updates(DrilldownBuilder b)]) = _$Drilldown;
   Drilldown._();
 }
@@ -57,8 +58,8 @@ abstract class DrilldownDrillUpButton implements Built<DrilldownDrillUpButton, D
   /** 
    * Positioning options for the button within the <code>relativeTo</code> box. Available properties are <code>x</code>, <code>y</code>, <code>align</code> and <code>verticalAlign</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get position;
+  @nullable
+  JsonObject get position;
   /** 
    * What box to align the button to. Can be either "plotBox" or "spacingBox". 
    */
@@ -67,8 +68,8 @@ abstract class DrilldownDrillUpButton implements Built<DrilldownDrillUpButton, D
   /** 
    * A collection of attributes for the button. The object takes SVG attributes like  <code>fill</code>, <code>stroke</code>, <code>stroke-width</code> or <code>r</code>, the border radius. The theme also supports <code>style</code>, a collection of CSS properties for the text. Equivalent attributes for the hover state are given in <code>theme.states.hover</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get theme;
+  @nullable
+  JsonObject get theme;
   factory DrilldownDrillUpButton([updates(DrilldownDrillUpButtonBuilder b)]) = _$DrilldownDrillUpButton;
   DrilldownDrillUpButton._();
 }

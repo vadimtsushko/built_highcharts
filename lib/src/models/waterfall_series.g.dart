@@ -133,8 +133,7 @@ class _$WaterfallSeriesSerializer
       result
         ..add('data')
         ..add(serializers.serialize(object.data,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(num)])));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.dataLabels != null) {
       result
@@ -305,6 +304,12 @@ class _$WaterfallSeriesSerializer
         ..add(serializers.serialize(object.pointPadding,
             specifiedType: const FullType(num)));
     }
+    if (object.pointPlacement != null) {
+      result
+        ..add('pointPlacement')
+        ..add(serializers.serialize(object.pointPlacement,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.pointRange != null) {
       result
         ..add('pointRange')
@@ -328,6 +333,12 @@ class _$WaterfallSeriesSerializer
         ..add('selected')
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.showCheckbox != null) {
       result
@@ -359,6 +370,12 @@ class _$WaterfallSeriesSerializer
         ..add(serializers.serialize(object.stack,
             specifiedType: const FullType(String)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
@@ -370,6 +387,12 @@ class _$WaterfallSeriesSerializer
         ..add('threshold')
         ..add(serializers.serialize(object.threshold,
             specifiedType: const FullType(num)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.type != null) {
       result
@@ -389,6 +412,18 @@ class _$WaterfallSeriesSerializer
         ..add(serializers.serialize(object.visible,
             specifiedType: const FullType(bool)));
     }
+    if (object.xAxis != null) {
+      result
+        ..add('xAxis')
+        ..add(serializers.serialize(object.xAxis,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.yAxis != null) {
+      result
+        ..add('yAxis')
+        ..add(serializers.serialize(object.yAxis,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.zIndex != null) {
       result
         ..add('zIndex')
@@ -400,6 +435,12 @@ class _$WaterfallSeriesSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -475,10 +516,8 @@ class _$WaterfallSeriesSerializer
               specifiedType: const FullType(String)) as String;
           break;
         case 'data':
-          result.data.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(num)]))
-              as BuiltList<num>);
+          result.data = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'dataLabels':
           result.dataLabels.replace(serializers.deserialize(value,
@@ -597,6 +636,10 @@ class _$WaterfallSeriesSerializer
           result.pointPadding = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'pointPlacement':
+          result.pointPlacement = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'pointRange':
           result.pointRange = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -612,6 +655,10 @@ class _$WaterfallSeriesSerializer
         case 'selected':
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
@@ -633,6 +680,10 @@ class _$WaterfallSeriesSerializer
           result.stack = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -640,6 +691,10 @@ class _$WaterfallSeriesSerializer
         case 'threshold':
           result.threshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'type':
           result.type = serializers.deserialize(value,
@@ -653,6 +708,14 @@ class _$WaterfallSeriesSerializer
           result.visible = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'xAxis':
+          result.xAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'yAxis':
+          result.yAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'zIndex':
           result.zIndex = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -660,6 +723,10 @@ class _$WaterfallSeriesSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -700,6 +767,12 @@ class _$WaterfallSeriesDataSerializer
         ..add(serializers.serialize(object.colorIndex,
             specifiedType: const FullType(num)));
     }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.description != null) {
       result
         ..add('description')
@@ -711,6 +784,12 @@ class _$WaterfallSeriesDataSerializer
         ..add('drilldown')
         ..add(serializers.serialize(object.drilldown,
             specifiedType: const FullType(String)));
+    }
+    if (object.events != null) {
+      result
+        ..add('events')
+        ..add(serializers.serialize(object.events,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.id != null) {
       result
@@ -787,6 +866,10 @@ class _$WaterfallSeriesDataSerializer
           result.colorIndex = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'description':
           result.description = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -794,6 +877,10 @@ class _$WaterfallSeriesDataSerializer
         case 'drilldown':
           result.drilldown = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'events':
+          result.events = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -1057,6 +1144,12 @@ class _$WaterfallSeriesDataLabelsSerializer
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.shape != null) {
       result
         ..add('shape')
@@ -1183,6 +1276,10 @@ class _$WaterfallSeriesDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -1555,6 +1652,12 @@ class _$WaterfallSeriesStatesHoverSerializer
   Iterable serialize(Serializers serializers, WaterfallSeriesStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.borderColor != null) {
       result
         ..add('borderColor')
@@ -1579,6 +1682,12 @@ class _$WaterfallSeriesStatesHoverSerializer
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
     }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
+    }
 
     return result;
   }
@@ -1595,6 +1704,10 @@ class _$WaterfallSeriesStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'borderColor':
           result.borderColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -1610,6 +1723,10 @@ class _$WaterfallSeriesStatesHoverSerializer
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -1633,6 +1750,12 @@ class _$WaterfallSeriesStatesHoverHaloSerializer
       Serializers serializers, WaterfallSeriesStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -1661,6 +1784,10 @@ class _$WaterfallSeriesStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -1690,6 +1817,12 @@ class _$WaterfallSeriesTooltipSerializer
   Iterable serialize(Serializers serializers, WaterfallSeriesTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -1784,6 +1917,10 @@ class _$WaterfallSeriesTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -1964,7 +2101,7 @@ class _$WaterfallSeries extends WaterfallSeries {
   @override
   final String dashStyle;
   @override
-  final BuiltList<num> data;
+  final JsonObject data;
   @override
   final WaterfallSeriesDataLabels dataLabels;
   @override
@@ -2022,6 +2159,8 @@ class _$WaterfallSeries extends WaterfallSeries {
   @override
   final num pointPadding;
   @override
+  final JsonObject pointPlacement;
+  @override
   final num pointRange;
   @override
   final num pointStart;
@@ -2029,6 +2168,8 @@ class _$WaterfallSeries extends WaterfallSeries {
   final num pointWidth;
   @override
   final bool selected;
+  @override
+  final JsonObject shadow;
   @override
   final bool showCheckbox;
   @override
@@ -2040,9 +2181,13 @@ class _$WaterfallSeries extends WaterfallSeries {
   @override
   final String stack;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
   @override
   final num threshold;
+  @override
+  final JsonObject tooltip;
   @override
   final String type;
   @override
@@ -2050,9 +2195,15 @@ class _$WaterfallSeries extends WaterfallSeries {
   @override
   final bool visible;
   @override
+  final JsonObject xAxis;
+  @override
+  final JsonObject yAxis;
+  @override
   final num zIndex;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$WaterfallSeries([void updates(WaterfallSeriesBuilder b)]) =>
       (new WaterfallSeriesBuilder()..update(updates)).build();
@@ -2101,22 +2252,29 @@ class _$WaterfallSeries extends WaterfallSeries {
       this.pointInterval,
       this.pointIntervalUnit,
       this.pointPadding,
+      this.pointPlacement,
       this.pointRange,
       this.pointStart,
       this.pointWidth,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.skipKeyboardNavigation,
       this.softThreshold,
       this.stack,
+      this.states,
       this.stickyTracking,
       this.threshold,
+      this.tooltip,
       this.type,
       this.upColor,
       this.visible,
+      this.xAxis,
+      this.yAxis,
       this.zIndex,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -2174,22 +2332,29 @@ class _$WaterfallSeries extends WaterfallSeries {
         pointInterval == other.pointInterval &&
         pointIntervalUnit == other.pointIntervalUnit &&
         pointPadding == other.pointPadding &&
+        pointPlacement == other.pointPlacement &&
         pointRange == other.pointRange &&
         pointStart == other.pointStart &&
         pointWidth == other.pointWidth &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         softThreshold == other.softThreshold &&
         stack == other.stack &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
         threshold == other.threshold &&
+        tooltip == other.tooltip &&
         type == other.type &&
         upColor == other.upColor &&
         visible == other.visible &&
+        xAxis == other.xAxis &&
+        yAxis == other.yAxis &&
         zIndex == other.zIndex &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -2212,26 +2377,26 @@ class _$WaterfallSeries extends WaterfallSeries {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), crisp.hashCode), cursor.hashCode), dashStyle.hashCode), data.hashCode), dataLabels.hashCode), depth.hashCode), description.hashCode), edgeColor.hashCode), edgeWidth.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), groupPadding.hashCode), groupZPadding.hashCode), grouping.hashCode), id.hashCode), index.hashCode), keys.hashCode), legendIndex.hashCode), lineColor.hashCode), lineWidth.hashCode), linkedTo.hashCode), maxPointWidth.hashCode), minPointLength.hashCode), name.hashCode), point.hashCode), pointDescriptionFormatter.hashCode),
-                                                                                pointInterval.hashCode),
-                                                                            pointIntervalUnit.hashCode),
-                                                                        pointPadding.hashCode),
-                                                                    pointRange.hashCode),
-                                                                pointStart.hashCode),
-                                                            pointWidth.hashCode),
-                                                        selected.hashCode),
-                                                    showCheckbox.hashCode),
-                                                showInLegend.hashCode),
-                                            skipKeyboardNavigation.hashCode),
-                                        softThreshold.hashCode),
-                                    stack.hashCode),
-                                stickyTracking.hashCode),
-                            threshold.hashCode),
-                        type.hashCode),
-                    upColor.hashCode),
-                visible.hashCode),
-            zIndex.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), crisp.hashCode), cursor.hashCode), dashStyle.hashCode), data.hashCode), dataLabels.hashCode), depth.hashCode), description.hashCode), edgeColor.hashCode), edgeWidth.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), groupPadding.hashCode), groupZPadding.hashCode), grouping.hashCode), id.hashCode), index.hashCode), keys.hashCode), legendIndex.hashCode), lineColor.hashCode), lineWidth.hashCode), linkedTo.hashCode), maxPointWidth.hashCode), minPointLength.hashCode), name.hashCode), point.hashCode), pointDescriptionFormatter.hashCode), pointInterval.hashCode), pointIntervalUnit.hashCode), pointPadding.hashCode), pointPlacement.hashCode), pointRange.hashCode), pointStart.hashCode), pointWidth.hashCode),
+                                                                                selected.hashCode),
+                                                                            shadow.hashCode),
+                                                                        showCheckbox.hashCode),
+                                                                    showInLegend.hashCode),
+                                                                skipKeyboardNavigation.hashCode),
+                                                            softThreshold.hashCode),
+                                                        stack.hashCode),
+                                                    states.hashCode),
+                                                stickyTracking.hashCode),
+                                            threshold.hashCode),
+                                        tooltip.hashCode),
+                                    type.hashCode),
+                                upColor.hashCode),
+                            visible.hashCode),
+                        xAxis.hashCode),
+                    yAxis.hashCode),
+                zIndex.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -2280,22 +2445,29 @@ class _$WaterfallSeries extends WaterfallSeries {
           ..add('pointInterval', pointInterval)
           ..add('pointIntervalUnit', pointIntervalUnit)
           ..add('pointPadding', pointPadding)
+          ..add('pointPlacement', pointPlacement)
           ..add('pointRange', pointRange)
           ..add('pointStart', pointStart)
           ..add('pointWidth', pointWidth)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('softThreshold', softThreshold)
           ..add('stack', stack)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
           ..add('threshold', threshold)
+          ..add('tooltip', tooltip)
           ..add('type', type)
           ..add('upColor', upColor)
           ..add('visible', visible)
+          ..add('xAxis', xAxis)
+          ..add('yAxis', yAxis)
           ..add('zIndex', zIndex)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -2363,9 +2535,9 @@ class WaterfallSeriesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  ListBuilder<num> _data;
-  ListBuilder<num> get data => _$this._data ??= new ListBuilder<num>();
-  set data(ListBuilder<num> data) => _$this._data = data;
+  JsonObject _data;
+  JsonObject get data => _$this._data;
+  set data(JsonObject data) => _$this._data = data;
 
   WaterfallSeriesDataLabelsBuilder _dataLabels;
   WaterfallSeriesDataLabelsBuilder get dataLabels =>
@@ -2490,6 +2662,11 @@ class WaterfallSeriesBuilder
   num get pointPadding => _$this._pointPadding;
   set pointPadding(num pointPadding) => _$this._pointPadding = pointPadding;
 
+  JsonObject _pointPlacement;
+  JsonObject get pointPlacement => _$this._pointPlacement;
+  set pointPlacement(JsonObject pointPlacement) =>
+      _$this._pointPlacement = pointPlacement;
+
   num _pointRange;
   num get pointRange => _$this._pointRange;
   set pointRange(num pointRange) => _$this._pointRange = pointRange;
@@ -2505,6 +2682,10 @@ class WaterfallSeriesBuilder
   bool _selected;
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
+
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
 
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
@@ -2528,6 +2709,10 @@ class WaterfallSeriesBuilder
   String get stack => _$this._stack;
   set stack(String stack) => _$this._stack = stack;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
@@ -2536,6 +2721,10 @@ class WaterfallSeriesBuilder
   num _threshold;
   num get threshold => _$this._threshold;
   set threshold(num threshold) => _$this._threshold = threshold;
+
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
 
   String _type;
   String get type => _$this._type;
@@ -2549,6 +2738,14 @@ class WaterfallSeriesBuilder
   bool get visible => _$this._visible;
   set visible(bool visible) => _$this._visible = visible;
 
+  JsonObject _xAxis;
+  JsonObject get xAxis => _$this._xAxis;
+  set xAxis(JsonObject xAxis) => _$this._xAxis = xAxis;
+
+  JsonObject _yAxis;
+  JsonObject get yAxis => _$this._yAxis;
+  set yAxis(JsonObject yAxis) => _$this._yAxis = yAxis;
+
   num _zIndex;
   num get zIndex => _$this._zIndex;
   set zIndex(num zIndex) => _$this._zIndex = zIndex;
@@ -2556,6 +2753,10 @@ class WaterfallSeriesBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   WaterfallSeriesBuilder();
 
@@ -2575,7 +2776,7 @@ class WaterfallSeriesBuilder
       _crisp = _$v.crisp;
       _cursor = _$v.cursor;
       _dashStyle = _$v.dashStyle;
-      _data = _$v.data?.toBuilder();
+      _data = _$v.data;
       _dataLabels = _$v.dataLabels?.toBuilder();
       _depth = _$v.depth;
       _description = _$v.description;
@@ -2604,22 +2805,29 @@ class WaterfallSeriesBuilder
       _pointInterval = _$v.pointInterval;
       _pointIntervalUnit = _$v.pointIntervalUnit;
       _pointPadding = _$v.pointPadding;
+      _pointPlacement = _$v.pointPlacement;
       _pointRange = _$v.pointRange;
       _pointStart = _$v.pointStart;
       _pointWidth = _$v.pointWidth;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _softThreshold = _$v.softThreshold;
       _stack = _$v.stack;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
       _threshold = _$v.threshold;
+      _tooltip = _$v.tooltip;
       _type = _$v.type;
       _upColor = _$v.upColor;
       _visible = _$v.visible;
+      _xAxis = _$v.xAxis;
+      _yAxis = _$v.yAxis;
       _zIndex = _$v.zIndex;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -2654,7 +2862,7 @@ class WaterfallSeriesBuilder
             crisp: crisp,
             cursor: cursor,
             dashStyle: dashStyle,
-            data: _data?.build(),
+            data: data,
             dataLabels: _dataLabels?.build(),
             depth: depth,
             description: description,
@@ -2683,22 +2891,29 @@ class WaterfallSeriesBuilder
             pointInterval: pointInterval,
             pointIntervalUnit: pointIntervalUnit,
             pointPadding: pointPadding,
+            pointPlacement: pointPlacement,
             pointRange: pointRange,
             pointStart: pointStart,
             pointWidth: pointWidth,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             skipKeyboardNavigation: skipKeyboardNavigation,
             softThreshold: softThreshold,
             stack: stack,
+            states: states,
             stickyTracking: stickyTracking,
             threshold: threshold,
+            tooltip: tooltip,
             type: type,
             upColor: upColor,
             visible: visible,
+            xAxis: xAxis,
+            yAxis: yAxis,
             zIndex: zIndex,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -2717,9 +2932,13 @@ class _$WaterfallSeriesData extends WaterfallSeriesData {
   @override
   final num colorIndex;
   @override
+  final JsonObject dataLabels;
+  @override
   final String description;
   @override
   final String drilldown;
+  @override
+  final JsonObject events;
   @override
   final String id;
   @override
@@ -2744,8 +2963,10 @@ class _$WaterfallSeriesData extends WaterfallSeriesData {
       {this.className,
       this.color,
       this.colorIndex,
+      this.dataLabels,
       this.description,
       this.drilldown,
+      this.events,
       this.id,
       this.isIntermediateSum,
       this.isSum,
@@ -2771,8 +2992,10 @@ class _$WaterfallSeriesData extends WaterfallSeriesData {
     return className == other.className &&
         color == other.color &&
         colorIndex == other.colorIndex &&
+        dataLabels == other.dataLabels &&
         description == other.description &&
         drilldown == other.drilldown &&
+        events == other.events &&
         id == other.id &&
         isIntermediateSum == other.isIntermediateSum &&
         isSum == other.isSum &&
@@ -2796,11 +3019,19 @@ class _$WaterfallSeriesData extends WaterfallSeriesData {
                                     $jc(
                                         $jc(
                                             $jc(
-                                                $jc($jc(0, className.hashCode),
-                                                    color.hashCode),
-                                                colorIndex.hashCode),
-                                            description.hashCode),
-                                        drilldown.hashCode),
+                                                $jc(
+                                                    $jc(
+                                                        $jc(
+                                                            $jc(
+                                                                0,
+                                                                className
+                                                                    .hashCode),
+                                                            color.hashCode),
+                                                        colorIndex.hashCode),
+                                                    dataLabels.hashCode),
+                                                description.hashCode),
+                                            drilldown.hashCode),
+                                        events.hashCode),
                                     id.hashCode),
                                 isIntermediateSum.hashCode),
                             isSum.hashCode),
@@ -2817,8 +3048,10 @@ class _$WaterfallSeriesData extends WaterfallSeriesData {
           ..add('className', className)
           ..add('color', color)
           ..add('colorIndex', colorIndex)
+          ..add('dataLabels', dataLabels)
           ..add('description', description)
           ..add('drilldown', drilldown)
+          ..add('events', events)
           ..add('id', id)
           ..add('isIntermediateSum', isIntermediateSum)
           ..add('isSum', isSum)
@@ -2847,6 +3080,10 @@ class WaterfallSeriesDataBuilder
   num get colorIndex => _$this._colorIndex;
   set colorIndex(num colorIndex) => _$this._colorIndex = colorIndex;
 
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
+
   String _description;
   String get description => _$this._description;
   set description(String description) => _$this._description = description;
@@ -2854,6 +3091,10 @@ class WaterfallSeriesDataBuilder
   String _drilldown;
   String get drilldown => _$this._drilldown;
   set drilldown(String drilldown) => _$this._drilldown = drilldown;
+
+  JsonObject _events;
+  JsonObject get events => _$this._events;
+  set events(JsonObject events) => _$this._events = events;
 
   String _id;
   String get id => _$this._id;
@@ -2895,8 +3136,10 @@ class WaterfallSeriesDataBuilder
       _className = _$v.className;
       _color = _$v.color;
       _colorIndex = _$v.colorIndex;
+      _dataLabels = _$v.dataLabels;
       _description = _$v.description;
       _drilldown = _$v.drilldown;
+      _events = _$v.events;
       _id = _$v.id;
       _isIntermediateSum = _$v.isIntermediateSum;
       _isSum = _$v.isSum;
@@ -2928,8 +3171,10 @@ class WaterfallSeriesDataBuilder
             className: className,
             color: color,
             colorIndex: colorIndex,
+            dataLabels: dataLabels,
             description: description,
             drilldown: drilldown,
+            events: events,
             id: id,
             isIntermediateSum: isIntermediateSum,
             isSum: isSum,
@@ -3145,6 +3390,8 @@ class _$WaterfallSeriesDataLabels extends WaterfallSeriesDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -3181,6 +3428,7 @@ class _$WaterfallSeriesDataLabels extends WaterfallSeriesDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -3220,6 +3468,7 @@ class _$WaterfallSeriesDataLabels extends WaterfallSeriesDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -3249,19 +3498,19 @@ class _$WaterfallSeriesDataLabels extends WaterfallSeriesDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -3291,6 +3540,7 @@ class _$WaterfallSeriesDataLabels extends WaterfallSeriesDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -3376,6 +3626,10 @@ class WaterfallSeriesDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -3427,6 +3681,7 @@ class WaterfallSeriesDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -3471,6 +3726,7 @@ class WaterfallSeriesDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -3992,6 +4248,8 @@ class WaterfallSeriesStatesBuilder
 
 class _$WaterfallSeriesStatesHover extends WaterfallSeriesStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final String borderColor;
   @override
   final num brightness;
@@ -3999,13 +4257,20 @@ class _$WaterfallSeriesStatesHover extends WaterfallSeriesStatesHover {
   final String color;
   @override
   final bool enabled;
+  @override
+  final JsonObject halo;
 
   factory _$WaterfallSeriesStatesHover(
           [void updates(WaterfallSeriesStatesHoverBuilder b)]) =>
       (new WaterfallSeriesStatesHoverBuilder()..update(updates)).build();
 
   _$WaterfallSeriesStatesHover._(
-      {this.borderColor, this.brightness, this.color, this.enabled})
+      {this.animation,
+      this.borderColor,
+      this.brightness,
+      this.color,
+      this.enabled,
+      this.halo})
       : super._();
 
   @override
@@ -4021,27 +4286,35 @@ class _$WaterfallSeriesStatesHover extends WaterfallSeriesStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! WaterfallSeriesStatesHover) return false;
-    return borderColor == other.borderColor &&
+    return animation == other.animation &&
+        borderColor == other.borderColor &&
         brightness == other.brightness &&
         color == other.color &&
-        enabled == other.enabled;
+        enabled == other.enabled &&
+        halo == other.halo;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, borderColor.hashCode), brightness.hashCode),
-            color.hashCode),
-        enabled.hashCode));
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), borderColor.hashCode),
+                    brightness.hashCode),
+                color.hashCode),
+            enabled.hashCode),
+        halo.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('WaterfallSeriesStatesHover')
+          ..add('animation', animation)
           ..add('borderColor', borderColor)
           ..add('brightness', brightness)
           ..add('color', color)
-          ..add('enabled', enabled))
+          ..add('enabled', enabled)
+          ..add('halo', halo))
         .toString();
   }
 }
@@ -4050,6 +4323,10 @@ class WaterfallSeriesStatesHoverBuilder
     implements
         Builder<WaterfallSeriesStatesHover, WaterfallSeriesStatesHoverBuilder> {
   _$WaterfallSeriesStatesHover _$v;
+
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
 
   String _borderColor;
   String get borderColor => _$this._borderColor;
@@ -4067,14 +4344,20 @@ class WaterfallSeriesStatesHoverBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
+
   WaterfallSeriesStatesHoverBuilder();
 
   WaterfallSeriesStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _borderColor = _$v.borderColor;
       _brightness = _$v.brightness;
       _color = _$v.color;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _$v = null;
     }
     return this;
@@ -4095,10 +4378,12 @@ class WaterfallSeriesStatesHoverBuilder
   _$WaterfallSeriesStatesHover build() {
     final result = _$v ??
         new _$WaterfallSeriesStatesHover._(
+            animation: animation,
             borderColor: borderColor,
             brightness: brightness,
             color: color,
-            enabled: enabled);
+            enabled: enabled,
+            halo: halo);
     replace(result);
     return result;
   }
@@ -4111,6 +4396,8 @@ class WaterfallSeriesStatesHoverBuilder
 
 class _$WaterfallSeriesStatesHoverHalo extends WaterfallSeriesStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -4119,7 +4406,8 @@ class _$WaterfallSeriesStatesHoverHalo extends WaterfallSeriesStatesHoverHalo {
           [void updates(WaterfallSeriesStatesHoverHaloBuilder b)]) =>
       (new WaterfallSeriesStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$WaterfallSeriesStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$WaterfallSeriesStatesHoverHalo._({this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   WaterfallSeriesStatesHoverHalo rebuild(
@@ -4134,17 +4422,21 @@ class _$WaterfallSeriesStatesHoverHalo extends WaterfallSeriesStatesHoverHalo {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! WaterfallSeriesStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('WaterfallSeriesStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -4156,6 +4448,10 @@ class WaterfallSeriesStatesHoverHaloBuilder
         Builder<WaterfallSeriesStatesHoverHalo,
             WaterfallSeriesStatesHoverHaloBuilder> {
   _$WaterfallSeriesStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -4169,6 +4465,7 @@ class WaterfallSeriesStatesHoverHaloBuilder
 
   WaterfallSeriesStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -4190,7 +4487,8 @@ class WaterfallSeriesStatesHoverHaloBuilder
   @override
   _$WaterfallSeriesStatesHoverHalo build() {
     final result = _$v ??
-        new _$WaterfallSeriesStatesHoverHalo._(opacity: opacity, size: size);
+        new _$WaterfallSeriesStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -4202,6 +4500,8 @@ class WaterfallSeriesStatesHoverHaloBuilder
 // **************************************************************************
 
 class _$WaterfallSeriesTooltip extends WaterfallSeriesTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -4234,7 +4534,8 @@ class _$WaterfallSeriesTooltip extends WaterfallSeriesTooltip {
       (new WaterfallSeriesTooltipBuilder()..update(updates)).build();
 
   _$WaterfallSeriesTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -4262,7 +4563,8 @@ class _$WaterfallSeriesTooltip extends WaterfallSeriesTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! WaterfallSeriesTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -4291,7 +4593,11 @@ class _$WaterfallSeriesTooltip extends WaterfallSeriesTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -4310,6 +4616,7 @@ class _$WaterfallSeriesTooltip extends WaterfallSeriesTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('WaterfallSeriesTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -4330,6 +4637,11 @@ class _$WaterfallSeriesTooltip extends WaterfallSeriesTooltip {
 class WaterfallSeriesTooltipBuilder
     implements Builder<WaterfallSeriesTooltip, WaterfallSeriesTooltipBuilder> {
   _$WaterfallSeriesTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -4390,6 +4702,7 @@ class WaterfallSeriesTooltipBuilder
 
   WaterfallSeriesTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -4423,6 +4736,7 @@ class WaterfallSeriesTooltipBuilder
   _$WaterfallSeriesTooltip build() {
     final result = _$v ??
         new _$WaterfallSeriesTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,

@@ -3,6 +3,7 @@ library pane;
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 
 part 'pane.g.dart';
     
@@ -11,13 +12,13 @@ abstract class Pane implements Built<Pane, PaneBuilder> {
   /** 
    * An object, or array of objects, for backgrounds. 
    */
-  ///TODO Разобратья с типом
-  ///BuiltList<dynamic> get background;
+  @nullable
+  JsonObject get background;
   /** 
    * The center of a polar chart or angular gauge, given as an array of [x, y] positions. Positions can be given as integers that transform to pixels, or as percentages of the plot area size. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get center;
+  @nullable
+  JsonObject get center;
   /** 
    * The end angle of the polar X axis or gauge value axis, given in degrees where 0 is north. Defaults to <a href="#pane.startAngle">startAngle</a> + 360. 
    */
@@ -26,8 +27,8 @@ abstract class Pane implements Built<Pane, PaneBuilder> {
   /** 
    * The size of the pane, either as a number defining pixels, or a percentage defining a percentage of the plot are. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get size;
+  @nullable
+  JsonObject get size;
   /** 
    * The start angle of the polar X axis or gauge axis, given in degrees where 0 is north. Defaults to 0. 
    */
@@ -61,13 +62,13 @@ abstract class PaneBackground implements Built<PaneBackground, PaneBackgroundBui
   /** 
    * The inner radius of the pane background. Can be either numeric (pixels) or a percentage string. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get innerRadius;
+  @nullable
+  JsonObject get innerRadius;
   /** 
    * The outer radius of the circular pane background. Can be either numeric (pixels) or a percentage string. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get outerRadius;
+  @nullable
+  JsonObject get outerRadius;
   /** 
    * Tha shape of the pane background. When <code>solid</code>, the background is circular. When <code>arc</code>, the background extends only from the min to the max of the value axis. 
    */

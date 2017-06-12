@@ -3,6 +3,7 @@ library solidgauge_series;
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 
 part 'solidgauge_series.g.dart';
     
@@ -62,13 +63,13 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 }]</pre></li>
  </ol><p>The typical gauge only contains a single data value.</p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get data;
+  @nullable
+  JsonObject get data;
   /** 
    * Data labels for the gauge. For gauges, the data labels are enabled by default and shown in a bordered box below the point. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get dataLabels;
+  @nullable
+  JsonObject get dataLabels;
   /** 
    * <p><i>Requires Accessibility module</i></p>
 <p>A description of the series to add to the screen reader information about the series.</p> 
@@ -185,8 +186,8 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
   /** 
    * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get tooltip;
+  @nullable
+  JsonObject get tooltip;
   /** 
    * The type of series. Can be one of <code>area</code>, <code>areaspline</code>, <code>bar</code>, <code>column</code>, <code>line</code>, <code>pie</code>, <code>scatter</code> or <code>spline</code>. From version 2.3, <code>arearange</code>, <code>areasplinerange</code> and <code>columnrange</code> are supported with the highcharts-more.js component. 
    */
@@ -205,13 +206,13 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
   /** 
    * When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the <a href="#xAxis.id">axis id</a> or the index of the axis in the xAxis array, with 0 being the first. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get xAxis;
+  @nullable
+  JsonObject get xAxis;
   /** 
    * When using dual or multiple y axes, this number defines which yAxis the particular series is connected to. It refers to either the <a href="#yAxis.id">axis id</a> or the index of the axis in the yAxis array, with 0 being the first. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get yAxis;
+  @nullable
+  JsonObject get yAxis;
   /** 
    * Define the visual z index of the series. 
    */
@@ -240,8 +241,8 @@ abstract class SolidgaugeSeriesData implements Built<SolidgaugeSeriesData, Solid
   /** 
    * Individual data label for each point. The options are the same as the ones for  <a class="internal" href="#plotOptions.series.dataLabels">plotOptions.series.dataLabels</a> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get dataLabels;
+  @nullable
+  JsonObject get dataLabels;
   /** 
    * <p><i>Requires Accessibility module</i></p>
 <p>A description of the point to add to the screen reader information about the point.</p> 
@@ -251,8 +252,8 @@ abstract class SolidgaugeSeriesData implements Built<SolidgaugeSeriesData, Solid
   /** 
    * Individual point events 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get events;
+  @nullable
+  JsonObject get events;
   /** 
    * An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>. 
    */
@@ -261,8 +262,8 @@ abstract class SolidgaugeSeriesData implements Built<SolidgaugeSeriesData, Solid
   /** 
    * The inner radius of an individual point in a solid gauge. Can be given as a number (pixels) or percentage string. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get innerRadius;
+  @nullable
+  JsonObject get innerRadius;
   /** 
    * The rank for this point's data label in case of collision. If two data labels are about to overlap, only the one with the highest <code>labelrank</code> will be drawn. 
    */
@@ -278,8 +279,8 @@ abstract class SolidgaugeSeriesData implements Built<SolidgaugeSeriesData, Solid
   /** 
    * The outer radius of an individual point in a solid gauge. Can be given as a number (pixels) or percentage string. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get radius;
+  @nullable
+  JsonObject get radius;
   /** 
    * Whether the data point is selected initially. 
    */
@@ -451,8 +452,8 @@ through <code>this.series.name</code>.</td>
   /** 
    * The shadow of the box. Works best with <code>borderWidth</code> or <code>backgroundColor</code>. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get shadow;
+  @nullable
+  JsonObject get shadow;
   /** 
    * The name of a symbol to use for the border around the label. Symbols are predefined functions on the Renderer object. 
    */
@@ -604,8 +605,8 @@ abstract class SolidgaugeSeriesTooltip implements Built<SolidgaugeSeriesTooltip,
 }</pre>
 </p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get dateTimeLabelFormats;
+  @nullable
+  JsonObject get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 

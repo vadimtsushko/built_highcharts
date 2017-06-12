@@ -110,6 +110,12 @@ class _$BubbleSeriesSerializer implements StructuredSerializer<BubbleSeries> {
         ..add(serializers.serialize(object.dashStyle,
             specifiedType: const FullType(String)));
     }
+    if (object.data != null) {
+      result
+        ..add('data')
+        ..add(serializers.serialize(object.data,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.dataLabels != null) {
       result
         ..add('dataLabels')
@@ -195,6 +201,12 @@ class _$BubbleSeriesSerializer implements StructuredSerializer<BubbleSeries> {
         ..add(serializers.serialize(object.linkedTo,
             specifiedType: const FullType(String)));
     }
+    if (object.marker != null) {
+      result
+        ..add('marker')
+        ..add(serializers.serialize(object.marker,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.maxSize != null) {
       result
         ..add('maxSize')
@@ -255,6 +267,12 @@ class _$BubbleSeriesSerializer implements StructuredSerializer<BubbleSeries> {
         ..add(serializers.serialize(object.selected,
             specifiedType: const FullType(bool)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.showCheckbox != null) {
       result
         ..add('showCheckbox')
@@ -291,6 +309,12 @@ class _$BubbleSeriesSerializer implements StructuredSerializer<BubbleSeries> {
         ..add(serializers.serialize(object.softThreshold,
             specifiedType: const FullType(bool)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stickyTracking != null) {
       result
         ..add('stickyTracking')
@@ -303,6 +327,12 @@ class _$BubbleSeriesSerializer implements StructuredSerializer<BubbleSeries> {
         ..add(serializers.serialize(object.threshold,
             specifiedType: const FullType(num)));
     }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.type != null) {
       result
         ..add('type')
@@ -314,6 +344,18 @@ class _$BubbleSeriesSerializer implements StructuredSerializer<BubbleSeries> {
         ..add('visible')
         ..add(serializers.serialize(object.visible,
             specifiedType: const FullType(bool)));
+    }
+    if (object.xAxis != null) {
+      result
+        ..add('xAxis')
+        ..add(serializers.serialize(object.xAxis,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.yAxis != null) {
+      result
+        ..add('yAxis')
+        ..add(serializers.serialize(object.yAxis,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.zIndex != null) {
       result
@@ -344,6 +386,12 @@ class _$BubbleSeriesSerializer implements StructuredSerializer<BubbleSeries> {
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -395,6 +443,10 @@ class _$BubbleSeriesSerializer implements StructuredSerializer<BubbleSeries> {
         case 'dashStyle':
           result.dashStyle = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'data':
+          result.data = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'dataLabels':
           result.dataLabels.replace(serializers.deserialize(value,
@@ -456,6 +508,10 @@ class _$BubbleSeriesSerializer implements StructuredSerializer<BubbleSeries> {
           result.linkedTo = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'marker':
+          result.marker = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'maxSize':
           result.maxSize = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -497,6 +553,10 @@ class _$BubbleSeriesSerializer implements StructuredSerializer<BubbleSeries> {
           result.selected = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'showCheckbox':
           result.showCheckbox = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -521,6 +581,10 @@ class _$BubbleSeriesSerializer implements StructuredSerializer<BubbleSeries> {
           result.softThreshold = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -529,6 +593,10 @@ class _$BubbleSeriesSerializer implements StructuredSerializer<BubbleSeries> {
           result.threshold = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'type':
           result.type = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -536,6 +604,14 @@ class _$BubbleSeriesSerializer implements StructuredSerializer<BubbleSeries> {
         case 'visible':
           result.visible = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'xAxis':
+          result.xAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'yAxis':
+          result.yAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'zIndex':
           result.zIndex = serializers.deserialize(value,
@@ -556,6 +632,10 @@ class _$BubbleSeriesSerializer implements StructuredSerializer<BubbleSeries> {
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -593,6 +673,12 @@ class _$BubbleSeriesDataSerializer
         ..add(serializers.serialize(object.colorIndex,
             specifiedType: const FullType(num)));
     }
+    if (object.dataLabels != null) {
+      result
+        ..add('dataLabels')
+        ..add(serializers.serialize(object.dataLabels,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.description != null) {
       result
         ..add('description')
@@ -604,6 +690,12 @@ class _$BubbleSeriesDataSerializer
         ..add('drilldown')
         ..add(serializers.serialize(object.drilldown,
             specifiedType: const FullType(String)));
+    }
+    if (object.events != null) {
+      result
+        ..add('events')
+        ..add(serializers.serialize(object.events,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.id != null) {
       result
@@ -674,6 +766,10 @@ class _$BubbleSeriesDataSerializer
           result.colorIndex = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'dataLabels':
+          result.dataLabels = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'description':
           result.description = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -681,6 +777,10 @@ class _$BubbleSeriesDataSerializer
         case 'drilldown':
           result.drilldown = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'events':
+          result.events = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'id':
           result.id = serializers.deserialize(value,
@@ -940,6 +1040,12 @@ class _$BubbleSeriesDataLabelsSerializer
         ..add(serializers.serialize(object.rotation,
             specifiedType: const FullType(num)));
     }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.shape != null) {
       result
         ..add('shape')
@@ -1066,6 +1172,10 @@ class _$BubbleSeriesDataLabelsSerializer
         case 'rotation':
           result.rotation = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'shape':
           result.shape = serializers.deserialize(value,
@@ -1796,11 +1906,23 @@ class _$BubbleSeriesStatesHoverSerializer
   Iterable serialize(Serializers serializers, BubbleSeriesStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
+    }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineWidth != null) {
       result
@@ -1836,9 +1958,17 @@ class _$BubbleSeriesStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineWidth':
           result.lineWidth = serializers.deserialize(value,
@@ -1875,6 +2005,12 @@ class _$BubbleSeriesStatesHoverHaloSerializer
       Serializers serializers, BubbleSeriesStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -1903,6 +2039,10 @@ class _$BubbleSeriesStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -1969,6 +2109,12 @@ class _$BubbleSeriesStatesHoverMarkerSerializer
         ..add(serializers.serialize(object.radius,
             specifiedType: const FullType(num)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.symbol != null) {
       result
         ..add('symbol')
@@ -2021,6 +2167,10 @@ class _$BubbleSeriesStatesHoverMarkerSerializer
           result.radius = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'symbol':
           result.symbol = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -2050,6 +2200,12 @@ class _$BubbleSeriesTooltipSerializer
   Iterable serialize(Serializers serializers, BubbleSeriesTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -2143,6 +2299,10 @@ class _$BubbleSeriesTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -2310,6 +2470,8 @@ class _$BubbleSeries extends BubbleSeries {
   @override
   final String dashStyle;
   @override
+  final JsonObject data;
+  @override
   final BubbleSeriesDataLabels dataLabels;
   @override
   final String description;
@@ -2338,6 +2500,8 @@ class _$BubbleSeries extends BubbleSeries {
   @override
   final String linkedTo;
   @override
+  final JsonObject marker;
+  @override
   final String maxSize;
   @override
   final String minSize;
@@ -2358,6 +2522,8 @@ class _$BubbleSeries extends BubbleSeries {
   @override
   final bool selected;
   @override
+  final JsonObject shadow;
+  @override
   final bool showCheckbox;
   @override
   final bool showInLegend;
@@ -2370,13 +2536,21 @@ class _$BubbleSeries extends BubbleSeries {
   @override
   final bool softThreshold;
   @override
+  final JsonObject states;
+  @override
   final bool stickyTracking;
   @override
   final num threshold;
   @override
+  final JsonObject tooltip;
+  @override
   final String type;
   @override
   final bool visible;
+  @override
+  final JsonObject xAxis;
+  @override
+  final JsonObject yAxis;
   @override
   final num zIndex;
   @override
@@ -2387,6 +2561,8 @@ class _$BubbleSeries extends BubbleSeries {
   final num zThreshold;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$BubbleSeries([void updates(BubbleSeriesBuilder b)]) =>
       (new BubbleSeriesBuilder()..update(updates)).build();
@@ -2401,6 +2577,7 @@ class _$BubbleSeries extends BubbleSeries {
       this.cropThreshold,
       this.cursor,
       this.dashStyle,
+      this.data,
       this.dataLabels,
       this.description,
       this.displayNegative,
@@ -2415,6 +2592,7 @@ class _$BubbleSeries extends BubbleSeries {
       this.legendIndex,
       this.lineWidth,
       this.linkedTo,
+      this.marker,
       this.maxSize,
       this.minSize,
       this.name,
@@ -2425,21 +2603,27 @@ class _$BubbleSeries extends BubbleSeries {
       this.pointIntervalUnit,
       this.pointStart,
       this.selected,
+      this.shadow,
       this.showCheckbox,
       this.showInLegend,
       this.sizeBy,
       this.sizeByAbsoluteValue,
       this.skipKeyboardNavigation,
       this.softThreshold,
+      this.states,
       this.stickyTracking,
       this.threshold,
+      this.tooltip,
       this.type,
       this.visible,
+      this.xAxis,
+      this.yAxis,
       this.zIndex,
       this.zMax,
       this.zMin,
       this.zThreshold,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -2462,6 +2646,7 @@ class _$BubbleSeries extends BubbleSeries {
         cropThreshold == other.cropThreshold &&
         cursor == other.cursor &&
         dashStyle == other.dashStyle &&
+        data == other.data &&
         dataLabels == other.dataLabels &&
         description == other.description &&
         displayNegative == other.displayNegative &&
@@ -2476,6 +2661,7 @@ class _$BubbleSeries extends BubbleSeries {
         legendIndex == other.legendIndex &&
         lineWidth == other.lineWidth &&
         linkedTo == other.linkedTo &&
+        marker == other.marker &&
         maxSize == other.maxSize &&
         minSize == other.minSize &&
         name == other.name &&
@@ -2486,21 +2672,27 @@ class _$BubbleSeries extends BubbleSeries {
         pointIntervalUnit == other.pointIntervalUnit &&
         pointStart == other.pointStart &&
         selected == other.selected &&
+        shadow == other.shadow &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
         sizeBy == other.sizeBy &&
         sizeByAbsoluteValue == other.sizeByAbsoluteValue &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
         softThreshold == other.softThreshold &&
+        states == other.states &&
         stickyTracking == other.stickyTracking &&
         threshold == other.threshold &&
+        tooltip == other.tooltip &&
         type == other.type &&
         visible == other.visible &&
+        xAxis == other.xAxis &&
+        yAxis == other.yAxis &&
         zIndex == other.zIndex &&
         zMax == other.zMax &&
         zMin == other.zMin &&
         zThreshold == other.zThreshold &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -2523,26 +2715,26 @@ class _$BubbleSeries extends BubbleSeries {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), displayNegative.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), id.hashCode), index.hashCode), keys.hashCode), legendIndex.hashCode), lineWidth.hashCode), linkedTo.hashCode), maxSize.hashCode), minSize.hashCode), name.hashCode), negativeColor.hashCode), point.hashCode), pointDescriptionFormatter.hashCode),
-                                                                                pointInterval.hashCode),
-                                                                            pointIntervalUnit.hashCode),
-                                                                        pointStart.hashCode),
-                                                                    selected.hashCode),
-                                                                showCheckbox.hashCode),
-                                                            showInLegend.hashCode),
-                                                        sizeBy.hashCode),
-                                                    sizeByAbsoluteValue.hashCode),
-                                                skipKeyboardNavigation.hashCode),
-                                            softThreshold.hashCode),
-                                        stickyTracking.hashCode),
-                                    threshold.hashCode),
-                                type.hashCode),
-                            visible.hashCode),
-                        zIndex.hashCode),
-                    zMax.hashCode),
-                zMin.hashCode),
-            zThreshold.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), data.hashCode), dataLabels.hashCode), description.hashCode), displayNegative.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), id.hashCode), index.hashCode), keys.hashCode), legendIndex.hashCode), lineWidth.hashCode), linkedTo.hashCode), marker.hashCode), maxSize.hashCode), minSize.hashCode), name.hashCode), negativeColor.hashCode), point.hashCode), pointDescriptionFormatter.hashCode), pointInterval.hashCode), pointIntervalUnit.hashCode), pointStart.hashCode), selected.hashCode), shadow.hashCode), showCheckbox.hashCode),
+                                                                                showInLegend.hashCode),
+                                                                            sizeBy.hashCode),
+                                                                        sizeByAbsoluteValue.hashCode),
+                                                                    skipKeyboardNavigation.hashCode),
+                                                                softThreshold.hashCode),
+                                                            states.hashCode),
+                                                        stickyTracking.hashCode),
+                                                    threshold.hashCode),
+                                                tooltip.hashCode),
+                                            type.hashCode),
+                                        visible.hashCode),
+                                    xAxis.hashCode),
+                                yAxis.hashCode),
+                            zIndex.hashCode),
+                        zMax.hashCode),
+                    zMin.hashCode),
+                zThreshold.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -2557,6 +2749,7 @@ class _$BubbleSeries extends BubbleSeries {
           ..add('cropThreshold', cropThreshold)
           ..add('cursor', cursor)
           ..add('dashStyle', dashStyle)
+          ..add('data', data)
           ..add('dataLabels', dataLabels)
           ..add('description', description)
           ..add('displayNegative', displayNegative)
@@ -2571,6 +2764,7 @@ class _$BubbleSeries extends BubbleSeries {
           ..add('legendIndex', legendIndex)
           ..add('lineWidth', lineWidth)
           ..add('linkedTo', linkedTo)
+          ..add('marker', marker)
           ..add('maxSize', maxSize)
           ..add('minSize', minSize)
           ..add('name', name)
@@ -2581,21 +2775,27 @@ class _$BubbleSeries extends BubbleSeries {
           ..add('pointIntervalUnit', pointIntervalUnit)
           ..add('pointStart', pointStart)
           ..add('selected', selected)
+          ..add('shadow', shadow)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
           ..add('sizeBy', sizeBy)
           ..add('sizeByAbsoluteValue', sizeByAbsoluteValue)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
           ..add('softThreshold', softThreshold)
+          ..add('states', states)
           ..add('stickyTracking', stickyTracking)
           ..add('threshold', threshold)
+          ..add('tooltip', tooltip)
           ..add('type', type)
           ..add('visible', visible)
+          ..add('xAxis', xAxis)
+          ..add('yAxis', yAxis)
           ..add('zIndex', zIndex)
           ..add('zMax', zMax)
           ..add('zMin', zMin)
           ..add('zThreshold', zThreshold)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -2641,6 +2841,10 @@ class BubbleSeriesBuilder
   String _dashStyle;
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
+
+  JsonObject _data;
+  JsonObject get data => _$this._data;
+  set data(JsonObject data) => _$this._data = data;
 
   BubbleSeriesDataLabelsBuilder _dataLabels;
   BubbleSeriesDataLabelsBuilder get dataLabels =>
@@ -2706,6 +2910,10 @@ class BubbleSeriesBuilder
   String get linkedTo => _$this._linkedTo;
   set linkedTo(String linkedTo) => _$this._linkedTo = linkedTo;
 
+  JsonObject _marker;
+  JsonObject get marker => _$this._marker;
+  set marker(JsonObject marker) => _$this._marker = marker;
+
   String _maxSize;
   String get maxSize => _$this._maxSize;
   set maxSize(String maxSize) => _$this._maxSize = maxSize;
@@ -2750,6 +2958,10 @@ class BubbleSeriesBuilder
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   bool _showCheckbox;
   bool get showCheckbox => _$this._showCheckbox;
   set showCheckbox(bool showCheckbox) => _$this._showCheckbox = showCheckbox;
@@ -2777,6 +2989,10 @@ class BubbleSeriesBuilder
   set softThreshold(bool softThreshold) =>
       _$this._softThreshold = softThreshold;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   bool _stickyTracking;
   bool get stickyTracking => _$this._stickyTracking;
   set stickyTracking(bool stickyTracking) =>
@@ -2786,6 +3002,10 @@ class BubbleSeriesBuilder
   num get threshold => _$this._threshold;
   set threshold(num threshold) => _$this._threshold = threshold;
 
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
+
   String _type;
   String get type => _$this._type;
   set type(String type) => _$this._type = type;
@@ -2793,6 +3013,14 @@ class BubbleSeriesBuilder
   bool _visible;
   bool get visible => _$this._visible;
   set visible(bool visible) => _$this._visible = visible;
+
+  JsonObject _xAxis;
+  JsonObject get xAxis => _$this._xAxis;
+  set xAxis(JsonObject xAxis) => _$this._xAxis = xAxis;
+
+  JsonObject _yAxis;
+  JsonObject get yAxis => _$this._yAxis;
+  set yAxis(JsonObject yAxis) => _$this._yAxis = yAxis;
 
   num _zIndex;
   num get zIndex => _$this._zIndex;
@@ -2814,6 +3042,10 @@ class BubbleSeriesBuilder
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
 
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
+
   BubbleSeriesBuilder();
 
   BubbleSeriesBuilder get _$this {
@@ -2827,6 +3059,7 @@ class BubbleSeriesBuilder
       _cropThreshold = _$v.cropThreshold;
       _cursor = _$v.cursor;
       _dashStyle = _$v.dashStyle;
+      _data = _$v.data;
       _dataLabels = _$v.dataLabels?.toBuilder();
       _description = _$v.description;
       _displayNegative = _$v.displayNegative;
@@ -2841,6 +3074,7 @@ class BubbleSeriesBuilder
       _legendIndex = _$v.legendIndex;
       _lineWidth = _$v.lineWidth;
       _linkedTo = _$v.linkedTo;
+      _marker = _$v.marker;
       _maxSize = _$v.maxSize;
       _minSize = _$v.minSize;
       _name = _$v.name;
@@ -2851,21 +3085,27 @@ class BubbleSeriesBuilder
       _pointIntervalUnit = _$v.pointIntervalUnit;
       _pointStart = _$v.pointStart;
       _selected = _$v.selected;
+      _shadow = _$v.shadow;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
       _sizeBy = _$v.sizeBy;
       _sizeByAbsoluteValue = _$v.sizeByAbsoluteValue;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
       _softThreshold = _$v.softThreshold;
+      _states = _$v.states;
       _stickyTracking = _$v.stickyTracking;
       _threshold = _$v.threshold;
+      _tooltip = _$v.tooltip;
       _type = _$v.type;
       _visible = _$v.visible;
+      _xAxis = _$v.xAxis;
+      _yAxis = _$v.yAxis;
       _zIndex = _$v.zIndex;
       _zMax = _$v.zMax;
       _zMin = _$v.zMin;
       _zThreshold = _$v.zThreshold;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -2895,6 +3135,7 @@ class BubbleSeriesBuilder
             cropThreshold: cropThreshold,
             cursor: cursor,
             dashStyle: dashStyle,
+            data: data,
             dataLabels: _dataLabels?.build(),
             description: description,
             displayNegative: displayNegative,
@@ -2909,6 +3150,7 @@ class BubbleSeriesBuilder
             legendIndex: legendIndex,
             lineWidth: lineWidth,
             linkedTo: linkedTo,
+            marker: marker,
             maxSize: maxSize,
             minSize: minSize,
             name: name,
@@ -2919,21 +3161,27 @@ class BubbleSeriesBuilder
             pointIntervalUnit: pointIntervalUnit,
             pointStart: pointStart,
             selected: selected,
+            shadow: shadow,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,
             sizeBy: sizeBy,
             sizeByAbsoluteValue: sizeByAbsoluteValue,
             skipKeyboardNavigation: skipKeyboardNavigation,
             softThreshold: softThreshold,
+            states: states,
             stickyTracking: stickyTracking,
             threshold: threshold,
+            tooltip: tooltip,
             type: type,
             visible: visible,
+            xAxis: xAxis,
+            yAxis: yAxis,
             zIndex: zIndex,
             zMax: zMax,
             zMin: zMin,
             zThreshold: zThreshold,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -2952,9 +3200,13 @@ class _$BubbleSeriesData extends BubbleSeriesData {
   @override
   final num colorIndex;
   @override
+  final JsonObject dataLabels;
+  @override
   final String description;
   @override
   final String drilldown;
+  @override
+  final JsonObject events;
   @override
   final String id;
   @override
@@ -2977,8 +3229,10 @@ class _$BubbleSeriesData extends BubbleSeriesData {
       {this.className,
       this.color,
       this.colorIndex,
+      this.dataLabels,
       this.description,
       this.drilldown,
+      this.events,
       this.id,
       this.labelrank,
       this.name,
@@ -3003,8 +3257,10 @@ class _$BubbleSeriesData extends BubbleSeriesData {
     return className == other.className &&
         color == other.color &&
         colorIndex == other.colorIndex &&
+        dataLabels == other.dataLabels &&
         description == other.description &&
         drilldown == other.drilldown &&
+        events == other.events &&
         id == other.id &&
         labelrank == other.labelrank &&
         name == other.name &&
@@ -3026,11 +3282,17 @@ class _$BubbleSeriesData extends BubbleSeriesData {
                                 $jc(
                                     $jc(
                                         $jc(
-                                            $jc($jc(0, className.hashCode),
-                                                color.hashCode),
-                                            colorIndex.hashCode),
-                                        description.hashCode),
-                                    drilldown.hashCode),
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc(0,
+                                                            className.hashCode),
+                                                        color.hashCode),
+                                                    colorIndex.hashCode),
+                                                dataLabels.hashCode),
+                                            description.hashCode),
+                                        drilldown.hashCode),
+                                    events.hashCode),
                                 id.hashCode),
                             labelrank.hashCode),
                         name.hashCode),
@@ -3046,8 +3308,10 @@ class _$BubbleSeriesData extends BubbleSeriesData {
           ..add('className', className)
           ..add('color', color)
           ..add('colorIndex', colorIndex)
+          ..add('dataLabels', dataLabels)
           ..add('description', description)
           ..add('drilldown', drilldown)
+          ..add('events', events)
           ..add('id', id)
           ..add('labelrank', labelrank)
           ..add('name', name)
@@ -3075,6 +3339,10 @@ class BubbleSeriesDataBuilder
   num get colorIndex => _$this._colorIndex;
   set colorIndex(num colorIndex) => _$this._colorIndex = colorIndex;
 
+  JsonObject _dataLabels;
+  JsonObject get dataLabels => _$this._dataLabels;
+  set dataLabels(JsonObject dataLabels) => _$this._dataLabels = dataLabels;
+
   String _description;
   String get description => _$this._description;
   set description(String description) => _$this._description = description;
@@ -3082,6 +3350,10 @@ class BubbleSeriesDataBuilder
   String _drilldown;
   String get drilldown => _$this._drilldown;
   set drilldown(String drilldown) => _$this._drilldown = drilldown;
+
+  JsonObject _events;
+  JsonObject get events => _$this._events;
+  set events(JsonObject events) => _$this._events = events;
 
   String _id;
   String get id => _$this._id;
@@ -3118,8 +3390,10 @@ class BubbleSeriesDataBuilder
       _className = _$v.className;
       _color = _$v.color;
       _colorIndex = _$v.colorIndex;
+      _dataLabels = _$v.dataLabels;
       _description = _$v.description;
       _drilldown = _$v.drilldown;
+      _events = _$v.events;
       _id = _$v.id;
       _labelrank = _$v.labelrank;
       _name = _$v.name;
@@ -3150,8 +3424,10 @@ class BubbleSeriesDataBuilder
             className: className,
             color: color,
             colorIndex: colorIndex,
+            dataLabels: dataLabels,
             description: description,
             drilldown: drilldown,
+            events: events,
             id: id,
             labelrank: labelrank,
             name: name,
@@ -3365,6 +3641,8 @@ class _$BubbleSeriesDataLabels extends BubbleSeriesDataLabels {
   @override
   final num rotation;
   @override
+  final JsonObject shadow;
+  @override
   final String shape;
   @override
   final BuiltMap<String, String> style;
@@ -3401,6 +3679,7 @@ class _$BubbleSeriesDataLabels extends BubbleSeriesDataLabels {
       this.overflow,
       this.padding,
       this.rotation,
+      this.shadow,
       this.shape,
       this.style,
       this.useHTML,
@@ -3440,6 +3719,7 @@ class _$BubbleSeriesDataLabels extends BubbleSeriesDataLabels {
         overflow == other.overflow &&
         padding == other.padding &&
         rotation == other.rotation &&
+        shadow == other.shadow &&
         shape == other.shape &&
         style == other.style &&
         useHTML == other.useHTML &&
@@ -3469,19 +3749,19 @@ class _$BubbleSeriesDataLabels extends BubbleSeriesDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode),
-                                                                                borderWidth.hashCode),
-                                                                            className.hashCode),
-                                                                        color.hashCode),
-                                                                    crop.hashCode),
-                                                                defer.hashCode),
-                                                            enabled.hashCode),
-                                                        format.hashCode),
-                                                    formatter.hashCode),
-                                                inside.hashCode),
-                                            overflow.hashCode),
-                                        padding.hashCode),
-                                    rotation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, align.hashCode), allowOverlap.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode),
+                                                                                className.hashCode),
+                                                                            color.hashCode),
+                                                                        crop.hashCode),
+                                                                    defer.hashCode),
+                                                                enabled.hashCode),
+                                                            format.hashCode),
+                                                        formatter.hashCode),
+                                                    inside.hashCode),
+                                                overflow.hashCode),
+                                            padding.hashCode),
+                                        rotation.hashCode),
+                                    shadow.hashCode),
                                 shape.hashCode),
                             style.hashCode),
                         useHTML.hashCode),
@@ -3511,6 +3791,7 @@ class _$BubbleSeriesDataLabels extends BubbleSeriesDataLabels {
           ..add('overflow', overflow)
           ..add('padding', padding)
           ..add('rotation', rotation)
+          ..add('shadow', shadow)
           ..add('shape', shape)
           ..add('style', style)
           ..add('useHTML', useHTML)
@@ -3595,6 +3876,10 @@ class BubbleSeriesDataLabelsBuilder
   num get rotation => _$this._rotation;
   set rotation(num rotation) => _$this._rotation = rotation;
 
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
+
   String _shape;
   String get shape => _$this._shape;
   set shape(String shape) => _$this._shape = shape;
@@ -3646,6 +3931,7 @@ class BubbleSeriesDataLabelsBuilder
       _overflow = _$v.overflow;
       _padding = _$v.padding;
       _rotation = _$v.rotation;
+      _shadow = _$v.shadow;
       _shape = _$v.shape;
       _style = _$v.style?.toBuilder();
       _useHTML = _$v.useHTML;
@@ -3690,6 +3976,7 @@ class BubbleSeriesDataLabelsBuilder
             overflow: overflow,
             padding: padding,
             rotation: rotation,
+            shadow: shadow,
             shape: shape,
             style: _style?.build(),
             useHTML: useHTML,
@@ -4772,7 +5059,11 @@ class BubbleSeriesStatesBuilder
 
 class _$BubbleSeriesStatesHover extends BubbleSeriesStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final bool enabled;
+  @override
+  final JsonObject halo;
   @override
   final num lineWidth;
   @override
@@ -4785,7 +5076,12 @@ class _$BubbleSeriesStatesHover extends BubbleSeriesStatesHover {
       (new BubbleSeriesStatesHoverBuilder()..update(updates)).build();
 
   _$BubbleSeriesStatesHover._(
-      {this.enabled, this.lineWidth, this.lineWidthPlus, this.marker})
+      {this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker})
       : super._();
 
   @override
@@ -4801,7 +5097,9 @@ class _$BubbleSeriesStatesHover extends BubbleSeriesStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! BubbleSeriesStatesHover) return false;
-    return enabled == other.enabled &&
+    return animation == other.animation &&
+        enabled == other.enabled &&
+        halo == other.halo &&
         lineWidth == other.lineWidth &&
         lineWidthPlus == other.lineWidthPlus &&
         marker == other.marker;
@@ -4810,7 +5108,11 @@ class _$BubbleSeriesStatesHover extends BubbleSeriesStatesHover {
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, enabled.hashCode), lineWidth.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), enabled.hashCode),
+                    halo.hashCode),
+                lineWidth.hashCode),
             lineWidthPlus.hashCode),
         marker.hashCode));
   }
@@ -4818,7 +5120,9 @@ class _$BubbleSeriesStatesHover extends BubbleSeriesStatesHover {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('BubbleSeriesStatesHover')
+          ..add('animation', animation)
           ..add('enabled', enabled)
+          ..add('halo', halo)
           ..add('lineWidth', lineWidth)
           ..add('lineWidthPlus', lineWidthPlus)
           ..add('marker', marker))
@@ -4831,9 +5135,17 @@ class BubbleSeriesStatesHoverBuilder
         Builder<BubbleSeriesStatesHover, BubbleSeriesStatesHoverBuilder> {
   _$BubbleSeriesStatesHover _$v;
 
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
+
   bool _enabled;
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
+
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
 
   num _lineWidth;
   num get lineWidth => _$this._lineWidth;
@@ -4853,7 +5165,9 @@ class BubbleSeriesStatesHoverBuilder
 
   BubbleSeriesStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _lineWidth = _$v.lineWidth;
       _lineWidthPlus = _$v.lineWidthPlus;
       _marker = _$v.marker?.toBuilder();
@@ -4877,7 +5191,9 @@ class BubbleSeriesStatesHoverBuilder
   _$BubbleSeriesStatesHover build() {
     final result = _$v ??
         new _$BubbleSeriesStatesHover._(
+            animation: animation,
             enabled: enabled,
+            halo: halo,
             lineWidth: lineWidth,
             lineWidthPlus: lineWidthPlus,
             marker: _marker?.build());
@@ -4893,6 +5209,8 @@ class BubbleSeriesStatesHoverBuilder
 
 class _$BubbleSeriesStatesHoverHalo extends BubbleSeriesStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -4901,7 +5219,8 @@ class _$BubbleSeriesStatesHoverHalo extends BubbleSeriesStatesHoverHalo {
           [void updates(BubbleSeriesStatesHoverHaloBuilder b)]) =>
       (new BubbleSeriesStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$BubbleSeriesStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$BubbleSeriesStatesHoverHalo._({this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   BubbleSeriesStatesHoverHalo rebuild(
@@ -4916,17 +5235,21 @@ class _$BubbleSeriesStatesHoverHalo extends BubbleSeriesStatesHoverHalo {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! BubbleSeriesStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('BubbleSeriesStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -4938,6 +5261,10 @@ class BubbleSeriesStatesHoverHaloBuilder
         Builder<BubbleSeriesStatesHoverHalo,
             BubbleSeriesStatesHoverHaloBuilder> {
   _$BubbleSeriesStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -4951,6 +5278,7 @@ class BubbleSeriesStatesHoverHaloBuilder
 
   BubbleSeriesStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -4972,7 +5300,8 @@ class BubbleSeriesStatesHoverHaloBuilder
   @override
   _$BubbleSeriesStatesHoverHalo build() {
     final result = _$v ??
-        new _$BubbleSeriesStatesHoverHalo._(opacity: opacity, size: size);
+        new _$BubbleSeriesStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -4997,6 +5326,8 @@ class _$BubbleSeriesStatesHoverMarker extends BubbleSeriesStatesHoverMarker {
   @override
   final num radius;
   @override
+  final JsonObject states;
+  @override
   final String symbol;
   @override
   final num width;
@@ -5012,6 +5343,7 @@ class _$BubbleSeriesStatesHoverMarker extends BubbleSeriesStatesHoverMarker {
       this.lineColor,
       this.lineWidth,
       this.radius,
+      this.states,
       this.symbol,
       this.width})
       : super._();
@@ -5035,6 +5367,7 @@ class _$BubbleSeriesStatesHoverMarker extends BubbleSeriesStatesHoverMarker {
         lineColor == other.lineColor &&
         lineWidth == other.lineWidth &&
         radius == other.radius &&
+        states == other.states &&
         symbol == other.symbol &&
         width == other.width;
   }
@@ -5046,11 +5379,15 @@ class _$BubbleSeriesStatesHoverMarker extends BubbleSeriesStatesHoverMarker {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, enabled.hashCode), fillColor.hashCode),
-                            height.hashCode),
-                        lineColor.hashCode),
-                    lineWidth.hashCode),
-                radius.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, enabled.hashCode),
+                                    fillColor.hashCode),
+                                height.hashCode),
+                            lineColor.hashCode),
+                        lineWidth.hashCode),
+                    radius.hashCode),
+                states.hashCode),
             symbol.hashCode),
         width.hashCode));
   }
@@ -5064,6 +5401,7 @@ class _$BubbleSeriesStatesHoverMarker extends BubbleSeriesStatesHoverMarker {
           ..add('lineColor', lineColor)
           ..add('lineWidth', lineWidth)
           ..add('radius', radius)
+          ..add('states', states)
           ..add('symbol', symbol)
           ..add('width', width))
         .toString();
@@ -5100,6 +5438,10 @@ class BubbleSeriesStatesHoverMarkerBuilder
   num get radius => _$this._radius;
   set radius(num radius) => _$this._radius = radius;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _symbol;
   String get symbol => _$this._symbol;
   set symbol(String symbol) => _$this._symbol = symbol;
@@ -5118,6 +5460,7 @@ class BubbleSeriesStatesHoverMarkerBuilder
       _lineColor = _$v.lineColor;
       _lineWidth = _$v.lineWidth;
       _radius = _$v.radius;
+      _states = _$v.states;
       _symbol = _$v.symbol;
       _width = _$v.width;
       _$v = null;
@@ -5146,6 +5489,7 @@ class BubbleSeriesStatesHoverMarkerBuilder
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius,
+            states: states,
             symbol: symbol,
             width: width);
     replace(result);
@@ -5159,6 +5503,8 @@ class BubbleSeriesStatesHoverMarkerBuilder
 // **************************************************************************
 
 class _$BubbleSeriesTooltip extends BubbleSeriesTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -5190,7 +5536,8 @@ class _$BubbleSeriesTooltip extends BubbleSeriesTooltip {
       (new BubbleSeriesTooltipBuilder()..update(updates)).build();
 
   _$BubbleSeriesTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -5217,7 +5564,8 @@ class _$BubbleSeriesTooltip extends BubbleSeriesTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! BubbleSeriesTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -5246,7 +5594,11 @@ class _$BubbleSeriesTooltip extends BubbleSeriesTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -5265,6 +5617,7 @@ class _$BubbleSeriesTooltip extends BubbleSeriesTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('BubbleSeriesTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -5285,6 +5638,11 @@ class _$BubbleSeriesTooltip extends BubbleSeriesTooltip {
 class BubbleSeriesTooltipBuilder
     implements Builder<BubbleSeriesTooltip, BubbleSeriesTooltipBuilder> {
   _$BubbleSeriesTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -5345,6 +5703,7 @@ class BubbleSeriesTooltipBuilder
 
   BubbleSeriesTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -5378,6 +5737,7 @@ class BubbleSeriesTooltipBuilder
   _$BubbleSeriesTooltip build() {
     final result = _$v ??
         new _$BubbleSeriesTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,

@@ -3,6 +3,7 @@ library data;
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 
 part 'data.g.dart';
     
@@ -11,8 +12,8 @@ abstract class Data implements Built<Data, DataBuilder> {
   /** 
    * A two-dimensional array representing the input data on tabular form. This input can be used when the data is already parsed, for example from a grid view component. Each cell can be a string or number. If not switchRowsAndColumns is set, the columns are interpreted as series. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get columns;
+  @nullable
+  JsonObject get columns;
   /** 
    * The callback that is evaluated when the data is finished loading, optionally from an external source, and parsed. The first argument passed is a finished chart options object, containing the series. These options can be extended with additional options and passed directly to the chart constructor. 
    */
@@ -93,13 +94,13 @@ abstract class Data implements Built<Data, DataBuilder> {
   /** 
    * The same as the columns input option, but defining rows intead of columns. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get rows;
+  @nullable
+  JsonObject get rows;
   /** 
    * An array containing object with Point property names along with what column id the property should be taken from. 
    */
-  ///TODO Разобратья с типом
-  ///BuiltList<dynamic> get seriesMapping;
+  @nullable
+  JsonObject get seriesMapping;
   /** 
    * In tabular input data, the first column (indexed by 0) to use. 
    */
@@ -118,8 +119,8 @@ abstract class Data implements Built<Data, DataBuilder> {
   /** 
    * A HTML table or the id of such to be parsed as input data. Related options are <code>startRow</code>, <code>endRow</code>, <code>startColumn</code> and <code>endColumn</code> to delimit what part of the table is used. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get table;
+  @nullable
+  JsonObject get table;
   factory Data([updates(DataBuilder b)]) = _$Data;
   Data._();
 }

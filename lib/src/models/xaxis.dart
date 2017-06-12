@@ -22,8 +22,8 @@ abstract class XAxis implements Built<XAxis, XAxisBuilder> {
   /** 
    * An array defining breaks in the axis, the sections defined will be left out and all the points shifted closer to each other. Requires that the broken-axis.js module is loaded. 
    */
-  ///TODO Разобратья с типом
-  ///BuiltList<dynamic> get breaks;
+  @nullable
+  JsonObject get breaks;
   /** 
    * <p>If categories are present for the xAxis, names are used instead of numbers for that axis. Since Highcharts 3.0, categories can also be extracted by giving each point a <a href="#series.data">name</a> and setting axis <a href="#xAxis.type">type</a> to <code>category</code>. However, if you have multiple series, best practice remains defining the <code>categories</code> array.</p>
 
@@ -49,8 +49,8 @@ abstract class XAxis implements Built<XAxis, XAxisBuilder> {
 
 <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the crosshairs are styled in the <code>.highcharts-crosshair</code>, <code>.highcharts-crosshair-thin</code> or <code>.highcharts-xaxis-category</code> classes.</p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get crosshair;
+  @nullable
+  JsonObject get crosshair;
   /** 
    * For a datetime axis, the scale will automatically adjust to the appropriate unit.  This member gives the default string representations used for each unit. For intermediate values, different units may be used, for example the <code>day</code> unit can be used on midnight and <code>hour</code> unit be used for intermediate values on the same axis. For an overview of the replacement codes, see <a href="#Highcharts.dateFormat">dateFormat</a>.
 
@@ -66,8 +66,6 @@ Defaults to:
 	year: '%Y'
 }</pre> 
    */
-  ///TODO Разобратья с типом
-  ///
   @nullable
   JsonObject get dateTimeLabelFormats;
   /** 
@@ -231,8 +229,8 @@ Defaults to:
 
  
    */
-  ///TODO Разобратья с типом
-  ///dynamic get minorTickInterval;
+  @nullable
+  JsonObject get minorTickInterval;
   /** 
    * The pixel length of the minor tick marks. 
    */
@@ -265,15 +263,15 @@ Defaults to:
 
 <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the plot bands are styled by the <code>.highcharts-plot-band</code> class in addition to the <code>className</code> option.</p> 
    */
-  ///TODO Разобратья с типом
-  ///BuiltList<dynamic> get plotBands;
+  @nullable
+  JsonObject get plotBands;
   /** 
    * <p>An array of lines stretching across the plot area, marking a specific value on one of the axes.</p>
 
 <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the plot lines are styled by the <code>.highcharts-plot-line</code> class in addition to the <code>className</code> option.</p> 
    */
-  ///TODO Разобратья с типом
-  ///BuiltList<dynamic> get plotLines;
+  @nullable
+  JsonObject get plotLines;
   /** 
    * Whether to reverse the axis so that the highest number is closest to the origin. If the chart is inverted, the x axis is reversed by default. 
    */
@@ -427,8 +425,8 @@ Defaults to:
 	null
 ]]</pre> 
    */
-  ///TODO Разобратья с типом
-  ///BuiltList<dynamic> get units;
+  @nullable
+  JsonObject get units;
   /** 
    * Whether axis, including axis title, line, ticks and labels, should be visible. 
    */
@@ -673,8 +671,8 @@ abstract class XAxisPlotBands implements Built<XAxisPlotBands, XAxisPlotBandsBui
   /** 
    * An object defining mouse events for the plot band. Supported properties are <code>click</code>, <code>mouseover</code>, <code>mouseout</code>, <code>mousemove</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get events;
+  @nullable
+  JsonObject get events;
   /** 
    * The start position of the plot band in axis units. 
    */
@@ -720,8 +718,8 @@ abstract class XAxisPlotBandsLabel implements Built<XAxisPlotBandsLabel, XAxisPl
 
 <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the labels are styled by the <code>.highcharts-plot-band-label</code> class.</p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get style;
+  @nullable
+  JsonObject get style;
   /** 
    * The string text itself. A subset of HTML is supported. 
    */
@@ -775,8 +773,8 @@ abstract class XAxisPlotLines implements Built<XAxisPlotLines, XAxisPlotLinesBui
   /** 
    * An object defining mouse events for the plot line. Supported properties are <code>click</code>, <code>mouseover</code>, <code>mouseout</code>, <code>mousemove</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get events;
+  @nullable
+  JsonObject get events;
   /** 
    * An id used for identifying the plot line in Axis.removePlotLine. 
    */
@@ -822,8 +820,8 @@ abstract class XAxisPlotLinesLabel implements Built<XAxisPlotLinesLabel, XAxisPl
 
 <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the labels are styled by the <code>.highcharts-plot-band-label</code> class.</p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get style;
+  @nullable
+  JsonObject get style;
   /** 
    * The text itself. A subset of HTML is supported. 
    */

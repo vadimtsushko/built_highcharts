@@ -97,6 +97,12 @@ class _$ErrorbarSeriesSerializer
         ..add(serializers.serialize(object.cursor,
             specifiedType: const FullType(String)));
     }
+    if (object.data != null) {
+      result
+        ..add('data')
+        ..add(serializers.serialize(object.data,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.depth != null) {
       result
         ..add('depth')
@@ -242,6 +248,12 @@ class _$ErrorbarSeriesSerializer
         ..add(serializers.serialize(object.pointPadding,
             specifiedType: const FullType(num)));
     }
+    if (object.pointPlacement != null) {
+      result
+        ..add('pointPlacement')
+        ..add(serializers.serialize(object.pointPlacement,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.pointRange != null) {
       result
         ..add('pointRange')
@@ -272,6 +284,12 @@ class _$ErrorbarSeriesSerializer
         ..add(serializers.serialize(object.skipKeyboardNavigation,
             specifiedType: const FullType(bool)));
     }
+    if (object.states != null) {
+      result
+        ..add('states')
+        ..add(serializers.serialize(object.states,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.stemColor != null) {
       result
         ..add('stemColor')
@@ -295,6 +313,12 @@ class _$ErrorbarSeriesSerializer
         ..add('stickyTracking')
         ..add(serializers.serialize(object.stickyTracking,
             specifiedType: const FullType(bool)));
+    }
+    if (object.tooltip != null) {
+      result
+        ..add('tooltip')
+        ..add(serializers.serialize(object.tooltip,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.turboThreshold != null) {
       result
@@ -320,11 +344,29 @@ class _$ErrorbarSeriesSerializer
         ..add(serializers.serialize(object.whiskerColor,
             specifiedType: const FullType(String)));
     }
+    if (object.whiskerLength != null) {
+      result
+        ..add('whiskerLength')
+        ..add(serializers.serialize(object.whiskerLength,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.whiskerWidth != null) {
       result
         ..add('whiskerWidth')
         ..add(serializers.serialize(object.whiskerWidth,
             specifiedType: const FullType(num)));
+    }
+    if (object.xAxis != null) {
+      result
+        ..add('xAxis')
+        ..add(serializers.serialize(object.xAxis,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.yAxis != null) {
+      result
+        ..add('yAxis')
+        ..add(serializers.serialize(object.yAxis,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.zIndex != null) {
       result
@@ -337,6 +379,12 @@ class _$ErrorbarSeriesSerializer
         ..add('zoneAxis')
         ..add(serializers.serialize(object.zoneAxis,
             specifiedType: const FullType(String)));
+    }
+    if (object.zones != null) {
+      result
+        ..add('zones')
+        ..add(serializers.serialize(object.zones,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -390,6 +438,10 @@ class _$ErrorbarSeriesSerializer
         case 'cursor':
           result.cursor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'data':
+          result.data = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'depth':
           result.depth = serializers.deserialize(value,
@@ -491,6 +543,10 @@ class _$ErrorbarSeriesSerializer
           result.pointPadding = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'pointPlacement':
+          result.pointPlacement = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'pointRange':
           result.pointRange = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -511,6 +567,10 @@ class _$ErrorbarSeriesSerializer
           result.skipKeyboardNavigation = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'states':
+          result.states = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'stemColor':
           result.stemColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -526,6 +586,10 @@ class _$ErrorbarSeriesSerializer
         case 'stickyTracking':
           result.stickyTracking = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'tooltip':
+          result.tooltip = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'turboThreshold':
           result.turboThreshold = serializers.deserialize(value,
@@ -543,9 +607,21 @@ class _$ErrorbarSeriesSerializer
           result.whiskerColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'whiskerLength':
+          result.whiskerLength = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'whiskerWidth':
           result.whiskerWidth = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'xAxis':
+          result.xAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'yAxis':
+          result.yAxis = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'zIndex':
           result.zIndex = serializers.deserialize(value,
@@ -554,6 +630,10 @@ class _$ErrorbarSeriesSerializer
         case 'zoneAxis':
           result.zoneAxis = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'zones':
+          result.zones = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -596,6 +676,12 @@ class _$ErrorbarSeriesDataSerializer
         ..add('description')
         ..add(serializers.serialize(object.description,
             specifiedType: const FullType(String)));
+    }
+    if (object.events != null) {
+      result
+        ..add('events')
+        ..add(serializers.serialize(object.events,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.high != null) {
       result
@@ -669,6 +755,10 @@ class _$ErrorbarSeriesDataSerializer
         case 'description':
           result.description = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'events':
+          result.events = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'high':
           result.high = serializers.deserialize(value,
@@ -1143,6 +1233,12 @@ class _$ErrorbarSeriesStatesHoverSerializer
   Iterable serialize(Serializers serializers, ErrorbarSeriesStatesHover object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.borderColor != null) {
       result
         ..add('borderColor')
@@ -1167,6 +1263,12 @@ class _$ErrorbarSeriesStatesHoverSerializer
         ..add(serializers.serialize(object.enabled,
             specifiedType: const FullType(bool)));
     }
+    if (object.halo != null) {
+      result
+        ..add('halo')
+        ..add(serializers.serialize(object.halo,
+            specifiedType: const FullType(JsonObject)));
+    }
 
     return result;
   }
@@ -1183,6 +1285,10 @@ class _$ErrorbarSeriesStatesHoverSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'borderColor':
           result.borderColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -1198,6 +1304,10 @@ class _$ErrorbarSeriesStatesHoverSerializer
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'halo':
+          result.halo = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -1221,6 +1331,12 @@ class _$ErrorbarSeriesStatesHoverHaloSerializer
       Serializers serializers, ErrorbarSeriesStatesHoverHalo object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.opacity != null) {
       result
         ..add('opacity')
@@ -1249,6 +1365,10 @@ class _$ErrorbarSeriesStatesHoverHaloSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'attributes':
+          result.attributes = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'opacity':
           result.opacity = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
@@ -1278,6 +1398,12 @@ class _$ErrorbarSeriesTooltipSerializer
   Iterable serialize(Serializers serializers, ErrorbarSeriesTooltip object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.followPointer != null) {
       result
         ..add('followPointer')
@@ -1372,6 +1498,10 @@ class _$ErrorbarSeriesTooltipSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -1542,6 +1672,8 @@ class _$ErrorbarSeries extends ErrorbarSeries {
   @override
   final String cursor;
   @override
+  final JsonObject data;
+  @override
   final num depth;
   @override
   final String description;
@@ -1590,6 +1722,8 @@ class _$ErrorbarSeries extends ErrorbarSeries {
   @override
   final num pointPadding;
   @override
+  final JsonObject pointPlacement;
+  @override
   final num pointRange;
   @override
   final num pointStart;
@@ -1600,6 +1734,8 @@ class _$ErrorbarSeries extends ErrorbarSeries {
   @override
   final bool skipKeyboardNavigation;
   @override
+  final JsonObject states;
+  @override
   final String stemColor;
   @override
   final String stemDashStyle;
@@ -1607,6 +1743,8 @@ class _$ErrorbarSeries extends ErrorbarSeries {
   final num stemWidth;
   @override
   final bool stickyTracking;
+  @override
+  final JsonObject tooltip;
   @override
   final num turboThreshold;
   @override
@@ -1616,11 +1754,19 @@ class _$ErrorbarSeries extends ErrorbarSeries {
   @override
   final String whiskerColor;
   @override
+  final JsonObject whiskerLength;
+  @override
   final num whiskerWidth;
+  @override
+  final JsonObject xAxis;
+  @override
+  final JsonObject yAxis;
   @override
   final num zIndex;
   @override
   final String zoneAxis;
+  @override
+  final JsonObject zones;
 
   factory _$ErrorbarSeries([void updates(ErrorbarSeriesBuilder b)]) =>
       (new ErrorbarSeriesBuilder()..update(updates)).build();
@@ -1635,6 +1781,7 @@ class _$ErrorbarSeries extends ErrorbarSeries {
       this.colors,
       this.crisp,
       this.cursor,
+      this.data,
       this.depth,
       this.description,
       this.edgeColor,
@@ -1659,22 +1806,29 @@ class _$ErrorbarSeries extends ErrorbarSeries {
       this.pointInterval,
       this.pointIntervalUnit,
       this.pointPadding,
+      this.pointPlacement,
       this.pointRange,
       this.pointStart,
       this.pointWidth,
       this.selected,
       this.skipKeyboardNavigation,
+      this.states,
       this.stemColor,
       this.stemDashStyle,
       this.stemWidth,
       this.stickyTracking,
+      this.tooltip,
       this.turboThreshold,
       this.type,
       this.visible,
       this.whiskerColor,
+      this.whiskerLength,
       this.whiskerWidth,
+      this.xAxis,
+      this.yAxis,
       this.zIndex,
-      this.zoneAxis})
+      this.zoneAxis,
+      this.zones})
       : super._();
 
   @override
@@ -1698,6 +1852,7 @@ class _$ErrorbarSeries extends ErrorbarSeries {
         colors == other.colors &&
         crisp == other.crisp &&
         cursor == other.cursor &&
+        data == other.data &&
         depth == other.depth &&
         description == other.description &&
         edgeColor == other.edgeColor &&
@@ -1722,22 +1877,29 @@ class _$ErrorbarSeries extends ErrorbarSeries {
         pointInterval == other.pointInterval &&
         pointIntervalUnit == other.pointIntervalUnit &&
         pointPadding == other.pointPadding &&
+        pointPlacement == other.pointPlacement &&
         pointRange == other.pointRange &&
         pointStart == other.pointStart &&
         pointWidth == other.pointWidth &&
         selected == other.selected &&
         skipKeyboardNavigation == other.skipKeyboardNavigation &&
+        states == other.states &&
         stemColor == other.stemColor &&
         stemDashStyle == other.stemDashStyle &&
         stemWidth == other.stemWidth &&
         stickyTracking == other.stickyTracking &&
+        tooltip == other.tooltip &&
         turboThreshold == other.turboThreshold &&
         type == other.type &&
         visible == other.visible &&
         whiskerColor == other.whiskerColor &&
+        whiskerLength == other.whiskerLength &&
         whiskerWidth == other.whiskerWidth &&
+        xAxis == other.xAxis &&
+        yAxis == other.yAxis &&
         zIndex == other.zIndex &&
-        zoneAxis == other.zoneAxis;
+        zoneAxis == other.zoneAxis &&
+        zones == other.zones;
   }
 
   @override
@@ -1760,26 +1922,26 @@ class _$ErrorbarSeries extends ErrorbarSeries {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), crisp.hashCode), cursor.hashCode), depth.hashCode), description.hashCode), edgeColor.hashCode), edgeWidth.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), groupZPadding.hashCode), id.hashCode), index.hashCode), keys.hashCode), legendIndex.hashCode), lineWidth.hashCode), linkedTo.hashCode), maxPointWidth.hashCode), name.hashCode), negativeColor.hashCode), point.hashCode), pointDescriptionFormatter.hashCode),
-                                                                                pointInterval.hashCode),
-                                                                            pointIntervalUnit.hashCode),
-                                                                        pointPadding.hashCode),
-                                                                    pointRange.hashCode),
-                                                                pointStart.hashCode),
-                                                            pointWidth.hashCode),
-                                                        selected.hashCode),
-                                                    skipKeyboardNavigation.hashCode),
-                                                stemColor.hashCode),
-                                            stemDashStyle.hashCode),
-                                        stemWidth.hashCode),
-                                    stickyTracking.hashCode),
-                                turboThreshold.hashCode),
-                            type.hashCode),
-                        visible.hashCode),
-                    whiskerColor.hashCode),
-                whiskerWidth.hashCode),
-            zIndex.hashCode),
-        zoneAxis.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorByPoint.hashCode), colorIndex.hashCode), colors.hashCode), crisp.hashCode), cursor.hashCode), data.hashCode), depth.hashCode), description.hashCode), edgeColor.hashCode), edgeWidth.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), groupZPadding.hashCode), id.hashCode), index.hashCode), keys.hashCode), legendIndex.hashCode), lineWidth.hashCode), linkedTo.hashCode), maxPointWidth.hashCode), name.hashCode), negativeColor.hashCode), point.hashCode), pointDescriptionFormatter.hashCode), pointInterval.hashCode), pointIntervalUnit.hashCode), pointPadding.hashCode), pointPlacement.hashCode), pointRange.hashCode), pointStart.hashCode), pointWidth.hashCode),
+                                                                                selected.hashCode),
+                                                                            skipKeyboardNavigation.hashCode),
+                                                                        states.hashCode),
+                                                                    stemColor.hashCode),
+                                                                stemDashStyle.hashCode),
+                                                            stemWidth.hashCode),
+                                                        stickyTracking.hashCode),
+                                                    tooltip.hashCode),
+                                                turboThreshold.hashCode),
+                                            type.hashCode),
+                                        visible.hashCode),
+                                    whiskerColor.hashCode),
+                                whiskerLength.hashCode),
+                            whiskerWidth.hashCode),
+                        xAxis.hashCode),
+                    yAxis.hashCode),
+                zIndex.hashCode),
+            zoneAxis.hashCode),
+        zones.hashCode));
   }
 
   @override
@@ -1794,6 +1956,7 @@ class _$ErrorbarSeries extends ErrorbarSeries {
           ..add('colors', colors)
           ..add('crisp', crisp)
           ..add('cursor', cursor)
+          ..add('data', data)
           ..add('depth', depth)
           ..add('description', description)
           ..add('edgeColor', edgeColor)
@@ -1818,22 +1981,29 @@ class _$ErrorbarSeries extends ErrorbarSeries {
           ..add('pointInterval', pointInterval)
           ..add('pointIntervalUnit', pointIntervalUnit)
           ..add('pointPadding', pointPadding)
+          ..add('pointPlacement', pointPlacement)
           ..add('pointRange', pointRange)
           ..add('pointStart', pointStart)
           ..add('pointWidth', pointWidth)
           ..add('selected', selected)
           ..add('skipKeyboardNavigation', skipKeyboardNavigation)
+          ..add('states', states)
           ..add('stemColor', stemColor)
           ..add('stemDashStyle', stemDashStyle)
           ..add('stemWidth', stemWidth)
           ..add('stickyTracking', stickyTracking)
+          ..add('tooltip', tooltip)
           ..add('turboThreshold', turboThreshold)
           ..add('type', type)
           ..add('visible', visible)
           ..add('whiskerColor', whiskerColor)
+          ..add('whiskerLength', whiskerLength)
           ..add('whiskerWidth', whiskerWidth)
+          ..add('xAxis', xAxis)
+          ..add('yAxis', yAxis)
           ..add('zIndex', zIndex)
-          ..add('zoneAxis', zoneAxis))
+          ..add('zoneAxis', zoneAxis)
+          ..add('zones', zones))
         .toString();
   }
 }
@@ -1880,6 +2050,10 @@ class ErrorbarSeriesBuilder
   String _cursor;
   String get cursor => _$this._cursor;
   set cursor(String cursor) => _$this._cursor = cursor;
+
+  JsonObject _data;
+  JsonObject get data => _$this._data;
+  set data(JsonObject data) => _$this._data = data;
 
   num _depth;
   num get depth => _$this._depth;
@@ -1986,6 +2160,11 @@ class ErrorbarSeriesBuilder
   num get pointPadding => _$this._pointPadding;
   set pointPadding(num pointPadding) => _$this._pointPadding = pointPadding;
 
+  JsonObject _pointPlacement;
+  JsonObject get pointPlacement => _$this._pointPlacement;
+  set pointPlacement(JsonObject pointPlacement) =>
+      _$this._pointPlacement = pointPlacement;
+
   num _pointRange;
   num get pointRange => _$this._pointRange;
   set pointRange(num pointRange) => _$this._pointRange = pointRange;
@@ -2007,6 +2186,10 @@ class ErrorbarSeriesBuilder
   set skipKeyboardNavigation(bool skipKeyboardNavigation) =>
       _$this._skipKeyboardNavigation = skipKeyboardNavigation;
 
+  JsonObject _states;
+  JsonObject get states => _$this._states;
+  set states(JsonObject states) => _$this._states = states;
+
   String _stemColor;
   String get stemColor => _$this._stemColor;
   set stemColor(String stemColor) => _$this._stemColor = stemColor;
@@ -2025,6 +2208,10 @@ class ErrorbarSeriesBuilder
   set stickyTracking(bool stickyTracking) =>
       _$this._stickyTracking = stickyTracking;
 
+  JsonObject _tooltip;
+  JsonObject get tooltip => _$this._tooltip;
+  set tooltip(JsonObject tooltip) => _$this._tooltip = tooltip;
+
   num _turboThreshold;
   num get turboThreshold => _$this._turboThreshold;
   set turboThreshold(num turboThreshold) =>
@@ -2042,9 +2229,22 @@ class ErrorbarSeriesBuilder
   String get whiskerColor => _$this._whiskerColor;
   set whiskerColor(String whiskerColor) => _$this._whiskerColor = whiskerColor;
 
+  JsonObject _whiskerLength;
+  JsonObject get whiskerLength => _$this._whiskerLength;
+  set whiskerLength(JsonObject whiskerLength) =>
+      _$this._whiskerLength = whiskerLength;
+
   num _whiskerWidth;
   num get whiskerWidth => _$this._whiskerWidth;
   set whiskerWidth(num whiskerWidth) => _$this._whiskerWidth = whiskerWidth;
+
+  JsonObject _xAxis;
+  JsonObject get xAxis => _$this._xAxis;
+  set xAxis(JsonObject xAxis) => _$this._xAxis = xAxis;
+
+  JsonObject _yAxis;
+  JsonObject get yAxis => _$this._yAxis;
+  set yAxis(JsonObject yAxis) => _$this._yAxis = yAxis;
 
   num _zIndex;
   num get zIndex => _$this._zIndex;
@@ -2053,6 +2253,10 @@ class ErrorbarSeriesBuilder
   String _zoneAxis;
   String get zoneAxis => _$this._zoneAxis;
   set zoneAxis(String zoneAxis) => _$this._zoneAxis = zoneAxis;
+
+  JsonObject _zones;
+  JsonObject get zones => _$this._zones;
+  set zones(JsonObject zones) => _$this._zones = zones;
 
   ErrorbarSeriesBuilder();
 
@@ -2067,6 +2271,7 @@ class ErrorbarSeriesBuilder
       _colors = _$v.colors?.toBuilder();
       _crisp = _$v.crisp;
       _cursor = _$v.cursor;
+      _data = _$v.data;
       _depth = _$v.depth;
       _description = _$v.description;
       _edgeColor = _$v.edgeColor;
@@ -2091,22 +2296,29 @@ class ErrorbarSeriesBuilder
       _pointInterval = _$v.pointInterval;
       _pointIntervalUnit = _$v.pointIntervalUnit;
       _pointPadding = _$v.pointPadding;
+      _pointPlacement = _$v.pointPlacement;
       _pointRange = _$v.pointRange;
       _pointStart = _$v.pointStart;
       _pointWidth = _$v.pointWidth;
       _selected = _$v.selected;
       _skipKeyboardNavigation = _$v.skipKeyboardNavigation;
+      _states = _$v.states;
       _stemColor = _$v.stemColor;
       _stemDashStyle = _$v.stemDashStyle;
       _stemWidth = _$v.stemWidth;
       _stickyTracking = _$v.stickyTracking;
+      _tooltip = _$v.tooltip;
       _turboThreshold = _$v.turboThreshold;
       _type = _$v.type;
       _visible = _$v.visible;
       _whiskerColor = _$v.whiskerColor;
+      _whiskerLength = _$v.whiskerLength;
       _whiskerWidth = _$v.whiskerWidth;
+      _xAxis = _$v.xAxis;
+      _yAxis = _$v.yAxis;
       _zIndex = _$v.zIndex;
       _zoneAxis = _$v.zoneAxis;
+      _zones = _$v.zones;
       _$v = null;
     }
     return this;
@@ -2136,6 +2348,7 @@ class ErrorbarSeriesBuilder
             colors: _colors?.build(),
             crisp: crisp,
             cursor: cursor,
+            data: data,
             depth: depth,
             description: description,
             edgeColor: edgeColor,
@@ -2160,22 +2373,29 @@ class ErrorbarSeriesBuilder
             pointInterval: pointInterval,
             pointIntervalUnit: pointIntervalUnit,
             pointPadding: pointPadding,
+            pointPlacement: pointPlacement,
             pointRange: pointRange,
             pointStart: pointStart,
             pointWidth: pointWidth,
             selected: selected,
             skipKeyboardNavigation: skipKeyboardNavigation,
+            states: states,
             stemColor: stemColor,
             stemDashStyle: stemDashStyle,
             stemWidth: stemWidth,
             stickyTracking: stickyTracking,
+            tooltip: tooltip,
             turboThreshold: turboThreshold,
             type: type,
             visible: visible,
             whiskerColor: whiskerColor,
+            whiskerLength: whiskerLength,
             whiskerWidth: whiskerWidth,
+            xAxis: xAxis,
+            yAxis: yAxis,
             zIndex: zIndex,
-            zoneAxis: zoneAxis);
+            zoneAxis: zoneAxis,
+            zones: zones);
     replace(result);
     return result;
   }
@@ -2195,6 +2415,8 @@ class _$ErrorbarSeriesData extends ErrorbarSeriesData {
   final num colorIndex;
   @override
   final String description;
+  @override
+  final JsonObject events;
   @override
   final num high;
   @override
@@ -2218,6 +2440,7 @@ class _$ErrorbarSeriesData extends ErrorbarSeriesData {
       this.color,
       this.colorIndex,
       this.description,
+      this.events,
       this.high,
       this.id,
       this.labelrank,
@@ -2243,6 +2466,7 @@ class _$ErrorbarSeriesData extends ErrorbarSeriesData {
         color == other.color &&
         colorIndex == other.colorIndex &&
         description == other.description &&
+        events == other.events &&
         high == other.high &&
         id == other.id &&
         labelrank == other.labelrank &&
@@ -2263,10 +2487,12 @@ class _$ErrorbarSeriesData extends ErrorbarSeriesData {
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, className.hashCode),
-                                            color.hashCode),
-                                        colorIndex.hashCode),
-                                    description.hashCode),
+                                        $jc(
+                                            $jc($jc(0, className.hashCode),
+                                                color.hashCode),
+                                            colorIndex.hashCode),
+                                        description.hashCode),
+                                    events.hashCode),
                                 high.hashCode),
                             id.hashCode),
                         labelrank.hashCode),
@@ -2283,6 +2509,7 @@ class _$ErrorbarSeriesData extends ErrorbarSeriesData {
           ..add('color', color)
           ..add('colorIndex', colorIndex)
           ..add('description', description)
+          ..add('events', events)
           ..add('high', high)
           ..add('id', id)
           ..add('labelrank', labelrank)
@@ -2313,6 +2540,10 @@ class ErrorbarSeriesDataBuilder
   String _description;
   String get description => _$this._description;
   set description(String description) => _$this._description = description;
+
+  JsonObject _events;
+  JsonObject get events => _$this._events;
+  set events(JsonObject events) => _$this._events = events;
 
   num _high;
   num get high => _$this._high;
@@ -2350,6 +2581,7 @@ class ErrorbarSeriesDataBuilder
       _color = _$v.color;
       _colorIndex = _$v.colorIndex;
       _description = _$v.description;
+      _events = _$v.events;
       _high = _$v.high;
       _id = _$v.id;
       _labelrank = _$v.labelrank;
@@ -2381,6 +2613,7 @@ class ErrorbarSeriesDataBuilder
             color: color,
             colorIndex: colorIndex,
             description: description,
+            events: events,
             high: high,
             id: id,
             labelrank: labelrank,
@@ -3061,6 +3294,8 @@ class ErrorbarSeriesStatesBuilder
 
 class _$ErrorbarSeriesStatesHover extends ErrorbarSeriesStatesHover {
   @override
+  final JsonObject animation;
+  @override
   final String borderColor;
   @override
   final num brightness;
@@ -3068,13 +3303,20 @@ class _$ErrorbarSeriesStatesHover extends ErrorbarSeriesStatesHover {
   final String color;
   @override
   final bool enabled;
+  @override
+  final JsonObject halo;
 
   factory _$ErrorbarSeriesStatesHover(
           [void updates(ErrorbarSeriesStatesHoverBuilder b)]) =>
       (new ErrorbarSeriesStatesHoverBuilder()..update(updates)).build();
 
   _$ErrorbarSeriesStatesHover._(
-      {this.borderColor, this.brightness, this.color, this.enabled})
+      {this.animation,
+      this.borderColor,
+      this.brightness,
+      this.color,
+      this.enabled,
+      this.halo})
       : super._();
 
   @override
@@ -3090,27 +3332,35 @@ class _$ErrorbarSeriesStatesHover extends ErrorbarSeriesStatesHover {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! ErrorbarSeriesStatesHover) return false;
-    return borderColor == other.borderColor &&
+    return animation == other.animation &&
+        borderColor == other.borderColor &&
         brightness == other.brightness &&
         color == other.color &&
-        enabled == other.enabled;
+        enabled == other.enabled &&
+        halo == other.halo;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, borderColor.hashCode), brightness.hashCode),
-            color.hashCode),
-        enabled.hashCode));
+        $jc(
+            $jc(
+                $jc($jc($jc(0, animation.hashCode), borderColor.hashCode),
+                    brightness.hashCode),
+                color.hashCode),
+            enabled.hashCode),
+        halo.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ErrorbarSeriesStatesHover')
+          ..add('animation', animation)
           ..add('borderColor', borderColor)
           ..add('brightness', brightness)
           ..add('color', color)
-          ..add('enabled', enabled))
+          ..add('enabled', enabled)
+          ..add('halo', halo))
         .toString();
   }
 }
@@ -3119,6 +3369,10 @@ class ErrorbarSeriesStatesHoverBuilder
     implements
         Builder<ErrorbarSeriesStatesHover, ErrorbarSeriesStatesHoverBuilder> {
   _$ErrorbarSeriesStatesHover _$v;
+
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
 
   String _borderColor;
   String get borderColor => _$this._borderColor;
@@ -3136,14 +3390,20 @@ class ErrorbarSeriesStatesHoverBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
+  JsonObject _halo;
+  JsonObject get halo => _$this._halo;
+  set halo(JsonObject halo) => _$this._halo = halo;
+
   ErrorbarSeriesStatesHoverBuilder();
 
   ErrorbarSeriesStatesHoverBuilder get _$this {
     if (_$v != null) {
+      _animation = _$v.animation;
       _borderColor = _$v.borderColor;
       _brightness = _$v.brightness;
       _color = _$v.color;
       _enabled = _$v.enabled;
+      _halo = _$v.halo;
       _$v = null;
     }
     return this;
@@ -3164,10 +3424,12 @@ class ErrorbarSeriesStatesHoverBuilder
   _$ErrorbarSeriesStatesHover build() {
     final result = _$v ??
         new _$ErrorbarSeriesStatesHover._(
+            animation: animation,
             borderColor: borderColor,
             brightness: brightness,
             color: color,
-            enabled: enabled);
+            enabled: enabled,
+            halo: halo);
     replace(result);
     return result;
   }
@@ -3180,6 +3442,8 @@ class ErrorbarSeriesStatesHoverBuilder
 
 class _$ErrorbarSeriesStatesHoverHalo extends ErrorbarSeriesStatesHoverHalo {
   @override
+  final JsonObject attributes;
+  @override
   final num opacity;
   @override
   final num size;
@@ -3188,7 +3452,8 @@ class _$ErrorbarSeriesStatesHoverHalo extends ErrorbarSeriesStatesHoverHalo {
           [void updates(ErrorbarSeriesStatesHoverHaloBuilder b)]) =>
       (new ErrorbarSeriesStatesHoverHaloBuilder()..update(updates)).build();
 
-  _$ErrorbarSeriesStatesHoverHalo._({this.opacity, this.size}) : super._();
+  _$ErrorbarSeriesStatesHoverHalo._({this.attributes, this.opacity, this.size})
+      : super._();
 
   @override
   ErrorbarSeriesStatesHoverHalo rebuild(
@@ -3203,17 +3468,21 @@ class _$ErrorbarSeriesStatesHoverHalo extends ErrorbarSeriesStatesHoverHalo {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! ErrorbarSeriesStatesHoverHalo) return false;
-    return opacity == other.opacity && size == other.size;
+    return attributes == other.attributes &&
+        opacity == other.opacity &&
+        size == other.size;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, opacity.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, attributes.hashCode), opacity.hashCode), size.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ErrorbarSeriesStatesHoverHalo')
+          ..add('attributes', attributes)
           ..add('opacity', opacity)
           ..add('size', size))
         .toString();
@@ -3225,6 +3494,10 @@ class ErrorbarSeriesStatesHoverHaloBuilder
         Builder<ErrorbarSeriesStatesHoverHalo,
             ErrorbarSeriesStatesHoverHaloBuilder> {
   _$ErrorbarSeriesStatesHoverHalo _$v;
+
+  JsonObject _attributes;
+  JsonObject get attributes => _$this._attributes;
+  set attributes(JsonObject attributes) => _$this._attributes = attributes;
 
   num _opacity;
   num get opacity => _$this._opacity;
@@ -3238,6 +3511,7 @@ class ErrorbarSeriesStatesHoverHaloBuilder
 
   ErrorbarSeriesStatesHoverHaloBuilder get _$this {
     if (_$v != null) {
+      _attributes = _$v.attributes;
       _opacity = _$v.opacity;
       _size = _$v.size;
       _$v = null;
@@ -3259,7 +3533,8 @@ class ErrorbarSeriesStatesHoverHaloBuilder
   @override
   _$ErrorbarSeriesStatesHoverHalo build() {
     final result = _$v ??
-        new _$ErrorbarSeriesStatesHoverHalo._(opacity: opacity, size: size);
+        new _$ErrorbarSeriesStatesHoverHalo._(
+            attributes: attributes, opacity: opacity, size: size);
     replace(result);
     return result;
   }
@@ -3271,6 +3546,8 @@ class ErrorbarSeriesStatesHoverHaloBuilder
 // **************************************************************************
 
 class _$ErrorbarSeriesTooltip extends ErrorbarSeriesTooltip {
+  @override
+  final JsonObject dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -3303,7 +3580,8 @@ class _$ErrorbarSeriesTooltip extends ErrorbarSeriesTooltip {
       (new ErrorbarSeriesTooltipBuilder()..update(updates)).build();
 
   _$ErrorbarSeriesTooltip._(
-      {this.followPointer,
+      {this.dateTimeLabelFormats,
+      this.followPointer,
       this.followTouchMove,
       this.footerFormat,
       this.headerFormat,
@@ -3330,7 +3608,8 @@ class _$ErrorbarSeriesTooltip extends ErrorbarSeriesTooltip {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! ErrorbarSeriesTooltip) return false;
-    return followPointer == other.followPointer &&
+    return dateTimeLabelFormats == other.dateTimeLabelFormats &&
+        followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
         footerFormat == other.footerFormat &&
         headerFormat == other.headerFormat &&
@@ -3359,7 +3638,11 @@ class _$ErrorbarSeriesTooltip extends ErrorbarSeriesTooltip {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc(0,
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            dateTimeLabelFormats
+                                                                .hashCode),
                                                         followPointer.hashCode),
                                                     followTouchMove.hashCode),
                                                 footerFormat.hashCode),
@@ -3378,6 +3661,7 @@ class _$ErrorbarSeriesTooltip extends ErrorbarSeriesTooltip {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ErrorbarSeriesTooltip')
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
           ..add('footerFormat', footerFormat)
@@ -3398,6 +3682,11 @@ class _$ErrorbarSeriesTooltip extends ErrorbarSeriesTooltip {
 class ErrorbarSeriesTooltipBuilder
     implements Builder<ErrorbarSeriesTooltip, ErrorbarSeriesTooltipBuilder> {
   _$ErrorbarSeriesTooltip _$v;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
   bool get followPointer => _$this._followPointer;
@@ -3458,6 +3747,7 @@ class ErrorbarSeriesTooltipBuilder
 
   ErrorbarSeriesTooltipBuilder get _$this {
     if (_$v != null) {
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -3491,6 +3781,7 @@ class ErrorbarSeriesTooltipBuilder
   _$ErrorbarSeriesTooltip build() {
     final result = _$v ??
         new _$ErrorbarSeriesTooltip._(
+            dateTimeLabelFormats: dateTimeLabelFormats,
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,

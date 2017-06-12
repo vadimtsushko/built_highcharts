@@ -3,6 +3,7 @@ library yaxis;
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 
 part 'yaxis.g.dart';
     
@@ -26,8 +27,8 @@ abstract class YAxis implements Built<YAxis, YAxisBuilder> {
   /** 
    * An array defining breaks in the axis, the sections defined will be left out and all the points shifted closer to each other. Requires that the broken-axis.js module is loaded. 
    */
-  ///TODO Разобратья с типом
-  ///BuiltList<dynamic> get breaks;
+  @nullable
+  JsonObject get breaks;
   /** 
    * <p>If categories are present for the xAxis, names are used instead of numbers for that axis. Since Highcharts 3.0, categories can also be extracted by giving each point a <a href="#series.data">name</a> and setting axis <a href="#xAxis.type">type</a> to <code>category</code>. However, if you have multiple series, best practice remains defining the <code>categories</code> array.</p>
 
@@ -53,8 +54,8 @@ abstract class YAxis implements Built<YAxis, YAxisBuilder> {
 
 <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the crosshairs are styled in the <code>.highcharts-crosshair</code>, <code>.highcharts-crosshair-thin</code> or <code>.highcharts-xaxis-category</code> classes.</p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get crosshair;
+  @nullable
+  JsonObject get crosshair;
   /** 
    * For a datetime axis, the scale will automatically adjust to the appropriate unit.  This member gives the default string representations used for each unit. For intermediate values, different units may be used, for example the <code>day</code> unit can be used on midnight and <code>hour</code> unit be used for intermediate values on the same axis. For an overview of the replacement codes, see <a href="#Highcharts.dateFormat">dateFormat</a>.
 
@@ -70,8 +71,8 @@ Defaults to:
 	year: '%Y'
 }</pre> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get dateTimeLabelFormats;
+  @nullable
+  JsonObject get dateTimeLabelFormats;
   /** 
    * <p><i>Requires Accessibility module</i></p>
 
@@ -248,8 +249,8 @@ Defaults to:
 
  
    */
-  ///TODO Разобратья с типом
-  ///dynamic get minorTickInterval;
+  @nullable
+  JsonObject get minorTickInterval;
   /** 
    * The pixel length of the minor tick marks. 
    */
@@ -278,14 +279,13 @@ Defaults to:
   /** 
    * An array of objects defining plot bands on the Y axis. 
    */
-  ///TODO Разобратья с типом
-  ///BuiltList<dynamic> get plotBands;
+  @nullable
+  JsonObject get plotBands;
   /** 
    * An array of objects representing plot lines on the X axis 
    */
-  ///TODO Разобратья с типом
   @nullable
-  BuiltList<YAxisPlotLines> get plotLines;
+  JsonObject get plotLines;
   /** 
    * Whether to reverse the axis so that the highest number is closest to the origin. If the chart is inverted, the x axis is reversed by default. 
    */
@@ -344,8 +344,8 @@ Defaults to:
 <p>For solid gauges, the Y axis also inherits the concept of <a href="http://api.highcharts.com/highmaps#colorAxis.dataClasses">data classes</a> from the Highmaps color axis.</p>
  
    */
-  ///TODO Разобратья с типом
-  ///dynamic get stops;
+  @nullable
+  JsonObject get stops;
   /** 
    * <p>The amount of ticks to draw on the axis. This opens up for aligning the ticks of multiple charts or panes within a chart. This option overrides the <code>tickPixelInterval</code> option.</p>
 <p>This option only has an effect on linear axes. Datetime, logarithmic or category axes are not affected.</p> 
@@ -457,8 +457,8 @@ Defaults to:
 	null
 ]]</pre> 
    */
-  ///TODO Разобратья с типом
-  ///BuiltList<dynamic> get units;
+  @nullable
+  JsonObject get units;
   /** 
    * Whether axis, including axis title, line, ticks and labels, should be visible. 
    */
@@ -703,8 +703,8 @@ abstract class YAxisPlotBands implements Built<YAxisPlotBands, YAxisPlotBandsBui
   /** 
    * An object defining mouse events for the plot band. Supported properties are <code>click</code>, <code>mouseover</code>, <code>mouseout</code>, <code>mousemove</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get events;
+  @nullable
+  JsonObject get events;
   /** 
    * The start position of the plot band in axis units. 
    */
@@ -718,8 +718,8 @@ abstract class YAxisPlotBands implements Built<YAxisPlotBands, YAxisPlotBandsBui
   /** 
    * In a gauge chart, this option determines the inner radius of the plot band that stretches along the perimeter. It can be given as a percentage string, like <code>"100%"</code>, or as a pixel number, like <code>100</code>. By default, the inner radius is controlled by the <a href="#yAxis.plotBands.thickness">thickness</a> option. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get innerRadius;
+  @nullable
+  JsonObject get innerRadius;
   /** 
    * Text labels for the plot bands 
    */
@@ -728,13 +728,13 @@ abstract class YAxisPlotBands implements Built<YAxisPlotBands, YAxisPlotBandsBui
   /** 
    * In a gauge chart, this option determines the outer radius of the plot band that stretches along the perimeter. It can be given as a percentage string, like <code>"100%"</code>, or as a pixel number, like <code>100</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get outerRadius;
+  @nullable
+  JsonObject get outerRadius;
   /** 
    * In a gauge chart, this option sets the width of the plot band stretching along the perimeter. It can be given as a percentage string, like <code>"10%"</code>, or as a pixel number, like <code>10</code>. The default value 10 is the same as the default <a href="#yAxis.tickLength">tickLength</a>, thus making the plot band act as a background for the tick markers.  
    */
-  ///TODO Разобратья с типом
-  ///dynamic get thickness;
+  @nullable
+  JsonObject get thickness;
   /** 
    * The end position of the plot band in axis units. 
    */
@@ -765,8 +765,8 @@ abstract class YAxisPlotBandsLabel implements Built<YAxisPlotBandsLabel, YAxisPl
 
 <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the labels are styled by the <code>.highcharts-plot-band-label</code> class.</p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get style;
+  @nullable
+  JsonObject get style;
   /** 
    * The string text itself. A subset of HTML is supported. 
    */
@@ -820,8 +820,8 @@ abstract class YAxisPlotLines implements Built<YAxisPlotLines, YAxisPlotLinesBui
   /** 
    * An object defining mouse events for the plot line. Supported properties are <code>click</code>, <code>mouseover</code>, <code>mouseout</code>, <code>mousemove</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get events;
+  @nullable
+  JsonObject get events;
   /** 
    * An id used for identifying the plot line in Axis.removePlotLine. 
    */
@@ -867,8 +867,8 @@ abstract class YAxisPlotLinesLabel implements Built<YAxisPlotLinesLabel, YAxisPl
 
 <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the labels are styled by the <code>.highcharts-plot-band-label</code> class.</p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get style;
+  @nullable
+  JsonObject get style;
   /** 
    * The text itself. A subset of HTML is supported. 
    */
@@ -1010,10 +1010,7 @@ abstract class YAxisTitle implements Built<YAxisTitle, YAxisTitleBuilder> {
   @nullable
   BuiltMap<String,String> get style;
   /** 
-   * The actual text of the axis title. Horizontal texts can contain HTML, 
- but rotated texts are painted using vector techniques and must be 
- clean text. The Y axis title is disabled by setting the <code>text</code>
- option to <code>null</code>. 
+   * The actual text of the axis title. Horizontal texts can contain HTML,  but rotated texts are painted using vector techniques and must be  clean text. The Y axis title is disabled by setting the <code>text</code> option to <code>null</code>. 
    */
   @nullable
   String get text;

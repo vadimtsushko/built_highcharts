@@ -20,6 +20,12 @@ class _$LabelsSerializer implements StructuredSerializer<Labels> {
   Iterable serialize(Serializers serializers, Labels object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.items != null) {
+      result
+        ..add('items')
+        ..add(serializers.serialize(object.items,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.style != null) {
       result
         ..add('style')
@@ -42,6 +48,10 @@ class _$LabelsSerializer implements StructuredSerializer<Labels> {
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'items':
+          result.items = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'style':
           result.style.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltMap, const [
@@ -119,12 +129,14 @@ class _$LabelsItemsSerializer implements StructuredSerializer<LabelsItems> {
 
 class _$Labels extends Labels {
   @override
+  final JsonObject items;
+  @override
   final BuiltMap<String, String> style;
 
   factory _$Labels([void updates(LabelsBuilder b)]) =>
       (new LabelsBuilder()..update(updates)).build();
 
-  _$Labels._({this.style}) : super._();
+  _$Labels._({this.items, this.style}) : super._();
 
   @override
   Labels rebuild(void updates(LabelsBuilder b)) =>
@@ -137,23 +149,29 @@ class _$Labels extends Labels {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! Labels) return false;
-    return style == other.style;
+    return items == other.items && style == other.style;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, style.hashCode));
+    return $jf($jc($jc(0, items.hashCode), style.hashCode));
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('Labels')..add('style', style))
+    return (newBuiltValueToStringHelper('Labels')
+          ..add('items', items)
+          ..add('style', style))
         .toString();
   }
 }
 
 class LabelsBuilder implements Builder<Labels, LabelsBuilder> {
   _$Labels _$v;
+
+  JsonObject _items;
+  JsonObject get items => _$this._items;
+  set items(JsonObject items) => _$this._items = items;
 
   MapBuilder<String, String> _style;
   MapBuilder<String, String> get style =>
@@ -164,6 +182,7 @@ class LabelsBuilder implements Builder<Labels, LabelsBuilder> {
 
   LabelsBuilder get _$this {
     if (_$v != null) {
+      _items = _$v.items;
       _style = _$v.style?.toBuilder();
       _$v = null;
     }
@@ -183,7 +202,7 @@ class LabelsBuilder implements Builder<Labels, LabelsBuilder> {
 
   @override
   _$Labels build() {
-    final result = _$v ?? new _$Labels._(style: _style?.build());
+    final result = _$v ?? new _$Labels._(items: items, style: _style?.build());
     replace(result);
     return result;
   }

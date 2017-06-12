@@ -43,6 +43,12 @@ class _$ChartSerializer implements StructuredSerializer<Chart> {
         ..add(serializers.serialize(object.alignTicks,
             specifiedType: const FullType(bool)));
     }
+    if (object.animation != null) {
+      result
+        ..add('animation')
+        ..add(serializers.serialize(object.animation,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.backgroundColor != null) {
       result
         ..add('backgroundColor')
@@ -97,6 +103,12 @@ class _$ChartSerializer implements StructuredSerializer<Chart> {
         ..add(serializers.serialize(object.events,
             specifiedType: const FullType(ChartEvents)));
     }
+    if (object.height != null) {
+      result
+        ..add('height')
+        ..add(serializers.serialize(object.height,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.ignoreHiddenSeries != null) {
       result
         ..add('ignoreHiddenSeries')
@@ -108,6 +120,12 @@ class _$ChartSerializer implements StructuredSerializer<Chart> {
         ..add('inverted')
         ..add(serializers.serialize(object.inverted,
             specifiedType: const FullType(bool)));
+    }
+    if (object.margin != null) {
+      result
+        ..add('margin')
+        ..add(serializers.serialize(object.margin,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.marginBottom != null) {
       result
@@ -181,6 +199,12 @@ class _$ChartSerializer implements StructuredSerializer<Chart> {
         ..add(serializers.serialize(object.plotBorderWidth,
             specifiedType: const FullType(num)));
     }
+    if (object.plotShadow != null) {
+      result
+        ..add('plotShadow')
+        ..add(serializers.serialize(object.plotShadow,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.polar != null) {
       result
         ..add('polar')
@@ -210,6 +234,12 @@ class _$ChartSerializer implements StructuredSerializer<Chart> {
         ..add('selectionMarkerFill')
         ..add(serializers.serialize(object.selectionMarkerFill,
             specifiedType: const FullType(String)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.showAxes != null) {
       result
@@ -298,6 +328,10 @@ class _$ChartSerializer implements StructuredSerializer<Chart> {
           result.alignTicks = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'animation':
+          result.animation = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'backgroundColor':
           result.backgroundColor = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -334,6 +368,10 @@ class _$ChartSerializer implements StructuredSerializer<Chart> {
           result.events.replace(serializers.deserialize(value,
               specifiedType: const FullType(ChartEvents)) as ChartEvents);
           break;
+        case 'height':
+          result.height = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'ignoreHiddenSeries':
           result.ignoreHiddenSeries = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -341,6 +379,10 @@ class _$ChartSerializer implements StructuredSerializer<Chart> {
         case 'inverted':
           result.inverted = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'margin':
+          result.margin = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'marginBottom':
           result.marginBottom = serializers.deserialize(value,
@@ -390,6 +432,10 @@ class _$ChartSerializer implements StructuredSerializer<Chart> {
           result.plotBorderWidth = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'plotShadow':
+          result.plotShadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'polar':
           result.polar = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -410,6 +456,10 @@ class _$ChartSerializer implements StructuredSerializer<Chart> {
         case 'selectionMarkerFill':
           result.selectionMarkerFill = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'showAxes':
           result.showAxes = serializers.deserialize(value,
@@ -737,11 +787,29 @@ class _$ChartOptions3dFrameSerializer
   Iterable serialize(Serializers serializers, ChartOptions3dFrame object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.back != null) {
+      result
+        ..add('back')
+        ..add(serializers.serialize(object.back,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.bottom != null) {
+      result
+        ..add('bottom')
+        ..add(serializers.serialize(object.bottom,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.side != null) {
       result
         ..add('side')
         ..add(serializers.serialize(object.side,
             specifiedType: const FullType(ChartOptions3dFrameSide)));
+    }
+    if (object.top != null) {
+      result
+        ..add('top')
+        ..add(serializers.serialize(object.top,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -758,10 +826,22 @@ class _$ChartOptions3dFrameSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'back':
+          result.back = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'bottom':
+          result.bottom = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'side':
           result.side.replace(serializers.deserialize(value,
                   specifiedType: const FullType(ChartOptions3dFrameSide))
               as ChartOptions3dFrameSide);
+          break;
+        case 'top':
+          result.top = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -796,6 +876,12 @@ class _$ChartOptions3dFrameBackSerializer
         ..add(serializers.serialize(object.size,
             specifiedType: const FullType(num)));
     }
+    if (object.visible != null) {
+      result
+        ..add('visible')
+        ..add(serializers.serialize(object.visible,
+            specifiedType: const FullType(JsonObject)));
+    }
 
     return result;
   }
@@ -819,6 +905,10 @@ class _$ChartOptions3dFrameBackSerializer
         case 'size':
           result.size = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'visible':
+          result.visible = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -853,6 +943,12 @@ class _$ChartOptions3dFrameBottomSerializer
         ..add(serializers.serialize(object.size,
             specifiedType: const FullType(num)));
     }
+    if (object.visible != null) {
+      result
+        ..add('visible')
+        ..add(serializers.serialize(object.visible,
+            specifiedType: const FullType(JsonObject)));
+    }
 
     return result;
   }
@@ -876,6 +972,10 @@ class _$ChartOptions3dFrameBottomSerializer
         case 'size':
           result.size = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
+          break;
+        case 'visible':
+          result.visible = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -1012,11 +1112,23 @@ class _$ChartResetZoomButtonSerializer
   Iterable serialize(Serializers serializers, ChartResetZoomButton object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.position != null) {
+      result
+        ..add('position')
+        ..add(serializers.serialize(object.position,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.relativeTo != null) {
       result
         ..add('relativeTo')
         ..add(serializers.serialize(object.relativeTo,
             specifiedType: const FullType(String)));
+    }
+    if (object.theme != null) {
+      result
+        ..add('theme')
+        ..add(serializers.serialize(object.theme,
+            specifiedType: const FullType(JsonObject)));
     }
 
     return result;
@@ -1033,9 +1145,17 @@ class _$ChartResetZoomButtonSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'position':
+          result.position = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'relativeTo':
           result.relativeTo = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'theme':
+          result.theme = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
       }
     }
@@ -1131,6 +1251,8 @@ class _$Chart extends Chart {
   @override
   final bool alignTicks;
   @override
+  final JsonObject animation;
+  @override
   final String backgroundColor;
   @override
   final String borderColor;
@@ -1149,9 +1271,13 @@ class _$Chart extends Chart {
   @override
   final ChartEvents events;
   @override
+  final JsonObject height;
+  @override
   final bool ignoreHiddenSeries;
   @override
   final bool inverted;
+  @override
+  final JsonObject margin;
   @override
   final num marginBottom;
   @override
@@ -1177,6 +1303,8 @@ class _$Chart extends Chart {
   @override
   final num plotBorderWidth;
   @override
+  final JsonObject plotShadow;
+  @override
   final bool polar;
   @override
   final bool reflow;
@@ -1186,6 +1314,8 @@ class _$Chart extends Chart {
   final ChartResetZoomButton resetZoomButton;
   @override
   final String selectionMarkerFill;
+  @override
+  final JsonObject shadow;
   @override
   final bool showAxes;
   @override
@@ -1214,6 +1344,7 @@ class _$Chart extends Chart {
 
   _$Chart._(
       {this.alignTicks,
+      this.animation,
       this.backgroundColor,
       this.borderColor,
       this.borderRadius,
@@ -1223,8 +1354,10 @@ class _$Chart extends Chart {
       this.defaultSeriesType,
       this.description,
       this.events,
+      this.height,
       this.ignoreHiddenSeries,
       this.inverted,
+      this.margin,
       this.marginBottom,
       this.marginLeft,
       this.marginRight,
@@ -1237,11 +1370,13 @@ class _$Chart extends Chart {
       this.plotBackgroundImage,
       this.plotBorderColor,
       this.plotBorderWidth,
+      this.plotShadow,
       this.polar,
       this.reflow,
       this.renderTo,
       this.resetZoomButton,
       this.selectionMarkerFill,
+      this.shadow,
       this.showAxes,
       this.spacing,
       this.spacingBottom,
@@ -1267,6 +1402,7 @@ class _$Chart extends Chart {
     if (identical(other, this)) return true;
     if (other is! Chart) return false;
     return alignTicks == other.alignTicks &&
+        animation == other.animation &&
         backgroundColor == other.backgroundColor &&
         borderColor == other.borderColor &&
         borderRadius == other.borderRadius &&
@@ -1276,8 +1412,10 @@ class _$Chart extends Chart {
         defaultSeriesType == other.defaultSeriesType &&
         description == other.description &&
         events == other.events &&
+        height == other.height &&
         ignoreHiddenSeries == other.ignoreHiddenSeries &&
         inverted == other.inverted &&
+        margin == other.margin &&
         marginBottom == other.marginBottom &&
         marginLeft == other.marginLeft &&
         marginRight == other.marginRight &&
@@ -1290,11 +1428,13 @@ class _$Chart extends Chart {
         plotBackgroundImage == other.plotBackgroundImage &&
         plotBorderColor == other.plotBorderColor &&
         plotBorderWidth == other.plotBorderWidth &&
+        plotShadow == other.plotShadow &&
         polar == other.polar &&
         reflow == other.reflow &&
         renderTo == other.renderTo &&
         resetZoomButton == other.resetZoomButton &&
         selectionMarkerFill == other.selectionMarkerFill &&
+        shadow == other.shadow &&
         showAxes == other.showAxes &&
         spacing == other.spacing &&
         spacingBottom == other.spacingBottom &&
@@ -1328,15 +1468,15 @@ class _$Chart extends Chart {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, alignTicks.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), colorCount.hashCode), defaultSeriesType.hashCode), description.hashCode), events.hashCode), ignoreHiddenSeries.hashCode), inverted.hashCode), marginBottom.hashCode), marginLeft.hashCode), marginRight.hashCode), marginTop.hashCode), options3d.hashCode), panKey.hashCode), panning.hashCode), pinchType.hashCode), plotBackgroundColor.hashCode),
-                                                                                plotBackgroundImage.hashCode),
-                                                                            plotBorderColor.hashCode),
-                                                                        plotBorderWidth.hashCode),
-                                                                    polar.hashCode),
-                                                                reflow.hashCode),
-                                                            renderTo.hashCode),
-                                                        resetZoomButton.hashCode),
-                                                    selectionMarkerFill.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, alignTicks.hashCode), animation.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), colorCount.hashCode), defaultSeriesType.hashCode), description.hashCode), events.hashCode), height.hashCode), ignoreHiddenSeries.hashCode), inverted.hashCode), margin.hashCode), marginBottom.hashCode), marginLeft.hashCode), marginRight.hashCode), marginTop.hashCode), options3d.hashCode), panKey.hashCode), panning.hashCode), pinchType.hashCode), plotBackgroundColor.hashCode), plotBackgroundImage.hashCode), plotBorderColor.hashCode),
+                                                                                plotBorderWidth.hashCode),
+                                                                            plotShadow.hashCode),
+                                                                        polar.hashCode),
+                                                                    reflow.hashCode),
+                                                                renderTo.hashCode),
+                                                            resetZoomButton.hashCode),
+                                                        selectionMarkerFill.hashCode),
+                                                    shadow.hashCode),
                                                 showAxes.hashCode),
                                             spacing.hashCode),
                                         spacingBottom.hashCode),
@@ -1354,6 +1494,7 @@ class _$Chart extends Chart {
   String toString() {
     return (newBuiltValueToStringHelper('Chart')
           ..add('alignTicks', alignTicks)
+          ..add('animation', animation)
           ..add('backgroundColor', backgroundColor)
           ..add('borderColor', borderColor)
           ..add('borderRadius', borderRadius)
@@ -1363,8 +1504,10 @@ class _$Chart extends Chart {
           ..add('defaultSeriesType', defaultSeriesType)
           ..add('description', description)
           ..add('events', events)
+          ..add('height', height)
           ..add('ignoreHiddenSeries', ignoreHiddenSeries)
           ..add('inverted', inverted)
+          ..add('margin', margin)
           ..add('marginBottom', marginBottom)
           ..add('marginLeft', marginLeft)
           ..add('marginRight', marginRight)
@@ -1377,11 +1520,13 @@ class _$Chart extends Chart {
           ..add('plotBackgroundImage', plotBackgroundImage)
           ..add('plotBorderColor', plotBorderColor)
           ..add('plotBorderWidth', plotBorderWidth)
+          ..add('plotShadow', plotShadow)
           ..add('polar', polar)
           ..add('reflow', reflow)
           ..add('renderTo', renderTo)
           ..add('resetZoomButton', resetZoomButton)
           ..add('selectionMarkerFill', selectionMarkerFill)
+          ..add('shadow', shadow)
           ..add('showAxes', showAxes)
           ..add('spacing', spacing)
           ..add('spacingBottom', spacingBottom)
@@ -1403,6 +1548,10 @@ class ChartBuilder implements Builder<Chart, ChartBuilder> {
   bool _alignTicks;
   bool get alignTicks => _$this._alignTicks;
   set alignTicks(bool alignTicks) => _$this._alignTicks = alignTicks;
+
+  JsonObject _animation;
+  JsonObject get animation => _$this._animation;
+  set animation(JsonObject animation) => _$this._animation = animation;
 
   String _backgroundColor;
   String get backgroundColor => _$this._backgroundColor;
@@ -1442,6 +1591,10 @@ class ChartBuilder implements Builder<Chart, ChartBuilder> {
   ChartEventsBuilder get events => _$this._events ??= new ChartEventsBuilder();
   set events(ChartEventsBuilder events) => _$this._events = events;
 
+  JsonObject _height;
+  JsonObject get height => _$this._height;
+  set height(JsonObject height) => _$this._height = height;
+
   bool _ignoreHiddenSeries;
   bool get ignoreHiddenSeries => _$this._ignoreHiddenSeries;
   set ignoreHiddenSeries(bool ignoreHiddenSeries) =>
@@ -1450,6 +1603,10 @@ class ChartBuilder implements Builder<Chart, ChartBuilder> {
   bool _inverted;
   bool get inverted => _$this._inverted;
   set inverted(bool inverted) => _$this._inverted = inverted;
+
+  JsonObject _margin;
+  JsonObject get margin => _$this._margin;
+  set margin(JsonObject margin) => _$this._margin = margin;
 
   num _marginBottom;
   num get marginBottom => _$this._marginBottom;
@@ -1505,6 +1662,10 @@ class ChartBuilder implements Builder<Chart, ChartBuilder> {
   set plotBorderWidth(num plotBorderWidth) =>
       _$this._plotBorderWidth = plotBorderWidth;
 
+  JsonObject _plotShadow;
+  JsonObject get plotShadow => _$this._plotShadow;
+  set plotShadow(JsonObject plotShadow) => _$this._plotShadow = plotShadow;
+
   bool _polar;
   bool get polar => _$this._polar;
   set polar(bool polar) => _$this._polar = polar;
@@ -1527,6 +1688,10 @@ class ChartBuilder implements Builder<Chart, ChartBuilder> {
   String get selectionMarkerFill => _$this._selectionMarkerFill;
   set selectionMarkerFill(String selectionMarkerFill) =>
       _$this._selectionMarkerFill = selectionMarkerFill;
+
+  JsonObject _shadow;
+  JsonObject get shadow => _$this._shadow;
+  set shadow(JsonObject shadow) => _$this._shadow = shadow;
 
   bool _showAxes;
   bool get showAxes => _$this._showAxes;
@@ -1579,6 +1744,7 @@ class ChartBuilder implements Builder<Chart, ChartBuilder> {
   ChartBuilder get _$this {
     if (_$v != null) {
       _alignTicks = _$v.alignTicks;
+      _animation = _$v.animation;
       _backgroundColor = _$v.backgroundColor;
       _borderColor = _$v.borderColor;
       _borderRadius = _$v.borderRadius;
@@ -1588,8 +1754,10 @@ class ChartBuilder implements Builder<Chart, ChartBuilder> {
       _defaultSeriesType = _$v.defaultSeriesType;
       _description = _$v.description;
       _events = _$v.events?.toBuilder();
+      _height = _$v.height;
       _ignoreHiddenSeries = _$v.ignoreHiddenSeries;
       _inverted = _$v.inverted;
+      _margin = _$v.margin;
       _marginBottom = _$v.marginBottom;
       _marginLeft = _$v.marginLeft;
       _marginRight = _$v.marginRight;
@@ -1602,11 +1770,13 @@ class ChartBuilder implements Builder<Chart, ChartBuilder> {
       _plotBackgroundImage = _$v.plotBackgroundImage;
       _plotBorderColor = _$v.plotBorderColor;
       _plotBorderWidth = _$v.plotBorderWidth;
+      _plotShadow = _$v.plotShadow;
       _polar = _$v.polar;
       _reflow = _$v.reflow;
       _renderTo = _$v.renderTo;
       _resetZoomButton = _$v.resetZoomButton?.toBuilder();
       _selectionMarkerFill = _$v.selectionMarkerFill;
+      _shadow = _$v.shadow;
       _showAxes = _$v.showAxes;
       _spacing = _$v.spacing?.toBuilder();
       _spacingBottom = _$v.spacingBottom;
@@ -1639,6 +1809,7 @@ class ChartBuilder implements Builder<Chart, ChartBuilder> {
     final result = _$v ??
         new _$Chart._(
             alignTicks: alignTicks,
+            animation: animation,
             backgroundColor: backgroundColor,
             borderColor: borderColor,
             borderRadius: borderRadius,
@@ -1648,8 +1819,10 @@ class ChartBuilder implements Builder<Chart, ChartBuilder> {
             defaultSeriesType: defaultSeriesType,
             description: description,
             events: _events?.build(),
+            height: height,
             ignoreHiddenSeries: ignoreHiddenSeries,
             inverted: inverted,
+            margin: margin,
             marginBottom: marginBottom,
             marginLeft: marginLeft,
             marginRight: marginRight,
@@ -1662,11 +1835,13 @@ class ChartBuilder implements Builder<Chart, ChartBuilder> {
             plotBackgroundImage: plotBackgroundImage,
             plotBorderColor: plotBorderColor,
             plotBorderWidth: plotBorderWidth,
+            plotShadow: plotShadow,
             polar: polar,
             reflow: reflow,
             renderTo: renderTo,
             resetZoomButton: _resetZoomButton?.build(),
             selectionMarkerFill: selectionMarkerFill,
+            shadow: shadow,
             showAxes: showAxes,
             spacing: _spacing?.build(),
             spacingBottom: spacingBottom,
@@ -2075,12 +2250,19 @@ class ChartOptions3dBuilder
 
 class _$ChartOptions3dFrame extends ChartOptions3dFrame {
   @override
+  final JsonObject back;
+  @override
+  final JsonObject bottom;
+  @override
   final ChartOptions3dFrameSide side;
+  @override
+  final JsonObject top;
 
   factory _$ChartOptions3dFrame([void updates(ChartOptions3dFrameBuilder b)]) =>
       (new ChartOptions3dFrameBuilder()..update(updates)).build();
 
-  _$ChartOptions3dFrame._({this.side}) : super._();
+  _$ChartOptions3dFrame._({this.back, this.bottom, this.side, this.top})
+      : super._();
 
   @override
   ChartOptions3dFrame rebuild(void updates(ChartOptions3dFrameBuilder b)) =>
@@ -2094,18 +2276,26 @@ class _$ChartOptions3dFrame extends ChartOptions3dFrame {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! ChartOptions3dFrame) return false;
-    return side == other.side;
+    return back == other.back &&
+        bottom == other.bottom &&
+        side == other.side &&
+        top == other.top;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, side.hashCode));
+    return $jf($jc(
+        $jc($jc($jc(0, back.hashCode), bottom.hashCode), side.hashCode),
+        top.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ChartOptions3dFrame')
-          ..add('side', side))
+          ..add('back', back)
+          ..add('bottom', bottom)
+          ..add('side', side)
+          ..add('top', top))
         .toString();
   }
 }
@@ -2114,16 +2304,31 @@ class ChartOptions3dFrameBuilder
     implements Builder<ChartOptions3dFrame, ChartOptions3dFrameBuilder> {
   _$ChartOptions3dFrame _$v;
 
+  JsonObject _back;
+  JsonObject get back => _$this._back;
+  set back(JsonObject back) => _$this._back = back;
+
+  JsonObject _bottom;
+  JsonObject get bottom => _$this._bottom;
+  set bottom(JsonObject bottom) => _$this._bottom = bottom;
+
   ChartOptions3dFrameSideBuilder _side;
   ChartOptions3dFrameSideBuilder get side =>
       _$this._side ??= new ChartOptions3dFrameSideBuilder();
   set side(ChartOptions3dFrameSideBuilder side) => _$this._side = side;
 
+  JsonObject _top;
+  JsonObject get top => _$this._top;
+  set top(JsonObject top) => _$this._top = top;
+
   ChartOptions3dFrameBuilder();
 
   ChartOptions3dFrameBuilder get _$this {
     if (_$v != null) {
+      _back = _$v.back;
+      _bottom = _$v.bottom;
       _side = _$v.side?.toBuilder();
+      _top = _$v.top;
       _$v = null;
     }
     return this;
@@ -2142,7 +2347,9 @@ class ChartOptions3dFrameBuilder
 
   @override
   _$ChartOptions3dFrame build() {
-    final result = _$v ?? new _$ChartOptions3dFrame._(side: _side?.build());
+    final result = _$v ??
+        new _$ChartOptions3dFrame._(
+            back: back, bottom: bottom, side: _side?.build(), top: top);
     replace(result);
     return result;
   }
@@ -2158,12 +2365,15 @@ class _$ChartOptions3dFrameBack extends ChartOptions3dFrameBack {
   final String color;
   @override
   final num size;
+  @override
+  final JsonObject visible;
 
   factory _$ChartOptions3dFrameBack(
           [void updates(ChartOptions3dFrameBackBuilder b)]) =>
       (new ChartOptions3dFrameBackBuilder()..update(updates)).build();
 
-  _$ChartOptions3dFrameBack._({this.color, this.size}) : super._();
+  _$ChartOptions3dFrameBack._({this.color, this.size, this.visible})
+      : super._();
 
   @override
   ChartOptions3dFrameBack rebuild(
@@ -2178,19 +2388,23 @@ class _$ChartOptions3dFrameBack extends ChartOptions3dFrameBack {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! ChartOptions3dFrameBack) return false;
-    return color == other.color && size == other.size;
+    return color == other.color &&
+        size == other.size &&
+        visible == other.visible;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, color.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, color.hashCode), size.hashCode), visible.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ChartOptions3dFrameBack')
           ..add('color', color)
-          ..add('size', size))
+          ..add('size', size)
+          ..add('visible', visible))
         .toString();
   }
 }
@@ -2208,12 +2422,17 @@ class ChartOptions3dFrameBackBuilder
   num get size => _$this._size;
   set size(num size) => _$this._size = size;
 
+  JsonObject _visible;
+  JsonObject get visible => _$this._visible;
+  set visible(JsonObject visible) => _$this._visible = visible;
+
   ChartOptions3dFrameBackBuilder();
 
   ChartOptions3dFrameBackBuilder get _$this {
     if (_$v != null) {
       _color = _$v.color;
       _size = _$v.size;
+      _visible = _$v.visible;
       _$v = null;
     }
     return this;
@@ -2232,8 +2451,9 @@ class ChartOptions3dFrameBackBuilder
 
   @override
   _$ChartOptions3dFrameBack build() {
-    final result =
-        _$v ?? new _$ChartOptions3dFrameBack._(color: color, size: size);
+    final result = _$v ??
+        new _$ChartOptions3dFrameBack._(
+            color: color, size: size, visible: visible);
     replace(result);
     return result;
   }
@@ -2249,12 +2469,15 @@ class _$ChartOptions3dFrameBottom extends ChartOptions3dFrameBottom {
   final String color;
   @override
   final num size;
+  @override
+  final JsonObject visible;
 
   factory _$ChartOptions3dFrameBottom(
           [void updates(ChartOptions3dFrameBottomBuilder b)]) =>
       (new ChartOptions3dFrameBottomBuilder()..update(updates)).build();
 
-  _$ChartOptions3dFrameBottom._({this.color, this.size}) : super._();
+  _$ChartOptions3dFrameBottom._({this.color, this.size, this.visible})
+      : super._();
 
   @override
   ChartOptions3dFrameBottom rebuild(
@@ -2269,19 +2492,23 @@ class _$ChartOptions3dFrameBottom extends ChartOptions3dFrameBottom {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! ChartOptions3dFrameBottom) return false;
-    return color == other.color && size == other.size;
+    return color == other.color &&
+        size == other.size &&
+        visible == other.visible;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, color.hashCode), size.hashCode));
+    return $jf(
+        $jc($jc($jc(0, color.hashCode), size.hashCode), visible.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ChartOptions3dFrameBottom')
           ..add('color', color)
-          ..add('size', size))
+          ..add('size', size)
+          ..add('visible', visible))
         .toString();
   }
 }
@@ -2299,12 +2526,17 @@ class ChartOptions3dFrameBottomBuilder
   num get size => _$this._size;
   set size(num size) => _$this._size = size;
 
+  JsonObject _visible;
+  JsonObject get visible => _$this._visible;
+  set visible(JsonObject visible) => _$this._visible = visible;
+
   ChartOptions3dFrameBottomBuilder();
 
   ChartOptions3dFrameBottomBuilder get _$this {
     if (_$v != null) {
       _color = _$v.color;
       _size = _$v.size;
+      _visible = _$v.visible;
       _$v = null;
     }
     return this;
@@ -2323,8 +2555,9 @@ class ChartOptions3dFrameBottomBuilder
 
   @override
   _$ChartOptions3dFrameBottom build() {
-    final result =
-        _$v ?? new _$ChartOptions3dFrameBottom._(color: color, size: size);
+    final result = _$v ??
+        new _$ChartOptions3dFrameBottom._(
+            color: color, size: size, visible: visible);
     replace(result);
     return result;
   }
@@ -2518,13 +2751,18 @@ class ChartOptions3dFrameTopBuilder
 
 class _$ChartResetZoomButton extends ChartResetZoomButton {
   @override
+  final JsonObject position;
+  @override
   final String relativeTo;
+  @override
+  final JsonObject theme;
 
   factory _$ChartResetZoomButton(
           [void updates(ChartResetZoomButtonBuilder b)]) =>
       (new ChartResetZoomButtonBuilder()..update(updates)).build();
 
-  _$ChartResetZoomButton._({this.relativeTo}) : super._();
+  _$ChartResetZoomButton._({this.position, this.relativeTo, this.theme})
+      : super._();
 
   @override
   ChartResetZoomButton rebuild(void updates(ChartResetZoomButtonBuilder b)) =>
@@ -2538,18 +2776,23 @@ class _$ChartResetZoomButton extends ChartResetZoomButton {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! ChartResetZoomButton) return false;
-    return relativeTo == other.relativeTo;
+    return position == other.position &&
+        relativeTo == other.relativeTo &&
+        theme == other.theme;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, relativeTo.hashCode));
+    return $jf($jc(
+        $jc($jc(0, position.hashCode), relativeTo.hashCode), theme.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ChartResetZoomButton')
-          ..add('relativeTo', relativeTo))
+          ..add('position', position)
+          ..add('relativeTo', relativeTo)
+          ..add('theme', theme))
         .toString();
   }
 }
@@ -2558,15 +2801,25 @@ class ChartResetZoomButtonBuilder
     implements Builder<ChartResetZoomButton, ChartResetZoomButtonBuilder> {
   _$ChartResetZoomButton _$v;
 
+  JsonObject _position;
+  JsonObject get position => _$this._position;
+  set position(JsonObject position) => _$this._position = position;
+
   String _relativeTo;
   String get relativeTo => _$this._relativeTo;
   set relativeTo(String relativeTo) => _$this._relativeTo = relativeTo;
+
+  JsonObject _theme;
+  JsonObject get theme => _$this._theme;
+  set theme(JsonObject theme) => _$this._theme = theme;
 
   ChartResetZoomButtonBuilder();
 
   ChartResetZoomButtonBuilder get _$this {
     if (_$v != null) {
+      _position = _$v.position;
       _relativeTo = _$v.relativeTo;
+      _theme = _$v.theme;
       _$v = null;
     }
     return this;
@@ -2585,7 +2838,9 @@ class ChartResetZoomButtonBuilder
 
   @override
   _$ChartResetZoomButton build() {
-    final result = _$v ?? new _$ChartResetZoomButton._(relativeTo: relativeTo);
+    final result = _$v ??
+        new _$ChartResetZoomButton._(
+            position: position, relativeTo: relativeTo, theme: theme);
     replace(result);
     return result;
   }

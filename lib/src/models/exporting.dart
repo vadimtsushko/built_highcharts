@@ -3,6 +3,7 @@ library exporting;
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 
 part 'exporting.g.dart';
     
@@ -23,8 +24,8 @@ abstract class Exporting implements Built<Exporting, ExportingBuilder> {
   /** 
    * Additional chart options to be merged into an exported chart. For example, a common use case is to add data labels to improve readaility of the exported chart, or to add a printer-friendly color scheme. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get chartOptions;
+  @nullable
+  JsonObject get chartOptions;
   /** 
    * Whether to enable the exporting module. Disabling the module will hide the context button, but API methods will still be available. 
    */
@@ -48,8 +49,8 @@ abstract class Exporting implements Built<Exporting, ExportingBuilder> {
   /** 
    * An object containing additional attributes for the POST form that sends the SVG to the export server. For example, a <code>target</code> can be set to make sure the generated image is received in another frame, or a custom <code>enctype</code> or <code>encoding</code> can be set. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get formAttributes;
+  @nullable
+  JsonObject get formAttributes;
   /** 
    * Path where Highcharts will look for export module dependencies to load on demand if they don't already exist on <code>window</code>.
 
@@ -127,8 +128,8 @@ abstract class ExportingButtonsContextButton implements Built<ExportingButtonsCo
   /** 
    * <p>A collection of config options for the menu items. Each options object consists of a <code>text</code> option which is a string to show in the menu item, as well as an <code>onclick</code> parameter which is a callback function to run on click.</p> <p>By default, there is the "Print" menu item plus one menu item for each of the available export types. Menu items can be customized by defining a new array of items and assigning  <code>null</code> to unwanted positions (see override example below).</p> 
    */
-  ///TODO Разобратья с типом
-  ///BuiltList<dynamic> get menuItems;
+  @nullable
+  JsonObject get menuItems;
   /** 
    * A click handler callback to use on the button directly instead of the popup menu. 
    */
@@ -177,8 +178,8 @@ abstract class ExportingButtonsContextButton implements Built<ExportingButtonsCo
   /** 
    * A configuration object for the button theme. The object accepts SVG properties like <code>stroke-width</code>, <code>stroke</code> and <code>fill</code>. Tri-state button styles are supported by the <code>states.hover</code> and <code>states.select</code> objects. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get theme;
+  @nullable
+  JsonObject get theme;
   /** 
    * The vertical alignment of the buttons. Can be one of "top", "middle" or "bottom". 
    */

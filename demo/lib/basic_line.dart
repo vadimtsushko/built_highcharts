@@ -12,13 +12,7 @@ void basicLine(_) {
       'Oct', 'Nov', 'Dec'
     ])
     ..yAxis.title.text = 'Temperature (ºC)'
-    ..yAxis
-    ..yAxis.plotLines.addAll([
-      new YAxisPlotLines((b) => b
-        ..value = 0
-        ..width = 1
-        ..color = '#808080')
-    ])
+    ..yAxis.plotLines = jsonObject({'value': 0, 'width': 1, 'color': '#808080'})
     ..tooltip.valueSuffix = 'ºC'
     ..legend.layout = 'vertical'
     ..legend.align = 'right'

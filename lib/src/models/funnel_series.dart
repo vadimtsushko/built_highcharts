@@ -3,6 +3,7 @@ library funnel_series;
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 
 part 'funnel_series.g.dart';
     
@@ -37,8 +38,8 @@ abstract class FunnelSeries implements Built<FunnelSeries, FunnelSeriesBuilder> 
   /** 
    * The center of the series. By default, it is centered in the middle of the plot area, so it fills the plot area height. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get center;
+  @nullable
+  JsonObject get center;
   /** 
    * A class name to apply to the series' graphical elements. 
    */
@@ -80,8 +81,8 @@ abstract class FunnelSeries implements Built<FunnelSeries, FunnelSeriesBuilder> 
 }]</pre></li>
  </ol> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get data;
+  @nullable
+  JsonObject get data;
   /** 
    * null 
    */
@@ -128,8 +129,8 @@ abstract class FunnelSeries implements Built<FunnelSeries, FunnelSeriesBuilder> 
   /** 
    * The height of the funnel or pyramid. If it is a number it defines the pixel height, if it is a percentage string it is the percentage of the plot area height. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get height;
+  @nullable
+  JsonObject get height;
   /** 
    * An id for the series. This can be used after render time to get a pointer to the series object through <code>chart.get()</code>. 
    */
@@ -168,13 +169,13 @@ abstract class FunnelSeries implements Built<FunnelSeries, FunnelSeriesBuilder> 
   /** 
    * The height of the neck, the lower part of the funnel. A number defines pixel width, a percentage string defines a percentage of the plot area height. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get neckHeight;
+  @nullable
+  JsonObject get neckHeight;
   /** 
    * The width of the neck, the lower part of the funnel. A number defines pixel width, a percentage string defines a percentage of the plot area width. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get neckWidth;
+  @nullable
+  JsonObject get neckWidth;
   /** 
    * Properties for each single point 
    */
@@ -198,8 +199,8 @@ abstract class FunnelSeries implements Built<FunnelSeries, FunnelSeriesBuilder> 
   /** 
    * Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get shadow;
+  @nullable
+  JsonObject get shadow;
   /** 
    * Whether to display this particular series or series type in the legend. Since 2.1, pies are not shown in the legend by default. 
    */
@@ -218,8 +219,8 @@ abstract class FunnelSeries implements Built<FunnelSeries, FunnelSeriesBuilder> 
   /** 
    * A wrapper object for all the series options in specific states. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get states;
+  @nullable
+  JsonObject get states;
   /** 
    * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event on a series isn't triggered until the mouse moves over another series, or out of the plot area. When false, the <code>mouseOut</code> event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the  tooltip will be hidden when moving the mouse between series. 
    */
@@ -228,8 +229,8 @@ abstract class FunnelSeries implements Built<FunnelSeries, FunnelSeriesBuilder> 
   /** 
    * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get tooltip;
+  @nullable
+  JsonObject get tooltip;
   /** 
    * The type of series. Can be one of <code>area</code>, <code>areaspline</code>, <code>bar</code>, <code>column</code>, <code>line</code>, <code>pie</code>, <code>scatter</code> or <code>spline</code>. From version 2.3, <code>arearange</code>, <code>areasplinerange</code> and <code>columnrange</code> are supported with the highcharts-more.js component. 
    */
@@ -243,8 +244,8 @@ abstract class FunnelSeries implements Built<FunnelSeries, FunnelSeriesBuilder> 
   /** 
    * The width of the funnel compared to the width of the plot area, or the pixel width if it is a number. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get width;
+  @nullable
+  JsonObject get width;
   /** 
    * Define the visual z index of the series. 
    */
@@ -260,8 +261,8 @@ abstract class FunnelSeries implements Built<FunnelSeries, FunnelSeriesBuilder> 
 
 <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the color zones are styled with the <code>.highcharts-zone-{n}</code> class, or custom classed from the <code>className</code> option (<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/">view live demo</a>).</p> 
    */
-  ///TODO Разобратья с типом
-  ///BuiltList<dynamic> get zones;
+  @nullable
+  JsonObject get zones;
   factory FunnelSeries([updates(FunnelSeriesBuilder b)]) = _$FunnelSeries;
   FunnelSeries._();
 }
@@ -285,8 +286,8 @@ abstract class FunnelSeriesData implements Built<FunnelSeriesData, FunnelSeriesD
   /** 
    * Individual data label for each point. The options are the same as the ones for  <a class="internal" href="#plotOptions.series.dataLabels">plotOptions.series.dataLabels</a> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get dataLabels;
+  @nullable
+  JsonObject get dataLabels;
   /** 
    * <p><i>Requires Accessibility module</i></p>
 <p>A description of the point to add to the screen reader information about the point.</p> 
@@ -301,8 +302,8 @@ abstract class FunnelSeriesData implements Built<FunnelSeriesData, FunnelSeriesD
   /** 
    * Individual point events 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get events;
+  @nullable
+  JsonObject get events;
   /** 
    * An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>. 
    */
@@ -510,8 +511,8 @@ through <code>this.series.name</code>.</td>
   /** 
    * The shadow of the box. Works best with <code>borderWidth</code> or <code>backgroundColor</code>. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get shadow;
+  @nullable
+  JsonObject get shadow;
   /** 
    * The name of a symbol to use for the border around the label. Symbols are predefined functions on the Renderer object. 
    */
@@ -670,8 +671,8 @@ abstract class FunnelSeriesStatesHover implements Built<FunnelSeriesStatesHover,
   /** 
    * Animation setting for hovering the graph in line-type series. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get animation;
+  @nullable
+  JsonObject get animation;
   /** 
    * <p>How much to brighten the point on interaction. Requires the main color to be defined in hex or rgb(a) format.</p>
 
@@ -689,8 +690,8 @@ abstract class FunnelSeriesStatesHover implements Built<FunnelSeriesStatesHover,
 
 <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the halo is styled with the <code>.highcharts-halo</code> class, with colors inherited from <code>.highcharts-color-{n}</code>.</p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get halo;
+  @nullable
+  JsonObject get halo;
   /** 
    * Pixel with of the graph line. 
    */
@@ -716,8 +717,8 @@ abstract class FunnelSeriesStatesHoverHalo implements Built<FunnelSeriesStatesHo
   /** 
    * A collection of SVG attributes to override the appearance of the halo, for example <code>fill</code>, <code>stroke</code> and <code>stroke-width</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get attributes;
+  @nullable
+  JsonObject get attributes;
   /** 
    * Opacity for the halo unless a specific fill is overridden using the <code>attributes</code> setting. Note that Highcharts is only able to apply opacity to colors of hex or rgb(a) formats. 
    */
@@ -766,8 +767,8 @@ abstract class FunnelSeriesStatesHoverMarker implements Built<FunnelSeriesStates
   /** 
    *  
    */
-  ///TODO Разобратья с типом
-  ///dynamic get states;
+  @nullable
+  JsonObject get states;
   /** 
    * <p>A predefined shape or symbol for the marker. When null, the symbol is pulled from options.symbols. Other possible values are "circle", "square", "diamond", "triangle" and "triangle-down".</p>
 
@@ -803,8 +804,8 @@ abstract class FunnelSeriesTooltip implements Built<FunnelSeriesTooltip, FunnelS
 }</pre>
 </p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get dateTimeLabelFormats;
+  @nullable
+  JsonObject get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 

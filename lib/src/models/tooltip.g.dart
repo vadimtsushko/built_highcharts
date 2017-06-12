@@ -49,6 +49,18 @@ class _$TooltipSerializer implements StructuredSerializer<Tooltip> {
         ..add(serializers.serialize(object.borderWidth,
             specifiedType: const FullType(num)));
     }
+    if (object.crosshairs != null) {
+      result
+        ..add('crosshairs')
+        ..add(serializers.serialize(object.crosshairs,
+            specifiedType: const FullType(JsonObject)));
+    }
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.enabled != null) {
       result
         ..add('enabled')
@@ -217,6 +229,14 @@ class _$TooltipSerializer implements StructuredSerializer<Tooltip> {
           result.borderWidth = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'crosshairs':
+          result.crosshairs = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
+          break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -332,6 +352,10 @@ class _$Tooltip extends Tooltip {
   @override
   final num borderWidth;
   @override
+  final JsonObject crosshairs;
+  @override
+  final JsonObject dateTimeLabelFormats;
+  @override
   final bool enabled;
   @override
   final bool followPointer;
@@ -385,6 +409,8 @@ class _$Tooltip extends Tooltip {
       this.borderColor,
       this.borderRadius,
       this.borderWidth,
+      this.crosshairs,
+      this.dateTimeLabelFormats,
       this.enabled,
       this.followPointer,
       this.followTouchMove,
@@ -425,6 +451,8 @@ class _$Tooltip extends Tooltip {
         borderColor == other.borderColor &&
         borderRadius == other.borderRadius &&
         borderWidth == other.borderWidth &&
+        crosshairs == other.crosshairs &&
+        dateTimeLabelFormats == other.dateTimeLabelFormats &&
         enabled == other.enabled &&
         followPointer == other.followPointer &&
         followTouchMove == other.followTouchMove &&
@@ -469,7 +497,7 @@ class _$Tooltip extends Tooltip {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc(0, animation.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), enabled.hashCode), followPointer.hashCode), followTouchMove.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, animation.hashCode), backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), crosshairs.hashCode), dateTimeLabelFormats.hashCode), enabled.hashCode), followPointer.hashCode), followTouchMove.hashCode),
                                                                                 footerFormat.hashCode),
                                                                             formatter.hashCode),
                                                                         headerFormat.hashCode),
@@ -499,6 +527,8 @@ class _$Tooltip extends Tooltip {
           ..add('borderColor', borderColor)
           ..add('borderRadius', borderRadius)
           ..add('borderWidth', borderWidth)
+          ..add('crosshairs', crosshairs)
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('enabled', enabled)
           ..add('followPointer', followPointer)
           ..add('followTouchMove', followTouchMove)
@@ -548,6 +578,15 @@ class TooltipBuilder implements Builder<Tooltip, TooltipBuilder> {
   num _borderWidth;
   num get borderWidth => _$this._borderWidth;
   set borderWidth(num borderWidth) => _$this._borderWidth = borderWidth;
+
+  JsonObject _crosshairs;
+  JsonObject get crosshairs => _$this._crosshairs;
+  set crosshairs(JsonObject crosshairs) => _$this._crosshairs = crosshairs;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _enabled;
   bool get enabled => _$this._enabled;
@@ -650,6 +689,8 @@ class TooltipBuilder implements Builder<Tooltip, TooltipBuilder> {
       _borderColor = _$v.borderColor;
       _borderRadius = _$v.borderRadius;
       _borderWidth = _$v.borderWidth;
+      _crosshairs = _$v.crosshairs;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _enabled = _$v.enabled;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
@@ -697,6 +738,8 @@ class TooltipBuilder implements Builder<Tooltip, TooltipBuilder> {
             borderColor: borderColor,
             borderRadius: borderRadius,
             borderWidth: borderWidth,
+            crosshairs: crosshairs,
+            dateTimeLabelFormats: dateTimeLabelFormats,
             enabled: enabled,
             followPointer: followPointer,
             followTouchMove: followTouchMove,

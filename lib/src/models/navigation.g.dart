@@ -170,6 +170,12 @@ class _$NavigationButtonOptionsSerializer
         ..add(serializers.serialize(object.text,
             specifiedType: const FullType(String)));
     }
+    if (object.theme != null) {
+      result
+        ..add('theme')
+        ..add(serializers.serialize(object.theme,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.verticalAlign != null) {
       result
         ..add('verticalAlign')
@@ -243,6 +249,10 @@ class _$NavigationButtonOptionsSerializer
         case 'text':
           result.text = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'theme':
+          result.theme = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'verticalAlign':
           result.verticalAlign = serializers.deserialize(value,
@@ -415,6 +425,8 @@ class _$NavigationButtonOptions extends NavigationButtonOptions {
   @override
   final String text;
   @override
+  final JsonObject theme;
+  @override
   final String verticalAlign;
   @override
   final num width;
@@ -436,6 +448,7 @@ class _$NavigationButtonOptions extends NavigationButtonOptions {
       this.symbolX,
       this.symbolY,
       this.text,
+      this.theme,
       this.verticalAlign,
       this.width,
       this.y})
@@ -464,6 +477,7 @@ class _$NavigationButtonOptions extends NavigationButtonOptions {
         symbolX == other.symbolX &&
         symbolY == other.symbolY &&
         text == other.text &&
+        theme == other.theme &&
         verticalAlign == other.verticalAlign &&
         width == other.width &&
         y == other.y;
@@ -482,16 +496,18 @@ class _$NavigationButtonOptions extends NavigationButtonOptions {
                                     $jc(
                                         $jc(
                                             $jc(
-                                                $jc($jc(0, align.hashCode),
-                                                    enabled.hashCode),
-                                                height.hashCode),
-                                            symbolFill.hashCode),
-                                        symbolSize.hashCode),
-                                    symbolStroke.hashCode),
-                                symbolStrokeWidth.hashCode),
-                            symbolX.hashCode),
-                        symbolY.hashCode),
-                    text.hashCode),
+                                                $jc(
+                                                    $jc($jc(0, align.hashCode),
+                                                        enabled.hashCode),
+                                                    height.hashCode),
+                                                symbolFill.hashCode),
+                                            symbolSize.hashCode),
+                                        symbolStroke.hashCode),
+                                    symbolStrokeWidth.hashCode),
+                                symbolX.hashCode),
+                            symbolY.hashCode),
+                        text.hashCode),
+                    theme.hashCode),
                 verticalAlign.hashCode),
             width.hashCode),
         y.hashCode));
@@ -510,6 +526,7 @@ class _$NavigationButtonOptions extends NavigationButtonOptions {
           ..add('symbolX', symbolX)
           ..add('symbolY', symbolY)
           ..add('text', text)
+          ..add('theme', theme)
           ..add('verticalAlign', verticalAlign)
           ..add('width', width)
           ..add('y', y))
@@ -563,6 +580,10 @@ class NavigationButtonOptionsBuilder
   String get text => _$this._text;
   set text(String text) => _$this._text = text;
 
+  JsonObject _theme;
+  JsonObject get theme => _$this._theme;
+  set theme(JsonObject theme) => _$this._theme = theme;
+
   String _verticalAlign;
   String get verticalAlign => _$this._verticalAlign;
   set verticalAlign(String verticalAlign) =>
@@ -590,6 +611,7 @@ class NavigationButtonOptionsBuilder
       _symbolX = _$v.symbolX;
       _symbolY = _$v.symbolY;
       _text = _$v.text;
+      _theme = _$v.theme;
       _verticalAlign = _$v.verticalAlign;
       _width = _$v.width;
       _y = _$v.y;
@@ -623,6 +645,7 @@ class NavigationButtonOptionsBuilder
             symbolX: symbolX,
             symbolY: symbolY,
             text: text,
+            theme: theme,
             verticalAlign: verticalAlign,
             width: width,
             y: y);

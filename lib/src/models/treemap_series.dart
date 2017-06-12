@@ -3,6 +3,7 @@ library treemap_series;
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 
 part 'treemap_series.g.dart';
     
@@ -115,13 +116,13 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 }]</pre></li>
  </ol> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get data;
+  @nullable
+  JsonObject get data;
   /** 
    *  
    */
-  ///TODO Разобратья с типом
-  ///dynamic get dataLabels;
+  @nullable
+  JsonObject get dataLabels;
   /** 
    * <p><i>Requires Accessibility module</i></p>
 <p>A description of the series to add to the screen reader information about the series.</p> 
@@ -203,8 +204,8 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
   /** 
    * Set options on specific levels. Takes precedence over series options, but not point options. 
    */
-  ///TODO Разобратья с типом
-  ///BuiltList<dynamic> get levels;
+  @nullable
+  JsonObject get levels;
   /** 
    * The <a href="#series.id">id</a> of another series to link to. Additionally, the value can be ":previous" to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series. 
    */
@@ -243,8 +244,8 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
   /** 
    * Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get shadow;
+  @nullable
+  JsonObject get shadow;
   /** 
    * If true, a checkbox is displayed next to the legend item to allow selecting the series. The state of the checkbox is determined by the <code>selected</code> option. 
    */
@@ -268,8 +269,8 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
   /** 
    * A wrapper object for all the series options in specific states. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get states;
+  @nullable
+  JsonObject get states;
   /** 
    * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event on a series isn't triggered until the mouse moves over another series, or out of the plot area. When false, the <code>mouseOut</code> event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the  tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc. 
    */
@@ -278,8 +279,8 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
   /** 
    *  
    */
-  ///TODO Разобратья с типом
-  ///dynamic get tooltip;
+  @nullable
+  JsonObject get tooltip;
   /** 
    * When a series contains a data array that is longer than this, only one dimensional arrays of numbers, or two dimensional arrays with x and y values are allowed. Also, only the first point is tested, and the rest are assumed to be the same format. This saves expensive data checking and indexing in long series. Set it to <code>0</code> disable. 
    */
@@ -298,13 +299,13 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
   /** 
    * When using dual or multiple x axes, this number defines which xAxis the particular series is connected to. It refers to either the <a href="#xAxis.id">axis id</a> or the index of the axis in the xAxis array, with 0 being the first. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get xAxis;
+  @nullable
+  JsonObject get xAxis;
   /** 
    * When using dual or multiple y axes, this number defines which yAxis the particular series is connected to. It refers to either the <a href="#yAxis.id">axis id</a> or the index of the axis in the yAxis array, with 0 being the first. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get yAxis;
+  @nullable
+  JsonObject get yAxis;
   /** 
    * Define the visual z index of the series. 
    */
@@ -320,8 +321,8 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 
 <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the color zones are styled with the <code>.highcharts-zone-{n}</code> class, or custom classed from the <code>className</code> option (<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/">view live demo</a>).</p> 
    */
-  ///TODO Разобратья с типом
-  ///BuiltList<dynamic> get zones;
+  @nullable
+  JsonObject get zones;
   factory TreemapSeries([updates(TreemapSeriesBuilder b)]) = _$TreemapSeries;
   TreemapSeries._();
 }
@@ -350,8 +351,8 @@ abstract class TreemapSeriesData implements Built<TreemapSeriesData, TreemapSeri
   /** 
    * Individual data label for each point. The options are the same as the ones for  <a class="internal" href="#plotOptions.series.dataLabels">plotOptions.series.dataLabels</a> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get dataLabels;
+  @nullable
+  JsonObject get dataLabels;
   /** 
    * <p><i>Requires Accessibility module</i></p>
 <p>A description of the point to add to the screen reader information about the point.</p> 
@@ -366,8 +367,8 @@ abstract class TreemapSeriesData implements Built<TreemapSeriesData, TreemapSeri
   /** 
    * Individual point events 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get events;
+  @nullable
+  JsonObject get events;
   /** 
    * An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>. 
    */
@@ -561,8 +562,8 @@ through <code>this.series.name</code>.</td>
   /** 
    * The shadow of the box. Works best with <code>borderWidth</code> or <code>backgroundColor</code>. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get shadow;
+  @nullable
+  JsonObject get shadow;
   /** 
    * The name of a symbol to use for the border around the label. Symbols are predefined functions on the Renderer object. 
    */
@@ -673,8 +674,8 @@ See <a href"#plotOptions.scatter.dashStyle">plotOptions.scatter.dashStyle</a> fo
    * Can set the options of dataLabels on each point which lies on the level.
 <a href="#plotOptions.treemap.dataLabels">plotOptions.treemap.dataLabels</a> for possible values. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get dataLabels;
+  @nullable
+  JsonObject get dataLabels;
   /** 
    * Can set the layoutAlgorithm option on a specific level.  
    */
@@ -758,8 +759,8 @@ abstract class TreemapSeriesStatesHover implements Built<TreemapSeriesStatesHove
   /** 
    * Animation setting for hovering the graph in line-type series. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get animation;
+  @nullable
+  JsonObject get animation;
   /** 
    * A specific border color for the hovered point. Defaults to inherit the normal state border color. 
    */
@@ -808,8 +809,8 @@ abstract class TreemapSeriesTooltip implements Built<TreemapSeriesTooltip, Treem
 }</pre>
 </p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get dateTimeLabelFormats;
+  @nullable
+  JsonObject get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 

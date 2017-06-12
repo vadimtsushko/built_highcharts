@@ -3,6 +3,7 @@ library chart;
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 
 part 'chart.g.dart';
     
@@ -32,8 +33,8 @@ abstract class Chart implements Built<Chart, ChartBuilder> {
  	<dd>A string reference to an easing function set on the <code>Math</code> object. See <a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animation-easing/">the easing demo</a>.</dd>
  </dl> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get animation;
+  @nullable
+  JsonObject get animation;
   /** 
    * The background color or gradient for the outer chart area. 
    */
@@ -88,8 +89,8 @@ abstract class Chart implements Built<Chart, ChartBuilder> {
 
 <p>By default (when <code>null</code>) the height is calculated from the offset height of the containing element, or 400 pixels if the containing element's height is 0.</p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get height;
+  @nullable
+  JsonObject get height;
   /** 
    * If true, the axes will scale to the remaining visible series once one series is hidden. If false, hiding and showing a series will not affect the axes or the other series. For stacks, once one series within the stack is hidden, the rest of the stack will close in around it even if the axis is not affected. 
    */
@@ -106,23 +107,20 @@ abstract class Chart implements Built<Chart, ChartBuilder> {
    * <p>The margin between the outer edge of the chart and the plot area. The numbers in the array designate top, right, bottom and left respectively. Use the options <code>marginTop</code>, <code>marginRight</code>, <code>marginBottom</code> and <code>marginLeft</code> for shorthand setting of one option.</p> <p>Since version 2.1, the margin is 0 by default. The actual space is dynamically calculated  from the offset of axis labels, axis title, title, subtitle and legend in addition to the <code>spacingTop</code>, <code>spacingRight</code>, <code>spacingBottom</code> and <code>spacingLeft</code> options.</p>
 		 Defaults to <code>[null]</code>. 
    */
-  ///TODO Разобратья с типом
-  ///BuiltList<dynamic> get margin;
+  @nullable
+  JsonObject get margin;
   /** 
-   * The margin between the bottom outer edge of the chart and the plot area. Use this to set a fixed
- pixel value for the margin as opposed to the default dynamic margin. See also <code>spacingBottom</code>. 
+   * The margin between the bottom outer edge of the chart and the plot area. Use this to set a fixed pixel value for the margin as opposed to the default dynamic margin. See also <code>spacingBottom</code>. 
    */
   @nullable
   num get marginBottom;
   /** 
-   * The margin between the left outer edge of the chart and the plot area. Use this to set a fixed
- pixel value for the margin as opposed to the default dynamic margin. See also <code>spacingLeft</code>. 
+   * The margin between the left outer edge of the chart and the plot area. Use this to set a fixed pixel value for the margin as opposed to the default dynamic margin. See also <code>spacingLeft</code>. 
    */
   @nullable
   num get marginLeft;
   /** 
-   * The margin between the right outer edge of the chart and the plot area. Use this to set a fixed
- pixel value for the margin as opposed to the default dynamic margin. See also <code>spacingRight</code>. 
+   * The margin between the right outer edge of the chart and the plot area. Use this to set a fixed pixel value for the margin as opposed to the default dynamic margin. See also <code>spacingRight</code>. 
    */
   @nullable
   num get marginRight;
@@ -176,8 +174,8 @@ abstract class Chart implements Built<Chart, ChartBuilder> {
   /** 
    * Whether to apply a drop shadow to the plot area. Requires that plotBackgroundColor be set. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get plotShadow;
+  @nullable
+  JsonObject get plotShadow;
   /** 
    * When true, cartesian charts like line, spline, area and column are transformed into the polar coordinate system. Requires <code>highcharts-more.js</code>. 
    */
@@ -206,11 +204,10 @@ abstract class Chart implements Built<Chart, ChartBuilder> {
   @nullable
   String get selectionMarkerFill;
   /** 
-   * Whether to apply a drop shadow to the outer chart area. Requires that 
- backgroundColor be set. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>. 
+   * Whether to apply a drop shadow to the outer chart area. Requires that  backgroundColor be set. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get shadow;
+  @nullable
+  JsonObject get shadow;
   /** 
    * Whether to show the axes initially. This only applies to empty charts where series are added dynamically, as axes are automatically added to cartesian series. 
    */
@@ -222,20 +219,17 @@ abstract class Chart implements Built<Chart, ChartBuilder> {
   @nullable
   BuiltList<num> get spacing;
   /** 
-   * <p>The space between the bottom edge of the chart and the content (plot area, axis title and labels, title, subtitle or 
- legend in top position).</p> 
+   * <p>The space between the bottom edge of the chart and the content (plot area, axis title and labels, title, subtitle or  legend in top position).</p> 
    */
   @nullable
   num get spacingBottom;
   /** 
-   * <p>The space between the left edge of the chart and the content (plot area, axis title and labels, title, subtitle or 
- legend in top position).</p> 
+   * <p>The space between the left edge of the chart and the content (plot area, axis title and labels, title, subtitle or  legend in top position).</p> 
    */
   @nullable
   num get spacingLeft;
   /** 
-   * <p>The space between the right edge of the chart and the content (plot area, axis title and labels, title, subtitle or 
- legend in top position).</p> 
+   * <p>The space between the right edge of the chart and the content (plot area, axis title and labels, title, subtitle or  legend in top position).</p> 
    */
   @nullable
   num get spacingRight;
@@ -425,13 +419,13 @@ abstract class ChartOptions3dFrame implements Built<ChartOptions3dFrame, ChartOp
   /** 
    * Defines the back panel of the frame around 3D charts. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get back;
+  @nullable
+  JsonObject get back;
   /** 
    * The bottom of the frame around a 3D chart. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get bottom;
+  @nullable
+  JsonObject get bottom;
   /** 
    * <p>Note: As of v5.0.12, <code>frame.left</code> or <code>frame.right</code> should be used instead.</p>
 
@@ -442,8 +436,8 @@ abstract class ChartOptions3dFrame implements Built<ChartOptions3dFrame, ChartOp
   /** 
    * The top of the frame around a 3D chart. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get top;
+  @nullable
+  JsonObject get top;
   factory ChartOptions3dFrame([updates(ChartOptions3dFrameBuilder b)]) = _$ChartOptions3dFrame;
   ChartOptions3dFrame._();
 }
@@ -462,8 +456,8 @@ abstract class ChartOptions3dFrameBack implements Built<ChartOptions3dFrameBack,
   /** 
    * Whether to display the frame. Possible values are <code>true</code>, <code>false</code>, <code>"auto"</code> to display only the frames behind the data, and <code>"default"</code> to display faces behind the data based on the axis layout, ignoring the point of view. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get visible;
+  @nullable
+  JsonObject get visible;
   factory ChartOptions3dFrameBack([updates(ChartOptions3dFrameBackBuilder b)]) = _$ChartOptions3dFrameBack;
   ChartOptions3dFrameBack._();
 }
@@ -482,8 +476,8 @@ abstract class ChartOptions3dFrameBottom implements Built<ChartOptions3dFrameBot
   /** 
    * Whether to display the frame. Possible values are <code>true</code>, <code>false</code>, <code>"auto"</code> to display only the frames behind the data, and <code>"default"</code> to display faces behind the data based on the axis layout, ignoring the point of view. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get visible;
+  @nullable
+  JsonObject get visible;
   factory ChartOptions3dFrameBottom([updates(ChartOptions3dFrameBottomBuilder b)]) = _$ChartOptions3dFrameBottom;
   ChartOptions3dFrameBottom._();
 }
@@ -522,8 +516,8 @@ abstract class ChartResetZoomButton implements Built<ChartResetZoomButton, Chart
   /** 
    * The position of the button. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get position;
+  @nullable
+  JsonObject get position;
   /** 
    * What frame the button should be placed related to. Can be either "plot" or "chart". 
    */
@@ -532,8 +526,8 @@ abstract class ChartResetZoomButton implements Built<ChartResetZoomButton, Chart
   /** 
    * A collection of attributes for the button. The object takes SVG attributes like  <code>fill</code>, <code>stroke</code>, <code>stroke-width</code> or <code>r</code>, the border radius. The theme also supports <code>style</code>, a collection of CSS properties for the text. Equivalent attributes for the hover state are given in <code>theme.states.hover</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get theme;
+  @nullable
+  JsonObject get theme;
   factory ChartResetZoomButton([updates(ChartResetZoomButtonBuilder b)]) = _$ChartResetZoomButton;
   ChartResetZoomButton._();
 }

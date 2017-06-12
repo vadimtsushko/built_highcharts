@@ -3,6 +3,7 @@ library no_data;
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 
 part 'no_data.g.dart';
     
@@ -11,13 +12,13 @@ abstract class NoData implements Built<NoData, NoDataBuilder> {
   /** 
    * An object of additional SVG attributes for the no-data label. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get attr;
+  @nullable
+  JsonObject get attr;
   /** 
    * The position of the no-data label, relative to the plot area.  
    */
-  ///TODO Разобратья с типом
-  ///dynamic get position;
+  @nullable
+  JsonObject get position;
   /** 
    * CSS styles for the no-data label.  
    */

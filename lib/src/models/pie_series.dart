@@ -3,6 +3,7 @@ library pie_series;
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 
 part 'pie_series.g.dart';
     
@@ -51,8 +52,8 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
    * The center of the pie chart relative to the plot area. Can be percentages or pixel values. The default behaviour (as of 3.0) is to center the pie so that all slices and data labels are within the plot area. As a consequence, the pie may actually jump around in a chart with dynamic values, as the data labels move. In that case, the center should be explicitly set, for example to <code>["50%", "50%"]</code>.
 		  
    */
-  ///TODO Разобратья с типом
-  ///dynamic get center;
+  @nullable
+  JsonObject get center;
   /** 
    * A class name to apply to the series' graphical elements. 
    */
@@ -94,8 +95,8 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 }]</pre></li>
  </ol> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get data;
+  @nullable
+  JsonObject get data;
   /** 
    * null 
    */
@@ -165,8 +166,8 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 
 <p>Note: in Highcharts < 4.1.2, the percentage was relative to the plot area, not the pie size.</p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get innerSize;
+  @nullable
+  JsonObject get innerSize;
   /** 
    * An array specifying which option maps to which key in the data point array. This makes it convenient to work with unstructured data arrays from different sources. 
    */
@@ -210,8 +211,8 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
   /** 
    * Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get shadow;
+  @nullable
+  JsonObject get shadow;
   /** 
    * Whether to display this particular series or series type in the legend. Since 2.1, pies are not shown in the legend by default. 
    */
@@ -220,8 +221,8 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
   /** 
    * The diameter of the pie relative to the plot area. Can be a percentage or pixel value. Pixel values are given as integers. The default behaviour (as of 3.0) is to scale to the plot area and give room for data labels within the plot area. As a consequence, the size of the pie may vary when points are updated and data labels more around. In that case it is best to set a fixed value, for example <code>"75%"</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get size;
+  @nullable
+  JsonObject get size;
   /** 
    * If set to <code>True</code>, the accessibility module will skip past the points in this series for keyboard navigation. 
    */
@@ -240,8 +241,8 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
   /** 
    * A wrapper object for all the series options in specific states. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get states;
+  @nullable
+  JsonObject get states;
   /** 
    * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event on a series isn't triggered until the mouse moves over another series, or out of the plot area. When false, the <code>mouseOut</code> event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the  tooltip will be hidden when moving the mouse between series. 
    */
@@ -250,8 +251,8 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
   /** 
    * A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href="#tooltip">tooltip</a>, but only the following properties can be defined on a series level. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get tooltip;
+  @nullable
+  JsonObject get tooltip;
   /** 
    * The type of series. Can be one of <code>area</code>, <code>areaspline</code>, <code>bar</code>, <code>column</code>, <code>line</code>, <code>pie</code>, <code>scatter</code> or <code>spline</code>. From version 2.3, <code>arearange</code>, <code>areasplinerange</code> and <code>columnrange</code> are supported with the highcharts-more.js component. 
    */
@@ -277,8 +278,8 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
 
 <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the color zones are styled with the <code>.highcharts-zone-{n}</code> class, or custom classed from the <code>className</code> option (<a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/">view live demo</a>).</p> 
    */
-  ///TODO Разобратья с типом
-  ///BuiltList<dynamic> get zones;
+  @nullable
+  JsonObject get zones;
   factory PieSeries([updates(PieSeriesBuilder b)]) = _$PieSeries;
   PieSeries._();
 }
@@ -302,8 +303,8 @@ abstract class PieSeriesData implements Built<PieSeriesData, PieSeriesDataBuilde
   /** 
    * Individual data label for each point. The options are the same as the ones for  <a class="internal" href="#plotOptions.series.dataLabels">plotOptions.series.dataLabels</a> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get dataLabels;
+  @nullable
+  JsonObject get dataLabels;
   /** 
    * <p><i>Requires Accessibility module</i></p>
 <p>A description of the point to add to the screen reader information about the point.</p> 
@@ -318,8 +319,8 @@ abstract class PieSeriesData implements Built<PieSeriesData, PieSeriesDataBuilde
   /** 
    * Individual point events 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get events;
+  @nullable
+  JsonObject get events;
   /** 
    * An id for the point. This can be used after render time to get a pointer to the point object through <code>chart.get()</code>. 
    */
@@ -532,8 +533,8 @@ through <code>this.series.name</code>.</td>
   /** 
    * The shadow of the box. Works best with <code>borderWidth</code> or <code>backgroundColor</code>. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get shadow;
+  @nullable
+  JsonObject get shadow;
   /** 
    * The name of a symbol to use for the border around the label. Symbols are predefined functions on the Renderer object. 
    */
@@ -692,8 +693,8 @@ abstract class PieSeriesStatesHover implements Built<PieSeriesStatesHover, PieSe
   /** 
    * Animation setting for hovering the graph in line-type series. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get animation;
+  @nullable
+  JsonObject get animation;
   /** 
    * <p>How much to brighten the point on interaction. Requires the main color to be defined in hex or rgb(a) format.</p>
 
@@ -711,8 +712,8 @@ abstract class PieSeriesStatesHover implements Built<PieSeriesStatesHover, PieSe
 
 <p>In <a href="http://www.highcharts.com/docs/chart-design-and-style/style-by-css">styled mode</a>, the halo is styled with the <code>.highcharts-halo</code> class, with colors inherited from <code>.highcharts-color-{n}</code>.</p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get halo;
+  @nullable
+  JsonObject get halo;
   /** 
    * Pixel with of the graph line. 
    */
@@ -738,8 +739,8 @@ abstract class PieSeriesStatesHoverHalo implements Built<PieSeriesStatesHoverHal
   /** 
    * A collection of SVG attributes to override the appearance of the halo, for example <code>fill</code>, <code>stroke</code> and <code>stroke-width</code>. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get attributes;
+  @nullable
+  JsonObject get attributes;
   /** 
    * Opacity for the halo unless a specific fill is overridden using the <code>attributes</code> setting. Note that Highcharts is only able to apply opacity to colors of hex or rgb(a) formats. 
    */
@@ -788,8 +789,8 @@ abstract class PieSeriesStatesHoverMarker implements Built<PieSeriesStatesHoverM
   /** 
    *  
    */
-  ///TODO Разобратья с типом
-  ///dynamic get states;
+  @nullable
+  JsonObject get states;
   /** 
    * <p>A predefined shape or symbol for the marker. When null, the symbol is pulled from options.symbols. Other possible values are "circle", "square", "diamond", "triangle" and "triangle-down".</p>
 
@@ -825,8 +826,8 @@ abstract class PieSeriesTooltip implements Built<PieSeriesTooltip, PieSeriesTool
 }</pre>
 </p> 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get dateTimeLabelFormats;
+  @nullable
+  JsonObject get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 

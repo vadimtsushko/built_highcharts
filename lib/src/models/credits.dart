@@ -3,6 +3,7 @@ library credits;
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 
 part 'credits.g.dart';
     
@@ -21,8 +22,8 @@ abstract class Credits implements Built<Credits, CreditsBuilder> {
   /** 
    * Position configuration for the credits label. 
    */
-  ///TODO Разобратья с типом
-  ///dynamic get position;
+  @nullable
+  JsonObject get position;
   /** 
    * CSS styles for the credits label. 
    */
