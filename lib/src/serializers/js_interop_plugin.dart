@@ -23,11 +23,18 @@ class JsInteropPlugin implements SerializerPlugin {
 
   @override
   Object afterSerialize(Object object, FullType specifiedType) {
-    return object is List &&
+    if (object is List &&
             specifiedType.root != BuiltList &&
-            specifiedType.root != JsonObject
-        ? _toJS(object, specifiedType)
-        : object;
+            specifiedType.root != JsonObject) {
+//      print('Doing _toJS:$specifiedType $object');
+      return _toJS(object, specifiedType);
+    }
+    if (specifiedType.root == JsonObject) {
+//      print('Jsify object:$specifiedType $object');
+      return js_util.jsify(object);
+    }
+//    print('Return object:$specifiedType $object');
+    return object;
   }
 
   @override

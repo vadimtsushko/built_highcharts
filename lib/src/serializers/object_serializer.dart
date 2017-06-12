@@ -4,7 +4,6 @@
 
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
-import 'dart:js_util';
 
 class ObjectSerializer implements PrimitiveSerializer<Object> {
   final bool structured = false;

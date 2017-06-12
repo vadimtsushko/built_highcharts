@@ -1,5 +1,5 @@
 part of highcharts_options.samples;
-
+//
 @JS()
 @anonymous
 class DateTimeLabelFormats {
@@ -15,23 +15,13 @@ class DateTimeLabelFormats {
 
 void time_data_with_irregular_intervals (_) {
   clearOutput();
-  ChartOptions chartOptions = new ChartOptions ()
-    ..chart = (new Chart ()
-        ..type = 'spline'
-        ..renderTo = 'output'
-    )
-    ..title = (
-      new Title()
-        ..text = 'Snow depth at Vikjafjellet, Norway'
-    )
-    ..subtitle = (
-      new Subtitle()
-        ..text = 'Irregular time data in Highcharts JS'
-    )
-    ..xAxis = (
-      new XAxis()
-        ..type = 'datetime'
-        ..dateTimeLabelFormats = new DateTimeLabelFormats (
+  ChartOptions chartOptions = new ChartOptions ( (b) => b
+    ..chart.type = 'spline'
+    ..chart.renderTo = 'output'
+    ..title.text = 'Snow depth at Vikjafjellet, Norway'
+    ..subtitle.text = 'Irregular time data in Highcharts JS'
+    ..xAxis.type = 'datetime'
+    ..xAxis.dateTimeLabelFormats = new DateTimeLabelFormats (
           month: '%e. %b',
           year: '%b'
         )

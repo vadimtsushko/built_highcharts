@@ -27,19 +27,19 @@ void stacked_area (_) {
     ..series.addAll([
       new Series((b) => b
         ..name = 'Asia'
-        ..data.addAll([502, 635, 809, 947, 1402, 3634, 5268])),
+        ..data = jsonObject([502, 635, 809, 947, 1402, 3634, 5268])),
       new Series ((b) => b
         ..name = 'Africa'
-        ..data.addAll([106, 107, 111, 133, 221, 767, 1766])),
+        ..data = jsonObject([106, 107, 111, 133, 221, 767, 1766])),
       new Series ((b) => b
         ..name = 'Europe'
-        ..data.addAll([163, 203, 276, 408, 547, 729, 628])),
+        ..data = jsonObject([163, 203, 276, 408, 547, 729, 628])),
       new Series ((b) => b
         ..name = 'America'
-        ..data.addAll([18, 31, 54, 156, 339, 818, 1201])),
+        ..data = jsonObject([18, 31, 54, 156, 339, 818, 1201])),
       new Series ((b) => b
         ..name = 'Oceania'
-        ..data.addAll([2, 2, 2, 6, 13, 30, 46]))
+        ..data = jsonObject([2, 2, 2, 6, 13, 30, 46]))
     ]));
 
   new hc.HighchartsChart(toJsObject(chartOptions));

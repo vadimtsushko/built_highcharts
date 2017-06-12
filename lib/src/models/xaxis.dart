@@ -3,6 +3,7 @@ library xaxis;
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 
 part 'xaxis.g.dart';
     
@@ -66,7 +67,9 @@ Defaults to:
 }</pre> 
    */
   ///TODO Разобратья с типом
-  ///dynamic get dateTimeLabelFormats;
+  ///
+  @nullable
+  JsonObject get dateTimeLabelFormats;
   /** 
    * <p><i>Requires Accessibility module</i></p>
 

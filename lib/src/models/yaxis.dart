@@ -284,7 +284,8 @@ Defaults to:
    * An array of objects representing plot lines on the X axis 
    */
   ///TODO Разобратья с типом
-  ///BuiltList<dynamic> get plotLines;
+  @nullable
+  BuiltList<YAxisPlotLines> get plotLines;
   /** 
    * Whether to reverse the axis so that the highest number is closest to the origin. If the chart is inverted, the x axis is reversed by default. 
    */
@@ -1009,7 +1010,10 @@ abstract class YAxisTitle implements Built<YAxisTitle, YAxisTitleBuilder> {
   @nullable
   BuiltMap<String,String> get style;
   /** 
-   * The actual text of the axis title. Horizontal texts can contain HTML,  but rotated texts are painted using vector techniques and must be  clean text. The Y axis title is disabled by setting the <code>text</code> option to <code>null</code>. 
+   * The actual text of the axis title. Horizontal texts can contain HTML, 
+ but rotated texts are painted using vector techniques and must be 
+ clean text. The Y axis title is disabled by setting the <code>text</code>
+ option to <code>null</code>. 
    */
   @nullable
   String get text;

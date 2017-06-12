@@ -24,8 +24,7 @@ class _$SeriesSerializer implements StructuredSerializer<Series> {
       result
         ..add('data')
         ..add(serializers.serialize(object.data,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(num)])));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.dataNumPairs != null) {
       result
@@ -105,10 +104,8 @@ class _$SeriesSerializer implements StructuredSerializer<Series> {
       final dynamic value = iterator.current;
       switch (key) {
         case 'data':
-          result.data.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(num)]))
-              as BuiltList<num>);
+          result.data = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'dataNumPairs':
           result.dataNumPairs.replace(serializers.deserialize(value,
@@ -185,7 +182,7 @@ class _$SeriesDataSerializer implements StructuredSerializer<SeriesData> {
 
 class _$Series extends Series {
   @override
-  final BuiltList<num> data;
+  final JsonObject data;
   @override
   final BuiltList<BuiltList<num>> dataNumPairs;
   @override
@@ -293,9 +290,9 @@ class _$Series extends Series {
 class SeriesBuilder implements Builder<Series, SeriesBuilder> {
   _$Series _$v;
 
-  ListBuilder<num> _data;
-  ListBuilder<num> get data => _$this._data ??= new ListBuilder<num>();
-  set data(ListBuilder<num> data) => _$this._data = data;
+  JsonObject _data;
+  JsonObject get data => _$this._data;
+  set data(JsonObject data) => _$this._data = data;
 
   ListBuilder<BuiltList<num>> _dataNumPairs;
   ListBuilder<BuiltList<num>> get dataNumPairs =>
@@ -343,7 +340,7 @@ class SeriesBuilder implements Builder<Series, SeriesBuilder> {
 
   SeriesBuilder get _$this {
     if (_$v != null) {
-      _data = _$v.data?.toBuilder();
+      _data = _$v.data;
       _dataNumPairs = _$v.dataNumPairs?.toBuilder();
       _dataParser = _$v.dataParser;
       _dataURL = _$v.dataURL;
@@ -374,7 +371,7 @@ class SeriesBuilder implements Builder<Series, SeriesBuilder> {
   _$Series build() {
     final result = _$v ??
         new _$Series._(
-            data: _data?.build(),
+            data: data,
             dataNumPairs: _dataNumPairs?.build(),
             dataParser: dataParser,
             dataURL: dataURL,

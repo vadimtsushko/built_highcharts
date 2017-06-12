@@ -1,7 +1,7 @@
 import 'base_serializer.dart';
 import 'package:built_value/standard_json_plugin.dart';
 import 'package:built_value/serializer.dart';
-
+import 'package:built_value/json_object.dart';
 final _standardJsonSerializer =
     (base_serializer.toBuilder()..addPlugin(new StandardJsonPlugin())).build();
 
@@ -16,3 +16,5 @@ toJson(Object data, {FullType specifiedType}) {
 
 T fromJson<T>(Type dataType, Object data) => _standardJsonSerializer
     .deserialize(data, specifiedType: new FullType(dataType)) as T;
+
+JsonObject jsonObject(obj) => new JsonObject(obj);

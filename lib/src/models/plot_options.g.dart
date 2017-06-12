@@ -29993,6 +29993,12 @@ class _$PlotOptionsSeriesSerializer
         ..add(serializers.serialize(object.pointIntervalUnit,
             specifiedType: const FullType(String)));
     }
+    if (object.pointStart != null) {
+      result
+        ..add('pointStart')
+        ..add(serializers.serialize(object.pointStart,
+            specifiedType: const FullType(num)));
+    }
     if (object.selected != null) {
       result
         ..add('selected')
@@ -30197,6 +30203,10 @@ class _$PlotOptionsSeriesSerializer
         case 'pointIntervalUnit':
           result.pointIntervalUnit = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'pointStart':
+          result.pointStart = serializers.deserialize(value,
+              specifiedType: const FullType(num)) as num;
           break;
         case 'selected':
           result.selected = serializers.deserialize(value,
@@ -79690,6 +79700,8 @@ class _$PlotOptionsSeries extends PlotOptionsSeries {
   @override
   final String pointIntervalUnit;
   @override
+  final num pointStart;
+  @override
   final bool selected;
   @override
   final bool showCheckbox;
@@ -79746,6 +79758,7 @@ class _$PlotOptionsSeries extends PlotOptionsSeries {
       this.pointDescriptionFormatter,
       this.pointInterval,
       this.pointIntervalUnit,
+      this.pointStart,
       this.selected,
       this.showCheckbox,
       this.showInLegend,
@@ -79800,6 +79813,7 @@ class _$PlotOptionsSeries extends PlotOptionsSeries {
         pointDescriptionFormatter == other.pointDescriptionFormatter &&
         pointInterval == other.pointInterval &&
         pointIntervalUnit == other.pointIntervalUnit &&
+        pointStart == other.pointStart &&
         selected == other.selected &&
         showCheckbox == other.showCheckbox &&
         showInLegend == other.showInLegend &&
@@ -79834,14 +79848,14 @@ class _$PlotOptionsSeries extends PlotOptionsSeries {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), connectEnds.hashCode), connectNulls.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode), lineWidth.hashCode), linecap.hashCode),
-                                                                                linkedTo.hashCode),
-                                                                            marker.hashCode),
-                                                                        negativeColor.hashCode),
-                                                                    point.hashCode),
-                                                                pointDescriptionFormatter.hashCode),
-                                                            pointInterval.hashCode),
-                                                        pointIntervalUnit.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowPointSelect.hashCode), animation.hashCode), animationLimit.hashCode), className.hashCode), color.hashCode), colorIndex.hashCode), connectEnds.hashCode), connectNulls.hashCode), cropThreshold.hashCode), cursor.hashCode), dashStyle.hashCode), dataLabels.hashCode), description.hashCode), enableMouseTracking.hashCode), events.hashCode), exposeElementToA11y.hashCode), findNearestPointBy.hashCode), getExtremesFromAll.hashCode), keys.hashCode), lineWidth.hashCode), linecap.hashCode), linkedTo.hashCode),
+                                                                                marker.hashCode),
+                                                                            negativeColor.hashCode),
+                                                                        point.hashCode),
+                                                                    pointDescriptionFormatter.hashCode),
+                                                                pointInterval.hashCode),
+                                                            pointIntervalUnit.hashCode),
+                                                        pointStart.hashCode),
                                                     selected.hashCode),
                                                 showCheckbox.hashCode),
                                             showInLegend.hashCode),
@@ -79887,6 +79901,7 @@ class _$PlotOptionsSeries extends PlotOptionsSeries {
           ..add('pointDescriptionFormatter', pointDescriptionFormatter)
           ..add('pointInterval', pointInterval)
           ..add('pointIntervalUnit', pointIntervalUnit)
+          ..add('pointStart', pointStart)
           ..add('selected', selected)
           ..add('showCheckbox', showCheckbox)
           ..add('showInLegend', showInLegend)
@@ -80033,6 +80048,10 @@ class PlotOptionsSeriesBuilder
   set pointIntervalUnit(String pointIntervalUnit) =>
       _$this._pointIntervalUnit = pointIntervalUnit;
 
+  num _pointStart;
+  num get pointStart => _$this._pointStart;
+  set pointStart(num pointStart) => _$this._pointStart = pointStart;
+
   bool _selected;
   bool get selected => _$this._selected;
   set selected(bool selected) => _$this._selected = selected;
@@ -80117,6 +80136,7 @@ class PlotOptionsSeriesBuilder
       _pointDescriptionFormatter = _$v.pointDescriptionFormatter;
       _pointInterval = _$v.pointInterval;
       _pointIntervalUnit = _$v.pointIntervalUnit;
+      _pointStart = _$v.pointStart;
       _selected = _$v.selected;
       _showCheckbox = _$v.showCheckbox;
       _showInLegend = _$v.showInLegend;
@@ -80177,6 +80197,7 @@ class PlotOptionsSeriesBuilder
             pointDescriptionFormatter: pointDescriptionFormatter,
             pointInterval: pointInterval,
             pointIntervalUnit: pointIntervalUnit,
+            pointStart: pointStart,
             selected: selected,
             showCheckbox: showCheckbox,
             showInLegend: showInLegend,

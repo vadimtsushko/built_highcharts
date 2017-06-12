@@ -64,6 +64,12 @@ class _$XAxisSerializer implements StructuredSerializer<XAxis> {
         ..add(serializers.serialize(object.className,
             specifiedType: const FullType(String)));
     }
+    if (object.dateTimeLabelFormats != null) {
+      result
+        ..add('dateTimeLabelFormats')
+        ..add(serializers.serialize(object.dateTimeLabelFormats,
+            specifiedType: const FullType(JsonObject)));
+    }
     if (object.description != null) {
       result
         ..add('description')
@@ -407,6 +413,10 @@ class _$XAxisSerializer implements StructuredSerializer<XAxis> {
         case 'className':
           result.className = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'dateTimeLabelFormats':
+          result.dateTimeLabelFormats = serializers.deserialize(value,
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'description':
           result.description = serializers.deserialize(value,
@@ -1720,6 +1730,8 @@ class _$XAxis extends XAxis {
   @override
   final String className;
   @override
+  final JsonObject dateTimeLabelFormats;
+  @override
   final String description;
   @override
   final bool endOnTick;
@@ -1831,6 +1843,7 @@ class _$XAxis extends XAxis {
       this.categories,
       this.ceiling,
       this.className,
+      this.dateTimeLabelFormats,
       this.description,
       this.endOnTick,
       this.events,
@@ -1900,6 +1913,7 @@ class _$XAxis extends XAxis {
         categories == other.categories &&
         ceiling == other.ceiling &&
         className == other.className &&
+        dateTimeLabelFormats == other.dateTimeLabelFormats &&
         description == other.description &&
         endOnTick == other.endOnTick &&
         events == other.events &&
@@ -1973,7 +1987,7 @@ class _$XAxis extends XAxis {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowDecimals.hashCode), alternateGridColor.hashCode), categories.hashCode), ceiling.hashCode), className.hashCode), description.hashCode), endOnTick.hashCode), events.hashCode), floor.hashCode), gridLineColor.hashCode), gridLineDashStyle.hashCode), gridLineWidth.hashCode), gridZIndex.hashCode), id.hashCode), labels.hashCode), lineColor.hashCode), lineWidth.hashCode), linkedTo.hashCode), max.hashCode), maxPadding.hashCode), maxZoom.hashCode), min.hashCode), minPadding.hashCode), minRange.hashCode), minTickInterval.hashCode), minorGridLineColor.hashCode), minorGridLineDashStyle.hashCode), minorGridLineWidth.hashCode), minorTickColor.hashCode), minorTickLength.hashCode), minorTickPosition.hashCode), minorTickWidth.hashCode), offset.hashCode), opposite.hashCode), reversed.hashCode), showEmpty.hashCode), showFirstLabel.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowDecimals.hashCode), alternateGridColor.hashCode), categories.hashCode), ceiling.hashCode), className.hashCode), dateTimeLabelFormats.hashCode), description.hashCode), endOnTick.hashCode), events.hashCode), floor.hashCode), gridLineColor.hashCode), gridLineDashStyle.hashCode), gridLineWidth.hashCode), gridZIndex.hashCode), id.hashCode), labels.hashCode), lineColor.hashCode), lineWidth.hashCode), linkedTo.hashCode), max.hashCode), maxPadding.hashCode), maxZoom.hashCode), min.hashCode), minPadding.hashCode), minRange.hashCode), minTickInterval.hashCode), minorGridLineColor.hashCode), minorGridLineDashStyle.hashCode), minorGridLineWidth.hashCode), minorTickColor.hashCode), minorTickLength.hashCode), minorTickPosition.hashCode), minorTickWidth.hashCode), offset.hashCode), opposite.hashCode), reversed.hashCode), showEmpty.hashCode), showFirstLabel.hashCode),
                                                                                 showLastLabel.hashCode),
                                                                             softMax.hashCode),
                                                                         softMin.hashCode),
@@ -2003,6 +2017,7 @@ class _$XAxis extends XAxis {
           ..add('categories', categories)
           ..add('ceiling', ceiling)
           ..add('className', className)
+          ..add('dateTimeLabelFormats', dateTimeLabelFormats)
           ..add('description', description)
           ..add('endOnTick', endOnTick)
           ..add('events', events)
@@ -2084,6 +2099,11 @@ class XAxisBuilder implements Builder<XAxis, XAxisBuilder> {
   String _className;
   String get className => _$this._className;
   set className(String className) => _$this._className = className;
+
+  JsonObject _dateTimeLabelFormats;
+  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
+  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+      _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   String _description;
   String get description => _$this._description;
@@ -2315,6 +2335,7 @@ class XAxisBuilder implements Builder<XAxis, XAxisBuilder> {
       _categories = _$v.categories?.toBuilder();
       _ceiling = _$v.ceiling;
       _className = _$v.className;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
       _description = _$v.description;
       _endOnTick = _$v.endOnTick;
       _events = _$v.events?.toBuilder();
@@ -2391,6 +2412,7 @@ class XAxisBuilder implements Builder<XAxis, XAxisBuilder> {
             categories: _categories?.build(),
             ceiling: ceiling,
             className: className,
+            dateTimeLabelFormats: dateTimeLabelFormats,
             description: description,
             endOnTick: endOnTick,
             events: _events?.build(),

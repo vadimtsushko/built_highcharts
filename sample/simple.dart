@@ -32,9 +32,9 @@ main() {
     ..series.addAll([
       new Series((b) => b
         ..name = 'USA'
-        ..data.addAll([
-          0,
-          0,
+        ..data = jsonObject([
+          [0,1],
+          {'x': 0, 'y': 3},
           0,
           0,
           0,
@@ -103,7 +103,7 @@ main() {
         ])),
       new Series((b) => b
         ..name = 'USSR/Russia'
-        ..data.addAll([
+        ..data = jsonObject([
           0,
           0,
           0,

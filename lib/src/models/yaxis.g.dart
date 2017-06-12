@@ -264,6 +264,13 @@ class _$YAxisSerializer implements StructuredSerializer<YAxis> {
         ..add(serializers.serialize(object.opposite,
             specifiedType: const FullType(bool)));
     }
+    if (object.plotLines != null) {
+      result
+        ..add('plotLines')
+        ..add(serializers.serialize(object.plotLines,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(YAxisPlotLines)])));
+    }
     if (object.reversed != null) {
       result
         ..add('reversed')
@@ -577,6 +584,12 @@ class _$YAxisSerializer implements StructuredSerializer<YAxis> {
         case 'opposite':
           result.opposite = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'plotLines':
+          result.plotLines.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(YAxisPlotLines)]))
+              as BuiltList<YAxisPlotLines>);
           break;
         case 'reversed':
           result.reversed = serializers.deserialize(value,
@@ -1996,6 +2009,8 @@ class _$YAxis extends YAxis {
   @override
   final bool opposite;
   @override
+  final BuiltList<YAxisPlotLines> plotLines;
+  @override
   final bool reversed;
   @override
   final bool reversedStacks;
@@ -2086,6 +2101,7 @@ class _$YAxis extends YAxis {
       this.minorTickWidth,
       this.offset,
       this.opposite,
+      this.plotLines,
       this.reversed,
       this.reversedStacks,
       this.showEmpty,
@@ -2161,6 +2177,7 @@ class _$YAxis extends YAxis {
         minorTickWidth == other.minorTickWidth &&
         offset == other.offset &&
         opposite == other.opposite &&
+        plotLines == other.plotLines &&
         reversed == other.reversed &&
         reversedStacks == other.reversedStacks &&
         showEmpty == other.showEmpty &&
@@ -2207,7 +2224,7 @@ class _$YAxis extends YAxis {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowDecimals.hashCode), alternateGridColor.hashCode), angle.hashCode), categories.hashCode), ceiling.hashCode), className.hashCode), description.hashCode), endOnTick.hashCode), events.hashCode), floor.hashCode), gridLineColor.hashCode), gridLineDashStyle.hashCode), gridLineInterpolation.hashCode), gridLineWidth.hashCode), gridZIndex.hashCode), id.hashCode), labels.hashCode), lineColor.hashCode), lineWidth.hashCode), linkedTo.hashCode), max.hashCode), maxColor.hashCode), maxPadding.hashCode), maxZoom.hashCode), min.hashCode), minColor.hashCode), minPadding.hashCode), minRange.hashCode), minTickInterval.hashCode), minorGridLineColor.hashCode), minorGridLineDashStyle.hashCode), minorGridLineWidth.hashCode), minorTickColor.hashCode), minorTickLength.hashCode), minorTickPosition.hashCode), minorTickWidth.hashCode), offset.hashCode), opposite.hashCode), reversed.hashCode), reversedStacks.hashCode), showEmpty.hashCode), showFirstLabel.hashCode), showLastLabel.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowDecimals.hashCode), alternateGridColor.hashCode), angle.hashCode), categories.hashCode), ceiling.hashCode), className.hashCode), description.hashCode), endOnTick.hashCode), events.hashCode), floor.hashCode), gridLineColor.hashCode), gridLineDashStyle.hashCode), gridLineInterpolation.hashCode), gridLineWidth.hashCode), gridZIndex.hashCode), id.hashCode), labels.hashCode), lineColor.hashCode), lineWidth.hashCode), linkedTo.hashCode), max.hashCode), maxColor.hashCode), maxPadding.hashCode), maxZoom.hashCode), min.hashCode), minColor.hashCode), minPadding.hashCode), minRange.hashCode), minTickInterval.hashCode), minorGridLineColor.hashCode), minorGridLineDashStyle.hashCode), minorGridLineWidth.hashCode), minorTickColor.hashCode), minorTickLength.hashCode), minorTickPosition.hashCode), minorTickWidth.hashCode), offset.hashCode), opposite.hashCode), plotLines.hashCode), reversed.hashCode), reversedStacks.hashCode), showEmpty.hashCode), showFirstLabel.hashCode), showLastLabel.hashCode),
                                                                                 softMax.hashCode),
                                                                             softMin.hashCode),
                                                                         stackLabels.hashCode),
@@ -2270,6 +2287,7 @@ class _$YAxis extends YAxis {
           ..add('minorTickWidth', minorTickWidth)
           ..add('offset', offset)
           ..add('opposite', opposite)
+          ..add('plotLines', plotLines)
           ..add('reversed', reversed)
           ..add('reversedStacks', reversedStacks)
           ..add('showEmpty', showEmpty)
@@ -2468,6 +2486,12 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
   bool get opposite => _$this._opposite;
   set opposite(bool opposite) => _$this._opposite = opposite;
 
+  ListBuilder<YAxisPlotLines> _plotLines;
+  ListBuilder<YAxisPlotLines> get plotLines =>
+      _$this._plotLines ??= new ListBuilder<YAxisPlotLines>();
+  set plotLines(ListBuilder<YAxisPlotLines> plotLines) =>
+      _$this._plotLines = plotLines;
+
   bool _reversed;
   bool get reversed => _$this._reversed;
   set reversed(bool reversed) => _$this._reversed = reversed;
@@ -2616,6 +2640,7 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
       _minorTickWidth = _$v.minorTickWidth;
       _offset = _$v.offset;
       _opposite = _$v.opposite;
+      _plotLines = _$v.plotLines?.toBuilder();
       _reversed = _$v.reversed;
       _reversedStacks = _$v.reversedStacks;
       _showEmpty = _$v.showEmpty;
@@ -2698,6 +2723,7 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
             minorTickWidth: minorTickWidth,
             offset: offset,
             opposite: opposite,
+            plotLines: _plotLines?.build(),
             reversed: reversed,
             reversedStacks: reversedStacks,
             showEmpty: showEmpty,

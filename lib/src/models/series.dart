@@ -3,6 +3,7 @@ library series;
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 
 part 'series.g.dart';
     
@@ -48,7 +49,7 @@ Example:
 <p>Note that line series and derived types like spline and area, require data to be sorted by X because it interpolates mouse coordinates for the tooltip. Column and scatter series, where each point has its own mouse event, does not require sorting.</p> 
    */
   @nullable
-  BuiltList<num> get data;
+  JsonObject get data;
 
   @nullable
   BuiltList<BuiltList<num>> get dataNumPairs;

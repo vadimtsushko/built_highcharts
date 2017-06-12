@@ -11,14 +11,15 @@ void area_with_negative_values (_) {
     ..series.addAll([
       new Series((b) => b
         ..name = 'John'
-        ..data.addAll([5, 3, 4, 7, 2])),
+        ..data =  jsonObject([5, 3, 4, 7, 2])),
 
   new Series((b) => b
   ..name = 'Jane'
-  ..data.addAll([2, -2, -3, 2, 1])),
+  ..data = jsonObject([2, -2, -3, 2, 1])),
   new Series((b) => b
   ..name = 'Joe'
-  ..data.addAll([3, 4, 4, -2, 5]))
+  ..data = jsonObject([3, 4, 4, -2, 5]))
     ]));
+  window.console.log(toJsObject(chartOptions));
   new hc.HighchartsChart(toJsObject(chartOptions));
 }
