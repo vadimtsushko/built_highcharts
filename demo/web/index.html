@@ -20,20 +20,31 @@
     <script src="packages/highcharts/highcharts/highcharts.src.js"></script>
     <script src="packages/highcharts/highcharts/highcharts-more.src.js"></script>
 
-    <script>
-        function consoleDebug (obj) {
-            console.debug(obj);
-        }
-    </script>
 
+    <style>
+        .container {
+            display: flex; /* or inline-flex */
+        }
+    </style>
 </head>
 
 <body>
 
-  <div>
-      <ul id="menu">
-      </ul>
-  </div>
+<div class="container">
+    <div>
+        <h4>Creating charts programmatically</h4>
+        <ul id="menu">
+        </ul>
+    </div>
+    <div style="width: 100px"></div>
+    <div>
+        <h4>Loading charts from yaml configuration</h4>
+
+        <ul id="dynamicMenu">
+        </ul>
+    </div>
+</div>
+
   <div id="output">
   </div>
 

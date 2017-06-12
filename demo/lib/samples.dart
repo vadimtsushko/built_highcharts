@@ -7,10 +7,8 @@ import 'dart:html';
 
 import 'package:highcharts/highcharts.dart' as hc;
 import 'package:built_highcharts/build_highcharts_browser.dart';
-import 'package:built_collection/built_collection.dart';
-import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'package:yaml/yaml.dart';
 
 part 'basic_line.dart';
 part 'with_data_labels.dart';
@@ -22,6 +20,7 @@ part 'xdateformat.dart';
 part 'basic_area.dart';
 part 'area_with_negative_values.dart';
 part 'stacked_area.dart';
+part 'yaml_chart.dart';
 
 void clearOutput () {
   DivElement output = querySelector("#output");

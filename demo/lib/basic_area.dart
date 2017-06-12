@@ -38,6 +38,9 @@ void basic_area(_) {
         33952, 35804, 37431, 39197, 45000, 43000, 41000, 39000, 37000,
         35000, 33000, 31000, 29000, 27000, 25000, 24000, 23000, 22000,
         21000, 20000, 19000, 18000, 18000, 17000, 16000]))
-    ]));
+    ])
+
+  );
+  window.console.debug(toJsObject(chartOptions));
   new hc.HighchartsChart(toJsObject(chartOptions));
 }

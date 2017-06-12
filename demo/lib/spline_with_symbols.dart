@@ -12,12 +12,13 @@ void spline_with_symbols (_) {
     )
     ..yAxis.title.text = "Temperature"
     ..yAxis.labels.formatter = allowInteropCaptureThis ((self) => '${self.value}º')
-//    ..tooltip.crosshairs = true
+    ..tooltip.crosshairs = jsonObject(true)
     ..tooltip.shared = true
-    ..plotOptions.spline.marker.radius = 4
-    ..plotOptions.spline.marker.lineColor = '#666666'
-    ..plotOptions.spline.marker.lineWidth = 1
-    ..plotOptions.spline.marker.symbol = 'square'
+    ..plotOptions.spline.marker.update((b) => b
+        ..radius = 4
+        ..lineColor = '#666666'
+        ..lineWidth = 1
+        ..symbol = 'square')
     ..series.addAll([
       new Series((b) => b
         ..name = 'Tokio'
