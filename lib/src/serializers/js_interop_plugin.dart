@@ -45,9 +45,6 @@ class JsInteropPlugin implements SerializerPlugin {
     return object;
   }
 
-  bool _alreadyHasStringKeys(FullType specifiedType) =>
-      specifiedType.root != BuiltMap ||
-      specifiedType.parameters[0].root == String;
 
   dynamic _toJS(List list, FullType specifiedType) {
     final result = js_util.newObject();
@@ -67,15 +64,5 @@ class JsInteropPlugin implements SerializerPlugin {
       return 'data';
     }
     return key;
-  }
-
-
-  String _toStringKey(Object key) {
-    return JSON.encode(key);
-  }
-
-
-  Object _fromStringKey(String key) {
-    return JSON.decode(key);
   }
 }
