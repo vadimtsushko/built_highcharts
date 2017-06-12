@@ -46,6 +46,7 @@ import '../models/tooltip.dart';
 import '../models/xaxis.dart';
 import '../models/yaxis.dart';
 import '../models/chart_options.dart';
+import '../models/datetime_label_formats.dart';
 
 part 'serializers.g.dart';
 

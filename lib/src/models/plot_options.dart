@@ -4,6 +4,7 @@ import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/json_object.dart';
+import 'datetime_label_formats.dart';
 
 part 'plot_options.g.dart';
     
@@ -967,7 +968,7 @@ abstract class PlotOptionsAreaTooltip implements Built<PlotOptionsAreaTooltip, P
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -1744,7 +1745,7 @@ abstract class PlotOptionsArearangeTooltip implements Built<PlotOptionsArearange
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -2678,7 +2679,7 @@ abstract class PlotOptionsAreasplineTooltip implements Built<PlotOptionsAreaspli
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -3450,7 +3451,7 @@ abstract class PlotOptionsAreasplinerangeTooltip implements Built<PlotOptionsAre
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -4206,7 +4207,7 @@ abstract class PlotOptionsBarTooltip implements Built<PlotOptionsBarTooltip, Plo
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -4785,7 +4786,7 @@ abstract class PlotOptionsBoxplotTooltip implements Built<PlotOptionsBoxplotTool
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -5695,7 +5696,7 @@ abstract class PlotOptionsBubbleTooltip implements Built<PlotOptionsBubbleToolti
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -6453,7 +6454,7 @@ abstract class PlotOptionsColumnTooltip implements Built<PlotOptionsColumnToolti
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -7197,7 +7198,7 @@ abstract class PlotOptionsColumnrangeTooltip implements Built<PlotOptionsColumnr
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -7739,7 +7740,7 @@ abstract class PlotOptionsErrorbarTooltip implements Built<PlotOptionsErrorbarTo
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -8473,7 +8474,7 @@ abstract class PlotOptionsFunnelTooltip implements Built<PlotOptionsFunnelToolti
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -9089,7 +9090,7 @@ abstract class PlotOptionsGaugeTooltip implements Built<PlotOptionsGaugeTooltip,
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -9726,7 +9727,7 @@ abstract class PlotOptionsHeatmapTooltip implements Built<PlotOptionsHeatmapTool
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -10640,7 +10641,7 @@ abstract class PlotOptionsLineTooltip implements Built<PlotOptionsLineTooltip, P
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -11391,7 +11392,7 @@ abstract class PlotOptionsPieTooltip implements Built<PlotOptionsPieTooltip, Plo
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -12259,7 +12260,7 @@ abstract class PlotOptionsPolygonTooltip implements Built<PlotOptionsPolygonTool
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -12983,7 +12984,7 @@ abstract class PlotOptionsPyramidTooltip implements Built<PlotOptionsPyramidTool
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -13863,7 +13864,7 @@ abstract class PlotOptionsScatterTooltip implements Built<PlotOptionsScatterTool
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -14777,7 +14778,7 @@ abstract class PlotOptionsSeriesTooltip implements Built<PlotOptionsSeriesToolti
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -15302,7 +15303,7 @@ abstract class PlotOptionsSolidgaugeTooltip implements Built<PlotOptionsSolidgau
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -16181,7 +16182,7 @@ abstract class PlotOptionsSplineTooltip implements Built<PlotOptionsSplineToolti
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -16905,7 +16906,7 @@ abstract class PlotOptionsTreemapTooltip implements Built<PlotOptionsTreemapTool
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 
@@ -17681,7 +17682,7 @@ abstract class PlotOptionsWaterfallTooltip implements Built<PlotOptionsWaterfall
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 

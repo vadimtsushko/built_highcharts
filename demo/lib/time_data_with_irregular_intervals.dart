@@ -8,7 +8,8 @@ void time_data_with_irregular_intervals(_) {
     ..title.text = 'Snow depth at Vikjafjellet, Norway'
     ..subtitle.text = 'Irregular time data in Highcharts JS'
     ..xAxis.type = 'datetime'
-    ..xAxis.dateTimeLabelFormats = jsonObject({'month': '%e. %b', 'year': '%b'})
+    ..xAxis.dateTimeLabelFormats.month = '%e. %b'
+    ..xAxis.dateTimeLabelFormats.year = '%b'
     ..yAxis.title.text = 'Snow depth (m)'
     ..tooltip.headerFormat = '<b>{series.name}</b><br>'
     ..tooltip.pointFormat = '{point.x:%e. %b}; {point.y:.2f} m'

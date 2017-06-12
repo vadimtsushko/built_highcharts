@@ -39,3 +39,4 @@ export 'models/tooltip.dart';
 export 'models/xaxis.dart';
 export 'models/yaxis.dart';
 export 'models/chart_options.dart';
+export 'models/datetime_label_formats.dart';

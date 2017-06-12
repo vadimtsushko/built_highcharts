@@ -4,6 +4,7 @@ import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/json_object.dart';
+import 'datetime_label_formats.dart';
 
 part 'columnrange_series.g.dart';
     
@@ -840,7 +841,7 @@ abstract class ColumnrangeSeriesTooltip implements Built<ColumnrangeSeriesToolti
 </p> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p>Whether the tooltip should follow the mouse as it moves across columns, pie slices and other point types with an extent. By default it behaves this way for scatter, bubble and pie series by override in the <code>plotOptions</code> for those series types. </p>
 <p>For touch moves to behave the same way, <a href="#tooltip.followTouchMove">followTouchMove</a> must be <code>true</code> also.</p> 

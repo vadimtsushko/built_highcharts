@@ -1821,7 +1821,7 @@ class _$WaterfallSeriesTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -1918,8 +1918,9 @@ class _$WaterfallSeriesTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -4501,7 +4502,7 @@ class WaterfallSeriesStatesHoverHaloBuilder
 
 class _$WaterfallSeriesTooltip extends WaterfallSeriesTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -4638,9 +4639,10 @@ class WaterfallSeriesTooltipBuilder
     implements Builder<WaterfallSeriesTooltip, WaterfallSeriesTooltipBuilder> {
   _$WaterfallSeriesTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -4702,7 +4704,7 @@ class WaterfallSeriesTooltipBuilder
 
   WaterfallSeriesTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -4736,7 +4738,7 @@ class WaterfallSeriesTooltipBuilder
   _$WaterfallSeriesTooltip build() {
     final result = _$v ??
         new _$WaterfallSeriesTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,

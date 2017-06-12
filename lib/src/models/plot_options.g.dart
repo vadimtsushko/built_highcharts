@@ -2800,7 +2800,7 @@ class _$PlotOptionsAreaTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -2897,8 +2897,9 @@ class _$PlotOptionsAreaTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -4497,7 +4498,7 @@ class _$PlotOptionsArearangeTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -4594,8 +4595,9 @@ class _$PlotOptionsArearangeTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -6611,7 +6613,7 @@ class _$PlotOptionsAreasplineTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -6708,8 +6710,9 @@ class _$PlotOptionsAreasplineTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -8308,7 +8311,7 @@ class _$PlotOptionsAreasplinerangeTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -8405,8 +8408,9 @@ class _$PlotOptionsAreasplinerangeTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -9948,7 +9952,7 @@ class _$PlotOptionsBarTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -10045,8 +10049,9 @@ class _$PlotOptionsBarTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -11289,7 +11294,7 @@ class _$PlotOptionsBoxplotTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -11386,8 +11391,9 @@ class _$PlotOptionsBoxplotTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -13348,7 +13354,7 @@ class _$PlotOptionsBubbleTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -13445,8 +13451,9 @@ class _$PlotOptionsBubbleTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -14993,7 +15000,7 @@ class _$PlotOptionsColumnTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -15090,8 +15097,9 @@ class _$PlotOptionsColumnTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -16627,7 +16635,7 @@ class _$PlotOptionsColumnrangeTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -16724,8 +16732,9 @@ class _$PlotOptionsColumnrangeTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -17903,7 +17912,7 @@ class _$PlotOptionsErrorbarTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -18000,8 +18009,9 @@ class _$PlotOptionsErrorbarTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -19548,7 +19558,7 @@ class _$PlotOptionsFunnelTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -19645,8 +19655,9 @@ class _$PlotOptionsFunnelTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -20907,7 +20918,7 @@ class _$PlotOptionsGaugeTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -21004,8 +21015,9 @@ class _$PlotOptionsGaugeTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -22305,7 +22317,7 @@ class _$PlotOptionsHeatmapTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -22402,8 +22414,9 @@ class _$PlotOptionsHeatmapTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -24360,7 +24373,7 @@ class _$PlotOptionsLineTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -24457,8 +24470,9 @@ class _$PlotOptionsLineTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -26008,7 +26022,7 @@ class _$PlotOptionsPieTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -26105,8 +26119,9 @@ class _$PlotOptionsPieTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -27989,7 +28004,7 @@ class _$PlotOptionsPolygonTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -28086,8 +28101,9 @@ class _$PlotOptionsPolygonTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -29615,7 +29631,7 @@ class _$PlotOptionsPyramidTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -29712,8 +29728,9 @@ class _$PlotOptionsPyramidTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -31617,7 +31634,7 @@ class _$PlotOptionsScatterTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -31714,8 +31731,9 @@ class _$PlotOptionsScatterTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -33677,7 +33695,7 @@ class _$PlotOptionsSeriesTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -33774,8 +33792,9 @@ class _$PlotOptionsSeriesTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -34821,7 +34840,7 @@ class _$PlotOptionsSolidgaugeTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -34918,8 +34937,9 @@ class _$PlotOptionsSolidgaugeTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -36784,7 +36804,7 @@ class _$PlotOptionsSplineTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -36881,8 +36901,9 @@ class _$PlotOptionsSplineTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -38387,7 +38408,7 @@ class _$PlotOptionsTreemapTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -38484,8 +38505,9 @@ class _$PlotOptionsTreemapTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -40038,7 +40060,7 @@ class _$PlotOptionsWaterfallTooltipSerializer
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.followPointer != null) {
       result
@@ -40135,8 +40157,9 @@ class _$PlotOptionsWaterfallTooltipSerializer
       final dynamic value = iterator.current;
       switch (key) {
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'followPointer':
           result.followPointer = serializers.deserialize(value,
@@ -43277,7 +43300,7 @@ class PlotOptionsAreaStatesHoverMarkerBuilder
 
 class _$PlotOptionsAreaTooltip extends PlotOptionsAreaTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -43414,9 +43437,10 @@ class PlotOptionsAreaTooltipBuilder
     implements Builder<PlotOptionsAreaTooltip, PlotOptionsAreaTooltipBuilder> {
   _$PlotOptionsAreaTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -43478,7 +43502,7 @@ class PlotOptionsAreaTooltipBuilder
 
   PlotOptionsAreaTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -43512,7 +43536,7 @@ class PlotOptionsAreaTooltipBuilder
   _$PlotOptionsAreaTooltip build() {
     final result = _$v ??
         new _$PlotOptionsAreaTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -45677,7 +45701,7 @@ class PlotOptionsArearangeStatesHoverMarkerBuilder
 
 class _$PlotOptionsArearangeTooltip extends PlotOptionsArearangeTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -45816,9 +45840,10 @@ class PlotOptionsArearangeTooltipBuilder
             PlotOptionsArearangeTooltipBuilder> {
   _$PlotOptionsArearangeTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -45880,7 +45905,7 @@ class PlotOptionsArearangeTooltipBuilder
 
   PlotOptionsArearangeTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -45914,7 +45939,7 @@ class PlotOptionsArearangeTooltipBuilder
   _$PlotOptionsArearangeTooltip build() {
     final result = _$v ??
         new _$PlotOptionsArearangeTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -48706,7 +48731,7 @@ class PlotOptionsAreasplineStatesHoverMarkerBuilder
 
 class _$PlotOptionsAreasplineTooltip extends PlotOptionsAreasplineTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -48845,9 +48870,10 @@ class PlotOptionsAreasplineTooltipBuilder
             PlotOptionsAreasplineTooltipBuilder> {
   _$PlotOptionsAreasplineTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -48909,7 +48935,7 @@ class PlotOptionsAreasplineTooltipBuilder
 
   PlotOptionsAreasplineTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -48943,7 +48969,7 @@ class PlotOptionsAreasplineTooltipBuilder
   _$PlotOptionsAreasplineTooltip build() {
     final result = _$v ??
         new _$PlotOptionsAreasplineTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -51120,7 +51146,7 @@ class PlotOptionsAreasplinerangeStatesHoverMarkerBuilder
 class _$PlotOptionsAreasplinerangeTooltip
     extends PlotOptionsAreasplinerangeTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -51259,9 +51285,10 @@ class PlotOptionsAreasplinerangeTooltipBuilder
             PlotOptionsAreasplinerangeTooltipBuilder> {
   _$PlotOptionsAreasplinerangeTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -51323,7 +51350,7 @@ class PlotOptionsAreasplinerangeTooltipBuilder
 
   PlotOptionsAreasplinerangeTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -51357,7 +51384,7 @@ class PlotOptionsAreasplinerangeTooltipBuilder
   _$PlotOptionsAreasplinerangeTooltip build() {
     final result = _$v ??
         new _$PlotOptionsAreasplinerangeTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -53404,7 +53431,7 @@ class PlotOptionsBarStatesHoverHaloBuilder
 
 class _$PlotOptionsBarTooltip extends PlotOptionsBarTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -53540,9 +53567,10 @@ class PlotOptionsBarTooltipBuilder
     implements Builder<PlotOptionsBarTooltip, PlotOptionsBarTooltipBuilder> {
   _$PlotOptionsBarTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -53604,7 +53632,7 @@ class PlotOptionsBarTooltipBuilder
 
   PlotOptionsBarTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -53638,7 +53666,7 @@ class PlotOptionsBarTooltipBuilder
   _$PlotOptionsBarTooltip build() {
     final result = _$v ??
         new _$PlotOptionsBarTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -55291,7 +55319,7 @@ class PlotOptionsBoxplotStatesHoverHaloBuilder
 
 class _$PlotOptionsBoxplotTooltip extends PlotOptionsBoxplotTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -55429,9 +55457,10 @@ class PlotOptionsBoxplotTooltipBuilder
         Builder<PlotOptionsBoxplotTooltip, PlotOptionsBoxplotTooltipBuilder> {
   _$PlotOptionsBoxplotTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -55493,7 +55522,7 @@ class PlotOptionsBoxplotTooltipBuilder
 
   PlotOptionsBoxplotTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -55527,7 +55556,7 @@ class PlotOptionsBoxplotTooltipBuilder
   _$PlotOptionsBoxplotTooltip build() {
     final result = _$v ??
         new _$PlotOptionsBoxplotTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -58253,7 +58282,7 @@ class PlotOptionsBubbleStatesHoverMarkerBuilder
 
 class _$PlotOptionsBubbleTooltip extends PlotOptionsBubbleTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -58391,9 +58420,10 @@ class PlotOptionsBubbleTooltipBuilder
         Builder<PlotOptionsBubbleTooltip, PlotOptionsBubbleTooltipBuilder> {
   _$PlotOptionsBubbleTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -58455,7 +58485,7 @@ class PlotOptionsBubbleTooltipBuilder
 
   PlotOptionsBubbleTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -58489,7 +58519,7 @@ class PlotOptionsBubbleTooltipBuilder
   _$PlotOptionsBubbleTooltip build() {
     final result = _$v ??
         new _$PlotOptionsBubbleTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -60546,7 +60576,7 @@ class PlotOptionsColumnStatesHoverHaloBuilder
 
 class _$PlotOptionsColumnTooltip extends PlotOptionsColumnTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -60684,9 +60714,10 @@ class PlotOptionsColumnTooltipBuilder
         Builder<PlotOptionsColumnTooltip, PlotOptionsColumnTooltipBuilder> {
   _$PlotOptionsColumnTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -60748,7 +60779,7 @@ class PlotOptionsColumnTooltipBuilder
 
   PlotOptionsColumnTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -60782,7 +60813,7 @@ class PlotOptionsColumnTooltipBuilder
   _$PlotOptionsColumnTooltip build() {
     final result = _$v ??
         new _$PlotOptionsColumnTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -62825,7 +62856,7 @@ class PlotOptionsColumnrangeStatesHoverHaloBuilder
 
 class _$PlotOptionsColumnrangeTooltip extends PlotOptionsColumnrangeTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -62964,9 +62995,10 @@ class PlotOptionsColumnrangeTooltipBuilder
             PlotOptionsColumnrangeTooltipBuilder> {
   _$PlotOptionsColumnrangeTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -63028,7 +63060,7 @@ class PlotOptionsColumnrangeTooltipBuilder
 
   PlotOptionsColumnrangeTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -63062,7 +63094,7 @@ class PlotOptionsColumnrangeTooltipBuilder
   _$PlotOptionsColumnrangeTooltip build() {
     final result = _$v ??
         new _$PlotOptionsColumnrangeTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -64644,7 +64676,7 @@ class PlotOptionsErrorbarStatesHoverHaloBuilder
 
 class _$PlotOptionsErrorbarTooltip extends PlotOptionsErrorbarTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -64782,9 +64814,10 @@ class PlotOptionsErrorbarTooltipBuilder
         Builder<PlotOptionsErrorbarTooltip, PlotOptionsErrorbarTooltipBuilder> {
   _$PlotOptionsErrorbarTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -64846,7 +64879,7 @@ class PlotOptionsErrorbarTooltipBuilder
 
   PlotOptionsErrorbarTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -64880,7 +64913,7 @@ class PlotOptionsErrorbarTooltipBuilder
   _$PlotOptionsErrorbarTooltip build() {
     final result = _$v ??
         new _$PlotOptionsErrorbarTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -66994,7 +67027,7 @@ class PlotOptionsFunnelStatesHoverMarkerBuilder
 
 class _$PlotOptionsFunnelTooltip extends PlotOptionsFunnelTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -67132,9 +67165,10 @@ class PlotOptionsFunnelTooltipBuilder
         Builder<PlotOptionsFunnelTooltip, PlotOptionsFunnelTooltipBuilder> {
   _$PlotOptionsFunnelTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -67196,7 +67230,7 @@ class PlotOptionsFunnelTooltipBuilder
 
   PlotOptionsFunnelTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -67230,7 +67264,7 @@ class PlotOptionsFunnelTooltipBuilder
   _$PlotOptionsFunnelTooltip build() {
     final result = _$v ??
         new _$PlotOptionsFunnelTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -68942,7 +68976,7 @@ class PlotOptionsGaugePointEventsBuilder
 
 class _$PlotOptionsGaugeTooltip extends PlotOptionsGaugeTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -69080,9 +69114,10 @@ class PlotOptionsGaugeTooltipBuilder
         Builder<PlotOptionsGaugeTooltip, PlotOptionsGaugeTooltipBuilder> {
   _$PlotOptionsGaugeTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -69144,7 +69179,7 @@ class PlotOptionsGaugeTooltipBuilder
 
   PlotOptionsGaugeTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -69178,7 +69213,7 @@ class PlotOptionsGaugeTooltipBuilder
   _$PlotOptionsGaugeTooltip build() {
     final result = _$v ??
         new _$PlotOptionsGaugeTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -70926,7 +70961,7 @@ class PlotOptionsHeatmapStatesHoverHaloBuilder
 
 class _$PlotOptionsHeatmapTooltip extends PlotOptionsHeatmapTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -71064,9 +71099,10 @@ class PlotOptionsHeatmapTooltipBuilder
         Builder<PlotOptionsHeatmapTooltip, PlotOptionsHeatmapTooltipBuilder> {
   _$PlotOptionsHeatmapTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -71128,7 +71164,7 @@ class PlotOptionsHeatmapTooltipBuilder
 
   PlotOptionsHeatmapTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -71162,7 +71198,7 @@ class PlotOptionsHeatmapTooltipBuilder
   _$PlotOptionsHeatmapTooltip build() {
     final result = _$v ??
         new _$PlotOptionsHeatmapTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -73877,7 +73913,7 @@ class PlotOptionsLineStatesHoverMarkerBuilder
 
 class _$PlotOptionsLineTooltip extends PlotOptionsLineTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -74014,9 +74050,10 @@ class PlotOptionsLineTooltipBuilder
     implements Builder<PlotOptionsLineTooltip, PlotOptionsLineTooltipBuilder> {
   _$PlotOptionsLineTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -74078,7 +74115,7 @@ class PlotOptionsLineTooltipBuilder
 
   PlotOptionsLineTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -74112,7 +74149,7 @@ class PlotOptionsLineTooltipBuilder
   _$PlotOptionsLineTooltip build() {
     final result = _$v ??
         new _$PlotOptionsLineTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -76222,7 +76259,7 @@ class PlotOptionsPieStatesHoverMarkerBuilder
 
 class _$PlotOptionsPieTooltip extends PlotOptionsPieTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -76358,9 +76395,10 @@ class PlotOptionsPieTooltipBuilder
     implements Builder<PlotOptionsPieTooltip, PlotOptionsPieTooltipBuilder> {
   _$PlotOptionsPieTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -76422,7 +76460,7 @@ class PlotOptionsPieTooltipBuilder
 
   PlotOptionsPieTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -76456,7 +76494,7 @@ class PlotOptionsPieTooltipBuilder
   _$PlotOptionsPieTooltip build() {
     final result = _$v ??
         new _$PlotOptionsPieTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -79096,7 +79134,7 @@ class PlotOptionsPolygonStatesHoverMarkerBuilder
 
 class _$PlotOptionsPolygonTooltip extends PlotOptionsPolygonTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -79234,9 +79272,10 @@ class PlotOptionsPolygonTooltipBuilder
         Builder<PlotOptionsPolygonTooltip, PlotOptionsPolygonTooltipBuilder> {
   _$PlotOptionsPolygonTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -79298,7 +79337,7 @@ class PlotOptionsPolygonTooltipBuilder
 
   PlotOptionsPolygonTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -79332,7 +79371,7 @@ class PlotOptionsPolygonTooltipBuilder
   _$PlotOptionsPolygonTooltip build() {
     final result = _$v ??
         new _$PlotOptionsPolygonTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -81426,7 +81465,7 @@ class PlotOptionsPyramidStatesHoverMarkerBuilder
 
 class _$PlotOptionsPyramidTooltip extends PlotOptionsPyramidTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -81564,9 +81603,10 @@ class PlotOptionsPyramidTooltipBuilder
         Builder<PlotOptionsPyramidTooltip, PlotOptionsPyramidTooltipBuilder> {
   _$PlotOptionsPyramidTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -81628,7 +81668,7 @@ class PlotOptionsPyramidTooltipBuilder
 
   PlotOptionsPyramidTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -81662,7 +81702,7 @@ class PlotOptionsPyramidTooltipBuilder
   _$PlotOptionsPyramidTooltip build() {
     final result = _$v ??
         new _$PlotOptionsPyramidTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -84328,7 +84368,7 @@ class PlotOptionsScatterStatesHoverMarkerBuilder
 
 class _$PlotOptionsScatterTooltip extends PlotOptionsScatterTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -84466,9 +84506,10 @@ class PlotOptionsScatterTooltipBuilder
         Builder<PlotOptionsScatterTooltip, PlotOptionsScatterTooltipBuilder> {
   _$PlotOptionsScatterTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -84530,7 +84571,7 @@ class PlotOptionsScatterTooltipBuilder
 
   PlotOptionsScatterTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -84564,7 +84605,7 @@ class PlotOptionsScatterTooltipBuilder
   _$PlotOptionsScatterTooltip build() {
     final result = _$v ??
         new _$PlotOptionsScatterTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -87295,7 +87336,7 @@ class PlotOptionsSeriesStatesHoverMarkerBuilder
 
 class _$PlotOptionsSeriesTooltip extends PlotOptionsSeriesTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -87433,9 +87474,10 @@ class PlotOptionsSeriesTooltipBuilder
         Builder<PlotOptionsSeriesTooltip, PlotOptionsSeriesTooltipBuilder> {
   _$PlotOptionsSeriesTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -87497,7 +87539,7 @@ class PlotOptionsSeriesTooltipBuilder
 
   PlotOptionsSeriesTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -87531,7 +87573,7 @@ class PlotOptionsSeriesTooltipBuilder
   _$PlotOptionsSeriesTooltip build() {
     final result = _$v ??
         new _$PlotOptionsSeriesTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -88925,7 +88967,7 @@ class PlotOptionsSolidgaugePointEventsBuilder
 
 class _$PlotOptionsSolidgaugeTooltip extends PlotOptionsSolidgaugeTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -89064,9 +89106,10 @@ class PlotOptionsSolidgaugeTooltipBuilder
             PlotOptionsSolidgaugeTooltipBuilder> {
   _$PlotOptionsSolidgaugeTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -89128,7 +89171,7 @@ class PlotOptionsSolidgaugeTooltipBuilder
 
   PlotOptionsSolidgaugeTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -89162,7 +89205,7 @@ class PlotOptionsSolidgaugeTooltipBuilder
   _$PlotOptionsSolidgaugeTooltip build() {
     final result = _$v ??
         new _$PlotOptionsSolidgaugeTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -91751,7 +91794,7 @@ class PlotOptionsSplineStatesHoverMarkerBuilder
 
 class _$PlotOptionsSplineTooltip extends PlotOptionsSplineTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -91889,9 +91932,10 @@ class PlotOptionsSplineTooltipBuilder
         Builder<PlotOptionsSplineTooltip, PlotOptionsSplineTooltipBuilder> {
   _$PlotOptionsSplineTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -91953,7 +91997,7 @@ class PlotOptionsSplineTooltipBuilder
 
   PlotOptionsSplineTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -91987,7 +92031,7 @@ class PlotOptionsSplineTooltipBuilder
   _$PlotOptionsSplineTooltip build() {
     final result = _$v ??
         new _$PlotOptionsSplineTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -94019,7 +94063,7 @@ class PlotOptionsTreemapStatesHoverBuilder
 
 class _$PlotOptionsTreemapTooltip extends PlotOptionsTreemapTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -94157,9 +94201,10 @@ class PlotOptionsTreemapTooltipBuilder
         Builder<PlotOptionsTreemapTooltip, PlotOptionsTreemapTooltipBuilder> {
   _$PlotOptionsTreemapTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -94221,7 +94266,7 @@ class PlotOptionsTreemapTooltipBuilder
 
   PlotOptionsTreemapTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -94255,7 +94300,7 @@ class PlotOptionsTreemapTooltipBuilder
   _$PlotOptionsTreemapTooltip build() {
     final result = _$v ??
         new _$PlotOptionsTreemapTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,
@@ -96318,7 +96363,7 @@ class PlotOptionsWaterfallStatesHoverHaloBuilder
 
 class _$PlotOptionsWaterfallTooltip extends PlotOptionsWaterfallTooltip {
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool followPointer;
   @override
@@ -96457,9 +96502,10 @@ class PlotOptionsWaterfallTooltipBuilder
             PlotOptionsWaterfallTooltipBuilder> {
   _$PlotOptionsWaterfallTooltip _$v;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _followPointer;
@@ -96521,7 +96567,7 @@ class PlotOptionsWaterfallTooltipBuilder
 
   PlotOptionsWaterfallTooltipBuilder get _$this {
     if (_$v != null) {
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
       _footerFormat = _$v.footerFormat;
@@ -96555,7 +96601,7 @@ class PlotOptionsWaterfallTooltipBuilder
   _$PlotOptionsWaterfallTooltip build() {
     final result = _$v ??
         new _$PlotOptionsWaterfallTooltip._(
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             followPointer: followPointer,
             followTouchMove: followTouchMove,
             footerFormat: footerFormat,

@@ -88,7 +88,7 @@ class _$YAxisSerializer implements StructuredSerializer<YAxis> {
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.description != null) {
       result
@@ -507,8 +507,9 @@ class _$YAxisSerializer implements StructuredSerializer<YAxis> {
               specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'description':
           result.description = serializers.deserialize(value,
@@ -2086,7 +2087,7 @@ class _$YAxis extends YAxis {
   @override
   final JsonObject crosshair;
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final String description;
   @override
@@ -2527,9 +2528,10 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
   JsonObject get crosshair => _$this._crosshair;
   set crosshair(JsonObject crosshair) => _$this._crosshair = crosshair;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   String _description;
@@ -2810,7 +2812,7 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
       _ceiling = _$v.ceiling;
       _className = _$v.className;
       _crosshair = _$v.crosshair;
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _description = _$v.description;
       _endOnTick = _$v.endOnTick;
       _events = _$v.events?.toBuilder();
@@ -2900,7 +2902,7 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
             ceiling: ceiling,
             className: className,
             crosshair: crosshair,
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             description: description,
             endOnTick: endOnTick,
             events: _events?.build(),

@@ -59,7 +59,7 @@ class _$TooltipSerializer implements StructuredSerializer<Tooltip> {
       result
         ..add('dateTimeLabelFormats')
         ..add(serializers.serialize(object.dateTimeLabelFormats,
-            specifiedType: const FullType(JsonObject)));
+            specifiedType: const FullType(DateTimeLabelFormats)));
     }
     if (object.enabled != null) {
       result
@@ -234,8 +234,9 @@ class _$TooltipSerializer implements StructuredSerializer<Tooltip> {
               specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'dateTimeLabelFormats':
-          result.dateTimeLabelFormats = serializers.deserialize(value,
-              specifiedType: const FullType(JsonObject)) as JsonObject;
+          result.dateTimeLabelFormats.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DateTimeLabelFormats))
+              as DateTimeLabelFormats);
           break;
         case 'enabled':
           result.enabled = serializers.deserialize(value,
@@ -354,7 +355,7 @@ class _$Tooltip extends Tooltip {
   @override
   final JsonObject crosshairs;
   @override
-  final JsonObject dateTimeLabelFormats;
+  final DateTimeLabelFormats dateTimeLabelFormats;
   @override
   final bool enabled;
   @override
@@ -583,9 +584,10 @@ class TooltipBuilder implements Builder<Tooltip, TooltipBuilder> {
   JsonObject get crosshairs => _$this._crosshairs;
   set crosshairs(JsonObject crosshairs) => _$this._crosshairs = crosshairs;
 
-  JsonObject _dateTimeLabelFormats;
-  JsonObject get dateTimeLabelFormats => _$this._dateTimeLabelFormats;
-  set dateTimeLabelFormats(JsonObject dateTimeLabelFormats) =>
+  DateTimeLabelFormatsBuilder _dateTimeLabelFormats;
+  DateTimeLabelFormatsBuilder get dateTimeLabelFormats =>
+      _$this._dateTimeLabelFormats ??= new DateTimeLabelFormatsBuilder();
+  set dateTimeLabelFormats(DateTimeLabelFormatsBuilder dateTimeLabelFormats) =>
       _$this._dateTimeLabelFormats = dateTimeLabelFormats;
 
   bool _enabled;
@@ -690,7 +692,7 @@ class TooltipBuilder implements Builder<Tooltip, TooltipBuilder> {
       _borderRadius = _$v.borderRadius;
       _borderWidth = _$v.borderWidth;
       _crosshairs = _$v.crosshairs;
-      _dateTimeLabelFormats = _$v.dateTimeLabelFormats;
+      _dateTimeLabelFormats = _$v.dateTimeLabelFormats?.toBuilder();
       _enabled = _$v.enabled;
       _followPointer = _$v.followPointer;
       _followTouchMove = _$v.followTouchMove;
@@ -739,7 +741,7 @@ class TooltipBuilder implements Builder<Tooltip, TooltipBuilder> {
             borderRadius: borderRadius,
             borderWidth: borderWidth,
             crosshairs: crosshairs,
-            dateTimeLabelFormats: dateTimeLabelFormats,
+            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
             enabled: enabled,
             followPointer: followPointer,
             followTouchMove: followTouchMove,

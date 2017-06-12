@@ -4,6 +4,7 @@ import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/json_object.dart';
+import 'datetime_label_formats.dart';
 
 part 'xaxis.g.dart';
     
@@ -67,7 +68,7 @@ Defaults to:
 }</pre> 
    */
   @nullable
-  JsonObject get dateTimeLabelFormats;
+  DateTimeLabelFormats get dateTimeLabelFormats;
   /** 
    * <p><i>Requires Accessibility module</i></p>
 
