@@ -1052,7 +1052,7 @@ class _$PlotOptionsAreaSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.fillOpacity != null) {
       result
@@ -1342,7 +1342,7 @@ class _$PlotOptionsAreaSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'fillOpacity':
           result.fillOpacity = serializers.deserialize(value,
@@ -1923,7 +1923,7 @@ class _$PlotOptionsAreaMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -1989,7 +1989,7 @@ class _$PlotOptionsAreaMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -2114,7 +2114,7 @@ class _$PlotOptionsAreaMarkerStatesHoverSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineColor != null) {
       result
@@ -2168,7 +2168,7 @@ class _$PlotOptionsAreaMarkerStatesHoverSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineColor':
           result.lineColor = serializers.deserialize(value,
@@ -2222,7 +2222,7 @@ class _$PlotOptionsAreaMarkerStatesSelectSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineColor != null) {
       result
@@ -2264,7 +2264,7 @@ class _$PlotOptionsAreaMarkerStatesSelectSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineColor':
           result.lineColor = serializers.deserialize(value,
@@ -2679,7 +2679,7 @@ class _$PlotOptionsAreaStatesHoverMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -2745,7 +2745,7 @@ class _$PlotOptionsAreaStatesHoverMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -2995,7 +2995,7 @@ class _$PlotOptionsAreaZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -3032,7 +3032,7 @@ class _$PlotOptionsAreaZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -3153,7 +3153,7 @@ class _$PlotOptionsArearangeSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.fillOpacity != null) {
       result
@@ -3414,7 +3414,7 @@ class _$PlotOptionsArearangeSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'fillOpacity':
           result.fillOpacity = serializers.deserialize(value,
@@ -4375,7 +4375,7 @@ class _$PlotOptionsArearangeStatesHoverMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -4441,7 +4441,7 @@ class _$PlotOptionsArearangeStatesHoverMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -4692,7 +4692,7 @@ class _$PlotOptionsArearangeZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -4730,7 +4730,7 @@ class _$PlotOptionsArearangeZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -4857,7 +4857,7 @@ class _$PlotOptionsAreasplineSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.fillOpacity != null) {
       result
@@ -5143,7 +5143,7 @@ class _$PlotOptionsAreasplineSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'fillOpacity':
           result.fillOpacity = serializers.deserialize(value,
@@ -5723,7 +5723,7 @@ class _$PlotOptionsAreasplineMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -5789,7 +5789,7 @@ class _$PlotOptionsAreasplineMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -5917,7 +5917,7 @@ class _$PlotOptionsAreasplineMarkerStatesHoverSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineColor != null) {
       result
@@ -5971,7 +5971,7 @@ class _$PlotOptionsAreasplineMarkerStatesHoverSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineColor':
           result.lineColor = serializers.deserialize(value,
@@ -6025,7 +6025,7 @@ class _$PlotOptionsAreasplineMarkerStatesSelectSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineColor != null) {
       result
@@ -6067,7 +6067,7 @@ class _$PlotOptionsAreasplineMarkerStatesSelectSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineColor':
           result.lineColor = serializers.deserialize(value,
@@ -6489,7 +6489,7 @@ class _$PlotOptionsAreasplineStatesHoverMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -6555,7 +6555,7 @@ class _$PlotOptionsAreasplineStatesHoverMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -6806,7 +6806,7 @@ class _$PlotOptionsAreasplineZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -6844,7 +6844,7 @@ class _$PlotOptionsAreasplineZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -6965,7 +6965,7 @@ class _$PlotOptionsAreasplinerangeSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.fillOpacity != null) {
       result
@@ -7222,7 +7222,7 @@ class _$PlotOptionsAreasplinerangeSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'fillOpacity':
           result.fillOpacity = serializers.deserialize(value,
@@ -8186,7 +8186,7 @@ class _$PlotOptionsAreasplinerangeStatesHoverMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -8252,7 +8252,7 @@ class _$PlotOptionsAreasplinerangeStatesHoverMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -8504,7 +8504,7 @@ class _$PlotOptionsAreasplinerangeZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -8542,7 +8542,7 @@ class _$PlotOptionsAreasplinerangeZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -10143,7 +10143,7 @@ class _$PlotOptionsBarZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -10180,7 +10180,7 @@ class _$PlotOptionsBarZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -10305,7 +10305,7 @@ class _$PlotOptionsBoxplotSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.findNearestPointBy != null) {
       result
@@ -10620,7 +10620,7 @@ class _$PlotOptionsBoxplotSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'findNearestPointBy':
           result.findNearestPointBy = serializers.deserialize(value,
@@ -11484,7 +11484,7 @@ class _$PlotOptionsBoxplotZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -11522,7 +11522,7 @@ class _$PlotOptionsBoxplotZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -12477,7 +12477,7 @@ class _$PlotOptionsBubbleMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -12537,7 +12537,7 @@ class _$PlotOptionsBubbleMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -12659,7 +12659,7 @@ class _$PlotOptionsBubbleMarkerStatesHoverSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineColor != null) {
       result
@@ -12713,7 +12713,7 @@ class _$PlotOptionsBubbleMarkerStatesHoverSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineColor':
           result.lineColor = serializers.deserialize(value,
@@ -12767,7 +12767,7 @@ class _$PlotOptionsBubbleMarkerStatesSelectSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineColor != null) {
       result
@@ -12809,7 +12809,7 @@ class _$PlotOptionsBubbleMarkerStatesSelectSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineColor':
           result.lineColor = serializers.deserialize(value,
@@ -13227,7 +13227,7 @@ class _$PlotOptionsBubbleStatesHoverMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -13293,7 +13293,7 @@ class _$PlotOptionsBubbleStatesHoverMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -13543,7 +13543,7 @@ class _$PlotOptionsBubbleZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -13581,7 +13581,7 @@ class _$PlotOptionsBubbleZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -15188,7 +15188,7 @@ class _$PlotOptionsColumnZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -15226,7 +15226,7 @@ class _$PlotOptionsColumnZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -16823,7 +16823,7 @@ class _$PlotOptionsColumnrangeZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -16861,7 +16861,7 @@ class _$PlotOptionsColumnrangeZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -18098,7 +18098,7 @@ class _$PlotOptionsErrorbarZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -18136,7 +18136,7 @@ class _$PlotOptionsErrorbarZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -19427,7 +19427,7 @@ class _$PlotOptionsFunnelStatesHoverMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -19493,7 +19493,7 @@ class _$PlotOptionsFunnelStatesHoverMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -19743,7 +19743,7 @@ class _$PlotOptionsFunnelZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -19781,7 +19781,7 @@ class _$PlotOptionsFunnelZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -22500,7 +22500,7 @@ class _$PlotOptionsHeatmapZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -22538,7 +22538,7 @@ class _$PlotOptionsHeatmapZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -23483,7 +23483,7 @@ class _$PlotOptionsLineMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -23549,7 +23549,7 @@ class _$PlotOptionsLineMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -23674,7 +23674,7 @@ class _$PlotOptionsLineMarkerStatesHoverSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineColor != null) {
       result
@@ -23728,7 +23728,7 @@ class _$PlotOptionsLineMarkerStatesHoverSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineColor':
           result.lineColor = serializers.deserialize(value,
@@ -23782,7 +23782,7 @@ class _$PlotOptionsLineMarkerStatesSelectSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineColor != null) {
       result
@@ -23824,7 +23824,7 @@ class _$PlotOptionsLineMarkerStatesSelectSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineColor':
           result.lineColor = serializers.deserialize(value,
@@ -24239,7 +24239,7 @@ class _$PlotOptionsLineStatesHoverMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -24305,7 +24305,7 @@ class _$PlotOptionsLineStatesHoverMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -24555,7 +24555,7 @@ class _$PlotOptionsLineZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -24592,7 +24592,7 @@ class _$PlotOptionsLineZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -25887,7 +25887,7 @@ class _$PlotOptionsPieStatesHoverMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -25953,7 +25953,7 @@ class _$PlotOptionsPieStatesHoverMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -26203,7 +26203,7 @@ class _$PlotOptionsPieZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -26240,7 +26240,7 @@ class _$PlotOptionsPieZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -27106,7 +27106,7 @@ class _$PlotOptionsPolygonMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -27172,7 +27172,7 @@ class _$PlotOptionsPolygonMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -27299,7 +27299,7 @@ class _$PlotOptionsPolygonMarkerStatesHoverSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineColor != null) {
       result
@@ -27353,7 +27353,7 @@ class _$PlotOptionsPolygonMarkerStatesHoverSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineColor':
           result.lineColor = serializers.deserialize(value,
@@ -27407,7 +27407,7 @@ class _$PlotOptionsPolygonMarkerStatesSelectSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineColor != null) {
       result
@@ -27449,7 +27449,7 @@ class _$PlotOptionsPolygonMarkerStatesSelectSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineColor':
           result.lineColor = serializers.deserialize(value,
@@ -27868,7 +27868,7 @@ class _$PlotOptionsPolygonStatesHoverMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -27934,7 +27934,7 @@ class _$PlotOptionsPolygonStatesHoverMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -28184,7 +28184,7 @@ class _$PlotOptionsPolygonZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -28222,7 +28222,7 @@ class _$PlotOptionsPolygonZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -29494,7 +29494,7 @@ class _$PlotOptionsPyramidStatesHoverMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -29560,7 +29560,7 @@ class _$PlotOptionsPyramidStatesHoverMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -29810,7 +29810,7 @@ class _$PlotOptionsPyramidZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -29848,7 +29848,7 @@ class _$PlotOptionsPyramidZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -30734,7 +30734,7 @@ class _$PlotOptionsScatterMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -30800,7 +30800,7 @@ class _$PlotOptionsScatterMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -30927,7 +30927,7 @@ class _$PlotOptionsScatterMarkerStatesHoverSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineColor != null) {
       result
@@ -30981,7 +30981,7 @@ class _$PlotOptionsScatterMarkerStatesHoverSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineColor':
           result.lineColor = serializers.deserialize(value,
@@ -31035,7 +31035,7 @@ class _$PlotOptionsScatterMarkerStatesSelectSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineColor != null) {
       result
@@ -31077,7 +31077,7 @@ class _$PlotOptionsScatterMarkerStatesSelectSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineColor':
           result.lineColor = serializers.deserialize(value,
@@ -31496,7 +31496,7 @@ class _$PlotOptionsScatterStatesHoverMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -31562,7 +31562,7 @@ class _$PlotOptionsScatterStatesHoverMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -31812,7 +31812,7 @@ class _$PlotOptionsScatterZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -31850,7 +31850,7 @@ class _$PlotOptionsScatterZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -32796,7 +32796,7 @@ class _$PlotOptionsSeriesMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -32862,7 +32862,7 @@ class _$PlotOptionsSeriesMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -32988,7 +32988,7 @@ class _$PlotOptionsSeriesMarkerStatesHoverSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineColor != null) {
       result
@@ -33042,7 +33042,7 @@ class _$PlotOptionsSeriesMarkerStatesHoverSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineColor':
           result.lineColor = serializers.deserialize(value,
@@ -33096,7 +33096,7 @@ class _$PlotOptionsSeriesMarkerStatesSelectSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineColor != null) {
       result
@@ -33138,7 +33138,7 @@ class _$PlotOptionsSeriesMarkerStatesSelectSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineColor':
           result.lineColor = serializers.deserialize(value,
@@ -33556,7 +33556,7 @@ class _$PlotOptionsSeriesStatesHoverMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -33622,7 +33622,7 @@ class _$PlotOptionsSeriesStatesHoverMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -33872,7 +33872,7 @@ class _$PlotOptionsSeriesZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -33910,7 +33910,7 @@ class _$PlotOptionsSeriesZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -35903,7 +35903,7 @@ class _$PlotOptionsSplineMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -35969,7 +35969,7 @@ class _$PlotOptionsSplineMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -36095,7 +36095,7 @@ class _$PlotOptionsSplineMarkerStatesHoverSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineColor != null) {
       result
@@ -36149,7 +36149,7 @@ class _$PlotOptionsSplineMarkerStatesHoverSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineColor':
           result.lineColor = serializers.deserialize(value,
@@ -36203,7 +36203,7 @@ class _$PlotOptionsSplineMarkerStatesSelectSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineColor != null) {
       result
@@ -36245,7 +36245,7 @@ class _$PlotOptionsSplineMarkerStatesSelectSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineColor':
           result.lineColor = serializers.deserialize(value,
@@ -36663,7 +36663,7 @@ class _$PlotOptionsSplineStatesHoverMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -36729,7 +36729,7 @@ class _$PlotOptionsSplineStatesHoverMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -36979,7 +36979,7 @@ class _$PlotOptionsSplineZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -37017,7 +37017,7 @@ class _$PlotOptionsSplineZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -38582,7 +38582,7 @@ class _$PlotOptionsTreemapZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -38620,7 +38620,7 @@ class _$PlotOptionsTreemapZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -40233,7 +40233,7 @@ class _$PlotOptionsWaterfallZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -40271,7 +40271,7 @@ class _$PlotOptionsWaterfallZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -40695,7 +40695,7 @@ class _$PlotOptionsArea extends PlotOptionsArea {
   @override
   final bool exposeElementToA11y;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num fillOpacity;
   @override
@@ -41062,9 +41062,9 @@ class PlotOptionsAreaBuilder
   set exposeElementToA11y(bool exposeElementToA11y) =>
       _$this._exposeElementToA11y = exposeElementToA11y;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _fillOpacity;
   num get fillOpacity => _$this._fillOpacity;
@@ -41922,7 +41922,7 @@ class _$PlotOptionsAreaMarker extends PlotOptionsAreaMarker {
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -42021,9 +42021,9 @@ class PlotOptionsAreaMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -42209,7 +42209,7 @@ class _$PlotOptionsAreaMarkerStatesHover
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final String lineColor;
   @override
@@ -42295,9 +42295,9 @@ class PlotOptionsAreaMarkerStatesHoverBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   String _lineColor;
   String get lineColor => _$this._lineColor;
@@ -42372,7 +42372,7 @@ class _$PlotOptionsAreaMarkerStatesSelect
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final String lineColor;
   @override
@@ -42444,9 +42444,9 @@ class PlotOptionsAreaMarkerStatesSelectBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   String _lineColor;
   String get lineColor => _$this._lineColor;
@@ -43089,7 +43089,7 @@ class _$PlotOptionsAreaStatesHoverMarker
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -43191,9 +43191,9 @@ class PlotOptionsAreaStatesHoverMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -43544,7 +43544,7 @@ class _$PlotOptionsAreaZones extends PlotOptionsAreaZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -43613,9 +43613,9 @@ class PlotOptionsAreaZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;
@@ -43697,7 +43697,7 @@ class _$PlotOptionsArearange extends PlotOptionsArearange {
   @override
   final bool exposeElementToA11y;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num fillOpacity;
   @override
@@ -44037,9 +44037,9 @@ class PlotOptionsArearangeBuilder
   set exposeElementToA11y(bool exposeElementToA11y) =>
       _$this._exposeElementToA11y = exposeElementToA11y;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _fillOpacity;
   num get fillOpacity => _$this._fillOpacity;
@@ -45488,7 +45488,7 @@ class _$PlotOptionsArearangeStatesHoverMarker
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -45591,9 +45591,9 @@ class PlotOptionsArearangeStatesHoverMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -45946,7 +45946,7 @@ class _$PlotOptionsArearangeZones extends PlotOptionsArearangeZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -46017,9 +46017,9 @@ class PlotOptionsArearangeZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;
@@ -46103,7 +46103,7 @@ class _$PlotOptionsAreaspline extends PlotOptionsAreaspline {
   @override
   final bool exposeElementToA11y;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num fillOpacity;
   @override
@@ -46467,9 +46467,9 @@ class PlotOptionsAreasplineBuilder
   set exposeElementToA11y(bool exposeElementToA11y) =>
       _$this._exposeElementToA11y = exposeElementToA11y;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _fillOpacity;
   num get fillOpacity => _$this._fillOpacity;
@@ -47327,7 +47327,7 @@ class _$PlotOptionsAreasplineMarker extends PlotOptionsAreasplineMarker {
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -47429,9 +47429,9 @@ class PlotOptionsAreasplineMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -47618,7 +47618,7 @@ class _$PlotOptionsAreasplineMarkerStatesHover
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final String lineColor;
   @override
@@ -47706,9 +47706,9 @@ class PlotOptionsAreasplineMarkerStatesHoverBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   String _lineColor;
   String get lineColor => _$this._lineColor;
@@ -47783,7 +47783,7 @@ class _$PlotOptionsAreasplineMarkerStatesSelect
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final String lineColor;
   @override
@@ -47857,9 +47857,9 @@ class PlotOptionsAreasplineMarkerStatesSelectBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   String _lineColor;
   String get lineColor => _$this._lineColor;
@@ -48516,7 +48516,7 @@ class _$PlotOptionsAreasplineStatesHoverMarker
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -48620,9 +48620,9 @@ class PlotOptionsAreasplineStatesHoverMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -48975,7 +48975,7 @@ class _$PlotOptionsAreasplineZones extends PlotOptionsAreasplineZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -49046,9 +49046,9 @@ class PlotOptionsAreasplineZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;
@@ -49130,7 +49130,7 @@ class _$PlotOptionsAreasplinerange extends PlotOptionsAreasplinerange {
   @override
   final bool exposeElementToA11y;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num fillOpacity;
   @override
@@ -49467,9 +49467,9 @@ class PlotOptionsAreasplinerangeBuilder
   set exposeElementToA11y(bool exposeElementToA11y) =>
       _$this._exposeElementToA11y = exposeElementToA11y;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _fillOpacity;
   num get fillOpacity => _$this._fillOpacity;
@@ -50926,7 +50926,7 @@ class _$PlotOptionsAreasplinerangeStatesHoverMarker
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -51032,9 +51032,9 @@ class PlotOptionsAreasplinerangeStatesHoverMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -51390,7 +51390,7 @@ class _$PlotOptionsAreasplinerangeZones
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -51462,9 +51462,9 @@ class PlotOptionsAreasplinerangeZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;
@@ -53670,7 +53670,7 @@ class _$PlotOptionsBarZones extends PlotOptionsBarZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -53738,9 +53738,9 @@ class PlotOptionsBarZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;
@@ -53824,7 +53824,7 @@ class _$PlotOptionsBoxplot extends PlotOptionsBoxplot {
   @override
   final bool exposeElementToA11y;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final String findNearestPointBy;
   @override
@@ -54210,9 +54210,9 @@ class PlotOptionsBoxplotBuilder
   set exposeElementToA11y(bool exposeElementToA11y) =>
       _$this._exposeElementToA11y = exposeElementToA11y;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   String _findNearestPointBy;
   String get findNearestPointBy => _$this._findNearestPointBy;
@@ -55559,7 +55559,7 @@ class _$PlotOptionsBoxplotZones extends PlotOptionsBoxplotZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -55630,9 +55630,9 @@ class PlotOptionsBoxplotZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;
@@ -56900,7 +56900,7 @@ class _$PlotOptionsBubbleMarker extends PlotOptionsBubbleMarker {
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -56992,9 +56992,9 @@ class PlotOptionsBubbleMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -57174,7 +57174,7 @@ class _$PlotOptionsBubbleMarkerStatesHover
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final String lineColor;
   @override
@@ -57261,9 +57261,9 @@ class PlotOptionsBubbleMarkerStatesHoverBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   String _lineColor;
   String get lineColor => _$this._lineColor;
@@ -57338,7 +57338,7 @@ class _$PlotOptionsBubbleMarkerStatesSelect
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final String lineColor;
   @override
@@ -57411,9 +57411,9 @@ class PlotOptionsBubbleMarkerStatesSelectBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   String _lineColor;
   String get lineColor => _$this._lineColor;
@@ -58064,7 +58064,7 @@ class _$PlotOptionsBubbleStatesHoverMarker
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -58167,9 +58167,9 @@ class PlotOptionsBubbleStatesHoverMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -58521,7 +58521,7 @@ class _$PlotOptionsBubbleZones extends PlotOptionsBubbleZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -58591,9 +58591,9 @@ class PlotOptionsBubbleZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;
@@ -60814,7 +60814,7 @@ class _$PlotOptionsColumnZones extends PlotOptionsColumnZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -60884,9 +60884,9 @@ class PlotOptionsColumnZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;
@@ -63094,7 +63094,7 @@ class _$PlotOptionsColumnrangeZones extends PlotOptionsColumnrangeZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -63166,9 +63166,9 @@ class PlotOptionsColumnrangeZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;
@@ -64912,7 +64912,7 @@ class _$PlotOptionsErrorbarZones extends PlotOptionsErrorbarZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -64983,9 +64983,9 @@ class PlotOptionsErrorbarZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;
@@ -66805,7 +66805,7 @@ class _$PlotOptionsFunnelStatesHoverMarker
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -66908,9 +66908,9 @@ class PlotOptionsFunnelStatesHoverMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -67262,7 +67262,7 @@ class _$PlotOptionsFunnelZones extends PlotOptionsFunnelZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -67332,9 +67332,9 @@ class PlotOptionsFunnelZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;
@@ -71194,7 +71194,7 @@ class _$PlotOptionsHeatmapZones extends PlotOptionsHeatmapZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -71265,9 +71265,9 @@ class PlotOptionsHeatmapZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;
@@ -72522,7 +72522,7 @@ class _$PlotOptionsLineMarker extends PlotOptionsLineMarker {
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -72621,9 +72621,9 @@ class PlotOptionsLineMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -72809,7 +72809,7 @@ class _$PlotOptionsLineMarkerStatesHover
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final String lineColor;
   @override
@@ -72895,9 +72895,9 @@ class PlotOptionsLineMarkerStatesHoverBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   String _lineColor;
   String get lineColor => _$this._lineColor;
@@ -72972,7 +72972,7 @@ class _$PlotOptionsLineMarkerStatesSelect
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final String lineColor;
   @override
@@ -73044,9 +73044,9 @@ class PlotOptionsLineMarkerStatesSelectBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   String _lineColor;
   String get lineColor => _$this._lineColor;
@@ -73689,7 +73689,7 @@ class _$PlotOptionsLineStatesHoverMarker
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -73791,9 +73791,9 @@ class PlotOptionsLineStatesHoverMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -74144,7 +74144,7 @@ class _$PlotOptionsLineZones extends PlotOptionsLineZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -74213,9 +74213,9 @@ class PlotOptionsLineZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;
@@ -76034,7 +76034,7 @@ class _$PlotOptionsPieStatesHoverMarker
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -76136,9 +76136,9 @@ class PlotOptionsPieStatesHoverMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -76488,7 +76488,7 @@ class _$PlotOptionsPieZones extends PlotOptionsPieZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -76556,9 +76556,9 @@ class PlotOptionsPieZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;
@@ -77726,7 +77726,7 @@ class _$PlotOptionsPolygonMarker extends PlotOptionsPolygonMarker {
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -77827,9 +77827,9 @@ class PlotOptionsPolygonMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -78015,7 +78015,7 @@ class _$PlotOptionsPolygonMarkerStatesHover
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final String lineColor;
   @override
@@ -78102,9 +78102,9 @@ class PlotOptionsPolygonMarkerStatesHoverBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   String _lineColor;
   String get lineColor => _$this._lineColor;
@@ -78179,7 +78179,7 @@ class _$PlotOptionsPolygonMarkerStatesSelect
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final String lineColor;
   @override
@@ -78252,9 +78252,9 @@ class PlotOptionsPolygonMarkerStatesSelectBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   String _lineColor;
   String get lineColor => _$this._lineColor;
@@ -78907,7 +78907,7 @@ class _$PlotOptionsPolygonStatesHoverMarker
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -79010,9 +79010,9 @@ class PlotOptionsPolygonStatesHoverMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -79364,7 +79364,7 @@ class _$PlotOptionsPolygonZones extends PlotOptionsPolygonZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -79435,9 +79435,9 @@ class PlotOptionsPolygonZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;
@@ -81237,7 +81237,7 @@ class _$PlotOptionsPyramidStatesHoverMarker
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -81340,9 +81340,9 @@ class PlotOptionsPyramidStatesHoverMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -81694,7 +81694,7 @@ class _$PlotOptionsPyramidZones extends PlotOptionsPyramidZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -81765,9 +81765,9 @@ class PlotOptionsPyramidZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;
@@ -82958,7 +82958,7 @@ class _$PlotOptionsScatterMarker extends PlotOptionsScatterMarker {
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -83059,9 +83059,9 @@ class PlotOptionsScatterMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -83247,7 +83247,7 @@ class _$PlotOptionsScatterMarkerStatesHover
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final String lineColor;
   @override
@@ -83334,9 +83334,9 @@ class PlotOptionsScatterMarkerStatesHoverBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   String _lineColor;
   String get lineColor => _$this._lineColor;
@@ -83411,7 +83411,7 @@ class _$PlotOptionsScatterMarkerStatesSelect
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final String lineColor;
   @override
@@ -83484,9 +83484,9 @@ class PlotOptionsScatterMarkerStatesSelectBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   String _lineColor;
   String get lineColor => _$this._lineColor;
@@ -84139,7 +84139,7 @@ class _$PlotOptionsScatterStatesHoverMarker
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -84242,9 +84242,9 @@ class PlotOptionsScatterStatesHoverMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -84596,7 +84596,7 @@ class _$PlotOptionsScatterZones extends PlotOptionsScatterZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -84667,9 +84667,9 @@ class PlotOptionsScatterZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;
@@ -85927,7 +85927,7 @@ class _$PlotOptionsSeriesMarker extends PlotOptionsSeriesMarker {
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -86028,9 +86028,9 @@ class PlotOptionsSeriesMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -86216,7 +86216,7 @@ class _$PlotOptionsSeriesMarkerStatesHover
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final String lineColor;
   @override
@@ -86303,9 +86303,9 @@ class PlotOptionsSeriesMarkerStatesHoverBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   String _lineColor;
   String get lineColor => _$this._lineColor;
@@ -86380,7 +86380,7 @@ class _$PlotOptionsSeriesMarkerStatesSelect
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final String lineColor;
   @override
@@ -86453,9 +86453,9 @@ class PlotOptionsSeriesMarkerStatesSelectBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   String _lineColor;
   String get lineColor => _$this._lineColor;
@@ -87106,7 +87106,7 @@ class _$PlotOptionsSeriesStatesHoverMarker
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -87209,9 +87209,9 @@ class PlotOptionsSeriesStatesHoverMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -87563,7 +87563,7 @@ class _$PlotOptionsSeriesZones extends PlotOptionsSeriesZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -87633,9 +87633,9 @@ class PlotOptionsSeriesZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;
@@ -90383,7 +90383,7 @@ class _$PlotOptionsSplineMarker extends PlotOptionsSplineMarker {
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -90484,9 +90484,9 @@ class PlotOptionsSplineMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -90672,7 +90672,7 @@ class _$PlotOptionsSplineMarkerStatesHover
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final String lineColor;
   @override
@@ -90759,9 +90759,9 @@ class PlotOptionsSplineMarkerStatesHoverBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   String _lineColor;
   String get lineColor => _$this._lineColor;
@@ -90836,7 +90836,7 @@ class _$PlotOptionsSplineMarkerStatesSelect
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final String lineColor;
   @override
@@ -90909,9 +90909,9 @@ class PlotOptionsSplineMarkerStatesSelectBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   String _lineColor;
   String get lineColor => _$this._lineColor;
@@ -91562,7 +91562,7 @@ class _$PlotOptionsSplineStatesHoverMarker
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -91665,9 +91665,9 @@ class PlotOptionsSplineStatesHoverMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -92019,7 +92019,7 @@ class _$PlotOptionsSplineZones extends PlotOptionsSplineZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -92089,9 +92089,9 @@ class PlotOptionsSplineZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;
@@ -94287,7 +94287,7 @@ class _$PlotOptionsTreemapZones extends PlotOptionsTreemapZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -94358,9 +94358,9 @@ class PlotOptionsTreemapZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;
@@ -96587,7 +96587,7 @@ class _$PlotOptionsWaterfallZones extends PlotOptionsWaterfallZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -96658,9 +96658,9 @@ class PlotOptionsWaterfallZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;

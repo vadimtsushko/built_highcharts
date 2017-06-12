@@ -156,7 +156,7 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
    * Fill color or gradient for the area. When <code>null</code>, the series' <code>color</code>  is  used with the series' <code>fillOpacity</code>. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Fill opacity for the area. When you set an explicit <code>fillColor</code>, the <code>fillOpacity</code> is not applied. Instead, you should define the opacity in the <code>fillColor</code> with an rgba color definition. The <code>fillOpacity</code> setting, also the default setting, overrides the alpha component of the <code>color</code> setting. 
    */
@@ -518,7 +518,7 @@ abstract class AreaSeriesDataMarker implements Built<AreaSeriesDataMarker, AreaS
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -641,7 +641,7 @@ abstract class AreaSeriesDataMarkerStatesHoverMarker implements Built<AreaSeries
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -898,7 +898,7 @@ abstract class AreaSeriesMarker implements Built<AreaSeriesMarker, AreaSeriesMar
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -968,7 +968,7 @@ abstract class AreaSeriesMarkerStatesHover implements Built<AreaSeriesMarkerStat
    * The fill color of the marker in hover state. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -1008,7 +1008,7 @@ abstract class AreaSeriesMarkerStatesSelect implements Built<AreaSeriesMarkerSta
    * The fill color of the point marker. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -1158,7 +1158,7 @@ abstract class AreaSeriesStatesHoverMarker implements Built<AreaSeriesStatesHove
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -1313,7 +1313,7 @@ abstract class AreaSeriesZones implements Built<AreaSeriesZones, AreaSeriesZones
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */

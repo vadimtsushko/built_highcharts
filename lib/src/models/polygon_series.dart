@@ -442,7 +442,7 @@ abstract class PolygonSeriesDataMarker implements Built<PolygonSeriesDataMarker,
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -565,7 +565,7 @@ abstract class PolygonSeriesDataMarkerStatesHoverMarker implements Built<Polygon
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -822,7 +822,7 @@ abstract class PolygonSeriesMarker implements Built<PolygonSeriesMarker, Polygon
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -892,7 +892,7 @@ abstract class PolygonSeriesMarkerStatesHover implements Built<PolygonSeriesMark
    * The fill color of the marker in hover state. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -932,7 +932,7 @@ abstract class PolygonSeriesMarkerStatesSelect implements Built<PolygonSeriesMar
    * The fill color of the point marker. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -1082,7 +1082,7 @@ abstract class PolygonSeriesStatesHoverMarker implements Built<PolygonSeriesStat
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -1237,7 +1237,7 @@ abstract class PolygonSeriesZones implements Built<PolygonSeriesZones, PolygonSe
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */

@@ -1646,7 +1646,7 @@ class _$PieSeriesStatesHoverMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -1712,7 +1712,7 @@ class _$PieSeriesStatesHoverMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -1955,7 +1955,7 @@ class _$PieSeriesZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -1992,7 +1992,7 @@ class _$PieSeriesZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -4251,7 +4251,7 @@ class _$PieSeriesStatesHoverMarker extends PieSeriesStatesHoverMarker {
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -4352,9 +4352,9 @@ class PieSeriesStatesHoverMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -4703,7 +4703,7 @@ class _$PieSeriesZones extends PieSeriesZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -4771,9 +4771,9 @@ class PieSeriesZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;

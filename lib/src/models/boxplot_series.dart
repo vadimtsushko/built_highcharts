@@ -136,7 +136,7 @@ abstract class BoxplotSeries implements Built<BoxplotSeries, BoxplotSeriesBuilde
    * The fill color of the box. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * <p>Determines whether the series should look for the nearest point in both dimensions or just the x-dimension when hovering the series. Defaults to <code>'xy'</code> for scatter series and <code>'x'</code> for most other series. If the data has duplicate x-values, it is recommended to set this to <code>'xy'</code> to allow hovering over all points.</p>
 <p>Applies only to series types using nearest neighbor search (not direct hover) for tooltip.</p>  
@@ -794,7 +794,7 @@ abstract class BoxplotSeriesZones implements Built<BoxplotSeriesZones, BoxplotSe
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */

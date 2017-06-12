@@ -148,7 +148,7 @@ class _$BoxplotSeriesSerializer implements StructuredSerializer<BoxplotSeries> {
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.findNearestPointBy != null) {
       result
@@ -515,7 +515,7 @@ class _$BoxplotSeriesSerializer implements StructuredSerializer<BoxplotSeries> {
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'findNearestPointBy':
           result.findNearestPointBy = serializers.deserialize(value,
@@ -1719,7 +1719,7 @@ class _$BoxplotSeriesZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -1756,7 +1756,7 @@ class _$BoxplotSeriesZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -1810,7 +1810,7 @@ class _$BoxplotSeries extends BoxplotSeries {
   @override
   final bool exposeElementToA11y;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final String findNearestPointBy;
   @override
@@ -2242,9 +2242,9 @@ class BoxplotSeriesBuilder
   set exposeElementToA11y(bool exposeElementToA11y) =>
       _$this._exposeElementToA11y = exposeElementToA11y;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   String _findNearestPointBy;
   String get findNearestPointBy => _$this._findNearestPointBy;
@@ -4094,7 +4094,7 @@ class _$BoxplotSeriesZones extends BoxplotSeriesZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -4162,9 +4162,9 @@ class BoxplotSeriesZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;

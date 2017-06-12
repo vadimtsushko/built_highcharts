@@ -874,7 +874,7 @@ class _$PolygonSeriesDataMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -940,7 +940,7 @@ class _$PolygonSeriesDataMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -1222,7 +1222,7 @@ class _$PolygonSeriesDataMarkerStatesHoverMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -1288,7 +1288,7 @@ class _$PolygonSeriesDataMarkerStatesHoverMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -1756,7 +1756,7 @@ class _$PolygonSeriesMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -1821,7 +1821,7 @@ class _$PolygonSeriesMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -1944,7 +1944,7 @@ class _$PolygonSeriesMarkerStatesHoverSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineColor != null) {
       result
@@ -1998,7 +1998,7 @@ class _$PolygonSeriesMarkerStatesHoverSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineColor':
           result.lineColor = serializers.deserialize(value,
@@ -2052,7 +2052,7 @@ class _$PolygonSeriesMarkerStatesSelectSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.lineColor != null) {
       result
@@ -2094,7 +2094,7 @@ class _$PolygonSeriesMarkerStatesSelectSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'lineColor':
           result.lineColor = serializers.deserialize(value,
@@ -2504,7 +2504,7 @@ class _$PolygonSeriesStatesHoverMarkerSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.height != null) {
       result
@@ -2570,7 +2570,7 @@ class _$PolygonSeriesStatesHoverMarkerSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'height':
           result.height = serializers.deserialize(value,
@@ -2816,7 +2816,7 @@ class _$PolygonSeriesZonesSerializer
       result
         ..add('fillColor')
         ..add(serializers.serialize(object.fillColor,
-            specifiedType: const FullType(String)));
+            specifiedType: const FullType(JsonObject)));
     }
     if (object.value != null) {
       result
@@ -2853,7 +2853,7 @@ class _$PolygonSeriesZonesSerializer
           break;
         case 'fillColor':
           result.fillColor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(JsonObject)) as JsonObject;
           break;
         case 'value':
           result.value = serializers.deserialize(value,
@@ -3932,7 +3932,7 @@ class _$PolygonSeriesDataMarker extends PolygonSeriesDataMarker {
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -4033,9 +4033,9 @@ class PolygonSeriesDataMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -4472,7 +4472,7 @@ class _$PolygonSeriesDataMarkerStatesHoverMarker
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -4576,9 +4576,9 @@ class PolygonSeriesDataMarkerStatesHoverMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -5230,7 +5230,7 @@ class _$PolygonSeriesMarker extends PolygonSeriesMarker {
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -5328,9 +5328,9 @@ class PolygonSeriesMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -5514,7 +5514,7 @@ class _$PolygonSeriesMarkerStatesHover extends PolygonSeriesMarkerStatesHover {
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final String lineColor;
   @override
@@ -5600,9 +5600,9 @@ class PolygonSeriesMarkerStatesHoverBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   String _lineColor;
   String get lineColor => _$this._lineColor;
@@ -5677,7 +5677,7 @@ class _$PolygonSeriesMarkerStatesSelect
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final String lineColor;
   @override
@@ -5749,9 +5749,9 @@ class PolygonSeriesMarkerStatesSelectBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   String _lineColor;
   String get lineColor => _$this._lineColor;
@@ -6389,7 +6389,7 @@ class _$PolygonSeriesStatesHoverMarker extends PolygonSeriesStatesHoverMarker {
   @override
   final bool enabled;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num height;
   @override
@@ -6491,9 +6491,9 @@ class PolygonSeriesStatesHoverMarkerBuilder
   bool get enabled => _$this._enabled;
   set enabled(bool enabled) => _$this._enabled = enabled;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _height;
   num get height => _$this._height;
@@ -6843,7 +6843,7 @@ class _$PolygonSeriesZones extends PolygonSeriesZones {
   @override
   final String dashStyle;
   @override
-  final String fillColor;
+  final JsonObject fillColor;
   @override
   final num value;
 
@@ -6911,9 +6911,9 @@ class PolygonSeriesZonesBuilder
   String get dashStyle => _$this._dashStyle;
   set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
 
-  String _fillColor;
-  String get fillColor => _$this._fillColor;
-  set fillColor(String fillColor) => _$this._fillColor = fillColor;
+  JsonObject _fillColor;
+  JsonObject get fillColor => _$this._fillColor;
+  set fillColor(JsonObject fillColor) => _$this._fillColor = fillColor;
 
   num _value;
   num get value => _$this._value;

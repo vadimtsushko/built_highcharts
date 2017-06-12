@@ -156,7 +156,7 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
    * Fill color or gradient for the area. When <code>null</code>, the series' <code>color</code>  is  used with the series' <code>fillOpacity</code>. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Fill opacity for the area. When you set an explicit <code>fillColor</code>, the <code>fillOpacity</code> is not applied. Instead, you should define the opacity in the <code>fillColor</code> with an rgba color definition. The <code>fillOpacity</code> setting, also the default setting, overrides the alpha component of the <code>color</code> setting. 
    */
@@ -513,7 +513,7 @@ abstract class AreasplineSeriesDataMarker implements Built<AreasplineSeriesDataM
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -636,7 +636,7 @@ abstract class AreasplineSeriesDataMarkerStatesHoverMarker implements Built<Area
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -893,7 +893,7 @@ abstract class AreasplineSeriesMarker implements Built<AreasplineSeriesMarker, A
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -963,7 +963,7 @@ abstract class AreasplineSeriesMarkerStatesHover implements Built<AreasplineSeri
    * The fill color of the marker in hover state. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -1003,7 +1003,7 @@ abstract class AreasplineSeriesMarkerStatesSelect implements Built<AreasplineSer
    * The fill color of the point marker. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -1153,7 +1153,7 @@ abstract class AreasplineSeriesStatesHoverMarker implements Built<AreasplineSeri
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -1308,7 +1308,7 @@ abstract class AreasplineSeriesZones implements Built<AreasplineSeriesZones, Are
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */

@@ -243,7 +243,7 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
    * Fill color or gradient for the area. When <code>null</code>, the series' <code>color</code>  is  used with the series' <code>fillOpacity</code>. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Fill opacity for the area. When you set an explicit <code>fillColor</code>, the <code>fillOpacity</code> is not applied. Instead, you should define the opacity in the <code>fillColor</code> with an rgba color definition. The <code>fillOpacity</code> setting, also the default setting, overrides the alpha component of the <code>color</code> setting. 
    */
@@ -645,7 +645,7 @@ abstract class PlotOptionsAreaMarker implements Built<PlotOptionsAreaMarker, Plo
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -715,7 +715,7 @@ abstract class PlotOptionsAreaMarkerStatesHover implements Built<PlotOptionsArea
    * The fill color of the marker in hover state. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -755,7 +755,7 @@ abstract class PlotOptionsAreaMarkerStatesSelect implements Built<PlotOptionsAre
    * The fill color of the point marker. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -905,7 +905,7 @@ abstract class PlotOptionsAreaStatesHoverMarker implements Built<PlotOptionsArea
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -1060,7 +1060,7 @@ abstract class PlotOptionsAreaZones implements Built<PlotOptionsAreaZones, PlotO
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
@@ -1175,7 +1175,7 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
    * Fill color or gradient for the area. When <code>null</code>, the series' <code>color</code>  is  used with the series' <code>fillOpacity</code>. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Fill opacity for the area. When you set an explicit <code>fillColor</code>, the <code>fillOpacity</code> is not applied. Instead, you should define the opacity in the <code>fillColor</code> with an rgba color definition. The <code>fillOpacity</code> setting, also the default setting, overrides the alpha component of the <code>color</code> setting. 
    */
@@ -1682,7 +1682,7 @@ abstract class PlotOptionsArearangeStatesHoverMarker implements Built<PlotOption
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -1837,7 +1837,7 @@ abstract class PlotOptionsArearangeZones implements Built<PlotOptionsArearangeZo
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
@@ -1959,7 +1959,7 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
    * Fill color or gradient for the area. When <code>null</code>, the series' <code>color</code>  is  used with the series' <code>fillOpacity</code>. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Fill opacity for the area. When you set an explicit <code>fillColor</code>, the <code>fillOpacity</code> is not applied. Instead, you should define the opacity in the <code>fillColor</code> with an rgba color definition. The <code>fillOpacity</code> setting, also the default setting, overrides the alpha component of the <code>color</code> setting. 
    */
@@ -2356,7 +2356,7 @@ abstract class PlotOptionsAreasplineMarker implements Built<PlotOptionsAreasplin
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -2426,7 +2426,7 @@ abstract class PlotOptionsAreasplineMarkerStatesHover implements Built<PlotOptio
    * The fill color of the marker in hover state. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -2466,7 +2466,7 @@ abstract class PlotOptionsAreasplineMarkerStatesSelect implements Built<PlotOpti
    * The fill color of the point marker. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -2616,7 +2616,7 @@ abstract class PlotOptionsAreasplineStatesHoverMarker implements Built<PlotOptio
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -2771,7 +2771,7 @@ abstract class PlotOptionsAreasplineZones implements Built<PlotOptionsAreaspline
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
@@ -2886,7 +2886,7 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
    * Fill color or gradient for the area. When <code>null</code>, the series' <code>color</code>  is  used with the series' <code>fillOpacity</code>. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Fill opacity for the area. When you set an explicit <code>fillColor</code>, the <code>fillOpacity</code> is not applied. Instead, you should define the opacity in the <code>fillColor</code> with an rgba color definition. The <code>fillOpacity</code> setting, also the default setting, overrides the alpha component of the <code>color</code> setting. 
    */
@@ -3388,7 +3388,7 @@ abstract class PlotOptionsAreasplinerangeStatesHoverMarker implements Built<Plot
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -3543,7 +3543,7 @@ abstract class PlotOptionsAreasplinerangeZones implements Built<PlotOptionsAreas
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
@@ -4299,7 +4299,7 @@ abstract class PlotOptionsBarZones implements Built<PlotOptionsBarZones, PlotOpt
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
@@ -4398,7 +4398,7 @@ abstract class PlotOptionsBoxplot implements Built<PlotOptionsBoxplot, PlotOptio
    * The fill color of the box. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * <p>Determines whether the series should look for the nearest point in both dimensions or just the x-dimension when hovering the series. Defaults to <code>'xy'</code> for scatter series and <code>'x'</code> for most other series. If the data has duplicate x-values, it is recommended to set this to <code>'xy'</code> to allow hovering over all points.</p>
 <p>Applies only to series types using nearest neighbor search (not direct hover) for tooltip.</p>  
@@ -4878,7 +4878,7 @@ abstract class PlotOptionsBoxplotZones implements Built<PlotOptionsBoxplotZones,
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
@@ -5378,7 +5378,7 @@ abstract class PlotOptionsBubbleMarker implements Built<PlotOptionsBubbleMarker,
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -5443,7 +5443,7 @@ abstract class PlotOptionsBubbleMarkerStatesHover implements Built<PlotOptionsBu
    * The fill color of the marker in hover state. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -5483,7 +5483,7 @@ abstract class PlotOptionsBubbleMarkerStatesSelect implements Built<PlotOptionsB
    * The fill color of the point marker. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -5633,7 +5633,7 @@ abstract class PlotOptionsBubbleStatesHoverMarker implements Built<PlotOptionsBu
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -5788,7 +5788,7 @@ abstract class PlotOptionsBubbleZones implements Built<PlotOptionsBubbleZones, P
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
@@ -6546,7 +6546,7 @@ abstract class PlotOptionsColumnZones implements Built<PlotOptionsColumnZones, P
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
@@ -7290,7 +7290,7 @@ abstract class PlotOptionsColumnrangeZones implements Built<PlotOptionsColumnran
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
@@ -7832,7 +7832,7 @@ abstract class PlotOptionsErrorbarZones implements Built<PlotOptionsErrorbarZone
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
@@ -8411,7 +8411,7 @@ abstract class PlotOptionsFunnelStatesHoverMarker implements Built<PlotOptionsFu
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -8566,7 +8566,7 @@ abstract class PlotOptionsFunnelZones implements Built<PlotOptionsFunnelZones, P
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
@@ -9819,7 +9819,7 @@ abstract class PlotOptionsHeatmapZones implements Built<PlotOptionsHeatmapZones,
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
@@ -10318,7 +10318,7 @@ abstract class PlotOptionsLineMarker implements Built<PlotOptionsLineMarker, Plo
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -10388,7 +10388,7 @@ abstract class PlotOptionsLineMarkerStatesHover implements Built<PlotOptionsLine
    * The fill color of the marker in hover state. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -10428,7 +10428,7 @@ abstract class PlotOptionsLineMarkerStatesSelect implements Built<PlotOptionsLin
    * The fill color of the point marker. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -10578,7 +10578,7 @@ abstract class PlotOptionsLineStatesHoverMarker implements Built<PlotOptionsLine
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -10733,7 +10733,7 @@ abstract class PlotOptionsLineZones implements Built<PlotOptionsLineZones, PlotO
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
@@ -11329,7 +11329,7 @@ abstract class PlotOptionsPieStatesHoverMarker implements Built<PlotOptionsPieSt
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -11484,7 +11484,7 @@ abstract class PlotOptionsPieZones implements Built<PlotOptionsPieZones, PlotOpt
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
@@ -11937,7 +11937,7 @@ abstract class PlotOptionsPolygonMarker implements Built<PlotOptionsPolygonMarke
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -12007,7 +12007,7 @@ abstract class PlotOptionsPolygonMarkerStatesHover implements Built<PlotOptionsP
    * The fill color of the marker in hover state. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -12047,7 +12047,7 @@ abstract class PlotOptionsPolygonMarkerStatesSelect implements Built<PlotOptions
    * The fill color of the point marker. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -12197,7 +12197,7 @@ abstract class PlotOptionsPolygonStatesHoverMarker implements Built<PlotOptionsP
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -12352,7 +12352,7 @@ abstract class PlotOptionsPolygonZones implements Built<PlotOptionsPolygonZones,
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
@@ -12921,7 +12921,7 @@ abstract class PlotOptionsPyramidStatesHoverMarker implements Built<PlotOptionsP
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -13076,7 +13076,7 @@ abstract class PlotOptionsPyramidZones implements Built<PlotOptionsPyramidZones,
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
@@ -13541,7 +13541,7 @@ abstract class PlotOptionsScatterMarker implements Built<PlotOptionsScatterMarke
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -13611,7 +13611,7 @@ abstract class PlotOptionsScatterMarkerStatesHover implements Built<PlotOptionsS
    * The fill color of the marker in hover state. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -13651,7 +13651,7 @@ abstract class PlotOptionsScatterMarkerStatesSelect implements Built<PlotOptions
    * The fill color of the point marker. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -13801,7 +13801,7 @@ abstract class PlotOptionsScatterStatesHoverMarker implements Built<PlotOptionsS
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -13956,7 +13956,7 @@ abstract class PlotOptionsScatterZones implements Built<PlotOptionsScatterZones,
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
@@ -14455,7 +14455,7 @@ abstract class PlotOptionsSeriesMarker implements Built<PlotOptionsSeriesMarker,
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -14525,7 +14525,7 @@ abstract class PlotOptionsSeriesMarkerStatesHover implements Built<PlotOptionsSe
    * The fill color of the marker in hover state. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -14565,7 +14565,7 @@ abstract class PlotOptionsSeriesMarkerStatesSelect implements Built<PlotOptionsS
    * The fill color of the point marker. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -14715,7 +14715,7 @@ abstract class PlotOptionsSeriesStatesHoverMarker implements Built<PlotOptionsSe
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -14870,7 +14870,7 @@ abstract class PlotOptionsSeriesZones implements Built<PlotOptionsSeriesZones, P
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
@@ -15859,7 +15859,7 @@ abstract class PlotOptionsSplineMarker implements Built<PlotOptionsSplineMarker,
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -15929,7 +15929,7 @@ abstract class PlotOptionsSplineMarkerStatesHover implements Built<PlotOptionsSp
    * The fill color of the marker in hover state. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -15969,7 +15969,7 @@ abstract class PlotOptionsSplineMarkerStatesSelect implements Built<PlotOptionsS
    * The fill color of the point marker. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -16119,7 +16119,7 @@ abstract class PlotOptionsSplineStatesHoverMarker implements Built<PlotOptionsSp
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -16274,7 +16274,7 @@ abstract class PlotOptionsSplineZones implements Built<PlotOptionsSplineZones, P
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
@@ -16996,7 +16996,7 @@ abstract class PlotOptionsTreemapZones implements Built<PlotOptionsTreemapZones,
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
@@ -17774,7 +17774,7 @@ abstract class PlotOptionsWaterfallZones implements Built<PlotOptionsWaterfallZo
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */

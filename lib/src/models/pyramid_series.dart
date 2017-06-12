@@ -733,7 +733,7 @@ abstract class PyramidSeriesStatesHoverMarker implements Built<PyramidSeriesStat
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -888,7 +888,7 @@ abstract class PyramidSeriesZones implements Built<PyramidSeriesZones, PyramidSe
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */

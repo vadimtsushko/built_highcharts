@@ -26,14 +26,13 @@ class JsInteropPlugin implements SerializerPlugin {
     if (object is List &&
             specifiedType.root != BuiltList &&
             specifiedType.root != JsonObject) {
-//      print('Doing _toJS:$specifiedType $object');
       return _toJS(object, specifiedType);
     }
     if (specifiedType.root == JsonObject) {
-//      print('Jsify object:$specifiedType $object');
-      return js_util.jsify(object);
+      if (object is List || object is Map) {
+        return js_util.jsify(object);
+      }
     }
-//    print('Return object:$specifiedType $object');
     return object;
   }
 

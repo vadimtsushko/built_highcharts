@@ -689,7 +689,7 @@ abstract class BubbleSeriesMarker implements Built<BubbleSeriesMarker, BubbleSer
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -754,7 +754,7 @@ abstract class BubbleSeriesMarkerStatesHover implements Built<BubbleSeriesMarker
    * The fill color of the marker in hover state. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -794,7 +794,7 @@ abstract class BubbleSeriesMarkerStatesSelect implements Built<BubbleSeriesMarke
    * The fill color of the point marker. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The color of the point marker's outline. When <code>null</code>, the series' or point's color is used. 
    */
@@ -944,7 +944,7 @@ abstract class BubbleSeriesStatesHoverMarker implements Built<BubbleSeriesStates
    * The fill color of the point marker. When <code>null</code>, the series' or point's color is used. 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set. 
    */
@@ -1099,7 +1099,7 @@ abstract class BubbleSeriesZones implements Built<BubbleSeriesZones, BubbleSerie
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */

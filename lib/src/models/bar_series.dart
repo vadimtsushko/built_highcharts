@@ -948,7 +948,7 @@ abstract class BarSeriesZones implements Built<BarSeriesZones, BarSeriesZonesBui
    * Defines the fill color for the series (in area type series) 
    */
   @nullable
-  String get fillColor;
+  JsonObject get fillColor;
   /** 
    * The value up to where the zone extends, if undefined the zones stretches to the last value in the series. 
    */
