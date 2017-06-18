@@ -13,7 +13,7 @@ dependencies:
   highcharts: any
   yaml: any
   built_highcharts:
-    path: ..\
+    path: ../
 
 transformers:
 - dart_to_js_script_rewriter
