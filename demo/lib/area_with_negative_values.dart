@@ -22,5 +22,5 @@ void area_with_negative_values(_) {
         ..data = jsonObject([3, 4, 4, -2, 5]))
     ]));
   window.console.log(toJsObject(chartOptions));
-  new hc.HighchartsChart(toJsObject(chartOptions));
+  new HighchartsChart(toJsObject(chartOptions));
 }

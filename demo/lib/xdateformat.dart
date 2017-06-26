@@ -21,6 +21,6 @@ void x_date_format (_) {
     ]))
   ;
 
-  new hc.HighchartsChart(toJsObject(chartOptions));
+  new HighchartsChart(toJsObject(chartOptions));
   window.console.log(toJsObject(chartOptions));
 }

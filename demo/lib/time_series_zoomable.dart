@@ -43,5 +43,5 @@ time_series_zoomable(_) async {
       ..data = jsonObject(jsonData))));
 
   ;
-  new hc.HighchartsChart(toJsObject(chartOptions));
+  new HighchartsChart(toJsObject(chartOptions));
 }

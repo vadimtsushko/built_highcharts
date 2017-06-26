@@ -1,9 +1,16 @@
 part of highcharts_options.samples;
 
+HighchartsChart chart;
+SvgElement clearSelectionButton;
+
 void basicLine(_) {
   clearOutput();
   var chartOptions = new ChartOptions((b) => b
     ..chart.renderTo = "output"
+    ..chart.zoomType = 'x'
+    ..tooltip.shared = true
+
+    ..chart.events.selection = allowInterop(onSelected)
     ..title.text = 'Monthly Average Temperature'
     ..subtitle.text = 'Source: WorldClimate.com'
     ..subtitle.x = -20
@@ -18,6 +25,7 @@ void basicLine(_) {
     ..legend.align = 'right'
     ..legend.verticalAlign = 'middle'
     ..legend.borderWidth = 0
+    ..plotOptions.series.allowPointSelect = true
     ..series.addAll([
       new Series((b) => b
         ..name = 'Tokyo'
@@ -32,5 +40,34 @@ void basicLine(_) {
         ..name = 'London'
         ..data = jsonObject([3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]))]));
   //window.console.debug(toJsObject(chartOptions));
-  new hc.HighchartsChart(toJsObject(chartOptions));
+  chart = new HighchartsChart(toJsObject(chartOptions));
+  clearSelectionButton = chart.renderer.button('Clear selection', 0,0, allowInterop(clearSelection), null, null, null, null, null);
+  clearSelectionButton.add().toFront().hide();
+
+  //window.console.debug(chart);
+
+
+//  chart.getSelectedPoints();
+//  chart
+}
+
+clearSelection(e) {
+  for (var each in chart.getSelectedPoints()) {
+    each.select(false, false);
+  }
+  clearSelectionButton.hide();
+  //clearSelectionButton = null;
+}
+
+onSelected(HighchartSelectionEvent e) {
+  var axis = e.xAxis[0];
+  e.preventDefault();
+  for (var serie in chart.series) {
+    for (var point in serie.points) {
+      if (axis.max > point.x && axis.min < point.x) {
+        point.select(true,true);
+      }
+    }
+  }
+  clearSelectionButton.show();
 }

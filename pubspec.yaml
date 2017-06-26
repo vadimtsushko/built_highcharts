@@ -12,5 +12,6 @@ dependencies:
   build_runner: any
   source_gen: any
   built_value_generator: any
+  js: any
 dev_dependencies:
   test: '>=0.12.0'

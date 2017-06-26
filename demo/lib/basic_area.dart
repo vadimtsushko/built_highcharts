@@ -42,5 +42,5 @@ void basic_area(_) {
 
   );
   window.console.debug(toJsObject(chartOptions));
-  new hc.HighchartsChart(toJsObject(chartOptions));
+  new HighchartsChart(toJsObject(chartOptions));
 }

@@ -27,5 +27,5 @@ void spline_with_symbols (_) {
                     23.3, 18.3, 13.9, 9.6]))]))
   ;
   window.console.log(toJsObject(chartOptions));
-  new hc.HighchartsChart(toJsObject(chartOptions));
+  new HighchartsChart(toJsObject(chartOptions));
 }

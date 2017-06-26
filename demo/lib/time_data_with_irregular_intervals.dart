@@ -55,5 +55,5 @@ void time_data_with_irregular_intervals(_) {
         ]))
     ]));
 
-  new hc.HighchartsChart(toJsObject(chartOptions));
+  new HighchartsChart(toJsObject(chartOptions));
 }

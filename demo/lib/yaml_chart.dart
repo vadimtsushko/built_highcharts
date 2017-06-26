@@ -7,5 +7,5 @@ loadChartFromYaml(String chartName) async {
   var chartOptions = fromJson(ChartOptions, model);
   var jsOptions = toJsObject(chartOptions);
   window.console.debug(jsOptions);
-  new hc.HighchartsChart(jsOptions);
+  new HighchartsChart(jsOptions);
 }

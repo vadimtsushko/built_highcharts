@@ -41,5 +41,5 @@ void stacked_area (_) {
         ..data = jsonObject([2, 2, 2, 6, 13, 30, 46]))
     ]));
 
-  new hc.HighchartsChart(toJsObject(chartOptions));
+  new HighchartsChart(toJsObject(chartOptions));
 }
