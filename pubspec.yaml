@@ -8,10 +8,9 @@ environment:
   sdk: '>=1.20.1 <2.0.0'
 dependencies:
   path: ^1.4.1
-  built_value: any
-  build_runner: any
-  source_gen: any
-  built_value_generator: any
+  built_value: "^1.0.1"
   js: any
 dev_dependencies:
   test: '>=0.12.0'
+  build_runner: "^0.3.2"
+  built_value_generator: "^1.2.1"
