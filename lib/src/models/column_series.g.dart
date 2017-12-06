@@ -2033,6 +2033,7 @@ class _$ColumnSeriesZonesSerializer
 // Target: abstract class ColumnSeries
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnSeries extends ColumnSeries {
   @override
   final bool allowPointSelect;
@@ -2887,6 +2888,7 @@ class ColumnSeriesBuilder
 // Target: abstract class ColumnSeriesData
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnSeriesData extends ColumnSeriesData {
   @override
   final String className;
@@ -3125,6 +3127,7 @@ class ColumnSeriesDataBuilder
 // Target: abstract class ColumnSeriesDataEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnSeriesDataEvents extends ColumnSeriesDataEvents {
   @override
   final Function click;
@@ -3285,6 +3288,7 @@ class ColumnSeriesDataEventsBuilder
 // Target: abstract class ColumnSeriesDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnSeriesDataLabels extends ColumnSeriesDataLabels {
   @override
   final String align;
@@ -3674,6 +3678,7 @@ class ColumnSeriesDataLabelsBuilder
 // Target: abstract class ColumnSeriesEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnSeriesEvents extends ColumnSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3850,6 +3855,7 @@ class ColumnSeriesEventsBuilder
 // Target: abstract class ColumnSeriesPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnSeriesPoint extends ColumnSeriesPoint {
   @override
   final ColumnSeriesPointEvents events;
@@ -3930,6 +3936,7 @@ class ColumnSeriesPointBuilder
 // Target: abstract class ColumnSeriesPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnSeriesPointEvents extends ColumnSeriesPointEvents {
   @override
   final Function click;
@@ -4091,6 +4098,7 @@ class ColumnSeriesPointEventsBuilder
 // Target: abstract class ColumnSeriesStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnSeriesStates extends ColumnSeriesStates {
   @override
   final ColumnSeriesStatesHover hover;
@@ -4171,6 +4179,7 @@ class ColumnSeriesStatesBuilder
 // Target: abstract class ColumnSeriesStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnSeriesStatesHover extends ColumnSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -4319,6 +4328,7 @@ class ColumnSeriesStatesHoverBuilder
 // Target: abstract class ColumnSeriesStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnSeriesStatesHoverHalo extends ColumnSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -4424,6 +4434,7 @@ class ColumnSeriesStatesHoverHaloBuilder
 // Target: abstract class ColumnSeriesTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnSeriesTooltip extends ColumnSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4684,6 +4695,7 @@ class ColumnSeriesTooltipBuilder
 // Target: abstract class ColumnSeriesZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnSeriesZones extends ColumnSeriesZones {
   @override
   final String className;

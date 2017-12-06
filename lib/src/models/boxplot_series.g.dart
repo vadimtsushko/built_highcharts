@@ -1775,6 +1775,7 @@ class _$BoxplotSeriesZonesSerializer
 // Target: abstract class BoxplotSeries
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BoxplotSeries extends BoxplotSeries {
   @override
   final bool allowPointSelect;
@@ -2605,6 +2606,7 @@ class BoxplotSeriesBuilder
 // Target: abstract class BoxplotSeriesData
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BoxplotSeriesData extends BoxplotSeriesData {
   @override
   final String className;
@@ -2916,6 +2918,7 @@ class BoxplotSeriesDataBuilder
 // Target: abstract class BoxplotSeriesDataEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BoxplotSeriesDataEvents extends BoxplotSeriesDataEvents {
   @override
   final Function click;
@@ -3077,6 +3080,7 @@ class BoxplotSeriesDataEventsBuilder
 // Target: abstract class BoxplotSeriesEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BoxplotSeriesEvents extends BoxplotSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3253,6 +3257,7 @@ class BoxplotSeriesEventsBuilder
 // Target: abstract class BoxplotSeriesPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BoxplotSeriesPoint extends BoxplotSeriesPoint {
   @override
   final BoxplotSeriesPointEvents events;
@@ -3333,6 +3338,7 @@ class BoxplotSeriesPointBuilder
 // Target: abstract class BoxplotSeriesPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BoxplotSeriesPointEvents extends BoxplotSeriesPointEvents {
   @override
   final Function click;
@@ -3494,6 +3500,7 @@ class BoxplotSeriesPointEventsBuilder
 // Target: abstract class BoxplotSeriesStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BoxplotSeriesStates extends BoxplotSeriesStates {
   @override
   final BoxplotSeriesStatesHover hover;
@@ -3574,6 +3581,7 @@ class BoxplotSeriesStatesBuilder
 // Target: abstract class BoxplotSeriesStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BoxplotSeriesStatesHover extends BoxplotSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -3722,6 +3730,7 @@ class BoxplotSeriesStatesHoverBuilder
 // Target: abstract class BoxplotSeriesStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BoxplotSeriesStatesHoverHalo extends BoxplotSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -3827,6 +3836,7 @@ class BoxplotSeriesStatesHoverHaloBuilder
 // Target: abstract class BoxplotSeriesTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BoxplotSeriesTooltip extends BoxplotSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4088,6 +4098,7 @@ class BoxplotSeriesTooltipBuilder
 // Target: abstract class BoxplotSeriesZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BoxplotSeriesZones extends BoxplotSeriesZones {
   @override
   final String className;

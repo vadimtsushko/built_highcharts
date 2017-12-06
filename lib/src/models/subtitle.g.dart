@@ -140,6 +140,7 @@ class _$SubtitleSerializer implements StructuredSerializer<Subtitle> {
 // Target: abstract class Subtitle
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$Subtitle extends Subtitle {
   @override
   final String align;

@@ -92,6 +92,60 @@ class _$SeriesSerializer implements StructuredSerializer<Series> {
         ..add(serializers.serialize(object.zIndex,
             specifiedType: const FullType(num)));
     }
+    if (object.lineWidth != null) {
+      result
+        ..add('lineWidth')
+        ..add(serializers.serialize(object.lineWidth,
+            specifiedType: const FullType(num)));
+    }
+    if (object.dashStyle != null) {
+      result
+        ..add('dashStyle')
+        ..add(serializers.serialize(object.dashStyle,
+            specifiedType: const FullType(String)));
+    }
+    if (object.color != null) {
+      result
+        ..add('color')
+        ..add(serializers.serialize(object.color,
+            specifiedType: const FullType(String)));
+    }
+    if (object.fillOpacity != null) {
+      result
+        ..add('fillOpacity')
+        ..add(serializers.serialize(object.fillOpacity,
+            specifiedType: const FullType(num)));
+    }
+    if (object.shadow != null) {
+      result
+        ..add('shadow')
+        ..add(serializers.serialize(object.shadow,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.showInLegend != null) {
+      result
+        ..add('showInLegend')
+        ..add(serializers.serialize(object.showInLegend,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.allowPointSelect != null) {
+      result
+        ..add('allowPointSelect')
+        ..add(serializers.serialize(object.allowPointSelect,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.pointPlacement != null) {
+      result
+        ..add('pointPlacement')
+        ..add(serializers.serialize(object.pointPlacement,
+            specifiedType: const FullType(num)));
+    }
+    if (object.marker != null) {
+      result
+        ..add('marker')
+        ..add(serializers.serialize(object.marker,
+            specifiedType: const FullType(PlotOptionsAreasplineMarker)));
+    }
 
     return result;
   }
@@ -155,6 +209,43 @@ class _$SeriesSerializer implements StructuredSerializer<Series> {
           result.zIndex = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
+        case 'lineWidth':
+          result.lineWidth = serializers.deserialize(value,
+              specifiedType: const FullType(num)) as num;
+          break;
+        case 'dashStyle':
+          result.dashStyle = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'color':
+          result.color = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'fillOpacity':
+          result.fillOpacity = serializers.deserialize(value,
+              specifiedType: const FullType(num)) as num;
+          break;
+        case 'shadow':
+          result.shadow = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'showInLegend':
+          result.showInLegend = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'allowPointSelect':
+          result.allowPointSelect = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'pointPlacement':
+          result.pointPlacement = serializers.deserialize(value,
+              specifiedType: const FullType(num)) as num;
+          break;
+        case 'marker':
+          result.marker.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(PlotOptionsAreasplineMarker))
+              as PlotOptionsAreasplineMarker);
+          break;
       }
     }
 
@@ -186,6 +277,7 @@ class _$SeriesDataSerializer implements StructuredSerializer<SeriesData> {
 // Target: abstract class Series
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$Series extends Series {
   @override
   final JsonObject data;
@@ -211,6 +303,24 @@ class _$Series extends Series {
   final JsonObject yAxis;
   @override
   final num zIndex;
+  @override
+  final num lineWidth;
+  @override
+  final String dashStyle;
+  @override
+  final String color;
+  @override
+  final num fillOpacity;
+  @override
+  final bool shadow;
+  @override
+  final bool showInLegend;
+  @override
+  final bool allowPointSelect;
+  @override
+  final num pointPlacement;
+  @override
+  final PlotOptionsAreasplineMarker marker;
 
   factory _$Series([void updates(SeriesBuilder b)]) =>
       (new SeriesBuilder()..update(updates)).build();
@@ -227,7 +337,16 @@ class _$Series extends Series {
       this.type,
       this.xAxis,
       this.yAxis,
-      this.zIndex})
+      this.zIndex,
+      this.lineWidth,
+      this.dashStyle,
+      this.color,
+      this.fillOpacity,
+      this.shadow,
+      this.showInLegend,
+      this.allowPointSelect,
+      this.pointPlacement,
+      this.marker})
       : super._();
 
   @override
@@ -252,7 +371,16 @@ class _$Series extends Series {
         type == other.type &&
         xAxis == other.xAxis &&
         yAxis == other.yAxis &&
-        zIndex == other.zIndex;
+        zIndex == other.zIndex &&
+        lineWidth == other.lineWidth &&
+        dashStyle == other.dashStyle &&
+        color == other.color &&
+        fillOpacity == other.fillOpacity &&
+        shadow == other.shadow &&
+        showInLegend == other.showInLegend &&
+        allowPointSelect == other.allowPointSelect &&
+        pointPlacement == other.pointPlacement &&
+        marker == other.marker;
   }
 
   @override
@@ -267,18 +395,34 @@ class _$Series extends Series {
                                 $jc(
                                     $jc(
                                         $jc(
-                                            $jc($jc(0, data.hashCode),
-                                                dataParser.hashCode),
-                                            dataURL.hashCode),
-                                        id.hashCode),
-                                    index.hashCode),
-                                legendIndex.hashCode),
-                            name.hashCode),
-                        stack.hashCode),
-                    type.hashCode),
-                xAxis.hashCode),
-            yAxis.hashCode),
-        zIndex.hashCode));
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc(
+                                                            $jc(
+                                                                $jc(
+                                                                    $jc(
+                                                                        $jc(
+                                                                            $jc($jc($jc(0, data.hashCode), dataParser.hashCode),
+                                                                                dataURL.hashCode),
+                                                                            id.hashCode),
+                                                                        index.hashCode),
+                                                                    legendIndex.hashCode),
+                                                                name.hashCode),
+                                                            stack.hashCode),
+                                                        type.hashCode),
+                                                    xAxis.hashCode),
+                                                yAxis.hashCode),
+                                            zIndex.hashCode),
+                                        lineWidth.hashCode),
+                                    dashStyle.hashCode),
+                                color.hashCode),
+                            fillOpacity.hashCode),
+                        shadow.hashCode),
+                    showInLegend.hashCode),
+                allowPointSelect.hashCode),
+            pointPlacement.hashCode),
+        marker.hashCode));
   }
 
   @override
@@ -295,7 +439,16 @@ class _$Series extends Series {
           ..add('type', type)
           ..add('xAxis', xAxis)
           ..add('yAxis', yAxis)
-          ..add('zIndex', zIndex))
+          ..add('zIndex', zIndex)
+          ..add('lineWidth', lineWidth)
+          ..add('dashStyle', dashStyle)
+          ..add('color', color)
+          ..add('fillOpacity', fillOpacity)
+          ..add('shadow', shadow)
+          ..add('showInLegend', showInLegend)
+          ..add('allowPointSelect', allowPointSelect)
+          ..add('pointPlacement', pointPlacement)
+          ..add('marker', marker))
         .toString();
   }
 }
@@ -351,6 +504,46 @@ class SeriesBuilder implements Builder<Series, SeriesBuilder> {
   num get zIndex => _$this._zIndex;
   set zIndex(num zIndex) => _$this._zIndex = zIndex;
 
+  num _lineWidth;
+  num get lineWidth => _$this._lineWidth;
+  set lineWidth(num lineWidth) => _$this._lineWidth = lineWidth;
+
+  String _dashStyle;
+  String get dashStyle => _$this._dashStyle;
+  set dashStyle(String dashStyle) => _$this._dashStyle = dashStyle;
+
+  String _color;
+  String get color => _$this._color;
+  set color(String color) => _$this._color = color;
+
+  num _fillOpacity;
+  num get fillOpacity => _$this._fillOpacity;
+  set fillOpacity(num fillOpacity) => _$this._fillOpacity = fillOpacity;
+
+  bool _shadow;
+  bool get shadow => _$this._shadow;
+  set shadow(bool shadow) => _$this._shadow = shadow;
+
+  bool _showInLegend;
+  bool get showInLegend => _$this._showInLegend;
+  set showInLegend(bool showInLegend) => _$this._showInLegend = showInLegend;
+
+  bool _allowPointSelect;
+  bool get allowPointSelect => _$this._allowPointSelect;
+  set allowPointSelect(bool allowPointSelect) =>
+      _$this._allowPointSelect = allowPointSelect;
+
+  num _pointPlacement;
+  num get pointPlacement => _$this._pointPlacement;
+  set pointPlacement(num pointPlacement) =>
+      _$this._pointPlacement = pointPlacement;
+
+  PlotOptionsAreasplineMarkerBuilder _marker;
+  PlotOptionsAreasplineMarkerBuilder get marker =>
+      _$this._marker ??= new PlotOptionsAreasplineMarkerBuilder();
+  set marker(PlotOptionsAreasplineMarkerBuilder marker) =>
+      _$this._marker = marker;
+
   SeriesBuilder();
 
   SeriesBuilder get _$this {
@@ -367,6 +560,15 @@ class SeriesBuilder implements Builder<Series, SeriesBuilder> {
       _xAxis = _$v.xAxis;
       _yAxis = _$v.yAxis;
       _zIndex = _$v.zIndex;
+      _lineWidth = _$v.lineWidth;
+      _dashStyle = _$v.dashStyle;
+      _color = _$v.color;
+      _fillOpacity = _$v.fillOpacity;
+      _shadow = _$v.shadow;
+      _showInLegend = _$v.showInLegend;
+      _allowPointSelect = _$v.allowPointSelect;
+      _pointPlacement = _$v.pointPlacement;
+      _marker = _$v.marker?.toBuilder();
       _$v = null;
     }
     return this;
@@ -398,7 +600,16 @@ class SeriesBuilder implements Builder<Series, SeriesBuilder> {
             type: type,
             xAxis: xAxis,
             yAxis: yAxis,
-            zIndex: zIndex);
+            zIndex: zIndex,
+            lineWidth: lineWidth,
+            dashStyle: dashStyle,
+            color: color,
+            fillOpacity: fillOpacity,
+            shadow: shadow,
+            showInLegend: showInLegend,
+            allowPointSelect: allowPointSelect,
+            pointPlacement: pointPlacement,
+            marker: _marker?.build());
     replace(result);
     return result;
   }
@@ -409,6 +620,7 @@ class SeriesBuilder implements Builder<Series, SeriesBuilder> {
 // Target: abstract class SeriesData
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$SeriesData extends SeriesData {
   factory _$SeriesData([void updates(SeriesDataBuilder b)]) =>
       (new SeriesDataBuilder()..update(updates)).build();

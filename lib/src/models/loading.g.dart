@@ -94,6 +94,7 @@ class _$LoadingSerializer implements StructuredSerializer<Loading> {
 // Target: abstract class Loading
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$Loading extends Loading {
   @override
   final num hideDuration;

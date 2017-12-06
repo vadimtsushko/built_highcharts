@@ -2069,6 +2069,7 @@ class _$YAxisTitleSerializer implements StructuredSerializer<YAxisTitle> {
 // Target: abstract class YAxis
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$YAxis extends YAxis {
   @override
   final bool allowDecimals;
@@ -2974,6 +2975,7 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
 // Target: abstract class YAxisBreaks
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$YAxisBreaks extends YAxisBreaks {
   @override
   final num breakSize;
@@ -3083,6 +3085,7 @@ class YAxisBreaksBuilder implements Builder<YAxisBreaks, YAxisBreaksBuilder> {
 // Target: abstract class YAxisCrosshair
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$YAxisCrosshair extends YAxisCrosshair {
   @override
   final String className;
@@ -3228,6 +3231,7 @@ class YAxisCrosshairBuilder
 // Target: abstract class YAxisEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$YAxisEvents extends YAxisEvents {
   @override
   final Function afterBreaks;
@@ -3360,6 +3364,7 @@ class YAxisEventsBuilder implements Builder<YAxisEvents, YAxisEventsBuilder> {
 // Target: abstract class YAxisLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$YAxisLabels extends YAxisLabels {
   @override
   final String align;
@@ -3687,6 +3692,7 @@ class YAxisLabelsBuilder implements Builder<YAxisLabels, YAxisLabelsBuilder> {
 // Target: abstract class YAxisPlotBands
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$YAxisPlotBands extends YAxisPlotBands {
   @override
   final String borderColor;
@@ -3928,6 +3934,7 @@ class YAxisPlotBandsBuilder
 // Target: abstract class YAxisPlotBandsLabel
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$YAxisPlotBandsLabel extends YAxisPlotBandsLabel {
   @override
   final String align;
@@ -4113,6 +4120,7 @@ class YAxisPlotBandsLabelBuilder
 // Target: abstract class YAxisPlotLines
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$YAxisPlotLines extends YAxisPlotLines {
   @override
   final String className;
@@ -4298,6 +4306,7 @@ class YAxisPlotLinesBuilder
 // Target: abstract class YAxisPlotLinesLabel
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$YAxisPlotLinesLabel extends YAxisPlotLinesLabel {
   @override
   final String align;
@@ -4483,6 +4492,7 @@ class YAxisPlotLinesLabelBuilder
 // Target: abstract class YAxisStackLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$YAxisStackLabels extends YAxisStackLabels {
   @override
   final String align;
@@ -4697,6 +4707,7 @@ class YAxisStackLabelsBuilder
 // Target: abstract class YAxisTitle
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$YAxisTitle extends YAxisTitle {
   @override
   final String align;

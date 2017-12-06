@@ -2101,6 +2101,7 @@ class _$ArearangeSeriesZonesSerializer
 // Target: abstract class ArearangeSeries
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ArearangeSeries extends ArearangeSeries {
   @override
   final bool allowPointSelect;
@@ -2831,6 +2832,7 @@ class ArearangeSeriesBuilder
 // Target: abstract class ArearangeSeriesData
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ArearangeSeriesData extends ArearangeSeriesData {
   @override
   final String className;
@@ -3084,6 +3086,7 @@ class ArearangeSeriesDataBuilder
 // Target: abstract class ArearangeSeriesDataEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ArearangeSeriesDataEvents extends ArearangeSeriesDataEvents {
   @override
   final Function click;
@@ -3245,6 +3248,7 @@ class ArearangeSeriesDataEventsBuilder
 // Target: abstract class ArearangeSeriesDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ArearangeSeriesDataLabels extends ArearangeSeriesDataLabels {
   @override
   final String align;
@@ -3657,6 +3661,7 @@ class ArearangeSeriesDataLabelsBuilder
 // Target: abstract class ArearangeSeriesEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ArearangeSeriesEvents extends ArearangeSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3834,6 +3839,7 @@ class ArearangeSeriesEventsBuilder
 // Target: abstract class ArearangeSeriesPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ArearangeSeriesPoint extends ArearangeSeriesPoint {
   @override
   final ArearangeSeriesPointEvents events;
@@ -3917,6 +3923,7 @@ class ArearangeSeriesPointBuilder
 // Target: abstract class ArearangeSeriesPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ArearangeSeriesPointEvents extends ArearangeSeriesPointEvents {
   @override
   final Function click;
@@ -4078,6 +4085,7 @@ class ArearangeSeriesPointEventsBuilder
 // Target: abstract class ArearangeSeriesStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ArearangeSeriesStates extends ArearangeSeriesStates {
   @override
   final ArearangeSeriesStatesHover hover;
@@ -4159,6 +4167,7 @@ class ArearangeSeriesStatesBuilder
 // Target: abstract class ArearangeSeriesStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ArearangeSeriesStatesHover extends ArearangeSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -4309,6 +4318,7 @@ class ArearangeSeriesStatesHoverBuilder
 // Target: abstract class ArearangeSeriesStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ArearangeSeriesStatesHoverHalo extends ArearangeSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -4414,6 +4424,7 @@ class ArearangeSeriesStatesHoverHaloBuilder
 // Target: abstract class ArearangeSeriesStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ArearangeSeriesStatesHoverMarker
     extends ArearangeSeriesStatesHoverMarker {
   @override
@@ -4605,6 +4616,7 @@ class ArearangeSeriesStatesHoverMarkerBuilder
 // Target: abstract class ArearangeSeriesTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ArearangeSeriesTooltip extends ArearangeSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4867,6 +4879,7 @@ class ArearangeSeriesTooltipBuilder
 // Target: abstract class ArearangeSeriesZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ArearangeSeriesZones extends ArearangeSeriesZones {
   @override
   final String className;

@@ -1991,6 +1991,7 @@ class _$PyramidSeriesZonesSerializer
 // Target: abstract class PyramidSeries
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PyramidSeries extends PyramidSeries {
   @override
   final bool allowPointSelect;
@@ -2586,6 +2587,7 @@ class PyramidSeriesBuilder
 // Target: abstract class PyramidSeriesData
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PyramidSeriesData extends PyramidSeriesData {
   @override
   final String className;
@@ -2824,6 +2826,7 @@ class PyramidSeriesDataBuilder
 // Target: abstract class PyramidSeriesDataEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PyramidSeriesDataEvents extends PyramidSeriesDataEvents {
   @override
   final Function click;
@@ -2985,6 +2988,7 @@ class PyramidSeriesDataEventsBuilder
 // Target: abstract class PyramidSeriesDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PyramidSeriesDataLabels extends PyramidSeriesDataLabels {
   @override
   final String backgroundColor;
@@ -3412,6 +3416,7 @@ class PyramidSeriesDataLabelsBuilder
 // Target: abstract class PyramidSeriesEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PyramidSeriesEvents extends PyramidSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3588,6 +3593,7 @@ class PyramidSeriesEventsBuilder
 // Target: abstract class PyramidSeriesPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PyramidSeriesPoint extends PyramidSeriesPoint {
   @override
   final PyramidSeriesPointEvents events;
@@ -3668,6 +3674,7 @@ class PyramidSeriesPointBuilder
 // Target: abstract class PyramidSeriesPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PyramidSeriesPointEvents extends PyramidSeriesPointEvents {
   @override
   final Function click;
@@ -3845,6 +3852,7 @@ class PyramidSeriesPointEventsBuilder
 // Target: abstract class PyramidSeriesStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PyramidSeriesStates extends PyramidSeriesStates {
   @override
   final PyramidSeriesStatesHover hover;
@@ -3925,6 +3933,7 @@ class PyramidSeriesStatesBuilder
 // Target: abstract class PyramidSeriesStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PyramidSeriesStatesHover extends PyramidSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -4088,6 +4097,7 @@ class PyramidSeriesStatesHoverBuilder
 // Target: abstract class PyramidSeriesStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PyramidSeriesStatesHoverHalo extends PyramidSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -4193,6 +4203,7 @@ class PyramidSeriesStatesHoverHaloBuilder
 // Target: abstract class PyramidSeriesStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PyramidSeriesStatesHoverMarker extends PyramidSeriesStatesHoverMarker {
   @override
   final bool enabled;
@@ -4383,6 +4394,7 @@ class PyramidSeriesStatesHoverMarkerBuilder
 // Target: abstract class PyramidSeriesTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PyramidSeriesTooltip extends PyramidSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4644,6 +4656,7 @@ class PyramidSeriesTooltipBuilder
 // Target: abstract class PyramidSeriesZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PyramidSeriesZones extends PyramidSeriesZones {
   @override
   final String className;

@@ -246,6 +246,7 @@ class _$DataSerializer implements StructuredSerializer<Data> {
 // Target: abstract class Data
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$Data extends Data {
   @override
   final JsonObject columns;

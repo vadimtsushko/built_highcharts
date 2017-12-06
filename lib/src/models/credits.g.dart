@@ -175,6 +175,7 @@ class _$CreditsPositionSerializer
 // Target: abstract class Credits
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$Credits extends Credits {
   @override
   final bool enabled;
@@ -301,6 +302,7 @@ class CreditsBuilder implements Builder<Credits, CreditsBuilder> {
 // Target: abstract class CreditsPosition
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$CreditsPosition extends CreditsPosition {
   @override
   final String align;

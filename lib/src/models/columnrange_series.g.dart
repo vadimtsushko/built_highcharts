@@ -2042,6 +2042,7 @@ class _$ColumnrangeSeriesZonesSerializer
 // Target: abstract class ColumnrangeSeries
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnrangeSeries extends ColumnrangeSeries {
   @override
   final bool allowPointSelect;
@@ -2838,6 +2839,7 @@ class ColumnrangeSeriesBuilder
 // Target: abstract class ColumnrangeSeriesData
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnrangeSeriesData extends ColumnrangeSeriesData {
   @override
   final String className;
@@ -3092,6 +3094,7 @@ class ColumnrangeSeriesDataBuilder
 // Target: abstract class ColumnrangeSeriesDataEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnrangeSeriesDataEvents extends ColumnrangeSeriesDataEvents {
   @override
   final Function click;
@@ -3254,6 +3257,7 @@ class ColumnrangeSeriesDataEventsBuilder
 // Target: abstract class ColumnrangeSeriesDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnrangeSeriesDataLabels extends ColumnrangeSeriesDataLabels {
   @override
   final String align;
@@ -3667,6 +3671,7 @@ class ColumnrangeSeriesDataLabelsBuilder
 // Target: abstract class ColumnrangeSeriesEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnrangeSeriesEvents extends ColumnrangeSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3846,6 +3851,7 @@ class ColumnrangeSeriesEventsBuilder
 // Target: abstract class ColumnrangeSeriesPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnrangeSeriesPoint extends ColumnrangeSeriesPoint {
   @override
   final ColumnrangeSeriesPointEvents events;
@@ -3930,6 +3936,7 @@ class ColumnrangeSeriesPointBuilder
 // Target: abstract class ColumnrangeSeriesPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnrangeSeriesPointEvents extends ColumnrangeSeriesPointEvents {
   @override
   final Function click;
@@ -4092,6 +4099,7 @@ class ColumnrangeSeriesPointEventsBuilder
 // Target: abstract class ColumnrangeSeriesStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnrangeSeriesStates extends ColumnrangeSeriesStates {
   @override
   final ColumnrangeSeriesStatesHover hover;
@@ -4176,6 +4184,7 @@ class ColumnrangeSeriesStatesBuilder
 // Target: abstract class ColumnrangeSeriesStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnrangeSeriesStatesHover extends ColumnrangeSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -4325,6 +4334,7 @@ class ColumnrangeSeriesStatesHoverBuilder
 // Target: abstract class ColumnrangeSeriesStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnrangeSeriesStatesHoverHalo
     extends ColumnrangeSeriesStatesHoverHalo {
   @override
@@ -4432,6 +4442,7 @@ class ColumnrangeSeriesStatesHoverHaloBuilder
 // Target: abstract class ColumnrangeSeriesTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnrangeSeriesTooltip extends ColumnrangeSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4695,6 +4706,7 @@ class ColumnrangeSeriesTooltipBuilder
 // Target: abstract class ColumnrangeSeriesZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ColumnrangeSeriesZones extends ColumnrangeSeriesZones {
   @override
   final String className;

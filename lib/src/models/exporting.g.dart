@@ -474,6 +474,7 @@ class _$ExportingButtonsContextButtonSerializer
 // Target: abstract class Exporting
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$Exporting extends Exporting {
   @override
   final bool allowHTML;
@@ -760,6 +761,7 @@ class ExportingBuilder implements Builder<Exporting, ExportingBuilder> {
 // Target: abstract class ExportingButtons
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ExportingButtons extends ExportingButtons {
   @override
   final ExportingButtonsContextButton contextButton;
@@ -842,6 +844,7 @@ class ExportingButtonsBuilder
 // Target: abstract class ExportingButtonsContextButton
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ExportingButtonsContextButton extends ExportingButtonsContextButton {
   @override
   final String align;

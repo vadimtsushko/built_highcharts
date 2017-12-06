@@ -2005,6 +2005,7 @@ class _$FunnelSeriesZonesSerializer
 // Target: abstract class FunnelSeries
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$FunnelSeries extends FunnelSeries {
   @override
   final bool allowPointSelect;
@@ -2622,6 +2623,7 @@ class FunnelSeriesBuilder
 // Target: abstract class FunnelSeriesData
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$FunnelSeriesData extends FunnelSeriesData {
   @override
   final String className;
@@ -2860,6 +2862,7 @@ class FunnelSeriesDataBuilder
 // Target: abstract class FunnelSeriesDataEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$FunnelSeriesDataEvents extends FunnelSeriesDataEvents {
   @override
   final Function click;
@@ -3020,6 +3023,7 @@ class FunnelSeriesDataEventsBuilder
 // Target: abstract class FunnelSeriesDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$FunnelSeriesDataLabels extends FunnelSeriesDataLabels {
   @override
   final String backgroundColor;
@@ -3446,6 +3450,7 @@ class FunnelSeriesDataLabelsBuilder
 // Target: abstract class FunnelSeriesEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$FunnelSeriesEvents extends FunnelSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3622,6 +3627,7 @@ class FunnelSeriesEventsBuilder
 // Target: abstract class FunnelSeriesPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$FunnelSeriesPoint extends FunnelSeriesPoint {
   @override
   final FunnelSeriesPointEvents events;
@@ -3702,6 +3708,7 @@ class FunnelSeriesPointBuilder
 // Target: abstract class FunnelSeriesPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$FunnelSeriesPointEvents extends FunnelSeriesPointEvents {
   @override
   final Function click;
@@ -3879,6 +3886,7 @@ class FunnelSeriesPointEventsBuilder
 // Target: abstract class FunnelSeriesStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$FunnelSeriesStates extends FunnelSeriesStates {
   @override
   final FunnelSeriesStatesHover hover;
@@ -3959,6 +3967,7 @@ class FunnelSeriesStatesBuilder
 // Target: abstract class FunnelSeriesStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$FunnelSeriesStatesHover extends FunnelSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -4122,6 +4131,7 @@ class FunnelSeriesStatesHoverBuilder
 // Target: abstract class FunnelSeriesStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$FunnelSeriesStatesHoverHalo extends FunnelSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -4227,6 +4237,7 @@ class FunnelSeriesStatesHoverHaloBuilder
 // Target: abstract class FunnelSeriesStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$FunnelSeriesStatesHoverMarker extends FunnelSeriesStatesHoverMarker {
   @override
   final bool enabled;
@@ -4417,6 +4428,7 @@ class FunnelSeriesStatesHoverMarkerBuilder
 // Target: abstract class FunnelSeriesTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$FunnelSeriesTooltip extends FunnelSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4677,6 +4689,7 @@ class FunnelSeriesTooltipBuilder
 // Target: abstract class FunnelSeriesZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$FunnelSeriesZones extends FunnelSeriesZones {
   @override
   final String className;

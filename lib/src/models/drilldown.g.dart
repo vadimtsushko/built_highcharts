@@ -183,6 +183,7 @@ class _$DrilldownDrillUpButtonSerializer
 // Target: abstract class Drilldown
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$Drilldown extends Drilldown {
   @override
   final BuiltMap<String, String> activeAxisLabelStyle;
@@ -334,6 +335,7 @@ class DrilldownBuilder implements Builder<Drilldown, DrilldownBuilder> {
 // Target: abstract class DrilldownDrillUpButton
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$DrilldownDrillUpButton extends DrilldownDrillUpButton {
   @override
   final JsonObject position;

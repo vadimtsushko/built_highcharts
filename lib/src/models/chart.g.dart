@@ -1247,6 +1247,7 @@ class _$ChartResetZoomButtonPositionSerializer
 // Target: abstract class Chart
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$Chart extends Chart {
   @override
   final bool alignTicks;
@@ -1863,6 +1864,7 @@ class ChartBuilder implements Builder<Chart, ChartBuilder> {
 // Target: abstract class ChartEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ChartEvents extends ChartEvents {
   @override
   final Function addSeries;
@@ -2073,6 +2075,7 @@ class ChartEventsBuilder implements Builder<ChartEvents, ChartEventsBuilder> {
 // Target: abstract class ChartOptions3d
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ChartOptions3d extends ChartOptions3d {
   @override
   final num alpha;
@@ -2248,6 +2251,7 @@ class ChartOptions3dBuilder
 // Target: abstract class ChartOptions3dFrame
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ChartOptions3dFrame extends ChartOptions3dFrame {
   @override
   final JsonObject back;
@@ -2360,6 +2364,7 @@ class ChartOptions3dFrameBuilder
 // Target: abstract class ChartOptions3dFrameBack
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ChartOptions3dFrameBack extends ChartOptions3dFrameBack {
   @override
   final String color;
@@ -2464,6 +2469,7 @@ class ChartOptions3dFrameBackBuilder
 // Target: abstract class ChartOptions3dFrameBottom
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ChartOptions3dFrameBottom extends ChartOptions3dFrameBottom {
   @override
   final String color;
@@ -2568,6 +2574,7 @@ class ChartOptions3dFrameBottomBuilder
 // Target: abstract class ChartOptions3dFrameSide
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ChartOptions3dFrameSide extends ChartOptions3dFrameSide {
   @override
   final String color;
@@ -2659,6 +2666,7 @@ class ChartOptions3dFrameSideBuilder
 // Target: abstract class ChartOptions3dFrameTop
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ChartOptions3dFrameTop extends ChartOptions3dFrameTop {
   @override
   final String color;
@@ -2749,6 +2757,7 @@ class ChartOptions3dFrameTopBuilder
 // Target: abstract class ChartResetZoomButton
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ChartResetZoomButton extends ChartResetZoomButton {
   @override
   final JsonObject position;
@@ -2851,6 +2860,7 @@ class ChartResetZoomButtonBuilder
 // Target: abstract class ChartResetZoomButtonPosition
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ChartResetZoomButtonPosition extends ChartResetZoomButtonPosition {
   @override
   final String align;

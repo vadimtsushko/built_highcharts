@@ -82,6 +82,7 @@ abstract class ChartOptions implements Built<ChartOptions, ChartOptionsBuilder> 
 
   @nullable
   YAxis get yAxis;
+
   factory ChartOptions([updates(ChartOptionsBuilder b)]) = _$ChartOptions;
   ChartOptions._();
 }

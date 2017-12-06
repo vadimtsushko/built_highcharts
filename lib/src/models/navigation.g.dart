@@ -278,6 +278,7 @@ class _$NavigationButtonOptionsSerializer
 // Target: abstract class Navigation
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$Navigation extends Navigation {
   @override
   final NavigationButtonOptions buttonOptions;
@@ -403,6 +404,7 @@ class NavigationBuilder implements Builder<Navigation, NavigationBuilder> {
 // Target: abstract class NavigationButtonOptions
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$NavigationButtonOptions extends NavigationButtonOptions {
   @override
   final String align;

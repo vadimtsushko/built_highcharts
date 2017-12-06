@@ -1443,6 +1443,7 @@ class _$SolidgaugeSeriesTooltipSerializer
 // Target: abstract class SolidgaugeSeries
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$SolidgaugeSeries extends SolidgaugeSeries {
   @override
   final bool animation;
@@ -1958,6 +1959,7 @@ class SolidgaugeSeriesBuilder
 // Target: abstract class SolidgaugeSeriesData
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$SolidgaugeSeriesData extends SolidgaugeSeriesData {
   @override
   final String className;
@@ -2197,6 +2199,7 @@ class SolidgaugeSeriesDataBuilder
 // Target: abstract class SolidgaugeSeriesDataEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$SolidgaugeSeriesDataEvents extends SolidgaugeSeriesDataEvents {
   @override
   final Function click;
@@ -2358,6 +2361,7 @@ class SolidgaugeSeriesDataEventsBuilder
 // Target: abstract class SolidgaugeSeriesDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$SolidgaugeSeriesDataLabels extends SolidgaugeSeriesDataLabels {
   @override
   final String align;
@@ -2748,6 +2752,7 @@ class SolidgaugeSeriesDataLabelsBuilder
 // Target: abstract class SolidgaugeSeriesEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$SolidgaugeSeriesEvents extends SolidgaugeSeriesEvents {
   @override
   final Function afterAnimate;
@@ -2926,6 +2931,7 @@ class SolidgaugeSeriesEventsBuilder
 // Target: abstract class SolidgaugeSeriesPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$SolidgaugeSeriesPoint extends SolidgaugeSeriesPoint {
   @override
   final SolidgaugeSeriesPointEvents events;
@@ -3009,6 +3015,7 @@ class SolidgaugeSeriesPointBuilder
 // Target: abstract class SolidgaugeSeriesPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$SolidgaugeSeriesPointEvents extends SolidgaugeSeriesPointEvents {
   @override
   final Function click;
@@ -3171,6 +3178,7 @@ class SolidgaugeSeriesPointEventsBuilder
 // Target: abstract class SolidgaugeSeriesTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$SolidgaugeSeriesTooltip extends SolidgaugeSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;

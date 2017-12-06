@@ -131,6 +131,7 @@ class _$DateTimeLabelFormatsSerializer
 // Target: abstract class DateTimeLabelFormats
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$DateTimeLabelFormats extends DateTimeLabelFormats {
   @override
   final String millisecond;

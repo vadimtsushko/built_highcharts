@@ -201,6 +201,7 @@ class _$PaneBackgroundSerializer
 // Target: abstract class Pane
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$Pane extends Pane {
   @override
   final JsonObject background;
@@ -327,6 +328,7 @@ class PaneBuilder implements Builder<Pane, PaneBuilder> {
 // Target: abstract class PaneBackground
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PaneBackground extends PaneBackground {
   @override
   final String backgroundColor;

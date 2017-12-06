@@ -1819,6 +1819,7 @@ class _$XAxisTitleSerializer implements StructuredSerializer<XAxisTitle> {
 // Target: abstract class XAxis
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$XAxis extends XAxis {
   @override
   final bool allowDecimals;
@@ -2643,6 +2644,7 @@ class XAxisBuilder implements Builder<XAxis, XAxisBuilder> {
 // Target: abstract class XAxisBreaks
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$XAxisBreaks extends XAxisBreaks {
   @override
   final num breakSize;
@@ -2752,6 +2754,7 @@ class XAxisBreaksBuilder implements Builder<XAxisBreaks, XAxisBreaksBuilder> {
 // Target: abstract class XAxisCrosshair
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$XAxisCrosshair extends XAxisCrosshair {
   @override
   final String className;
@@ -2897,6 +2900,7 @@ class XAxisCrosshairBuilder
 // Target: abstract class XAxisEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$XAxisEvents extends XAxisEvents {
   @override
   final Function afterBreaks;
@@ -3029,6 +3033,7 @@ class XAxisEventsBuilder implements Builder<XAxisEvents, XAxisEventsBuilder> {
 // Target: abstract class XAxisLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$XAxisLabels extends XAxisLabels {
   @override
   final String align;
@@ -3356,6 +3361,7 @@ class XAxisLabelsBuilder implements Builder<XAxisLabels, XAxisLabelsBuilder> {
 // Target: abstract class XAxisPlotBands
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$XAxisPlotBands extends XAxisPlotBands {
   @override
   final String borderColor;
@@ -3556,6 +3562,7 @@ class XAxisPlotBandsBuilder
 // Target: abstract class XAxisPlotBandsLabel
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$XAxisPlotBandsLabel extends XAxisPlotBandsLabel {
   @override
   final String align;
@@ -3741,6 +3748,7 @@ class XAxisPlotBandsLabelBuilder
 // Target: abstract class XAxisPlotLines
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$XAxisPlotLines extends XAxisPlotLines {
   @override
   final String className;
@@ -3926,6 +3934,7 @@ class XAxisPlotLinesBuilder
 // Target: abstract class XAxisPlotLinesLabel
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$XAxisPlotLinesLabel extends XAxisPlotLinesLabel {
   @override
   final String align;
@@ -4111,6 +4120,7 @@ class XAxisPlotLinesLabelBuilder
 // Target: abstract class XAxisTitle
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$XAxisTitle extends XAxisTitle {
   @override
   final String align;

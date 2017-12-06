@@ -1624,6 +1624,7 @@ class _$GaugeSeriesTooltipSerializer
 // Target: abstract class GaugeSeries
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$GaugeSeries extends GaugeSeries {
   @override
   final bool animation;
@@ -2171,6 +2172,7 @@ class GaugeSeriesBuilder implements Builder<GaugeSeries, GaugeSeriesBuilder> {
 // Target: abstract class GaugeSeriesData
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$GaugeSeriesData extends GaugeSeriesData {
   @override
   final String className;
@@ -2383,6 +2385,7 @@ class GaugeSeriesDataBuilder
 // Target: abstract class GaugeSeriesDataEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$GaugeSeriesDataEvents extends GaugeSeriesDataEvents {
   @override
   final Function click;
@@ -2542,6 +2545,7 @@ class GaugeSeriesDataEventsBuilder
 // Target: abstract class GaugeSeriesDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$GaugeSeriesDataLabels extends GaugeSeriesDataLabels {
   @override
   final String align;
@@ -2930,6 +2934,7 @@ class GaugeSeriesDataLabelsBuilder
 // Target: abstract class GaugeSeriesDial
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$GaugeSeriesDial extends GaugeSeriesDial {
   @override
   final String backgroundColor;
@@ -3104,6 +3109,7 @@ class GaugeSeriesDialBuilder
 // Target: abstract class GaugeSeriesEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$GaugeSeriesEvents extends GaugeSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3280,6 +3286,7 @@ class GaugeSeriesEventsBuilder
 // Target: abstract class GaugeSeriesPivot
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$GaugeSeriesPivot extends GaugeSeriesPivot {
   @override
   final String backgroundColor;
@@ -3397,6 +3404,7 @@ class GaugeSeriesPivotBuilder
 // Target: abstract class GaugeSeriesPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$GaugeSeriesPoint extends GaugeSeriesPoint {
   @override
   final GaugeSeriesPointEvents events;
@@ -3477,6 +3485,7 @@ class GaugeSeriesPointBuilder
 // Target: abstract class GaugeSeriesPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$GaugeSeriesPointEvents extends GaugeSeriesPointEvents {
   @override
   final Function click;
@@ -3637,6 +3646,7 @@ class GaugeSeriesPointEventsBuilder
 // Target: abstract class GaugeSeriesTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$GaugeSeriesTooltip extends GaugeSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;

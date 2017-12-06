@@ -11,6 +11,7 @@ series:
   -
     name: John
     data: [5, 3, 4, 7, 2]
+    lineWidth: 5
   -
     name: Jane
     data: [2, -2, -3, 2, 1]

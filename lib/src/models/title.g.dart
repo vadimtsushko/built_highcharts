@@ -150,6 +150,7 @@ class _$TitleSerializer implements StructuredSerializer<Title> {
 // Target: abstract class Title
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$Title extends Title {
   @override
   final String align;
