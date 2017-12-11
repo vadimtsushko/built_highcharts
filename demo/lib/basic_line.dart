@@ -26,6 +26,7 @@ void basicLine(_) {
     ..legend.verticalAlign = 'middle'
     ..legend.borderWidth = 0
     ..plotOptions.series.allowPointSelect = true
+    ..plotOptions.line.dataLabels.enabled = true
     ..series.addAll([
       new Series((b) => b
         ..name = 'Tokyo'
