@@ -406,6 +406,8 @@ Serializer<PlotOptionsPie> _$plotOptionsPieSerializer =
     new _$PlotOptionsPieSerializer();
 Serializer<PlotOptionsPieDataLabels> _$plotOptionsPieDataLabelsSerializer =
     new _$PlotOptionsPieDataLabelsSerializer();
+Serializer<DataLabelsFilter> _$dataLabelsFilterSerializer =
+    new _$DataLabelsFilterSerializer();
 Serializer<PlotOptionsPieEvents> _$plotOptionsPieEventsSerializer =
     new _$PlotOptionsPieEventsSerializer();
 Serializer<PlotOptionsPiePoint> _$plotOptionsPiePointSerializer =
@@ -25234,6 +25236,12 @@ class _$PlotOptionsPieDataLabelsSerializer
         ..add(serializers.serialize(object.zIndex,
             specifiedType: const FullType(num)));
     }
+    if (object.filter != null) {
+      result
+        ..add('filter')
+        ..add(serializers.serialize(object.filter,
+            specifiedType: const FullType(DataLabelsFilter)));
+    }
 
     return result;
   }
@@ -25363,6 +25371,74 @@ class _$PlotOptionsPieDataLabelsSerializer
           break;
         case 'zIndex':
           result.zIndex = serializers.deserialize(value,
+              specifiedType: const FullType(num)) as num;
+          break;
+        case 'filter':
+          result.filter.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(DataLabelsFilter))
+              as DataLabelsFilter);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$DataLabelsFilterSerializer
+    implements StructuredSerializer<DataLabelsFilter> {
+  @override
+  final Iterable<Type> types = const [DataLabelsFilter, _$DataLabelsFilter];
+  @override
+  final String wireName = 'DataLabelsFilter';
+
+  @override
+  Iterable serialize(Serializers serializers, DataLabelsFilter object,
+      {FullType specifiedType: FullType.unspecified}) {
+    final result = <Object>[];
+    if (object.operator != null) {
+      result
+        ..add('operator')
+        ..add(serializers.serialize(object.operator,
+            specifiedType: const FullType(String)));
+    }
+    if (object.property != null) {
+      result
+        ..add('property')
+        ..add(serializers.serialize(object.property,
+            specifiedType: const FullType(String)));
+    }
+    if (object.value != null) {
+      result
+        ..add('value')
+        ..add(serializers.serialize(object.value,
+            specifiedType: const FullType(num)));
+    }
+
+    return result;
+  }
+
+  @override
+  DataLabelsFilter deserialize(Serializers serializers, Iterable serialized,
+      {FullType specifiedType: FullType.unspecified}) {
+    final result = new DataLabelsFilterBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final dynamic value = iterator.current;
+      switch (key) {
+        case 'operator':
+          result.operator = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'property':
+          result.property = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'value':
+          result.value = serializers.deserialize(value,
               specifiedType: const FullType(num)) as num;
           break;
       }
@@ -75074,6 +75150,8 @@ class _$PlotOptionsPieDataLabels extends PlotOptionsPieDataLabels {
   final num y;
   @override
   final num zIndex;
+  @override
+  final DataLabelsFilter filter;
 
   factory _$PlotOptionsPieDataLabels(
           [void updates(PlotOptionsPieDataLabelsBuilder b)]) =>
@@ -75107,7 +75185,8 @@ class _$PlotOptionsPieDataLabels extends PlotOptionsPieDataLabels {
       this.verticalAlign,
       this.x,
       this.y,
-      this.zIndex})
+      this.zIndex,
+      this.filter})
       : super._();
 
   @override
@@ -75150,7 +75229,8 @@ class _$PlotOptionsPieDataLabels extends PlotOptionsPieDataLabels {
         verticalAlign == other.verticalAlign &&
         x == other.x &&
         y == other.y &&
-        zIndex == other.zIndex;
+        zIndex == other.zIndex &&
+        filter == other.filter;
   }
 
   @override
@@ -75173,26 +75253,26 @@ class _$PlotOptionsPieDataLabels extends PlotOptionsPieDataLabels {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), connectorColor.hashCode), connectorPadding.hashCode), connectorWidth.hashCode),
-                                                                                crop.hashCode),
-                                                                            defer.hashCode),
-                                                                        distance.hashCode),
-                                                                    enabled.hashCode),
-                                                                format.hashCode),
-                                                            formatter.hashCode),
-                                                        inside.hashCode),
-                                                    overflow.hashCode),
-                                                padding.hashCode),
-                                            rotation.hashCode),
-                                        shadow.hashCode),
-                                    shape.hashCode),
-                                softConnector.hashCode),
-                            style.hashCode),
-                        useHTML.hashCode),
-                    verticalAlign.hashCode),
-                x.hashCode),
-            y.hashCode),
-        zIndex.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, backgroundColor.hashCode), borderColor.hashCode), borderRadius.hashCode), borderWidth.hashCode), className.hashCode), color.hashCode), connectorColor.hashCode), connectorPadding.hashCode), connectorWidth.hashCode), crop.hashCode),
+                                                                                defer.hashCode),
+                                                                            distance.hashCode),
+                                                                        enabled.hashCode),
+                                                                    format.hashCode),
+                                                                formatter.hashCode),
+                                                            inside.hashCode),
+                                                        overflow.hashCode),
+                                                    padding.hashCode),
+                                                rotation.hashCode),
+                                            shadow.hashCode),
+                                        shape.hashCode),
+                                    softConnector.hashCode),
+                                style.hashCode),
+                            useHTML.hashCode),
+                        verticalAlign.hashCode),
+                    x.hashCode),
+                y.hashCode),
+            zIndex.hashCode),
+        filter.hashCode));
   }
 
   @override
@@ -75225,7 +75305,8 @@ class _$PlotOptionsPieDataLabels extends PlotOptionsPieDataLabels {
           ..add('verticalAlign', verticalAlign)
           ..add('x', x)
           ..add('y', y)
-          ..add('zIndex', zIndex))
+          ..add('zIndex', zIndex)
+          ..add('filter', filter))
         .toString();
   }
 }
@@ -75354,6 +75435,11 @@ class PlotOptionsPieDataLabelsBuilder
   num get zIndex => _$this._zIndex;
   set zIndex(num zIndex) => _$this._zIndex = zIndex;
 
+  DataLabelsFilterBuilder _filter;
+  DataLabelsFilterBuilder get filter =>
+      _$this._filter ??= new DataLabelsFilterBuilder();
+  set filter(DataLabelsFilterBuilder filter) => _$this._filter = filter;
+
   PlotOptionsPieDataLabelsBuilder();
 
   PlotOptionsPieDataLabelsBuilder get _$this {
@@ -75386,6 +75472,7 @@ class PlotOptionsPieDataLabelsBuilder
       _x = _$v.x;
       _y = _$v.y;
       _zIndex = _$v.zIndex;
+      _filter = _$v.filter?.toBuilder();
       _$v = null;
     }
     return this;
@@ -75433,7 +75520,109 @@ class PlotOptionsPieDataLabelsBuilder
             verticalAlign: verticalAlign,
             x: x,
             y: y,
-            zIndex: zIndex);
+            zIndex: zIndex,
+            filter: _filter?.build());
+    replace(result);
+    return result;
+  }
+}
+
+// **************************************************************************
+// Generator: BuiltValueGenerator
+// Target: abstract class DataLabelsFilter
+// **************************************************************************
+
+// ignore_for_file: annotate_overrides
+class _$DataLabelsFilter extends DataLabelsFilter {
+  @override
+  final String operator;
+  @override
+  final String property;
+  @override
+  final num value;
+
+  factory _$DataLabelsFilter([void updates(DataLabelsFilterBuilder b)]) =>
+      (new DataLabelsFilterBuilder()..update(updates)).build();
+
+  _$DataLabelsFilter._({this.operator, this.property, this.value}) : super._();
+
+  @override
+  DataLabelsFilter rebuild(void updates(DataLabelsFilterBuilder b)) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  DataLabelsFilterBuilder toBuilder() =>
+      new DataLabelsFilterBuilder()..replace(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    if (identical(other, this)) return true;
+    if (other is! DataLabelsFilter) return false;
+    return operator == other.operator &&
+        property == other.property &&
+        value == other.value;
+  }
+
+  @override
+  int get hashCode {
+    return $jf(
+        $jc($jc($jc(0, operator.hashCode), property.hashCode), value.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('DataLabelsFilter')
+          ..add('operator', operator)
+          ..add('property', property)
+          ..add('value', value))
+        .toString();
+  }
+}
+
+class DataLabelsFilterBuilder
+    implements Builder<DataLabelsFilter, DataLabelsFilterBuilder> {
+  _$DataLabelsFilter _$v;
+
+  String _operator;
+  String get operator => _$this._operator;
+  set operator(String operator) => _$this._operator = operator;
+
+  String _property;
+  String get property => _$this._property;
+  set property(String property) => _$this._property = property;
+
+  num _value;
+  num get value => _$this._value;
+  set value(num value) => _$this._value = value;
+
+  DataLabelsFilterBuilder();
+
+  DataLabelsFilterBuilder get _$this {
+    if (_$v != null) {
+      _operator = _$v.operator;
+      _property = _$v.property;
+      _value = _$v.value;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(DataLabelsFilter other) {
+    if (other == null) throw new ArgumentError.notNull('other');
+    _$v = other as _$DataLabelsFilter;
+  }
+
+  @override
+  void update(void updates(DataLabelsFilterBuilder b)) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$DataLabelsFilter build() {
+    final result = _$v ??
+        new _$DataLabelsFilter._(
+            operator: operator, property: property, value: value);
     replace(result);
     return result;
   }
