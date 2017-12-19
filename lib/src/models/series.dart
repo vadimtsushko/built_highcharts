@@ -5,8 +5,10 @@ import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/json_object.dart';
 import 'datetime_label_formats.dart';
+import 'plot_options.dart';
 
 part 'series.g.dart';
+
     
 abstract class Series implements Built<Series, SeriesBuilder> {
   static Serializer<Series> get serializer => _$seriesSerializer;
@@ -91,7 +93,9 @@ Example:
   @nullable
   String get stack;
   /** 
-   * The type of series. Can be one of <code>area</code>, <code>areaspline</code>, <code>bar</code>, <code>column</code>, <code>line</code>, <code>pie</code>, <code>scatter</code> or <code>spline</code>. From version 2.3, <code>arearange</code>, <code>areasplinerange</code> and <code>columnrange</code> are supported with the highcharts-more.js component. 
+   * The type of series. Can be one of <code>area</code>, <code>areaspline</code>,
+ <code>bar</code>, <code>column</code>, <code>line</code>, <code>pie</code>,
+ <code>scatter</code> or <code>spline</code>. From version 2.3, <code>arearange</code>, <code>areasplinerange</code> and <code>columnrange</code> are supported with the highcharts-more.js component. 
    */
   @nullable
   String get type;
@@ -110,9 +114,45 @@ Example:
    */
   @nullable
   num get zIndex;
+
+  @nullable
+  num get lineWidth;
+
+  /* стиль линии {Solid|ShortDash|ShortDot|ShortDashDot|ShortDashDotDot|Dot|Dash|LongDash|DashDot|LongDashDot|LongDashDotDot} */
+  @nullable
+  String get dashStyle;
+
+  /* цвет линии, цвет заливки (до применения прозрачности fillOpacity)*/
+  @nullable
+  String get color;
+
+  /* прозрачность цвета заливки color от 0 до 1 (area|areaspline)*/
+  @nullable
+  num get fillOpacity;
+
+  /* включает тень под линией*/
+  @nullable
+  bool get shadow;
+
+  /* показывает серию в легенде*/
+  @nullable
+  bool get showInLegend;
+
+  /* разрешает отбор точек на линии*/
+  @nullable
+  bool get allowPointSelect;
+
+  /* сдвиг всего графика вдоль оси X не сдвигая измерения -1,0,1 (включая дробные значения)*/
+  @nullable
+  num get pointPlacement;
+
+  @nullable
+  PlotOptionsAreasplineMarker get marker;
+
   factory Series([updates(SeriesBuilder b)]) = _$Series;
   Series._();
 }
+
 abstract class SeriesData implements Built<SeriesData, SeriesDataBuilder> {
   static Serializer<SeriesData> get serializer => _$seriesDataSerializer;
   factory SeriesData([updates(SeriesDataBuilder b)]) = _$SeriesData;

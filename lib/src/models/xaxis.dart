@@ -10,6 +10,11 @@ part 'xaxis.g.dart';
     
 abstract class XAxis implements Built<XAxis, XAxisBuilder> {
   static Serializer<XAxis> get serializer => _$xAxisSerializer;
+
+  @nullable
+  Scrollbar get scrollbar;
+
+
   /** 
    * Whether to allow decimals in this axis' ticks. When counting integers, like persons or hits on a web page, decimals should be avoided in the labels. 
    */
@@ -916,3 +921,24 @@ abstract class XAxisTitle implements Built<XAxisTitle, XAxisTitleBuilder> {
   factory XAxisTitle([updates(XAxisTitleBuilder b)]) = _$XAxisTitle;
   XAxisTitle._();
 }
+
+
+abstract class Scrollbar implements Built<Scrollbar, ScrollbarBuilder> {
+  static Serializer<Scrollbar> get serializer => _$scrollbarSerializer;
+
+  @nullable
+  bool get enabled;
+
+  @nullable
+  bool get liveRedraw;
+
+  @nullable
+  bool get showFull;
+
+  @nullable
+  int get zIndex;
+
+  factory Scrollbar([updates(ScrollbarBuilder b)]) = _$Scrollbar;
+  Scrollbar._();
+}
+

@@ -341,6 +341,7 @@ class _$TooltipSerializer implements StructuredSerializer<Tooltip> {
 // Target: abstract class Tooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$Tooltip extends Tooltip {
   @override
   final bool animation;

@@ -2892,6 +2892,7 @@ class _$ScatterSeriesZonesSerializer
 // Target: abstract class ScatterSeries
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeries extends ScatterSeries {
   @override
   final bool allowPointSelect;
@@ -3557,6 +3558,7 @@ class ScatterSeriesBuilder
 // Target: abstract class ScatterSeriesData
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesData extends ScatterSeriesData {
   @override
   final String className;
@@ -3811,6 +3813,7 @@ class ScatterSeriesDataBuilder
 // Target: abstract class ScatterSeriesDataEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesDataEvents extends ScatterSeriesDataEvents {
   @override
   final Function click;
@@ -3972,6 +3975,7 @@ class ScatterSeriesDataEventsBuilder
 // Target: abstract class ScatterSeriesDataMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesDataMarker extends ScatterSeriesDataMarker {
   @override
   final bool enabled;
@@ -4163,6 +4167,7 @@ class ScatterSeriesDataMarkerBuilder
 // Target: abstract class ScatterSeriesDataMarkerStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesDataMarkerStates extends ScatterSeriesDataMarkerStates {
   @override
   final ScatterSeriesDataMarkerStatesHover hover;
@@ -4249,6 +4254,7 @@ class ScatterSeriesDataMarkerStatesBuilder
 // Target: abstract class ScatterSeriesDataMarkerStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesDataMarkerStatesHover
     extends ScatterSeriesDataMarkerStatesHover {
   @override
@@ -4402,6 +4408,7 @@ class ScatterSeriesDataMarkerStatesHoverBuilder
 // Target: abstract class ScatterSeriesDataMarkerStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesDataMarkerStatesHoverHalo
     extends ScatterSeriesDataMarkerStatesHoverHalo {
   @override
@@ -4511,6 +4518,7 @@ class ScatterSeriesDataMarkerStatesHoverHaloBuilder
 // Target: abstract class ScatterSeriesDataMarkerStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesDataMarkerStatesHoverMarker
     extends ScatterSeriesDataMarkerStatesHoverMarker {
   @override
@@ -4704,6 +4712,7 @@ class ScatterSeriesDataMarkerStatesHoverMarkerBuilder
 // Target: abstract class ScatterSeriesDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesDataLabels extends ScatterSeriesDataLabels {
   @override
   final String align;
@@ -5094,6 +5103,7 @@ class ScatterSeriesDataLabelsBuilder
 // Target: abstract class ScatterSeriesEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesEvents extends ScatterSeriesEvents {
   @override
   final Function afterAnimate;
@@ -5270,6 +5280,7 @@ class ScatterSeriesEventsBuilder
 // Target: abstract class ScatterSeriesMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesMarker extends ScatterSeriesMarker {
   @override
   final bool enabled;
@@ -5458,6 +5469,7 @@ class ScatterSeriesMarkerBuilder
 // Target: abstract class ScatterSeriesMarkerStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesMarkerStates extends ScatterSeriesMarkerStates {
   @override
   final ScatterSeriesMarkerStatesHover hover;
@@ -5554,6 +5566,7 @@ class ScatterSeriesMarkerStatesBuilder
 // Target: abstract class ScatterSeriesMarkerStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesMarkerStatesHover extends ScatterSeriesMarkerStatesHover {
   @override
   final bool enabled;
@@ -5716,6 +5729,7 @@ class ScatterSeriesMarkerStatesHoverBuilder
 // Target: abstract class ScatterSeriesMarkerStatesSelect
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesMarkerStatesSelect
     extends ScatterSeriesMarkerStatesSelect {
   @override
@@ -5853,6 +5867,7 @@ class ScatterSeriesMarkerStatesSelectBuilder
 // Target: abstract class ScatterSeriesPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesPoint extends ScatterSeriesPoint {
   @override
   final ScatterSeriesPointEvents events;
@@ -5933,6 +5948,7 @@ class ScatterSeriesPointBuilder
 // Target: abstract class ScatterSeriesPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesPointEvents extends ScatterSeriesPointEvents {
   @override
   final Function click;
@@ -6094,6 +6110,7 @@ class ScatterSeriesPointEventsBuilder
 // Target: abstract class ScatterSeriesStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesStates extends ScatterSeriesStates {
   @override
   final ScatterSeriesStatesHover hover;
@@ -6174,6 +6191,7 @@ class ScatterSeriesStatesBuilder
 // Target: abstract class ScatterSeriesStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesStatesHover extends ScatterSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -6324,6 +6342,7 @@ class ScatterSeriesStatesHoverBuilder
 // Target: abstract class ScatterSeriesStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesStatesHoverHalo extends ScatterSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -6429,6 +6448,7 @@ class ScatterSeriesStatesHoverHaloBuilder
 // Target: abstract class ScatterSeriesStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesStatesHoverMarker extends ScatterSeriesStatesHoverMarker {
   @override
   final bool enabled;
@@ -6619,6 +6639,7 @@ class ScatterSeriesStatesHoverMarkerBuilder
 // Target: abstract class ScatterSeriesTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesTooltip extends ScatterSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -6880,6 +6901,7 @@ class ScatterSeriesTooltipBuilder
 // Target: abstract class ScatterSeriesZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ScatterSeriesZones extends ScatterSeriesZones {
   @override
   final String className;

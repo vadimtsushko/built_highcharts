@@ -3029,6 +3029,7 @@ class _$AreasplineSeriesZonesSerializer
 // Target: abstract class AreasplineSeries
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeries extends AreasplineSeries {
   @override
   final bool allowPointSelect;
@@ -3818,6 +3819,7 @@ class AreasplineSeriesBuilder
 // Target: abstract class AreasplineSeriesData
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesData extends AreasplineSeriesData {
   @override
   final String className;
@@ -4074,6 +4076,7 @@ class AreasplineSeriesDataBuilder
 // Target: abstract class AreasplineSeriesDataEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesDataEvents extends AreasplineSeriesDataEvents {
   @override
   final Function click;
@@ -4235,6 +4238,7 @@ class AreasplineSeriesDataEventsBuilder
 // Target: abstract class AreasplineSeriesDataMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesDataMarker extends AreasplineSeriesDataMarker {
   @override
   final bool enabled;
@@ -4426,6 +4430,7 @@ class AreasplineSeriesDataMarkerBuilder
 // Target: abstract class AreasplineSeriesDataMarkerStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesDataMarkerStates
     extends AreasplineSeriesDataMarkerStates {
   @override
@@ -4513,6 +4518,7 @@ class AreasplineSeriesDataMarkerStatesBuilder
 // Target: abstract class AreasplineSeriesDataMarkerStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesDataMarkerStatesHover
     extends AreasplineSeriesDataMarkerStatesHover {
   @override
@@ -4667,6 +4673,7 @@ class AreasplineSeriesDataMarkerStatesHoverBuilder
 // Target: abstract class AreasplineSeriesDataMarkerStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesDataMarkerStatesHoverHalo
     extends AreasplineSeriesDataMarkerStatesHoverHalo {
   @override
@@ -4777,6 +4784,7 @@ class AreasplineSeriesDataMarkerStatesHoverHaloBuilder
 // Target: abstract class AreasplineSeriesDataMarkerStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesDataMarkerStatesHoverMarker
     extends AreasplineSeriesDataMarkerStatesHoverMarker {
   @override
@@ -4973,6 +4981,7 @@ class AreasplineSeriesDataMarkerStatesHoverMarkerBuilder
 // Target: abstract class AreasplineSeriesDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesDataLabels extends AreasplineSeriesDataLabels {
   @override
   final String align;
@@ -5363,6 +5372,7 @@ class AreasplineSeriesDataLabelsBuilder
 // Target: abstract class AreasplineSeriesEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesEvents extends AreasplineSeriesEvents {
   @override
   final Function afterAnimate;
@@ -5541,6 +5551,7 @@ class AreasplineSeriesEventsBuilder
 // Target: abstract class AreasplineSeriesMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesMarker extends AreasplineSeriesMarker {
   @override
   final bool enabled;
@@ -5731,6 +5742,7 @@ class AreasplineSeriesMarkerBuilder
 // Target: abstract class AreasplineSeriesMarkerStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesMarkerStates extends AreasplineSeriesMarkerStates {
   @override
   final AreasplineSeriesMarkerStatesHover hover;
@@ -5828,6 +5840,7 @@ class AreasplineSeriesMarkerStatesBuilder
 // Target: abstract class AreasplineSeriesMarkerStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesMarkerStatesHover
     extends AreasplineSeriesMarkerStatesHover {
   @override
@@ -5991,6 +6004,7 @@ class AreasplineSeriesMarkerStatesHoverBuilder
 // Target: abstract class AreasplineSeriesMarkerStatesSelect
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesMarkerStatesSelect
     extends AreasplineSeriesMarkerStatesSelect {
   @override
@@ -6129,6 +6143,7 @@ class AreasplineSeriesMarkerStatesSelectBuilder
 // Target: abstract class AreasplineSeriesPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesPoint extends AreasplineSeriesPoint {
   @override
   final AreasplineSeriesPointEvents events;
@@ -6212,6 +6227,7 @@ class AreasplineSeriesPointBuilder
 // Target: abstract class AreasplineSeriesPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesPointEvents extends AreasplineSeriesPointEvents {
   @override
   final Function click;
@@ -6374,6 +6390,7 @@ class AreasplineSeriesPointEventsBuilder
 // Target: abstract class AreasplineSeriesStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesStates extends AreasplineSeriesStates {
   @override
   final AreasplineSeriesStatesHover hover;
@@ -6457,6 +6474,7 @@ class AreasplineSeriesStatesBuilder
 // Target: abstract class AreasplineSeriesStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesStatesHover extends AreasplineSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -6608,6 +6626,7 @@ class AreasplineSeriesStatesHoverBuilder
 // Target: abstract class AreasplineSeriesStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesStatesHoverHalo
     extends AreasplineSeriesStatesHoverHalo {
   @override
@@ -6715,6 +6734,7 @@ class AreasplineSeriesStatesHoverHaloBuilder
 // Target: abstract class AreasplineSeriesStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesStatesHoverMarker
     extends AreasplineSeriesStatesHoverMarker {
   @override
@@ -6906,6 +6926,7 @@ class AreasplineSeriesStatesHoverMarkerBuilder
 // Target: abstract class AreasplineSeriesTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesTooltip extends AreasplineSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -7169,6 +7190,7 @@ class AreasplineSeriesTooltipBuilder
 // Target: abstract class AreasplineSeriesZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$AreasplineSeriesZones extends AreasplineSeriesZones {
   @override
   final String className;

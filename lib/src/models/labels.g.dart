@@ -127,6 +127,7 @@ class _$LabelsItemsSerializer implements StructuredSerializer<LabelsItems> {
 // Target: abstract class Labels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$Labels extends Labels {
   @override
   final JsonObject items;
@@ -213,6 +214,7 @@ class LabelsBuilder implements Builder<Labels, LabelsBuilder> {
 // Target: abstract class LabelsItems
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$LabelsItems extends LabelsItems {
   @override
   final String html;

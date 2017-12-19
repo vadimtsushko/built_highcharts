@@ -1879,6 +1879,7 @@ class _$HeatmapSeriesZonesSerializer
 // Target: abstract class HeatmapSeries
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$HeatmapSeries extends HeatmapSeries {
   @override
   final bool allowPointSelect;
@@ -2541,6 +2542,7 @@ class HeatmapSeriesBuilder
 // Target: abstract class HeatmapSeriesData
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesData extends HeatmapSeriesData {
   @override
   final String className;
@@ -2794,6 +2796,7 @@ class HeatmapSeriesDataBuilder
 // Target: abstract class HeatmapSeriesDataEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesDataEvents extends HeatmapSeriesDataEvents {
   @override
   final Function click;
@@ -2955,6 +2958,7 @@ class HeatmapSeriesDataEventsBuilder
 // Target: abstract class HeatmapSeriesDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesDataLabels extends HeatmapSeriesDataLabels {
   @override
   final String align;
@@ -3345,6 +3349,7 @@ class HeatmapSeriesDataLabelsBuilder
 // Target: abstract class HeatmapSeriesEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesEvents extends HeatmapSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3521,6 +3526,7 @@ class HeatmapSeriesEventsBuilder
 // Target: abstract class HeatmapSeriesPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesPoint extends HeatmapSeriesPoint {
   @override
   final HeatmapSeriesPointEvents events;
@@ -3601,6 +3607,7 @@ class HeatmapSeriesPointBuilder
 // Target: abstract class HeatmapSeriesPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesPointEvents extends HeatmapSeriesPointEvents {
   @override
   final Function click;
@@ -3762,6 +3769,7 @@ class HeatmapSeriesPointEventsBuilder
 // Target: abstract class HeatmapSeriesStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesStates extends HeatmapSeriesStates {
   @override
   final HeatmapSeriesStatesHover hover;
@@ -3842,6 +3850,7 @@ class HeatmapSeriesStatesBuilder
 // Target: abstract class HeatmapSeriesStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesStatesHover extends HeatmapSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -3990,6 +3999,7 @@ class HeatmapSeriesStatesHoverBuilder
 // Target: abstract class HeatmapSeriesStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesStatesHoverHalo extends HeatmapSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -4095,6 +4105,7 @@ class HeatmapSeriesStatesHoverHaloBuilder
 // Target: abstract class HeatmapSeriesTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesTooltip extends HeatmapSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4356,6 +4367,7 @@ class HeatmapSeriesTooltipBuilder
 // Target: abstract class HeatmapSeriesZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesZones extends HeatmapSeriesZones {
   @override
   final String className;

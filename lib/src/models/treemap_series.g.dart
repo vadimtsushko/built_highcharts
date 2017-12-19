@@ -1995,6 +1995,7 @@ class _$TreemapSeriesZonesSerializer
 // Target: abstract class TreemapSeries
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$TreemapSeries extends TreemapSeries {
   @override
   final bool allowDrillToNode;
@@ -2739,6 +2740,7 @@ class TreemapSeriesBuilder
 // Target: abstract class TreemapSeriesData
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$TreemapSeriesData extends TreemapSeriesData {
   @override
   final String className;
@@ -2992,6 +2994,7 @@ class TreemapSeriesDataBuilder
 // Target: abstract class TreemapSeriesDataEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$TreemapSeriesDataEvents extends TreemapSeriesDataEvents {
   @override
   final Function click;
@@ -3153,6 +3156,7 @@ class TreemapSeriesDataEventsBuilder
 // Target: abstract class TreemapSeriesDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$TreemapSeriesDataLabels extends TreemapSeriesDataLabels {
   @override
   final String align;
@@ -3543,6 +3547,7 @@ class TreemapSeriesDataLabelsBuilder
 // Target: abstract class TreemapSeriesEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$TreemapSeriesEvents extends TreemapSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3719,6 +3724,7 @@ class TreemapSeriesEventsBuilder
 // Target: abstract class TreemapSeriesLevels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$TreemapSeriesLevels extends TreemapSeriesLevels {
   @override
   final String borderColor;
@@ -3895,6 +3901,7 @@ class TreemapSeriesLevelsBuilder
 // Target: abstract class TreemapSeriesPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$TreemapSeriesPoint extends TreemapSeriesPoint {
   @override
   final TreemapSeriesPointEvents events;
@@ -3975,6 +3982,7 @@ class TreemapSeriesPointBuilder
 // Target: abstract class TreemapSeriesPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$TreemapSeriesPointEvents extends TreemapSeriesPointEvents {
   @override
   final Function click;
@@ -4136,6 +4144,7 @@ class TreemapSeriesPointEventsBuilder
 // Target: abstract class TreemapSeriesStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$TreemapSeriesStates extends TreemapSeriesStates {
   @override
   final TreemapSeriesStatesHover hover;
@@ -4216,6 +4225,7 @@ class TreemapSeriesStatesBuilder
 // Target: abstract class TreemapSeriesStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$TreemapSeriesStatesHover extends TreemapSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -4364,6 +4374,7 @@ class TreemapSeriesStatesHoverBuilder
 // Target: abstract class TreemapSeriesTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$TreemapSeriesTooltip extends TreemapSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4625,6 +4636,7 @@ class TreemapSeriesTooltipBuilder
 // Target: abstract class TreemapSeriesZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$TreemapSeriesZones extends TreemapSeriesZones {
   @override
   final String className;

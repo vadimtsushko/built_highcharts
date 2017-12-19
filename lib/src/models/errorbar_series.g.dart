@@ -1653,6 +1653,7 @@ class _$ErrorbarSeriesZonesSerializer
 // Target: abstract class ErrorbarSeries
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ErrorbarSeries extends ErrorbarSeries {
   @override
   final bool allowPointSelect;
@@ -2407,6 +2408,7 @@ class ErrorbarSeriesBuilder
 // Target: abstract class ErrorbarSeriesData
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ErrorbarSeriesData extends ErrorbarSeriesData {
   @override
   final String className;
@@ -2632,6 +2634,7 @@ class ErrorbarSeriesDataBuilder
 // Target: abstract class ErrorbarSeriesDataEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ErrorbarSeriesDataEvents extends ErrorbarSeriesDataEvents {
   @override
   final Function click;
@@ -2793,6 +2796,7 @@ class ErrorbarSeriesDataEventsBuilder
 // Target: abstract class ErrorbarSeriesEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ErrorbarSeriesEvents extends ErrorbarSeriesEvents {
   @override
   final Function afterAnimate;
@@ -2970,6 +2974,7 @@ class ErrorbarSeriesEventsBuilder
 // Target: abstract class ErrorbarSeriesPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ErrorbarSeriesPoint extends ErrorbarSeriesPoint {
   @override
   final ErrorbarSeriesPointEvents events;
@@ -3051,6 +3056,7 @@ class ErrorbarSeriesPointBuilder
 // Target: abstract class ErrorbarSeriesPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ErrorbarSeriesPointEvents extends ErrorbarSeriesPointEvents {
   @override
   final Function click;
@@ -3212,6 +3218,7 @@ class ErrorbarSeriesPointEventsBuilder
 // Target: abstract class ErrorbarSeriesStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ErrorbarSeriesStates extends ErrorbarSeriesStates {
   @override
   final ErrorbarSeriesStatesHover hover;
@@ -3293,6 +3300,7 @@ class ErrorbarSeriesStatesBuilder
 // Target: abstract class ErrorbarSeriesStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ErrorbarSeriesStatesHover extends ErrorbarSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -3441,6 +3449,7 @@ class ErrorbarSeriesStatesHoverBuilder
 // Target: abstract class ErrorbarSeriesStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ErrorbarSeriesStatesHoverHalo extends ErrorbarSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -3546,6 +3555,7 @@ class ErrorbarSeriesStatesHoverHaloBuilder
 // Target: abstract class ErrorbarSeriesTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ErrorbarSeriesTooltip extends ErrorbarSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -3807,6 +3817,7 @@ class ErrorbarSeriesTooltipBuilder
 // Target: abstract class ErrorbarSeriesZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ErrorbarSeriesZones extends ErrorbarSeriesZones {
   @override
   final String className;

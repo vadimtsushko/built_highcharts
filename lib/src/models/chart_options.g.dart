@@ -243,6 +243,7 @@ class _$ChartOptionsSerializer implements StructuredSerializer<ChartOptions> {
 // Target: abstract class ChartOptions
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$ChartOptions extends ChartOptions {
   @override
   final Chart chart;

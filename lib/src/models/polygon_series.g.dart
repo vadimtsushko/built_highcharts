@@ -2872,6 +2872,7 @@ class _$PolygonSeriesZonesSerializer
 // Target: abstract class PolygonSeries
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeries extends PolygonSeries {
   @override
   final bool allowPointSelect;
@@ -3514,6 +3515,7 @@ class PolygonSeriesBuilder
 // Target: abstract class PolygonSeriesData
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesData extends PolygonSeriesData {
   @override
   final String className;
@@ -3768,6 +3770,7 @@ class PolygonSeriesDataBuilder
 // Target: abstract class PolygonSeriesDataEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesDataEvents extends PolygonSeriesDataEvents {
   @override
   final Function click;
@@ -3929,6 +3932,7 @@ class PolygonSeriesDataEventsBuilder
 // Target: abstract class PolygonSeriesDataMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesDataMarker extends PolygonSeriesDataMarker {
   @override
   final bool enabled;
@@ -4120,6 +4124,7 @@ class PolygonSeriesDataMarkerBuilder
 // Target: abstract class PolygonSeriesDataMarkerStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesDataMarkerStates extends PolygonSeriesDataMarkerStates {
   @override
   final PolygonSeriesDataMarkerStatesHover hover;
@@ -4206,6 +4211,7 @@ class PolygonSeriesDataMarkerStatesBuilder
 // Target: abstract class PolygonSeriesDataMarkerStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesDataMarkerStatesHover
     extends PolygonSeriesDataMarkerStatesHover {
   @override
@@ -4359,6 +4365,7 @@ class PolygonSeriesDataMarkerStatesHoverBuilder
 // Target: abstract class PolygonSeriesDataMarkerStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesDataMarkerStatesHoverHalo
     extends PolygonSeriesDataMarkerStatesHoverHalo {
   @override
@@ -4468,6 +4475,7 @@ class PolygonSeriesDataMarkerStatesHoverHaloBuilder
 // Target: abstract class PolygonSeriesDataMarkerStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesDataMarkerStatesHoverMarker
     extends PolygonSeriesDataMarkerStatesHoverMarker {
   @override
@@ -4661,6 +4669,7 @@ class PolygonSeriesDataMarkerStatesHoverMarkerBuilder
 // Target: abstract class PolygonSeriesDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesDataLabels extends PolygonSeriesDataLabels {
   @override
   final String align;
@@ -5051,6 +5060,7 @@ class PolygonSeriesDataLabelsBuilder
 // Target: abstract class PolygonSeriesEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesEvents extends PolygonSeriesEvents {
   @override
   final Function afterAnimate;
@@ -5227,6 +5237,7 @@ class PolygonSeriesEventsBuilder
 // Target: abstract class PolygonSeriesMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesMarker extends PolygonSeriesMarker {
   @override
   final bool enabled;
@@ -5415,6 +5426,7 @@ class PolygonSeriesMarkerBuilder
 // Target: abstract class PolygonSeriesMarkerStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesMarkerStates extends PolygonSeriesMarkerStates {
   @override
   final PolygonSeriesMarkerStatesHover hover;
@@ -5511,6 +5523,7 @@ class PolygonSeriesMarkerStatesBuilder
 // Target: abstract class PolygonSeriesMarkerStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesMarkerStatesHover extends PolygonSeriesMarkerStatesHover {
   @override
   final bool enabled;
@@ -5673,6 +5686,7 @@ class PolygonSeriesMarkerStatesHoverBuilder
 // Target: abstract class PolygonSeriesMarkerStatesSelect
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesMarkerStatesSelect
     extends PolygonSeriesMarkerStatesSelect {
   @override
@@ -5810,6 +5824,7 @@ class PolygonSeriesMarkerStatesSelectBuilder
 // Target: abstract class PolygonSeriesPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesPoint extends PolygonSeriesPoint {
   @override
   final PolygonSeriesPointEvents events;
@@ -5890,6 +5905,7 @@ class PolygonSeriesPointBuilder
 // Target: abstract class PolygonSeriesPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesPointEvents extends PolygonSeriesPointEvents {
   @override
   final Function click;
@@ -6051,6 +6067,7 @@ class PolygonSeriesPointEventsBuilder
 // Target: abstract class PolygonSeriesStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesStates extends PolygonSeriesStates {
   @override
   final PolygonSeriesStatesHover hover;
@@ -6131,6 +6148,7 @@ class PolygonSeriesStatesBuilder
 // Target: abstract class PolygonSeriesStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesStatesHover extends PolygonSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -6281,6 +6299,7 @@ class PolygonSeriesStatesHoverBuilder
 // Target: abstract class PolygonSeriesStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesStatesHoverHalo extends PolygonSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -6386,6 +6405,7 @@ class PolygonSeriesStatesHoverHaloBuilder
 // Target: abstract class PolygonSeriesStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesStatesHoverMarker extends PolygonSeriesStatesHoverMarker {
   @override
   final bool enabled;
@@ -6576,6 +6596,7 @@ class PolygonSeriesStatesHoverMarkerBuilder
 // Target: abstract class PolygonSeriesTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesTooltip extends PolygonSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -6837,6 +6858,7 @@ class PolygonSeriesTooltipBuilder
 // Target: abstract class PolygonSeriesZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PolygonSeriesZones extends PolygonSeriesZones {
   @override
   final String className;

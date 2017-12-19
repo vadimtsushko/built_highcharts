@@ -22,6 +22,7 @@ Serializer<XAxisPlotLines> _$xAxisPlotLinesSerializer =
 Serializer<XAxisPlotLinesLabel> _$xAxisPlotLinesLabelSerializer =
     new _$XAxisPlotLinesLabelSerializer();
 Serializer<XAxisTitle> _$xAxisTitleSerializer = new _$XAxisTitleSerializer();
+Serializer<Scrollbar> _$scrollbarSerializer = new _$ScrollbarSerializer();
 
 class _$XAxisSerializer implements StructuredSerializer<XAxis> {
   @override
@@ -33,6 +34,12 @@ class _$XAxisSerializer implements StructuredSerializer<XAxis> {
   Iterable serialize(Serializers serializers, XAxis object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.scrollbar != null) {
+      result
+        ..add('scrollbar')
+        ..add(serializers.serialize(object.scrollbar,
+            specifiedType: const FullType(Scrollbar)));
+    }
     if (object.allowDecimals != null) {
       result
         ..add('allowDecimals')
@@ -428,6 +435,10 @@ class _$XAxisSerializer implements StructuredSerializer<XAxis> {
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'scrollbar':
+          result.scrollbar.replace(serializers.deserialize(value,
+              specifiedType: const FullType(Scrollbar)) as Scrollbar);
+          break;
         case 'allowDecimals':
           result.allowDecimals = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -1814,12 +1825,87 @@ class _$XAxisTitleSerializer implements StructuredSerializer<XAxisTitle> {
   }
 }
 
+class _$ScrollbarSerializer implements StructuredSerializer<Scrollbar> {
+  @override
+  final Iterable<Type> types = const [Scrollbar, _$Scrollbar];
+  @override
+  final String wireName = 'Scrollbar';
+
+  @override
+  Iterable serialize(Serializers serializers, Scrollbar object,
+      {FullType specifiedType: FullType.unspecified}) {
+    final result = <Object>[];
+    if (object.enabled != null) {
+      result
+        ..add('enabled')
+        ..add(serializers.serialize(object.enabled,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.liveRedraw != null) {
+      result
+        ..add('liveRedraw')
+        ..add(serializers.serialize(object.liveRedraw,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.showFull != null) {
+      result
+        ..add('showFull')
+        ..add(serializers.serialize(object.showFull,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.zIndex != null) {
+      result
+        ..add('zIndex')
+        ..add(serializers.serialize(object.zIndex,
+            specifiedType: const FullType(int)));
+    }
+
+    return result;
+  }
+
+  @override
+  Scrollbar deserialize(Serializers serializers, Iterable serialized,
+      {FullType specifiedType: FullType.unspecified}) {
+    final result = new ScrollbarBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final dynamic value = iterator.current;
+      switch (key) {
+        case 'enabled':
+          result.enabled = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'liveRedraw':
+          result.liveRedraw = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'showFull':
+          result.showFull = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'zIndex':
+          result.zIndex = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
 // **************************************************************************
 // Generator: BuiltValueGenerator
 // Target: abstract class XAxis
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$XAxis extends XAxis {
+  @override
+  final Scrollbar scrollbar;
   @override
   final bool allowDecimals;
   @override
@@ -1951,7 +2037,8 @@ class _$XAxis extends XAxis {
       (new XAxisBuilder()..update(updates)).build();
 
   _$XAxis._(
-      {this.allowDecimals,
+      {this.scrollbar,
+      this.allowDecimals,
       this.alternateGridColor,
       this.breaks,
       this.categories,
@@ -2027,7 +2114,8 @@ class _$XAxis extends XAxis {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! XAxis) return false;
-    return allowDecimals == other.allowDecimals &&
+    return scrollbar == other.scrollbar &&
+        allowDecimals == other.allowDecimals &&
         alternateGridColor == other.alternateGridColor &&
         breaks == other.breaks &&
         categories == other.categories &&
@@ -2112,7 +2200,7 @@ class _$XAxis extends XAxis {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowDecimals.hashCode), alternateGridColor.hashCode), breaks.hashCode), categories.hashCode), ceiling.hashCode), className.hashCode), crosshair.hashCode), dateTimeLabelFormats.hashCode), description.hashCode), endOnTick.hashCode), events.hashCode), floor.hashCode), gridLineColor.hashCode), gridLineDashStyle.hashCode), gridLineWidth.hashCode), gridZIndex.hashCode), id.hashCode), labels.hashCode), lineColor.hashCode), lineWidth.hashCode), linkedTo.hashCode), max.hashCode), maxPadding.hashCode), maxZoom.hashCode), min.hashCode), minPadding.hashCode), minRange.hashCode), minTickInterval.hashCode), minorGridLineColor.hashCode), minorGridLineDashStyle.hashCode), minorGridLineWidth.hashCode), minorTickColor.hashCode), minorTickInterval.hashCode), minorTickLength.hashCode), minorTickPosition.hashCode), minorTickWidth.hashCode), offset.hashCode), opposite.hashCode), plotBands.hashCode), plotLines.hashCode), reversed.hashCode), showEmpty.hashCode), showFirstLabel.hashCode), showLastLabel.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, scrollbar.hashCode), allowDecimals.hashCode), alternateGridColor.hashCode), breaks.hashCode), categories.hashCode), ceiling.hashCode), className.hashCode), crosshair.hashCode), dateTimeLabelFormats.hashCode), description.hashCode), endOnTick.hashCode), events.hashCode), floor.hashCode), gridLineColor.hashCode), gridLineDashStyle.hashCode), gridLineWidth.hashCode), gridZIndex.hashCode), id.hashCode), labels.hashCode), lineColor.hashCode), lineWidth.hashCode), linkedTo.hashCode), max.hashCode), maxPadding.hashCode), maxZoom.hashCode), min.hashCode), minPadding.hashCode), minRange.hashCode), minTickInterval.hashCode), minorGridLineColor.hashCode), minorGridLineDashStyle.hashCode), minorGridLineWidth.hashCode), minorTickColor.hashCode), minorTickInterval.hashCode), minorTickLength.hashCode), minorTickPosition.hashCode), minorTickWidth.hashCode), offset.hashCode), opposite.hashCode), plotBands.hashCode), plotLines.hashCode), reversed.hashCode), showEmpty.hashCode), showFirstLabel.hashCode), showLastLabel.hashCode),
                                                                                 softMax.hashCode),
                                                                             softMin.hashCode),
                                                                         startOfWeek.hashCode),
@@ -2137,6 +2225,7 @@ class _$XAxis extends XAxis {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('XAxis')
+          ..add('scrollbar', scrollbar)
           ..add('allowDecimals', allowDecimals)
           ..add('alternateGridColor', alternateGridColor)
           ..add('breaks', breaks)
@@ -2206,6 +2295,11 @@ class _$XAxis extends XAxis {
 
 class XAxisBuilder implements Builder<XAxis, XAxisBuilder> {
   _$XAxis _$v;
+
+  ScrollbarBuilder _scrollbar;
+  ScrollbarBuilder get scrollbar =>
+      _$this._scrollbar ??= new ScrollbarBuilder();
+  set scrollbar(ScrollbarBuilder scrollbar) => _$this._scrollbar = scrollbar;
 
   bool _allowDecimals;
   bool get allowDecimals => _$this._allowDecimals;
@@ -2487,6 +2581,7 @@ class XAxisBuilder implements Builder<XAxis, XAxisBuilder> {
 
   XAxisBuilder get _$this {
     if (_$v != null) {
+      _scrollbar = _$v.scrollbar?.toBuilder();
       _allowDecimals = _$v.allowDecimals;
       _alternateGridColor = _$v.alternateGridColor;
       _breaks = _$v.breaks;
@@ -2570,6 +2665,7 @@ class XAxisBuilder implements Builder<XAxis, XAxisBuilder> {
   _$XAxis build() {
     final result = _$v ??
         new _$XAxis._(
+            scrollbar: _scrollbar?.build(),
             allowDecimals: allowDecimals,
             alternateGridColor: alternateGridColor,
             breaks: breaks,
@@ -2643,6 +2739,7 @@ class XAxisBuilder implements Builder<XAxis, XAxisBuilder> {
 // Target: abstract class XAxisBreaks
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$XAxisBreaks extends XAxisBreaks {
   @override
   final num breakSize;
@@ -2752,6 +2849,7 @@ class XAxisBreaksBuilder implements Builder<XAxisBreaks, XAxisBreaksBuilder> {
 // Target: abstract class XAxisCrosshair
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$XAxisCrosshair extends XAxisCrosshair {
   @override
   final String className;
@@ -2897,6 +2995,7 @@ class XAxisCrosshairBuilder
 // Target: abstract class XAxisEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$XAxisEvents extends XAxisEvents {
   @override
   final Function afterBreaks;
@@ -3029,6 +3128,7 @@ class XAxisEventsBuilder implements Builder<XAxisEvents, XAxisEventsBuilder> {
 // Target: abstract class XAxisLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$XAxisLabels extends XAxisLabels {
   @override
   final String align;
@@ -3356,6 +3456,7 @@ class XAxisLabelsBuilder implements Builder<XAxisLabels, XAxisLabelsBuilder> {
 // Target: abstract class XAxisPlotBands
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$XAxisPlotBands extends XAxisPlotBands {
   @override
   final String borderColor;
@@ -3556,6 +3657,7 @@ class XAxisPlotBandsBuilder
 // Target: abstract class XAxisPlotBandsLabel
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$XAxisPlotBandsLabel extends XAxisPlotBandsLabel {
   @override
   final String align;
@@ -3741,6 +3843,7 @@ class XAxisPlotBandsLabelBuilder
 // Target: abstract class XAxisPlotLines
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$XAxisPlotLines extends XAxisPlotLines {
   @override
   final String className;
@@ -3926,6 +4029,7 @@ class XAxisPlotLinesBuilder
 // Target: abstract class XAxisPlotLinesLabel
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$XAxisPlotLinesLabel extends XAxisPlotLinesLabel {
   @override
   final String align;
@@ -4111,6 +4215,7 @@ class XAxisPlotLinesLabelBuilder
 // Target: abstract class XAxisTitle
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$XAxisTitle extends XAxisTitle {
   @override
   final String align;
@@ -4299,6 +4404,120 @@ class XAxisTitleBuilder implements Builder<XAxisTitle, XAxisTitleBuilder> {
             text: text,
             x: x,
             y: y);
+    replace(result);
+    return result;
+  }
+}
+
+// **************************************************************************
+// Generator: BuiltValueGenerator
+// Target: abstract class Scrollbar
+// **************************************************************************
+
+// ignore_for_file: annotate_overrides
+class _$Scrollbar extends Scrollbar {
+  @override
+  final bool enabled;
+  @override
+  final bool liveRedraw;
+  @override
+  final bool showFull;
+  @override
+  final int zIndex;
+
+  factory _$Scrollbar([void updates(ScrollbarBuilder b)]) =>
+      (new ScrollbarBuilder()..update(updates)).build();
+
+  _$Scrollbar._({this.enabled, this.liveRedraw, this.showFull, this.zIndex})
+      : super._();
+
+  @override
+  Scrollbar rebuild(void updates(ScrollbarBuilder b)) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  ScrollbarBuilder toBuilder() => new ScrollbarBuilder()..replace(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    if (identical(other, this)) return true;
+    if (other is! Scrollbar) return false;
+    return enabled == other.enabled &&
+        liveRedraw == other.liveRedraw &&
+        showFull == other.showFull &&
+        zIndex == other.zIndex;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc($jc($jc(0, enabled.hashCode), liveRedraw.hashCode),
+            showFull.hashCode),
+        zIndex.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('Scrollbar')
+          ..add('enabled', enabled)
+          ..add('liveRedraw', liveRedraw)
+          ..add('showFull', showFull)
+          ..add('zIndex', zIndex))
+        .toString();
+  }
+}
+
+class ScrollbarBuilder implements Builder<Scrollbar, ScrollbarBuilder> {
+  _$Scrollbar _$v;
+
+  bool _enabled;
+  bool get enabled => _$this._enabled;
+  set enabled(bool enabled) => _$this._enabled = enabled;
+
+  bool _liveRedraw;
+  bool get liveRedraw => _$this._liveRedraw;
+  set liveRedraw(bool liveRedraw) => _$this._liveRedraw = liveRedraw;
+
+  bool _showFull;
+  bool get showFull => _$this._showFull;
+  set showFull(bool showFull) => _$this._showFull = showFull;
+
+  int _zIndex;
+  int get zIndex => _$this._zIndex;
+  set zIndex(int zIndex) => _$this._zIndex = zIndex;
+
+  ScrollbarBuilder();
+
+  ScrollbarBuilder get _$this {
+    if (_$v != null) {
+      _enabled = _$v.enabled;
+      _liveRedraw = _$v.liveRedraw;
+      _showFull = _$v.showFull;
+      _zIndex = _$v.zIndex;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(Scrollbar other) {
+    if (other == null) throw new ArgumentError.notNull('other');
+    _$v = other as _$Scrollbar;
+  }
+
+  @override
+  void update(void updates(ScrollbarBuilder b)) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$Scrollbar build() {
+    final result = _$v ??
+        new _$Scrollbar._(
+            enabled: enabled,
+            liveRedraw: liveRedraw,
+            showFull: showFull,
+            zIndex: zIndex);
     replace(result);
     return result;
   }

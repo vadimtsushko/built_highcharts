@@ -2021,6 +2021,7 @@ class _$BarSeriesZonesSerializer
 // Target: abstract class BarSeries
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BarSeries extends BarSeries {
   @override
   final bool allowPointSelect;
@@ -2874,6 +2875,7 @@ class BarSeriesBuilder implements Builder<BarSeries, BarSeriesBuilder> {
 // Target: abstract class BarSeriesData
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BarSeriesData extends BarSeriesData {
   @override
   final String className;
@@ -3111,6 +3113,7 @@ class BarSeriesDataBuilder
 // Target: abstract class BarSeriesDataEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BarSeriesDataEvents extends BarSeriesDataEvents {
   @override
   final Function click;
@@ -3269,6 +3272,7 @@ class BarSeriesDataEventsBuilder
 // Target: abstract class BarSeriesDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BarSeriesDataLabels extends BarSeriesDataLabels {
   @override
   final String align;
@@ -3656,6 +3660,7 @@ class BarSeriesDataLabelsBuilder
 // Target: abstract class BarSeriesEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BarSeriesEvents extends BarSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3832,6 +3837,7 @@ class BarSeriesEventsBuilder
 // Target: abstract class BarSeriesPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BarSeriesPoint extends BarSeriesPoint {
   @override
   final BarSeriesPointEvents events;
@@ -3912,6 +3918,7 @@ class BarSeriesPointBuilder
 // Target: abstract class BarSeriesPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BarSeriesPointEvents extends BarSeriesPointEvents {
   @override
   final Function click;
@@ -4071,6 +4078,7 @@ class BarSeriesPointEventsBuilder
 // Target: abstract class BarSeriesStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BarSeriesStates extends BarSeriesStates {
   @override
   final BarSeriesStatesHover hover;
@@ -4150,6 +4158,7 @@ class BarSeriesStatesBuilder
 // Target: abstract class BarSeriesStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BarSeriesStatesHover extends BarSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -4296,6 +4305,7 @@ class BarSeriesStatesHoverBuilder
 // Target: abstract class BarSeriesStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BarSeriesStatesHoverHalo extends BarSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -4400,6 +4410,7 @@ class BarSeriesStatesHoverHaloBuilder
 // Target: abstract class BarSeriesTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BarSeriesTooltip extends BarSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4660,6 +4671,7 @@ class BarSeriesTooltipBuilder
 // Target: abstract class BarSeriesZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BarSeriesZones extends BarSeriesZones {
   @override
   final String className;

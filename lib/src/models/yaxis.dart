@@ -10,7 +10,9 @@ part 'yaxis.g.dart';
     
 abstract class YAxis implements Built<YAxis, YAxisBuilder> {
   static Serializer<YAxis> get serializer => _$yAxisSerializer;
-  /** 
+
+
+  /**
    * Whether to allow decimals in this axis' ticks. When counting integers, like persons or hits on a web page, decimals should be avoided in the labels. 
    */
   @nullable
@@ -57,7 +59,12 @@ abstract class YAxis implements Built<YAxis, YAxisBuilder> {
    */
   @nullable
   JsonObject get crosshair;
-  /** 
+
+
+  @nullable
+
+
+  /**
    * For a datetime axis, the scale will automatically adjust to the appropriate unit.  This member gives the default string representations used for each unit. For intermediate values, different units may be used, for example the <code>day</code> unit can be used on midnight and <code>hour</code> unit be used for intermediate values on the same axis. For an overview of the replacement codes, see <a href="#Highcharts.dateFormat">dateFormat</a>.
 
 Defaults to:
@@ -1011,7 +1018,10 @@ abstract class YAxisTitle implements Built<YAxisTitle, YAxisTitleBuilder> {
   @nullable
   BuiltMap<String,String> get style;
   /** 
-   * The actual text of the axis title. Horizontal texts can contain HTML,  but rotated texts are painted using vector techniques and must be  clean text. The Y axis title is disabled by setting the <code>text</code> option to <code>null</code>. 
+   * The actual text of the axis title. Horizontal texts can contain HTML, 
+ but rotated texts are painted using vector techniques and must be 
+ clean text. The Y axis title is disabled by setting the <code>text</code>
+ option to <code>null</code>. 
    */
   @nullable
   String get text;
@@ -1028,3 +1038,5 @@ abstract class YAxisTitle implements Built<YAxisTitle, YAxisTitleBuilder> {
   factory YAxisTitle([updates(YAxisTitleBuilder b)]) = _$YAxisTitle;
   YAxisTitle._();
 }
+
+

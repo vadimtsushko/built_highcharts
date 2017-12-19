@@ -2072,6 +2072,7 @@ class _$WaterfallSeriesZonesSerializer
 // Target: abstract class WaterfallSeries
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$WaterfallSeries extends WaterfallSeries {
   @override
   final bool allowPointSelect;
@@ -2925,6 +2926,7 @@ class WaterfallSeriesBuilder
 // Target: abstract class WaterfallSeriesData
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesData extends WaterfallSeriesData {
   @override
   final String className;
@@ -3194,6 +3196,7 @@ class WaterfallSeriesDataBuilder
 // Target: abstract class WaterfallSeriesDataEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesDataEvents extends WaterfallSeriesDataEvents {
   @override
   final Function click;
@@ -3355,6 +3358,7 @@ class WaterfallSeriesDataEventsBuilder
 // Target: abstract class WaterfallSeriesDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesDataLabels extends WaterfallSeriesDataLabels {
   @override
   final String align;
@@ -3745,6 +3749,7 @@ class WaterfallSeriesDataLabelsBuilder
 // Target: abstract class WaterfallSeriesEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesEvents extends WaterfallSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3922,6 +3927,7 @@ class WaterfallSeriesEventsBuilder
 // Target: abstract class WaterfallSeriesPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesPoint extends WaterfallSeriesPoint {
   @override
   final WaterfallSeriesPointEvents events;
@@ -4005,6 +4011,7 @@ class WaterfallSeriesPointBuilder
 // Target: abstract class WaterfallSeriesPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesPointEvents extends WaterfallSeriesPointEvents {
   @override
   final Function click;
@@ -4166,6 +4173,7 @@ class WaterfallSeriesPointEventsBuilder
 // Target: abstract class WaterfallSeriesStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesStates extends WaterfallSeriesStates {
   @override
   final WaterfallSeriesStatesHover hover;
@@ -4247,6 +4255,7 @@ class WaterfallSeriesStatesBuilder
 // Target: abstract class WaterfallSeriesStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesStatesHover extends WaterfallSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -4395,6 +4404,7 @@ class WaterfallSeriesStatesHoverBuilder
 // Target: abstract class WaterfallSeriesStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesStatesHoverHalo extends WaterfallSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -4500,6 +4510,7 @@ class WaterfallSeriesStatesHoverHaloBuilder
 // Target: abstract class WaterfallSeriesTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesTooltip extends WaterfallSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4762,6 +4773,7 @@ class WaterfallSeriesTooltipBuilder
 // Target: abstract class WaterfallSeriesZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesZones extends WaterfallSeriesZones {
   @override
   final String className;

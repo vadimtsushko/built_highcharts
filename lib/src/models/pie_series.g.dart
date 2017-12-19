@@ -2011,6 +2011,7 @@ class _$PieSeriesZonesSerializer
 // Target: abstract class PieSeries
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PieSeries extends PieSeries {
   @override
   final bool allowPointSelect;
@@ -2639,6 +2640,7 @@ class PieSeriesBuilder implements Builder<PieSeries, PieSeriesBuilder> {
 // Target: abstract class PieSeriesData
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PieSeriesData extends PieSeriesData {
   @override
   final String className;
@@ -2891,6 +2893,7 @@ class PieSeriesDataBuilder
 // Target: abstract class PieSeriesDataEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PieSeriesDataEvents extends PieSeriesDataEvents {
   @override
   final Function click;
@@ -3049,6 +3052,7 @@ class PieSeriesDataEventsBuilder
 // Target: abstract class PieSeriesDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PieSeriesDataLabels extends PieSeriesDataLabels {
   @override
   final String backgroundColor;
@@ -3473,6 +3477,7 @@ class PieSeriesDataLabelsBuilder
 // Target: abstract class PieSeriesEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PieSeriesEvents extends PieSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3649,6 +3654,7 @@ class PieSeriesEventsBuilder
 // Target: abstract class PieSeriesPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PieSeriesPoint extends PieSeriesPoint {
   @override
   final PieSeriesPointEvents events;
@@ -3729,6 +3735,7 @@ class PieSeriesPointBuilder
 // Target: abstract class PieSeriesPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PieSeriesPointEvents extends PieSeriesPointEvents {
   @override
   final Function click;
@@ -3904,6 +3911,7 @@ class PieSeriesPointEventsBuilder
 // Target: abstract class PieSeriesStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PieSeriesStates extends PieSeriesStates {
   @override
   final PieSeriesStatesHover hover;
@@ -3983,6 +3991,7 @@ class PieSeriesStatesBuilder
 // Target: abstract class PieSeriesStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PieSeriesStatesHover extends PieSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -4144,6 +4153,7 @@ class PieSeriesStatesHoverBuilder
 // Target: abstract class PieSeriesStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PieSeriesStatesHoverHalo extends PieSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -4248,6 +4258,7 @@ class PieSeriesStatesHoverHaloBuilder
 // Target: abstract class PieSeriesStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PieSeriesStatesHoverMarker extends PieSeriesStatesHoverMarker {
   @override
   final bool enabled;
@@ -4437,6 +4448,7 @@ class PieSeriesStatesHoverMarkerBuilder
 // Target: abstract class PieSeriesTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PieSeriesTooltip extends PieSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4697,6 +4709,7 @@ class PieSeriesTooltipBuilder
 // Target: abstract class PieSeriesZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PieSeriesZones extends PieSeriesZones {
   @override
   final String className;

@@ -109,9 +109,11 @@ addMenuItem(UListElement menu, String title, Function onClick, String source) {
 
   li.append(new AnchorElement()
   ..text = 'Source dart file'
-  ..href = 'https://github.com/vadimtsushko/built_highcharts/blob/master/demo/lib/$source.dart');
+  ..href = '../lib/$source.dart');
+//..href = 'https://github.com/vadimtsushko/built_highcharts/blob/master/demo/lib/$source.dart');
   menu.append(li);
 }
+
 addDynamicMenuItem(UListElement menu, String title, String source) {
   var li = new LIElement();
   li.append(new ButtonElement()
@@ -119,7 +121,8 @@ addDynamicMenuItem(UListElement menu, String title, String source) {
     ..onClick.listen((_) => loadChartFromYaml(source)));
   li.append(new AnchorElement()
     ..text = 'Source yaml config file'
-    ..href = 'https://github.com/vadimtsushko/built_highcharts/blob/master/demo/web/sample_data/$source.yaml');
+    ..href = 'sample_data/$source.yaml');
+  //..href = 'https://github.com/vadimtsushko/built_highcharts/blob/master/demo/web/sample_data/$source.yaml');
 
   menu.append(li);
 }

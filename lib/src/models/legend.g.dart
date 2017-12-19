@@ -589,6 +589,7 @@ class _$LegendTitleSerializer implements StructuredSerializer<LegendTitle> {
 // Target: abstract class Legend
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$Legend extends Legend {
   @override
   final String align;
@@ -1116,6 +1117,7 @@ class LegendBuilder implements Builder<Legend, LegendBuilder> {
 // Target: abstract class LegendNavigation
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$LegendNavigation extends LegendNavigation {
   @override
   final String activeColor;
@@ -1263,6 +1265,7 @@ class LegendNavigationBuilder
 // Target: abstract class LegendTitle
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$LegendTitle extends LegendTitle {
   @override
   final BuiltMap<String, String> style;

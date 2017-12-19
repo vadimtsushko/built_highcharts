@@ -165,6 +165,7 @@ class _$NoDataPositionSerializer
 // Target: abstract class NoData
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$NoData extends NoData {
   @override
   final JsonObject attr;
@@ -277,6 +278,7 @@ class NoDataBuilder implements Builder<NoData, NoDataBuilder> {
 // Target: abstract class NoDataPosition
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$NoDataPosition extends NoDataPosition {
   @override
   final String align;

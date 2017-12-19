@@ -2451,6 +2451,7 @@ class _$BubbleSeriesZonesSerializer
 // Target: abstract class BubbleSeries
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BubbleSeries extends BubbleSeries {
   @override
   final bool allowPointSelect;
@@ -3193,6 +3194,7 @@ class BubbleSeriesBuilder
 // Target: abstract class BubbleSeriesData
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BubbleSeriesData extends BubbleSeriesData {
   @override
   final String className;
@@ -3446,6 +3448,7 @@ class BubbleSeriesDataBuilder
 // Target: abstract class BubbleSeriesDataEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BubbleSeriesDataEvents extends BubbleSeriesDataEvents {
   @override
   final Function click;
@@ -3606,6 +3609,7 @@ class BubbleSeriesDataEventsBuilder
 // Target: abstract class BubbleSeriesDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BubbleSeriesDataLabels extends BubbleSeriesDataLabels {
   @override
   final String align;
@@ -3995,6 +3999,7 @@ class BubbleSeriesDataLabelsBuilder
 // Target: abstract class BubbleSeriesEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BubbleSeriesEvents extends BubbleSeriesEvents {
   @override
   final Function afterAnimate;
@@ -4171,6 +4176,7 @@ class BubbleSeriesEventsBuilder
 // Target: abstract class BubbleSeriesMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BubbleSeriesMarker extends BubbleSeriesMarker {
   @override
   final bool enabled;
@@ -4343,6 +4349,7 @@ class BubbleSeriesMarkerBuilder
 // Target: abstract class BubbleSeriesMarkerStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BubbleSeriesMarkerStates extends BubbleSeriesMarkerStates {
   @override
   final BubbleSeriesMarkerStatesHover hover;
@@ -4439,6 +4446,7 @@ class BubbleSeriesMarkerStatesBuilder
 // Target: abstract class BubbleSeriesMarkerStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BubbleSeriesMarkerStatesHover extends BubbleSeriesMarkerStatesHover {
   @override
   final bool enabled;
@@ -4601,6 +4609,7 @@ class BubbleSeriesMarkerStatesHoverBuilder
 // Target: abstract class BubbleSeriesMarkerStatesSelect
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BubbleSeriesMarkerStatesSelect extends BubbleSeriesMarkerStatesSelect {
   @override
   final bool enabled;
@@ -4737,6 +4746,7 @@ class BubbleSeriesMarkerStatesSelectBuilder
 // Target: abstract class BubbleSeriesPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BubbleSeriesPoint extends BubbleSeriesPoint {
   @override
   final BubbleSeriesPointEvents events;
@@ -4817,6 +4827,7 @@ class BubbleSeriesPointBuilder
 // Target: abstract class BubbleSeriesPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BubbleSeriesPointEvents extends BubbleSeriesPointEvents {
   @override
   final Function click;
@@ -4978,6 +4989,7 @@ class BubbleSeriesPointEventsBuilder
 // Target: abstract class BubbleSeriesStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BubbleSeriesStates extends BubbleSeriesStates {
   @override
   final BubbleSeriesStatesHover hover;
@@ -5058,6 +5070,7 @@ class BubbleSeriesStatesBuilder
 // Target: abstract class BubbleSeriesStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BubbleSeriesStatesHover extends BubbleSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -5208,6 +5221,7 @@ class BubbleSeriesStatesHoverBuilder
 // Target: abstract class BubbleSeriesStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BubbleSeriesStatesHoverHalo extends BubbleSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -5313,6 +5327,7 @@ class BubbleSeriesStatesHoverHaloBuilder
 // Target: abstract class BubbleSeriesStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BubbleSeriesStatesHoverMarker extends BubbleSeriesStatesHoverMarker {
   @override
   final bool enabled;
@@ -5503,6 +5518,7 @@ class BubbleSeriesStatesHoverMarkerBuilder
 // Target: abstract class BubbleSeriesTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BubbleSeriesTooltip extends BubbleSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -5763,6 +5779,7 @@ class BubbleSeriesTooltipBuilder
 // Target: abstract class BubbleSeriesZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$BubbleSeriesZones extends BubbleSeriesZones {
   @override
   final String className;

@@ -40312,6 +40312,7 @@ class _$PlotOptionsWaterfallZonesSerializer
 // Target: abstract class PlotOptions
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptions extends PlotOptions {
   @override
   final PlotOptionsArea area;
@@ -40684,6 +40685,7 @@ class PlotOptionsBuilder implements Builder<PlotOptions, PlotOptionsBuilder> {
 // Target: abstract class PlotOptionsArea
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsArea extends PlotOptionsArea {
   @override
   final bool allowPointSelect;
@@ -41374,6 +41376,7 @@ class PlotOptionsAreaBuilder
 // Target: abstract class PlotOptionsAreaDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaDataLabels extends PlotOptionsAreaDataLabels {
   @override
   final String align;
@@ -41764,6 +41767,7 @@ class PlotOptionsAreaDataLabelsBuilder
 // Target: abstract class PlotOptionsAreaEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaEvents extends PlotOptionsAreaEvents {
   @override
   final Function afterAnimate;
@@ -41941,6 +41945,7 @@ class PlotOptionsAreaEventsBuilder
 // Target: abstract class PlotOptionsAreaMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaMarker extends PlotOptionsAreaMarker {
   @override
   final bool enabled;
@@ -42130,6 +42135,7 @@ class PlotOptionsAreaMarkerBuilder
 // Target: abstract class PlotOptionsAreaMarkerStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaMarkerStates extends PlotOptionsAreaMarkerStates {
   @override
   final PlotOptionsAreaMarkerStatesHover hover;
@@ -42227,6 +42233,7 @@ class PlotOptionsAreaMarkerStatesBuilder
 // Target: abstract class PlotOptionsAreaMarkerStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaMarkerStatesHover
     extends PlotOptionsAreaMarkerStatesHover {
   @override
@@ -42390,6 +42397,7 @@ class PlotOptionsAreaMarkerStatesHoverBuilder
 // Target: abstract class PlotOptionsAreaMarkerStatesSelect
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaMarkerStatesSelect
     extends PlotOptionsAreaMarkerStatesSelect {
   @override
@@ -42527,6 +42535,7 @@ class PlotOptionsAreaMarkerStatesSelectBuilder
 // Target: abstract class PlotOptionsAreaPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaPoint extends PlotOptionsAreaPoint {
   @override
   final PlotOptionsAreaPointEvents events;
@@ -42610,6 +42619,7 @@ class PlotOptionsAreaPointBuilder
 // Target: abstract class PlotOptionsAreaPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaPointEvents extends PlotOptionsAreaPointEvents {
   @override
   final Function click;
@@ -42771,6 +42781,7 @@ class PlotOptionsAreaPointEventsBuilder
 // Target: abstract class PlotOptionsAreaStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaStates extends PlotOptionsAreaStates {
   @override
   final PlotOptionsAreaStatesHover hover;
@@ -42852,6 +42863,7 @@ class PlotOptionsAreaStatesBuilder
 // Target: abstract class PlotOptionsAreaStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaStatesHover extends PlotOptionsAreaStatesHover {
   @override
   final JsonObject animation;
@@ -43002,6 +43014,7 @@ class PlotOptionsAreaStatesHoverBuilder
 // Target: abstract class PlotOptionsAreaStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaStatesHoverHalo extends PlotOptionsAreaStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -43107,6 +43120,7 @@ class PlotOptionsAreaStatesHoverHaloBuilder
 // Target: abstract class PlotOptionsAreaStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaStatesHoverMarker
     extends PlotOptionsAreaStatesHoverMarker {
   @override
@@ -43298,6 +43312,7 @@ class PlotOptionsAreaStatesHoverMarkerBuilder
 // Target: abstract class PlotOptionsAreaTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaTooltip extends PlotOptionsAreaTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -43560,6 +43575,7 @@ class PlotOptionsAreaTooltipBuilder
 // Target: abstract class PlotOptionsAreaZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaZones extends PlotOptionsAreaZones {
   @override
   final String className;
@@ -43689,6 +43705,7 @@ class PlotOptionsAreaZonesBuilder
 // Target: abstract class PlotOptionsArearange
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearange extends PlotOptionsArearange {
   @override
   final bool allowPointSelect;
@@ -44322,6 +44339,7 @@ class PlotOptionsArearangeBuilder
 // Target: abstract class PlotOptionsArearangeDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearangeDataLabels extends PlotOptionsArearangeDataLabels {
   @override
   final String align;
@@ -44735,6 +44753,7 @@ class PlotOptionsArearangeDataLabelsBuilder
 // Target: abstract class PlotOptionsArearangeEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearangeEvents extends PlotOptionsArearangeEvents {
   @override
   final Function afterAnimate;
@@ -44914,6 +44933,7 @@ class PlotOptionsArearangeEventsBuilder
 // Target: abstract class PlotOptionsArearangePoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearangePoint extends PlotOptionsArearangePoint {
   @override
   final PlotOptionsArearangePointEvents events;
@@ -44999,6 +45019,7 @@ class PlotOptionsArearangePointBuilder
 // Target: abstract class PlotOptionsArearangePointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearangePointEvents
     extends PlotOptionsArearangePointEvents {
   @override
@@ -45162,6 +45183,7 @@ class PlotOptionsArearangePointEventsBuilder
 // Target: abstract class PlotOptionsArearangeStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearangeStates extends PlotOptionsArearangeStates {
   @override
   final PlotOptionsArearangeStatesHover hover;
@@ -45247,6 +45269,7 @@ class PlotOptionsArearangeStatesBuilder
 // Target: abstract class PlotOptionsArearangeStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearangeStatesHover
     extends PlotOptionsArearangeStatesHover {
   @override
@@ -45399,6 +45422,7 @@ class PlotOptionsArearangeStatesHoverBuilder
 // Target: abstract class PlotOptionsArearangeStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearangeStatesHoverHalo
     extends PlotOptionsArearangeStatesHoverHalo {
   @override
@@ -45507,6 +45531,7 @@ class PlotOptionsArearangeStatesHoverHaloBuilder
 // Target: abstract class PlotOptionsArearangeStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearangeStatesHoverMarker
     extends PlotOptionsArearangeStatesHoverMarker {
   @override
@@ -45699,6 +45724,7 @@ class PlotOptionsArearangeStatesHoverMarkerBuilder
 // Target: abstract class PlotOptionsArearangeTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearangeTooltip extends PlotOptionsArearangeTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -45963,6 +45989,7 @@ class PlotOptionsArearangeTooltipBuilder
 // Target: abstract class PlotOptionsArearangeZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearangeZones extends PlotOptionsArearangeZones {
   @override
   final String className;
@@ -46094,6 +46121,7 @@ class PlotOptionsArearangeZonesBuilder
 // Target: abstract class PlotOptionsAreaspline
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaspline extends PlotOptionsAreaspline {
   @override
   final bool allowPointSelect;
@@ -46776,6 +46804,7 @@ class PlotOptionsAreasplineBuilder
 // Target: abstract class PlotOptionsAreasplineDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineDataLabels
     extends PlotOptionsAreasplineDataLabels {
   @override
@@ -47168,6 +47197,7 @@ class PlotOptionsAreasplineDataLabelsBuilder
 // Target: abstract class PlotOptionsAreasplineEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineEvents extends PlotOptionsAreasplineEvents {
   @override
   final Function afterAnimate;
@@ -47348,6 +47378,7 @@ class PlotOptionsAreasplineEventsBuilder
 // Target: abstract class PlotOptionsAreasplineMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineMarker extends PlotOptionsAreasplineMarker {
   @override
   final bool enabled;
@@ -47540,6 +47571,7 @@ class PlotOptionsAreasplineMarkerBuilder
 // Target: abstract class PlotOptionsAreasplineMarkerStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineMarkerStates
     extends PlotOptionsAreasplineMarkerStates {
   @override
@@ -47638,6 +47670,7 @@ class PlotOptionsAreasplineMarkerStatesBuilder
 // Target: abstract class PlotOptionsAreasplineMarkerStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineMarkerStatesHover
     extends PlotOptionsAreasplineMarkerStatesHover {
   @override
@@ -47803,6 +47836,7 @@ class PlotOptionsAreasplineMarkerStatesHoverBuilder
 // Target: abstract class PlotOptionsAreasplineMarkerStatesSelect
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineMarkerStatesSelect
     extends PlotOptionsAreasplineMarkerStatesSelect {
   @override
@@ -47942,6 +47976,7 @@ class PlotOptionsAreasplineMarkerStatesSelectBuilder
 // Target: abstract class PlotOptionsAreasplinePoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinePoint extends PlotOptionsAreasplinePoint {
   @override
   final PlotOptionsAreasplinePointEvents events;
@@ -48027,6 +48062,7 @@ class PlotOptionsAreasplinePointBuilder
 // Target: abstract class PlotOptionsAreasplinePointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinePointEvents
     extends PlotOptionsAreasplinePointEvents {
   @override
@@ -48190,6 +48226,7 @@ class PlotOptionsAreasplinePointEventsBuilder
 // Target: abstract class PlotOptionsAreasplineStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineStates extends PlotOptionsAreasplineStates {
   @override
   final PlotOptionsAreasplineStatesHover hover;
@@ -48276,6 +48313,7 @@ class PlotOptionsAreasplineStatesBuilder
 // Target: abstract class PlotOptionsAreasplineStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineStatesHover
     extends PlotOptionsAreasplineStatesHover {
   @override
@@ -48428,6 +48466,7 @@ class PlotOptionsAreasplineStatesHoverBuilder
 // Target: abstract class PlotOptionsAreasplineStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineStatesHoverHalo
     extends PlotOptionsAreasplineStatesHoverHalo {
   @override
@@ -48536,6 +48575,7 @@ class PlotOptionsAreasplineStatesHoverHaloBuilder
 // Target: abstract class PlotOptionsAreasplineStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineStatesHoverMarker
     extends PlotOptionsAreasplineStatesHoverMarker {
   @override
@@ -48729,6 +48769,7 @@ class PlotOptionsAreasplineStatesHoverMarkerBuilder
 // Target: abstract class PlotOptionsAreasplineTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineTooltip extends PlotOptionsAreasplineTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -48993,6 +49034,7 @@ class PlotOptionsAreasplineTooltipBuilder
 // Target: abstract class PlotOptionsAreasplineZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineZones extends PlotOptionsAreasplineZones {
   @override
   final String className;
@@ -49124,6 +49166,7 @@ class PlotOptionsAreasplineZonesBuilder
 // Target: abstract class PlotOptionsAreasplinerange
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerange extends PlotOptionsAreasplinerange {
   @override
   final bool allowPointSelect;
@@ -49749,6 +49792,7 @@ class PlotOptionsAreasplinerangeBuilder
 // Target: abstract class PlotOptionsAreasplinerangeDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerangeDataLabels
     extends PlotOptionsAreasplinerangeDataLabels {
   @override
@@ -50164,6 +50208,7 @@ class PlotOptionsAreasplinerangeDataLabelsBuilder
 // Target: abstract class PlotOptionsAreasplinerangeEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerangeEvents
     extends PlotOptionsAreasplinerangeEvents {
   @override
@@ -50345,6 +50390,7 @@ class PlotOptionsAreasplinerangeEventsBuilder
 // Target: abstract class PlotOptionsAreasplinerangePoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerangePoint
     extends PlotOptionsAreasplinerangePoint {
   @override
@@ -50432,6 +50478,7 @@ class PlotOptionsAreasplinerangePointBuilder
 // Target: abstract class PlotOptionsAreasplinerangePointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerangePointEvents
     extends PlotOptionsAreasplinerangePointEvents {
   @override
@@ -50596,6 +50643,7 @@ class PlotOptionsAreasplinerangePointEventsBuilder
 // Target: abstract class PlotOptionsAreasplinerangeStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerangeStates
     extends PlotOptionsAreasplinerangeStates {
   @override
@@ -50683,6 +50731,7 @@ class PlotOptionsAreasplinerangeStatesBuilder
 // Target: abstract class PlotOptionsAreasplinerangeStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerangeStatesHover
     extends PlotOptionsAreasplinerangeStatesHover {
   @override
@@ -50837,6 +50886,7 @@ class PlotOptionsAreasplinerangeStatesHoverBuilder
 // Target: abstract class PlotOptionsAreasplinerangeStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerangeStatesHoverHalo
     extends PlotOptionsAreasplinerangeStatesHoverHalo {
   @override
@@ -50947,6 +50997,7 @@ class PlotOptionsAreasplinerangeStatesHoverHaloBuilder
 // Target: abstract class PlotOptionsAreasplinerangeStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerangeStatesHoverMarker
     extends PlotOptionsAreasplinerangeStatesHoverMarker {
   @override
@@ -51143,6 +51194,7 @@ class PlotOptionsAreasplinerangeStatesHoverMarkerBuilder
 // Target: abstract class PlotOptionsAreasplinerangeTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerangeTooltip
     extends PlotOptionsAreasplinerangeTooltip {
   @override
@@ -51408,6 +51460,7 @@ class PlotOptionsAreasplinerangeTooltipBuilder
 // Target: abstract class PlotOptionsAreasplinerangeZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerangeZones
     extends PlotOptionsAreasplinerangeZones {
   @override
@@ -51541,6 +51594,7 @@ class PlotOptionsAreasplinerangeZonesBuilder
 // Target: abstract class PlotOptionsBar
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBar extends PlotOptionsBar {
   @override
   final bool allowPointSelect;
@@ -52286,6 +52340,7 @@ class PlotOptionsBarBuilder
 // Target: abstract class PlotOptionsBarDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBarDataLabels extends PlotOptionsBarDataLabels {
   @override
   final String align;
@@ -52676,6 +52731,7 @@ class PlotOptionsBarDataLabelsBuilder
 // Target: abstract class PlotOptionsBarEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBarEvents extends PlotOptionsBarEvents {
   @override
   final Function afterAnimate;
@@ -52853,6 +52909,7 @@ class PlotOptionsBarEventsBuilder
 // Target: abstract class PlotOptionsBarPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBarPoint extends PlotOptionsBarPoint {
   @override
   final PlotOptionsBarPointEvents events;
@@ -52934,6 +52991,7 @@ class PlotOptionsBarPointBuilder
 // Target: abstract class PlotOptionsBarPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBarPointEvents extends PlotOptionsBarPointEvents {
   @override
   final Function click;
@@ -53095,6 +53153,7 @@ class PlotOptionsBarPointEventsBuilder
 // Target: abstract class PlotOptionsBarStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBarStates extends PlotOptionsBarStates {
   @override
   final PlotOptionsBarStatesHover hover;
@@ -53176,6 +53235,7 @@ class PlotOptionsBarStatesBuilder
 // Target: abstract class PlotOptionsBarStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBarStatesHover extends PlotOptionsBarStatesHover {
   @override
   final JsonObject animation;
@@ -53324,6 +53384,7 @@ class PlotOptionsBarStatesHoverBuilder
 // Target: abstract class PlotOptionsBarStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBarStatesHoverHalo extends PlotOptionsBarStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -53429,6 +53490,7 @@ class PlotOptionsBarStatesHoverHaloBuilder
 // Target: abstract class PlotOptionsBarTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBarTooltip extends PlotOptionsBarTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -53690,6 +53752,7 @@ class PlotOptionsBarTooltipBuilder
 // Target: abstract class PlotOptionsBarZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBarZones extends PlotOptionsBarZones {
   @override
   final String className;
@@ -53818,6 +53881,7 @@ class PlotOptionsBarZonesBuilder
 // Target: abstract class PlotOptionsBoxplot
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBoxplot extends PlotOptionsBoxplot {
   @override
   final bool allowPointSelect;
@@ -54550,6 +54614,7 @@ class PlotOptionsBoxplotBuilder
 // Target: abstract class PlotOptionsBoxplotEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBoxplotEvents extends PlotOptionsBoxplotEvents {
   @override
   final Function afterAnimate;
@@ -54729,6 +54794,7 @@ class PlotOptionsBoxplotEventsBuilder
 // Target: abstract class PlotOptionsBoxplotPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBoxplotPoint extends PlotOptionsBoxplotPoint {
   @override
   final PlotOptionsBoxplotPointEvents events;
@@ -54814,6 +54880,7 @@ class PlotOptionsBoxplotPointBuilder
 // Target: abstract class PlotOptionsBoxplotPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBoxplotPointEvents extends PlotOptionsBoxplotPointEvents {
   @override
   final Function click;
@@ -54976,6 +55043,7 @@ class PlotOptionsBoxplotPointEventsBuilder
 // Target: abstract class PlotOptionsBoxplotStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBoxplotStates extends PlotOptionsBoxplotStates {
   @override
   final PlotOptionsBoxplotStatesHover hover;
@@ -55061,6 +55129,7 @@ class PlotOptionsBoxplotStatesBuilder
 // Target: abstract class PlotOptionsBoxplotStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBoxplotStatesHover extends PlotOptionsBoxplotStatesHover {
   @override
   final JsonObject animation;
@@ -55210,6 +55279,7 @@ class PlotOptionsBoxplotStatesHoverBuilder
 // Target: abstract class PlotOptionsBoxplotStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBoxplotStatesHoverHalo
     extends PlotOptionsBoxplotStatesHoverHalo {
   @override
@@ -55317,6 +55387,7 @@ class PlotOptionsBoxplotStatesHoverHaloBuilder
 // Target: abstract class PlotOptionsBoxplotTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBoxplotTooltip extends PlotOptionsBoxplotTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -55580,6 +55651,7 @@ class PlotOptionsBoxplotTooltipBuilder
 // Target: abstract class PlotOptionsBoxplotZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBoxplotZones extends PlotOptionsBoxplotZones {
   @override
   final String className;
@@ -55711,6 +55783,7 @@ class PlotOptionsBoxplotZonesBuilder
 // Target: abstract class PlotOptionsBubble
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubble extends PlotOptionsBubble {
   @override
   final bool allowPointSelect;
@@ -56355,6 +56428,7 @@ class PlotOptionsBubbleBuilder
 // Target: abstract class PlotOptionsBubbleDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleDataLabels extends PlotOptionsBubbleDataLabels {
   @override
   final String align;
@@ -56746,6 +56820,7 @@ class PlotOptionsBubbleDataLabelsBuilder
 // Target: abstract class PlotOptionsBubbleEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleEvents extends PlotOptionsBubbleEvents {
   @override
   final Function afterAnimate;
@@ -56925,6 +57000,7 @@ class PlotOptionsBubbleEventsBuilder
 // Target: abstract class PlotOptionsBubbleMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleMarker extends PlotOptionsBubbleMarker {
   @override
   final bool enabled;
@@ -57101,6 +57177,7 @@ class PlotOptionsBubbleMarkerBuilder
 // Target: abstract class PlotOptionsBubbleMarkerStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleMarkerStates extends PlotOptionsBubbleMarkerStates {
   @override
   final PlotOptionsBubbleMarkerStatesHover hover;
@@ -57198,6 +57275,7 @@ class PlotOptionsBubbleMarkerStatesBuilder
 // Target: abstract class PlotOptionsBubbleMarkerStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleMarkerStatesHover
     extends PlotOptionsBubbleMarkerStatesHover {
   @override
@@ -57362,6 +57440,7 @@ class PlotOptionsBubbleMarkerStatesHoverBuilder
 // Target: abstract class PlotOptionsBubbleMarkerStatesSelect
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleMarkerStatesSelect
     extends PlotOptionsBubbleMarkerStatesSelect {
   @override
@@ -57500,6 +57579,7 @@ class PlotOptionsBubbleMarkerStatesSelectBuilder
 // Target: abstract class PlotOptionsBubblePoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubblePoint extends PlotOptionsBubblePoint {
   @override
   final PlotOptionsBubblePointEvents events;
@@ -57584,6 +57664,7 @@ class PlotOptionsBubblePointBuilder
 // Target: abstract class PlotOptionsBubblePointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubblePointEvents extends PlotOptionsBubblePointEvents {
   @override
   final Function click;
@@ -57746,6 +57827,7 @@ class PlotOptionsBubblePointEventsBuilder
 // Target: abstract class PlotOptionsBubbleStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleStates extends PlotOptionsBubbleStates {
   @override
   final PlotOptionsBubbleStatesHover hover;
@@ -57830,6 +57912,7 @@ class PlotOptionsBubbleStatesBuilder
 // Target: abstract class PlotOptionsBubbleStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleStatesHover extends PlotOptionsBubbleStatesHover {
   @override
   final JsonObject animation;
@@ -57981,6 +58064,7 @@ class PlotOptionsBubbleStatesHoverBuilder
 // Target: abstract class PlotOptionsBubbleStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleStatesHoverHalo
     extends PlotOptionsBubbleStatesHoverHalo {
   @override
@@ -58088,6 +58172,7 @@ class PlotOptionsBubbleStatesHoverHaloBuilder
 // Target: abstract class PlotOptionsBubbleStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleStatesHoverMarker
     extends PlotOptionsBubbleStatesHoverMarker {
   @override
@@ -58280,6 +58365,7 @@ class PlotOptionsBubbleStatesHoverMarkerBuilder
 // Target: abstract class PlotOptionsBubbleTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleTooltip extends PlotOptionsBubbleTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -58543,6 +58629,7 @@ class PlotOptionsBubbleTooltipBuilder
 // Target: abstract class PlotOptionsBubbleZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleZones extends PlotOptionsBubbleZones {
   @override
   final String className;
@@ -58673,6 +58760,7 @@ class PlotOptionsBubbleZonesBuilder
 // Target: abstract class PlotOptionsColumn
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumn extends PlotOptionsColumn {
   @override
   final bool allowPointSelect;
@@ -59418,6 +59506,7 @@ class PlotOptionsColumnBuilder
 // Target: abstract class PlotOptionsColumnDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnDataLabels extends PlotOptionsColumnDataLabels {
   @override
   final String align;
@@ -59809,6 +59898,7 @@ class PlotOptionsColumnDataLabelsBuilder
 // Target: abstract class PlotOptionsColumnEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnEvents extends PlotOptionsColumnEvents {
   @override
   final Function afterAnimate;
@@ -59988,6 +60078,7 @@ class PlotOptionsColumnEventsBuilder
 // Target: abstract class PlotOptionsColumnPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnPoint extends PlotOptionsColumnPoint {
   @override
   final PlotOptionsColumnPointEvents events;
@@ -60072,6 +60163,7 @@ class PlotOptionsColumnPointBuilder
 // Target: abstract class PlotOptionsColumnPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnPointEvents extends PlotOptionsColumnPointEvents {
   @override
   final Function click;
@@ -60234,6 +60326,7 @@ class PlotOptionsColumnPointEventsBuilder
 // Target: abstract class PlotOptionsColumnStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnStates extends PlotOptionsColumnStates {
   @override
   final PlotOptionsColumnStatesHover hover;
@@ -60318,6 +60411,7 @@ class PlotOptionsColumnStatesBuilder
 // Target: abstract class PlotOptionsColumnStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnStatesHover extends PlotOptionsColumnStatesHover {
   @override
   final JsonObject animation;
@@ -60467,6 +60561,7 @@ class PlotOptionsColumnStatesHoverBuilder
 // Target: abstract class PlotOptionsColumnStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnStatesHoverHalo
     extends PlotOptionsColumnStatesHoverHalo {
   @override
@@ -60574,6 +60669,7 @@ class PlotOptionsColumnStatesHoverHaloBuilder
 // Target: abstract class PlotOptionsColumnTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnTooltip extends PlotOptionsColumnTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -60837,6 +60933,7 @@ class PlotOptionsColumnTooltipBuilder
 // Target: abstract class PlotOptionsColumnZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnZones extends PlotOptionsColumnZones {
   @override
   final String className;
@@ -60967,6 +61064,7 @@ class PlotOptionsColumnZonesBuilder
 // Target: abstract class PlotOptionsColumnrange
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnrange extends PlotOptionsColumnrange {
   @override
   final bool allowPointSelect;
@@ -61667,6 +61765,7 @@ class PlotOptionsColumnrangeBuilder
 // Target: abstract class PlotOptionsColumnrangeDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnrangeDataLabels
     extends PlotOptionsColumnrangeDataLabels {
   @override
@@ -62081,6 +62180,7 @@ class PlotOptionsColumnrangeDataLabelsBuilder
 // Target: abstract class PlotOptionsColumnrangeEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnrangeEvents extends PlotOptionsColumnrangeEvents {
   @override
   final Function afterAnimate;
@@ -62261,6 +62361,7 @@ class PlotOptionsColumnrangeEventsBuilder
 // Target: abstract class PlotOptionsColumnrangePoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnrangePoint extends PlotOptionsColumnrangePoint {
   @override
   final PlotOptionsColumnrangePointEvents events;
@@ -62347,6 +62448,7 @@ class PlotOptionsColumnrangePointBuilder
 // Target: abstract class PlotOptionsColumnrangePointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnrangePointEvents
     extends PlotOptionsColumnrangePointEvents {
   @override
@@ -62510,6 +62612,7 @@ class PlotOptionsColumnrangePointEventsBuilder
 // Target: abstract class PlotOptionsColumnrangeStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnrangeStates extends PlotOptionsColumnrangeStates {
   @override
   final PlotOptionsColumnrangeStatesHover hover;
@@ -62596,6 +62699,7 @@ class PlotOptionsColumnrangeStatesBuilder
 // Target: abstract class PlotOptionsColumnrangeStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnrangeStatesHover
     extends PlotOptionsColumnrangeStatesHover {
   @override
@@ -62746,6 +62850,7 @@ class PlotOptionsColumnrangeStatesHoverBuilder
 // Target: abstract class PlotOptionsColumnrangeStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnrangeStatesHoverHalo
     extends PlotOptionsColumnrangeStatesHoverHalo {
   @override
@@ -62854,6 +62959,7 @@ class PlotOptionsColumnrangeStatesHoverHaloBuilder
 // Target: abstract class PlotOptionsColumnrangeTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnrangeTooltip extends PlotOptionsColumnrangeTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -63118,6 +63224,7 @@ class PlotOptionsColumnrangeTooltipBuilder
 // Target: abstract class PlotOptionsColumnrangeZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnrangeZones extends PlotOptionsColumnrangeZones {
   @override
   final String className;
@@ -63250,6 +63357,7 @@ class PlotOptionsColumnrangeZonesBuilder
 // Target: abstract class PlotOptionsErrorbar
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsErrorbar extends PlotOptionsErrorbar {
   @override
   final bool allowPointSelect;
@@ -63906,6 +64014,7 @@ class PlotOptionsErrorbarBuilder
 // Target: abstract class PlotOptionsErrorbarEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsErrorbarEvents extends PlotOptionsErrorbarEvents {
   @override
   final Function afterAnimate;
@@ -64085,6 +64194,7 @@ class PlotOptionsErrorbarEventsBuilder
 // Target: abstract class PlotOptionsErrorbarPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsErrorbarPoint extends PlotOptionsErrorbarPoint {
   @override
   final PlotOptionsErrorbarPointEvents events;
@@ -64170,6 +64280,7 @@ class PlotOptionsErrorbarPointBuilder
 // Target: abstract class PlotOptionsErrorbarPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsErrorbarPointEvents extends PlotOptionsErrorbarPointEvents {
   @override
   final Function click;
@@ -64332,6 +64443,7 @@ class PlotOptionsErrorbarPointEventsBuilder
 // Target: abstract class PlotOptionsErrorbarStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsErrorbarStates extends PlotOptionsErrorbarStates {
   @override
   final PlotOptionsErrorbarStatesHover hover;
@@ -64417,6 +64529,7 @@ class PlotOptionsErrorbarStatesBuilder
 // Target: abstract class PlotOptionsErrorbarStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsErrorbarStatesHover extends PlotOptionsErrorbarStatesHover {
   @override
   final JsonObject animation;
@@ -64566,6 +64679,7 @@ class PlotOptionsErrorbarStatesHoverBuilder
 // Target: abstract class PlotOptionsErrorbarStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsErrorbarStatesHoverHalo
     extends PlotOptionsErrorbarStatesHoverHalo {
   @override
@@ -64674,6 +64788,7 @@ class PlotOptionsErrorbarStatesHoverHaloBuilder
 // Target: abstract class PlotOptionsErrorbarTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsErrorbarTooltip extends PlotOptionsErrorbarTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -64937,6 +65052,7 @@ class PlotOptionsErrorbarTooltipBuilder
 // Target: abstract class PlotOptionsErrorbarZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsErrorbarZones extends PlotOptionsErrorbarZones {
   @override
   final String className;
@@ -65068,6 +65184,7 @@ class PlotOptionsErrorbarZonesBuilder
 // Target: abstract class PlotOptionsFunnel
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnel extends PlotOptionsFunnel {
   @override
   final bool allowPointSelect;
@@ -65609,6 +65726,7 @@ class PlotOptionsFunnelBuilder
 // Target: abstract class PlotOptionsFunnelDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnelDataLabels extends PlotOptionsFunnelDataLabels {
   @override
   final String backgroundColor;
@@ -66037,6 +66155,7 @@ class PlotOptionsFunnelDataLabelsBuilder
 // Target: abstract class PlotOptionsFunnelEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnelEvents extends PlotOptionsFunnelEvents {
   @override
   final Function afterAnimate;
@@ -66216,6 +66335,7 @@ class PlotOptionsFunnelEventsBuilder
 // Target: abstract class PlotOptionsFunnelPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnelPoint extends PlotOptionsFunnelPoint {
   @override
   final PlotOptionsFunnelPointEvents events;
@@ -66300,6 +66420,7 @@ class PlotOptionsFunnelPointBuilder
 // Target: abstract class PlotOptionsFunnelPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnelPointEvents extends PlotOptionsFunnelPointEvents {
   @override
   final Function click;
@@ -66478,6 +66599,7 @@ class PlotOptionsFunnelPointEventsBuilder
 // Target: abstract class PlotOptionsFunnelStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnelStates extends PlotOptionsFunnelStates {
   @override
   final PlotOptionsFunnelStatesHover hover;
@@ -66562,6 +66684,7 @@ class PlotOptionsFunnelStatesBuilder
 // Target: abstract class PlotOptionsFunnelStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnelStatesHover extends PlotOptionsFunnelStatesHover {
   @override
   final JsonObject animation;
@@ -66726,6 +66849,7 @@ class PlotOptionsFunnelStatesHoverBuilder
 // Target: abstract class PlotOptionsFunnelStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnelStatesHoverHalo
     extends PlotOptionsFunnelStatesHoverHalo {
   @override
@@ -66833,6 +66957,7 @@ class PlotOptionsFunnelStatesHoverHaloBuilder
 // Target: abstract class PlotOptionsFunnelStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnelStatesHoverMarker
     extends PlotOptionsFunnelStatesHoverMarker {
   @override
@@ -67025,6 +67150,7 @@ class PlotOptionsFunnelStatesHoverMarkerBuilder
 // Target: abstract class PlotOptionsFunnelTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnelTooltip extends PlotOptionsFunnelTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -67288,6 +67414,7 @@ class PlotOptionsFunnelTooltipBuilder
 // Target: abstract class PlotOptionsFunnelZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnelZones extends PlotOptionsFunnelZones {
   @override
   final String className;
@@ -67418,6 +67545,7 @@ class PlotOptionsFunnelZonesBuilder
 // Target: abstract class PlotOptionsGauge
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsGauge extends PlotOptionsGauge {
   @override
   final bool animation;
@@ -67868,6 +67996,7 @@ class PlotOptionsGaugeBuilder
 // Target: abstract class PlotOptionsGaugeDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsGaugeDataLabels extends PlotOptionsGaugeDataLabels {
   @override
   final String align;
@@ -68258,6 +68387,7 @@ class PlotOptionsGaugeDataLabelsBuilder
 // Target: abstract class PlotOptionsGaugeDial
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsGaugeDial extends PlotOptionsGaugeDial {
   @override
   final String backgroundColor;
@@ -68433,6 +68563,7 @@ class PlotOptionsGaugeDialBuilder
 // Target: abstract class PlotOptionsGaugeEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsGaugeEvents extends PlotOptionsGaugeEvents {
   @override
   final Function afterAnimate;
@@ -68611,6 +68742,7 @@ class PlotOptionsGaugeEventsBuilder
 // Target: abstract class PlotOptionsGaugePivot
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsGaugePivot extends PlotOptionsGaugePivot {
   @override
   final String backgroundColor;
@@ -68729,6 +68861,7 @@ class PlotOptionsGaugePivotBuilder
 // Target: abstract class PlotOptionsGaugePoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsGaugePoint extends PlotOptionsGaugePoint {
   @override
   final PlotOptionsGaugePointEvents events;
@@ -68812,6 +68945,7 @@ class PlotOptionsGaugePointBuilder
 // Target: abstract class PlotOptionsGaugePointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsGaugePointEvents extends PlotOptionsGaugePointEvents {
   @override
   final Function click;
@@ -68974,6 +69108,7 @@ class PlotOptionsGaugePointEventsBuilder
 // Target: abstract class PlotOptionsGaugeTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsGaugeTooltip extends PlotOptionsGaugeTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -69237,6 +69372,7 @@ class PlotOptionsGaugeTooltipBuilder
 // Target: abstract class PlotOptionsHeatmap
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsHeatmap extends PlotOptionsHeatmap {
   @override
   final bool allowPointSelect;
@@ -69801,6 +69937,7 @@ class PlotOptionsHeatmapBuilder
 // Target: abstract class PlotOptionsHeatmapDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsHeatmapDataLabels extends PlotOptionsHeatmapDataLabels {
   @override
   final String align;
@@ -70192,6 +70329,7 @@ class PlotOptionsHeatmapDataLabelsBuilder
 // Target: abstract class PlotOptionsHeatmapEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsHeatmapEvents extends PlotOptionsHeatmapEvents {
   @override
   final Function afterAnimate;
@@ -70371,6 +70509,7 @@ class PlotOptionsHeatmapEventsBuilder
 // Target: abstract class PlotOptionsHeatmapPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsHeatmapPoint extends PlotOptionsHeatmapPoint {
   @override
   final PlotOptionsHeatmapPointEvents events;
@@ -70456,6 +70595,7 @@ class PlotOptionsHeatmapPointBuilder
 // Target: abstract class PlotOptionsHeatmapPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsHeatmapPointEvents extends PlotOptionsHeatmapPointEvents {
   @override
   final Function click;
@@ -70618,6 +70758,7 @@ class PlotOptionsHeatmapPointEventsBuilder
 // Target: abstract class PlotOptionsHeatmapStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsHeatmapStates extends PlotOptionsHeatmapStates {
   @override
   final PlotOptionsHeatmapStatesHover hover;
@@ -70703,6 +70844,7 @@ class PlotOptionsHeatmapStatesBuilder
 // Target: abstract class PlotOptionsHeatmapStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsHeatmapStatesHover extends PlotOptionsHeatmapStatesHover {
   @override
   final JsonObject animation;
@@ -70852,6 +70994,7 @@ class PlotOptionsHeatmapStatesHoverBuilder
 // Target: abstract class PlotOptionsHeatmapStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsHeatmapStatesHoverHalo
     extends PlotOptionsHeatmapStatesHoverHalo {
   @override
@@ -70959,6 +71102,7 @@ class PlotOptionsHeatmapStatesHoverHaloBuilder
 // Target: abstract class PlotOptionsHeatmapTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsHeatmapTooltip extends PlotOptionsHeatmapTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -71222,6 +71366,7 @@ class PlotOptionsHeatmapTooltipBuilder
 // Target: abstract class PlotOptionsHeatmapZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsHeatmapZones extends PlotOptionsHeatmapZones {
   @override
   final String className;
@@ -71353,6 +71498,7 @@ class PlotOptionsHeatmapZonesBuilder
 // Target: abstract class PlotOptionsLine
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsLine extends PlotOptionsLine {
   @override
   final bool allowPointSelect;
@@ -71987,6 +72133,7 @@ class PlotOptionsLineBuilder
 // Target: abstract class PlotOptionsLineDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineDataLabels extends PlotOptionsLineDataLabels {
   @override
   final String align;
@@ -72377,6 +72524,7 @@ class PlotOptionsLineDataLabelsBuilder
 // Target: abstract class PlotOptionsLineEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineEvents extends PlotOptionsLineEvents {
   @override
   final Function afterAnimate;
@@ -72554,6 +72702,7 @@ class PlotOptionsLineEventsBuilder
 // Target: abstract class PlotOptionsLineMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineMarker extends PlotOptionsLineMarker {
   @override
   final bool enabled;
@@ -72743,6 +72892,7 @@ class PlotOptionsLineMarkerBuilder
 // Target: abstract class PlotOptionsLineMarkerStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineMarkerStates extends PlotOptionsLineMarkerStates {
   @override
   final PlotOptionsLineMarkerStatesHover hover;
@@ -72840,6 +72990,7 @@ class PlotOptionsLineMarkerStatesBuilder
 // Target: abstract class PlotOptionsLineMarkerStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineMarkerStatesHover
     extends PlotOptionsLineMarkerStatesHover {
   @override
@@ -73003,6 +73154,7 @@ class PlotOptionsLineMarkerStatesHoverBuilder
 // Target: abstract class PlotOptionsLineMarkerStatesSelect
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineMarkerStatesSelect
     extends PlotOptionsLineMarkerStatesSelect {
   @override
@@ -73140,6 +73292,7 @@ class PlotOptionsLineMarkerStatesSelectBuilder
 // Target: abstract class PlotOptionsLinePoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsLinePoint extends PlotOptionsLinePoint {
   @override
   final PlotOptionsLinePointEvents events;
@@ -73223,6 +73376,7 @@ class PlotOptionsLinePointBuilder
 // Target: abstract class PlotOptionsLinePointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsLinePointEvents extends PlotOptionsLinePointEvents {
   @override
   final Function click;
@@ -73384,6 +73538,7 @@ class PlotOptionsLinePointEventsBuilder
 // Target: abstract class PlotOptionsLineStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineStates extends PlotOptionsLineStates {
   @override
   final PlotOptionsLineStatesHover hover;
@@ -73465,6 +73620,7 @@ class PlotOptionsLineStatesBuilder
 // Target: abstract class PlotOptionsLineStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineStatesHover extends PlotOptionsLineStatesHover {
   @override
   final JsonObject animation;
@@ -73615,6 +73771,7 @@ class PlotOptionsLineStatesHoverBuilder
 // Target: abstract class PlotOptionsLineStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineStatesHoverHalo extends PlotOptionsLineStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -73720,6 +73877,7 @@ class PlotOptionsLineStatesHoverHaloBuilder
 // Target: abstract class PlotOptionsLineStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineStatesHoverMarker
     extends PlotOptionsLineStatesHoverMarker {
   @override
@@ -73911,6 +74069,7 @@ class PlotOptionsLineStatesHoverMarkerBuilder
 // Target: abstract class PlotOptionsLineTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineTooltip extends PlotOptionsLineTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -74173,6 +74332,7 @@ class PlotOptionsLineTooltipBuilder
 // Target: abstract class PlotOptionsLineZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineZones extends PlotOptionsLineZones {
   @override
   final String className;
@@ -74302,6 +74462,7 @@ class PlotOptionsLineZonesBuilder
 // Target: abstract class PlotOptionsPie
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPie extends PlotOptionsPie {
   @override
   final bool allowPointSelect;
@@ -74855,6 +75016,7 @@ class PlotOptionsPieBuilder
 // Target: abstract class PlotOptionsPieDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPieDataLabels extends PlotOptionsPieDataLabels {
   @override
   final String backgroundColor;
@@ -75282,6 +75444,7 @@ class PlotOptionsPieDataLabelsBuilder
 // Target: abstract class PlotOptionsPieEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPieEvents extends PlotOptionsPieEvents {
   @override
   final Function afterAnimate;
@@ -75459,6 +75622,7 @@ class PlotOptionsPieEventsBuilder
 // Target: abstract class PlotOptionsPiePoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPiePoint extends PlotOptionsPiePoint {
   @override
   final PlotOptionsPiePointEvents events;
@@ -75540,6 +75704,7 @@ class PlotOptionsPiePointBuilder
 // Target: abstract class PlotOptionsPiePointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPiePointEvents extends PlotOptionsPiePointEvents {
   @override
   final Function click;
@@ -75717,6 +75882,7 @@ class PlotOptionsPiePointEventsBuilder
 // Target: abstract class PlotOptionsPieStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPieStates extends PlotOptionsPieStates {
   @override
   final PlotOptionsPieStatesHover hover;
@@ -75798,6 +75964,7 @@ class PlotOptionsPieStatesBuilder
 // Target: abstract class PlotOptionsPieStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPieStatesHover extends PlotOptionsPieStatesHover {
   @override
   final JsonObject animation;
@@ -75961,6 +76128,7 @@ class PlotOptionsPieStatesHoverBuilder
 // Target: abstract class PlotOptionsPieStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPieStatesHoverHalo extends PlotOptionsPieStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -76066,6 +76234,7 @@ class PlotOptionsPieStatesHoverHaloBuilder
 // Target: abstract class PlotOptionsPieStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPieStatesHoverMarker
     extends PlotOptionsPieStatesHoverMarker {
   @override
@@ -76257,6 +76426,7 @@ class PlotOptionsPieStatesHoverMarkerBuilder
 // Target: abstract class PlotOptionsPieTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPieTooltip extends PlotOptionsPieTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -76518,6 +76688,7 @@ class PlotOptionsPieTooltipBuilder
 // Target: abstract class PlotOptionsPieZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPieZones extends PlotOptionsPieZones {
   @override
   final String className;
@@ -76646,6 +76817,7 @@ class PlotOptionsPieZonesBuilder
 // Target: abstract class PlotOptionsPolygon
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygon extends PlotOptionsPolygon {
   @override
   final bool allowPointSelect;
@@ -77190,6 +77362,7 @@ class PlotOptionsPolygonBuilder
 // Target: abstract class PlotOptionsPolygonDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonDataLabels extends PlotOptionsPolygonDataLabels {
   @override
   final String align;
@@ -77581,6 +77754,7 @@ class PlotOptionsPolygonDataLabelsBuilder
 // Target: abstract class PlotOptionsPolygonEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonEvents extends PlotOptionsPolygonEvents {
   @override
   final Function afterAnimate;
@@ -77760,6 +77934,7 @@ class PlotOptionsPolygonEventsBuilder
 // Target: abstract class PlotOptionsPolygonMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonMarker extends PlotOptionsPolygonMarker {
   @override
   final bool enabled;
@@ -77951,6 +78126,7 @@ class PlotOptionsPolygonMarkerBuilder
 // Target: abstract class PlotOptionsPolygonMarkerStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonMarkerStates extends PlotOptionsPolygonMarkerStates {
   @override
   final PlotOptionsPolygonMarkerStatesHover hover;
@@ -78048,6 +78224,7 @@ class PlotOptionsPolygonMarkerStatesBuilder
 // Target: abstract class PlotOptionsPolygonMarkerStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonMarkerStatesHover
     extends PlotOptionsPolygonMarkerStatesHover {
   @override
@@ -78212,6 +78389,7 @@ class PlotOptionsPolygonMarkerStatesHoverBuilder
 // Target: abstract class PlotOptionsPolygonMarkerStatesSelect
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonMarkerStatesSelect
     extends PlotOptionsPolygonMarkerStatesSelect {
   @override
@@ -78350,6 +78528,7 @@ class PlotOptionsPolygonMarkerStatesSelectBuilder
 // Target: abstract class PlotOptionsPolygonPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonPoint extends PlotOptionsPolygonPoint {
   @override
   final PlotOptionsPolygonPointEvents events;
@@ -78435,6 +78614,7 @@ class PlotOptionsPolygonPointBuilder
 // Target: abstract class PlotOptionsPolygonPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonPointEvents extends PlotOptionsPolygonPointEvents {
   @override
   final Function click;
@@ -78597,6 +78777,7 @@ class PlotOptionsPolygonPointEventsBuilder
 // Target: abstract class PlotOptionsPolygonStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonStates extends PlotOptionsPolygonStates {
   @override
   final PlotOptionsPolygonStatesHover hover;
@@ -78682,6 +78863,7 @@ class PlotOptionsPolygonStatesBuilder
 // Target: abstract class PlotOptionsPolygonStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonStatesHover extends PlotOptionsPolygonStatesHover {
   @override
   final JsonObject animation;
@@ -78833,6 +79015,7 @@ class PlotOptionsPolygonStatesHoverBuilder
 // Target: abstract class PlotOptionsPolygonStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonStatesHoverHalo
     extends PlotOptionsPolygonStatesHoverHalo {
   @override
@@ -78940,6 +79123,7 @@ class PlotOptionsPolygonStatesHoverHaloBuilder
 // Target: abstract class PlotOptionsPolygonStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonStatesHoverMarker
     extends PlotOptionsPolygonStatesHoverMarker {
   @override
@@ -79132,6 +79316,7 @@ class PlotOptionsPolygonStatesHoverMarkerBuilder
 // Target: abstract class PlotOptionsPolygonTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonTooltip extends PlotOptionsPolygonTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -79395,6 +79580,7 @@ class PlotOptionsPolygonTooltipBuilder
 // Target: abstract class PlotOptionsPolygonZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonZones extends PlotOptionsPolygonZones {
   @override
   final String className;
@@ -79526,6 +79712,7 @@ class PlotOptionsPolygonZonesBuilder
 // Target: abstract class PlotOptionsPyramid
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramid extends PlotOptionsPyramid {
   @override
   final bool allowPointSelect;
@@ -80045,6 +80232,7 @@ class PlotOptionsPyramidBuilder
 // Target: abstract class PlotOptionsPyramidDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramidDataLabels extends PlotOptionsPyramidDataLabels {
   @override
   final String backgroundColor;
@@ -80473,6 +80661,7 @@ class PlotOptionsPyramidDataLabelsBuilder
 // Target: abstract class PlotOptionsPyramidEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramidEvents extends PlotOptionsPyramidEvents {
   @override
   final Function afterAnimate;
@@ -80652,6 +80841,7 @@ class PlotOptionsPyramidEventsBuilder
 // Target: abstract class PlotOptionsPyramidPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramidPoint extends PlotOptionsPyramidPoint {
   @override
   final PlotOptionsPyramidPointEvents events;
@@ -80737,6 +80927,7 @@ class PlotOptionsPyramidPointBuilder
 // Target: abstract class PlotOptionsPyramidPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramidPointEvents extends PlotOptionsPyramidPointEvents {
   @override
   final Function click;
@@ -80915,6 +81106,7 @@ class PlotOptionsPyramidPointEventsBuilder
 // Target: abstract class PlotOptionsPyramidStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramidStates extends PlotOptionsPyramidStates {
   @override
   final PlotOptionsPyramidStatesHover hover;
@@ -81000,6 +81192,7 @@ class PlotOptionsPyramidStatesBuilder
 // Target: abstract class PlotOptionsPyramidStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramidStatesHover extends PlotOptionsPyramidStatesHover {
   @override
   final JsonObject animation;
@@ -81164,6 +81357,7 @@ class PlotOptionsPyramidStatesHoverBuilder
 // Target: abstract class PlotOptionsPyramidStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramidStatesHoverHalo
     extends PlotOptionsPyramidStatesHoverHalo {
   @override
@@ -81271,6 +81465,7 @@ class PlotOptionsPyramidStatesHoverHaloBuilder
 // Target: abstract class PlotOptionsPyramidStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramidStatesHoverMarker
     extends PlotOptionsPyramidStatesHoverMarker {
   @override
@@ -81463,6 +81658,7 @@ class PlotOptionsPyramidStatesHoverMarkerBuilder
 // Target: abstract class PlotOptionsPyramidTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramidTooltip extends PlotOptionsPyramidTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -81726,6 +81922,7 @@ class PlotOptionsPyramidTooltipBuilder
 // Target: abstract class PlotOptionsPyramidZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramidZones extends PlotOptionsPyramidZones {
   @override
   final String className;
@@ -81857,6 +82054,7 @@ class PlotOptionsPyramidZonesBuilder
 // Target: abstract class PlotOptionsScatter
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatter extends PlotOptionsScatter {
   @override
   final bool allowPointSelect;
@@ -82424,6 +82622,7 @@ class PlotOptionsScatterBuilder
 // Target: abstract class PlotOptionsScatterDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterDataLabels extends PlotOptionsScatterDataLabels {
   @override
   final String align;
@@ -82815,6 +83014,7 @@ class PlotOptionsScatterDataLabelsBuilder
 // Target: abstract class PlotOptionsScatterEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterEvents extends PlotOptionsScatterEvents {
   @override
   final Function afterAnimate;
@@ -82994,6 +83194,7 @@ class PlotOptionsScatterEventsBuilder
 // Target: abstract class PlotOptionsScatterMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterMarker extends PlotOptionsScatterMarker {
   @override
   final bool enabled;
@@ -83185,6 +83386,7 @@ class PlotOptionsScatterMarkerBuilder
 // Target: abstract class PlotOptionsScatterMarkerStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterMarkerStates extends PlotOptionsScatterMarkerStates {
   @override
   final PlotOptionsScatterMarkerStatesHover hover;
@@ -83282,6 +83484,7 @@ class PlotOptionsScatterMarkerStatesBuilder
 // Target: abstract class PlotOptionsScatterMarkerStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterMarkerStatesHover
     extends PlotOptionsScatterMarkerStatesHover {
   @override
@@ -83446,6 +83649,7 @@ class PlotOptionsScatterMarkerStatesHoverBuilder
 // Target: abstract class PlotOptionsScatterMarkerStatesSelect
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterMarkerStatesSelect
     extends PlotOptionsScatterMarkerStatesSelect {
   @override
@@ -83584,6 +83788,7 @@ class PlotOptionsScatterMarkerStatesSelectBuilder
 // Target: abstract class PlotOptionsScatterPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterPoint extends PlotOptionsScatterPoint {
   @override
   final PlotOptionsScatterPointEvents events;
@@ -83669,6 +83874,7 @@ class PlotOptionsScatterPointBuilder
 // Target: abstract class PlotOptionsScatterPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterPointEvents extends PlotOptionsScatterPointEvents {
   @override
   final Function click;
@@ -83831,6 +84037,7 @@ class PlotOptionsScatterPointEventsBuilder
 // Target: abstract class PlotOptionsScatterStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterStates extends PlotOptionsScatterStates {
   @override
   final PlotOptionsScatterStatesHover hover;
@@ -83916,6 +84123,7 @@ class PlotOptionsScatterStatesBuilder
 // Target: abstract class PlotOptionsScatterStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterStatesHover extends PlotOptionsScatterStatesHover {
   @override
   final JsonObject animation;
@@ -84067,6 +84275,7 @@ class PlotOptionsScatterStatesHoverBuilder
 // Target: abstract class PlotOptionsScatterStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterStatesHoverHalo
     extends PlotOptionsScatterStatesHoverHalo {
   @override
@@ -84174,6 +84383,7 @@ class PlotOptionsScatterStatesHoverHaloBuilder
 // Target: abstract class PlotOptionsScatterStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterStatesHoverMarker
     extends PlotOptionsScatterStatesHoverMarker {
   @override
@@ -84366,6 +84576,7 @@ class PlotOptionsScatterStatesHoverMarkerBuilder
 // Target: abstract class PlotOptionsScatterTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterTooltip extends PlotOptionsScatterTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -84629,6 +84840,7 @@ class PlotOptionsScatterTooltipBuilder
 // Target: abstract class PlotOptionsScatterZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterZones extends PlotOptionsScatterZones {
   @override
   final String className;
@@ -84760,6 +84972,7 @@ class PlotOptionsScatterZonesBuilder
 // Target: abstract class PlotOptionsSeries
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeries extends PlotOptionsSeries {
   @override
   final bool allowPointSelect;
@@ -85394,6 +85607,7 @@ class PlotOptionsSeriesBuilder
 // Target: abstract class PlotOptionsSeriesDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesDataLabels extends PlotOptionsSeriesDataLabels {
   @override
   final String align;
@@ -85785,6 +85999,7 @@ class PlotOptionsSeriesDataLabelsBuilder
 // Target: abstract class PlotOptionsSeriesEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesEvents extends PlotOptionsSeriesEvents {
   @override
   final Function afterAnimate;
@@ -85964,6 +86179,7 @@ class PlotOptionsSeriesEventsBuilder
 // Target: abstract class PlotOptionsSeriesMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesMarker extends PlotOptionsSeriesMarker {
   @override
   final bool enabled;
@@ -86155,6 +86371,7 @@ class PlotOptionsSeriesMarkerBuilder
 // Target: abstract class PlotOptionsSeriesMarkerStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesMarkerStates extends PlotOptionsSeriesMarkerStates {
   @override
   final PlotOptionsSeriesMarkerStatesHover hover;
@@ -86252,6 +86469,7 @@ class PlotOptionsSeriesMarkerStatesBuilder
 // Target: abstract class PlotOptionsSeriesMarkerStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesMarkerStatesHover
     extends PlotOptionsSeriesMarkerStatesHover {
   @override
@@ -86416,6 +86634,7 @@ class PlotOptionsSeriesMarkerStatesHoverBuilder
 // Target: abstract class PlotOptionsSeriesMarkerStatesSelect
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesMarkerStatesSelect
     extends PlotOptionsSeriesMarkerStatesSelect {
   @override
@@ -86554,6 +86773,7 @@ class PlotOptionsSeriesMarkerStatesSelectBuilder
 // Target: abstract class PlotOptionsSeriesPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesPoint extends PlotOptionsSeriesPoint {
   @override
   final PlotOptionsSeriesPointEvents events;
@@ -86638,6 +86858,7 @@ class PlotOptionsSeriesPointBuilder
 // Target: abstract class PlotOptionsSeriesPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesPointEvents extends PlotOptionsSeriesPointEvents {
   @override
   final Function click;
@@ -86800,6 +87021,7 @@ class PlotOptionsSeriesPointEventsBuilder
 // Target: abstract class PlotOptionsSeriesStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesStates extends PlotOptionsSeriesStates {
   @override
   final PlotOptionsSeriesStatesHover hover;
@@ -86884,6 +87106,7 @@ class PlotOptionsSeriesStatesBuilder
 // Target: abstract class PlotOptionsSeriesStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesStatesHover extends PlotOptionsSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -87035,6 +87258,7 @@ class PlotOptionsSeriesStatesHoverBuilder
 // Target: abstract class PlotOptionsSeriesStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesStatesHoverHalo
     extends PlotOptionsSeriesStatesHoverHalo {
   @override
@@ -87142,6 +87366,7 @@ class PlotOptionsSeriesStatesHoverHaloBuilder
 // Target: abstract class PlotOptionsSeriesStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesStatesHoverMarker
     extends PlotOptionsSeriesStatesHoverMarker {
   @override
@@ -87334,6 +87559,7 @@ class PlotOptionsSeriesStatesHoverMarkerBuilder
 // Target: abstract class PlotOptionsSeriesTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesTooltip extends PlotOptionsSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -87597,6 +87823,7 @@ class PlotOptionsSeriesTooltipBuilder
 // Target: abstract class PlotOptionsSeriesZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesZones extends PlotOptionsSeriesZones {
   @override
   final String className;
@@ -87727,6 +87954,7 @@ class PlotOptionsSeriesZonesBuilder
 // Target: abstract class PlotOptionsSolidgauge
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSolidgauge extends PlotOptionsSolidgauge {
   @override
   final bool animation;
@@ -88145,6 +88373,7 @@ class PlotOptionsSolidgaugeBuilder
 // Target: abstract class PlotOptionsSolidgaugeDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSolidgaugeDataLabels
     extends PlotOptionsSolidgaugeDataLabels {
   @override
@@ -88537,6 +88766,7 @@ class PlotOptionsSolidgaugeDataLabelsBuilder
 // Target: abstract class PlotOptionsSolidgaugeEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSolidgaugeEvents extends PlotOptionsSolidgaugeEvents {
   @override
   final Function afterAnimate;
@@ -88717,6 +88947,7 @@ class PlotOptionsSolidgaugeEventsBuilder
 // Target: abstract class PlotOptionsSolidgaugePoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSolidgaugePoint extends PlotOptionsSolidgaugePoint {
   @override
   final PlotOptionsSolidgaugePointEvents events;
@@ -88802,6 +89033,7 @@ class PlotOptionsSolidgaugePointBuilder
 // Target: abstract class PlotOptionsSolidgaugePointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSolidgaugePointEvents
     extends PlotOptionsSolidgaugePointEvents {
   @override
@@ -88965,6 +89197,7 @@ class PlotOptionsSolidgaugePointEventsBuilder
 // Target: abstract class PlotOptionsSolidgaugeTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSolidgaugeTooltip extends PlotOptionsSolidgaugeTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -89229,6 +89462,7 @@ class PlotOptionsSolidgaugeTooltipBuilder
 // Target: abstract class PlotOptionsSpline
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSpline extends PlotOptionsSpline {
   @override
   final bool allowPointSelect;
@@ -89852,6 +90086,7 @@ class PlotOptionsSplineBuilder
 // Target: abstract class PlotOptionsSplineDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineDataLabels extends PlotOptionsSplineDataLabels {
   @override
   final String align;
@@ -90243,6 +90478,7 @@ class PlotOptionsSplineDataLabelsBuilder
 // Target: abstract class PlotOptionsSplineEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineEvents extends PlotOptionsSplineEvents {
   @override
   final Function afterAnimate;
@@ -90422,6 +90658,7 @@ class PlotOptionsSplineEventsBuilder
 // Target: abstract class PlotOptionsSplineMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineMarker extends PlotOptionsSplineMarker {
   @override
   final bool enabled;
@@ -90613,6 +90850,7 @@ class PlotOptionsSplineMarkerBuilder
 // Target: abstract class PlotOptionsSplineMarkerStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineMarkerStates extends PlotOptionsSplineMarkerStates {
   @override
   final PlotOptionsSplineMarkerStatesHover hover;
@@ -90710,6 +90948,7 @@ class PlotOptionsSplineMarkerStatesBuilder
 // Target: abstract class PlotOptionsSplineMarkerStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineMarkerStatesHover
     extends PlotOptionsSplineMarkerStatesHover {
   @override
@@ -90874,6 +91113,7 @@ class PlotOptionsSplineMarkerStatesHoverBuilder
 // Target: abstract class PlotOptionsSplineMarkerStatesSelect
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineMarkerStatesSelect
     extends PlotOptionsSplineMarkerStatesSelect {
   @override
@@ -91012,6 +91252,7 @@ class PlotOptionsSplineMarkerStatesSelectBuilder
 // Target: abstract class PlotOptionsSplinePoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplinePoint extends PlotOptionsSplinePoint {
   @override
   final PlotOptionsSplinePointEvents events;
@@ -91096,6 +91337,7 @@ class PlotOptionsSplinePointBuilder
 // Target: abstract class PlotOptionsSplinePointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplinePointEvents extends PlotOptionsSplinePointEvents {
   @override
   final Function click;
@@ -91258,6 +91500,7 @@ class PlotOptionsSplinePointEventsBuilder
 // Target: abstract class PlotOptionsSplineStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineStates extends PlotOptionsSplineStates {
   @override
   final PlotOptionsSplineStatesHover hover;
@@ -91342,6 +91585,7 @@ class PlotOptionsSplineStatesBuilder
 // Target: abstract class PlotOptionsSplineStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineStatesHover extends PlotOptionsSplineStatesHover {
   @override
   final JsonObject animation;
@@ -91493,6 +91737,7 @@ class PlotOptionsSplineStatesHoverBuilder
 // Target: abstract class PlotOptionsSplineStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineStatesHoverHalo
     extends PlotOptionsSplineStatesHoverHalo {
   @override
@@ -91600,6 +91845,7 @@ class PlotOptionsSplineStatesHoverHaloBuilder
 // Target: abstract class PlotOptionsSplineStatesHoverMarker
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineStatesHoverMarker
     extends PlotOptionsSplineStatesHoverMarker {
   @override
@@ -91792,6 +92038,7 @@ class PlotOptionsSplineStatesHoverMarkerBuilder
 // Target: abstract class PlotOptionsSplineTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineTooltip extends PlotOptionsSplineTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -92055,6 +92302,7 @@ class PlotOptionsSplineTooltipBuilder
 // Target: abstract class PlotOptionsSplineZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineZones extends PlotOptionsSplineZones {
   @override
   final String className;
@@ -92185,6 +92433,7 @@ class PlotOptionsSplineZonesBuilder
 // Target: abstract class PlotOptionsTreemap
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsTreemap extends PlotOptionsTreemap {
   @override
   final bool allowDrillToNode;
@@ -92831,6 +93080,7 @@ class PlotOptionsTreemapBuilder
 // Target: abstract class PlotOptionsTreemapDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsTreemapDataLabels extends PlotOptionsTreemapDataLabels {
   @override
   final String align;
@@ -93222,6 +93472,7 @@ class PlotOptionsTreemapDataLabelsBuilder
 // Target: abstract class PlotOptionsTreemapEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsTreemapEvents extends PlotOptionsTreemapEvents {
   @override
   final Function afterAnimate;
@@ -93401,6 +93652,7 @@ class PlotOptionsTreemapEventsBuilder
 // Target: abstract class PlotOptionsTreemapLevels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsTreemapLevels extends PlotOptionsTreemapLevels {
   @override
   final String borderColor;
@@ -93580,6 +93832,7 @@ class PlotOptionsTreemapLevelsBuilder
 // Target: abstract class PlotOptionsTreemapPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsTreemapPoint extends PlotOptionsTreemapPoint {
   @override
   final PlotOptionsTreemapPointEvents events;
@@ -93665,6 +93918,7 @@ class PlotOptionsTreemapPointBuilder
 // Target: abstract class PlotOptionsTreemapPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsTreemapPointEvents extends PlotOptionsTreemapPointEvents {
   @override
   final Function click;
@@ -93827,6 +94081,7 @@ class PlotOptionsTreemapPointEventsBuilder
 // Target: abstract class PlotOptionsTreemapStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsTreemapStates extends PlotOptionsTreemapStates {
   @override
   final PlotOptionsTreemapStatesHover hover;
@@ -93912,6 +94167,7 @@ class PlotOptionsTreemapStatesBuilder
 // Target: abstract class PlotOptionsTreemapStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsTreemapStatesHover extends PlotOptionsTreemapStatesHover {
   @override
   final JsonObject animation;
@@ -94061,6 +94317,7 @@ class PlotOptionsTreemapStatesHoverBuilder
 // Target: abstract class PlotOptionsTreemapTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsTreemapTooltip extends PlotOptionsTreemapTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -94324,6 +94581,7 @@ class PlotOptionsTreemapTooltipBuilder
 // Target: abstract class PlotOptionsTreemapZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsTreemapZones extends PlotOptionsTreemapZones {
   @override
   final String className;
@@ -94455,6 +94713,7 @@ class PlotOptionsTreemapZonesBuilder
 // Target: abstract class PlotOptionsWaterfall
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsWaterfall extends PlotOptionsWaterfall {
   @override
   final bool allowPointSelect;
@@ -95200,6 +95459,7 @@ class PlotOptionsWaterfallBuilder
 // Target: abstract class PlotOptionsWaterfallDataLabels
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsWaterfallDataLabels extends PlotOptionsWaterfallDataLabels {
   @override
   final String align;
@@ -95591,6 +95851,7 @@ class PlotOptionsWaterfallDataLabelsBuilder
 // Target: abstract class PlotOptionsWaterfallEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsWaterfallEvents extends PlotOptionsWaterfallEvents {
   @override
   final Function afterAnimate;
@@ -95770,6 +96031,7 @@ class PlotOptionsWaterfallEventsBuilder
 // Target: abstract class PlotOptionsWaterfallPoint
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsWaterfallPoint extends PlotOptionsWaterfallPoint {
   @override
   final PlotOptionsWaterfallPointEvents events;
@@ -95855,6 +96117,7 @@ class PlotOptionsWaterfallPointBuilder
 // Target: abstract class PlotOptionsWaterfallPointEvents
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsWaterfallPointEvents
     extends PlotOptionsWaterfallPointEvents {
   @override
@@ -96018,6 +96281,7 @@ class PlotOptionsWaterfallPointEventsBuilder
 // Target: abstract class PlotOptionsWaterfallStates
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsWaterfallStates extends PlotOptionsWaterfallStates {
   @override
   final PlotOptionsWaterfallStatesHover hover;
@@ -96103,6 +96367,7 @@ class PlotOptionsWaterfallStatesBuilder
 // Target: abstract class PlotOptionsWaterfallStatesHover
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsWaterfallStatesHover
     extends PlotOptionsWaterfallStatesHover {
   @override
@@ -96253,6 +96518,7 @@ class PlotOptionsWaterfallStatesHoverBuilder
 // Target: abstract class PlotOptionsWaterfallStatesHoverHalo
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsWaterfallStatesHoverHalo
     extends PlotOptionsWaterfallStatesHoverHalo {
   @override
@@ -96361,6 +96627,7 @@ class PlotOptionsWaterfallStatesHoverHaloBuilder
 // Target: abstract class PlotOptionsWaterfallTooltip
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsWaterfallTooltip extends PlotOptionsWaterfallTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -96625,6 +96892,7 @@ class PlotOptionsWaterfallTooltipBuilder
 // Target: abstract class PlotOptionsWaterfallZones
 // **************************************************************************
 
+// ignore_for_file: annotate_overrides
 class _$PlotOptionsWaterfallZones extends PlotOptionsWaterfallZones {
   @override
   final String className;
