@@ -22,6 +22,7 @@ import 'title.dart';
 import 'tooltip.dart';
 import 'xaxis.dart';
 import 'yaxis.dart';
+import 'scrollbar.dart';
 
 part 'chart_options.g.dart';
 abstract class ChartOptions implements Built<ChartOptions, ChartOptionsBuilder> {
@@ -83,6 +84,11 @@ abstract class ChartOptions implements Built<ChartOptions, ChartOptionsBuilder> 
   @nullable
   YAxis get yAxis;
 
+  @nullable
+  Scrollbar get scrollbar;
+
+
   factory ChartOptions([updates(ChartOptionsBuilder b)]) = _$ChartOptions;
   ChartOptions._();
 }
+

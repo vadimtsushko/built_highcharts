@@ -5,11 +5,15 @@ title:
 subtitle:
   text: 'Source: WorldClimate.com'
   x: -20
+scrollbar:
+  enable: true
 xAxis:
   categories: [
       'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
       'Oct', 'Nov', 'Dec'
     ]
+  min: 0
+  max: 4
 yAxis:
   title:
     text: 'Temperature (ºC)'

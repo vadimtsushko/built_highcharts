@@ -5,12 +5,15 @@ import 'package:built_value/serializer.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/json_object.dart';
 import 'datetime_label_formats.dart';
+import 'scrollbar.dart';
 
 part 'yaxis.g.dart';
     
 abstract class YAxis implements Built<YAxis, YAxisBuilder> {
   static Serializer<YAxis> get serializer => _$yAxisSerializer;
 
+  @nullable
+  Scrollbar get scrollbar;
 
   /**
    * Whether to allow decimals in this axis' ticks. When counting integers, like persons or hits on a web page, decimals should be avoided in the labels. 

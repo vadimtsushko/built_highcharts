@@ -136,6 +136,12 @@ class _$ChartOptionsSerializer implements StructuredSerializer<ChartOptions> {
         ..add(serializers.serialize(object.yAxis,
             specifiedType: const FullType(YAxis)));
     }
+    if (object.scrollbar != null) {
+      result
+        ..add('scrollbar')
+        ..add(serializers.serialize(object.scrollbar,
+            specifiedType: const FullType(Scrollbar)));
+    }
 
     return result;
   }
@@ -231,6 +237,10 @@ class _$ChartOptionsSerializer implements StructuredSerializer<ChartOptions> {
           result.yAxis.replace(serializers.deserialize(value,
               specifiedType: const FullType(YAxis)) as YAxis);
           break;
+        case 'scrollbar':
+          result.scrollbar.replace(serializers.deserialize(value,
+              specifiedType: const FullType(Scrollbar)) as Scrollbar);
+          break;
       }
     }
 
@@ -283,6 +293,8 @@ class _$ChartOptions extends ChartOptions {
   final XAxis xAxis;
   @override
   final YAxis yAxis;
+  @override
+  final Scrollbar scrollbar;
 
   factory _$ChartOptions([void updates(ChartOptionsBuilder b)]) =>
       (new ChartOptionsBuilder()..update(updates)).build();
@@ -306,7 +318,8 @@ class _$ChartOptions extends ChartOptions {
       this.title,
       this.tooltip,
       this.xAxis,
-      this.yAxis})
+      this.yAxis,
+      this.scrollbar})
       : super._();
 
   @override
@@ -338,7 +351,8 @@ class _$ChartOptions extends ChartOptions {
         title == other.title &&
         tooltip == other.tooltip &&
         xAxis == other.xAxis &&
-        yAxis == other.yAxis;
+        yAxis == other.yAxis &&
+        scrollbar == other.scrollbar;
   }
 
   @override
@@ -361,32 +375,26 @@ class _$ChartOptions extends ChartOptions {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc(
-                                                                                0,
-                                                                                chart
-                                                                                    .hashCode),
-                                                                            colors
-                                                                                .hashCode),
-                                                                        credits
-                                                                            .hashCode),
-                                                                    data
-                                                                        .hashCode),
-                                                                drilldown
-                                                                    .hashCode),
-                                                            exporting.hashCode),
-                                                        labels.hashCode),
-                                                    legend.hashCode),
-                                                loading.hashCode),
-                                            navigation.hashCode),
-                                        noData.hashCode),
-                                    pane.hashCode),
-                                plotOptions.hashCode),
-                            series.hashCode),
-                        subtitle.hashCode),
-                    title.hashCode),
-                tooltip.hashCode),
-            xAxis.hashCode),
-        yAxis.hashCode));
+                                                                            $jc($jc(0, chart.hashCode),
+                                                                                colors.hashCode),
+                                                                            credits.hashCode),
+                                                                        data.hashCode),
+                                                                    drilldown.hashCode),
+                                                                exporting.hashCode),
+                                                            labels.hashCode),
+                                                        legend.hashCode),
+                                                    loading.hashCode),
+                                                navigation.hashCode),
+                                            noData.hashCode),
+                                        pane.hashCode),
+                                    plotOptions.hashCode),
+                                series.hashCode),
+                            subtitle.hashCode),
+                        title.hashCode),
+                    tooltip.hashCode),
+                xAxis.hashCode),
+            yAxis.hashCode),
+        scrollbar.hashCode));
   }
 
   @override
@@ -410,7 +418,8 @@ class _$ChartOptions extends ChartOptions {
           ..add('title', title)
           ..add('tooltip', tooltip)
           ..add('xAxis', xAxis)
-          ..add('yAxis', yAxis))
+          ..add('yAxis', yAxis)
+          ..add('scrollbar', scrollbar))
         .toString();
   }
 }
@@ -503,6 +512,11 @@ class ChartOptionsBuilder
   YAxisBuilder get yAxis => _$this._yAxis ??= new YAxisBuilder();
   set yAxis(YAxisBuilder yAxis) => _$this._yAxis = yAxis;
 
+  ScrollbarBuilder _scrollbar;
+  ScrollbarBuilder get scrollbar =>
+      _$this._scrollbar ??= new ScrollbarBuilder();
+  set scrollbar(ScrollbarBuilder scrollbar) => _$this._scrollbar = scrollbar;
+
   ChartOptionsBuilder();
 
   ChartOptionsBuilder get _$this {
@@ -526,6 +540,7 @@ class ChartOptionsBuilder
       _tooltip = _$v.tooltip?.toBuilder();
       _xAxis = _$v.xAxis?.toBuilder();
       _yAxis = _$v.yAxis?.toBuilder();
+      _scrollbar = _$v.scrollbar?.toBuilder();
       _$v = null;
     }
     return this;
@@ -564,7 +579,8 @@ class ChartOptionsBuilder
             title: _title?.build(),
             tooltip: _tooltip?.build(),
             xAxis: _xAxis?.build(),
-            yAxis: _yAxis?.build());
+            yAxis: _yAxis?.build(),
+            scrollbar: _scrollbar?.build());
     replace(result);
     return result;
   }

@@ -6,6 +6,6 @@ loadChartFromYaml(String chartName) async {
   var model = loadYaml(content);
   var chartOptions = fromJson(ChartOptions, model);
   var jsOptions = toJsObject(chartOptions);
-  window.console.debug(jsOptions);
+  print(new JsonEncoder.withIndent('  ').convert(model));
   new HighchartsChart(jsOptions);
 }

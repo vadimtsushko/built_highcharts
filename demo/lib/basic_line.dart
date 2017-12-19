@@ -14,6 +14,9 @@ void basicLine(_) {
     ..title.text = 'Monthly Average Temperature'
     ..subtitle.text = 'Source: WorldClimate.com'
     ..subtitle.x = -20
+    ..scrollbar.enabled = true
+    ..scrollbar.showFull = false
+    ..xAxis.max = 4
     ..xAxis.categories.addAll([
       'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
       'Oct', 'Nov', 'Dec'
@@ -60,12 +63,16 @@ void basicLine(_) {
       new Series((b) => b
         ..name = 'London'
         ..data = jsonObject([3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]))]));
-  //window.console.debug(toJsObject(chartOptions));
-  chart = new HighchartsChart(toJsObject(chartOptions));
+  var options = toJsObject(chartOptions);
+  var dartOptions = toJson(chartOptions);
+  print(dartOptions);
+  print(new JsonEncoder.withIndent('  ').convert(dartOptions));
+//  window.console.debug(toJsObject(chartOptions));
+  chart = new HighchartsChart(options);
   clearSelectionButton = chart.renderer.button('Clear selection', 0,0, allowInterop(clearSelection), null, null, null, null, null);
   clearSelectionButton.add().toFront().hide();
 
-  //window.console.debug(chart);
+//  window.console.debug(chart);
 
 
 //  chart.getSelectedPoints();

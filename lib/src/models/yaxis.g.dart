@@ -35,6 +35,12 @@ class _$YAxisSerializer implements StructuredSerializer<YAxis> {
   Iterable serialize(Serializers serializers, YAxis object,
       {FullType specifiedType: FullType.unspecified}) {
     final result = <Object>[];
+    if (object.scrollbar != null) {
+      result
+        ..add('scrollbar')
+        ..add(serializers.serialize(object.scrollbar,
+            specifiedType: const FullType(Scrollbar)));
+    }
     if (object.allowDecimals != null) {
       result
         ..add('allowDecimals')
@@ -472,6 +478,10 @@ class _$YAxisSerializer implements StructuredSerializer<YAxis> {
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'scrollbar':
+          result.scrollbar.replace(serializers.deserialize(value,
+              specifiedType: const FullType(Scrollbar)) as Scrollbar);
+          break;
         case 'allowDecimals':
           result.allowDecimals = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -2072,6 +2082,8 @@ class _$YAxisTitleSerializer implements StructuredSerializer<YAxisTitle> {
 // ignore_for_file: annotate_overrides
 class _$YAxis extends YAxis {
   @override
+  final Scrollbar scrollbar;
+  @override
   final bool allowDecimals;
   @override
   final String alternateGridColor;
@@ -2216,7 +2228,8 @@ class _$YAxis extends YAxis {
       (new YAxisBuilder()..update(updates)).build();
 
   _$YAxis._(
-      {this.allowDecimals,
+      {this.scrollbar,
+      this.allowDecimals,
       this.alternateGridColor,
       this.angle,
       this.breaks,
@@ -2299,7 +2312,8 @@ class _$YAxis extends YAxis {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! YAxis) return false;
-    return allowDecimals == other.allowDecimals &&
+    return scrollbar == other.scrollbar &&
+        allowDecimals == other.allowDecimals &&
         alternateGridColor == other.alternateGridColor &&
         angle == other.angle &&
         breaks == other.breaks &&
@@ -2391,7 +2405,7 @@ class _$YAxis extends YAxis {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, allowDecimals.hashCode), alternateGridColor.hashCode), angle.hashCode), breaks.hashCode), categories.hashCode), ceiling.hashCode), className.hashCode), crosshair.hashCode), dateTimeLabelFormats.hashCode), description.hashCode), endOnTick.hashCode), events.hashCode), floor.hashCode), gridLineColor.hashCode), gridLineDashStyle.hashCode), gridLineInterpolation.hashCode), gridLineWidth.hashCode), gridZIndex.hashCode), id.hashCode), labels.hashCode), lineColor.hashCode), lineWidth.hashCode), linkedTo.hashCode), max.hashCode), maxColor.hashCode), maxPadding.hashCode), maxZoom.hashCode), min.hashCode), minColor.hashCode), minPadding.hashCode), minRange.hashCode), minTickInterval.hashCode), minorGridLineColor.hashCode), minorGridLineDashStyle.hashCode), minorGridLineWidth.hashCode), minorTickColor.hashCode), minorTickInterval.hashCode), minorTickLength.hashCode), minorTickPosition.hashCode), minorTickWidth.hashCode), offset.hashCode), opposite.hashCode), plotBands.hashCode), plotLines.hashCode), reversed.hashCode), reversedStacks.hashCode), showEmpty.hashCode), showFirstLabel.hashCode), showLastLabel.hashCode), softMax.hashCode), softMin.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, scrollbar.hashCode), allowDecimals.hashCode), alternateGridColor.hashCode), angle.hashCode), breaks.hashCode), categories.hashCode), ceiling.hashCode), className.hashCode), crosshair.hashCode), dateTimeLabelFormats.hashCode), description.hashCode), endOnTick.hashCode), events.hashCode), floor.hashCode), gridLineColor.hashCode), gridLineDashStyle.hashCode), gridLineInterpolation.hashCode), gridLineWidth.hashCode), gridZIndex.hashCode), id.hashCode), labels.hashCode), lineColor.hashCode), lineWidth.hashCode), linkedTo.hashCode), max.hashCode), maxColor.hashCode), maxPadding.hashCode), maxZoom.hashCode), min.hashCode), minColor.hashCode), minPadding.hashCode), minRange.hashCode), minTickInterval.hashCode), minorGridLineColor.hashCode), minorGridLineDashStyle.hashCode), minorGridLineWidth.hashCode), minorTickColor.hashCode), minorTickInterval.hashCode), minorTickLength.hashCode), minorTickPosition.hashCode), minorTickWidth.hashCode), offset.hashCode), opposite.hashCode), plotBands.hashCode), plotLines.hashCode), reversed.hashCode), reversedStacks.hashCode), showEmpty.hashCode), showFirstLabel.hashCode), showLastLabel.hashCode), softMax.hashCode), softMin.hashCode),
                                                                                 stackLabels.hashCode),
                                                                             startOfWeek.hashCode),
                                                                         startOnTick.hashCode),
@@ -2416,6 +2430,7 @@ class _$YAxis extends YAxis {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('YAxis')
+          ..add('scrollbar', scrollbar)
           ..add('allowDecimals', allowDecimals)
           ..add('alternateGridColor', alternateGridColor)
           ..add('angle', angle)
@@ -2492,6 +2507,11 @@ class _$YAxis extends YAxis {
 
 class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
   _$YAxis _$v;
+
+  ScrollbarBuilder _scrollbar;
+  ScrollbarBuilder get scrollbar =>
+      _$this._scrollbar ??= new ScrollbarBuilder();
+  set scrollbar(ScrollbarBuilder scrollbar) => _$this._scrollbar = scrollbar;
 
   bool _allowDecimals;
   bool get allowDecimals => _$this._allowDecimals;
@@ -2805,6 +2825,7 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
 
   YAxisBuilder get _$this {
     if (_$v != null) {
+      _scrollbar = _$v.scrollbar?.toBuilder();
       _allowDecimals = _$v.allowDecimals;
       _alternateGridColor = _$v.alternateGridColor;
       _angle = _$v.angle;
@@ -2895,6 +2916,7 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
   _$YAxis build() {
     final result = _$v ??
         new _$YAxis._(
+            scrollbar: _scrollbar?.build(),
             allowDecimals: allowDecimals,
             alternateGridColor: alternateGridColor,
             angle: angle,
