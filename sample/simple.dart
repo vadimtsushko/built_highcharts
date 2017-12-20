@@ -175,7 +175,18 @@ main() {
 //    ]));
 //  print(toJson(chartOptions));
 
-  YAxis yAxis = new YAxis((b) => b
-  ..title.text = 'asdasd'
-  ..plotLines = jsonObject({'one': 'two'}));
+//  YAxis yAxis = new YAxis((b) => b
+//  ..title.text = 'asdasd'
+//  ..plotLines = jsonObject({'one': 'two'}));
+
+    var chartOptions = new ChartOptions((b) => b
+    ..scrollbar.showFull = false
+      ..scrollbar.enabled = true
+      ..xAxis.max = 10
+
+    );
+    print(chartOptions);
+    var chartOptionsMap = toJson(chartOptions);
+    print(chartOptionsMap);
+
 }
