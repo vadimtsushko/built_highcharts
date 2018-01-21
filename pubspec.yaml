@@ -5,7 +5,7 @@ homepage: https://github.com/vadimtsushko/built_highcharts
 author: Vadim Tsushko vadimtsushko@gmail.com
 
 environment:
-  sdk:  '>=2.0.0-dev <2.0.0'
+  sdk:  '>=1.24.3 <2.0.0'
 dependencies:
   path: any
   built_value: "4.6.1"
