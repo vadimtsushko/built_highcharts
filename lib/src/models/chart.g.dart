@@ -4,8 +4,15 @@ part of chart;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library chart
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<Chart> _$chartSerializer = new _$ChartSerializer();
 Serializer<ChartEvents> _$chartEventsSerializer = new _$ChartEventsSerializer();
@@ -1242,12 +1249,6 @@ class _$ChartResetZoomButtonPositionSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class Chart
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$Chart extends Chart {
   @override
   final bool alignTicks;
@@ -1807,64 +1808,83 @@ class ChartBuilder implements Builder<Chart, ChartBuilder> {
 
   @override
   _$Chart build() {
-    final result = _$v ??
-        new _$Chart._(
-            alignTicks: alignTicks,
-            animation: animation,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            colorCount: colorCount,
-            defaultSeriesType: defaultSeriesType,
-            description: description,
-            events: _events?.build(),
-            height: height,
-            ignoreHiddenSeries: ignoreHiddenSeries,
-            inverted: inverted,
-            margin: margin,
-            marginBottom: marginBottom,
-            marginLeft: marginLeft,
-            marginRight: marginRight,
-            marginTop: marginTop,
-            options3d: _options3d?.build(),
-            panKey: panKey,
-            panning: panning,
-            pinchType: pinchType,
-            plotBackgroundColor: plotBackgroundColor,
-            plotBackgroundImage: plotBackgroundImage,
-            plotBorderColor: plotBorderColor,
-            plotBorderWidth: plotBorderWidth,
-            plotShadow: plotShadow,
-            polar: polar,
-            reflow: reflow,
-            renderTo: renderTo,
-            resetZoomButton: _resetZoomButton?.build(),
-            selectionMarkerFill: selectionMarkerFill,
-            shadow: shadow,
-            showAxes: showAxes,
-            spacing: _spacing?.build(),
-            spacingBottom: spacingBottom,
-            spacingLeft: spacingLeft,
-            spacingRight: spacingRight,
-            spacingTop: spacingTop,
-            style: _style?.build(),
-            type: type,
-            typeDescription: typeDescription,
-            width: width,
-            zoomType: zoomType);
-    replace(result);
-    return result;
+    _$Chart _$result;
+    try {
+      _$result = _$v ??
+          new _$Chart._(
+              alignTicks: alignTicks,
+              animation: animation,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              colorCount: colorCount,
+              defaultSeriesType: defaultSeriesType,
+              description: description,
+              events: _events?.build(),
+              height: height,
+              ignoreHiddenSeries: ignoreHiddenSeries,
+              inverted: inverted,
+              margin: margin,
+              marginBottom: marginBottom,
+              marginLeft: marginLeft,
+              marginRight: marginRight,
+              marginTop: marginTop,
+              options3d: _options3d?.build(),
+              panKey: panKey,
+              panning: panning,
+              pinchType: pinchType,
+              plotBackgroundColor: plotBackgroundColor,
+              plotBackgroundImage: plotBackgroundImage,
+              plotBorderColor: plotBorderColor,
+              plotBorderWidth: plotBorderWidth,
+              plotShadow: plotShadow,
+              polar: polar,
+              reflow: reflow,
+              renderTo: renderTo,
+              resetZoomButton: _resetZoomButton?.build(),
+              selectionMarkerFill: selectionMarkerFill,
+              shadow: shadow,
+              showAxes: showAxes,
+              spacing: _spacing?.build(),
+              spacingBottom: spacingBottom,
+              spacingLeft: spacingLeft,
+              spacingRight: spacingRight,
+              spacingTop: spacingTop,
+              style: _style?.build(),
+              type: type,
+              typeDescription: typeDescription,
+              width: width,
+              zoomType: zoomType);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'options3d';
+        _options3d?.build();
+
+        _$failedField = 'resetZoomButton';
+        _resetZoomButton?.build();
+
+        _$failedField = 'spacing';
+        _spacing?.build();
+
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'Chart', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ChartEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ChartEvents extends ChartEvents {
   @override
   final Function addSeries;
@@ -2052,7 +2072,7 @@ class ChartEventsBuilder implements Builder<ChartEvents, ChartEventsBuilder> {
 
   @override
   _$ChartEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ChartEvents._(
             addSeries: addSeries,
             afterPrint: afterPrint,
@@ -2065,17 +2085,11 @@ class ChartEventsBuilder implements Builder<ChartEvents, ChartEventsBuilder> {
             redraw: redraw,
             render: render,
             selection: selection);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ChartOptions3d
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ChartOptions3d extends ChartOptions3d {
   @override
   final num alpha;
@@ -2231,27 +2245,34 @@ class ChartOptions3dBuilder
 
   @override
   _$ChartOptions3d build() {
-    final result = _$v ??
-        new _$ChartOptions3d._(
-            alpha: alpha,
-            axisLabelPosition: axisLabelPosition,
-            beta: beta,
-            depth: depth,
-            enabled: enabled,
-            fitToPlot: fitToPlot,
-            frame: _frame?.build(),
-            viewDistance: viewDistance);
-    replace(result);
-    return result;
+    _$ChartOptions3d _$result;
+    try {
+      _$result = _$v ??
+          new _$ChartOptions3d._(
+              alpha: alpha,
+              axisLabelPosition: axisLabelPosition,
+              beta: beta,
+              depth: depth,
+              enabled: enabled,
+              fitToPlot: fitToPlot,
+              frame: _frame?.build(),
+              viewDistance: viewDistance);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'frame';
+        _frame?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ChartOptions3d', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ChartOptions3dFrame
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ChartOptions3dFrame extends ChartOptions3dFrame {
   @override
   final JsonObject back;
@@ -2351,20 +2372,27 @@ class ChartOptions3dFrameBuilder
 
   @override
   _$ChartOptions3dFrame build() {
-    final result = _$v ??
-        new _$ChartOptions3dFrame._(
-            back: back, bottom: bottom, side: _side?.build(), top: top);
-    replace(result);
-    return result;
+    _$ChartOptions3dFrame _$result;
+    try {
+      _$result = _$v ??
+          new _$ChartOptions3dFrame._(
+              back: back, bottom: bottom, side: _side?.build(), top: top);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'side';
+        _side?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ChartOptions3dFrame', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ChartOptions3dFrameBack
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ChartOptions3dFrameBack extends ChartOptions3dFrameBack {
   @override
   final String color;
@@ -2456,20 +2484,14 @@ class ChartOptions3dFrameBackBuilder
 
   @override
   _$ChartOptions3dFrameBack build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ChartOptions3dFrameBack._(
             color: color, size: size, visible: visible);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ChartOptions3dFrameBottom
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ChartOptions3dFrameBottom extends ChartOptions3dFrameBottom {
   @override
   final String color;
@@ -2561,20 +2583,14 @@ class ChartOptions3dFrameBottomBuilder
 
   @override
   _$ChartOptions3dFrameBottom build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ChartOptions3dFrameBottom._(
             color: color, size: size, visible: visible);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ChartOptions3dFrameSide
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ChartOptions3dFrameSide extends ChartOptions3dFrameSide {
   @override
   final String color;
@@ -2654,19 +2670,13 @@ class ChartOptions3dFrameSideBuilder
 
   @override
   _$ChartOptions3dFrameSide build() {
-    final result =
+    final _$result =
         _$v ?? new _$ChartOptions3dFrameSide._(color: color, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ChartOptions3dFrameTop
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ChartOptions3dFrameTop extends ChartOptions3dFrameTop {
   @override
   final String color;
@@ -2745,19 +2755,13 @@ class ChartOptions3dFrameTopBuilder
 
   @override
   _$ChartOptions3dFrameTop build() {
-    final result =
+    final _$result =
         _$v ?? new _$ChartOptions3dFrameTop._(color: color, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ChartResetZoomButton
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ChartResetZoomButton extends ChartResetZoomButton {
   @override
   final JsonObject position;
@@ -2847,20 +2851,14 @@ class ChartResetZoomButtonBuilder
 
   @override
   _$ChartResetZoomButton build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ChartResetZoomButton._(
             position: position, relativeTo: relativeTo, theme: theme);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ChartResetZoomButtonPosition
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ChartResetZoomButtonPosition extends ChartResetZoomButtonPosition {
   @override
   final String align;
@@ -2965,10 +2963,10 @@ class ChartResetZoomButtonPositionBuilder
 
   @override
   _$ChartResetZoomButtonPosition build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ChartResetZoomButtonPosition._(
             align: align, verticalAlign: verticalAlign, x: x, y: y);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

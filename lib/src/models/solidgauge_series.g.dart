@@ -4,8 +4,15 @@ part of solidgauge_series;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library solidgauge_series
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<SolidgaugeSeries> _$solidgaugeSeriesSerializer =
     new _$SolidgaugeSeriesSerializer();
@@ -1438,12 +1445,6 @@ class _$SolidgaugeSeriesTooltipSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class SolidgaugeSeries
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$SolidgaugeSeries extends SolidgaugeSeries {
   @override
   final bool animation;
@@ -1696,7 +1697,9 @@ class _$SolidgaugeSeries extends SolidgaugeSeries {
 }
 
 class SolidgaugeSeriesBuilder
-    implements Builder<SolidgaugeSeries, SolidgaugeSeriesBuilder> {
+    implements
+        Builder<SolidgaugeSeries, SolidgaugeSeriesBuilder>,
+        SeriesBuilder {
   _$SolidgaugeSeries _$v;
 
   bool _animation;
@@ -1899,7 +1902,7 @@ class SolidgaugeSeriesBuilder
   }
 
   @override
-  void replace(SolidgaugeSeries other) {
+  void replace(covariant SolidgaugeSeries other) {
     if (other == null) throw new ArgumentError.notNull('other');
     _$v = other as _$SolidgaugeSeries;
   }
@@ -1911,55 +1914,68 @@ class SolidgaugeSeriesBuilder
 
   @override
   _$SolidgaugeSeries build() {
-    final result = _$v ??
-        new _$SolidgaugeSeries._(
-            animation: animation,
-            animationLimit: animationLimit,
-            className: className,
-            colorIndex: colorIndex,
-            cursor: cursor,
-            data: data,
-            dataLabels: dataLabels,
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            id: id,
-            index: index,
-            keys: _keys?.build(),
-            legendIndex: legendIndex,
-            linecap: linecap,
-            name: name,
-            overshoot: overshoot,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            rounded: rounded,
-            selected: selected,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            stickyTracking: stickyTracking,
-            threshold: threshold,
-            tooltip: tooltip,
-            type: type,
-            visible: visible,
-            wrap: wrap,
-            xAxis: xAxis,
-            yAxis: yAxis,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$SolidgaugeSeries _$result;
+    try {
+      _$result = _$v ??
+          new _$SolidgaugeSeries._(
+              animation: animation,
+              animationLimit: animationLimit,
+              className: className,
+              colorIndex: colorIndex,
+              cursor: cursor,
+              data: data,
+              dataLabels: dataLabels,
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              id: id,
+              index: index,
+              keys: _keys?.build(),
+              legendIndex: legendIndex,
+              linecap: linecap,
+              name: name,
+              overshoot: overshoot,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              rounded: rounded,
+              selected: selected,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              stickyTracking: stickyTracking,
+              threshold: threshold,
+              tooltip: tooltip,
+              type: type,
+              visible: visible,
+              wrap: wrap,
+              xAxis: xAxis,
+              yAxis: yAxis,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'SolidgaugeSeries', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class SolidgaugeSeriesData
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$SolidgaugeSeriesData extends SolidgaugeSeriesData {
   @override
   final String className;
@@ -2174,7 +2190,7 @@ class SolidgaugeSeriesDataBuilder
 
   @override
   _$SolidgaugeSeriesData build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$SolidgaugeSeriesData._(
             className: className,
             color: color,
@@ -2189,17 +2205,11 @@ class SolidgaugeSeriesDataBuilder
             radius: radius,
             selected: selected,
             y: y);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class SolidgaugeSeriesDataEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$SolidgaugeSeriesDataEvents extends SolidgaugeSeriesDataEvents {
   @override
   final Function click;
@@ -2342,7 +2352,7 @@ class SolidgaugeSeriesDataEventsBuilder
 
   @override
   _$SolidgaugeSeriesDataEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$SolidgaugeSeriesDataEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -2351,17 +2361,11 @@ class SolidgaugeSeriesDataEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class SolidgaugeSeriesDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$SolidgaugeSeriesDataLabels extends SolidgaugeSeriesDataLabels {
   @override
   final String align;
@@ -2715,44 +2719,51 @@ class SolidgaugeSeriesDataLabelsBuilder
 
   @override
   _$SolidgaugeSeriesDataLabels build() {
-    final result = _$v ??
-        new _$SolidgaugeSeriesDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$SolidgaugeSeriesDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$SolidgaugeSeriesDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'SolidgaugeSeriesDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class SolidgaugeSeriesEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$SolidgaugeSeriesEvents extends SolidgaugeSeriesEvents {
   @override
   final Function afterAnimate;
@@ -2911,7 +2922,7 @@ class SolidgaugeSeriesEventsBuilder
 
   @override
   _$SolidgaugeSeriesEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$SolidgaugeSeriesEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -2921,17 +2932,11 @@ class SolidgaugeSeriesEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class SolidgaugeSeriesPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$SolidgaugeSeriesPoint extends SolidgaugeSeriesPoint {
   @override
   final SolidgaugeSeriesPointEvents events;
@@ -3003,19 +3008,25 @@ class SolidgaugeSeriesPointBuilder
 
   @override
   _$SolidgaugeSeriesPoint build() {
-    final result =
-        _$v ?? new _$SolidgaugeSeriesPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$SolidgaugeSeriesPoint _$result;
+    try {
+      _$result = _$v ?? new _$SolidgaugeSeriesPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'SolidgaugeSeriesPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class SolidgaugeSeriesPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$SolidgaugeSeriesPointEvents extends SolidgaugeSeriesPointEvents {
   @override
   final Function click;
@@ -3159,7 +3170,7 @@ class SolidgaugeSeriesPointEventsBuilder
 
   @override
   _$SolidgaugeSeriesPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$SolidgaugeSeriesPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -3168,17 +3179,11 @@ class SolidgaugeSeriesPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class SolidgaugeSeriesTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$SolidgaugeSeriesTooltip extends SolidgaugeSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -3416,23 +3421,36 @@ class SolidgaugeSeriesTooltipBuilder
 
   @override
   _$SolidgaugeSeriesTooltip build() {
-    final result = _$v ??
-        new _$SolidgaugeSeriesTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$SolidgaugeSeriesTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$SolidgaugeSeriesTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'SolidgaugeSeriesTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }

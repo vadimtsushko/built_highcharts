@@ -37,7 +37,7 @@ time_series_zoomable(_) async {
         'hover': {'lineWidth': 1}
       })
       ..threshold = null)
-    ..series.add(new Series((b) => b
+    ..series.add(new LineSeries((b) => b
       ..type = 'area'
       ..name = 'USD to EUR'
       ..data = jsonObject(jsonData))));

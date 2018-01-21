@@ -4,8 +4,15 @@ part of polygon_series;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library polygon_series
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<PolygonSeries> _$polygonSeriesSerializer =
     new _$PolygonSeriesSerializer();
@@ -2867,12 +2874,6 @@ class _$PolygonSeriesZonesSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeries
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeries extends PolygonSeries {
   @override
   final bool allowPointSelect;
@@ -3179,7 +3180,7 @@ class _$PolygonSeries extends PolygonSeries {
 }
 
 class PolygonSeriesBuilder
-    implements Builder<PolygonSeries, PolygonSeriesBuilder> {
+    implements Builder<PolygonSeries, PolygonSeriesBuilder>, SeriesBuilder {
   _$PolygonSeries _$v;
 
   bool _allowPointSelect;
@@ -3444,7 +3445,7 @@ class PolygonSeriesBuilder
   }
 
   @override
-  void replace(PolygonSeries other) {
+  void replace(covariant PolygonSeries other) {
     if (other == null) throw new ArgumentError.notNull('other');
     _$v = other as _$PolygonSeries;
   }
@@ -3456,66 +3457,85 @@ class PolygonSeriesBuilder
 
   @override
   _$PolygonSeries build() {
-    final result = _$v ??
-        new _$PolygonSeries._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorIndex: colorIndex,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            dashStyle: dashStyle,
-            data: data,
-            dataLabels: _dataLabels?.build(),
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            id: id,
-            index: index,
-            keys: _keys?.build(),
-            legendIndex: legendIndex,
-            lineWidth: lineWidth,
-            linkedTo: linkedTo,
-            marker: _marker?.build(),
-            name: name,
-            negativeColor: negativeColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointStart: pointStart,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            states: states,
-            stickyTracking: stickyTracking,
-            tooltip: tooltip,
-            turboThreshold: turboThreshold,
-            type: type,
-            visible: visible,
-            xAxis: xAxis,
-            yAxis: yAxis,
-            zIndex: zIndex,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PolygonSeries _$result;
+    try {
+      _$result = _$v ??
+          new _$PolygonSeries._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorIndex: colorIndex,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              dashStyle: dashStyle,
+              data: data,
+              dataLabels: _dataLabels?.build(),
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              id: id,
+              index: index,
+              keys: _keys?.build(),
+              legendIndex: legendIndex,
+              lineWidth: lineWidth,
+              linkedTo: linkedTo,
+              marker: _marker?.build(),
+              name: name,
+              negativeColor: negativeColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointStart: pointStart,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              states: states,
+              stickyTracking: stickyTracking,
+              tooltip: tooltip,
+              turboThreshold: turboThreshold,
+              type: type,
+              visible: visible,
+              xAxis: xAxis,
+              yAxis: yAxis,
+              zIndex: zIndex,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'marker';
+        _marker?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PolygonSeries', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesData
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesData extends PolygonSeriesData {
   @override
   final String className;
@@ -3744,33 +3764,40 @@ class PolygonSeriesDataBuilder
 
   @override
   _$PolygonSeriesData build() {
-    final result = _$v ??
-        new _$PolygonSeriesData._(
-            className: className,
-            color: color,
-            colorIndex: colorIndex,
-            dataLabels: dataLabels,
-            description: description,
-            drilldown: drilldown,
-            events: events,
-            id: id,
-            labelrank: labelrank,
-            marker: _marker?.build(),
-            name: name,
-            selected: selected,
-            x: x,
-            y: y);
-    replace(result);
-    return result;
+    _$PolygonSeriesData _$result;
+    try {
+      _$result = _$v ??
+          new _$PolygonSeriesData._(
+              className: className,
+              color: color,
+              colorIndex: colorIndex,
+              dataLabels: dataLabels,
+              description: description,
+              drilldown: drilldown,
+              events: events,
+              id: id,
+              labelrank: labelrank,
+              marker: _marker?.build(),
+              name: name,
+              selected: selected,
+              x: x,
+              y: y);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PolygonSeriesData', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesDataEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesDataEvents extends PolygonSeriesDataEvents {
   @override
   final Function click;
@@ -3913,7 +3940,7 @@ class PolygonSeriesDataEventsBuilder
 
   @override
   _$PolygonSeriesDataEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PolygonSeriesDataEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -3922,17 +3949,11 @@ class PolygonSeriesDataEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesDataMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesDataMarker extends PolygonSeriesDataMarker {
   @override
   final bool enabled;
@@ -4103,28 +4124,35 @@ class PolygonSeriesDataMarkerBuilder
 
   @override
   _$PolygonSeriesDataMarker build() {
-    final result = _$v ??
-        new _$PolygonSeriesDataMarker._(
-            enabled: enabled,
-            fillColor: fillColor,
-            height: height,
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            radius: radius,
-            states: _states?.build(),
-            symbol: symbol,
-            width: width);
-    replace(result);
-    return result;
+    _$PolygonSeriesDataMarker _$result;
+    try {
+      _$result = _$v ??
+          new _$PolygonSeriesDataMarker._(
+              enabled: enabled,
+              fillColor: fillColor,
+              height: height,
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              radius: radius,
+              states: _states?.build(),
+              symbol: symbol,
+              width: width);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'states';
+        _states?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PolygonSeriesDataMarker', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesDataMarkerStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesDataMarkerStates extends PolygonSeriesDataMarkerStates {
   @override
   final PolygonSeriesDataMarkerStatesHover hover;
@@ -4199,19 +4227,26 @@ class PolygonSeriesDataMarkerStatesBuilder
 
   @override
   _$PolygonSeriesDataMarkerStates build() {
-    final result =
-        _$v ?? new _$PolygonSeriesDataMarkerStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PolygonSeriesDataMarkerStates _$result;
+    try {
+      _$result =
+          _$v ?? new _$PolygonSeriesDataMarkerStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PolygonSeriesDataMarkerStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesDataMarkerStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesDataMarkerStatesHover
     extends PolygonSeriesDataMarkerStatesHover {
   @override
@@ -4347,25 +4382,32 @@ class PolygonSeriesDataMarkerStatesHoverBuilder
 
   @override
   _$PolygonSeriesDataMarkerStatesHover build() {
-    final result = _$v ??
-        new _$PolygonSeriesDataMarkerStatesHover._(
-            animation: animation,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$PolygonSeriesDataMarkerStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$PolygonSeriesDataMarkerStatesHover._(
+              animation: animation,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PolygonSeriesDataMarkerStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesDataMarkerStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesDataMarkerStatesHoverHalo
     extends PolygonSeriesDataMarkerStatesHoverHalo {
   @override
@@ -4462,20 +4504,14 @@ class PolygonSeriesDataMarkerStatesHoverHaloBuilder
 
   @override
   _$PolygonSeriesDataMarkerStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PolygonSeriesDataMarkerStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesDataMarkerStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesDataMarkerStatesHoverMarker
     extends PolygonSeriesDataMarkerStatesHoverMarker {
   @override
@@ -4648,7 +4684,7 @@ class PolygonSeriesDataMarkerStatesHoverMarkerBuilder
 
   @override
   _$PolygonSeriesDataMarkerStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PolygonSeriesDataMarkerStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -4659,17 +4695,11 @@ class PolygonSeriesDataMarkerStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesDataLabels extends PolygonSeriesDataLabels {
   @override
   final String align;
@@ -5023,44 +5053,51 @@ class PolygonSeriesDataLabelsBuilder
 
   @override
   _$PolygonSeriesDataLabels build() {
-    final result = _$v ??
-        new _$PolygonSeriesDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PolygonSeriesDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PolygonSeriesDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PolygonSeriesDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesEvents extends PolygonSeriesEvents {
   @override
   final Function afterAnimate;
@@ -5217,7 +5254,7 @@ class PolygonSeriesEventsBuilder
 
   @override
   _$PolygonSeriesEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PolygonSeriesEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -5227,17 +5264,11 @@ class PolygonSeriesEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesMarker extends PolygonSeriesMarker {
   @override
   final bool enabled;
@@ -5405,28 +5436,35 @@ class PolygonSeriesMarkerBuilder
 
   @override
   _$PolygonSeriesMarker build() {
-    final result = _$v ??
-        new _$PolygonSeriesMarker._(
-            enabled: enabled,
-            fillColor: fillColor,
-            height: height,
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            radius: radius,
-            states: _states?.build(),
-            symbol: symbol,
-            width: width);
-    replace(result);
-    return result;
+    _$PolygonSeriesMarker _$result;
+    try {
+      _$result = _$v ??
+          new _$PolygonSeriesMarker._(
+              enabled: enabled,
+              fillColor: fillColor,
+              height: height,
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              radius: radius,
+              states: _states?.build(),
+              symbol: symbol,
+              width: width);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'states';
+        _states?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PolygonSeriesMarker', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesMarkerStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesMarkerStates extends PolygonSeriesMarkerStates {
   @override
   final PolygonSeriesMarkerStatesHover hover;
@@ -5510,20 +5548,29 @@ class PolygonSeriesMarkerStatesBuilder
 
   @override
   _$PolygonSeriesMarkerStates build() {
-    final result = _$v ??
-        new _$PolygonSeriesMarkerStates._(
-            hover: _hover?.build(), select: _select?.build());
-    replace(result);
-    return result;
+    _$PolygonSeriesMarkerStates _$result;
+    try {
+      _$result = _$v ??
+          new _$PolygonSeriesMarkerStates._(
+              hover: _hover?.build(), select: _select?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+        _$failedField = 'select';
+        _select?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PolygonSeriesMarkerStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesMarkerStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesMarkerStatesHover extends PolygonSeriesMarkerStatesHover {
   @override
   final bool enabled;
@@ -5667,7 +5714,7 @@ class PolygonSeriesMarkerStatesHoverBuilder
 
   @override
   _$PolygonSeriesMarkerStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PolygonSeriesMarkerStatesHover._(
             enabled: enabled,
             fillColor: fillColor,
@@ -5676,17 +5723,11 @@ class PolygonSeriesMarkerStatesHoverBuilder
             lineWidthPlus: lineWidthPlus,
             radius: radius,
             radiusPlus: radiusPlus);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesMarkerStatesSelect
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesMarkerStatesSelect
     extends PolygonSeriesMarkerStatesSelect {
   @override
@@ -5807,24 +5848,18 @@ class PolygonSeriesMarkerStatesSelectBuilder
 
   @override
   _$PolygonSeriesMarkerStatesSelect build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PolygonSeriesMarkerStatesSelect._(
             enabled: enabled,
             fillColor: fillColor,
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesPoint extends PolygonSeriesPoint {
   @override
   final PolygonSeriesPointEvents events;
@@ -5894,18 +5929,25 @@ class PolygonSeriesPointBuilder
 
   @override
   _$PolygonSeriesPoint build() {
-    final result = _$v ?? new _$PolygonSeriesPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PolygonSeriesPoint _$result;
+    try {
+      _$result = _$v ?? new _$PolygonSeriesPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PolygonSeriesPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesPointEvents extends PolygonSeriesPointEvents {
   @override
   final Function click;
@@ -6048,7 +6090,7 @@ class PolygonSeriesPointEventsBuilder
 
   @override
   _$PolygonSeriesPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PolygonSeriesPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -6057,17 +6099,11 @@ class PolygonSeriesPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesStates extends PolygonSeriesStates {
   @override
   final PolygonSeriesStatesHover hover;
@@ -6137,18 +6173,25 @@ class PolygonSeriesStatesBuilder
 
   @override
   _$PolygonSeriesStates build() {
-    final result = _$v ?? new _$PolygonSeriesStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PolygonSeriesStates _$result;
+    try {
+      _$result = _$v ?? new _$PolygonSeriesStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PolygonSeriesStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesStatesHover extends PolygonSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -6281,25 +6324,32 @@ class PolygonSeriesStatesHoverBuilder
 
   @override
   _$PolygonSeriesStatesHover build() {
-    final result = _$v ??
-        new _$PolygonSeriesStatesHover._(
-            animation: animation,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$PolygonSeriesStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$PolygonSeriesStatesHover._(
+              animation: animation,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PolygonSeriesStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesStatesHoverHalo extends PolygonSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -6392,20 +6442,14 @@ class PolygonSeriesStatesHoverHaloBuilder
 
   @override
   _$PolygonSeriesStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PolygonSeriesStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesStatesHoverMarker extends PolygonSeriesStatesHoverMarker {
   @override
   final bool enabled;
@@ -6575,7 +6619,7 @@ class PolygonSeriesStatesHoverMarkerBuilder
 
   @override
   _$PolygonSeriesStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PolygonSeriesStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -6586,17 +6630,11 @@ class PolygonSeriesStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesTooltip extends PolygonSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -6832,33 +6870,40 @@ class PolygonSeriesTooltipBuilder
 
   @override
   _$PolygonSeriesTooltip build() {
-    final result = _$v ??
-        new _$PolygonSeriesTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PolygonSeriesTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PolygonSeriesTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PolygonSeriesTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PolygonSeriesZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PolygonSeriesZones extends PolygonSeriesZones {
   @override
   final String className;
@@ -6970,14 +7015,14 @@ class PolygonSeriesZonesBuilder
 
   @override
   _$PolygonSeriesZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PolygonSeriesZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

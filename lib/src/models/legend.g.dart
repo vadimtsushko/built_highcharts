@@ -4,8 +4,15 @@ part of legend;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library legend
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<Legend> _$legendSerializer = new _$LegendSerializer();
 Serializer<LegendNavigation> _$legendNavigationSerializer =
@@ -584,12 +591,6 @@ class _$LegendTitleSerializer implements StructuredSerializer<LegendTitle> {
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class Legend
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$Legend extends Legend {
   @override
   final String align;
@@ -1068,56 +1069,74 @@ class LegendBuilder implements Builder<Legend, LegendBuilder> {
 
   @override
   _$Legend build() {
-    final result = _$v ??
-        new _$Legend._(
-            align: align,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            enabled: enabled,
-            floating: floating,
-            itemDistance: itemDistance,
-            itemHiddenStyle: _itemHiddenStyle?.build(),
-            itemHoverStyle: _itemHoverStyle?.build(),
-            itemMarginBottom: itemMarginBottom,
-            itemMarginTop: itemMarginTop,
-            itemStyle: _itemStyle?.build(),
-            itemWidth: itemWidth,
-            labelFormat: labelFormat,
-            labelFormatter: labelFormatter,
-            layout: layout,
-            lineHeight: lineHeight,
-            margin: margin,
-            maxHeight: maxHeight,
-            navigation: _navigation?.build(),
-            padding: padding,
-            reversed: reversed,
-            rtl: rtl,
-            shadow: shadow,
-            squareSymbol: squareSymbol,
-            style: _style?.build(),
-            symbolHeight: symbolHeight,
-            symbolPadding: symbolPadding,
-            symbolRadius: symbolRadius,
-            symbolWidth: symbolWidth,
-            title: title,
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            width: width,
-            x: x,
-            y: y);
-    replace(result);
-    return result;
+    _$Legend _$result;
+    try {
+      _$result = _$v ??
+          new _$Legend._(
+              align: align,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              enabled: enabled,
+              floating: floating,
+              itemDistance: itemDistance,
+              itemHiddenStyle: _itemHiddenStyle?.build(),
+              itemHoverStyle: _itemHoverStyle?.build(),
+              itemMarginBottom: itemMarginBottom,
+              itemMarginTop: itemMarginTop,
+              itemStyle: _itemStyle?.build(),
+              itemWidth: itemWidth,
+              labelFormat: labelFormat,
+              labelFormatter: labelFormatter,
+              layout: layout,
+              lineHeight: lineHeight,
+              margin: margin,
+              maxHeight: maxHeight,
+              navigation: _navigation?.build(),
+              padding: padding,
+              reversed: reversed,
+              rtl: rtl,
+              shadow: shadow,
+              squareSymbol: squareSymbol,
+              style: _style?.build(),
+              symbolHeight: symbolHeight,
+              symbolPadding: symbolPadding,
+              symbolRadius: symbolRadius,
+              symbolWidth: symbolWidth,
+              title: title,
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              width: width,
+              x: x,
+              y: y);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'itemHiddenStyle';
+        _itemHiddenStyle?.build();
+        _$failedField = 'itemHoverStyle';
+        _itemHoverStyle?.build();
+
+        _$failedField = 'itemStyle';
+        _itemStyle?.build();
+
+        _$failedField = 'navigation';
+        _navigation?.build();
+
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'Legend', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class LegendNavigation
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$LegendNavigation extends LegendNavigation {
   @override
   final String activeColor;
@@ -1247,25 +1266,32 @@ class LegendNavigationBuilder
 
   @override
   _$LegendNavigation build() {
-    final result = _$v ??
-        new _$LegendNavigation._(
-            activeColor: activeColor,
-            animation: animation,
-            arrowSize: arrowSize,
-            enabled: enabled,
-            inactiveColor: inactiveColor,
-            style: _style?.build());
-    replace(result);
-    return result;
+    _$LegendNavigation _$result;
+    try {
+      _$result = _$v ??
+          new _$LegendNavigation._(
+              activeColor: activeColor,
+              animation: animation,
+              arrowSize: arrowSize,
+              enabled: enabled,
+              inactiveColor: inactiveColor,
+              style: _style?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'LegendNavigation', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class LegendTitle
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$LegendTitle extends LegendTitle {
   @override
   final BuiltMap<String, String> style;
@@ -1341,9 +1367,21 @@ class LegendTitleBuilder implements Builder<LegendTitle, LegendTitleBuilder> {
 
   @override
   _$LegendTitle build() {
-    final result =
-        _$v ?? new _$LegendTitle._(style: _style?.build(), text: text);
-    replace(result);
-    return result;
+    _$LegendTitle _$result;
+    try {
+      _$result = _$v ?? new _$LegendTitle._(style: _style?.build(), text: text);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'LegendTitle', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }

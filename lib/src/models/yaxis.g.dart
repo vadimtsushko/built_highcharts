@@ -4,8 +4,15 @@ part of yaxis;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library yaxis
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<YAxis> _$yAxisSerializer = new _$YAxisSerializer();
 Serializer<YAxisBreaks> _$yAxisBreaksSerializer = new _$YAxisBreaksSerializer();
@@ -2074,12 +2081,6 @@ class _$YAxisTitleSerializer implements StructuredSerializer<YAxisTitle> {
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class YAxis
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$YAxis extends YAxis {
   @override
   final Scrollbar scrollbar;
@@ -2914,90 +2915,118 @@ class YAxisBuilder implements Builder<YAxis, YAxisBuilder> {
 
   @override
   _$YAxis build() {
-    final result = _$v ??
-        new _$YAxis._(
-            scrollbar: _scrollbar?.build(),
-            allowDecimals: allowDecimals,
-            alternateGridColor: alternateGridColor,
-            angle: angle,
-            breaks: breaks,
-            categories: _categories?.build(),
-            ceiling: ceiling,
-            className: className,
-            crosshair: crosshair,
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            description: description,
-            endOnTick: endOnTick,
-            events: _events?.build(),
-            floor: floor,
-            gridLineColor: gridLineColor,
-            gridLineDashStyle: gridLineDashStyle,
-            gridLineInterpolation: gridLineInterpolation,
-            gridLineWidth: gridLineWidth,
-            gridZIndex: gridZIndex,
-            id: id,
-            labels: _labels?.build(),
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            linkedTo: linkedTo,
-            max: max,
-            maxColor: maxColor,
-            maxPadding: maxPadding,
-            maxZoom: maxZoom,
-            min: min,
-            minColor: minColor,
-            minPadding: minPadding,
-            minRange: minRange,
-            minTickInterval: minTickInterval,
-            minorGridLineColor: minorGridLineColor,
-            minorGridLineDashStyle: minorGridLineDashStyle,
-            minorGridLineWidth: minorGridLineWidth,
-            minorTickColor: minorTickColor,
-            minorTickInterval: minorTickInterval,
-            minorTickLength: minorTickLength,
-            minorTickPosition: minorTickPosition,
-            minorTickWidth: minorTickWidth,
-            offset: offset,
-            opposite: opposite,
-            plotBands: plotBands,
-            plotLines: plotLines,
-            reversed: reversed,
-            reversedStacks: reversedStacks,
-            showEmpty: showEmpty,
-            showFirstLabel: showFirstLabel,
-            showLastLabel: showLastLabel,
-            softMax: softMax,
-            softMin: softMin,
-            stackLabels: _stackLabels?.build(),
-            startOfWeek: startOfWeek,
-            startOnTick: startOnTick,
-            stops: stops,
-            tickAmount: tickAmount,
-            tickColor: tickColor,
-            tickInterval: tickInterval,
-            tickLength: tickLength,
-            tickPixelInterval: tickPixelInterval,
-            tickPosition: tickPosition,
-            tickPositioner: tickPositioner,
-            tickPositions: _tickPositions?.build(),
-            tickWidth: tickWidth,
-            tickmarkPlacement: tickmarkPlacement,
-            title: _title?.build(),
-            type: type,
-            uniqueNames: uniqueNames,
-            units: units,
-            visible: visible);
-    replace(result);
-    return result;
+    _$YAxis _$result;
+    try {
+      _$result = _$v ??
+          new _$YAxis._(
+              scrollbar: _scrollbar?.build(),
+              allowDecimals: allowDecimals,
+              alternateGridColor: alternateGridColor,
+              angle: angle,
+              breaks: breaks,
+              categories: _categories?.build(),
+              ceiling: ceiling,
+              className: className,
+              crosshair: crosshair,
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              description: description,
+              endOnTick: endOnTick,
+              events: _events?.build(),
+              floor: floor,
+              gridLineColor: gridLineColor,
+              gridLineDashStyle: gridLineDashStyle,
+              gridLineInterpolation: gridLineInterpolation,
+              gridLineWidth: gridLineWidth,
+              gridZIndex: gridZIndex,
+              id: id,
+              labels: _labels?.build(),
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              linkedTo: linkedTo,
+              max: max,
+              maxColor: maxColor,
+              maxPadding: maxPadding,
+              maxZoom: maxZoom,
+              min: min,
+              minColor: minColor,
+              minPadding: minPadding,
+              minRange: minRange,
+              minTickInterval: minTickInterval,
+              minorGridLineColor: minorGridLineColor,
+              minorGridLineDashStyle: minorGridLineDashStyle,
+              minorGridLineWidth: minorGridLineWidth,
+              minorTickColor: minorTickColor,
+              minorTickInterval: minorTickInterval,
+              minorTickLength: minorTickLength,
+              minorTickPosition: minorTickPosition,
+              minorTickWidth: minorTickWidth,
+              offset: offset,
+              opposite: opposite,
+              plotBands: plotBands,
+              plotLines: plotLines,
+              reversed: reversed,
+              reversedStacks: reversedStacks,
+              showEmpty: showEmpty,
+              showFirstLabel: showFirstLabel,
+              showLastLabel: showLastLabel,
+              softMax: softMax,
+              softMin: softMin,
+              stackLabels: _stackLabels?.build(),
+              startOfWeek: startOfWeek,
+              startOnTick: startOnTick,
+              stops: stops,
+              tickAmount: tickAmount,
+              tickColor: tickColor,
+              tickInterval: tickInterval,
+              tickLength: tickLength,
+              tickPixelInterval: tickPixelInterval,
+              tickPosition: tickPosition,
+              tickPositioner: tickPositioner,
+              tickPositions: _tickPositions?.build(),
+              tickWidth: tickWidth,
+              tickmarkPlacement: tickmarkPlacement,
+              title: _title?.build(),
+              type: type,
+              uniqueNames: uniqueNames,
+              units: units,
+              visible: visible);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'scrollbar';
+        _scrollbar?.build();
+
+        _$failedField = 'categories';
+        _categories?.build();
+
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'labels';
+        _labels?.build();
+
+        _$failedField = 'stackLabels';
+        _stackLabels?.build();
+
+        _$failedField = 'tickPositions';
+        _tickPositions?.build();
+
+        _$failedField = 'title';
+        _title?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'YAxis', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class YAxisBreaks
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$YAxisBreaks extends YAxisBreaks {
   @override
   final num breakSize;
@@ -3094,20 +3123,14 @@ class YAxisBreaksBuilder implements Builder<YAxisBreaks, YAxisBreaksBuilder> {
 
   @override
   _$YAxisBreaks build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$YAxisBreaks._(
             breakSize: breakSize, from: from, repeat: repeat, to: to);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class YAxisCrosshair
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$YAxisCrosshair extends YAxisCrosshair {
   @override
   final String className;
@@ -3235,7 +3258,7 @@ class YAxisCrosshairBuilder
 
   @override
   _$YAxisCrosshair build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$YAxisCrosshair._(
             className: className,
             color: color,
@@ -3243,17 +3266,11 @@ class YAxisCrosshairBuilder
             snap: snap,
             width: width,
             zIndex: zIndex);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class YAxisEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$YAxisEvents extends YAxisEvents {
   @override
   final Function afterBreaks;
@@ -3369,24 +3386,18 @@ class YAxisEventsBuilder implements Builder<YAxisEvents, YAxisEventsBuilder> {
 
   @override
   _$YAxisEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$YAxisEvents._(
             afterBreaks: afterBreaks,
             afterSetExtremes: afterSetExtremes,
             pointBreak: pointBreak,
             pointInBreak: pointInBreak,
             setExtremes: setExtremes);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class YAxisLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$YAxisLabels extends YAxisLabels {
   @override
   final String align;
@@ -3683,38 +3694,48 @@ class YAxisLabelsBuilder implements Builder<YAxisLabels, YAxisLabelsBuilder> {
 
   @override
   _$YAxisLabels build() {
-    final result = _$v ??
-        new _$YAxisLabels._(
-            align: align,
-            autoRotation: _autoRotation?.build(),
-            autoRotationLimit: autoRotationLimit,
-            distance: distance,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            maxStaggerLines: maxStaggerLines,
-            overflow: overflow,
-            padding: padding,
-            reserveSpace: reserveSpace,
-            rotation: rotation,
-            staggerLines: staggerLines,
-            step: step,
-            style: _style?.build(),
-            useHTML: useHTML,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$YAxisLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$YAxisLabels._(
+              align: align,
+              autoRotation: _autoRotation?.build(),
+              autoRotationLimit: autoRotationLimit,
+              distance: distance,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              maxStaggerLines: maxStaggerLines,
+              overflow: overflow,
+              padding: padding,
+              reserveSpace: reserveSpace,
+              rotation: rotation,
+              staggerLines: staggerLines,
+              step: step,
+              style: _style?.build(),
+              useHTML: useHTML,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'autoRotation';
+        _autoRotation?.build();
+
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'YAxisLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class YAxisPlotBands
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$YAxisPlotBands extends YAxisPlotBands {
   @override
   final String borderColor;
@@ -3931,32 +3952,39 @@ class YAxisPlotBandsBuilder
 
   @override
   _$YAxisPlotBands build() {
-    final result = _$v ??
-        new _$YAxisPlotBands._(
-            borderColor: borderColor,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            events: events,
-            from: from,
-            id: id,
-            innerRadius: innerRadius,
-            label: _label?.build(),
-            outerRadius: outerRadius,
-            thickness: thickness,
-            to: to,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$YAxisPlotBands _$result;
+    try {
+      _$result = _$v ??
+          new _$YAxisPlotBands._(
+              borderColor: borderColor,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              events: events,
+              from: from,
+              id: id,
+              innerRadius: innerRadius,
+              label: _label?.build(),
+              outerRadius: outerRadius,
+              thickness: thickness,
+              to: to,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'label';
+        _label?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'YAxisPlotBands', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class YAxisPlotBandsLabel
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$YAxisPlotBandsLabel extends YAxisPlotBandsLabel {
   @override
   final String align;
@@ -4121,7 +4149,7 @@ class YAxisPlotBandsLabelBuilder
 
   @override
   _$YAxisPlotBandsLabel build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$YAxisPlotBandsLabel._(
             align: align,
             rotation: rotation,
@@ -4132,17 +4160,11 @@ class YAxisPlotBandsLabelBuilder
             verticalAlign: verticalAlign,
             x: x,
             y: y);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class YAxisPlotLines
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$YAxisPlotLines extends YAxisPlotLines {
   @override
   final String className;
@@ -4307,28 +4329,35 @@ class YAxisPlotLinesBuilder
 
   @override
   _$YAxisPlotLines build() {
-    final result = _$v ??
-        new _$YAxisPlotLines._(
-            className: className,
-            color: color,
-            dashStyle: dashStyle,
-            events: events,
-            id: id,
-            label: _label?.build(),
-            value: value,
-            width: width,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$YAxisPlotLines _$result;
+    try {
+      _$result = _$v ??
+          new _$YAxisPlotLines._(
+              className: className,
+              color: color,
+              dashStyle: dashStyle,
+              events: events,
+              id: id,
+              label: _label?.build(),
+              value: value,
+              width: width,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'label';
+        _label?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'YAxisPlotLines', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class YAxisPlotLinesLabel
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$YAxisPlotLinesLabel extends YAxisPlotLinesLabel {
   @override
   final String align;
@@ -4493,7 +4522,7 @@ class YAxisPlotLinesLabelBuilder
 
   @override
   _$YAxisPlotLinesLabel build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$YAxisPlotLinesLabel._(
             align: align,
             rotation: rotation,
@@ -4504,17 +4533,11 @@ class YAxisPlotLinesLabelBuilder
             verticalAlign: verticalAlign,
             x: x,
             y: y);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class YAxisStackLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$YAxisStackLabels extends YAxisStackLabels {
   @override
   final String align;
@@ -4706,30 +4729,37 @@ class YAxisStackLabelsBuilder
 
   @override
   _$YAxisStackLabels build() {
-    final result = _$v ??
-        new _$YAxisStackLabels._(
-            align: align,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            rotation: rotation,
-            style: _style?.build(),
-            textAlign: textAlign,
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y);
-    replace(result);
-    return result;
+    _$YAxisStackLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$YAxisStackLabels._(
+              align: align,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              rotation: rotation,
+              style: _style?.build(),
+              textAlign: textAlign,
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'YAxisStackLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class YAxisTitle
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$YAxisTitle extends YAxisTitle {
   @override
   final String align;
@@ -4906,19 +4936,32 @@ class YAxisTitleBuilder implements Builder<YAxisTitle, YAxisTitleBuilder> {
 
   @override
   _$YAxisTitle build() {
-    final result = _$v ??
-        new _$YAxisTitle._(
-            align: align,
-            enabled: enabled,
-            margin: margin,
-            offset: offset,
-            reserveSpace: reserveSpace,
-            rotation: rotation,
-            style: _style?.build(),
-            text: text,
-            x: x,
-            y: y);
-    replace(result);
-    return result;
+    _$YAxisTitle _$result;
+    try {
+      _$result = _$v ??
+          new _$YAxisTitle._(
+              align: align,
+              enabled: enabled,
+              margin: margin,
+              offset: offset,
+              reserveSpace: reserveSpace,
+              rotation: rotation,
+              style: _style?.build(),
+              text: text,
+              x: x,
+              y: y);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'YAxisTitle', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }

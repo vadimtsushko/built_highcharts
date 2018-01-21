@@ -4,8 +4,15 @@ part of chart_options;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library chart_options
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<ChartOptions> _$chartOptionsSerializer =
     new _$ChartOptionsSerializer();
@@ -248,12 +255,6 @@ class _$ChartOptionsSerializer implements StructuredSerializer<ChartOptions> {
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ChartOptions
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ChartOptions extends ChartOptions {
   @override
   final Chart chart;
@@ -559,29 +560,80 @@ class ChartOptionsBuilder
 
   @override
   _$ChartOptions build() {
-    final result = _$v ??
-        new _$ChartOptions._(
-            chart: _chart?.build(),
-            colors: _colors?.build(),
-            credits: _credits?.build(),
-            data: _data?.build(),
-            drilldown: _drilldown?.build(),
-            exporting: _exporting?.build(),
-            labels: _labels?.build(),
-            legend: _legend?.build(),
-            loading: _loading?.build(),
-            navigation: _navigation?.build(),
-            noData: _noData?.build(),
-            pane: _pane?.build(),
-            plotOptions: _plotOptions?.build(),
-            series: _series?.build(),
-            subtitle: _subtitle?.build(),
-            title: _title?.build(),
-            tooltip: _tooltip?.build(),
-            xAxis: _xAxis?.build(),
-            yAxis: _yAxis?.build(),
-            scrollbar: _scrollbar?.build());
-    replace(result);
-    return result;
+    _$ChartOptions _$result;
+    try {
+      _$result = _$v ??
+          new _$ChartOptions._(
+              chart: _chart?.build(),
+              colors: _colors?.build(),
+              credits: _credits?.build(),
+              data: _data?.build(),
+              drilldown: _drilldown?.build(),
+              exporting: _exporting?.build(),
+              labels: _labels?.build(),
+              legend: _legend?.build(),
+              loading: _loading?.build(),
+              navigation: _navigation?.build(),
+              noData: _noData?.build(),
+              pane: _pane?.build(),
+              plotOptions: _plotOptions?.build(),
+              series: _series?.build(),
+              subtitle: _subtitle?.build(),
+              title: _title?.build(),
+              tooltip: _tooltip?.build(),
+              xAxis: _xAxis?.build(),
+              yAxis: _yAxis?.build(),
+              scrollbar: _scrollbar?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'chart';
+        _chart?.build();
+        _$failedField = 'colors';
+        _colors?.build();
+        _$failedField = 'credits';
+        _credits?.build();
+        _$failedField = 'data';
+        _data?.build();
+        _$failedField = 'drilldown';
+        _drilldown?.build();
+        _$failedField = 'exporting';
+        _exporting?.build();
+        _$failedField = 'labels';
+        _labels?.build();
+        _$failedField = 'legend';
+        _legend?.build();
+        _$failedField = 'loading';
+        _loading?.build();
+        _$failedField = 'navigation';
+        _navigation?.build();
+        _$failedField = 'noData';
+        _noData?.build();
+        _$failedField = 'pane';
+        _pane?.build();
+        _$failedField = 'plotOptions';
+        _plotOptions?.build();
+        _$failedField = 'series';
+        _series?.build();
+        _$failedField = 'subtitle';
+        _subtitle?.build();
+        _$failedField = 'title';
+        _title?.build();
+        _$failedField = 'tooltip';
+        _tooltip?.build();
+        _$failedField = 'xAxis';
+        _xAxis?.build();
+        _$failedField = 'yAxis';
+        _yAxis?.build();
+        _$failedField = 'scrollbar';
+        _scrollbar?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ChartOptions', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }

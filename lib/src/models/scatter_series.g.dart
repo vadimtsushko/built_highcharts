@@ -4,8 +4,15 @@ part of scatter_series;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library scatter_series
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<ScatterSeries> _$scatterSeriesSerializer =
     new _$ScatterSeriesSerializer();
@@ -2887,12 +2894,6 @@ class _$ScatterSeriesZonesSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeries
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeries extends ScatterSeries {
   @override
   final bool allowPointSelect;
@@ -3209,7 +3210,7 @@ class _$ScatterSeries extends ScatterSeries {
 }
 
 class ScatterSeriesBuilder
-    implements Builder<ScatterSeries, ScatterSeriesBuilder> {
+    implements Builder<ScatterSeries, ScatterSeriesBuilder>, SeriesBuilder {
   _$ScatterSeries _$v;
 
   bool _allowPointSelect;
@@ -3485,7 +3486,7 @@ class ScatterSeriesBuilder
   }
 
   @override
-  void replace(ScatterSeries other) {
+  void replace(covariant ScatterSeries other) {
     if (other == null) throw new ArgumentError.notNull('other');
     _$v = other as _$ScatterSeries;
   }
@@ -3497,68 +3498,87 @@ class ScatterSeriesBuilder
 
   @override
   _$ScatterSeries build() {
-    final result = _$v ??
-        new _$ScatterSeries._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorIndex: colorIndex,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            dashStyle: dashStyle,
-            data: data,
-            dataLabels: _dataLabels?.build(),
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            id: id,
-            index: index,
-            keys: _keys?.build(),
-            legendIndex: legendIndex,
-            lineWidth: lineWidth,
-            linkedTo: linkedTo,
-            marker: _marker?.build(),
-            name: name,
-            negativeColor: negativeColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointStart: pointStart,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            softThreshold: softThreshold,
-            states: states,
-            stickyTracking: stickyTracking,
-            threshold: threshold,
-            tooltip: tooltip,
-            turboThreshold: turboThreshold,
-            type: type,
-            visible: visible,
-            xAxis: xAxis,
-            yAxis: yAxis,
-            zIndex: zIndex,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$ScatterSeries _$result;
+    try {
+      _$result = _$v ??
+          new _$ScatterSeries._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorIndex: colorIndex,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              dashStyle: dashStyle,
+              data: data,
+              dataLabels: _dataLabels?.build(),
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              id: id,
+              index: index,
+              keys: _keys?.build(),
+              legendIndex: legendIndex,
+              lineWidth: lineWidth,
+              linkedTo: linkedTo,
+              marker: _marker?.build(),
+              name: name,
+              negativeColor: negativeColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointStart: pointStart,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              softThreshold: softThreshold,
+              states: states,
+              stickyTracking: stickyTracking,
+              threshold: threshold,
+              tooltip: tooltip,
+              turboThreshold: turboThreshold,
+              type: type,
+              visible: visible,
+              xAxis: xAxis,
+              yAxis: yAxis,
+              zIndex: zIndex,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'marker';
+        _marker?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ScatterSeries', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesData
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesData extends ScatterSeriesData {
   @override
   final String className;
@@ -3787,33 +3807,40 @@ class ScatterSeriesDataBuilder
 
   @override
   _$ScatterSeriesData build() {
-    final result = _$v ??
-        new _$ScatterSeriesData._(
-            className: className,
-            color: color,
-            colorIndex: colorIndex,
-            dataLabels: dataLabels,
-            description: description,
-            drilldown: drilldown,
-            events: events,
-            id: id,
-            labelrank: labelrank,
-            marker: _marker?.build(),
-            name: name,
-            selected: selected,
-            x: x,
-            y: y);
-    replace(result);
-    return result;
+    _$ScatterSeriesData _$result;
+    try {
+      _$result = _$v ??
+          new _$ScatterSeriesData._(
+              className: className,
+              color: color,
+              colorIndex: colorIndex,
+              dataLabels: dataLabels,
+              description: description,
+              drilldown: drilldown,
+              events: events,
+              id: id,
+              labelrank: labelrank,
+              marker: _marker?.build(),
+              name: name,
+              selected: selected,
+              x: x,
+              y: y);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ScatterSeriesData', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesDataEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesDataEvents extends ScatterSeriesDataEvents {
   @override
   final Function click;
@@ -3956,7 +3983,7 @@ class ScatterSeriesDataEventsBuilder
 
   @override
   _$ScatterSeriesDataEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ScatterSeriesDataEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -3965,17 +3992,11 @@ class ScatterSeriesDataEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesDataMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesDataMarker extends ScatterSeriesDataMarker {
   @override
   final bool enabled;
@@ -4146,28 +4167,35 @@ class ScatterSeriesDataMarkerBuilder
 
   @override
   _$ScatterSeriesDataMarker build() {
-    final result = _$v ??
-        new _$ScatterSeriesDataMarker._(
-            enabled: enabled,
-            fillColor: fillColor,
-            height: height,
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            radius: radius,
-            states: _states?.build(),
-            symbol: symbol,
-            width: width);
-    replace(result);
-    return result;
+    _$ScatterSeriesDataMarker _$result;
+    try {
+      _$result = _$v ??
+          new _$ScatterSeriesDataMarker._(
+              enabled: enabled,
+              fillColor: fillColor,
+              height: height,
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              radius: radius,
+              states: _states?.build(),
+              symbol: symbol,
+              width: width);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'states';
+        _states?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ScatterSeriesDataMarker', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesDataMarkerStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesDataMarkerStates extends ScatterSeriesDataMarkerStates {
   @override
   final ScatterSeriesDataMarkerStatesHover hover;
@@ -4242,19 +4270,26 @@ class ScatterSeriesDataMarkerStatesBuilder
 
   @override
   _$ScatterSeriesDataMarkerStates build() {
-    final result =
-        _$v ?? new _$ScatterSeriesDataMarkerStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$ScatterSeriesDataMarkerStates _$result;
+    try {
+      _$result =
+          _$v ?? new _$ScatterSeriesDataMarkerStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ScatterSeriesDataMarkerStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesDataMarkerStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesDataMarkerStatesHover
     extends ScatterSeriesDataMarkerStatesHover {
   @override
@@ -4390,25 +4425,32 @@ class ScatterSeriesDataMarkerStatesHoverBuilder
 
   @override
   _$ScatterSeriesDataMarkerStatesHover build() {
-    final result = _$v ??
-        new _$ScatterSeriesDataMarkerStatesHover._(
-            animation: animation,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$ScatterSeriesDataMarkerStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$ScatterSeriesDataMarkerStatesHover._(
+              animation: animation,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ScatterSeriesDataMarkerStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesDataMarkerStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesDataMarkerStatesHoverHalo
     extends ScatterSeriesDataMarkerStatesHoverHalo {
   @override
@@ -4505,20 +4547,14 @@ class ScatterSeriesDataMarkerStatesHoverHaloBuilder
 
   @override
   _$ScatterSeriesDataMarkerStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ScatterSeriesDataMarkerStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesDataMarkerStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesDataMarkerStatesHoverMarker
     extends ScatterSeriesDataMarkerStatesHoverMarker {
   @override
@@ -4691,7 +4727,7 @@ class ScatterSeriesDataMarkerStatesHoverMarkerBuilder
 
   @override
   _$ScatterSeriesDataMarkerStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ScatterSeriesDataMarkerStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -4702,17 +4738,11 @@ class ScatterSeriesDataMarkerStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesDataLabels extends ScatterSeriesDataLabels {
   @override
   final String align;
@@ -5066,44 +5096,51 @@ class ScatterSeriesDataLabelsBuilder
 
   @override
   _$ScatterSeriesDataLabels build() {
-    final result = _$v ??
-        new _$ScatterSeriesDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$ScatterSeriesDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$ScatterSeriesDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ScatterSeriesDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesEvents extends ScatterSeriesEvents {
   @override
   final Function afterAnimate;
@@ -5260,7 +5297,7 @@ class ScatterSeriesEventsBuilder
 
   @override
   _$ScatterSeriesEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ScatterSeriesEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -5270,17 +5307,11 @@ class ScatterSeriesEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesMarker extends ScatterSeriesMarker {
   @override
   final bool enabled;
@@ -5448,28 +5479,35 @@ class ScatterSeriesMarkerBuilder
 
   @override
   _$ScatterSeriesMarker build() {
-    final result = _$v ??
-        new _$ScatterSeriesMarker._(
-            enabled: enabled,
-            fillColor: fillColor,
-            height: height,
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            radius: radius,
-            states: _states?.build(),
-            symbol: symbol,
-            width: width);
-    replace(result);
-    return result;
+    _$ScatterSeriesMarker _$result;
+    try {
+      _$result = _$v ??
+          new _$ScatterSeriesMarker._(
+              enabled: enabled,
+              fillColor: fillColor,
+              height: height,
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              radius: radius,
+              states: _states?.build(),
+              symbol: symbol,
+              width: width);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'states';
+        _states?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ScatterSeriesMarker', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesMarkerStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesMarkerStates extends ScatterSeriesMarkerStates {
   @override
   final ScatterSeriesMarkerStatesHover hover;
@@ -5553,20 +5591,29 @@ class ScatterSeriesMarkerStatesBuilder
 
   @override
   _$ScatterSeriesMarkerStates build() {
-    final result = _$v ??
-        new _$ScatterSeriesMarkerStates._(
-            hover: _hover?.build(), select: _select?.build());
-    replace(result);
-    return result;
+    _$ScatterSeriesMarkerStates _$result;
+    try {
+      _$result = _$v ??
+          new _$ScatterSeriesMarkerStates._(
+              hover: _hover?.build(), select: _select?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+        _$failedField = 'select';
+        _select?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ScatterSeriesMarkerStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesMarkerStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesMarkerStatesHover extends ScatterSeriesMarkerStatesHover {
   @override
   final bool enabled;
@@ -5710,7 +5757,7 @@ class ScatterSeriesMarkerStatesHoverBuilder
 
   @override
   _$ScatterSeriesMarkerStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ScatterSeriesMarkerStatesHover._(
             enabled: enabled,
             fillColor: fillColor,
@@ -5719,17 +5766,11 @@ class ScatterSeriesMarkerStatesHoverBuilder
             lineWidthPlus: lineWidthPlus,
             radius: radius,
             radiusPlus: radiusPlus);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesMarkerStatesSelect
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesMarkerStatesSelect
     extends ScatterSeriesMarkerStatesSelect {
   @override
@@ -5850,24 +5891,18 @@ class ScatterSeriesMarkerStatesSelectBuilder
 
   @override
   _$ScatterSeriesMarkerStatesSelect build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ScatterSeriesMarkerStatesSelect._(
             enabled: enabled,
             fillColor: fillColor,
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesPoint extends ScatterSeriesPoint {
   @override
   final ScatterSeriesPointEvents events;
@@ -5937,18 +5972,25 @@ class ScatterSeriesPointBuilder
 
   @override
   _$ScatterSeriesPoint build() {
-    final result = _$v ?? new _$ScatterSeriesPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$ScatterSeriesPoint _$result;
+    try {
+      _$result = _$v ?? new _$ScatterSeriesPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ScatterSeriesPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesPointEvents extends ScatterSeriesPointEvents {
   @override
   final Function click;
@@ -6091,7 +6133,7 @@ class ScatterSeriesPointEventsBuilder
 
   @override
   _$ScatterSeriesPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ScatterSeriesPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -6100,17 +6142,11 @@ class ScatterSeriesPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesStates extends ScatterSeriesStates {
   @override
   final ScatterSeriesStatesHover hover;
@@ -6180,18 +6216,25 @@ class ScatterSeriesStatesBuilder
 
   @override
   _$ScatterSeriesStates build() {
-    final result = _$v ?? new _$ScatterSeriesStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$ScatterSeriesStates _$result;
+    try {
+      _$result = _$v ?? new _$ScatterSeriesStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ScatterSeriesStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesStatesHover extends ScatterSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -6324,25 +6367,32 @@ class ScatterSeriesStatesHoverBuilder
 
   @override
   _$ScatterSeriesStatesHover build() {
-    final result = _$v ??
-        new _$ScatterSeriesStatesHover._(
-            animation: animation,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$ScatterSeriesStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$ScatterSeriesStatesHover._(
+              animation: animation,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ScatterSeriesStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesStatesHoverHalo extends ScatterSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -6435,20 +6485,14 @@ class ScatterSeriesStatesHoverHaloBuilder
 
   @override
   _$ScatterSeriesStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ScatterSeriesStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesStatesHoverMarker extends ScatterSeriesStatesHoverMarker {
   @override
   final bool enabled;
@@ -6618,7 +6662,7 @@ class ScatterSeriesStatesHoverMarkerBuilder
 
   @override
   _$ScatterSeriesStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ScatterSeriesStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -6629,17 +6673,11 @@ class ScatterSeriesStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesTooltip extends ScatterSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -6875,33 +6913,40 @@ class ScatterSeriesTooltipBuilder
 
   @override
   _$ScatterSeriesTooltip build() {
-    final result = _$v ??
-        new _$ScatterSeriesTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$ScatterSeriesTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$ScatterSeriesTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ScatterSeriesTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ScatterSeriesZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ScatterSeriesZones extends ScatterSeriesZones {
   @override
   final String className;
@@ -7013,14 +7058,14 @@ class ScatterSeriesZonesBuilder
 
   @override
   _$ScatterSeriesZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ScatterSeriesZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

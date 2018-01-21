@@ -6,9 +6,11 @@ import 'package:built_collection/built_collection.dart';
 import 'package:built_value/json_object.dart';
 import 'datetime_label_formats.dart';
 
+import 'series.dart';
+
 part 'treemap_series.g.dart';
     
-abstract class TreemapSeries implements Built<TreemapSeries, TreemapSeriesBuilder> {
+abstract class TreemapSeries implements Series, Built<TreemapSeries, TreemapSeriesBuilder> {
   static Serializer<TreemapSeries> get serializer => _$treemapSeriesSerializer;
   /** 
    * When enabled the user can click on a point which is a parent and zoom in on its children. 
@@ -67,7 +69,9 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
   @nullable
   String get color;
   /** 
-   * When using automatic point colors pulled from the <code>options.colors</code> collection, this option determines whether the chart should receive  one color per series or one color per point. 
+   * When using automatic point colors pulled from the <code>options.colors</code>
+ collection, this option determines whether the chart should receive 
+ one color per series or one color per point. 
    */
   @nullable
   bool get colorByPoint;
@@ -273,7 +277,12 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
   @nullable
   JsonObject get states;
   /** 
-   * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event on a series isn't triggered until the mouse moves over another series, or out of the plot area. When false, the <code>mouseOut</code> event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the  tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc. 
+   * Sticky tracking of mouse events. When true, the <code>mouseOut</code> event
+ on a series isn't triggered until the mouse moves over another series, or out
+ of the plot area. When false, the <code>mouseOut</code> event on a series is
+ triggered when the mouse leaves the area around the series' graph or markers.
+ This also implies the tooltip. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the 
+ tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc. 
    */
   @nullable
   bool get stickyTracking;
@@ -283,12 +292,17 @@ Due to poor performance, animation is disabled in old IE browsers for column cha
   @nullable
   JsonObject get tooltip;
   /** 
-   * When a series contains a data array that is longer than this, only one dimensional arrays of numbers, or two dimensional arrays with x and y values are allowed. Also, only the first point is tested, and the rest are assumed to be the same format. This saves expensive data checking and indexing in long series. Set it to <code>0</code> disable. 
+   * When a series contains a data array that is longer than this, only one dimensional arrays of numbers,
+ or two dimensional arrays with x and y values are allowed. Also, only the first
+ point is tested, and the rest are assumed to be the same format. This saves expensive
+ data checking and indexing in long series. Set it to <code>0</code> disable. 
    */
   @nullable
   num get turboThreshold;
   /** 
-   * The type of series. Can be one of <code>area</code>, <code>areaspline</code>, <code>bar</code>, <code>column</code>, <code>line</code>, <code>pie</code>, <code>scatter</code> or <code>spline</code>. From version 2.3, <code>arearange</code>, <code>areasplinerange</code> and <code>columnrange</code> are supported with the highcharts-more.js component. 
+   * The type of series. Can be one of <code>area</code>, <code>areaspline</code>,
+ <code>bar</code>, <code>column</code>, <code>line</code>, <code>pie</code>,
+ <code>scatter</code> or <code>spline</code>. From version 2.3, <code>arearange</code>, <code>areasplinerange</code> and <code>columnrange</code> are supported with the highcharts-more.js component. 
    */
   @nullable
   String get type;

@@ -4,8 +4,15 @@ part of waterfall_series;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library waterfall_series
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<WaterfallSeries> _$waterfallSeriesSerializer =
     new _$WaterfallSeriesSerializer();
@@ -2067,12 +2074,6 @@ class _$WaterfallSeriesZonesSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class WaterfallSeries
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$WaterfallSeries extends WaterfallSeries {
   @override
   final bool allowPointSelect;
@@ -2475,7 +2476,7 @@ class _$WaterfallSeries extends WaterfallSeries {
 }
 
 class WaterfallSeriesBuilder
-    implements Builder<WaterfallSeries, WaterfallSeriesBuilder> {
+    implements Builder<WaterfallSeries, WaterfallSeriesBuilder>, SeriesBuilder {
   _$WaterfallSeries _$v;
 
   bool _allowPointSelect;
@@ -2836,7 +2837,7 @@ class WaterfallSeriesBuilder
   }
 
   @override
-  void replace(WaterfallSeries other) {
+  void replace(covariant WaterfallSeries other) {
     if (other == null) throw new ArgumentError.notNull('other');
     _$v = other as _$WaterfallSeries;
   }
@@ -2848,85 +2849,104 @@ class WaterfallSeriesBuilder
 
   @override
   _$WaterfallSeries build() {
-    final result = _$v ??
-        new _$WaterfallSeries._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            colorByPoint: colorByPoint,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            crisp: crisp,
-            cursor: cursor,
-            dashStyle: dashStyle,
-            data: data,
-            dataLabels: _dataLabels?.build(),
-            depth: depth,
-            description: description,
-            edgeColor: edgeColor,
-            edgeWidth: edgeWidth,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            groupPadding: groupPadding,
-            groupZPadding: groupZPadding,
-            grouping: grouping,
-            id: id,
-            index: index,
-            keys: _keys?.build(),
-            legendIndex: legendIndex,
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            linkedTo: linkedTo,
-            maxPointWidth: maxPointWidth,
-            minPointLength: minPointLength,
-            name: name,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointPadding: pointPadding,
-            pointPlacement: pointPlacement,
-            pointRange: pointRange,
-            pointStart: pointStart,
-            pointWidth: pointWidth,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            softThreshold: softThreshold,
-            stack: stack,
-            states: states,
-            stickyTracking: stickyTracking,
-            threshold: threshold,
-            tooltip: tooltip,
-            type: type,
-            upColor: upColor,
-            visible: visible,
-            xAxis: xAxis,
-            yAxis: yAxis,
-            zIndex: zIndex,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$WaterfallSeries _$result;
+    try {
+      _$result = _$v ??
+          new _$WaterfallSeries._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              colorByPoint: colorByPoint,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              crisp: crisp,
+              cursor: cursor,
+              dashStyle: dashStyle,
+              data: data,
+              dataLabels: _dataLabels?.build(),
+              depth: depth,
+              description: description,
+              edgeColor: edgeColor,
+              edgeWidth: edgeWidth,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              groupPadding: groupPadding,
+              groupZPadding: groupZPadding,
+              grouping: grouping,
+              id: id,
+              index: index,
+              keys: _keys?.build(),
+              legendIndex: legendIndex,
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              linkedTo: linkedTo,
+              maxPointWidth: maxPointWidth,
+              minPointLength: minPointLength,
+              name: name,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointPadding: pointPadding,
+              pointPlacement: pointPlacement,
+              pointRange: pointRange,
+              pointStart: pointStart,
+              pointWidth: pointWidth,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              softThreshold: softThreshold,
+              stack: stack,
+              states: states,
+              stickyTracking: stickyTracking,
+              threshold: threshold,
+              tooltip: tooltip,
+              type: type,
+              upColor: upColor,
+              visible: visible,
+              xAxis: xAxis,
+              yAxis: yAxis,
+              zIndex: zIndex,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'WaterfallSeries', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class WaterfallSeriesData
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesData extends WaterfallSeriesData {
   @override
   final String className;
@@ -3169,7 +3189,7 @@ class WaterfallSeriesDataBuilder
 
   @override
   _$WaterfallSeriesData build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$WaterfallSeriesData._(
             className: className,
             color: color,
@@ -3186,17 +3206,11 @@ class WaterfallSeriesDataBuilder
             selected: selected,
             x: x,
             y: y);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class WaterfallSeriesDataEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesDataEvents extends WaterfallSeriesDataEvents {
   @override
   final Function click;
@@ -3339,7 +3353,7 @@ class WaterfallSeriesDataEventsBuilder
 
   @override
   _$WaterfallSeriesDataEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$WaterfallSeriesDataEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -3348,17 +3362,11 @@ class WaterfallSeriesDataEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class WaterfallSeriesDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesDataLabels extends WaterfallSeriesDataLabels {
   @override
   final String align;
@@ -3712,44 +3720,51 @@ class WaterfallSeriesDataLabelsBuilder
 
   @override
   _$WaterfallSeriesDataLabels build() {
-    final result = _$v ??
-        new _$WaterfallSeriesDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$WaterfallSeriesDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$WaterfallSeriesDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'WaterfallSeriesDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class WaterfallSeriesEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesEvents extends WaterfallSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3907,7 +3922,7 @@ class WaterfallSeriesEventsBuilder
 
   @override
   _$WaterfallSeriesEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$WaterfallSeriesEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -3917,17 +3932,11 @@ class WaterfallSeriesEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class WaterfallSeriesPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesPoint extends WaterfallSeriesPoint {
   @override
   final WaterfallSeriesPointEvents events;
@@ -3999,19 +4008,25 @@ class WaterfallSeriesPointBuilder
 
   @override
   _$WaterfallSeriesPoint build() {
-    final result =
-        _$v ?? new _$WaterfallSeriesPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$WaterfallSeriesPoint _$result;
+    try {
+      _$result = _$v ?? new _$WaterfallSeriesPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'WaterfallSeriesPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class WaterfallSeriesPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesPointEvents extends WaterfallSeriesPointEvents {
   @override
   final Function click;
@@ -4154,7 +4169,7 @@ class WaterfallSeriesPointEventsBuilder
 
   @override
   _$WaterfallSeriesPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$WaterfallSeriesPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -4163,17 +4178,11 @@ class WaterfallSeriesPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class WaterfallSeriesStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesStates extends WaterfallSeriesStates {
   @override
   final WaterfallSeriesStatesHover hover;
@@ -4244,18 +4253,25 @@ class WaterfallSeriesStatesBuilder
 
   @override
   _$WaterfallSeriesStates build() {
-    final result = _$v ?? new _$WaterfallSeriesStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$WaterfallSeriesStates _$result;
+    try {
+      _$result = _$v ?? new _$WaterfallSeriesStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'WaterfallSeriesStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class WaterfallSeriesStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesStatesHover extends WaterfallSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -4386,7 +4402,7 @@ class WaterfallSeriesStatesHoverBuilder
 
   @override
   _$WaterfallSeriesStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$WaterfallSeriesStatesHover._(
             animation: animation,
             borderColor: borderColor,
@@ -4394,17 +4410,11 @@ class WaterfallSeriesStatesHoverBuilder
             color: color,
             enabled: enabled,
             halo: halo);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class WaterfallSeriesStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesStatesHoverHalo extends WaterfallSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -4497,20 +4507,14 @@ class WaterfallSeriesStatesHoverHaloBuilder
 
   @override
   _$WaterfallSeriesStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$WaterfallSeriesStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class WaterfallSeriesTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesTooltip extends WaterfallSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4747,33 +4751,40 @@ class WaterfallSeriesTooltipBuilder
 
   @override
   _$WaterfallSeriesTooltip build() {
-    final result = _$v ??
-        new _$WaterfallSeriesTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$WaterfallSeriesTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$WaterfallSeriesTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'WaterfallSeriesTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class WaterfallSeriesZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$WaterfallSeriesZones extends WaterfallSeriesZones {
   @override
   final String className;
@@ -4886,14 +4897,14 @@ class WaterfallSeriesZonesBuilder
 
   @override
   _$WaterfallSeriesZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$WaterfallSeriesZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

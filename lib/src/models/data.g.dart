@@ -4,8 +4,15 @@ part of data;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library data
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<Data> _$dataSerializer = new _$DataSerializer();
 
@@ -241,12 +248,6 @@ class _$DataSerializer implements StructuredSerializer<Data> {
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class Data
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$Data extends Data {
   @override
   final JsonObject columns;
@@ -561,7 +562,7 @@ class DataBuilder implements Builder<Data, DataBuilder> {
 
   @override
   _$Data build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$Data._(
             columns: columns,
             complete: complete,
@@ -583,7 +584,7 @@ class DataBuilder implements Builder<Data, DataBuilder> {
             startRow: startRow,
             switchRowsAndColumns: switchRowsAndColumns,
             table: table);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

@@ -25,30 +25,30 @@ void stacked_area (_) {
             ..marker.radius = 2
         )
     ..series.addAll([
-      new Series((b) => b
+      new AreaSeries((b) => b
         ..name = 'Asia'
         ..data = jsonObject([502, 635, 809, 947, 1402, 3634, 5268])
         ..marker.update((b) => b
           ..symbol = 'circle')),
-      new Series ((b) => b
+      new AreaSeries ((b) => b
         ..name = 'Africa'
         ..data = jsonObject([106, 107, 111, 133, 221, 767, 1766])
         ..marker.update((b) => b
           ..symbol = 'circle')),
-      new Series ((b) => b
+      new AreaSeries ((b) => b
         ..name = 'Europe'
         ..data = jsonObject([163, 203, 276, 408, 547, 729, 628])
         ..marker.update((b) => b
           ..symbol = 'circle')),
-      new Series ((b) => b
+      new AreaSeries ((b) => b
         ..name = 'America'
         ..data = jsonObject([18, 31, 54, 156, 339, 818, 1201])
         ..marker.update((b) => b
           ..symbol = 'circle')),
-      new Series ((b) => b
+      new AreaSeries ((b) => b
         ..name = 'Oceania'
         ..data = jsonObject([2, 2, 2, 6, 13, 30, 46]))
     ]));
-
-  new HighchartsChart(toJsObject(chartOptions));
+  var options = toJsObject(chartOptions);
+  new HighchartsChart(options);
 }

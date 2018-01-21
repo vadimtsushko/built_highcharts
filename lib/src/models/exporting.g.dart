@@ -4,8 +4,15 @@ part of exporting;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library exporting
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<Exporting> _$exportingSerializer = new _$ExportingSerializer();
 Serializer<ExportingButtons> _$exportingButtonsSerializer =
@@ -469,12 +476,6 @@ class _$ExportingButtonsContextButtonSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class Exporting
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$Exporting extends Exporting {
   @override
   final bool allowHTML;
@@ -733,35 +734,42 @@ class ExportingBuilder implements Builder<Exporting, ExportingBuilder> {
 
   @override
   _$Exporting build() {
-    final result = _$v ??
-        new _$Exporting._(
-            allowHTML: allowHTML,
-            buttons: _buttons?.build(),
-            chartOptions: chartOptions,
-            enabled: enabled,
-            error: error,
-            fallbackToExportServer: fallbackToExportServer,
-            filename: filename,
-            formAttributes: formAttributes,
-            libURL: libURL,
-            printMaxWidth: printMaxWidth,
-            scale: scale,
-            sourceHeight: sourceHeight,
-            sourceWidth: sourceWidth,
-            type: type,
-            url: url,
-            width: width);
-    replace(result);
-    return result;
+    _$Exporting _$result;
+    try {
+      _$result = _$v ??
+          new _$Exporting._(
+              allowHTML: allowHTML,
+              buttons: _buttons?.build(),
+              chartOptions: chartOptions,
+              enabled: enabled,
+              error: error,
+              fallbackToExportServer: fallbackToExportServer,
+              filename: filename,
+              formAttributes: formAttributes,
+              libURL: libURL,
+              printMaxWidth: printMaxWidth,
+              scale: scale,
+              sourceHeight: sourceHeight,
+              sourceWidth: sourceWidth,
+              type: type,
+              url: url,
+              width: width);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'buttons';
+        _buttons?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'Exporting', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ExportingButtons
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ExportingButtons extends ExportingButtons {
   @override
   final ExportingButtonsContextButton contextButton;
@@ -832,19 +840,26 @@ class ExportingButtonsBuilder
 
   @override
   _$ExportingButtons build() {
-    final result =
-        _$v ?? new _$ExportingButtons._(contextButton: _contextButton?.build());
-    replace(result);
-    return result;
+    _$ExportingButtons _$result;
+    try {
+      _$result = _$v ??
+          new _$ExportingButtons._(contextButton: _contextButton?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'contextButton';
+        _contextButton?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ExportingButtons', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ExportingButtonsContextButton
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ExportingButtonsContextButton extends ExportingButtonsContextButton {
   @override
   final String align;
@@ -1131,7 +1146,7 @@ class ExportingButtonsContextButtonBuilder
 
   @override
   _$ExportingButtonsContextButton build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ExportingButtonsContextButton._(
             align: align,
             enabled: enabled,
@@ -1151,7 +1166,7 @@ class ExportingButtonsContextButtonBuilder
             width: width,
             x: x,
             y: y);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

@@ -4,8 +4,15 @@ part of areasplinerange_series;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library areasplinerange_series
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<AreasplinerangeSeries> _$areasplinerangeSeriesSerializer =
     new _$AreasplinerangeSeriesSerializer();
@@ -2110,12 +2117,6 @@ class _$AreasplinerangeSeriesZonesSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreasplinerangeSeries
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreasplinerangeSeries extends AreasplinerangeSeries {
   @override
   final bool allowPointSelect;
@@ -2459,7 +2460,9 @@ class _$AreasplinerangeSeries extends AreasplinerangeSeries {
 }
 
 class AreasplinerangeSeriesBuilder
-    implements Builder<AreasplinerangeSeries, AreasplinerangeSeriesBuilder> {
+    implements
+        Builder<AreasplinerangeSeries, AreasplinerangeSeriesBuilder>,
+        SeriesBuilder {
   _$AreasplinerangeSeries _$v;
 
   bool _allowPointSelect;
@@ -2759,7 +2762,7 @@ class AreasplinerangeSeriesBuilder
   }
 
   @override
-  void replace(AreasplinerangeSeries other) {
+  void replace(covariant AreasplinerangeSeries other) {
     if (other == null) throw new ArgumentError.notNull('other');
     _$v = other as _$AreasplinerangeSeries;
   }
@@ -2771,73 +2774,86 @@ class AreasplinerangeSeriesBuilder
 
   @override
   _$AreasplinerangeSeries build() {
-    final result = _$v ??
-        new _$AreasplinerangeSeries._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorIndex: colorIndex,
-            connectNulls: connectNulls,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            dashStyle: dashStyle,
-            data: data,
-            dataLabels: dataLabels,
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            fillColor: fillColor,
-            fillOpacity: fillOpacity,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            id: id,
-            index: index,
-            keys: _keys?.build(),
-            legendIndex: legendIndex,
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            linecap: linecap,
-            linkedTo: linkedTo,
-            name: name,
-            negativeColor: negativeColor,
-            negativeFillColor: negativeFillColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointPlacement: pointPlacement,
-            pointStart: pointStart,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            states: states,
-            stickyTracking: stickyTracking,
-            tooltip: tooltip,
-            trackByArea: trackByArea,
-            turboThreshold: turboThreshold,
-            type: type,
-            visible: visible,
-            xAxis: xAxis,
-            yAxis: yAxis,
-            zIndex: zIndex,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$AreasplinerangeSeries _$result;
+    try {
+      _$result = _$v ??
+          new _$AreasplinerangeSeries._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorIndex: colorIndex,
+              connectNulls: connectNulls,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              dashStyle: dashStyle,
+              data: data,
+              dataLabels: dataLabels,
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              fillColor: fillColor,
+              fillOpacity: fillOpacity,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              id: id,
+              index: index,
+              keys: _keys?.build(),
+              legendIndex: legendIndex,
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              linecap: linecap,
+              linkedTo: linkedTo,
+              name: name,
+              negativeColor: negativeColor,
+              negativeFillColor: negativeFillColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointPlacement: pointPlacement,
+              pointStart: pointStart,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              states: states,
+              stickyTracking: stickyTracking,
+              tooltip: tooltip,
+              trackByArea: trackByArea,
+              turboThreshold: turboThreshold,
+              type: type,
+              visible: visible,
+              xAxis: xAxis,
+              yAxis: yAxis,
+              zIndex: zIndex,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'AreasplinerangeSeries', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreasplinerangeSeriesData
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreasplinerangeSeriesData extends AreasplinerangeSeriesData {
   @override
   final String className;
@@ -3068,7 +3084,7 @@ class AreasplinerangeSeriesDataBuilder
 
   @override
   _$AreasplinerangeSeriesData build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$AreasplinerangeSeriesData._(
             className: className,
             color: color,
@@ -3084,17 +3100,11 @@ class AreasplinerangeSeriesDataBuilder
             name: name,
             selected: selected,
             x: x);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreasplinerangeSeriesDataEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreasplinerangeSeriesDataEvents
     extends AreasplinerangeSeriesDataEvents {
   @override
@@ -3239,7 +3249,7 @@ class AreasplinerangeSeriesDataEventsBuilder
 
   @override
   _$AreasplinerangeSeriesDataEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$AreasplinerangeSeriesDataEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -3248,17 +3258,11 @@ class AreasplinerangeSeriesDataEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreasplinerangeSeriesDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreasplinerangeSeriesDataLabels
     extends AreasplinerangeSeriesDataLabels {
   @override
@@ -3634,46 +3638,53 @@ class AreasplinerangeSeriesDataLabelsBuilder
 
   @override
   _$AreasplinerangeSeriesDataLabels build() {
-    final result = _$v ??
-        new _$AreasplinerangeSeriesDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            xHigh: xHigh,
-            xLow: xLow,
-            yHigh: yHigh,
-            yLow: yLow,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$AreasplinerangeSeriesDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$AreasplinerangeSeriesDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              xHigh: xHigh,
+              xLow: xLow,
+              yHigh: yHigh,
+              yLow: yLow,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'AreasplinerangeSeriesDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreasplinerangeSeriesEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreasplinerangeSeriesEvents extends AreasplinerangeSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3834,7 +3845,7 @@ class AreasplinerangeSeriesEventsBuilder
 
   @override
   _$AreasplinerangeSeriesEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$AreasplinerangeSeriesEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -3844,17 +3855,11 @@ class AreasplinerangeSeriesEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreasplinerangeSeriesPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreasplinerangeSeriesPoint extends AreasplinerangeSeriesPoint {
   @override
   final AreasplinerangeSeriesPointEvents events;
@@ -3928,19 +3933,26 @@ class AreasplinerangeSeriesPointBuilder
 
   @override
   _$AreasplinerangeSeriesPoint build() {
-    final result =
-        _$v ?? new _$AreasplinerangeSeriesPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$AreasplinerangeSeriesPoint _$result;
+    try {
+      _$result =
+          _$v ?? new _$AreasplinerangeSeriesPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'AreasplinerangeSeriesPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreasplinerangeSeriesPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreasplinerangeSeriesPointEvents
     extends AreasplinerangeSeriesPointEvents {
   @override
@@ -4085,7 +4097,7 @@ class AreasplinerangeSeriesPointEventsBuilder
 
   @override
   _$AreasplinerangeSeriesPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$AreasplinerangeSeriesPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -4094,17 +4106,11 @@ class AreasplinerangeSeriesPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreasplinerangeSeriesStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreasplinerangeSeriesStates extends AreasplinerangeSeriesStates {
   @override
   final AreasplinerangeSeriesStatesHover hover;
@@ -4179,19 +4185,26 @@ class AreasplinerangeSeriesStatesBuilder
 
   @override
   _$AreasplinerangeSeriesStates build() {
-    final result =
-        _$v ?? new _$AreasplinerangeSeriesStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$AreasplinerangeSeriesStates _$result;
+    try {
+      _$result =
+          _$v ?? new _$AreasplinerangeSeriesStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'AreasplinerangeSeriesStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreasplinerangeSeriesStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreasplinerangeSeriesStatesHover
     extends AreasplinerangeSeriesStatesHover {
   @override
@@ -4326,25 +4339,32 @@ class AreasplinerangeSeriesStatesHoverBuilder
 
   @override
   _$AreasplinerangeSeriesStatesHover build() {
-    final result = _$v ??
-        new _$AreasplinerangeSeriesStatesHover._(
-            animation: animation,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$AreasplinerangeSeriesStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$AreasplinerangeSeriesStatesHover._(
+              animation: animation,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'AreasplinerangeSeriesStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreasplinerangeSeriesStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreasplinerangeSeriesStatesHoverHalo
     extends AreasplinerangeSeriesStatesHoverHalo {
   @override
@@ -4440,20 +4460,14 @@ class AreasplinerangeSeriesStatesHoverHaloBuilder
 
   @override
   _$AreasplinerangeSeriesStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$AreasplinerangeSeriesStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreasplinerangeSeriesStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreasplinerangeSeriesStatesHoverMarker
     extends AreasplinerangeSeriesStatesHoverMarker {
   @override
@@ -4626,7 +4640,7 @@ class AreasplinerangeSeriesStatesHoverMarkerBuilder
 
   @override
   _$AreasplinerangeSeriesStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$AreasplinerangeSeriesStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -4637,17 +4651,11 @@ class AreasplinerangeSeriesStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreasplinerangeSeriesTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreasplinerangeSeriesTooltip extends AreasplinerangeSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4886,33 +4894,40 @@ class AreasplinerangeSeriesTooltipBuilder
 
   @override
   _$AreasplinerangeSeriesTooltip build() {
-    final result = _$v ??
-        new _$AreasplinerangeSeriesTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$AreasplinerangeSeriesTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$AreasplinerangeSeriesTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'AreasplinerangeSeriesTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreasplinerangeSeriesZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreasplinerangeSeriesZones extends AreasplinerangeSeriesZones {
   @override
   final String className;
@@ -5027,14 +5042,14 @@ class AreasplinerangeSeriesZonesBuilder
 
   @override
   _$AreasplinerangeSeriesZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$AreasplinerangeSeriesZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

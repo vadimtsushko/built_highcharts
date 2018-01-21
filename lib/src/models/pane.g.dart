@@ -4,8 +4,15 @@ part of pane;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library pane
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<Pane> _$paneSerializer = new _$PaneSerializer();
 Serializer<PaneBackground> _$paneBackgroundSerializer =
@@ -196,12 +203,6 @@ class _$PaneBackgroundSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class Pane
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$Pane extends Pane {
   @override
   final JsonObject background;
@@ -311,24 +312,18 @@ class PaneBuilder implements Builder<Pane, PaneBuilder> {
 
   @override
   _$Pane build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$Pane._(
             background: background,
             center: center,
             endAngle: endAngle,
             size: size,
             startAngle: startAngle);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PaneBackground
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PaneBackground extends PaneBackground {
   @override
   final String backgroundColor;
@@ -471,7 +466,7 @@ class PaneBackgroundBuilder
 
   @override
   _$PaneBackground build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PaneBackground._(
             backgroundColor: backgroundColor,
             borderColor: borderColor,
@@ -480,7 +475,7 @@ class PaneBackgroundBuilder
             innerRadius: innerRadius,
             outerRadius: outerRadius,
             shape: shape);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

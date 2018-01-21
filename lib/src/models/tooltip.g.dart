@@ -4,8 +4,15 @@ part of tooltip;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library tooltip
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<Tooltip> _$tooltipSerializer = new _$TooltipSerializer();
 
@@ -336,12 +343,6 @@ class _$TooltipSerializer implements StructuredSerializer<Tooltip> {
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class Tooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$Tooltip extends Tooltip {
   @override
   final bool animation;
@@ -734,38 +735,54 @@ class TooltipBuilder implements Builder<Tooltip, TooltipBuilder> {
 
   @override
   _$Tooltip build() {
-    final result = _$v ??
-        new _$Tooltip._(
-            animation: animation,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            crosshairs: crosshairs,
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            enabled: enabled,
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            formatter: formatter,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            positioner: positioner,
-            shadow: shadow,
-            shape: shape,
-            shared: shared,
-            snap: snap,
-            split: split,
-            style: _style?.build(),
-            useHTML: useHTML,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$Tooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$Tooltip._(
+              animation: animation,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              crosshairs: crosshairs,
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              enabled: enabled,
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              formatter: formatter,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              positioner: positioner,
+              shadow: shadow,
+              shape: shape,
+              shared: shared,
+              snap: snap,
+              split: split,
+              style: _style?.build(),
+              useHTML: useHTML,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'Tooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }

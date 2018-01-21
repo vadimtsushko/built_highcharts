@@ -4,8 +4,15 @@ part of pie_series;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library pie_series
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<PieSeries> _$pieSeriesSerializer = new _$PieSeriesSerializer();
 Serializer<PieSeriesData> _$pieSeriesDataSerializer =
@@ -2006,12 +2013,6 @@ class _$PieSeriesZonesSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PieSeries
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PieSeries extends PieSeries {
   @override
   final bool allowPointSelect;
@@ -2312,7 +2313,8 @@ class _$PieSeries extends PieSeries {
   }
 }
 
-class PieSeriesBuilder implements Builder<PieSeries, PieSeriesBuilder> {
+class PieSeriesBuilder
+    implements Builder<PieSeries, PieSeriesBuilder>, SeriesBuilder {
   _$PieSeries _$v;
 
   bool _allowPointSelect;
@@ -2570,7 +2572,7 @@ class PieSeriesBuilder implements Builder<PieSeries, PieSeriesBuilder> {
   }
 
   @override
-  void replace(PieSeries other) {
+  void replace(covariant PieSeries other) {
     if (other == null) throw new ArgumentError.notNull('other');
     _$v = other as _$PieSeries;
   }
@@ -2582,65 +2584,84 @@ class PieSeriesBuilder implements Builder<PieSeries, PieSeriesBuilder> {
 
   @override
   _$PieSeries build() {
-    final result = _$v ??
-        new _$PieSeries._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            borderColor: borderColor,
-            borderWidth: borderWidth,
-            center: center,
-            className: className,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            cursor: cursor,
-            data: data,
-            dataLabels: _dataLabels?.build(),
-            depth: depth,
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            endAngle: endAngle,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            id: id,
-            ignoreHiddenPoint: ignoreHiddenPoint,
-            index: index,
-            innerSize: innerSize,
-            keys: _keys?.build(),
-            legendIndex: legendIndex,
-            linkedTo: linkedTo,
-            minSize: minSize,
-            name: name,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            selected: selected,
-            shadow: shadow,
-            showInLegend: showInLegend,
-            size: size,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            slicedOffset: slicedOffset,
-            startAngle: startAngle,
-            states: states,
-            stickyTracking: stickyTracking,
-            tooltip: tooltip,
-            type: type,
-            visible: visible,
-            zIndex: zIndex,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PieSeries _$result;
+    try {
+      _$result = _$v ??
+          new _$PieSeries._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              borderColor: borderColor,
+              borderWidth: borderWidth,
+              center: center,
+              className: className,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              cursor: cursor,
+              data: data,
+              dataLabels: _dataLabels?.build(),
+              depth: depth,
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              endAngle: endAngle,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              id: id,
+              ignoreHiddenPoint: ignoreHiddenPoint,
+              index: index,
+              innerSize: innerSize,
+              keys: _keys?.build(),
+              legendIndex: legendIndex,
+              linkedTo: linkedTo,
+              minSize: minSize,
+              name: name,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              selected: selected,
+              shadow: shadow,
+              showInLegend: showInLegend,
+              size: size,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              slicedOffset: slicedOffset,
+              startAngle: startAngle,
+              states: states,
+              stickyTracking: stickyTracking,
+              tooltip: tooltip,
+              type: type,
+              visible: visible,
+              zIndex: zIndex,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PieSeries', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PieSeriesData
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PieSeriesData extends PieSeriesData {
   @override
   final String className;
@@ -2867,7 +2888,7 @@ class PieSeriesDataBuilder
 
   @override
   _$PieSeriesData build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PieSeriesData._(
             className: className,
             color: color,
@@ -2883,17 +2904,11 @@ class PieSeriesDataBuilder
             selected: selected,
             sliced: sliced,
             y: y);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PieSeriesDataEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PieSeriesDataEvents extends PieSeriesDataEvents {
   @override
   final Function click;
@@ -3033,7 +3048,7 @@ class PieSeriesDataEventsBuilder
 
   @override
   _$PieSeriesDataEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PieSeriesDataEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -3042,17 +3057,11 @@ class PieSeriesDataEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PieSeriesDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PieSeriesDataLabels extends PieSeriesDataLabels {
   @override
   final String backgroundColor;
@@ -3437,47 +3446,54 @@ class PieSeriesDataLabelsBuilder
 
   @override
   _$PieSeriesDataLabels build() {
-    final result = _$v ??
-        new _$PieSeriesDataLabels._(
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            connectorColor: connectorColor,
-            connectorPadding: connectorPadding,
-            connectorWidth: connectorWidth,
-            crop: crop,
-            defer: defer,
-            distance: distance,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            softConnector: softConnector,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PieSeriesDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PieSeriesDataLabels._(
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              connectorColor: connectorColor,
+              connectorPadding: connectorPadding,
+              connectorWidth: connectorWidth,
+              crop: crop,
+              defer: defer,
+              distance: distance,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              softConnector: softConnector,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PieSeriesDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PieSeriesEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PieSeriesEvents extends PieSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3634,7 +3650,7 @@ class PieSeriesEventsBuilder
 
   @override
   _$PieSeriesEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PieSeriesEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -3644,17 +3660,11 @@ class PieSeriesEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PieSeriesPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PieSeriesPoint extends PieSeriesPoint {
   @override
   final PieSeriesPointEvents events;
@@ -3724,18 +3734,25 @@ class PieSeriesPointBuilder
 
   @override
   _$PieSeriesPoint build() {
-    final result = _$v ?? new _$PieSeriesPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PieSeriesPoint _$result;
+    try {
+      _$result = _$v ?? new _$PieSeriesPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PieSeriesPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PieSeriesPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PieSeriesPointEvents extends PieSeriesPointEvents {
   @override
   final Function click;
@@ -3891,7 +3908,7 @@ class PieSeriesPointEventsBuilder
 
   @override
   _$PieSeriesPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PieSeriesPointEvents._(
             click: click,
             legendItemClick: legendItemClick,
@@ -3901,17 +3918,11 @@ class PieSeriesPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PieSeriesStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PieSeriesStates extends PieSeriesStates {
   @override
   final PieSeriesStatesHover hover;
@@ -3980,18 +3991,25 @@ class PieSeriesStatesBuilder
 
   @override
   _$PieSeriesStates build() {
-    final result = _$v ?? new _$PieSeriesStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PieSeriesStates _$result;
+    try {
+      _$result = _$v ?? new _$PieSeriesStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PieSeriesStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PieSeriesStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PieSeriesStatesHover extends PieSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -4134,26 +4152,33 @@ class PieSeriesStatesHoverBuilder
 
   @override
   _$PieSeriesStatesHover build() {
-    final result = _$v ??
-        new _$PieSeriesStatesHover._(
-            animation: animation,
-            brightness: brightness,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$PieSeriesStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$PieSeriesStatesHover._(
+              animation: animation,
+              brightness: brightness,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PieSeriesStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PieSeriesStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PieSeriesStatesHoverHalo extends PieSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -4245,20 +4270,14 @@ class PieSeriesStatesHoverHaloBuilder
 
   @override
   _$PieSeriesStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PieSeriesStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PieSeriesStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PieSeriesStatesHoverMarker extends PieSeriesStatesHoverMarker {
   @override
   final bool enabled;
@@ -4427,7 +4446,7 @@ class PieSeriesStatesHoverMarkerBuilder
 
   @override
   _$PieSeriesStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PieSeriesStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -4438,17 +4457,11 @@ class PieSeriesStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PieSeriesTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PieSeriesTooltip extends PieSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4683,33 +4696,40 @@ class PieSeriesTooltipBuilder
 
   @override
   _$PieSeriesTooltip build() {
-    final result = _$v ??
-        new _$PieSeriesTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PieSeriesTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PieSeriesTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PieSeriesTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PieSeriesZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PieSeriesZones extends PieSeriesZones {
   @override
   final String className;
@@ -4821,14 +4841,14 @@ class PieSeriesZonesBuilder
 
   @override
   _$PieSeriesZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PieSeriesZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

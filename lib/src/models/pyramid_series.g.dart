@@ -4,8 +4,15 @@ part of pyramid_series;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library pyramid_series
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<PyramidSeries> _$pyramidSeriesSerializer =
     new _$PyramidSeriesSerializer();
@@ -1986,12 +1993,6 @@ class _$PyramidSeriesZonesSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PyramidSeries
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PyramidSeries extends PyramidSeries {
   @override
   final bool allowPointSelect;
@@ -2278,7 +2279,7 @@ class _$PyramidSeries extends PyramidSeries {
 }
 
 class PyramidSeriesBuilder
-    implements Builder<PyramidSeries, PyramidSeriesBuilder> {
+    implements Builder<PyramidSeries, PyramidSeriesBuilder>, SeriesBuilder {
   _$PyramidSeries _$v;
 
   bool _allowPointSelect;
@@ -2520,7 +2521,7 @@ class PyramidSeriesBuilder
   }
 
   @override
-  void replace(PyramidSeries other) {
+  void replace(covariant PyramidSeries other) {
     if (other == null) throw new ArgumentError.notNull('other');
     _$v = other as _$PyramidSeries;
   }
@@ -2532,62 +2533,81 @@ class PyramidSeriesBuilder
 
   @override
   _$PyramidSeries build() {
-    final result = _$v ??
-        new _$PyramidSeries._(
-            allowPointSelect: allowPointSelect,
-            animationLimit: animationLimit,
-            borderColor: borderColor,
-            borderWidth: borderWidth,
-            center: center,
-            className: className,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            cursor: cursor,
-            data: data,
-            dataLabels: _dataLabels?.build(),
-            depth: depth,
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            height: height,
-            id: id,
-            index: index,
-            keys: _keys?.build(),
-            legendIndex: legendIndex,
-            linkedTo: linkedTo,
-            minSize: minSize,
-            name: name,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            reversed: reversed,
-            selected: selected,
-            shadow: shadow,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            slicedOffset: slicedOffset,
-            states: states,
-            stickyTracking: stickyTracking,
-            tooltip: tooltip,
-            type: type,
-            visible: visible,
-            width: width,
-            zIndex: zIndex,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PyramidSeries _$result;
+    try {
+      _$result = _$v ??
+          new _$PyramidSeries._(
+              allowPointSelect: allowPointSelect,
+              animationLimit: animationLimit,
+              borderColor: borderColor,
+              borderWidth: borderWidth,
+              center: center,
+              className: className,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              cursor: cursor,
+              data: data,
+              dataLabels: _dataLabels?.build(),
+              depth: depth,
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              height: height,
+              id: id,
+              index: index,
+              keys: _keys?.build(),
+              legendIndex: legendIndex,
+              linkedTo: linkedTo,
+              minSize: minSize,
+              name: name,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              reversed: reversed,
+              selected: selected,
+              shadow: shadow,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              slicedOffset: slicedOffset,
+              states: states,
+              stickyTracking: stickyTracking,
+              tooltip: tooltip,
+              type: type,
+              visible: visible,
+              width: width,
+              zIndex: zIndex,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PyramidSeries', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PyramidSeriesData
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PyramidSeriesData extends PyramidSeriesData {
   @override
   final String className;
@@ -2801,7 +2821,7 @@ class PyramidSeriesDataBuilder
 
   @override
   _$PyramidSeriesData build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PyramidSeriesData._(
             className: className,
             color: color,
@@ -2816,17 +2836,11 @@ class PyramidSeriesDataBuilder
             name: name,
             selected: selected,
             y: y);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PyramidSeriesDataEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PyramidSeriesDataEvents extends PyramidSeriesDataEvents {
   @override
   final Function click;
@@ -2969,7 +2983,7 @@ class PyramidSeriesDataEventsBuilder
 
   @override
   _$PyramidSeriesDataEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PyramidSeriesDataEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -2978,17 +2992,11 @@ class PyramidSeriesDataEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PyramidSeriesDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PyramidSeriesDataLabels extends PyramidSeriesDataLabels {
   @override
   final String backgroundColor;
@@ -3376,47 +3384,54 @@ class PyramidSeriesDataLabelsBuilder
 
   @override
   _$PyramidSeriesDataLabels build() {
-    final result = _$v ??
-        new _$PyramidSeriesDataLabels._(
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            connectorColor: connectorColor,
-            connectorPadding: connectorPadding,
-            connectorWidth: connectorWidth,
-            crop: crop,
-            defer: defer,
-            distance: distance,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            softConnector: softConnector,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PyramidSeriesDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PyramidSeriesDataLabels._(
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              connectorColor: connectorColor,
+              connectorPadding: connectorPadding,
+              connectorWidth: connectorWidth,
+              crop: crop,
+              defer: defer,
+              distance: distance,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              softConnector: softConnector,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PyramidSeriesDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PyramidSeriesEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PyramidSeriesEvents extends PyramidSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3573,7 +3588,7 @@ class PyramidSeriesEventsBuilder
 
   @override
   _$PyramidSeriesEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PyramidSeriesEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -3583,17 +3598,11 @@ class PyramidSeriesEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PyramidSeriesPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PyramidSeriesPoint extends PyramidSeriesPoint {
   @override
   final PyramidSeriesPointEvents events;
@@ -3663,18 +3672,25 @@ class PyramidSeriesPointBuilder
 
   @override
   _$PyramidSeriesPoint build() {
-    final result = _$v ?? new _$PyramidSeriesPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PyramidSeriesPoint _$result;
+    try {
+      _$result = _$v ?? new _$PyramidSeriesPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PyramidSeriesPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PyramidSeriesPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PyramidSeriesPointEvents extends PyramidSeriesPointEvents {
   @override
   final Function click;
@@ -3832,7 +3848,7 @@ class PyramidSeriesPointEventsBuilder
 
   @override
   _$PyramidSeriesPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PyramidSeriesPointEvents._(
             click: click,
             legendItemClick: legendItemClick,
@@ -3842,17 +3858,11 @@ class PyramidSeriesPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PyramidSeriesStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PyramidSeriesStates extends PyramidSeriesStates {
   @override
   final PyramidSeriesStatesHover hover;
@@ -3922,18 +3932,25 @@ class PyramidSeriesStatesBuilder
 
   @override
   _$PyramidSeriesStates build() {
-    final result = _$v ?? new _$PyramidSeriesStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PyramidSeriesStates _$result;
+    try {
+      _$result = _$v ?? new _$PyramidSeriesStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PyramidSeriesStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PyramidSeriesStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PyramidSeriesStatesHover extends PyramidSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -4078,26 +4095,33 @@ class PyramidSeriesStatesHoverBuilder
 
   @override
   _$PyramidSeriesStatesHover build() {
-    final result = _$v ??
-        new _$PyramidSeriesStatesHover._(
-            animation: animation,
-            brightness: brightness,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$PyramidSeriesStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$PyramidSeriesStatesHover._(
+              animation: animation,
+              brightness: brightness,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PyramidSeriesStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PyramidSeriesStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PyramidSeriesStatesHoverHalo extends PyramidSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -4190,20 +4214,14 @@ class PyramidSeriesStatesHoverHaloBuilder
 
   @override
   _$PyramidSeriesStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PyramidSeriesStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PyramidSeriesStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PyramidSeriesStatesHoverMarker extends PyramidSeriesStatesHoverMarker {
   @override
   final bool enabled;
@@ -4373,7 +4391,7 @@ class PyramidSeriesStatesHoverMarkerBuilder
 
   @override
   _$PyramidSeriesStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PyramidSeriesStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -4384,17 +4402,11 @@ class PyramidSeriesStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PyramidSeriesTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PyramidSeriesTooltip extends PyramidSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4630,33 +4642,40 @@ class PyramidSeriesTooltipBuilder
 
   @override
   _$PyramidSeriesTooltip build() {
-    final result = _$v ??
-        new _$PyramidSeriesTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PyramidSeriesTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PyramidSeriesTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PyramidSeriesTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PyramidSeriesZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PyramidSeriesZones extends PyramidSeriesZones {
   @override
   final String className;
@@ -4768,14 +4787,14 @@ class PyramidSeriesZonesBuilder
 
   @override
   _$PyramidSeriesZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PyramidSeriesZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

@@ -4,8 +4,15 @@ part of xaxis;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library xaxis
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<XAxis> _$xAxisSerializer = new _$XAxisSerializer();
 Serializer<XAxisBreaks> _$xAxisBreaksSerializer = new _$XAxisBreaksSerializer();
@@ -1824,12 +1831,6 @@ class _$XAxisTitleSerializer implements StructuredSerializer<XAxisTitle> {
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class XAxis
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$XAxis extends XAxis {
   @override
   final Scrollbar scrollbar;
@@ -2590,83 +2591,108 @@ class XAxisBuilder implements Builder<XAxis, XAxisBuilder> {
 
   @override
   _$XAxis build() {
-    final result = _$v ??
-        new _$XAxis._(
-            scrollbar: _scrollbar?.build(),
-            allowDecimals: allowDecimals,
-            alternateGridColor: alternateGridColor,
-            breaks: breaks,
-            categories: _categories?.build(),
-            ceiling: ceiling,
-            className: className,
-            crosshair: crosshair,
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            description: description,
-            endOnTick: endOnTick,
-            events: _events?.build(),
-            floor: floor,
-            gridLineColor: gridLineColor,
-            gridLineDashStyle: gridLineDashStyle,
-            gridLineWidth: gridLineWidth,
-            gridZIndex: gridZIndex,
-            id: id,
-            labels: _labels?.build(),
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            linkedTo: linkedTo,
-            max: max,
-            maxPadding: maxPadding,
-            maxZoom: maxZoom,
-            min: min,
-            minPadding: minPadding,
-            minRange: minRange,
-            minTickInterval: minTickInterval,
-            minorGridLineColor: minorGridLineColor,
-            minorGridLineDashStyle: minorGridLineDashStyle,
-            minorGridLineWidth: minorGridLineWidth,
-            minorTickColor: minorTickColor,
-            minorTickInterval: minorTickInterval,
-            minorTickLength: minorTickLength,
-            minorTickPosition: minorTickPosition,
-            minorTickWidth: minorTickWidth,
-            offset: offset,
-            opposite: opposite,
-            plotBands: plotBands,
-            plotLines: plotLines,
-            reversed: reversed,
-            showEmpty: showEmpty,
-            showFirstLabel: showFirstLabel,
-            showLastLabel: showLastLabel,
-            softMax: softMax,
-            softMin: softMin,
-            startOfWeek: startOfWeek,
-            startOnTick: startOnTick,
-            tickAmount: tickAmount,
-            tickColor: tickColor,
-            tickInterval: tickInterval,
-            tickLength: tickLength,
-            tickPixelInterval: tickPixelInterval,
-            tickPosition: tickPosition,
-            tickPositioner: tickPositioner,
-            tickPositions: _tickPositions?.build(),
-            tickWidth: tickWidth,
-            tickmarkPlacement: tickmarkPlacement,
-            title: _title?.build(),
-            type: type,
-            uniqueNames: uniqueNames,
-            units: units,
-            visible: visible);
-    replace(result);
-    return result;
+    _$XAxis _$result;
+    try {
+      _$result = _$v ??
+          new _$XAxis._(
+              scrollbar: _scrollbar?.build(),
+              allowDecimals: allowDecimals,
+              alternateGridColor: alternateGridColor,
+              breaks: breaks,
+              categories: _categories?.build(),
+              ceiling: ceiling,
+              className: className,
+              crosshair: crosshair,
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              description: description,
+              endOnTick: endOnTick,
+              events: _events?.build(),
+              floor: floor,
+              gridLineColor: gridLineColor,
+              gridLineDashStyle: gridLineDashStyle,
+              gridLineWidth: gridLineWidth,
+              gridZIndex: gridZIndex,
+              id: id,
+              labels: _labels?.build(),
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              linkedTo: linkedTo,
+              max: max,
+              maxPadding: maxPadding,
+              maxZoom: maxZoom,
+              min: min,
+              minPadding: minPadding,
+              minRange: minRange,
+              minTickInterval: minTickInterval,
+              minorGridLineColor: minorGridLineColor,
+              minorGridLineDashStyle: minorGridLineDashStyle,
+              minorGridLineWidth: minorGridLineWidth,
+              minorTickColor: minorTickColor,
+              minorTickInterval: minorTickInterval,
+              minorTickLength: minorTickLength,
+              minorTickPosition: minorTickPosition,
+              minorTickWidth: minorTickWidth,
+              offset: offset,
+              opposite: opposite,
+              plotBands: plotBands,
+              plotLines: plotLines,
+              reversed: reversed,
+              showEmpty: showEmpty,
+              showFirstLabel: showFirstLabel,
+              showLastLabel: showLastLabel,
+              softMax: softMax,
+              softMin: softMin,
+              startOfWeek: startOfWeek,
+              startOnTick: startOnTick,
+              tickAmount: tickAmount,
+              tickColor: tickColor,
+              tickInterval: tickInterval,
+              tickLength: tickLength,
+              tickPixelInterval: tickPixelInterval,
+              tickPosition: tickPosition,
+              tickPositioner: tickPositioner,
+              tickPositions: _tickPositions?.build(),
+              tickWidth: tickWidth,
+              tickmarkPlacement: tickmarkPlacement,
+              title: _title?.build(),
+              type: type,
+              uniqueNames: uniqueNames,
+              units: units,
+              visible: visible);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'scrollbar';
+        _scrollbar?.build();
+
+        _$failedField = 'categories';
+        _categories?.build();
+
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'labels';
+        _labels?.build();
+
+        _$failedField = 'tickPositions';
+        _tickPositions?.build();
+
+        _$failedField = 'title';
+        _title?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'XAxis', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class XAxisBreaks
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$XAxisBreaks extends XAxisBreaks {
   @override
   final num breakSize;
@@ -2763,20 +2789,14 @@ class XAxisBreaksBuilder implements Builder<XAxisBreaks, XAxisBreaksBuilder> {
 
   @override
   _$XAxisBreaks build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$XAxisBreaks._(
             breakSize: breakSize, from: from, repeat: repeat, to: to);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class XAxisCrosshair
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$XAxisCrosshair extends XAxisCrosshair {
   @override
   final String className;
@@ -2904,7 +2924,7 @@ class XAxisCrosshairBuilder
 
   @override
   _$XAxisCrosshair build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$XAxisCrosshair._(
             className: className,
             color: color,
@@ -2912,17 +2932,11 @@ class XAxisCrosshairBuilder
             snap: snap,
             width: width,
             zIndex: zIndex);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class XAxisEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$XAxisEvents extends XAxisEvents {
   @override
   final Function afterBreaks;
@@ -3038,24 +3052,18 @@ class XAxisEventsBuilder implements Builder<XAxisEvents, XAxisEventsBuilder> {
 
   @override
   _$XAxisEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$XAxisEvents._(
             afterBreaks: afterBreaks,
             afterSetExtremes: afterSetExtremes,
             pointBreak: pointBreak,
             pointInBreak: pointInBreak,
             setExtremes: setExtremes);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class XAxisLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$XAxisLabels extends XAxisLabels {
   @override
   final String align;
@@ -3352,38 +3360,48 @@ class XAxisLabelsBuilder implements Builder<XAxisLabels, XAxisLabelsBuilder> {
 
   @override
   _$XAxisLabels build() {
-    final result = _$v ??
-        new _$XAxisLabels._(
-            align: align,
-            autoRotation: _autoRotation?.build(),
-            autoRotationLimit: autoRotationLimit,
-            distance: distance,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            maxStaggerLines: maxStaggerLines,
-            overflow: overflow,
-            padding: padding,
-            reserveSpace: reserveSpace,
-            rotation: rotation,
-            staggerLines: staggerLines,
-            step: step,
-            style: _style?.build(),
-            useHTML: useHTML,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$XAxisLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$XAxisLabels._(
+              align: align,
+              autoRotation: _autoRotation?.build(),
+              autoRotationLimit: autoRotationLimit,
+              distance: distance,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              maxStaggerLines: maxStaggerLines,
+              overflow: overflow,
+              padding: padding,
+              reserveSpace: reserveSpace,
+              rotation: rotation,
+              staggerLines: staggerLines,
+              step: step,
+              style: _style?.build(),
+              useHTML: useHTML,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'autoRotation';
+        _autoRotation?.build();
+
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'XAxisLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class XAxisPlotBands
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$XAxisPlotBands extends XAxisPlotBands {
   @override
   final String borderColor;
@@ -3562,29 +3580,36 @@ class XAxisPlotBandsBuilder
 
   @override
   _$XAxisPlotBands build() {
-    final result = _$v ??
-        new _$XAxisPlotBands._(
-            borderColor: borderColor,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            events: events,
-            from: from,
-            id: id,
-            label: _label?.build(),
-            to: to,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$XAxisPlotBands _$result;
+    try {
+      _$result = _$v ??
+          new _$XAxisPlotBands._(
+              borderColor: borderColor,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              events: events,
+              from: from,
+              id: id,
+              label: _label?.build(),
+              to: to,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'label';
+        _label?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'XAxisPlotBands', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class XAxisPlotBandsLabel
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$XAxisPlotBandsLabel extends XAxisPlotBandsLabel {
   @override
   final String align;
@@ -3749,7 +3774,7 @@ class XAxisPlotBandsLabelBuilder
 
   @override
   _$XAxisPlotBandsLabel build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$XAxisPlotBandsLabel._(
             align: align,
             rotation: rotation,
@@ -3760,17 +3785,11 @@ class XAxisPlotBandsLabelBuilder
             verticalAlign: verticalAlign,
             x: x,
             y: y);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class XAxisPlotLines
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$XAxisPlotLines extends XAxisPlotLines {
   @override
   final String className;
@@ -3935,28 +3954,35 @@ class XAxisPlotLinesBuilder
 
   @override
   _$XAxisPlotLines build() {
-    final result = _$v ??
-        new _$XAxisPlotLines._(
-            className: className,
-            color: color,
-            dashStyle: dashStyle,
-            events: events,
-            id: id,
-            label: _label?.build(),
-            value: value,
-            width: width,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$XAxisPlotLines _$result;
+    try {
+      _$result = _$v ??
+          new _$XAxisPlotLines._(
+              className: className,
+              color: color,
+              dashStyle: dashStyle,
+              events: events,
+              id: id,
+              label: _label?.build(),
+              value: value,
+              width: width,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'label';
+        _label?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'XAxisPlotLines', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class XAxisPlotLinesLabel
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$XAxisPlotLinesLabel extends XAxisPlotLinesLabel {
   @override
   final String align;
@@ -4121,7 +4147,7 @@ class XAxisPlotLinesLabelBuilder
 
   @override
   _$XAxisPlotLinesLabel build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$XAxisPlotLinesLabel._(
             align: align,
             rotation: rotation,
@@ -4132,17 +4158,11 @@ class XAxisPlotLinesLabelBuilder
             verticalAlign: verticalAlign,
             x: x,
             y: y);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class XAxisTitle
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$XAxisTitle extends XAxisTitle {
   @override
   final String align;
@@ -4319,19 +4339,32 @@ class XAxisTitleBuilder implements Builder<XAxisTitle, XAxisTitleBuilder> {
 
   @override
   _$XAxisTitle build() {
-    final result = _$v ??
-        new _$XAxisTitle._(
-            align: align,
-            enabled: enabled,
-            margin: margin,
-            offset: offset,
-            reserveSpace: reserveSpace,
-            rotation: rotation,
-            style: _style?.build(),
-            text: text,
-            x: x,
-            y: y);
-    replace(result);
-    return result;
+    _$XAxisTitle _$result;
+    try {
+      _$result = _$v ??
+          new _$XAxisTitle._(
+              align: align,
+              enabled: enabled,
+              margin: margin,
+              offset: offset,
+              reserveSpace: reserveSpace,
+              rotation: rotation,
+              style: _style?.build(),
+              text: text,
+              x: x,
+              y: y);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'XAxisTitle', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }

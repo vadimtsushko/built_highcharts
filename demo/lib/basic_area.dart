@@ -20,7 +20,7 @@ void basic_area(_) {
     ..plotOptions.area.marker.symbol = 'circle'
     ..plotOptions.area.marker.states.hover.enabled = true
     ..series.addAll([
-      new Series((b) => b
+      new AreaSeries((b) => b
         ..name = 'USA'
         ..data = jsonObject([0, 0, 0, 0, 0, 6, 11, 32, 110, 235, 369, 640,
         1005, 1436, 2063, 3057, 4618, 6444, 9822, 15468, 20434, 24126,
@@ -29,7 +29,7 @@ void basic_area(_) {
         24304, 23464, 23708, 24099, 24357, 24237, 24401, 24344, 23586,
         22380, 21004, 17287, 14747, 13076, 12555, 12144, 11009, 10950,
         10871, 10824, 10577, 10527, 10475, 10421, 10358, 10295, 10104])),
-      new Series((b) => b
+      new AreaSeries((b) => b
         ..name = 'USSR/Russia'
         ..data = jsonObject([0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         5, 25, 50, 120, 150, 200, 426, 660, 869, 1060, 1605, 2471, 3322,
@@ -41,6 +41,8 @@ void basic_area(_) {
     ])
 
   );
+
+  print('ChartOptions: \n $chartOptions');
   window.console.debug(toJsObject(chartOptions));
   new HighchartsChart(toJsObject(chartOptions));
 }

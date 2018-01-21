@@ -15,9 +15,18 @@ import 'package:source_gen/source_gen.dart';
 /// Import the generators you want and pass them to [watch] as shown,
 /// specifying which files in which packages you want to run against.
 Future main(List<String> args) async {
-  watch(
-      new PhaseGroup.singleAction(
-          new GeneratorBuilder([new BuiltValueGenerator()]),
-          new InputSet('built_highcharts', const ['lib/src/models/*.dart', 'lib/src/serializers/serializers.dart'])),
-      deleteFilesByDefault: true);
+  await watch([
+    new BuildAction(
+        new PartBuilder([
+        new BuiltValueGenerator(),
+      ]),
+      'built_highcharts',
+      inputs: const ['lib/src/models/*.dart', 'lib/src/serializers/serializers.dart'])
+  ], deleteFilesByDefault: true);
+
+//  watch(
+//      new PhaseGroup.singleAction(
+//          new GeneratorBuilder([new BuiltValueGenerator()]),
+//          new InputSet('built_highcharts', const ['lib/src/models/*.dart', 'lib/src/serializers/serializers.dart'])),
+//      deleteFilesByDefault: true);
 }

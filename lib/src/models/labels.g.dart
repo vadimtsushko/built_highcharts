@@ -4,8 +4,15 @@ part of labels;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library labels
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<Labels> _$labelsSerializer = new _$LabelsSerializer();
 Serializer<LabelsItems> _$labelsItemsSerializer = new _$LabelsItemsSerializer();
@@ -122,12 +129,6 @@ class _$LabelsItemsSerializer implements StructuredSerializer<LabelsItems> {
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class Labels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$Labels extends Labels {
   @override
   final JsonObject items;
@@ -203,18 +204,25 @@ class LabelsBuilder implements Builder<Labels, LabelsBuilder> {
 
   @override
   _$Labels build() {
-    final result = _$v ?? new _$Labels._(items: items, style: _style?.build());
-    replace(result);
-    return result;
+    _$Labels _$result;
+    try {
+      _$result = _$v ?? new _$Labels._(items: items, style: _style?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'Labels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class LabelsItems
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$LabelsItems extends LabelsItems {
   @override
   final String html;
@@ -290,9 +298,21 @@ class LabelsItemsBuilder implements Builder<LabelsItems, LabelsItemsBuilder> {
 
   @override
   _$LabelsItems build() {
-    final result =
-        _$v ?? new _$LabelsItems._(html: html, style: _style?.build());
-    replace(result);
-    return result;
+    _$LabelsItems _$result;
+    try {
+      _$result = _$v ?? new _$LabelsItems._(html: html, style: _style?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'LabelsItems', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }

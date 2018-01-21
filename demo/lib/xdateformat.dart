@@ -14,9 +14,9 @@ void x_date_format (_) {
     ..plotOptions.series.pointInterval = 1
     ..plotOptions.series.pointIntervalUnit = "month"
     ..series.addAll([
-      new Series ((b) => b
+      new LineSeries ((b) => b
         ..data = jsonObject([29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4])),
-      new Series ((b) => b
+      new LineSeries ((b) => b
         ..data = jsonObject([29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4].reversed.toList()))
     ]))
   ;

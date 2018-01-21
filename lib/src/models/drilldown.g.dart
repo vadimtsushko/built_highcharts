@@ -4,8 +4,15 @@ part of drilldown;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library drilldown
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<Drilldown> _$drilldownSerializer = new _$DrilldownSerializer();
 Serializer<DrilldownDrillUpButton> _$drilldownDrillUpButtonSerializer =
@@ -178,12 +185,6 @@ class _$DrilldownDrillUpButtonSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class Drilldown
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$Drilldown extends Drilldown {
   @override
   final BuiltMap<String, String> activeAxisLabelStyle;
@@ -317,25 +318,34 @@ class DrilldownBuilder implements Builder<Drilldown, DrilldownBuilder> {
 
   @override
   _$Drilldown build() {
-    final result = _$v ??
-        new _$Drilldown._(
-            activeAxisLabelStyle: _activeAxisLabelStyle?.build(),
-            activeDataLabelStyle: _activeDataLabelStyle?.build(),
-            allowPointDrilldown: allowPointDrilldown,
-            animation: animation,
-            drillUpButton: drillUpButton,
-            series: series);
-    replace(result);
-    return result;
+    _$Drilldown _$result;
+    try {
+      _$result = _$v ??
+          new _$Drilldown._(
+              activeAxisLabelStyle: _activeAxisLabelStyle?.build(),
+              activeDataLabelStyle: _activeDataLabelStyle?.build(),
+              allowPointDrilldown: allowPointDrilldown,
+              animation: animation,
+              drillUpButton: drillUpButton,
+              series: series);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'activeAxisLabelStyle';
+        _activeAxisLabelStyle?.build();
+        _$failedField = 'activeDataLabelStyle';
+        _activeDataLabelStyle?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'Drilldown', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class DrilldownDrillUpButton
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$DrilldownDrillUpButton extends DrilldownDrillUpButton {
   @override
   final JsonObject position;
@@ -426,10 +436,10 @@ class DrilldownDrillUpButtonBuilder
 
   @override
   _$DrilldownDrillUpButton build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$DrilldownDrillUpButton._(
             position: position, relativeTo: relativeTo, theme: theme);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

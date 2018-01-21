@@ -4,8 +4,15 @@ part of column_series;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library column_series
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<ColumnSeries> _$columnSeriesSerializer =
     new _$ColumnSeriesSerializer();
@@ -2028,12 +2035,6 @@ class _$ColumnSeriesZonesSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ColumnSeries
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ColumnSeries extends ColumnSeries {
   @override
   final bool allowPointSelect;
@@ -2435,7 +2436,7 @@ class _$ColumnSeries extends ColumnSeries {
 }
 
 class ColumnSeriesBuilder
-    implements Builder<ColumnSeries, ColumnSeriesBuilder> {
+    implements Builder<ColumnSeries, ColumnSeriesBuilder>, SeriesBuilder {
   _$ColumnSeries _$v;
 
   bool _allowPointSelect;
@@ -2798,7 +2799,7 @@ class ColumnSeriesBuilder
   }
 
   @override
-  void replace(ColumnSeries other) {
+  void replace(covariant ColumnSeries other) {
     if (other == null) throw new ArgumentError.notNull('other');
     _$v = other as _$ColumnSeries;
   }
@@ -2810,85 +2811,104 @@ class ColumnSeriesBuilder
 
   @override
   _$ColumnSeries build() {
-    final result = _$v ??
-        new _$ColumnSeries._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            colorByPoint: colorByPoint,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            crisp: crisp,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            data: data,
-            dataLabels: _dataLabels?.build(),
-            depth: depth,
-            description: description,
-            edgeColor: edgeColor,
-            edgeWidth: edgeWidth,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            groupPadding: groupPadding,
-            groupZPadding: groupZPadding,
-            grouping: grouping,
-            id: id,
-            index: index,
-            keys: _keys?.build(),
-            legendIndex: legendIndex,
-            linkedTo: linkedTo,
-            maxPointWidth: maxPointWidth,
-            minPointLength: minPointLength,
-            name: name,
-            negativeColor: negativeColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointPadding: pointPadding,
-            pointPlacement: pointPlacement,
-            pointRange: pointRange,
-            pointStart: pointStart,
-            pointWidth: pointWidth,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            softThreshold: softThreshold,
-            stack: stack,
-            stacking: stacking,
-            states: states,
-            stickyTracking: stickyTracking,
-            threshold: threshold,
-            tooltip: tooltip,
-            turboThreshold: turboThreshold,
-            type: type,
-            visible: visible,
-            xAxis: xAxis,
-            yAxis: yAxis,
-            zIndex: zIndex,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$ColumnSeries _$result;
+    try {
+      _$result = _$v ??
+          new _$ColumnSeries._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              colorByPoint: colorByPoint,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              crisp: crisp,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              data: data,
+              dataLabels: _dataLabels?.build(),
+              depth: depth,
+              description: description,
+              edgeColor: edgeColor,
+              edgeWidth: edgeWidth,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              groupPadding: groupPadding,
+              groupZPadding: groupZPadding,
+              grouping: grouping,
+              id: id,
+              index: index,
+              keys: _keys?.build(),
+              legendIndex: legendIndex,
+              linkedTo: linkedTo,
+              maxPointWidth: maxPointWidth,
+              minPointLength: minPointLength,
+              name: name,
+              negativeColor: negativeColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointPadding: pointPadding,
+              pointPlacement: pointPlacement,
+              pointRange: pointRange,
+              pointStart: pointStart,
+              pointWidth: pointWidth,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              softThreshold: softThreshold,
+              stack: stack,
+              stacking: stacking,
+              states: states,
+              stickyTracking: stickyTracking,
+              threshold: threshold,
+              tooltip: tooltip,
+              turboThreshold: turboThreshold,
+              type: type,
+              visible: visible,
+              xAxis: xAxis,
+              yAxis: yAxis,
+              zIndex: zIndex,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ColumnSeries', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ColumnSeriesData
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ColumnSeriesData extends ColumnSeriesData {
   @override
   final String className;
@@ -3102,7 +3122,7 @@ class ColumnSeriesDataBuilder
 
   @override
   _$ColumnSeriesData build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ColumnSeriesData._(
             className: className,
             color: color,
@@ -3117,17 +3137,11 @@ class ColumnSeriesDataBuilder
             selected: selected,
             x: x,
             y: y);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ColumnSeriesDataEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ColumnSeriesDataEvents extends ColumnSeriesDataEvents {
   @override
   final Function click;
@@ -3269,7 +3283,7 @@ class ColumnSeriesDataEventsBuilder
 
   @override
   _$ColumnSeriesDataEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ColumnSeriesDataEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -3278,17 +3292,11 @@ class ColumnSeriesDataEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ColumnSeriesDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ColumnSeriesDataLabels extends ColumnSeriesDataLabels {
   @override
   final String align;
@@ -3641,44 +3649,51 @@ class ColumnSeriesDataLabelsBuilder
 
   @override
   _$ColumnSeriesDataLabels build() {
-    final result = _$v ??
-        new _$ColumnSeriesDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$ColumnSeriesDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$ColumnSeriesDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ColumnSeriesDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ColumnSeriesEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ColumnSeriesEvents extends ColumnSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3835,7 +3850,7 @@ class ColumnSeriesEventsBuilder
 
   @override
   _$ColumnSeriesEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ColumnSeriesEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -3845,17 +3860,11 @@ class ColumnSeriesEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ColumnSeriesPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ColumnSeriesPoint extends ColumnSeriesPoint {
   @override
   final ColumnSeriesPointEvents events;
@@ -3925,18 +3934,25 @@ class ColumnSeriesPointBuilder
 
   @override
   _$ColumnSeriesPoint build() {
-    final result = _$v ?? new _$ColumnSeriesPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$ColumnSeriesPoint _$result;
+    try {
+      _$result = _$v ?? new _$ColumnSeriesPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ColumnSeriesPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ColumnSeriesPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ColumnSeriesPointEvents extends ColumnSeriesPointEvents {
   @override
   final Function click;
@@ -4079,7 +4095,7 @@ class ColumnSeriesPointEventsBuilder
 
   @override
   _$ColumnSeriesPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ColumnSeriesPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -4088,17 +4104,11 @@ class ColumnSeriesPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ColumnSeriesStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ColumnSeriesStates extends ColumnSeriesStates {
   @override
   final ColumnSeriesStatesHover hover;
@@ -4168,18 +4178,25 @@ class ColumnSeriesStatesBuilder
 
   @override
   _$ColumnSeriesStates build() {
-    final result = _$v ?? new _$ColumnSeriesStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$ColumnSeriesStates _$result;
+    try {
+      _$result = _$v ?? new _$ColumnSeriesStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ColumnSeriesStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ColumnSeriesStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ColumnSeriesStatesHover extends ColumnSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -4310,7 +4327,7 @@ class ColumnSeriesStatesHoverBuilder
 
   @override
   _$ColumnSeriesStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ColumnSeriesStatesHover._(
             animation: animation,
             borderColor: borderColor,
@@ -4318,17 +4335,11 @@ class ColumnSeriesStatesHoverBuilder
             color: color,
             enabled: enabled,
             halo: halo);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ColumnSeriesStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ColumnSeriesStatesHoverHalo extends ColumnSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -4421,20 +4432,14 @@ class ColumnSeriesStatesHoverHaloBuilder
 
   @override
   _$ColumnSeriesStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ColumnSeriesStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ColumnSeriesTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ColumnSeriesTooltip extends ColumnSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4669,33 +4674,40 @@ class ColumnSeriesTooltipBuilder
 
   @override
   _$ColumnSeriesTooltip build() {
-    final result = _$v ??
-        new _$ColumnSeriesTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$ColumnSeriesTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$ColumnSeriesTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ColumnSeriesTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ColumnSeriesZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ColumnSeriesZones extends ColumnSeriesZones {
   @override
   final String className;
@@ -4807,14 +4819,14 @@ class ColumnSeriesZonesBuilder
 
   @override
   _$ColumnSeriesZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ColumnSeriesZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

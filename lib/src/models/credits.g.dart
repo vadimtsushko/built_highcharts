@@ -4,8 +4,15 @@ part of credits;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library credits
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<Credits> _$creditsSerializer = new _$CreditsSerializer();
 Serializer<CreditsPosition> _$creditsPositionSerializer =
@@ -170,12 +177,6 @@ class _$CreditsPositionSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class Credits
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$Credits extends Credits {
   @override
   final bool enabled;
@@ -285,24 +286,31 @@ class CreditsBuilder implements Builder<Credits, CreditsBuilder> {
 
   @override
   _$Credits build() {
-    final result = _$v ??
-        new _$Credits._(
-            enabled: enabled,
-            href: href,
-            position: position,
-            style: _style?.build(),
-            text: text);
-    replace(result);
-    return result;
+    _$Credits _$result;
+    try {
+      _$result = _$v ??
+          new _$Credits._(
+              enabled: enabled,
+              href: href,
+              position: position,
+              style: _style?.build(),
+              text: text);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'Credits', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class CreditsPosition
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$CreditsPosition extends CreditsPosition {
   @override
   final String align;
@@ -402,10 +410,10 @@ class CreditsPositionBuilder
 
   @override
   _$CreditsPosition build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$CreditsPosition._(
             align: align, verticalAlign: verticalAlign, x: x, y: y);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

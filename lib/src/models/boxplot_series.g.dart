@@ -4,8 +4,15 @@ part of boxplot_series;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library boxplot_series
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<BoxplotSeries> _$boxplotSeriesSerializer =
     new _$BoxplotSeriesSerializer();
@@ -1770,12 +1777,6 @@ class _$BoxplotSeriesZonesSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BoxplotSeries
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BoxplotSeries extends BoxplotSeries {
   @override
   final bool allowPointSelect;
@@ -2167,7 +2168,7 @@ class _$BoxplotSeries extends BoxplotSeries {
 }
 
 class BoxplotSeriesBuilder
-    implements Builder<BoxplotSeries, BoxplotSeriesBuilder> {
+    implements Builder<BoxplotSeries, BoxplotSeriesBuilder>, SeriesBuilder {
   _$BoxplotSeries _$v;
 
   bool _allowPointSelect;
@@ -2518,7 +2519,7 @@ class BoxplotSeriesBuilder
   }
 
   @override
-  void replace(BoxplotSeries other) {
+  void replace(covariant BoxplotSeries other) {
     if (other == null) throw new ArgumentError.notNull('other');
     _$v = other as _$BoxplotSeries;
   }
@@ -2530,83 +2531,99 @@ class BoxplotSeriesBuilder
 
   @override
   _$BoxplotSeries build() {
-    final result = _$v ??
-        new _$BoxplotSeries._(
-            allowPointSelect: allowPointSelect,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorByPoint: colorByPoint,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            crisp: crisp,
-            cursor: cursor,
-            data: data,
-            depth: depth,
-            description: description,
-            edgeColor: edgeColor,
-            edgeWidth: edgeWidth,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            fillColor: fillColor,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            groupPadding: groupPadding,
-            groupZPadding: groupZPadding,
-            grouping: grouping,
-            id: id,
-            index: index,
-            keys: _keys?.build(),
-            legendIndex: legendIndex,
-            lineWidth: lineWidth,
-            linkedTo: linkedTo,
-            maxPointWidth: maxPointWidth,
-            medianColor: medianColor,
-            medianWidth: medianWidth,
-            name: name,
-            negativeColor: negativeColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointPadding: pointPadding,
-            pointPlacement: pointPlacement,
-            pointRange: pointRange,
-            pointStart: pointStart,
-            pointWidth: pointWidth,
-            selected: selected,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            states: states,
-            stemColor: stemColor,
-            stemDashStyle: stemDashStyle,
-            stemWidth: stemWidth,
-            stickyTracking: stickyTracking,
-            tooltip: tooltip,
-            turboThreshold: turboThreshold,
-            type: type,
-            visible: visible,
-            whiskerColor: whiskerColor,
-            whiskerLength: whiskerLength,
-            whiskerWidth: whiskerWidth,
-            xAxis: xAxis,
-            yAxis: yAxis,
-            zIndex: zIndex,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$BoxplotSeries _$result;
+    try {
+      _$result = _$v ??
+          new _$BoxplotSeries._(
+              allowPointSelect: allowPointSelect,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorByPoint: colorByPoint,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              crisp: crisp,
+              cursor: cursor,
+              data: data,
+              depth: depth,
+              description: description,
+              edgeColor: edgeColor,
+              edgeWidth: edgeWidth,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              fillColor: fillColor,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              groupPadding: groupPadding,
+              groupZPadding: groupZPadding,
+              grouping: grouping,
+              id: id,
+              index: index,
+              keys: _keys?.build(),
+              legendIndex: legendIndex,
+              lineWidth: lineWidth,
+              linkedTo: linkedTo,
+              maxPointWidth: maxPointWidth,
+              medianColor: medianColor,
+              medianWidth: medianWidth,
+              name: name,
+              negativeColor: negativeColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointPadding: pointPadding,
+              pointPlacement: pointPlacement,
+              pointRange: pointRange,
+              pointStart: pointStart,
+              pointWidth: pointWidth,
+              selected: selected,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              states: states,
+              stemColor: stemColor,
+              stemDashStyle: stemDashStyle,
+              stemWidth: stemWidth,
+              stickyTracking: stickyTracking,
+              tooltip: tooltip,
+              turboThreshold: turboThreshold,
+              type: type,
+              visible: visible,
+              whiskerColor: whiskerColor,
+              whiskerLength: whiskerLength,
+              whiskerWidth: whiskerWidth,
+              xAxis: xAxis,
+              yAxis: yAxis,
+              zIndex: zIndex,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'BoxplotSeries', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BoxplotSeriesData
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BoxplotSeriesData extends BoxplotSeriesData {
   @override
   final String className;
@@ -2888,7 +2905,7 @@ class BoxplotSeriesDataBuilder
 
   @override
   _$BoxplotSeriesData build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BoxplotSeriesData._(
             className: className,
             color: color,
@@ -2908,17 +2925,11 @@ class BoxplotSeriesDataBuilder
             selected: selected,
             x: x,
             y: y);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BoxplotSeriesDataEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BoxplotSeriesDataEvents extends BoxplotSeriesDataEvents {
   @override
   final Function click;
@@ -3061,7 +3072,7 @@ class BoxplotSeriesDataEventsBuilder
 
   @override
   _$BoxplotSeriesDataEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BoxplotSeriesDataEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -3070,17 +3081,11 @@ class BoxplotSeriesDataEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BoxplotSeriesEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BoxplotSeriesEvents extends BoxplotSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3237,7 +3242,7 @@ class BoxplotSeriesEventsBuilder
 
   @override
   _$BoxplotSeriesEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BoxplotSeriesEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -3247,17 +3252,11 @@ class BoxplotSeriesEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BoxplotSeriesPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BoxplotSeriesPoint extends BoxplotSeriesPoint {
   @override
   final BoxplotSeriesPointEvents events;
@@ -3327,18 +3326,25 @@ class BoxplotSeriesPointBuilder
 
   @override
   _$BoxplotSeriesPoint build() {
-    final result = _$v ?? new _$BoxplotSeriesPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$BoxplotSeriesPoint _$result;
+    try {
+      _$result = _$v ?? new _$BoxplotSeriesPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'BoxplotSeriesPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BoxplotSeriesPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BoxplotSeriesPointEvents extends BoxplotSeriesPointEvents {
   @override
   final Function click;
@@ -3481,7 +3487,7 @@ class BoxplotSeriesPointEventsBuilder
 
   @override
   _$BoxplotSeriesPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BoxplotSeriesPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -3490,17 +3496,11 @@ class BoxplotSeriesPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BoxplotSeriesStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BoxplotSeriesStates extends BoxplotSeriesStates {
   @override
   final BoxplotSeriesStatesHover hover;
@@ -3570,18 +3570,25 @@ class BoxplotSeriesStatesBuilder
 
   @override
   _$BoxplotSeriesStates build() {
-    final result = _$v ?? new _$BoxplotSeriesStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$BoxplotSeriesStates _$result;
+    try {
+      _$result = _$v ?? new _$BoxplotSeriesStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'BoxplotSeriesStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BoxplotSeriesStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BoxplotSeriesStatesHover extends BoxplotSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -3712,7 +3719,7 @@ class BoxplotSeriesStatesHoverBuilder
 
   @override
   _$BoxplotSeriesStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BoxplotSeriesStatesHover._(
             animation: animation,
             borderColor: borderColor,
@@ -3720,17 +3727,11 @@ class BoxplotSeriesStatesHoverBuilder
             color: color,
             enabled: enabled,
             halo: halo);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BoxplotSeriesStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BoxplotSeriesStatesHoverHalo extends BoxplotSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -3823,20 +3824,14 @@ class BoxplotSeriesStatesHoverHaloBuilder
 
   @override
   _$BoxplotSeriesStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BoxplotSeriesStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BoxplotSeriesTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BoxplotSeriesTooltip extends BoxplotSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4072,33 +4067,40 @@ class BoxplotSeriesTooltipBuilder
 
   @override
   _$BoxplotSeriesTooltip build() {
-    final result = _$v ??
-        new _$BoxplotSeriesTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$BoxplotSeriesTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$BoxplotSeriesTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'BoxplotSeriesTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BoxplotSeriesZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BoxplotSeriesZones extends BoxplotSeriesZones {
   @override
   final String className;
@@ -4210,14 +4212,14 @@ class BoxplotSeriesZonesBuilder
 
   @override
   _$BoxplotSeriesZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BoxplotSeriesZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

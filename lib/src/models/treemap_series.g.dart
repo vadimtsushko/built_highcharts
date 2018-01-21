@@ -4,8 +4,15 @@ part of treemap_series;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library treemap_series
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<TreemapSeries> _$treemapSeriesSerializer =
     new _$TreemapSeriesSerializer();
@@ -1990,12 +1997,6 @@ class _$TreemapSeriesZonesSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class TreemapSeries
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$TreemapSeries extends TreemapSeries {
   @override
   final bool allowDrillToNode;
@@ -2347,7 +2348,7 @@ class _$TreemapSeries extends TreemapSeries {
 }
 
 class TreemapSeriesBuilder
-    implements Builder<TreemapSeries, TreemapSeriesBuilder> {
+    implements Builder<TreemapSeries, TreemapSeriesBuilder>, SeriesBuilder {
   _$TreemapSeries _$v;
 
   bool _allowDrillToNode;
@@ -2660,7 +2661,7 @@ class TreemapSeriesBuilder
   }
 
   @override
-  void replace(TreemapSeries other) {
+  void replace(covariant TreemapSeries other) {
     if (other == null) throw new ArgumentError.notNull('other');
     _$v = other as _$TreemapSeries;
   }
@@ -2672,75 +2673,91 @@ class TreemapSeriesBuilder
 
   @override
   _$TreemapSeries build() {
-    final result = _$v ??
-        new _$TreemapSeries._(
-            allowDrillToNode: allowDrillToNode,
-            allowPointSelect: allowPointSelect,
-            alternateStartingDirection: alternateStartingDirection,
-            animation: animation,
-            animationLimit: animationLimit,
-            borderColor: borderColor,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            colorByPoint: colorByPoint,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            crisp: crisp,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            data: data,
-            dataLabels: dataLabels,
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            id: id,
-            ignoreHiddenPoint: ignoreHiddenPoint,
-            index: index,
-            interactByLeaf: interactByLeaf,
-            keys: _keys?.build(),
-            layoutAlgorithm: layoutAlgorithm,
-            layoutStartingDirection: layoutStartingDirection,
-            legendIndex: legendIndex,
-            levelIsConstant: levelIsConstant,
-            levels: levels,
-            linkedTo: linkedTo,
-            maxPointWidth: maxPointWidth,
-            name: name,
-            opacity: opacity,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            sortIndex: sortIndex,
-            states: states,
-            stickyTracking: stickyTracking,
-            tooltip: tooltip,
-            turboThreshold: turboThreshold,
-            type: type,
-            visible: visible,
-            xAxis: xAxis,
-            yAxis: yAxis,
-            zIndex: zIndex,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$TreemapSeries _$result;
+    try {
+      _$result = _$v ??
+          new _$TreemapSeries._(
+              allowDrillToNode: allowDrillToNode,
+              allowPointSelect: allowPointSelect,
+              alternateStartingDirection: alternateStartingDirection,
+              animation: animation,
+              animationLimit: animationLimit,
+              borderColor: borderColor,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              colorByPoint: colorByPoint,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              crisp: crisp,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              data: data,
+              dataLabels: dataLabels,
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              id: id,
+              ignoreHiddenPoint: ignoreHiddenPoint,
+              index: index,
+              interactByLeaf: interactByLeaf,
+              keys: _keys?.build(),
+              layoutAlgorithm: layoutAlgorithm,
+              layoutStartingDirection: layoutStartingDirection,
+              legendIndex: legendIndex,
+              levelIsConstant: levelIsConstant,
+              levels: levels,
+              linkedTo: linkedTo,
+              maxPointWidth: maxPointWidth,
+              name: name,
+              opacity: opacity,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              sortIndex: sortIndex,
+              states: states,
+              stickyTracking: stickyTracking,
+              tooltip: tooltip,
+              turboThreshold: turboThreshold,
+              type: type,
+              visible: visible,
+              xAxis: xAxis,
+              yAxis: yAxis,
+              zIndex: zIndex,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'TreemapSeries', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class TreemapSeriesData
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$TreemapSeriesData extends TreemapSeriesData {
   @override
   final String className;
@@ -2968,7 +2985,7 @@ class TreemapSeriesDataBuilder
 
   @override
   _$TreemapSeriesData build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$TreemapSeriesData._(
             className: className,
             color: color,
@@ -2984,17 +3001,11 @@ class TreemapSeriesDataBuilder
             parent: parent,
             selected: selected,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class TreemapSeriesDataEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$TreemapSeriesDataEvents extends TreemapSeriesDataEvents {
   @override
   final Function click;
@@ -3137,7 +3148,7 @@ class TreemapSeriesDataEventsBuilder
 
   @override
   _$TreemapSeriesDataEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$TreemapSeriesDataEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -3146,17 +3157,11 @@ class TreemapSeriesDataEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class TreemapSeriesDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$TreemapSeriesDataLabels extends TreemapSeriesDataLabels {
   @override
   final String align;
@@ -3510,44 +3515,51 @@ class TreemapSeriesDataLabelsBuilder
 
   @override
   _$TreemapSeriesDataLabels build() {
-    final result = _$v ??
-        new _$TreemapSeriesDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$TreemapSeriesDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$TreemapSeriesDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'TreemapSeriesDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class TreemapSeriesEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$TreemapSeriesEvents extends TreemapSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3704,7 +3716,7 @@ class TreemapSeriesEventsBuilder
 
   @override
   _$TreemapSeriesEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$TreemapSeriesEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -3714,17 +3726,11 @@ class TreemapSeriesEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class TreemapSeriesLevels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$TreemapSeriesLevels extends TreemapSeriesLevels {
   @override
   final String borderColor;
@@ -3881,7 +3887,7 @@ class TreemapSeriesLevelsBuilder
 
   @override
   _$TreemapSeriesLevels build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$TreemapSeriesLevels._(
             borderColor: borderColor,
             borderDashStyle: borderDashStyle,
@@ -3891,17 +3897,11 @@ class TreemapSeriesLevelsBuilder
             layoutAlgorithm: layoutAlgorithm,
             layoutStartingDirection: layoutStartingDirection,
             level: level);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class TreemapSeriesPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$TreemapSeriesPoint extends TreemapSeriesPoint {
   @override
   final TreemapSeriesPointEvents events;
@@ -3971,18 +3971,25 @@ class TreemapSeriesPointBuilder
 
   @override
   _$TreemapSeriesPoint build() {
-    final result = _$v ?? new _$TreemapSeriesPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$TreemapSeriesPoint _$result;
+    try {
+      _$result = _$v ?? new _$TreemapSeriesPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'TreemapSeriesPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class TreemapSeriesPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$TreemapSeriesPointEvents extends TreemapSeriesPointEvents {
   @override
   final Function click;
@@ -4125,7 +4132,7 @@ class TreemapSeriesPointEventsBuilder
 
   @override
   _$TreemapSeriesPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$TreemapSeriesPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -4134,17 +4141,11 @@ class TreemapSeriesPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class TreemapSeriesStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$TreemapSeriesStates extends TreemapSeriesStates {
   @override
   final TreemapSeriesStatesHover hover;
@@ -4214,18 +4215,25 @@ class TreemapSeriesStatesBuilder
 
   @override
   _$TreemapSeriesStates build() {
-    final result = _$v ?? new _$TreemapSeriesStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$TreemapSeriesStates _$result;
+    try {
+      _$result = _$v ?? new _$TreemapSeriesStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'TreemapSeriesStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class TreemapSeriesStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$TreemapSeriesStatesHover extends TreemapSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -4356,7 +4364,7 @@ class TreemapSeriesStatesHoverBuilder
 
   @override
   _$TreemapSeriesStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$TreemapSeriesStatesHover._(
             animation: animation,
             borderColor: borderColor,
@@ -4364,17 +4372,11 @@ class TreemapSeriesStatesHoverBuilder
             color: color,
             enabled: enabled,
             opacity: opacity);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class TreemapSeriesTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$TreemapSeriesTooltip extends TreemapSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4610,33 +4612,40 @@ class TreemapSeriesTooltipBuilder
 
   @override
   _$TreemapSeriesTooltip build() {
-    final result = _$v ??
-        new _$TreemapSeriesTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$TreemapSeriesTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$TreemapSeriesTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'TreemapSeriesTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class TreemapSeriesZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$TreemapSeriesZones extends TreemapSeriesZones {
   @override
   final String className;
@@ -4748,14 +4757,14 @@ class TreemapSeriesZonesBuilder
 
   @override
   _$TreemapSeriesZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$TreemapSeriesZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

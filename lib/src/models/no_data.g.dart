@@ -4,8 +4,15 @@ part of no_data;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library no_data
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<NoData> _$noDataSerializer = new _$NoDataSerializer();
 Serializer<NoDataPosition> _$noDataPositionSerializer =
@@ -160,12 +167,6 @@ class _$NoDataPositionSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class NoData
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$NoData extends NoData {
   @override
   final JsonObject attr;
@@ -262,23 +263,30 @@ class NoDataBuilder implements Builder<NoData, NoDataBuilder> {
 
   @override
   _$NoData build() {
-    final result = _$v ??
-        new _$NoData._(
-            attr: attr,
-            position: position,
-            style: _style?.build(),
-            useHTML: useHTML);
-    replace(result);
-    return result;
+    _$NoData _$result;
+    try {
+      _$result = _$v ??
+          new _$NoData._(
+              attr: attr,
+              position: position,
+              style: _style?.build(),
+              useHTML: useHTML);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'NoData', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class NoDataPosition
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$NoDataPosition extends NoDataPosition {
   @override
   final String align;
@@ -378,10 +386,10 @@ class NoDataPositionBuilder
 
   @override
   _$NoDataPosition build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$NoDataPosition._(
             align: align, verticalAlign: verticalAlign, x: x, y: y);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

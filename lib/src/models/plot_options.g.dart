@@ -4,8 +4,15 @@ part of plot_options;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library plot_options
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<PlotOptions> _$plotOptionsSerializer = new _$PlotOptionsSerializer();
 Serializer<PlotOptionsArea> _$plotOptionsAreaSerializer =
@@ -40383,12 +40390,6 @@ class _$PlotOptionsWaterfallZonesSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptions
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptions extends PlotOptions {
   @override
   final PlotOptionsArea area;
@@ -40726,42 +40727,73 @@ class PlotOptionsBuilder implements Builder<PlotOptions, PlotOptionsBuilder> {
 
   @override
   _$PlotOptions build() {
-    final result = _$v ??
-        new _$PlotOptions._(
-            area: _area?.build(),
-            arearange: _arearange?.build(),
-            areaspline: _areaspline?.build(),
-            areasplinerange: _areasplinerange?.build(),
-            bar: _bar?.build(),
-            boxplot: boxplot,
-            bubble: bubble,
-            column: _column?.build(),
-            columnrange: columnrange,
-            errorbar: errorbar,
-            funnel: funnel,
-            gauge: gauge,
-            heatmap: heatmap,
-            line: _line?.build(),
-            pie: _pie?.build(),
-            polygon: polygon,
-            pyramid: pyramid,
-            scatter: _scatter?.build(),
-            series: _series?.build(),
-            solidgauge: solidgauge,
-            spline: _spline?.build(),
-            treemap: treemap,
-            waterfall: waterfall);
-    replace(result);
-    return result;
+    _$PlotOptions _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptions._(
+              area: _area?.build(),
+              arearange: _arearange?.build(),
+              areaspline: _areaspline?.build(),
+              areasplinerange: _areasplinerange?.build(),
+              bar: _bar?.build(),
+              boxplot: boxplot,
+              bubble: bubble,
+              column: _column?.build(),
+              columnrange: columnrange,
+              errorbar: errorbar,
+              funnel: funnel,
+              gauge: gauge,
+              heatmap: heatmap,
+              line: _line?.build(),
+              pie: _pie?.build(),
+              polygon: polygon,
+              pyramid: pyramid,
+              scatter: _scatter?.build(),
+              series: _series?.build(),
+              solidgauge: solidgauge,
+              spline: _spline?.build(),
+              treemap: treemap,
+              waterfall: waterfall);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'area';
+        _area?.build();
+        _$failedField = 'arearange';
+        _arearange?.build();
+        _$failedField = 'areaspline';
+        _areaspline?.build();
+        _$failedField = 'areasplinerange';
+        _areasplinerange?.build();
+        _$failedField = 'bar';
+        _bar?.build();
+
+        _$failedField = 'column';
+        _column?.build();
+
+        _$failedField = 'line';
+        _line?.build();
+        _$failedField = 'pie';
+        _pie?.build();
+
+        _$failedField = 'scatter';
+        _scatter?.build();
+        _$failedField = 'series';
+        _series?.build();
+
+        _$failedField = 'spline';
+        _spline?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptions', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsArea
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsArea extends PlotOptionsArea {
   @override
   final bool allowPointSelect;
@@ -41389,70 +41421,89 @@ class PlotOptionsAreaBuilder
 
   @override
   _$PlotOptionsArea build() {
-    final result = _$v ??
-        new _$PlotOptionsArea._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorIndex: colorIndex,
-            connectEnds: connectEnds,
-            connectNulls: connectNulls,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            dashStyle: dashStyle,
-            dataLabels: _dataLabels?.build(),
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            fillColor: fillColor,
-            fillOpacity: fillOpacity,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            keys: _keys?.build(),
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            linecap: linecap,
-            linkedTo: linkedTo,
-            marker: _marker?.build(),
-            negativeColor: negativeColor,
-            negativeFillColor: negativeFillColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointPlacement: pointPlacement,
-            pointStart: pointStart,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            softThreshold: softThreshold,
-            stacking: stacking,
-            states: states,
-            step: step,
-            stickyTracking: stickyTracking,
-            threshold: threshold,
-            tooltip: tooltip,
-            trackByArea: trackByArea,
-            turboThreshold: turboThreshold,
-            visible: visible,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsArea _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsArea._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorIndex: colorIndex,
+              connectEnds: connectEnds,
+              connectNulls: connectNulls,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              dashStyle: dashStyle,
+              dataLabels: _dataLabels?.build(),
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              fillColor: fillColor,
+              fillOpacity: fillOpacity,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              keys: _keys?.build(),
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              linecap: linecap,
+              linkedTo: linkedTo,
+              marker: _marker?.build(),
+              negativeColor: negativeColor,
+              negativeFillColor: negativeFillColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointPlacement: pointPlacement,
+              pointStart: pointStart,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              softThreshold: softThreshold,
+              stacking: stacking,
+              states: states,
+              step: step,
+              stickyTracking: stickyTracking,
+              threshold: threshold,
+              tooltip: tooltip,
+              trackByArea: trackByArea,
+              turboThreshold: turboThreshold,
+              visible: visible,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'marker';
+        _marker?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsArea', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreaDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaDataLabels extends PlotOptionsAreaDataLabels {
   @override
   final String align;
@@ -41806,44 +41857,51 @@ class PlotOptionsAreaDataLabelsBuilder
 
   @override
   _$PlotOptionsAreaDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsAreaDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PlotOptionsAreaDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsAreaDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreaDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreaEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaEvents extends PlotOptionsAreaEvents {
   @override
   final Function afterAnimate;
@@ -42001,7 +42059,7 @@ class PlotOptionsAreaEventsBuilder
 
   @override
   _$PlotOptionsAreaEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsAreaEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -42011,17 +42069,11 @@ class PlotOptionsAreaEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreaMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaMarker extends PlotOptionsAreaMarker {
   @override
   final bool enabled;
@@ -42190,28 +42242,35 @@ class PlotOptionsAreaMarkerBuilder
 
   @override
   _$PlotOptionsAreaMarker build() {
-    final result = _$v ??
-        new _$PlotOptionsAreaMarker._(
-            enabled: enabled,
-            fillColor: fillColor,
-            height: height,
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            radius: radius,
-            states: _states?.build(),
-            symbol: symbol,
-            width: width);
-    replace(result);
-    return result;
+    _$PlotOptionsAreaMarker _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsAreaMarker._(
+              enabled: enabled,
+              fillColor: fillColor,
+              height: height,
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              radius: radius,
+              states: _states?.build(),
+              symbol: symbol,
+              width: width);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'states';
+        _states?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreaMarker', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreaMarkerStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaMarkerStates extends PlotOptionsAreaMarkerStates {
   @override
   final PlotOptionsAreaMarkerStatesHover hover;
@@ -42296,20 +42355,29 @@ class PlotOptionsAreaMarkerStatesBuilder
 
   @override
   _$PlotOptionsAreaMarkerStates build() {
-    final result = _$v ??
-        new _$PlotOptionsAreaMarkerStates._(
-            hover: _hover?.build(), select: _select?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsAreaMarkerStates _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsAreaMarkerStates._(
+              hover: _hover?.build(), select: _select?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+        _$failedField = 'select';
+        _select?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreaMarkerStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreaMarkerStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaMarkerStatesHover
     extends PlotOptionsAreaMarkerStatesHover {
   @override
@@ -42454,7 +42522,7 @@ class PlotOptionsAreaMarkerStatesHoverBuilder
 
   @override
   _$PlotOptionsAreaMarkerStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsAreaMarkerStatesHover._(
             enabled: enabled,
             fillColor: fillColor,
@@ -42463,17 +42531,11 @@ class PlotOptionsAreaMarkerStatesHoverBuilder
             lineWidthPlus: lineWidthPlus,
             radius: radius,
             radiusPlus: radiusPlus);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreaMarkerStatesSelect
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaMarkerStatesSelect
     extends PlotOptionsAreaMarkerStatesSelect {
   @override
@@ -42594,24 +42656,18 @@ class PlotOptionsAreaMarkerStatesSelectBuilder
 
   @override
   _$PlotOptionsAreaMarkerStatesSelect build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsAreaMarkerStatesSelect._(
             enabled: enabled,
             fillColor: fillColor,
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreaPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaPoint extends PlotOptionsAreaPoint {
   @override
   final PlotOptionsAreaPointEvents events;
@@ -42683,19 +42739,25 @@ class PlotOptionsAreaPointBuilder
 
   @override
   _$PlotOptionsAreaPoint build() {
-    final result =
-        _$v ?? new _$PlotOptionsAreaPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsAreaPoint _$result;
+    try {
+      _$result = _$v ?? new _$PlotOptionsAreaPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreaPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreaPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaPointEvents extends PlotOptionsAreaPointEvents {
   @override
   final Function click;
@@ -42838,7 +42900,7 @@ class PlotOptionsAreaPointEventsBuilder
 
   @override
   _$PlotOptionsAreaPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsAreaPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -42847,17 +42909,11 @@ class PlotOptionsAreaPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreaStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaStates extends PlotOptionsAreaStates {
   @override
   final PlotOptionsAreaStatesHover hover;
@@ -42928,18 +42984,25 @@ class PlotOptionsAreaStatesBuilder
 
   @override
   _$PlotOptionsAreaStates build() {
-    final result = _$v ?? new _$PlotOptionsAreaStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsAreaStates _$result;
+    try {
+      _$result = _$v ?? new _$PlotOptionsAreaStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreaStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreaStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaStatesHover extends PlotOptionsAreaStatesHover {
   @override
   final JsonObject animation;
@@ -43072,25 +43135,32 @@ class PlotOptionsAreaStatesHoverBuilder
 
   @override
   _$PlotOptionsAreaStatesHover build() {
-    final result = _$v ??
-        new _$PlotOptionsAreaStatesHover._(
-            animation: animation,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsAreaStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsAreaStatesHover._(
+              animation: animation,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreaStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreaStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaStatesHoverHalo extends PlotOptionsAreaStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -43183,20 +43253,14 @@ class PlotOptionsAreaStatesHoverHaloBuilder
 
   @override
   _$PlotOptionsAreaStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsAreaStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreaStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaStatesHoverMarker
     extends PlotOptionsAreaStatesHoverMarker {
   @override
@@ -43367,7 +43431,7 @@ class PlotOptionsAreaStatesHoverMarkerBuilder
 
   @override
   _$PlotOptionsAreaStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsAreaStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -43378,17 +43442,11 @@ class PlotOptionsAreaStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreaTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaTooltip extends PlotOptionsAreaTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -43625,33 +43683,40 @@ class PlotOptionsAreaTooltipBuilder
 
   @override
   _$PlotOptionsAreaTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsAreaTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsAreaTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsAreaTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreaTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreaZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaZones extends PlotOptionsAreaZones {
   @override
   final String className;
@@ -43764,24 +43829,18 @@ class PlotOptionsAreaZonesBuilder
 
   @override
   _$PlotOptionsAreaZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsAreaZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsArearange
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearange extends PlotOptionsArearange {
   @override
   final bool allowPointSelect;
@@ -44357,65 +44416,78 @@ class PlotOptionsArearangeBuilder
 
   @override
   _$PlotOptionsArearange build() {
-    final result = _$v ??
-        new _$PlotOptionsArearange._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorIndex: colorIndex,
-            connectNulls: connectNulls,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            dashStyle: dashStyle,
-            dataLabels: dataLabels,
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            fillColor: fillColor,
-            fillOpacity: fillOpacity,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            keys: _keys?.build(),
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            linecap: linecap,
-            linkedTo: linkedTo,
-            negativeColor: negativeColor,
-            negativeFillColor: negativeFillColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointPlacement: pointPlacement,
-            pointStart: pointStart,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            states: states,
-            step: step,
-            stickyTracking: stickyTracking,
-            tooltip: tooltip,
-            trackByArea: trackByArea,
-            turboThreshold: turboThreshold,
-            visible: visible,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsArearange _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsArearange._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorIndex: colorIndex,
+              connectNulls: connectNulls,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              dashStyle: dashStyle,
+              dataLabels: dataLabels,
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              fillColor: fillColor,
+              fillOpacity: fillOpacity,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              keys: _keys?.build(),
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              linecap: linecap,
+              linkedTo: linkedTo,
+              negativeColor: negativeColor,
+              negativeFillColor: negativeFillColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointPlacement: pointPlacement,
+              pointStart: pointStart,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              states: states,
+              step: step,
+              stickyTracking: stickyTracking,
+              tooltip: tooltip,
+              trackByArea: trackByArea,
+              turboThreshold: turboThreshold,
+              visible: visible,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsArearange', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsArearangeDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearangeDataLabels extends PlotOptionsArearangeDataLabels {
   @override
   final String align;
@@ -44790,46 +44862,53 @@ class PlotOptionsArearangeDataLabelsBuilder
 
   @override
   _$PlotOptionsArearangeDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsArearangeDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            xHigh: xHigh,
-            xLow: xLow,
-            yHigh: yHigh,
-            yLow: yLow,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PlotOptionsArearangeDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsArearangeDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              xHigh: xHigh,
+              xLow: xLow,
+              yHigh: yHigh,
+              yLow: yLow,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsArearangeDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsArearangeEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearangeEvents extends PlotOptionsArearangeEvents {
   @override
   final Function afterAnimate;
@@ -44989,7 +45068,7 @@ class PlotOptionsArearangeEventsBuilder
 
   @override
   _$PlotOptionsArearangeEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsArearangeEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -44999,17 +45078,11 @@ class PlotOptionsArearangeEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsArearangePoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearangePoint extends PlotOptionsArearangePoint {
   @override
   final PlotOptionsArearangePointEvents events;
@@ -45083,19 +45156,26 @@ class PlotOptionsArearangePointBuilder
 
   @override
   _$PlotOptionsArearangePoint build() {
-    final result =
-        _$v ?? new _$PlotOptionsArearangePoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsArearangePoint _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsArearangePoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsArearangePoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsArearangePointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearangePointEvents
     extends PlotOptionsArearangePointEvents {
   @override
@@ -45240,7 +45320,7 @@ class PlotOptionsArearangePointEventsBuilder
 
   @override
   _$PlotOptionsArearangePointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsArearangePointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -45249,17 +45329,11 @@ class PlotOptionsArearangePointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsArearangeStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearangeStates extends PlotOptionsArearangeStates {
   @override
   final PlotOptionsArearangeStatesHover hover;
@@ -45333,19 +45407,26 @@ class PlotOptionsArearangeStatesBuilder
 
   @override
   _$PlotOptionsArearangeStates build() {
-    final result =
-        _$v ?? new _$PlotOptionsArearangeStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsArearangeStates _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsArearangeStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsArearangeStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsArearangeStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearangeStatesHover
     extends PlotOptionsArearangeStatesHover {
   @override
@@ -45480,25 +45561,32 @@ class PlotOptionsArearangeStatesHoverBuilder
 
   @override
   _$PlotOptionsArearangeStatesHover build() {
-    final result = _$v ??
-        new _$PlotOptionsArearangeStatesHover._(
-            animation: animation,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsArearangeStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsArearangeStatesHover._(
+              animation: animation,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsArearangeStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsArearangeStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearangeStatesHoverHalo
     extends PlotOptionsArearangeStatesHoverHalo {
   @override
@@ -45594,20 +45682,14 @@ class PlotOptionsArearangeStatesHoverHaloBuilder
 
   @override
   _$PlotOptionsArearangeStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsArearangeStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsArearangeStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearangeStatesHoverMarker
     extends PlotOptionsArearangeStatesHoverMarker {
   @override
@@ -45779,7 +45861,7 @@ class PlotOptionsArearangeStatesHoverMarkerBuilder
 
   @override
   _$PlotOptionsArearangeStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsArearangeStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -45790,17 +45872,11 @@ class PlotOptionsArearangeStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsArearangeTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearangeTooltip extends PlotOptionsArearangeTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -46039,33 +46115,40 @@ class PlotOptionsArearangeTooltipBuilder
 
   @override
   _$PlotOptionsArearangeTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsArearangeTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsArearangeTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsArearangeTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsArearangeTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsArearangeZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsArearangeZones extends PlotOptionsArearangeZones {
   @override
   final String className;
@@ -46180,24 +46263,18 @@ class PlotOptionsArearangeZonesBuilder
 
   @override
   _$PlotOptionsArearangeZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsArearangeZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreaspline
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreaspline extends PlotOptionsAreaspline {
   @override
   final bool allowPointSelect;
@@ -46818,69 +46895,88 @@ class PlotOptionsAreasplineBuilder
 
   @override
   _$PlotOptionsAreaspline build() {
-    final result = _$v ??
-        new _$PlotOptionsAreaspline._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorIndex: colorIndex,
-            connectEnds: connectEnds,
-            connectNulls: connectNulls,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            dashStyle: dashStyle,
-            dataLabels: _dataLabels?.build(),
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            fillColor: fillColor,
-            fillOpacity: fillOpacity,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            keys: _keys?.build(),
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            linecap: linecap,
-            linkedTo: linkedTo,
-            marker: _marker?.build(),
-            negativeColor: negativeColor,
-            negativeFillColor: negativeFillColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointPlacement: pointPlacement,
-            pointStart: pointStart,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            softThreshold: softThreshold,
-            stacking: stacking,
-            states: states,
-            stickyTracking: stickyTracking,
-            threshold: threshold,
-            tooltip: tooltip,
-            trackByArea: trackByArea,
-            turboThreshold: turboThreshold,
-            visible: visible,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsAreaspline _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsAreaspline._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorIndex: colorIndex,
+              connectEnds: connectEnds,
+              connectNulls: connectNulls,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              dashStyle: dashStyle,
+              dataLabels: _dataLabels?.build(),
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              fillColor: fillColor,
+              fillOpacity: fillOpacity,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              keys: _keys?.build(),
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              linecap: linecap,
+              linkedTo: linkedTo,
+              marker: _marker?.build(),
+              negativeColor: negativeColor,
+              negativeFillColor: negativeFillColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointPlacement: pointPlacement,
+              pointStart: pointStart,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              softThreshold: softThreshold,
+              stacking: stacking,
+              states: states,
+              stickyTracking: stickyTracking,
+              threshold: threshold,
+              tooltip: tooltip,
+              trackByArea: trackByArea,
+              turboThreshold: turboThreshold,
+              visible: visible,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'marker';
+        _marker?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreaspline', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplineDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineDataLabels
     extends PlotOptionsAreasplineDataLabels {
   @override
@@ -47236,44 +47332,51 @@ class PlotOptionsAreasplineDataLabelsBuilder
 
   @override
   _$PlotOptionsAreasplineDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsAreasplineDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PlotOptionsAreasplineDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsAreasplineDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreasplineDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplineEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineEvents extends PlotOptionsAreasplineEvents {
   @override
   final Function afterAnimate;
@@ -47434,7 +47537,7 @@ class PlotOptionsAreasplineEventsBuilder
 
   @override
   _$PlotOptionsAreasplineEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsAreasplineEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -47444,17 +47547,11 @@ class PlotOptionsAreasplineEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplineMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineMarker extends PlotOptionsAreasplineMarker {
   @override
   final bool enabled;
@@ -47626,28 +47723,35 @@ class PlotOptionsAreasplineMarkerBuilder
 
   @override
   _$PlotOptionsAreasplineMarker build() {
-    final result = _$v ??
-        new _$PlotOptionsAreasplineMarker._(
-            enabled: enabled,
-            fillColor: fillColor,
-            height: height,
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            radius: radius,
-            states: _states?.build(),
-            symbol: symbol,
-            width: width);
-    replace(result);
-    return result;
+    _$PlotOptionsAreasplineMarker _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsAreasplineMarker._(
+              enabled: enabled,
+              fillColor: fillColor,
+              height: height,
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              radius: radius,
+              states: _states?.build(),
+              symbol: symbol,
+              width: width);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'states';
+        _states?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreasplineMarker', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplineMarkerStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineMarkerStates
     extends PlotOptionsAreasplineMarkerStates {
   @override
@@ -47733,20 +47837,29 @@ class PlotOptionsAreasplineMarkerStatesBuilder
 
   @override
   _$PlotOptionsAreasplineMarkerStates build() {
-    final result = _$v ??
-        new _$PlotOptionsAreasplineMarkerStates._(
-            hover: _hover?.build(), select: _select?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsAreasplineMarkerStates _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsAreasplineMarkerStates._(
+              hover: _hover?.build(), select: _select?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+        _$failedField = 'select';
+        _select?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreasplineMarkerStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplineMarkerStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineMarkerStatesHover
     extends PlotOptionsAreasplineMarkerStatesHover {
   @override
@@ -47893,7 +48006,7 @@ class PlotOptionsAreasplineMarkerStatesHoverBuilder
 
   @override
   _$PlotOptionsAreasplineMarkerStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsAreasplineMarkerStatesHover._(
             enabled: enabled,
             fillColor: fillColor,
@@ -47902,17 +48015,11 @@ class PlotOptionsAreasplineMarkerStatesHoverBuilder
             lineWidthPlus: lineWidthPlus,
             radius: radius,
             radiusPlus: radiusPlus);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplineMarkerStatesSelect
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineMarkerStatesSelect
     extends PlotOptionsAreasplineMarkerStatesSelect {
   @override
@@ -48035,24 +48142,18 @@ class PlotOptionsAreasplineMarkerStatesSelectBuilder
 
   @override
   _$PlotOptionsAreasplineMarkerStatesSelect build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsAreasplineMarkerStatesSelect._(
             enabled: enabled,
             fillColor: fillColor,
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplinePoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinePoint extends PlotOptionsAreasplinePoint {
   @override
   final PlotOptionsAreasplinePointEvents events;
@@ -48126,19 +48227,26 @@ class PlotOptionsAreasplinePointBuilder
 
   @override
   _$PlotOptionsAreasplinePoint build() {
-    final result =
-        _$v ?? new _$PlotOptionsAreasplinePoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsAreasplinePoint _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsAreasplinePoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreasplinePoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplinePointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinePointEvents
     extends PlotOptionsAreasplinePointEvents {
   @override
@@ -48283,7 +48391,7 @@ class PlotOptionsAreasplinePointEventsBuilder
 
   @override
   _$PlotOptionsAreasplinePointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsAreasplinePointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -48292,17 +48400,11 @@ class PlotOptionsAreasplinePointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplineStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineStates extends PlotOptionsAreasplineStates {
   @override
   final PlotOptionsAreasplineStatesHover hover;
@@ -48377,19 +48479,26 @@ class PlotOptionsAreasplineStatesBuilder
 
   @override
   _$PlotOptionsAreasplineStates build() {
-    final result =
-        _$v ?? new _$PlotOptionsAreasplineStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsAreasplineStates _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsAreasplineStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreasplineStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplineStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineStatesHover
     extends PlotOptionsAreasplineStatesHover {
   @override
@@ -48524,25 +48633,32 @@ class PlotOptionsAreasplineStatesHoverBuilder
 
   @override
   _$PlotOptionsAreasplineStatesHover build() {
-    final result = _$v ??
-        new _$PlotOptionsAreasplineStatesHover._(
-            animation: animation,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsAreasplineStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsAreasplineStatesHover._(
+              animation: animation,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreasplineStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplineStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineStatesHoverHalo
     extends PlotOptionsAreasplineStatesHoverHalo {
   @override
@@ -48638,20 +48754,14 @@ class PlotOptionsAreasplineStatesHoverHaloBuilder
 
   @override
   _$PlotOptionsAreasplineStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsAreasplineStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplineStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineStatesHoverMarker
     extends PlotOptionsAreasplineStatesHoverMarker {
   @override
@@ -48824,7 +48934,7 @@ class PlotOptionsAreasplineStatesHoverMarkerBuilder
 
   @override
   _$PlotOptionsAreasplineStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsAreasplineStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -48835,17 +48945,11 @@ class PlotOptionsAreasplineStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplineTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineTooltip extends PlotOptionsAreasplineTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -49084,33 +49188,40 @@ class PlotOptionsAreasplineTooltipBuilder
 
   @override
   _$PlotOptionsAreasplineTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsAreasplineTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsAreasplineTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsAreasplineTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreasplineTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplineZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplineZones extends PlotOptionsAreasplineZones {
   @override
   final String className;
@@ -49225,24 +49336,18 @@ class PlotOptionsAreasplineZonesBuilder
 
   @override
   _$PlotOptionsAreasplineZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsAreasplineZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplinerange
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerange extends PlotOptionsAreasplinerange {
   @override
   final bool allowPointSelect;
@@ -49811,64 +49916,77 @@ class PlotOptionsAreasplinerangeBuilder
 
   @override
   _$PlotOptionsAreasplinerange build() {
-    final result = _$v ??
-        new _$PlotOptionsAreasplinerange._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorIndex: colorIndex,
-            connectNulls: connectNulls,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            dashStyle: dashStyle,
-            dataLabels: dataLabels,
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            fillColor: fillColor,
-            fillOpacity: fillOpacity,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            keys: _keys?.build(),
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            linecap: linecap,
-            linkedTo: linkedTo,
-            negativeColor: negativeColor,
-            negativeFillColor: negativeFillColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointPlacement: pointPlacement,
-            pointStart: pointStart,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            states: states,
-            stickyTracking: stickyTracking,
-            tooltip: tooltip,
-            trackByArea: trackByArea,
-            turboThreshold: turboThreshold,
-            visible: visible,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsAreasplinerange _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsAreasplinerange._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorIndex: colorIndex,
+              connectNulls: connectNulls,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              dashStyle: dashStyle,
+              dataLabels: dataLabels,
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              fillColor: fillColor,
+              fillOpacity: fillOpacity,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              keys: _keys?.build(),
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              linecap: linecap,
+              linkedTo: linkedTo,
+              negativeColor: negativeColor,
+              negativeFillColor: negativeFillColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointPlacement: pointPlacement,
+              pointStart: pointStart,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              states: states,
+              stickyTracking: stickyTracking,
+              tooltip: tooltip,
+              trackByArea: trackByArea,
+              turboThreshold: turboThreshold,
+              visible: visible,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreasplinerange', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplinerangeDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerangeDataLabels
     extends PlotOptionsAreasplinerangeDataLabels {
   @override
@@ -50245,46 +50363,55 @@ class PlotOptionsAreasplinerangeDataLabelsBuilder
 
   @override
   _$PlotOptionsAreasplinerangeDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsAreasplinerangeDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            xHigh: xHigh,
-            xLow: xLow,
-            yHigh: yHigh,
-            yLow: yLow,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PlotOptionsAreasplinerangeDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsAreasplinerangeDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              xHigh: xHigh,
+              xLow: xLow,
+              yHigh: yHigh,
+              yLow: yLow,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreasplinerangeDataLabels',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplinerangeEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerangeEvents
     extends PlotOptionsAreasplinerangeEvents {
   @override
@@ -50446,7 +50573,7 @@ class PlotOptionsAreasplinerangeEventsBuilder
 
   @override
   _$PlotOptionsAreasplinerangeEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsAreasplinerangeEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -50456,17 +50583,11 @@ class PlotOptionsAreasplinerangeEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplinerangePoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerangePoint
     extends PlotOptionsAreasplinerangePoint {
   @override
@@ -50542,19 +50663,26 @@ class PlotOptionsAreasplinerangePointBuilder
 
   @override
   _$PlotOptionsAreasplinerangePoint build() {
-    final result = _$v ??
-        new _$PlotOptionsAreasplinerangePoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsAreasplinerangePoint _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsAreasplinerangePoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreasplinerangePoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplinerangePointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerangePointEvents
     extends PlotOptionsAreasplinerangePointEvents {
   @override
@@ -50700,7 +50828,7 @@ class PlotOptionsAreasplinerangePointEventsBuilder
 
   @override
   _$PlotOptionsAreasplinerangePointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsAreasplinerangePointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -50709,17 +50837,11 @@ class PlotOptionsAreasplinerangePointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplinerangeStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerangeStates
     extends PlotOptionsAreasplinerangeStates {
   @override
@@ -50795,19 +50917,26 @@ class PlotOptionsAreasplinerangeStatesBuilder
 
   @override
   _$PlotOptionsAreasplinerangeStates build() {
-    final result =
-        _$v ?? new _$PlotOptionsAreasplinerangeStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsAreasplinerangeStates _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsAreasplinerangeStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreasplinerangeStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplinerangeStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerangeStatesHover
     extends PlotOptionsAreasplinerangeStatesHover {
   @override
@@ -50944,25 +51073,34 @@ class PlotOptionsAreasplinerangeStatesHoverBuilder
 
   @override
   _$PlotOptionsAreasplinerangeStatesHover build() {
-    final result = _$v ??
-        new _$PlotOptionsAreasplinerangeStatesHover._(
-            animation: animation,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsAreasplinerangeStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsAreasplinerangeStatesHover._(
+              animation: animation,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreasplinerangeStatesHover',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplinerangeStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerangeStatesHoverHalo
     extends PlotOptionsAreasplinerangeStatesHoverHalo {
   @override
@@ -51060,20 +51198,14 @@ class PlotOptionsAreasplinerangeStatesHoverHaloBuilder
 
   @override
   _$PlotOptionsAreasplinerangeStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsAreasplinerangeStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplinerangeStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerangeStatesHoverMarker
     extends PlotOptionsAreasplinerangeStatesHoverMarker {
   @override
@@ -51249,7 +51381,7 @@ class PlotOptionsAreasplinerangeStatesHoverMarkerBuilder
 
   @override
   _$PlotOptionsAreasplinerangeStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsAreasplinerangeStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -51260,17 +51392,11 @@ class PlotOptionsAreasplinerangeStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplinerangeTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerangeTooltip
     extends PlotOptionsAreasplinerangeTooltip {
   @override
@@ -51510,33 +51636,40 @@ class PlotOptionsAreasplinerangeTooltipBuilder
 
   @override
   _$PlotOptionsAreasplinerangeTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsAreasplinerangeTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsAreasplinerangeTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsAreasplinerangeTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsAreasplinerangeTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsAreasplinerangeZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsAreasplinerangeZones
     extends PlotOptionsAreasplinerangeZones {
   @override
@@ -51653,24 +51786,18 @@ class PlotOptionsAreasplinerangeZonesBuilder
 
   @override
   _$PlotOptionsAreasplinerangeZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsAreasplinerangeZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBar
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBar extends PlotOptionsBar {
   @override
   final bool allowPointSelect;
@@ -52348,75 +52475,94 @@ class PlotOptionsBarBuilder
 
   @override
   _$PlotOptionsBar build() {
-    final result = _$v ??
-        new _$PlotOptionsBar._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            colorByPoint: colorByPoint,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            crisp: crisp,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            dataLabels: _dataLabels?.build(),
-            depth: depth,
-            description: description,
-            edgeColor: edgeColor,
-            edgeWidth: edgeWidth,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            groupPadding: groupPadding,
-            groupZPadding: groupZPadding,
-            grouping: grouping,
-            keys: _keys?.build(),
-            linkedTo: linkedTo,
-            maxPointWidth: maxPointWidth,
-            minPointLength: minPointLength,
-            negativeColor: negativeColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointPadding: pointPadding,
-            pointPlacement: pointPlacement,
-            pointRange: pointRange,
-            pointStart: pointStart,
-            pointWidth: pointWidth,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            softThreshold: softThreshold,
-            stacking: stacking,
-            states: states,
-            stickyTracking: stickyTracking,
-            threshold: threshold,
-            tooltip: tooltip,
-            turboThreshold: turboThreshold,
-            visible: visible,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsBar _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsBar._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              colorByPoint: colorByPoint,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              crisp: crisp,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              dataLabels: _dataLabels?.build(),
+              depth: depth,
+              description: description,
+              edgeColor: edgeColor,
+              edgeWidth: edgeWidth,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              groupPadding: groupPadding,
+              groupZPadding: groupZPadding,
+              grouping: grouping,
+              keys: _keys?.build(),
+              linkedTo: linkedTo,
+              maxPointWidth: maxPointWidth,
+              minPointLength: minPointLength,
+              negativeColor: negativeColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointPadding: pointPadding,
+              pointPlacement: pointPlacement,
+              pointRange: pointRange,
+              pointStart: pointStart,
+              pointWidth: pointWidth,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              softThreshold: softThreshold,
+              stacking: stacking,
+              states: states,
+              stickyTracking: stickyTracking,
+              threshold: threshold,
+              tooltip: tooltip,
+              turboThreshold: turboThreshold,
+              visible: visible,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsBar', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBarDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBarDataLabels extends PlotOptionsBarDataLabels {
   @override
   final String align;
@@ -52770,44 +52916,51 @@ class PlotOptionsBarDataLabelsBuilder
 
   @override
   _$PlotOptionsBarDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsBarDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PlotOptionsBarDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsBarDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsBarDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBarEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBarEvents extends PlotOptionsBarEvents {
   @override
   final Function afterAnimate;
@@ -52965,7 +53118,7 @@ class PlotOptionsBarEventsBuilder
 
   @override
   _$PlotOptionsBarEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsBarEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -52975,17 +53128,11 @@ class PlotOptionsBarEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBarPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBarPoint extends PlotOptionsBarPoint {
   @override
   final PlotOptionsBarPointEvents events;
@@ -53056,18 +53203,25 @@ class PlotOptionsBarPointBuilder
 
   @override
   _$PlotOptionsBarPoint build() {
-    final result = _$v ?? new _$PlotOptionsBarPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsBarPoint _$result;
+    try {
+      _$result = _$v ?? new _$PlotOptionsBarPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsBarPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBarPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBarPointEvents extends PlotOptionsBarPointEvents {
   @override
   final Function click;
@@ -53210,7 +53364,7 @@ class PlotOptionsBarPointEventsBuilder
 
   @override
   _$PlotOptionsBarPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsBarPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -53219,17 +53373,11 @@ class PlotOptionsBarPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBarStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBarStates extends PlotOptionsBarStates {
   @override
   final PlotOptionsBarStatesHover hover;
@@ -53300,18 +53448,25 @@ class PlotOptionsBarStatesBuilder
 
   @override
   _$PlotOptionsBarStates build() {
-    final result = _$v ?? new _$PlotOptionsBarStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsBarStates _$result;
+    try {
+      _$result = _$v ?? new _$PlotOptionsBarStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsBarStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBarStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBarStatesHover extends PlotOptionsBarStatesHover {
   @override
   final JsonObject animation;
@@ -53442,7 +53597,7 @@ class PlotOptionsBarStatesHoverBuilder
 
   @override
   _$PlotOptionsBarStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsBarStatesHover._(
             animation: animation,
             borderColor: borderColor,
@@ -53450,17 +53605,11 @@ class PlotOptionsBarStatesHoverBuilder
             color: color,
             enabled: enabled,
             halo: halo);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBarStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBarStatesHoverHalo extends PlotOptionsBarStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -53553,20 +53702,14 @@ class PlotOptionsBarStatesHoverHaloBuilder
 
   @override
   _$PlotOptionsBarStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsBarStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBarTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBarTooltip extends PlotOptionsBarTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -53802,33 +53945,40 @@ class PlotOptionsBarTooltipBuilder
 
   @override
   _$PlotOptionsBarTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsBarTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsBarTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsBarTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsBarTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBarZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBarZones extends PlotOptionsBarZones {
   @override
   final String className;
@@ -53940,24 +54090,18 @@ class PlotOptionsBarZonesBuilder
 
   @override
   _$PlotOptionsBarZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsBarZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBoxplot
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBoxplot extends PlotOptionsBoxplot {
   @override
   final bool allowPointSelect;
@@ -54623,74 +54767,90 @@ class PlotOptionsBoxplotBuilder
 
   @override
   _$PlotOptionsBoxplot build() {
-    final result = _$v ??
-        new _$PlotOptionsBoxplot._(
-            allowPointSelect: allowPointSelect,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorByPoint: colorByPoint,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            crisp: crisp,
-            cursor: cursor,
-            depth: depth,
-            description: description,
-            edgeColor: edgeColor,
-            edgeWidth: edgeWidth,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            fillColor: fillColor,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            groupPadding: groupPadding,
-            groupZPadding: groupZPadding,
-            grouping: grouping,
-            keys: _keys?.build(),
-            lineWidth: lineWidth,
-            linkedTo: linkedTo,
-            maxPointWidth: maxPointWidth,
-            medianColor: medianColor,
-            medianWidth: medianWidth,
-            negativeColor: negativeColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointPadding: pointPadding,
-            pointPlacement: pointPlacement,
-            pointRange: pointRange,
-            pointStart: pointStart,
-            pointWidth: pointWidth,
-            selected: selected,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            states: states,
-            stemColor: stemColor,
-            stemDashStyle: stemDashStyle,
-            stemWidth: stemWidth,
-            stickyTracking: stickyTracking,
-            tooltip: tooltip,
-            turboThreshold: turboThreshold,
-            visible: visible,
-            whiskerColor: whiskerColor,
-            whiskerLength: whiskerLength,
-            whiskerWidth: whiskerWidth,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsBoxplot _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsBoxplot._(
+              allowPointSelect: allowPointSelect,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorByPoint: colorByPoint,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              crisp: crisp,
+              cursor: cursor,
+              depth: depth,
+              description: description,
+              edgeColor: edgeColor,
+              edgeWidth: edgeWidth,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              fillColor: fillColor,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              groupPadding: groupPadding,
+              groupZPadding: groupZPadding,
+              grouping: grouping,
+              keys: _keys?.build(),
+              lineWidth: lineWidth,
+              linkedTo: linkedTo,
+              maxPointWidth: maxPointWidth,
+              medianColor: medianColor,
+              medianWidth: medianWidth,
+              negativeColor: negativeColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointPadding: pointPadding,
+              pointPlacement: pointPlacement,
+              pointRange: pointRange,
+              pointStart: pointStart,
+              pointWidth: pointWidth,
+              selected: selected,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              states: states,
+              stemColor: stemColor,
+              stemDashStyle: stemDashStyle,
+              stemWidth: stemWidth,
+              stickyTracking: stickyTracking,
+              tooltip: tooltip,
+              turboThreshold: turboThreshold,
+              visible: visible,
+              whiskerColor: whiskerColor,
+              whiskerLength: whiskerLength,
+              whiskerWidth: whiskerWidth,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsBoxplot', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBoxplotEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBoxplotEvents extends PlotOptionsBoxplotEvents {
   @override
   final Function afterAnimate;
@@ -54850,7 +55010,7 @@ class PlotOptionsBoxplotEventsBuilder
 
   @override
   _$PlotOptionsBoxplotEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsBoxplotEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -54860,17 +55020,11 @@ class PlotOptionsBoxplotEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBoxplotPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBoxplotPoint extends PlotOptionsBoxplotPoint {
   @override
   final PlotOptionsBoxplotPointEvents events;
@@ -54944,19 +55098,26 @@ class PlotOptionsBoxplotPointBuilder
 
   @override
   _$PlotOptionsBoxplotPoint build() {
-    final result =
-        _$v ?? new _$PlotOptionsBoxplotPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsBoxplotPoint _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsBoxplotPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsBoxplotPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBoxplotPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBoxplotPointEvents extends PlotOptionsBoxplotPointEvents {
   @override
   final Function click;
@@ -55100,7 +55261,7 @@ class PlotOptionsBoxplotPointEventsBuilder
 
   @override
   _$PlotOptionsBoxplotPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsBoxplotPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -55109,17 +55270,11 @@ class PlotOptionsBoxplotPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBoxplotStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBoxplotStates extends PlotOptionsBoxplotStates {
   @override
   final PlotOptionsBoxplotStatesHover hover;
@@ -55193,19 +55348,26 @@ class PlotOptionsBoxplotStatesBuilder
 
   @override
   _$PlotOptionsBoxplotStates build() {
-    final result =
-        _$v ?? new _$PlotOptionsBoxplotStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsBoxplotStates _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsBoxplotStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsBoxplotStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBoxplotStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBoxplotStatesHover extends PlotOptionsBoxplotStatesHover {
   @override
   final JsonObject animation;
@@ -55337,7 +55499,7 @@ class PlotOptionsBoxplotStatesHoverBuilder
 
   @override
   _$PlotOptionsBoxplotStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsBoxplotStatesHover._(
             animation: animation,
             borderColor: borderColor,
@@ -55345,17 +55507,11 @@ class PlotOptionsBoxplotStatesHoverBuilder
             color: color,
             enabled: enabled,
             halo: halo);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBoxplotStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBoxplotStatesHoverHalo
     extends PlotOptionsBoxplotStatesHoverHalo {
   @override
@@ -55450,20 +55606,14 @@ class PlotOptionsBoxplotStatesHoverHaloBuilder
 
   @override
   _$PlotOptionsBoxplotStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsBoxplotStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBoxplotTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBoxplotTooltip extends PlotOptionsBoxplotTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -55701,33 +55851,40 @@ class PlotOptionsBoxplotTooltipBuilder
 
   @override
   _$PlotOptionsBoxplotTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsBoxplotTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsBoxplotTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsBoxplotTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsBoxplotTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBoxplotZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBoxplotZones extends PlotOptionsBoxplotZones {
   @override
   final String className;
@@ -55842,24 +55999,18 @@ class PlotOptionsBoxplotZonesBuilder
 
   @override
   _$PlotOptionsBoxplotZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsBoxplotZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBubble
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubble extends PlotOptionsBubble {
   @override
   final bool allowPointSelect;
@@ -56445,66 +56596,82 @@ class PlotOptionsBubbleBuilder
 
   @override
   _$PlotOptionsBubble build() {
-    final result = _$v ??
-        new _$PlotOptionsBubble._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorIndex: colorIndex,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            dashStyle: dashStyle,
-            dataLabels: _dataLabels?.build(),
-            description: description,
-            displayNegative: displayNegative,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            keys: _keys?.build(),
-            lineWidth: lineWidth,
-            linkedTo: linkedTo,
-            marker: marker,
-            maxSize: maxSize,
-            minSize: minSize,
-            negativeColor: negativeColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointStart: pointStart,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            sizeBy: sizeBy,
-            sizeByAbsoluteValue: sizeByAbsoluteValue,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            softThreshold: softThreshold,
-            states: states,
-            stickyTracking: stickyTracking,
-            threshold: threshold,
-            tooltip: tooltip,
-            visible: visible,
-            zMax: zMax,
-            zMin: zMin,
-            zThreshold: zThreshold,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsBubble _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsBubble._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorIndex: colorIndex,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              dashStyle: dashStyle,
+              dataLabels: _dataLabels?.build(),
+              description: description,
+              displayNegative: displayNegative,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              keys: _keys?.build(),
+              lineWidth: lineWidth,
+              linkedTo: linkedTo,
+              marker: marker,
+              maxSize: maxSize,
+              minSize: minSize,
+              negativeColor: negativeColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointStart: pointStart,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              sizeBy: sizeBy,
+              sizeByAbsoluteValue: sizeByAbsoluteValue,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              softThreshold: softThreshold,
+              states: states,
+              stickyTracking: stickyTracking,
+              threshold: threshold,
+              tooltip: tooltip,
+              visible: visible,
+              zMax: zMax,
+              zMin: zMin,
+              zThreshold: zThreshold,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsBubble', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBubbleDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleDataLabels extends PlotOptionsBubbleDataLabels {
   @override
   final String align;
@@ -56859,44 +57026,51 @@ class PlotOptionsBubbleDataLabelsBuilder
 
   @override
   _$PlotOptionsBubbleDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsBubbleDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PlotOptionsBubbleDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsBubbleDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsBubbleDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBubbleEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleEvents extends PlotOptionsBubbleEvents {
   @override
   final Function afterAnimate;
@@ -57056,7 +57230,7 @@ class PlotOptionsBubbleEventsBuilder
 
   @override
   _$PlotOptionsBubbleEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsBubbleEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -57066,17 +57240,11 @@ class PlotOptionsBubbleEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBubbleMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleMarker extends PlotOptionsBubbleMarker {
   @override
   final bool enabled;
@@ -57233,27 +57401,34 @@ class PlotOptionsBubbleMarkerBuilder
 
   @override
   _$PlotOptionsBubbleMarker build() {
-    final result = _$v ??
-        new _$PlotOptionsBubbleMarker._(
-            enabled: enabled,
-            fillColor: fillColor,
-            height: height,
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            states: _states?.build(),
-            symbol: symbol,
-            width: width);
-    replace(result);
-    return result;
+    _$PlotOptionsBubbleMarker _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsBubbleMarker._(
+              enabled: enabled,
+              fillColor: fillColor,
+              height: height,
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              states: _states?.build(),
+              symbol: symbol,
+              width: width);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'states';
+        _states?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsBubbleMarker', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBubbleMarkerStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleMarkerStates extends PlotOptionsBubbleMarkerStates {
   @override
   final PlotOptionsBubbleMarkerStatesHover hover;
@@ -57338,20 +57513,29 @@ class PlotOptionsBubbleMarkerStatesBuilder
 
   @override
   _$PlotOptionsBubbleMarkerStates build() {
-    final result = _$v ??
-        new _$PlotOptionsBubbleMarkerStates._(
-            hover: _hover?.build(), select: _select?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsBubbleMarkerStates _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsBubbleMarkerStates._(
+              hover: _hover?.build(), select: _select?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+        _$failedField = 'select';
+        _select?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsBubbleMarkerStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBubbleMarkerStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleMarkerStatesHover
     extends PlotOptionsBubbleMarkerStatesHover {
   @override
@@ -57497,7 +57681,7 @@ class PlotOptionsBubbleMarkerStatesHoverBuilder
 
   @override
   _$PlotOptionsBubbleMarkerStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsBubbleMarkerStatesHover._(
             enabled: enabled,
             fillColor: fillColor,
@@ -57506,17 +57690,11 @@ class PlotOptionsBubbleMarkerStatesHoverBuilder
             lineWidthPlus: lineWidthPlus,
             radius: radius,
             radiusPlus: radiusPlus);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBubbleMarkerStatesSelect
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleMarkerStatesSelect
     extends PlotOptionsBubbleMarkerStatesSelect {
   @override
@@ -57638,24 +57816,18 @@ class PlotOptionsBubbleMarkerStatesSelectBuilder
 
   @override
   _$PlotOptionsBubbleMarkerStatesSelect build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsBubbleMarkerStatesSelect._(
             enabled: enabled,
             fillColor: fillColor,
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBubblePoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubblePoint extends PlotOptionsBubblePoint {
   @override
   final PlotOptionsBubblePointEvents events;
@@ -57728,19 +57900,26 @@ class PlotOptionsBubblePointBuilder
 
   @override
   _$PlotOptionsBubblePoint build() {
-    final result =
-        _$v ?? new _$PlotOptionsBubblePoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsBubblePoint _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsBubblePoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsBubblePoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBubblePointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubblePointEvents extends PlotOptionsBubblePointEvents {
   @override
   final Function click;
@@ -57884,7 +58063,7 @@ class PlotOptionsBubblePointEventsBuilder
 
   @override
   _$PlotOptionsBubblePointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsBubblePointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -57893,17 +58072,11 @@ class PlotOptionsBubblePointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBubbleStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleStates extends PlotOptionsBubbleStates {
   @override
   final PlotOptionsBubbleStatesHover hover;
@@ -57976,19 +58149,25 @@ class PlotOptionsBubbleStatesBuilder
 
   @override
   _$PlotOptionsBubbleStates build() {
-    final result =
-        _$v ?? new _$PlotOptionsBubbleStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsBubbleStates _$result;
+    try {
+      _$result = _$v ?? new _$PlotOptionsBubbleStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsBubbleStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBubbleStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleStatesHover extends PlotOptionsBubbleStatesHover {
   @override
   final JsonObject animation;
@@ -58122,25 +58301,32 @@ class PlotOptionsBubbleStatesHoverBuilder
 
   @override
   _$PlotOptionsBubbleStatesHover build() {
-    final result = _$v ??
-        new _$PlotOptionsBubbleStatesHover._(
-            animation: animation,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsBubbleStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsBubbleStatesHover._(
+              animation: animation,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsBubbleStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBubbleStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleStatesHoverHalo
     extends PlotOptionsBubbleStatesHoverHalo {
   @override
@@ -58235,20 +58421,14 @@ class PlotOptionsBubbleStatesHoverHaloBuilder
 
   @override
   _$PlotOptionsBubbleStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsBubbleStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBubbleStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleStatesHoverMarker
     extends PlotOptionsBubbleStatesHoverMarker {
   @override
@@ -58420,7 +58600,7 @@ class PlotOptionsBubbleStatesHoverMarkerBuilder
 
   @override
   _$PlotOptionsBubbleStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsBubbleStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -58431,17 +58611,11 @@ class PlotOptionsBubbleStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBubbleTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleTooltip extends PlotOptionsBubbleTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -58679,33 +58853,40 @@ class PlotOptionsBubbleTooltipBuilder
 
   @override
   _$PlotOptionsBubbleTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsBubbleTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsBubbleTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsBubbleTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsBubbleTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsBubbleZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsBubbleZones extends PlotOptionsBubbleZones {
   @override
   final String className;
@@ -58819,24 +59000,18 @@ class PlotOptionsBubbleZonesBuilder
 
   @override
   _$PlotOptionsBubbleZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsBubbleZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsColumn
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumn extends PlotOptionsColumn {
   @override
   final bool allowPointSelect;
@@ -59514,75 +59689,94 @@ class PlotOptionsColumnBuilder
 
   @override
   _$PlotOptionsColumn build() {
-    final result = _$v ??
-        new _$PlotOptionsColumn._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            colorByPoint: colorByPoint,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            crisp: crisp,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            dataLabels: _dataLabels?.build(),
-            depth: depth,
-            description: description,
-            edgeColor: edgeColor,
-            edgeWidth: edgeWidth,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            groupPadding: groupPadding,
-            groupZPadding: groupZPadding,
-            grouping: grouping,
-            keys: _keys?.build(),
-            linkedTo: linkedTo,
-            maxPointWidth: maxPointWidth,
-            minPointLength: minPointLength,
-            negativeColor: negativeColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointPadding: pointPadding,
-            pointPlacement: pointPlacement,
-            pointRange: pointRange,
-            pointStart: pointStart,
-            pointWidth: pointWidth,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            softThreshold: softThreshold,
-            stacking: stacking,
-            states: states,
-            stickyTracking: stickyTracking,
-            threshold: threshold,
-            tooltip: tooltip,
-            turboThreshold: turboThreshold,
-            visible: visible,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsColumn _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsColumn._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              colorByPoint: colorByPoint,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              crisp: crisp,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              dataLabels: _dataLabels?.build(),
+              depth: depth,
+              description: description,
+              edgeColor: edgeColor,
+              edgeWidth: edgeWidth,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              groupPadding: groupPadding,
+              groupZPadding: groupZPadding,
+              grouping: grouping,
+              keys: _keys?.build(),
+              linkedTo: linkedTo,
+              maxPointWidth: maxPointWidth,
+              minPointLength: minPointLength,
+              negativeColor: negativeColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointPadding: pointPadding,
+              pointPlacement: pointPlacement,
+              pointRange: pointRange,
+              pointStart: pointStart,
+              pointWidth: pointWidth,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              softThreshold: softThreshold,
+              stacking: stacking,
+              states: states,
+              stickyTracking: stickyTracking,
+              threshold: threshold,
+              tooltip: tooltip,
+              turboThreshold: turboThreshold,
+              visible: visible,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsColumn', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsColumnDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnDataLabels extends PlotOptionsColumnDataLabels {
   @override
   final String align;
@@ -59937,44 +60131,51 @@ class PlotOptionsColumnDataLabelsBuilder
 
   @override
   _$PlotOptionsColumnDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsColumnDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PlotOptionsColumnDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsColumnDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsColumnDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsColumnEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnEvents extends PlotOptionsColumnEvents {
   @override
   final Function afterAnimate;
@@ -60134,7 +60335,7 @@ class PlotOptionsColumnEventsBuilder
 
   @override
   _$PlotOptionsColumnEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsColumnEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -60144,17 +60345,11 @@ class PlotOptionsColumnEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsColumnPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnPoint extends PlotOptionsColumnPoint {
   @override
   final PlotOptionsColumnPointEvents events;
@@ -60227,19 +60422,26 @@ class PlotOptionsColumnPointBuilder
 
   @override
   _$PlotOptionsColumnPoint build() {
-    final result =
-        _$v ?? new _$PlotOptionsColumnPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsColumnPoint _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsColumnPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsColumnPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsColumnPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnPointEvents extends PlotOptionsColumnPointEvents {
   @override
   final Function click;
@@ -60383,7 +60585,7 @@ class PlotOptionsColumnPointEventsBuilder
 
   @override
   _$PlotOptionsColumnPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsColumnPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -60392,17 +60594,11 @@ class PlotOptionsColumnPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsColumnStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnStates extends PlotOptionsColumnStates {
   @override
   final PlotOptionsColumnStatesHover hover;
@@ -60475,19 +60671,25 @@ class PlotOptionsColumnStatesBuilder
 
   @override
   _$PlotOptionsColumnStates build() {
-    final result =
-        _$v ?? new _$PlotOptionsColumnStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsColumnStates _$result;
+    try {
+      _$result = _$v ?? new _$PlotOptionsColumnStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsColumnStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsColumnStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnStatesHover extends PlotOptionsColumnStatesHover {
   @override
   final JsonObject animation;
@@ -60619,7 +60821,7 @@ class PlotOptionsColumnStatesHoverBuilder
 
   @override
   _$PlotOptionsColumnStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsColumnStatesHover._(
             animation: animation,
             borderColor: borderColor,
@@ -60627,17 +60829,11 @@ class PlotOptionsColumnStatesHoverBuilder
             color: color,
             enabled: enabled,
             halo: halo);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsColumnStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnStatesHoverHalo
     extends PlotOptionsColumnStatesHoverHalo {
   @override
@@ -60732,20 +60928,14 @@ class PlotOptionsColumnStatesHoverHaloBuilder
 
   @override
   _$PlotOptionsColumnStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsColumnStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsColumnTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnTooltip extends PlotOptionsColumnTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -60983,33 +61173,40 @@ class PlotOptionsColumnTooltipBuilder
 
   @override
   _$PlotOptionsColumnTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsColumnTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsColumnTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsColumnTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsColumnTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsColumnZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnZones extends PlotOptionsColumnZones {
   @override
   final String className;
@@ -61123,24 +61320,18 @@ class PlotOptionsColumnZonesBuilder
 
   @override
   _$PlotOptionsColumnZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsColumnZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsColumnrange
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnrange extends PlotOptionsColumnrange {
   @override
   final bool allowPointSelect;
@@ -61777,71 +61968,87 @@ class PlotOptionsColumnrangeBuilder
 
   @override
   _$PlotOptionsColumnrange build() {
-    final result = _$v ??
-        new _$PlotOptionsColumnrange._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            colorByPoint: colorByPoint,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            crisp: crisp,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            dataLabels: dataLabels,
-            depth: depth,
-            description: description,
-            edgeColor: edgeColor,
-            edgeWidth: edgeWidth,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            groupPadding: groupPadding,
-            groupZPadding: groupZPadding,
-            grouping: grouping,
-            keys: _keys?.build(),
-            linkedTo: linkedTo,
-            maxPointWidth: maxPointWidth,
-            minPointLength: minPointLength,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointPadding: pointPadding,
-            pointPlacement: pointPlacement,
-            pointRange: pointRange,
-            pointStart: pointStart,
-            pointWidth: pointWidth,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            states: states,
-            stickyTracking: stickyTracking,
-            tooltip: tooltip,
-            turboThreshold: turboThreshold,
-            visible: visible,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsColumnrange _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsColumnrange._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              colorByPoint: colorByPoint,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              crisp: crisp,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              dataLabels: dataLabels,
+              depth: depth,
+              description: description,
+              edgeColor: edgeColor,
+              edgeWidth: edgeWidth,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              groupPadding: groupPadding,
+              groupZPadding: groupZPadding,
+              grouping: grouping,
+              keys: _keys?.build(),
+              linkedTo: linkedTo,
+              maxPointWidth: maxPointWidth,
+              minPointLength: minPointLength,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointPadding: pointPadding,
+              pointPlacement: pointPlacement,
+              pointRange: pointRange,
+              pointStart: pointStart,
+              pointWidth: pointWidth,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              states: states,
+              stickyTracking: stickyTracking,
+              tooltip: tooltip,
+              turboThreshold: turboThreshold,
+              visible: visible,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsColumnrange', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsColumnrangeDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnrangeDataLabels
     extends PlotOptionsColumnrangeDataLabels {
   @override
@@ -62217,46 +62424,53 @@ class PlotOptionsColumnrangeDataLabelsBuilder
 
   @override
   _$PlotOptionsColumnrangeDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsColumnrangeDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            xHigh: xHigh,
-            xLow: xLow,
-            yHigh: yHigh,
-            yLow: yLow,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PlotOptionsColumnrangeDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsColumnrangeDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              xHigh: xHigh,
+              xLow: xLow,
+              yHigh: yHigh,
+              yLow: yLow,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsColumnrangeDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsColumnrangeEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnrangeEvents extends PlotOptionsColumnrangeEvents {
   @override
   final Function afterAnimate;
@@ -62417,7 +62631,7 @@ class PlotOptionsColumnrangeEventsBuilder
 
   @override
   _$PlotOptionsColumnrangeEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsColumnrangeEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -62427,17 +62641,11 @@ class PlotOptionsColumnrangeEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsColumnrangePoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnrangePoint extends PlotOptionsColumnrangePoint {
   @override
   final PlotOptionsColumnrangePointEvents events;
@@ -62512,19 +62720,26 @@ class PlotOptionsColumnrangePointBuilder
 
   @override
   _$PlotOptionsColumnrangePoint build() {
-    final result =
-        _$v ?? new _$PlotOptionsColumnrangePoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsColumnrangePoint _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsColumnrangePoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsColumnrangePoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsColumnrangePointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnrangePointEvents
     extends PlotOptionsColumnrangePointEvents {
   @override
@@ -62669,7 +62884,7 @@ class PlotOptionsColumnrangePointEventsBuilder
 
   @override
   _$PlotOptionsColumnrangePointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsColumnrangePointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -62678,17 +62893,11 @@ class PlotOptionsColumnrangePointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsColumnrangeStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnrangeStates extends PlotOptionsColumnrangeStates {
   @override
   final PlotOptionsColumnrangeStatesHover hover;
@@ -62763,19 +62972,26 @@ class PlotOptionsColumnrangeStatesBuilder
 
   @override
   _$PlotOptionsColumnrangeStates build() {
-    final result =
-        _$v ?? new _$PlotOptionsColumnrangeStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsColumnrangeStates _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsColumnrangeStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsColumnrangeStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsColumnrangeStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnrangeStatesHover
     extends PlotOptionsColumnrangeStatesHover {
   @override
@@ -62908,7 +63124,7 @@ class PlotOptionsColumnrangeStatesHoverBuilder
 
   @override
   _$PlotOptionsColumnrangeStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsColumnrangeStatesHover._(
             animation: animation,
             borderColor: borderColor,
@@ -62916,17 +63132,11 @@ class PlotOptionsColumnrangeStatesHoverBuilder
             color: color,
             enabled: enabled,
             halo: halo);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsColumnrangeStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnrangeStatesHoverHalo
     extends PlotOptionsColumnrangeStatesHoverHalo {
   @override
@@ -63022,20 +63232,14 @@ class PlotOptionsColumnrangeStatesHoverHaloBuilder
 
   @override
   _$PlotOptionsColumnrangeStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsColumnrangeStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsColumnrangeTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnrangeTooltip extends PlotOptionsColumnrangeTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -63274,33 +63478,40 @@ class PlotOptionsColumnrangeTooltipBuilder
 
   @override
   _$PlotOptionsColumnrangeTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsColumnrangeTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsColumnrangeTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsColumnrangeTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsColumnrangeTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsColumnrangeZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsColumnrangeZones extends PlotOptionsColumnrangeZones {
   @override
   final String className;
@@ -63416,24 +63627,18 @@ class PlotOptionsColumnrangeZonesBuilder
 
   @override
   _$PlotOptionsColumnrangeZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsColumnrangeZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsErrorbar
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsErrorbar extends PlotOptionsErrorbar {
   @override
   final bool allowPointSelect;
@@ -64030,67 +64235,83 @@ class PlotOptionsErrorbarBuilder
 
   @override
   _$PlotOptionsErrorbar build() {
-    final result = _$v ??
-        new _$PlotOptionsErrorbar._(
-            allowPointSelect: allowPointSelect,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorByPoint: colorByPoint,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            crisp: crisp,
-            cursor: cursor,
-            depth: depth,
-            description: description,
-            edgeColor: edgeColor,
-            edgeWidth: edgeWidth,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            groupZPadding: groupZPadding,
-            keys: _keys?.build(),
-            lineWidth: lineWidth,
-            linkedTo: linkedTo,
-            maxPointWidth: maxPointWidth,
-            negativeColor: negativeColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointPadding: pointPadding,
-            pointPlacement: pointPlacement,
-            pointRange: pointRange,
-            pointStart: pointStart,
-            pointWidth: pointWidth,
-            selected: selected,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            states: states,
-            stemColor: stemColor,
-            stemDashStyle: stemDashStyle,
-            stemWidth: stemWidth,
-            stickyTracking: stickyTracking,
-            tooltip: tooltip,
-            turboThreshold: turboThreshold,
-            visible: visible,
-            whiskerColor: whiskerColor,
-            whiskerLength: whiskerLength,
-            whiskerWidth: whiskerWidth,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsErrorbar _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsErrorbar._(
+              allowPointSelect: allowPointSelect,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorByPoint: colorByPoint,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              crisp: crisp,
+              cursor: cursor,
+              depth: depth,
+              description: description,
+              edgeColor: edgeColor,
+              edgeWidth: edgeWidth,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              groupZPadding: groupZPadding,
+              keys: _keys?.build(),
+              lineWidth: lineWidth,
+              linkedTo: linkedTo,
+              maxPointWidth: maxPointWidth,
+              negativeColor: negativeColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointPadding: pointPadding,
+              pointPlacement: pointPlacement,
+              pointRange: pointRange,
+              pointStart: pointStart,
+              pointWidth: pointWidth,
+              selected: selected,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              states: states,
+              stemColor: stemColor,
+              stemDashStyle: stemDashStyle,
+              stemWidth: stemWidth,
+              stickyTracking: stickyTracking,
+              tooltip: tooltip,
+              turboThreshold: turboThreshold,
+              visible: visible,
+              whiskerColor: whiskerColor,
+              whiskerLength: whiskerLength,
+              whiskerWidth: whiskerWidth,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsErrorbar', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsErrorbarEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsErrorbarEvents extends PlotOptionsErrorbarEvents {
   @override
   final Function afterAnimate;
@@ -64250,7 +64471,7 @@ class PlotOptionsErrorbarEventsBuilder
 
   @override
   _$PlotOptionsErrorbarEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsErrorbarEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -64260,17 +64481,11 @@ class PlotOptionsErrorbarEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsErrorbarPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsErrorbarPoint extends PlotOptionsErrorbarPoint {
   @override
   final PlotOptionsErrorbarPointEvents events;
@@ -64344,19 +64559,26 @@ class PlotOptionsErrorbarPointBuilder
 
   @override
   _$PlotOptionsErrorbarPoint build() {
-    final result =
-        _$v ?? new _$PlotOptionsErrorbarPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsErrorbarPoint _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsErrorbarPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsErrorbarPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsErrorbarPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsErrorbarPointEvents extends PlotOptionsErrorbarPointEvents {
   @override
   final Function click;
@@ -64500,7 +64722,7 @@ class PlotOptionsErrorbarPointEventsBuilder
 
   @override
   _$PlotOptionsErrorbarPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsErrorbarPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -64509,17 +64731,11 @@ class PlotOptionsErrorbarPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsErrorbarStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsErrorbarStates extends PlotOptionsErrorbarStates {
   @override
   final PlotOptionsErrorbarStatesHover hover;
@@ -64593,19 +64809,26 @@ class PlotOptionsErrorbarStatesBuilder
 
   @override
   _$PlotOptionsErrorbarStates build() {
-    final result =
-        _$v ?? new _$PlotOptionsErrorbarStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsErrorbarStates _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsErrorbarStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsErrorbarStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsErrorbarStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsErrorbarStatesHover extends PlotOptionsErrorbarStatesHover {
   @override
   final JsonObject animation;
@@ -64737,7 +64960,7 @@ class PlotOptionsErrorbarStatesHoverBuilder
 
   @override
   _$PlotOptionsErrorbarStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsErrorbarStatesHover._(
             animation: animation,
             borderColor: borderColor,
@@ -64745,17 +64968,11 @@ class PlotOptionsErrorbarStatesHoverBuilder
             color: color,
             enabled: enabled,
             halo: halo);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsErrorbarStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsErrorbarStatesHoverHalo
     extends PlotOptionsErrorbarStatesHoverHalo {
   @override
@@ -64851,20 +65068,14 @@ class PlotOptionsErrorbarStatesHoverHaloBuilder
 
   @override
   _$PlotOptionsErrorbarStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsErrorbarStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsErrorbarTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsErrorbarTooltip extends PlotOptionsErrorbarTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -65102,33 +65313,40 @@ class PlotOptionsErrorbarTooltipBuilder
 
   @override
   _$PlotOptionsErrorbarTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsErrorbarTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsErrorbarTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsErrorbarTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsErrorbarTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsErrorbarZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsErrorbarZones extends PlotOptionsErrorbarZones {
   @override
   final String className;
@@ -65243,24 +65461,18 @@ class PlotOptionsErrorbarZonesBuilder
 
   @override
   _$PlotOptionsErrorbarZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsErrorbarZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsFunnel
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnel extends PlotOptionsFunnel {
   @override
   final bool allowPointSelect;
@@ -65752,57 +65964,76 @@ class PlotOptionsFunnelBuilder
 
   @override
   _$PlotOptionsFunnel build() {
-    final result = _$v ??
-        new _$PlotOptionsFunnel._(
-            allowPointSelect: allowPointSelect,
-            animationLimit: animationLimit,
-            borderColor: borderColor,
-            borderWidth: borderWidth,
-            center: center,
-            className: className,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            cursor: cursor,
-            dataLabels: _dataLabels?.build(),
-            depth: depth,
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            height: height,
-            keys: _keys?.build(),
-            linkedTo: linkedTo,
-            minSize: minSize,
-            neckHeight: neckHeight,
-            neckWidth: neckWidth,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            reversed: reversed,
-            selected: selected,
-            shadow: shadow,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            slicedOffset: slicedOffset,
-            states: states,
-            stickyTracking: stickyTracking,
-            tooltip: tooltip,
-            visible: visible,
-            width: width,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsFunnel _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsFunnel._(
+              allowPointSelect: allowPointSelect,
+              animationLimit: animationLimit,
+              borderColor: borderColor,
+              borderWidth: borderWidth,
+              center: center,
+              className: className,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              cursor: cursor,
+              dataLabels: _dataLabels?.build(),
+              depth: depth,
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              height: height,
+              keys: _keys?.build(),
+              linkedTo: linkedTo,
+              minSize: minSize,
+              neckHeight: neckHeight,
+              neckWidth: neckWidth,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              reversed: reversed,
+              selected: selected,
+              shadow: shadow,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              slicedOffset: slicedOffset,
+              states: states,
+              stickyTracking: stickyTracking,
+              tooltip: tooltip,
+              visible: visible,
+              width: width,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsFunnel', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsFunnelDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnelDataLabels extends PlotOptionsFunnelDataLabels {
   @override
   final String backgroundColor;
@@ -66191,47 +66422,54 @@ class PlotOptionsFunnelDataLabelsBuilder
 
   @override
   _$PlotOptionsFunnelDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsFunnelDataLabels._(
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            connectorColor: connectorColor,
-            connectorPadding: connectorPadding,
-            connectorWidth: connectorWidth,
-            crop: crop,
-            defer: defer,
-            distance: distance,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            softConnector: softConnector,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PlotOptionsFunnelDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsFunnelDataLabels._(
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              connectorColor: connectorColor,
+              connectorPadding: connectorPadding,
+              connectorWidth: connectorWidth,
+              crop: crop,
+              defer: defer,
+              distance: distance,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              softConnector: softConnector,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsFunnelDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsFunnelEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnelEvents extends PlotOptionsFunnelEvents {
   @override
   final Function afterAnimate;
@@ -66391,7 +66629,7 @@ class PlotOptionsFunnelEventsBuilder
 
   @override
   _$PlotOptionsFunnelEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsFunnelEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -66401,17 +66639,11 @@ class PlotOptionsFunnelEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsFunnelPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnelPoint extends PlotOptionsFunnelPoint {
   @override
   final PlotOptionsFunnelPointEvents events;
@@ -66484,19 +66716,26 @@ class PlotOptionsFunnelPointBuilder
 
   @override
   _$PlotOptionsFunnelPoint build() {
-    final result =
-        _$v ?? new _$PlotOptionsFunnelPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsFunnelPoint _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsFunnelPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsFunnelPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsFunnelPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnelPointEvents extends PlotOptionsFunnelPointEvents {
   @override
   final Function click;
@@ -66655,7 +66894,7 @@ class PlotOptionsFunnelPointEventsBuilder
 
   @override
   _$PlotOptionsFunnelPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsFunnelPointEvents._(
             click: click,
             legendItemClick: legendItemClick,
@@ -66665,17 +66904,11 @@ class PlotOptionsFunnelPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsFunnelStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnelStates extends PlotOptionsFunnelStates {
   @override
   final PlotOptionsFunnelStatesHover hover;
@@ -66748,19 +66981,25 @@ class PlotOptionsFunnelStatesBuilder
 
   @override
   _$PlotOptionsFunnelStates build() {
-    final result =
-        _$v ?? new _$PlotOptionsFunnelStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsFunnelStates _$result;
+    try {
+      _$result = _$v ?? new _$PlotOptionsFunnelStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsFunnelStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsFunnelStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnelStatesHover extends PlotOptionsFunnelStatesHover {
   @override
   final JsonObject animation;
@@ -66906,26 +67145,33 @@ class PlotOptionsFunnelStatesHoverBuilder
 
   @override
   _$PlotOptionsFunnelStatesHover build() {
-    final result = _$v ??
-        new _$PlotOptionsFunnelStatesHover._(
-            animation: animation,
-            brightness: brightness,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsFunnelStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsFunnelStatesHover._(
+              animation: animation,
+              brightness: brightness,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsFunnelStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsFunnelStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnelStatesHoverHalo
     extends PlotOptionsFunnelStatesHoverHalo {
   @override
@@ -67020,20 +67266,14 @@ class PlotOptionsFunnelStatesHoverHaloBuilder
 
   @override
   _$PlotOptionsFunnelStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsFunnelStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsFunnelStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnelStatesHoverMarker
     extends PlotOptionsFunnelStatesHoverMarker {
   @override
@@ -67205,7 +67445,7 @@ class PlotOptionsFunnelStatesHoverMarkerBuilder
 
   @override
   _$PlotOptionsFunnelStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsFunnelStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -67216,17 +67456,11 @@ class PlotOptionsFunnelStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsFunnelTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnelTooltip extends PlotOptionsFunnelTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -67464,33 +67698,40 @@ class PlotOptionsFunnelTooltipBuilder
 
   @override
   _$PlotOptionsFunnelTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsFunnelTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsFunnelTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsFunnelTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsFunnelTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsFunnelZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsFunnelZones extends PlotOptionsFunnelZones {
   @override
   final String className;
@@ -67604,24 +67845,18 @@ class PlotOptionsFunnelZonesBuilder
 
   @override
   _$PlotOptionsFunnelZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsFunnelZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsGauge
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsGauge extends PlotOptionsGauge {
   @override
   final bool animation;
@@ -68030,49 +68265,62 @@ class PlotOptionsGaugeBuilder
 
   @override
   _$PlotOptionsGauge build() {
-    final result = _$v ??
-        new _$PlotOptionsGauge._(
-            animation: animation,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorIndex: colorIndex,
-            cursor: cursor,
-            dataLabels: dataLabels,
-            description: description,
-            dial: dial,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            keys: _keys?.build(),
-            linkedTo: linkedTo,
-            negativeColor: negativeColor,
-            overshoot: overshoot,
-            pivot: pivot,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            selected: selected,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            stickyTracking: stickyTracking,
-            threshold: threshold,
-            tooltip: tooltip,
-            visible: visible,
-            wrap: wrap);
-    replace(result);
-    return result;
+    _$PlotOptionsGauge _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsGauge._(
+              animation: animation,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorIndex: colorIndex,
+              cursor: cursor,
+              dataLabels: dataLabels,
+              description: description,
+              dial: dial,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              keys: _keys?.build(),
+              linkedTo: linkedTo,
+              negativeColor: negativeColor,
+              overshoot: overshoot,
+              pivot: pivot,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              selected: selected,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              stickyTracking: stickyTracking,
+              threshold: threshold,
+              tooltip: tooltip,
+              visible: visible,
+              wrap: wrap);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsGauge', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsGaugeDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsGaugeDataLabels extends PlotOptionsGaugeDataLabels {
   @override
   final String align;
@@ -68426,44 +68674,51 @@ class PlotOptionsGaugeDataLabelsBuilder
 
   @override
   _$PlotOptionsGaugeDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsGaugeDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PlotOptionsGaugeDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsGaugeDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsGaugeDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsGaugeDial
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsGaugeDial extends PlotOptionsGaugeDial {
   @override
   final String backgroundColor;
@@ -68619,7 +68874,7 @@ class PlotOptionsGaugeDialBuilder
 
   @override
   _$PlotOptionsGaugeDial build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsGaugeDial._(
             backgroundColor: backgroundColor,
             baseLength: baseLength,
@@ -68629,17 +68884,11 @@ class PlotOptionsGaugeDialBuilder
             radius: radius,
             rearLength: rearLength,
             topWidth: topWidth);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsGaugeEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsGaugeEvents extends PlotOptionsGaugeEvents {
   @override
   final Function afterAnimate;
@@ -68798,7 +69047,7 @@ class PlotOptionsGaugeEventsBuilder
 
   @override
   _$PlotOptionsGaugeEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsGaugeEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -68808,17 +69057,11 @@ class PlotOptionsGaugeEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsGaugePivot
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsGaugePivot extends PlotOptionsGaugePivot {
   @override
   final String backgroundColor;
@@ -68921,23 +69164,17 @@ class PlotOptionsGaugePivotBuilder
 
   @override
   _$PlotOptionsGaugePivot build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsGaugePivot._(
             backgroundColor: backgroundColor,
             borderColor: borderColor,
             borderWidth: borderWidth,
             radius: radius);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsGaugePoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsGaugePoint extends PlotOptionsGaugePoint {
   @override
   final PlotOptionsGaugePointEvents events;
@@ -69009,19 +69246,25 @@ class PlotOptionsGaugePointBuilder
 
   @override
   _$PlotOptionsGaugePoint build() {
-    final result =
-        _$v ?? new _$PlotOptionsGaugePoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsGaugePoint _$result;
+    try {
+      _$result = _$v ?? new _$PlotOptionsGaugePoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsGaugePoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsGaugePointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsGaugePointEvents extends PlotOptionsGaugePointEvents {
   @override
   final Function click;
@@ -69165,7 +69408,7 @@ class PlotOptionsGaugePointEventsBuilder
 
   @override
   _$PlotOptionsGaugePointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsGaugePointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -69174,17 +69417,11 @@ class PlotOptionsGaugePointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsGaugeTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsGaugeTooltip extends PlotOptionsGaugeTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -69422,33 +69659,40 @@ class PlotOptionsGaugeTooltipBuilder
 
   @override
   _$PlotOptionsGaugeTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsGaugeTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsGaugeTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsGaugeTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsGaugeTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsHeatmap
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsHeatmap extends PlotOptionsHeatmap {
   @override
   final bool allowPointSelect;
@@ -69961,59 +70205,78 @@ class PlotOptionsHeatmapBuilder
 
   @override
   _$PlotOptionsHeatmap build() {
-    final result = _$v ??
-        new _$PlotOptionsHeatmap._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            colorByPoint: colorByPoint,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            colsize: colsize,
-            crisp: crisp,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            dataLabels: _dataLabels?.build(),
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            keys: _keys?.build(),
-            linkedTo: linkedTo,
-            maxPointWidth: maxPointWidth,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            rowsize: rowsize,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            states: states,
-            stickyTracking: stickyTracking,
-            tooltip: tooltip,
-            turboThreshold: turboThreshold,
-            visible: visible,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsHeatmap _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsHeatmap._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              colorByPoint: colorByPoint,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              colsize: colsize,
+              crisp: crisp,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              dataLabels: _dataLabels?.build(),
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              keys: _keys?.build(),
+              linkedTo: linkedTo,
+              maxPointWidth: maxPointWidth,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              rowsize: rowsize,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              states: states,
+              stickyTracking: stickyTracking,
+              tooltip: tooltip,
+              turboThreshold: turboThreshold,
+              visible: visible,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsHeatmap', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsHeatmapDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsHeatmapDataLabels extends PlotOptionsHeatmapDataLabels {
   @override
   final String align;
@@ -70368,44 +70631,51 @@ class PlotOptionsHeatmapDataLabelsBuilder
 
   @override
   _$PlotOptionsHeatmapDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsHeatmapDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PlotOptionsHeatmapDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsHeatmapDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsHeatmapDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsHeatmapEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsHeatmapEvents extends PlotOptionsHeatmapEvents {
   @override
   final Function afterAnimate;
@@ -70565,7 +70835,7 @@ class PlotOptionsHeatmapEventsBuilder
 
   @override
   _$PlotOptionsHeatmapEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsHeatmapEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -70575,17 +70845,11 @@ class PlotOptionsHeatmapEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsHeatmapPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsHeatmapPoint extends PlotOptionsHeatmapPoint {
   @override
   final PlotOptionsHeatmapPointEvents events;
@@ -70659,19 +70923,26 @@ class PlotOptionsHeatmapPointBuilder
 
   @override
   _$PlotOptionsHeatmapPoint build() {
-    final result =
-        _$v ?? new _$PlotOptionsHeatmapPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsHeatmapPoint _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsHeatmapPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsHeatmapPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsHeatmapPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsHeatmapPointEvents extends PlotOptionsHeatmapPointEvents {
   @override
   final Function click;
@@ -70815,7 +71086,7 @@ class PlotOptionsHeatmapPointEventsBuilder
 
   @override
   _$PlotOptionsHeatmapPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsHeatmapPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -70824,17 +71095,11 @@ class PlotOptionsHeatmapPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsHeatmapStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsHeatmapStates extends PlotOptionsHeatmapStates {
   @override
   final PlotOptionsHeatmapStatesHover hover;
@@ -70908,19 +71173,26 @@ class PlotOptionsHeatmapStatesBuilder
 
   @override
   _$PlotOptionsHeatmapStates build() {
-    final result =
-        _$v ?? new _$PlotOptionsHeatmapStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsHeatmapStates _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsHeatmapStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsHeatmapStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsHeatmapStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsHeatmapStatesHover extends PlotOptionsHeatmapStatesHover {
   @override
   final JsonObject animation;
@@ -71052,7 +71324,7 @@ class PlotOptionsHeatmapStatesHoverBuilder
 
   @override
   _$PlotOptionsHeatmapStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsHeatmapStatesHover._(
             animation: animation,
             borderColor: borderColor,
@@ -71060,17 +71332,11 @@ class PlotOptionsHeatmapStatesHoverBuilder
             color: color,
             enabled: enabled,
             halo: halo);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsHeatmapStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsHeatmapStatesHoverHalo
     extends PlotOptionsHeatmapStatesHoverHalo {
   @override
@@ -71165,20 +71431,14 @@ class PlotOptionsHeatmapStatesHoverHaloBuilder
 
   @override
   _$PlotOptionsHeatmapStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsHeatmapStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsHeatmapTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsHeatmapTooltip extends PlotOptionsHeatmapTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -71416,33 +71676,40 @@ class PlotOptionsHeatmapTooltipBuilder
 
   @override
   _$PlotOptionsHeatmapTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsHeatmapTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsHeatmapTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsHeatmapTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsHeatmapTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsHeatmapZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsHeatmapZones extends PlotOptionsHeatmapZones {
   @override
   final String className;
@@ -71557,24 +71824,18 @@ class PlotOptionsHeatmapZonesBuilder
 
   @override
   _$PlotOptionsHeatmapZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsHeatmapZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsLine
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsLine extends PlotOptionsLine {
   @override
   final bool allowPointSelect;
@@ -72151,65 +72412,84 @@ class PlotOptionsLineBuilder
 
   @override
   _$PlotOptionsLine build() {
-    final result = _$v ??
-        new _$PlotOptionsLine._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorIndex: colorIndex,
-            connectEnds: connectEnds,
-            connectNulls: connectNulls,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            dashStyle: dashStyle,
-            dataLabels: _dataLabels?.build(),
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            keys: _keys?.build(),
-            lineWidth: lineWidth,
-            linecap: linecap,
-            linkedTo: linkedTo,
-            marker: _marker?.build(),
-            negativeColor: negativeColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointPlacement: pointPlacement,
-            pointStart: pointStart,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            softThreshold: softThreshold,
-            stacking: stacking,
-            states: states,
-            step: step,
-            stickyTracking: stickyTracking,
-            threshold: threshold,
-            tooltip: tooltip,
-            turboThreshold: turboThreshold,
-            visible: visible,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsLine _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsLine._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorIndex: colorIndex,
+              connectEnds: connectEnds,
+              connectNulls: connectNulls,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              dashStyle: dashStyle,
+              dataLabels: _dataLabels?.build(),
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              keys: _keys?.build(),
+              lineWidth: lineWidth,
+              linecap: linecap,
+              linkedTo: linkedTo,
+              marker: _marker?.build(),
+              negativeColor: negativeColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointPlacement: pointPlacement,
+              pointStart: pointStart,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              softThreshold: softThreshold,
+              stacking: stacking,
+              states: states,
+              step: step,
+              stickyTracking: stickyTracking,
+              threshold: threshold,
+              tooltip: tooltip,
+              turboThreshold: turboThreshold,
+              visible: visible,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'marker';
+        _marker?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsLine', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsLineDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineDataLabels extends PlotOptionsLineDataLabels {
   @override
   final String align;
@@ -72563,44 +72843,51 @@ class PlotOptionsLineDataLabelsBuilder
 
   @override
   _$PlotOptionsLineDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsLineDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PlotOptionsLineDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsLineDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsLineDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsLineEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineEvents extends PlotOptionsLineEvents {
   @override
   final Function afterAnimate;
@@ -72758,7 +73045,7 @@ class PlotOptionsLineEventsBuilder
 
   @override
   _$PlotOptionsLineEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsLineEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -72768,17 +73055,11 @@ class PlotOptionsLineEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsLineMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineMarker extends PlotOptionsLineMarker {
   @override
   final bool enabled;
@@ -72947,28 +73228,35 @@ class PlotOptionsLineMarkerBuilder
 
   @override
   _$PlotOptionsLineMarker build() {
-    final result = _$v ??
-        new _$PlotOptionsLineMarker._(
-            enabled: enabled,
-            fillColor: fillColor,
-            height: height,
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            radius: radius,
-            states: _states?.build(),
-            symbol: symbol,
-            width: width);
-    replace(result);
-    return result;
+    _$PlotOptionsLineMarker _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsLineMarker._(
+              enabled: enabled,
+              fillColor: fillColor,
+              height: height,
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              radius: radius,
+              states: _states?.build(),
+              symbol: symbol,
+              width: width);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'states';
+        _states?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsLineMarker', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsLineMarkerStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineMarkerStates extends PlotOptionsLineMarkerStates {
   @override
   final PlotOptionsLineMarkerStatesHover hover;
@@ -73053,20 +73341,29 @@ class PlotOptionsLineMarkerStatesBuilder
 
   @override
   _$PlotOptionsLineMarkerStates build() {
-    final result = _$v ??
-        new _$PlotOptionsLineMarkerStates._(
-            hover: _hover?.build(), select: _select?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsLineMarkerStates _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsLineMarkerStates._(
+              hover: _hover?.build(), select: _select?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+        _$failedField = 'select';
+        _select?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsLineMarkerStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsLineMarkerStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineMarkerStatesHover
     extends PlotOptionsLineMarkerStatesHover {
   @override
@@ -73211,7 +73508,7 @@ class PlotOptionsLineMarkerStatesHoverBuilder
 
   @override
   _$PlotOptionsLineMarkerStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsLineMarkerStatesHover._(
             enabled: enabled,
             fillColor: fillColor,
@@ -73220,17 +73517,11 @@ class PlotOptionsLineMarkerStatesHoverBuilder
             lineWidthPlus: lineWidthPlus,
             radius: radius,
             radiusPlus: radiusPlus);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsLineMarkerStatesSelect
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineMarkerStatesSelect
     extends PlotOptionsLineMarkerStatesSelect {
   @override
@@ -73351,24 +73642,18 @@ class PlotOptionsLineMarkerStatesSelectBuilder
 
   @override
   _$PlotOptionsLineMarkerStatesSelect build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsLineMarkerStatesSelect._(
             enabled: enabled,
             fillColor: fillColor,
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsLinePoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsLinePoint extends PlotOptionsLinePoint {
   @override
   final PlotOptionsLinePointEvents events;
@@ -73440,19 +73725,25 @@ class PlotOptionsLinePointBuilder
 
   @override
   _$PlotOptionsLinePoint build() {
-    final result =
-        _$v ?? new _$PlotOptionsLinePoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsLinePoint _$result;
+    try {
+      _$result = _$v ?? new _$PlotOptionsLinePoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsLinePoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsLinePointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsLinePointEvents extends PlotOptionsLinePointEvents {
   @override
   final Function click;
@@ -73595,7 +73886,7 @@ class PlotOptionsLinePointEventsBuilder
 
   @override
   _$PlotOptionsLinePointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsLinePointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -73604,17 +73895,11 @@ class PlotOptionsLinePointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsLineStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineStates extends PlotOptionsLineStates {
   @override
   final PlotOptionsLineStatesHover hover;
@@ -73685,18 +73970,25 @@ class PlotOptionsLineStatesBuilder
 
   @override
   _$PlotOptionsLineStates build() {
-    final result = _$v ?? new _$PlotOptionsLineStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsLineStates _$result;
+    try {
+      _$result = _$v ?? new _$PlotOptionsLineStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsLineStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsLineStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineStatesHover extends PlotOptionsLineStatesHover {
   @override
   final JsonObject animation;
@@ -73829,25 +74121,32 @@ class PlotOptionsLineStatesHoverBuilder
 
   @override
   _$PlotOptionsLineStatesHover build() {
-    final result = _$v ??
-        new _$PlotOptionsLineStatesHover._(
-            animation: animation,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsLineStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsLineStatesHover._(
+              animation: animation,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsLineStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsLineStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineStatesHoverHalo extends PlotOptionsLineStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -73940,20 +74239,14 @@ class PlotOptionsLineStatesHoverHaloBuilder
 
   @override
   _$PlotOptionsLineStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsLineStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsLineStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineStatesHoverMarker
     extends PlotOptionsLineStatesHoverMarker {
   @override
@@ -74124,7 +74417,7 @@ class PlotOptionsLineStatesHoverMarkerBuilder
 
   @override
   _$PlotOptionsLineStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsLineStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -74135,17 +74428,11 @@ class PlotOptionsLineStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsLineTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineTooltip extends PlotOptionsLineTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -74382,33 +74669,40 @@ class PlotOptionsLineTooltipBuilder
 
   @override
   _$PlotOptionsLineTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsLineTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsLineTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsLineTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsLineTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsLineZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsLineZones extends PlotOptionsLineZones {
   @override
   final String className;
@@ -74521,24 +74815,18 @@ class PlotOptionsLineZonesBuilder
 
   @override
   _$PlotOptionsLineZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsLineZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPie
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPie extends PlotOptionsPie {
   @override
   final bool allowPointSelect;
@@ -75041,58 +75329,77 @@ class PlotOptionsPieBuilder
 
   @override
   _$PlotOptionsPie build() {
-    final result = _$v ??
-        new _$PlotOptionsPie._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            borderColor: borderColor,
-            borderWidth: borderWidth,
-            center: center,
-            className: className,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            cursor: cursor,
-            dataLabels: _dataLabels?.build(),
-            depth: depth,
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            endAngle: endAngle,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            ignoreHiddenPoint: ignoreHiddenPoint,
-            innerSize: innerSize,
-            keys: _keys?.build(),
-            linkedTo: linkedTo,
-            minSize: minSize,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            selected: selected,
-            shadow: shadow,
-            showInLegend: showInLegend,
-            size: size,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            slicedOffset: slicedOffset,
-            startAngle: startAngle,
-            states: states,
-            stickyTracking: stickyTracking,
-            tooltip: tooltip,
-            visible: visible,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsPie _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsPie._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              borderColor: borderColor,
+              borderWidth: borderWidth,
+              center: center,
+              className: className,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              cursor: cursor,
+              dataLabels: _dataLabels?.build(),
+              depth: depth,
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              endAngle: endAngle,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              ignoreHiddenPoint: ignoreHiddenPoint,
+              innerSize: innerSize,
+              keys: _keys?.build(),
+              linkedTo: linkedTo,
+              minSize: minSize,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              selected: selected,
+              shadow: shadow,
+              showInLegend: showInLegend,
+              size: size,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              slicedOffset: slicedOffset,
+              startAngle: startAngle,
+              states: states,
+              stickyTracking: stickyTracking,
+              tooltip: tooltip,
+              visible: visible,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsPie', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPieDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPieDataLabels extends PlotOptionsPieDataLabels {
   @override
   final String backgroundColor;
@@ -75491,48 +75798,58 @@ class PlotOptionsPieDataLabelsBuilder
 
   @override
   _$PlotOptionsPieDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsPieDataLabels._(
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            connectorColor: connectorColor,
-            connectorPadding: connectorPadding,
-            connectorWidth: connectorWidth,
-            crop: crop,
-            defer: defer,
-            distance: distance,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            softConnector: softConnector,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex,
-            filter: _filter?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsPieDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsPieDataLabels._(
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              connectorColor: connectorColor,
+              connectorPadding: connectorPadding,
+              connectorWidth: connectorWidth,
+              crop: crop,
+              defer: defer,
+              distance: distance,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              softConnector: softConnector,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex,
+              filter: _filter?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+
+        _$failedField = 'filter';
+        _filter?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsPieDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class DataLabelsFilter
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$DataLabelsFilter extends DataLabelsFilter {
   @override
   final String operator;
@@ -75620,20 +75937,14 @@ class DataLabelsFilterBuilder
 
   @override
   _$DataLabelsFilter build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$DataLabelsFilter._(
             operator: operator, property: property, value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPieEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPieEvents extends PlotOptionsPieEvents {
   @override
   final Function afterAnimate;
@@ -75791,7 +76102,7 @@ class PlotOptionsPieEventsBuilder
 
   @override
   _$PlotOptionsPieEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsPieEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -75801,17 +76112,11 @@ class PlotOptionsPieEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPiePoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPiePoint extends PlotOptionsPiePoint {
   @override
   final PlotOptionsPiePointEvents events;
@@ -75882,18 +76187,25 @@ class PlotOptionsPiePointBuilder
 
   @override
   _$PlotOptionsPiePoint build() {
-    final result = _$v ?? new _$PlotOptionsPiePoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsPiePoint _$result;
+    try {
+      _$result = _$v ?? new _$PlotOptionsPiePoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsPiePoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPiePointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPiePointEvents extends PlotOptionsPiePointEvents {
   @override
   final Function click;
@@ -76051,7 +76363,7 @@ class PlotOptionsPiePointEventsBuilder
 
   @override
   _$PlotOptionsPiePointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsPiePointEvents._(
             click: click,
             legendItemClick: legendItemClick,
@@ -76061,17 +76373,11 @@ class PlotOptionsPiePointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPieStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPieStates extends PlotOptionsPieStates {
   @override
   final PlotOptionsPieStatesHover hover;
@@ -76142,18 +76448,25 @@ class PlotOptionsPieStatesBuilder
 
   @override
   _$PlotOptionsPieStates build() {
-    final result = _$v ?? new _$PlotOptionsPieStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsPieStates _$result;
+    try {
+      _$result = _$v ?? new _$PlotOptionsPieStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsPieStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPieStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPieStatesHover extends PlotOptionsPieStatesHover {
   @override
   final JsonObject animation;
@@ -76298,26 +76611,33 @@ class PlotOptionsPieStatesHoverBuilder
 
   @override
   _$PlotOptionsPieStatesHover build() {
-    final result = _$v ??
-        new _$PlotOptionsPieStatesHover._(
-            animation: animation,
-            brightness: brightness,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsPieStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsPieStatesHover._(
+              animation: animation,
+              brightness: brightness,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsPieStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPieStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPieStatesHoverHalo extends PlotOptionsPieStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -76410,20 +76730,14 @@ class PlotOptionsPieStatesHoverHaloBuilder
 
   @override
   _$PlotOptionsPieStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsPieStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPieStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPieStatesHoverMarker
     extends PlotOptionsPieStatesHoverMarker {
   @override
@@ -76594,7 +76908,7 @@ class PlotOptionsPieStatesHoverMarkerBuilder
 
   @override
   _$PlotOptionsPieStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsPieStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -76605,17 +76919,11 @@ class PlotOptionsPieStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPieTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPieTooltip extends PlotOptionsPieTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -76851,33 +77159,40 @@ class PlotOptionsPieTooltipBuilder
 
   @override
   _$PlotOptionsPieTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsPieTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsPieTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsPieTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsPieTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPieZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPieZones extends PlotOptionsPieZones {
   @override
   final String className;
@@ -76989,24 +77304,18 @@ class PlotOptionsPieZonesBuilder
 
   @override
   _$PlotOptionsPieZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsPieZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPolygon
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygon extends PlotOptionsPolygon {
   @override
   final bool allowPointSelect;
@@ -77501,57 +77810,76 @@ class PlotOptionsPolygonBuilder
 
   @override
   _$PlotOptionsPolygon build() {
-    final result = _$v ??
-        new _$PlotOptionsPolygon._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorIndex: colorIndex,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            dashStyle: dashStyle,
-            dataLabels: _dataLabels?.build(),
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            keys: _keys?.build(),
-            lineWidth: lineWidth,
-            linkedTo: linkedTo,
-            marker: _marker?.build(),
-            negativeColor: negativeColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointStart: pointStart,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            states: states,
-            stickyTracking: stickyTracking,
-            tooltip: tooltip,
-            turboThreshold: turboThreshold,
-            visible: visible,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsPolygon _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsPolygon._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorIndex: colorIndex,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              dashStyle: dashStyle,
+              dataLabels: _dataLabels?.build(),
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              keys: _keys?.build(),
+              lineWidth: lineWidth,
+              linkedTo: linkedTo,
+              marker: _marker?.build(),
+              negativeColor: negativeColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointStart: pointStart,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              states: states,
+              stickyTracking: stickyTracking,
+              tooltip: tooltip,
+              turboThreshold: turboThreshold,
+              visible: visible,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'marker';
+        _marker?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsPolygon', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPolygonDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonDataLabels extends PlotOptionsPolygonDataLabels {
   @override
   final String align;
@@ -77906,44 +78234,51 @@ class PlotOptionsPolygonDataLabelsBuilder
 
   @override
   _$PlotOptionsPolygonDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsPolygonDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PlotOptionsPolygonDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsPolygonDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsPolygonDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPolygonEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonEvents extends PlotOptionsPolygonEvents {
   @override
   final Function afterAnimate;
@@ -78103,7 +78438,7 @@ class PlotOptionsPolygonEventsBuilder
 
   @override
   _$PlotOptionsPolygonEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsPolygonEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -78113,17 +78448,11 @@ class PlotOptionsPolygonEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPolygonMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonMarker extends PlotOptionsPolygonMarker {
   @override
   final bool enabled;
@@ -78294,28 +78623,35 @@ class PlotOptionsPolygonMarkerBuilder
 
   @override
   _$PlotOptionsPolygonMarker build() {
-    final result = _$v ??
-        new _$PlotOptionsPolygonMarker._(
-            enabled: enabled,
-            fillColor: fillColor,
-            height: height,
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            radius: radius,
-            states: _states?.build(),
-            symbol: symbol,
-            width: width);
-    replace(result);
-    return result;
+    _$PlotOptionsPolygonMarker _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsPolygonMarker._(
+              enabled: enabled,
+              fillColor: fillColor,
+              height: height,
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              radius: radius,
+              states: _states?.build(),
+              symbol: symbol,
+              width: width);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'states';
+        _states?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsPolygonMarker', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPolygonMarkerStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonMarkerStates extends PlotOptionsPolygonMarkerStates {
   @override
   final PlotOptionsPolygonMarkerStatesHover hover;
@@ -78400,20 +78736,29 @@ class PlotOptionsPolygonMarkerStatesBuilder
 
   @override
   _$PlotOptionsPolygonMarkerStates build() {
-    final result = _$v ??
-        new _$PlotOptionsPolygonMarkerStates._(
-            hover: _hover?.build(), select: _select?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsPolygonMarkerStates _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsPolygonMarkerStates._(
+              hover: _hover?.build(), select: _select?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+        _$failedField = 'select';
+        _select?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsPolygonMarkerStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPolygonMarkerStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonMarkerStatesHover
     extends PlotOptionsPolygonMarkerStatesHover {
   @override
@@ -78559,7 +78904,7 @@ class PlotOptionsPolygonMarkerStatesHoverBuilder
 
   @override
   _$PlotOptionsPolygonMarkerStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsPolygonMarkerStatesHover._(
             enabled: enabled,
             fillColor: fillColor,
@@ -78568,17 +78913,11 @@ class PlotOptionsPolygonMarkerStatesHoverBuilder
             lineWidthPlus: lineWidthPlus,
             radius: radius,
             radiusPlus: radiusPlus);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPolygonMarkerStatesSelect
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonMarkerStatesSelect
     extends PlotOptionsPolygonMarkerStatesSelect {
   @override
@@ -78700,24 +79039,18 @@ class PlotOptionsPolygonMarkerStatesSelectBuilder
 
   @override
   _$PlotOptionsPolygonMarkerStatesSelect build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsPolygonMarkerStatesSelect._(
             enabled: enabled,
             fillColor: fillColor,
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPolygonPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonPoint extends PlotOptionsPolygonPoint {
   @override
   final PlotOptionsPolygonPointEvents events;
@@ -78791,19 +79124,26 @@ class PlotOptionsPolygonPointBuilder
 
   @override
   _$PlotOptionsPolygonPoint build() {
-    final result =
-        _$v ?? new _$PlotOptionsPolygonPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsPolygonPoint _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsPolygonPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsPolygonPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPolygonPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonPointEvents extends PlotOptionsPolygonPointEvents {
   @override
   final Function click;
@@ -78947,7 +79287,7 @@ class PlotOptionsPolygonPointEventsBuilder
 
   @override
   _$PlotOptionsPolygonPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsPolygonPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -78956,17 +79296,11 @@ class PlotOptionsPolygonPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPolygonStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonStates extends PlotOptionsPolygonStates {
   @override
   final PlotOptionsPolygonStatesHover hover;
@@ -79040,19 +79374,26 @@ class PlotOptionsPolygonStatesBuilder
 
   @override
   _$PlotOptionsPolygonStates build() {
-    final result =
-        _$v ?? new _$PlotOptionsPolygonStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsPolygonStates _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsPolygonStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsPolygonStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPolygonStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonStatesHover extends PlotOptionsPolygonStatesHover {
   @override
   final JsonObject animation;
@@ -79186,25 +79527,32 @@ class PlotOptionsPolygonStatesHoverBuilder
 
   @override
   _$PlotOptionsPolygonStatesHover build() {
-    final result = _$v ??
-        new _$PlotOptionsPolygonStatesHover._(
-            animation: animation,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsPolygonStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsPolygonStatesHover._(
+              animation: animation,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsPolygonStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPolygonStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonStatesHoverHalo
     extends PlotOptionsPolygonStatesHoverHalo {
   @override
@@ -79299,20 +79647,14 @@ class PlotOptionsPolygonStatesHoverHaloBuilder
 
   @override
   _$PlotOptionsPolygonStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsPolygonStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPolygonStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonStatesHoverMarker
     extends PlotOptionsPolygonStatesHoverMarker {
   @override
@@ -79484,7 +79826,7 @@ class PlotOptionsPolygonStatesHoverMarkerBuilder
 
   @override
   _$PlotOptionsPolygonStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsPolygonStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -79495,17 +79837,11 @@ class PlotOptionsPolygonStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPolygonTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonTooltip extends PlotOptionsPolygonTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -79743,33 +80079,40 @@ class PlotOptionsPolygonTooltipBuilder
 
   @override
   _$PlotOptionsPolygonTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsPolygonTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsPolygonTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsPolygonTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsPolygonTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPolygonZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPolygonZones extends PlotOptionsPolygonZones {
   @override
   final String className;
@@ -79884,24 +80227,18 @@ class PlotOptionsPolygonZonesBuilder
 
   @override
   _$PlotOptionsPolygonZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsPolygonZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPyramid
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramid extends PlotOptionsPyramid {
   @override
   final bool allowPointSelect;
@@ -80373,55 +80710,74 @@ class PlotOptionsPyramidBuilder
 
   @override
   _$PlotOptionsPyramid build() {
-    final result = _$v ??
-        new _$PlotOptionsPyramid._(
-            allowPointSelect: allowPointSelect,
-            animationLimit: animationLimit,
-            borderColor: borderColor,
-            borderWidth: borderWidth,
-            center: center,
-            className: className,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            cursor: cursor,
-            dataLabels: _dataLabels?.build(),
-            depth: depth,
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            height: height,
-            keys: _keys?.build(),
-            linkedTo: linkedTo,
-            minSize: minSize,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            reversed: reversed,
-            selected: selected,
-            shadow: shadow,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            slicedOffset: slicedOffset,
-            states: states,
-            stickyTracking: stickyTracking,
-            tooltip: tooltip,
-            visible: visible,
-            width: width,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsPyramid _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsPyramid._(
+              allowPointSelect: allowPointSelect,
+              animationLimit: animationLimit,
+              borderColor: borderColor,
+              borderWidth: borderWidth,
+              center: center,
+              className: className,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              cursor: cursor,
+              dataLabels: _dataLabels?.build(),
+              depth: depth,
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              height: height,
+              keys: _keys?.build(),
+              linkedTo: linkedTo,
+              minSize: minSize,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              reversed: reversed,
+              selected: selected,
+              shadow: shadow,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              slicedOffset: slicedOffset,
+              states: states,
+              stickyTracking: stickyTracking,
+              tooltip: tooltip,
+              visible: visible,
+              width: width,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsPyramid', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPyramidDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramidDataLabels extends PlotOptionsPyramidDataLabels {
   @override
   final String backgroundColor;
@@ -80810,47 +81166,54 @@ class PlotOptionsPyramidDataLabelsBuilder
 
   @override
   _$PlotOptionsPyramidDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsPyramidDataLabels._(
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            connectorColor: connectorColor,
-            connectorPadding: connectorPadding,
-            connectorWidth: connectorWidth,
-            crop: crop,
-            defer: defer,
-            distance: distance,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            softConnector: softConnector,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PlotOptionsPyramidDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsPyramidDataLabels._(
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              connectorColor: connectorColor,
+              connectorPadding: connectorPadding,
+              connectorWidth: connectorWidth,
+              crop: crop,
+              defer: defer,
+              distance: distance,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              softConnector: softConnector,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsPyramidDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPyramidEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramidEvents extends PlotOptionsPyramidEvents {
   @override
   final Function afterAnimate;
@@ -81010,7 +81373,7 @@ class PlotOptionsPyramidEventsBuilder
 
   @override
   _$PlotOptionsPyramidEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsPyramidEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -81020,17 +81383,11 @@ class PlotOptionsPyramidEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPyramidPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramidPoint extends PlotOptionsPyramidPoint {
   @override
   final PlotOptionsPyramidPointEvents events;
@@ -81104,19 +81461,26 @@ class PlotOptionsPyramidPointBuilder
 
   @override
   _$PlotOptionsPyramidPoint build() {
-    final result =
-        _$v ?? new _$PlotOptionsPyramidPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsPyramidPoint _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsPyramidPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsPyramidPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPyramidPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramidPointEvents extends PlotOptionsPyramidPointEvents {
   @override
   final Function click;
@@ -81275,7 +81639,7 @@ class PlotOptionsPyramidPointEventsBuilder
 
   @override
   _$PlotOptionsPyramidPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsPyramidPointEvents._(
             click: click,
             legendItemClick: legendItemClick,
@@ -81285,17 +81649,11 @@ class PlotOptionsPyramidPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPyramidStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramidStates extends PlotOptionsPyramidStates {
   @override
   final PlotOptionsPyramidStatesHover hover;
@@ -81369,19 +81727,26 @@ class PlotOptionsPyramidStatesBuilder
 
   @override
   _$PlotOptionsPyramidStates build() {
-    final result =
-        _$v ?? new _$PlotOptionsPyramidStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsPyramidStates _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsPyramidStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsPyramidStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPyramidStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramidStatesHover extends PlotOptionsPyramidStatesHover {
   @override
   final JsonObject animation;
@@ -81527,26 +81892,33 @@ class PlotOptionsPyramidStatesHoverBuilder
 
   @override
   _$PlotOptionsPyramidStatesHover build() {
-    final result = _$v ??
-        new _$PlotOptionsPyramidStatesHover._(
-            animation: animation,
-            brightness: brightness,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsPyramidStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsPyramidStatesHover._(
+              animation: animation,
+              brightness: brightness,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsPyramidStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPyramidStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramidStatesHoverHalo
     extends PlotOptionsPyramidStatesHoverHalo {
   @override
@@ -81641,20 +82013,14 @@ class PlotOptionsPyramidStatesHoverHaloBuilder
 
   @override
   _$PlotOptionsPyramidStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsPyramidStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPyramidStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramidStatesHoverMarker
     extends PlotOptionsPyramidStatesHoverMarker {
   @override
@@ -81826,7 +82192,7 @@ class PlotOptionsPyramidStatesHoverMarkerBuilder
 
   @override
   _$PlotOptionsPyramidStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsPyramidStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -81837,17 +82203,11 @@ class PlotOptionsPyramidStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPyramidTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramidTooltip extends PlotOptionsPyramidTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -82085,33 +82445,40 @@ class PlotOptionsPyramidTooltipBuilder
 
   @override
   _$PlotOptionsPyramidTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsPyramidTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsPyramidTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsPyramidTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsPyramidTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsPyramidZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsPyramidZones extends PlotOptionsPyramidZones {
   @override
   final String className;
@@ -82226,24 +82593,18 @@ class PlotOptionsPyramidZonesBuilder
 
   @override
   _$PlotOptionsPyramidZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsPyramidZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsScatter
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatter extends PlotOptionsScatter {
   @override
   final bool allowPointSelect;
@@ -82759,59 +83120,78 @@ class PlotOptionsScatterBuilder
 
   @override
   _$PlotOptionsScatter build() {
-    final result = _$v ??
-        new _$PlotOptionsScatter._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorIndex: colorIndex,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            dashStyle: dashStyle,
-            dataLabels: _dataLabels?.build(),
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            keys: _keys?.build(),
-            lineWidth: lineWidth,
-            linkedTo: linkedTo,
-            marker: _marker?.build(),
-            negativeColor: negativeColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointStart: pointStart,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            softThreshold: softThreshold,
-            states: states,
-            stickyTracking: stickyTracking,
-            threshold: threshold,
-            tooltip: tooltip,
-            turboThreshold: turboThreshold,
-            visible: visible,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsScatter _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsScatter._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorIndex: colorIndex,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              dashStyle: dashStyle,
+              dataLabels: _dataLabels?.build(),
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              keys: _keys?.build(),
+              lineWidth: lineWidth,
+              linkedTo: linkedTo,
+              marker: _marker?.build(),
+              negativeColor: negativeColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointStart: pointStart,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              softThreshold: softThreshold,
+              states: states,
+              stickyTracking: stickyTracking,
+              threshold: threshold,
+              tooltip: tooltip,
+              turboThreshold: turboThreshold,
+              visible: visible,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'marker';
+        _marker?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsScatter', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsScatterDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterDataLabels extends PlotOptionsScatterDataLabels {
   @override
   final String align;
@@ -83166,44 +83546,51 @@ class PlotOptionsScatterDataLabelsBuilder
 
   @override
   _$PlotOptionsScatterDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsScatterDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PlotOptionsScatterDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsScatterDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsScatterDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsScatterEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterEvents extends PlotOptionsScatterEvents {
   @override
   final Function afterAnimate;
@@ -83363,7 +83750,7 @@ class PlotOptionsScatterEventsBuilder
 
   @override
   _$PlotOptionsScatterEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsScatterEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -83373,17 +83760,11 @@ class PlotOptionsScatterEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsScatterMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterMarker extends PlotOptionsScatterMarker {
   @override
   final bool enabled;
@@ -83554,28 +83935,35 @@ class PlotOptionsScatterMarkerBuilder
 
   @override
   _$PlotOptionsScatterMarker build() {
-    final result = _$v ??
-        new _$PlotOptionsScatterMarker._(
-            enabled: enabled,
-            fillColor: fillColor,
-            height: height,
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            radius: radius,
-            states: _states?.build(),
-            symbol: symbol,
-            width: width);
-    replace(result);
-    return result;
+    _$PlotOptionsScatterMarker _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsScatterMarker._(
+              enabled: enabled,
+              fillColor: fillColor,
+              height: height,
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              radius: radius,
+              states: _states?.build(),
+              symbol: symbol,
+              width: width);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'states';
+        _states?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsScatterMarker', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsScatterMarkerStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterMarkerStates extends PlotOptionsScatterMarkerStates {
   @override
   final PlotOptionsScatterMarkerStatesHover hover;
@@ -83660,20 +84048,29 @@ class PlotOptionsScatterMarkerStatesBuilder
 
   @override
   _$PlotOptionsScatterMarkerStates build() {
-    final result = _$v ??
-        new _$PlotOptionsScatterMarkerStates._(
-            hover: _hover?.build(), select: _select?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsScatterMarkerStates _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsScatterMarkerStates._(
+              hover: _hover?.build(), select: _select?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+        _$failedField = 'select';
+        _select?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsScatterMarkerStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsScatterMarkerStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterMarkerStatesHover
     extends PlotOptionsScatterMarkerStatesHover {
   @override
@@ -83819,7 +84216,7 @@ class PlotOptionsScatterMarkerStatesHoverBuilder
 
   @override
   _$PlotOptionsScatterMarkerStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsScatterMarkerStatesHover._(
             enabled: enabled,
             fillColor: fillColor,
@@ -83828,17 +84225,11 @@ class PlotOptionsScatterMarkerStatesHoverBuilder
             lineWidthPlus: lineWidthPlus,
             radius: radius,
             radiusPlus: radiusPlus);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsScatterMarkerStatesSelect
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterMarkerStatesSelect
     extends PlotOptionsScatterMarkerStatesSelect {
   @override
@@ -83960,24 +84351,18 @@ class PlotOptionsScatterMarkerStatesSelectBuilder
 
   @override
   _$PlotOptionsScatterMarkerStatesSelect build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsScatterMarkerStatesSelect._(
             enabled: enabled,
             fillColor: fillColor,
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsScatterPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterPoint extends PlotOptionsScatterPoint {
   @override
   final PlotOptionsScatterPointEvents events;
@@ -84051,19 +84436,26 @@ class PlotOptionsScatterPointBuilder
 
   @override
   _$PlotOptionsScatterPoint build() {
-    final result =
-        _$v ?? new _$PlotOptionsScatterPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsScatterPoint _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsScatterPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsScatterPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsScatterPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterPointEvents extends PlotOptionsScatterPointEvents {
   @override
   final Function click;
@@ -84207,7 +84599,7 @@ class PlotOptionsScatterPointEventsBuilder
 
   @override
   _$PlotOptionsScatterPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsScatterPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -84216,17 +84608,11 @@ class PlotOptionsScatterPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsScatterStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterStates extends PlotOptionsScatterStates {
   @override
   final PlotOptionsScatterStatesHover hover;
@@ -84300,19 +84686,26 @@ class PlotOptionsScatterStatesBuilder
 
   @override
   _$PlotOptionsScatterStates build() {
-    final result =
-        _$v ?? new _$PlotOptionsScatterStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsScatterStates _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsScatterStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsScatterStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsScatterStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterStatesHover extends PlotOptionsScatterStatesHover {
   @override
   final JsonObject animation;
@@ -84446,25 +84839,32 @@ class PlotOptionsScatterStatesHoverBuilder
 
   @override
   _$PlotOptionsScatterStatesHover build() {
-    final result = _$v ??
-        new _$PlotOptionsScatterStatesHover._(
-            animation: animation,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsScatterStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsScatterStatesHover._(
+              animation: animation,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsScatterStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsScatterStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterStatesHoverHalo
     extends PlotOptionsScatterStatesHoverHalo {
   @override
@@ -84559,20 +84959,14 @@ class PlotOptionsScatterStatesHoverHaloBuilder
 
   @override
   _$PlotOptionsScatterStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsScatterStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsScatterStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterStatesHoverMarker
     extends PlotOptionsScatterStatesHoverMarker {
   @override
@@ -84744,7 +85138,7 @@ class PlotOptionsScatterStatesHoverMarkerBuilder
 
   @override
   _$PlotOptionsScatterStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsScatterStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -84755,17 +85149,11 @@ class PlotOptionsScatterStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsScatterTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterTooltip extends PlotOptionsScatterTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -85003,33 +85391,40 @@ class PlotOptionsScatterTooltipBuilder
 
   @override
   _$PlotOptionsScatterTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsScatterTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsScatterTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsScatterTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsScatterTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsScatterZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsScatterZones extends PlotOptionsScatterZones {
   @override
   final String className;
@@ -85144,24 +85539,18 @@ class PlotOptionsScatterZonesBuilder
 
   @override
   _$PlotOptionsScatterZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsScatterZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSeries
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeries extends PlotOptionsSeries {
   @override
   final bool allowPointSelect;
@@ -85738,65 +86127,84 @@ class PlotOptionsSeriesBuilder
 
   @override
   _$PlotOptionsSeries build() {
-    final result = _$v ??
-        new _$PlotOptionsSeries._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorIndex: colorIndex,
-            connectEnds: connectEnds,
-            connectNulls: connectNulls,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            dashStyle: dashStyle,
-            dataLabels: _dataLabels?.build(),
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            keys: _keys?.build(),
-            lineWidth: lineWidth,
-            linecap: linecap,
-            linkedTo: linkedTo,
-            marker: _marker?.build(),
-            negativeColor: negativeColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointPlacement: pointPlacement,
-            pointStart: pointStart,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            softThreshold: softThreshold,
-            stacking: stacking,
-            states: states,
-            step: step,
-            stickyTracking: stickyTracking,
-            threshold: threshold,
-            tooltip: tooltip,
-            turboThreshold: turboThreshold,
-            visible: visible,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsSeries _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsSeries._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorIndex: colorIndex,
+              connectEnds: connectEnds,
+              connectNulls: connectNulls,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              dashStyle: dashStyle,
+              dataLabels: _dataLabels?.build(),
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              keys: _keys?.build(),
+              lineWidth: lineWidth,
+              linecap: linecap,
+              linkedTo: linkedTo,
+              marker: _marker?.build(),
+              negativeColor: negativeColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointPlacement: pointPlacement,
+              pointStart: pointStart,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              softThreshold: softThreshold,
+              stacking: stacking,
+              states: states,
+              step: step,
+              stickyTracking: stickyTracking,
+              threshold: threshold,
+              tooltip: tooltip,
+              turboThreshold: turboThreshold,
+              visible: visible,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'marker';
+        _marker?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsSeries', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSeriesDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesDataLabels extends PlotOptionsSeriesDataLabels {
   @override
   final String align;
@@ -86151,44 +86559,51 @@ class PlotOptionsSeriesDataLabelsBuilder
 
   @override
   _$PlotOptionsSeriesDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsSeriesDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PlotOptionsSeriesDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsSeriesDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsSeriesDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSeriesEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesEvents extends PlotOptionsSeriesEvents {
   @override
   final Function afterAnimate;
@@ -86348,7 +86763,7 @@ class PlotOptionsSeriesEventsBuilder
 
   @override
   _$PlotOptionsSeriesEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsSeriesEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -86358,17 +86773,11 @@ class PlotOptionsSeriesEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSeriesMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesMarker extends PlotOptionsSeriesMarker {
   @override
   final bool enabled;
@@ -86539,28 +86948,35 @@ class PlotOptionsSeriesMarkerBuilder
 
   @override
   _$PlotOptionsSeriesMarker build() {
-    final result = _$v ??
-        new _$PlotOptionsSeriesMarker._(
-            enabled: enabled,
-            fillColor: fillColor,
-            height: height,
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            radius: radius,
-            states: _states?.build(),
-            symbol: symbol,
-            width: width);
-    replace(result);
-    return result;
+    _$PlotOptionsSeriesMarker _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsSeriesMarker._(
+              enabled: enabled,
+              fillColor: fillColor,
+              height: height,
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              radius: radius,
+              states: _states?.build(),
+              symbol: symbol,
+              width: width);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'states';
+        _states?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsSeriesMarker', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSeriesMarkerStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesMarkerStates extends PlotOptionsSeriesMarkerStates {
   @override
   final PlotOptionsSeriesMarkerStatesHover hover;
@@ -86645,20 +87061,29 @@ class PlotOptionsSeriesMarkerStatesBuilder
 
   @override
   _$PlotOptionsSeriesMarkerStates build() {
-    final result = _$v ??
-        new _$PlotOptionsSeriesMarkerStates._(
-            hover: _hover?.build(), select: _select?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsSeriesMarkerStates _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsSeriesMarkerStates._(
+              hover: _hover?.build(), select: _select?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+        _$failedField = 'select';
+        _select?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsSeriesMarkerStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSeriesMarkerStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesMarkerStatesHover
     extends PlotOptionsSeriesMarkerStatesHover {
   @override
@@ -86804,7 +87229,7 @@ class PlotOptionsSeriesMarkerStatesHoverBuilder
 
   @override
   _$PlotOptionsSeriesMarkerStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsSeriesMarkerStatesHover._(
             enabled: enabled,
             fillColor: fillColor,
@@ -86813,17 +87238,11 @@ class PlotOptionsSeriesMarkerStatesHoverBuilder
             lineWidthPlus: lineWidthPlus,
             radius: radius,
             radiusPlus: radiusPlus);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSeriesMarkerStatesSelect
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesMarkerStatesSelect
     extends PlotOptionsSeriesMarkerStatesSelect {
   @override
@@ -86945,24 +87364,18 @@ class PlotOptionsSeriesMarkerStatesSelectBuilder
 
   @override
   _$PlotOptionsSeriesMarkerStatesSelect build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsSeriesMarkerStatesSelect._(
             enabled: enabled,
             fillColor: fillColor,
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSeriesPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesPoint extends PlotOptionsSeriesPoint {
   @override
   final PlotOptionsSeriesPointEvents events;
@@ -87035,19 +87448,26 @@ class PlotOptionsSeriesPointBuilder
 
   @override
   _$PlotOptionsSeriesPoint build() {
-    final result =
-        _$v ?? new _$PlotOptionsSeriesPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsSeriesPoint _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsSeriesPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsSeriesPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSeriesPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesPointEvents extends PlotOptionsSeriesPointEvents {
   @override
   final Function click;
@@ -87191,7 +87611,7 @@ class PlotOptionsSeriesPointEventsBuilder
 
   @override
   _$PlotOptionsSeriesPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsSeriesPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -87200,17 +87620,11 @@ class PlotOptionsSeriesPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSeriesStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesStates extends PlotOptionsSeriesStates {
   @override
   final PlotOptionsSeriesStatesHover hover;
@@ -87283,19 +87697,25 @@ class PlotOptionsSeriesStatesBuilder
 
   @override
   _$PlotOptionsSeriesStates build() {
-    final result =
-        _$v ?? new _$PlotOptionsSeriesStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsSeriesStates _$result;
+    try {
+      _$result = _$v ?? new _$PlotOptionsSeriesStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsSeriesStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSeriesStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesStatesHover extends PlotOptionsSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -87429,25 +87849,32 @@ class PlotOptionsSeriesStatesHoverBuilder
 
   @override
   _$PlotOptionsSeriesStatesHover build() {
-    final result = _$v ??
-        new _$PlotOptionsSeriesStatesHover._(
-            animation: animation,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsSeriesStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsSeriesStatesHover._(
+              animation: animation,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsSeriesStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSeriesStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesStatesHoverHalo
     extends PlotOptionsSeriesStatesHoverHalo {
   @override
@@ -87542,20 +87969,14 @@ class PlotOptionsSeriesStatesHoverHaloBuilder
 
   @override
   _$PlotOptionsSeriesStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsSeriesStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSeriesStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesStatesHoverMarker
     extends PlotOptionsSeriesStatesHoverMarker {
   @override
@@ -87727,7 +88148,7 @@ class PlotOptionsSeriesStatesHoverMarkerBuilder
 
   @override
   _$PlotOptionsSeriesStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsSeriesStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -87738,17 +88159,11 @@ class PlotOptionsSeriesStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSeriesTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesTooltip extends PlotOptionsSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -87986,33 +88401,40 @@ class PlotOptionsSeriesTooltipBuilder
 
   @override
   _$PlotOptionsSeriesTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsSeriesTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsSeriesTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsSeriesTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsSeriesTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSeriesZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSeriesZones extends PlotOptionsSeriesZones {
   @override
   final String className;
@@ -88126,24 +88548,18 @@ class PlotOptionsSeriesZonesBuilder
 
   @override
   _$PlotOptionsSeriesZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsSeriesZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSolidgauge
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSolidgauge extends PlotOptionsSolidgauge {
   @override
   final bool animation;
@@ -88523,46 +88939,59 @@ class PlotOptionsSolidgaugeBuilder
 
   @override
   _$PlotOptionsSolidgauge build() {
-    final result = _$v ??
-        new _$PlotOptionsSolidgauge._(
-            animation: animation,
-            animationLimit: animationLimit,
-            className: className,
-            colorIndex: colorIndex,
-            cursor: cursor,
-            dataLabels: dataLabels,
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            keys: _keys?.build(),
-            linecap: linecap,
-            overshoot: overshoot,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            rounded: rounded,
-            selected: selected,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            stickyTracking: stickyTracking,
-            threshold: threshold,
-            tooltip: tooltip,
-            visible: visible,
-            wrap: wrap);
-    replace(result);
-    return result;
+    _$PlotOptionsSolidgauge _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsSolidgauge._(
+              animation: animation,
+              animationLimit: animationLimit,
+              className: className,
+              colorIndex: colorIndex,
+              cursor: cursor,
+              dataLabels: dataLabels,
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              keys: _keys?.build(),
+              linecap: linecap,
+              overshoot: overshoot,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              rounded: rounded,
+              selected: selected,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              stickyTracking: stickyTracking,
+              threshold: threshold,
+              tooltip: tooltip,
+              visible: visible,
+              wrap: wrap);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsSolidgauge', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSolidgaugeDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSolidgaugeDataLabels
     extends PlotOptionsSolidgaugeDataLabels {
   @override
@@ -88918,44 +89347,51 @@ class PlotOptionsSolidgaugeDataLabelsBuilder
 
   @override
   _$PlotOptionsSolidgaugeDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsSolidgaugeDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PlotOptionsSolidgaugeDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsSolidgaugeDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsSolidgaugeDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSolidgaugeEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSolidgaugeEvents extends PlotOptionsSolidgaugeEvents {
   @override
   final Function afterAnimate;
@@ -89116,7 +89552,7 @@ class PlotOptionsSolidgaugeEventsBuilder
 
   @override
   _$PlotOptionsSolidgaugeEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsSolidgaugeEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -89126,17 +89562,11 @@ class PlotOptionsSolidgaugeEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSolidgaugePoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSolidgaugePoint extends PlotOptionsSolidgaugePoint {
   @override
   final PlotOptionsSolidgaugePointEvents events;
@@ -89210,19 +89640,26 @@ class PlotOptionsSolidgaugePointBuilder
 
   @override
   _$PlotOptionsSolidgaugePoint build() {
-    final result =
-        _$v ?? new _$PlotOptionsSolidgaugePoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsSolidgaugePoint _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsSolidgaugePoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsSolidgaugePoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSolidgaugePointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSolidgaugePointEvents
     extends PlotOptionsSolidgaugePointEvents {
   @override
@@ -89367,7 +89804,7 @@ class PlotOptionsSolidgaugePointEventsBuilder
 
   @override
   _$PlotOptionsSolidgaugePointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsSolidgaugePointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -89376,17 +89813,11 @@ class PlotOptionsSolidgaugePointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSolidgaugeTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSolidgaugeTooltip extends PlotOptionsSolidgaugeTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -89625,33 +90056,40 @@ class PlotOptionsSolidgaugeTooltipBuilder
 
   @override
   _$PlotOptionsSolidgaugeTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsSolidgaugeTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsSolidgaugeTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsSolidgaugeTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsSolidgaugeTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSpline
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSpline extends PlotOptionsSpline {
   @override
   final bool allowPointSelect;
@@ -90218,64 +90656,83 @@ class PlotOptionsSplineBuilder
 
   @override
   _$PlotOptionsSpline build() {
-    final result = _$v ??
-        new _$PlotOptionsSpline._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorIndex: colorIndex,
-            connectEnds: connectEnds,
-            connectNulls: connectNulls,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            dashStyle: dashStyle,
-            dataLabels: _dataLabels?.build(),
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            keys: _keys?.build(),
-            lineWidth: lineWidth,
-            linecap: linecap,
-            linkedTo: linkedTo,
-            marker: _marker?.build(),
-            negativeColor: negativeColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointPlacement: pointPlacement,
-            pointStart: pointStart,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            softThreshold: softThreshold,
-            stacking: stacking,
-            states: states,
-            stickyTracking: stickyTracking,
-            threshold: threshold,
-            tooltip: tooltip,
-            turboThreshold: turboThreshold,
-            visible: visible,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsSpline _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsSpline._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorIndex: colorIndex,
+              connectEnds: connectEnds,
+              connectNulls: connectNulls,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              dashStyle: dashStyle,
+              dataLabels: _dataLabels?.build(),
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              keys: _keys?.build(),
+              lineWidth: lineWidth,
+              linecap: linecap,
+              linkedTo: linkedTo,
+              marker: _marker?.build(),
+              negativeColor: negativeColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointPlacement: pointPlacement,
+              pointStart: pointStart,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              softThreshold: softThreshold,
+              stacking: stacking,
+              states: states,
+              stickyTracking: stickyTracking,
+              threshold: threshold,
+              tooltip: tooltip,
+              turboThreshold: turboThreshold,
+              visible: visible,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'marker';
+        _marker?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsSpline', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSplineDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineDataLabels extends PlotOptionsSplineDataLabels {
   @override
   final String align;
@@ -90630,44 +91087,51 @@ class PlotOptionsSplineDataLabelsBuilder
 
   @override
   _$PlotOptionsSplineDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsSplineDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PlotOptionsSplineDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsSplineDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsSplineDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSplineEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineEvents extends PlotOptionsSplineEvents {
   @override
   final Function afterAnimate;
@@ -90827,7 +91291,7 @@ class PlotOptionsSplineEventsBuilder
 
   @override
   _$PlotOptionsSplineEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsSplineEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -90837,17 +91301,11 @@ class PlotOptionsSplineEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSplineMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineMarker extends PlotOptionsSplineMarker {
   @override
   final bool enabled;
@@ -91018,28 +91476,35 @@ class PlotOptionsSplineMarkerBuilder
 
   @override
   _$PlotOptionsSplineMarker build() {
-    final result = _$v ??
-        new _$PlotOptionsSplineMarker._(
-            enabled: enabled,
-            fillColor: fillColor,
-            height: height,
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            radius: radius,
-            states: _states?.build(),
-            symbol: symbol,
-            width: width);
-    replace(result);
-    return result;
+    _$PlotOptionsSplineMarker _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsSplineMarker._(
+              enabled: enabled,
+              fillColor: fillColor,
+              height: height,
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              radius: radius,
+              states: _states?.build(),
+              symbol: symbol,
+              width: width);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'states';
+        _states?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsSplineMarker', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSplineMarkerStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineMarkerStates extends PlotOptionsSplineMarkerStates {
   @override
   final PlotOptionsSplineMarkerStatesHover hover;
@@ -91124,20 +91589,29 @@ class PlotOptionsSplineMarkerStatesBuilder
 
   @override
   _$PlotOptionsSplineMarkerStates build() {
-    final result = _$v ??
-        new _$PlotOptionsSplineMarkerStates._(
-            hover: _hover?.build(), select: _select?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsSplineMarkerStates _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsSplineMarkerStates._(
+              hover: _hover?.build(), select: _select?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+        _$failedField = 'select';
+        _select?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsSplineMarkerStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSplineMarkerStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineMarkerStatesHover
     extends PlotOptionsSplineMarkerStatesHover {
   @override
@@ -91283,7 +91757,7 @@ class PlotOptionsSplineMarkerStatesHoverBuilder
 
   @override
   _$PlotOptionsSplineMarkerStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsSplineMarkerStatesHover._(
             enabled: enabled,
             fillColor: fillColor,
@@ -91292,17 +91766,11 @@ class PlotOptionsSplineMarkerStatesHoverBuilder
             lineWidthPlus: lineWidthPlus,
             radius: radius,
             radiusPlus: radiusPlus);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSplineMarkerStatesSelect
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineMarkerStatesSelect
     extends PlotOptionsSplineMarkerStatesSelect {
   @override
@@ -91424,24 +91892,18 @@ class PlotOptionsSplineMarkerStatesSelectBuilder
 
   @override
   _$PlotOptionsSplineMarkerStatesSelect build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsSplineMarkerStatesSelect._(
             enabled: enabled,
             fillColor: fillColor,
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSplinePoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplinePoint extends PlotOptionsSplinePoint {
   @override
   final PlotOptionsSplinePointEvents events;
@@ -91514,19 +91976,26 @@ class PlotOptionsSplinePointBuilder
 
   @override
   _$PlotOptionsSplinePoint build() {
-    final result =
-        _$v ?? new _$PlotOptionsSplinePoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsSplinePoint _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsSplinePoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsSplinePoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSplinePointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplinePointEvents extends PlotOptionsSplinePointEvents {
   @override
   final Function click;
@@ -91670,7 +92139,7 @@ class PlotOptionsSplinePointEventsBuilder
 
   @override
   _$PlotOptionsSplinePointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsSplinePointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -91679,17 +92148,11 @@ class PlotOptionsSplinePointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSplineStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineStates extends PlotOptionsSplineStates {
   @override
   final PlotOptionsSplineStatesHover hover;
@@ -91762,19 +92225,25 @@ class PlotOptionsSplineStatesBuilder
 
   @override
   _$PlotOptionsSplineStates build() {
-    final result =
-        _$v ?? new _$PlotOptionsSplineStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsSplineStates _$result;
+    try {
+      _$result = _$v ?? new _$PlotOptionsSplineStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsSplineStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSplineStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineStatesHover extends PlotOptionsSplineStatesHover {
   @override
   final JsonObject animation;
@@ -91908,25 +92377,32 @@ class PlotOptionsSplineStatesHoverBuilder
 
   @override
   _$PlotOptionsSplineStatesHover build() {
-    final result = _$v ??
-        new _$PlotOptionsSplineStatesHover._(
-            animation: animation,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsSplineStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsSplineStatesHover._(
+              animation: animation,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsSplineStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSplineStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineStatesHoverHalo
     extends PlotOptionsSplineStatesHoverHalo {
   @override
@@ -92021,20 +92497,14 @@ class PlotOptionsSplineStatesHoverHaloBuilder
 
   @override
   _$PlotOptionsSplineStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsSplineStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSplineStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineStatesHoverMarker
     extends PlotOptionsSplineStatesHoverMarker {
   @override
@@ -92206,7 +92676,7 @@ class PlotOptionsSplineStatesHoverMarkerBuilder
 
   @override
   _$PlotOptionsSplineStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsSplineStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -92217,17 +92687,11 @@ class PlotOptionsSplineStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSplineTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineTooltip extends PlotOptionsSplineTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -92465,33 +92929,40 @@ class PlotOptionsSplineTooltipBuilder
 
   @override
   _$PlotOptionsSplineTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsSplineTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsSplineTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsSplineTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsSplineTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsSplineZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsSplineZones extends PlotOptionsSplineZones {
   @override
   final String className;
@@ -92605,24 +93076,18 @@ class PlotOptionsSplineZonesBuilder
 
   @override
   _$PlotOptionsSplineZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsSplineZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsTreemap
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsTreemap extends PlotOptionsTreemap {
   @override
   final bool allowDrillToNode;
@@ -93210,66 +93675,82 @@ class PlotOptionsTreemapBuilder
 
   @override
   _$PlotOptionsTreemap build() {
-    final result = _$v ??
-        new _$PlotOptionsTreemap._(
-            allowDrillToNode: allowDrillToNode,
-            allowPointSelect: allowPointSelect,
-            alternateStartingDirection: alternateStartingDirection,
-            animation: animation,
-            animationLimit: animationLimit,
-            borderColor: borderColor,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            colorByPoint: colorByPoint,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            crisp: crisp,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            dataLabels: dataLabels,
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            ignoreHiddenPoint: ignoreHiddenPoint,
-            interactByLeaf: interactByLeaf,
-            keys: _keys?.build(),
-            layoutAlgorithm: layoutAlgorithm,
-            layoutStartingDirection: layoutStartingDirection,
-            levelIsConstant: levelIsConstant,
-            levels: levels,
-            linkedTo: linkedTo,
-            maxPointWidth: maxPointWidth,
-            opacity: opacity,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            sortIndex: sortIndex,
-            states: states,
-            stickyTracking: stickyTracking,
-            tooltip: tooltip,
-            turboThreshold: turboThreshold,
-            visible: visible,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsTreemap _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsTreemap._(
+              allowDrillToNode: allowDrillToNode,
+              allowPointSelect: allowPointSelect,
+              alternateStartingDirection: alternateStartingDirection,
+              animation: animation,
+              animationLimit: animationLimit,
+              borderColor: borderColor,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              colorByPoint: colorByPoint,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              crisp: crisp,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              dataLabels: dataLabels,
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              ignoreHiddenPoint: ignoreHiddenPoint,
+              interactByLeaf: interactByLeaf,
+              keys: _keys?.build(),
+              layoutAlgorithm: layoutAlgorithm,
+              layoutStartingDirection: layoutStartingDirection,
+              levelIsConstant: levelIsConstant,
+              levels: levels,
+              linkedTo: linkedTo,
+              maxPointWidth: maxPointWidth,
+              opacity: opacity,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              sortIndex: sortIndex,
+              states: states,
+              stickyTracking: stickyTracking,
+              tooltip: tooltip,
+              turboThreshold: turboThreshold,
+              visible: visible,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsTreemap', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsTreemapDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsTreemapDataLabels extends PlotOptionsTreemapDataLabels {
   @override
   final String align;
@@ -93624,44 +94105,51 @@ class PlotOptionsTreemapDataLabelsBuilder
 
   @override
   _$PlotOptionsTreemapDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsTreemapDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PlotOptionsTreemapDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsTreemapDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsTreemapDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsTreemapEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsTreemapEvents extends PlotOptionsTreemapEvents {
   @override
   final Function afterAnimate;
@@ -93821,7 +94309,7 @@ class PlotOptionsTreemapEventsBuilder
 
   @override
   _$PlotOptionsTreemapEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsTreemapEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -93831,17 +94319,11 @@ class PlotOptionsTreemapEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsTreemapLevels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsTreemapLevels extends PlotOptionsTreemapLevels {
   @override
   final String borderColor;
@@ -94001,7 +94483,7 @@ class PlotOptionsTreemapLevelsBuilder
 
   @override
   _$PlotOptionsTreemapLevels build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsTreemapLevels._(
             borderColor: borderColor,
             borderDashStyle: borderDashStyle,
@@ -94011,17 +94493,11 @@ class PlotOptionsTreemapLevelsBuilder
             layoutAlgorithm: layoutAlgorithm,
             layoutStartingDirection: layoutStartingDirection,
             level: level);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsTreemapPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsTreemapPoint extends PlotOptionsTreemapPoint {
   @override
   final PlotOptionsTreemapPointEvents events;
@@ -94095,19 +94571,26 @@ class PlotOptionsTreemapPointBuilder
 
   @override
   _$PlotOptionsTreemapPoint build() {
-    final result =
-        _$v ?? new _$PlotOptionsTreemapPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsTreemapPoint _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsTreemapPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsTreemapPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsTreemapPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsTreemapPointEvents extends PlotOptionsTreemapPointEvents {
   @override
   final Function click;
@@ -94251,7 +94734,7 @@ class PlotOptionsTreemapPointEventsBuilder
 
   @override
   _$PlotOptionsTreemapPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsTreemapPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -94260,17 +94743,11 @@ class PlotOptionsTreemapPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsTreemapStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsTreemapStates extends PlotOptionsTreemapStates {
   @override
   final PlotOptionsTreemapStatesHover hover;
@@ -94344,19 +94821,26 @@ class PlotOptionsTreemapStatesBuilder
 
   @override
   _$PlotOptionsTreemapStates build() {
-    final result =
-        _$v ?? new _$PlotOptionsTreemapStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsTreemapStates _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsTreemapStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsTreemapStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsTreemapStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsTreemapStatesHover extends PlotOptionsTreemapStatesHover {
   @override
   final JsonObject animation;
@@ -94488,7 +94972,7 @@ class PlotOptionsTreemapStatesHoverBuilder
 
   @override
   _$PlotOptionsTreemapStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsTreemapStatesHover._(
             animation: animation,
             borderColor: borderColor,
@@ -94496,17 +94980,11 @@ class PlotOptionsTreemapStatesHoverBuilder
             color: color,
             enabled: enabled,
             opacity: opacity);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsTreemapTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsTreemapTooltip extends PlotOptionsTreemapTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -94744,33 +95222,40 @@ class PlotOptionsTreemapTooltipBuilder
 
   @override
   _$PlotOptionsTreemapTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsTreemapTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsTreemapTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsTreemapTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsTreemapTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsTreemapZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsTreemapZones extends PlotOptionsTreemapZones {
   @override
   final String className;
@@ -94885,24 +95370,18 @@ class PlotOptionsTreemapZonesBuilder
 
   @override
   _$PlotOptionsTreemapZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsTreemapZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsWaterfall
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsWaterfall extends PlotOptionsWaterfall {
   @override
   final bool allowPointSelect;
@@ -95580,75 +96059,94 @@ class PlotOptionsWaterfallBuilder
 
   @override
   _$PlotOptionsWaterfall build() {
-    final result = _$v ??
-        new _$PlotOptionsWaterfall._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            colorByPoint: colorByPoint,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            crisp: crisp,
-            cursor: cursor,
-            dashStyle: dashStyle,
-            dataLabels: _dataLabels?.build(),
-            depth: depth,
-            description: description,
-            edgeColor: edgeColor,
-            edgeWidth: edgeWidth,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            groupPadding: groupPadding,
-            groupZPadding: groupZPadding,
-            grouping: grouping,
-            keys: _keys?.build(),
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            linkedTo: linkedTo,
-            maxPointWidth: maxPointWidth,
-            minPointLength: minPointLength,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointPadding: pointPadding,
-            pointPlacement: pointPlacement,
-            pointRange: pointRange,
-            pointStart: pointStart,
-            pointWidth: pointWidth,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            softThreshold: softThreshold,
-            states: states,
-            stickyTracking: stickyTracking,
-            threshold: threshold,
-            tooltip: tooltip,
-            upColor: upColor,
-            visible: visible,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$PlotOptionsWaterfall _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsWaterfall._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              colorByPoint: colorByPoint,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              crisp: crisp,
+              cursor: cursor,
+              dashStyle: dashStyle,
+              dataLabels: _dataLabels?.build(),
+              depth: depth,
+              description: description,
+              edgeColor: edgeColor,
+              edgeWidth: edgeWidth,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              groupPadding: groupPadding,
+              groupZPadding: groupZPadding,
+              grouping: grouping,
+              keys: _keys?.build(),
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              linkedTo: linkedTo,
+              maxPointWidth: maxPointWidth,
+              minPointLength: minPointLength,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointPadding: pointPadding,
+              pointPlacement: pointPlacement,
+              pointRange: pointRange,
+              pointStart: pointStart,
+              pointWidth: pointWidth,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              softThreshold: softThreshold,
+              states: states,
+              stickyTracking: stickyTracking,
+              threshold: threshold,
+              tooltip: tooltip,
+              upColor: upColor,
+              visible: visible,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsWaterfall', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsWaterfallDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsWaterfallDataLabels extends PlotOptionsWaterfallDataLabels {
   @override
   final String align;
@@ -96003,44 +96501,51 @@ class PlotOptionsWaterfallDataLabelsBuilder
 
   @override
   _$PlotOptionsWaterfallDataLabels build() {
-    final result = _$v ??
-        new _$PlotOptionsWaterfallDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$PlotOptionsWaterfallDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsWaterfallDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsWaterfallDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsWaterfallEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsWaterfallEvents extends PlotOptionsWaterfallEvents {
   @override
   final Function afterAnimate;
@@ -96200,7 +96705,7 @@ class PlotOptionsWaterfallEventsBuilder
 
   @override
   _$PlotOptionsWaterfallEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsWaterfallEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -96210,17 +96715,11 @@ class PlotOptionsWaterfallEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsWaterfallPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsWaterfallPoint extends PlotOptionsWaterfallPoint {
   @override
   final PlotOptionsWaterfallPointEvents events;
@@ -96294,19 +96793,26 @@ class PlotOptionsWaterfallPointBuilder
 
   @override
   _$PlotOptionsWaterfallPoint build() {
-    final result =
-        _$v ?? new _$PlotOptionsWaterfallPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsWaterfallPoint _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsWaterfallPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsWaterfallPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsWaterfallPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsWaterfallPointEvents
     extends PlotOptionsWaterfallPointEvents {
   @override
@@ -96451,7 +96957,7 @@ class PlotOptionsWaterfallPointEventsBuilder
 
   @override
   _$PlotOptionsWaterfallPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsWaterfallPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -96460,17 +96966,11 @@ class PlotOptionsWaterfallPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsWaterfallStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsWaterfallStates extends PlotOptionsWaterfallStates {
   @override
   final PlotOptionsWaterfallStatesHover hover;
@@ -96544,19 +97044,26 @@ class PlotOptionsWaterfallStatesBuilder
 
   @override
   _$PlotOptionsWaterfallStates build() {
-    final result =
-        _$v ?? new _$PlotOptionsWaterfallStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$PlotOptionsWaterfallStates _$result;
+    try {
+      _$result =
+          _$v ?? new _$PlotOptionsWaterfallStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsWaterfallStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsWaterfallStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsWaterfallStatesHover
     extends PlotOptionsWaterfallStatesHover {
   @override
@@ -96689,7 +97196,7 @@ class PlotOptionsWaterfallStatesHoverBuilder
 
   @override
   _$PlotOptionsWaterfallStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsWaterfallStatesHover._(
             animation: animation,
             borderColor: borderColor,
@@ -96697,17 +97204,11 @@ class PlotOptionsWaterfallStatesHoverBuilder
             color: color,
             enabled: enabled,
             halo: halo);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsWaterfallStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsWaterfallStatesHoverHalo
     extends PlotOptionsWaterfallStatesHoverHalo {
   @override
@@ -96803,20 +97304,14 @@ class PlotOptionsWaterfallStatesHoverHaloBuilder
 
   @override
   _$PlotOptionsWaterfallStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsWaterfallStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsWaterfallTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsWaterfallTooltip extends PlotOptionsWaterfallTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -97055,33 +97550,40 @@ class PlotOptionsWaterfallTooltipBuilder
 
   @override
   _$PlotOptionsWaterfallTooltip build() {
-    final result = _$v ??
-        new _$PlotOptionsWaterfallTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$PlotOptionsWaterfallTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$PlotOptionsWaterfallTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'PlotOptionsWaterfallTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class PlotOptionsWaterfallZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$PlotOptionsWaterfallZones extends PlotOptionsWaterfallZones {
   @override
   final String className;
@@ -97196,14 +97698,14 @@ class PlotOptionsWaterfallZonesBuilder
 
   @override
   _$PlotOptionsWaterfallZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$PlotOptionsWaterfallZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

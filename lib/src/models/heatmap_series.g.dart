@@ -4,8 +4,15 @@ part of heatmap_series;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library heatmap_series
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<HeatmapSeries> _$heatmapSeriesSerializer =
     new _$HeatmapSeriesSerializer();
@@ -1874,12 +1881,6 @@ class _$HeatmapSeriesZonesSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class HeatmapSeries
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$HeatmapSeries extends HeatmapSeries {
   @override
   final bool allowPointSelect;
@@ -2196,7 +2197,7 @@ class _$HeatmapSeries extends HeatmapSeries {
 }
 
 class HeatmapSeriesBuilder
-    implements Builder<HeatmapSeries, HeatmapSeriesBuilder> {
+    implements Builder<HeatmapSeries, HeatmapSeriesBuilder>, SeriesBuilder {
   _$HeatmapSeries _$v;
 
   bool _allowPointSelect;
@@ -2469,7 +2470,7 @@ class HeatmapSeriesBuilder
   }
 
   @override
-  void replace(HeatmapSeries other) {
+  void replace(covariant HeatmapSeries other) {
     if (other == null) throw new ArgumentError.notNull('other');
     _$v = other as _$HeatmapSeries;
   }
@@ -2481,68 +2482,87 @@ class HeatmapSeriesBuilder
 
   @override
   _$HeatmapSeries build() {
-    final result = _$v ??
-        new _$HeatmapSeries._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            colorByPoint: colorByPoint,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            colsize: colsize,
-            crisp: crisp,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            data: data,
-            dataLabels: _dataLabels?.build(),
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            id: id,
-            index: index,
-            keys: _keys?.build(),
-            legendIndex: legendIndex,
-            linkedTo: linkedTo,
-            maxPointWidth: maxPointWidth,
-            name: name,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            rowsize: rowsize,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            states: states,
-            stickyTracking: stickyTracking,
-            tooltip: tooltip,
-            turboThreshold: turboThreshold,
-            type: type,
-            visible: visible,
-            xAxis: xAxis,
-            yAxis: yAxis,
-            zIndex: zIndex,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$HeatmapSeries _$result;
+    try {
+      _$result = _$v ??
+          new _$HeatmapSeries._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              colorByPoint: colorByPoint,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              colsize: colsize,
+              crisp: crisp,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              data: data,
+              dataLabels: _dataLabels?.build(),
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              id: id,
+              index: index,
+              keys: _keys?.build(),
+              legendIndex: legendIndex,
+              linkedTo: linkedTo,
+              maxPointWidth: maxPointWidth,
+              name: name,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              rowsize: rowsize,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              states: states,
+              stickyTracking: stickyTracking,
+              tooltip: tooltip,
+              turboThreshold: turboThreshold,
+              type: type,
+              visible: visible,
+              xAxis: xAxis,
+              yAxis: yAxis,
+              zIndex: zIndex,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'HeatmapSeries', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class HeatmapSeriesData
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesData extends HeatmapSeriesData {
   @override
   final String className;
@@ -2770,7 +2790,7 @@ class HeatmapSeriesDataBuilder
 
   @override
   _$HeatmapSeriesData build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$HeatmapSeriesData._(
             className: className,
             color: color,
@@ -2786,17 +2806,11 @@ class HeatmapSeriesDataBuilder
             value: value,
             x: x,
             y: y);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class HeatmapSeriesDataEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesDataEvents extends HeatmapSeriesDataEvents {
   @override
   final Function click;
@@ -2939,7 +2953,7 @@ class HeatmapSeriesDataEventsBuilder
 
   @override
   _$HeatmapSeriesDataEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$HeatmapSeriesDataEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -2948,17 +2962,11 @@ class HeatmapSeriesDataEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class HeatmapSeriesDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesDataLabels extends HeatmapSeriesDataLabels {
   @override
   final String align;
@@ -3312,44 +3320,51 @@ class HeatmapSeriesDataLabelsBuilder
 
   @override
   _$HeatmapSeriesDataLabels build() {
-    final result = _$v ??
-        new _$HeatmapSeriesDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$HeatmapSeriesDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$HeatmapSeriesDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'HeatmapSeriesDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class HeatmapSeriesEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesEvents extends HeatmapSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3506,7 +3521,7 @@ class HeatmapSeriesEventsBuilder
 
   @override
   _$HeatmapSeriesEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$HeatmapSeriesEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -3516,17 +3531,11 @@ class HeatmapSeriesEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class HeatmapSeriesPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesPoint extends HeatmapSeriesPoint {
   @override
   final HeatmapSeriesPointEvents events;
@@ -3596,18 +3605,25 @@ class HeatmapSeriesPointBuilder
 
   @override
   _$HeatmapSeriesPoint build() {
-    final result = _$v ?? new _$HeatmapSeriesPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$HeatmapSeriesPoint _$result;
+    try {
+      _$result = _$v ?? new _$HeatmapSeriesPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'HeatmapSeriesPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class HeatmapSeriesPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesPointEvents extends HeatmapSeriesPointEvents {
   @override
   final Function click;
@@ -3750,7 +3766,7 @@ class HeatmapSeriesPointEventsBuilder
 
   @override
   _$HeatmapSeriesPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$HeatmapSeriesPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -3759,17 +3775,11 @@ class HeatmapSeriesPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class HeatmapSeriesStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesStates extends HeatmapSeriesStates {
   @override
   final HeatmapSeriesStatesHover hover;
@@ -3839,18 +3849,25 @@ class HeatmapSeriesStatesBuilder
 
   @override
   _$HeatmapSeriesStates build() {
-    final result = _$v ?? new _$HeatmapSeriesStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$HeatmapSeriesStates _$result;
+    try {
+      _$result = _$v ?? new _$HeatmapSeriesStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'HeatmapSeriesStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class HeatmapSeriesStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesStatesHover extends HeatmapSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -3981,7 +3998,7 @@ class HeatmapSeriesStatesHoverBuilder
 
   @override
   _$HeatmapSeriesStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$HeatmapSeriesStatesHover._(
             animation: animation,
             borderColor: borderColor,
@@ -3989,17 +4006,11 @@ class HeatmapSeriesStatesHoverBuilder
             color: color,
             enabled: enabled,
             halo: halo);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class HeatmapSeriesStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesStatesHoverHalo extends HeatmapSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -4092,20 +4103,14 @@ class HeatmapSeriesStatesHoverHaloBuilder
 
   @override
   _$HeatmapSeriesStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$HeatmapSeriesStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class HeatmapSeriesTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesTooltip extends HeatmapSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4341,33 +4346,40 @@ class HeatmapSeriesTooltipBuilder
 
   @override
   _$HeatmapSeriesTooltip build() {
-    final result = _$v ??
-        new _$HeatmapSeriesTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$HeatmapSeriesTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$HeatmapSeriesTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'HeatmapSeriesTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class HeatmapSeriesZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$HeatmapSeriesZones extends HeatmapSeriesZones {
   @override
   final String className;
@@ -4479,14 +4491,14 @@ class HeatmapSeriesZonesBuilder
 
   @override
   _$HeatmapSeriesZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$HeatmapSeriesZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

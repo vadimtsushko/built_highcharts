@@ -15,7 +15,7 @@ void time_data_with_irregular_intervals(_) {
     ..tooltip.pointFormat = '{point.x:%e. %b}; {point.y:.2f} m'
     ..plotOptions.spline.marker.enabled = true
     ..series.addAll([
-      new Series((b) => b
+      new SplineSeries((b) => b
         ..name = 'Winter 2012-2013'
         ..data = jsonObject([
           [jsDate(1970, 9, 21), 0],
@@ -37,7 +37,7 @@ void time_data_with_irregular_intervals(_) {
           [jsDate(1971, 4, 19), 1.15],
           [jsDate(1971, 5, 3), 0]
         ])),
-      new Series((b) => b
+      new SplineSeries((b) => b
         ..name = 'Winter 2013-2014'
         ..data = jsonObject([
           [jsDate(1970, 9, 29), 0],

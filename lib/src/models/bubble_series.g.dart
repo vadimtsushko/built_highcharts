@@ -4,8 +4,15 @@ part of bubble_series;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library bubble_series
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<BubbleSeries> _$bubbleSeriesSerializer =
     new _$BubbleSeriesSerializer();
@@ -2446,12 +2453,6 @@ class _$BubbleSeriesZonesSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BubbleSeries
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BubbleSeries extends BubbleSeries {
   @override
   final bool allowPointSelect;
@@ -2803,7 +2804,7 @@ class _$BubbleSeries extends BubbleSeries {
 }
 
 class BubbleSeriesBuilder
-    implements Builder<BubbleSeries, BubbleSeriesBuilder> {
+    implements Builder<BubbleSeries, BubbleSeriesBuilder>, SeriesBuilder {
   _$BubbleSeries _$v;
 
   bool _allowPointSelect;
@@ -3114,7 +3115,7 @@ class BubbleSeriesBuilder
   }
 
   @override
-  void replace(BubbleSeries other) {
+  void replace(covariant BubbleSeries other) {
     if (other == null) throw new ArgumentError.notNull('other');
     _$v = other as _$BubbleSeries;
   }
@@ -3126,75 +3127,91 @@ class BubbleSeriesBuilder
 
   @override
   _$BubbleSeries build() {
-    final result = _$v ??
-        new _$BubbleSeries._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorIndex: colorIndex,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            dashStyle: dashStyle,
-            data: data,
-            dataLabels: _dataLabels?.build(),
-            description: description,
-            displayNegative: displayNegative,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            id: id,
-            index: index,
-            keys: _keys?.build(),
-            legendIndex: legendIndex,
-            lineWidth: lineWidth,
-            linkedTo: linkedTo,
-            marker: marker,
-            maxSize: maxSize,
-            minSize: minSize,
-            name: name,
-            negativeColor: negativeColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointStart: pointStart,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            sizeBy: sizeBy,
-            sizeByAbsoluteValue: sizeByAbsoluteValue,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            softThreshold: softThreshold,
-            states: states,
-            stickyTracking: stickyTracking,
-            threshold: threshold,
-            tooltip: tooltip,
-            type: type,
-            visible: visible,
-            xAxis: xAxis,
-            yAxis: yAxis,
-            zIndex: zIndex,
-            zMax: zMax,
-            zMin: zMin,
-            zThreshold: zThreshold,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$BubbleSeries _$result;
+    try {
+      _$result = _$v ??
+          new _$BubbleSeries._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorIndex: colorIndex,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              dashStyle: dashStyle,
+              data: data,
+              dataLabels: _dataLabels?.build(),
+              description: description,
+              displayNegative: displayNegative,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              id: id,
+              index: index,
+              keys: _keys?.build(),
+              legendIndex: legendIndex,
+              lineWidth: lineWidth,
+              linkedTo: linkedTo,
+              marker: marker,
+              maxSize: maxSize,
+              minSize: minSize,
+              name: name,
+              negativeColor: negativeColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointStart: pointStart,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              sizeBy: sizeBy,
+              sizeByAbsoluteValue: sizeByAbsoluteValue,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              softThreshold: softThreshold,
+              states: states,
+              stickyTracking: stickyTracking,
+              threshold: threshold,
+              tooltip: tooltip,
+              type: type,
+              visible: visible,
+              xAxis: xAxis,
+              yAxis: yAxis,
+              zIndex: zIndex,
+              zMax: zMax,
+              zMin: zMin,
+              zThreshold: zThreshold,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'BubbleSeries', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BubbleSeriesData
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BubbleSeriesData extends BubbleSeriesData {
   @override
   final String className;
@@ -3422,7 +3439,7 @@ class BubbleSeriesDataBuilder
 
   @override
   _$BubbleSeriesData build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BubbleSeriesData._(
             className: className,
             color: color,
@@ -3438,17 +3455,11 @@ class BubbleSeriesDataBuilder
             x: x,
             y: y,
             z: z);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BubbleSeriesDataEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BubbleSeriesDataEvents extends BubbleSeriesDataEvents {
   @override
   final Function click;
@@ -3590,7 +3601,7 @@ class BubbleSeriesDataEventsBuilder
 
   @override
   _$BubbleSeriesDataEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BubbleSeriesDataEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -3599,17 +3610,11 @@ class BubbleSeriesDataEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BubbleSeriesDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BubbleSeriesDataLabels extends BubbleSeriesDataLabels {
   @override
   final String align;
@@ -3962,44 +3967,51 @@ class BubbleSeriesDataLabelsBuilder
 
   @override
   _$BubbleSeriesDataLabels build() {
-    final result = _$v ??
-        new _$BubbleSeriesDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$BubbleSeriesDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$BubbleSeriesDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'BubbleSeriesDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BubbleSeriesEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BubbleSeriesEvents extends BubbleSeriesEvents {
   @override
   final Function afterAnimate;
@@ -4156,7 +4168,7 @@ class BubbleSeriesEventsBuilder
 
   @override
   _$BubbleSeriesEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BubbleSeriesEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -4166,17 +4178,11 @@ class BubbleSeriesEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BubbleSeriesMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BubbleSeriesMarker extends BubbleSeriesMarker {
   @override
   final bool enabled;
@@ -4329,27 +4335,34 @@ class BubbleSeriesMarkerBuilder
 
   @override
   _$BubbleSeriesMarker build() {
-    final result = _$v ??
-        new _$BubbleSeriesMarker._(
-            enabled: enabled,
-            fillColor: fillColor,
-            height: height,
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            states: _states?.build(),
-            symbol: symbol,
-            width: width);
-    replace(result);
-    return result;
+    _$BubbleSeriesMarker _$result;
+    try {
+      _$result = _$v ??
+          new _$BubbleSeriesMarker._(
+              enabled: enabled,
+              fillColor: fillColor,
+              height: height,
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              states: _states?.build(),
+              symbol: symbol,
+              width: width);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'states';
+        _states?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'BubbleSeriesMarker', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BubbleSeriesMarkerStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BubbleSeriesMarkerStates extends BubbleSeriesMarkerStates {
   @override
   final BubbleSeriesMarkerStatesHover hover;
@@ -4433,20 +4446,29 @@ class BubbleSeriesMarkerStatesBuilder
 
   @override
   _$BubbleSeriesMarkerStates build() {
-    final result = _$v ??
-        new _$BubbleSeriesMarkerStates._(
-            hover: _hover?.build(), select: _select?.build());
-    replace(result);
-    return result;
+    _$BubbleSeriesMarkerStates _$result;
+    try {
+      _$result = _$v ??
+          new _$BubbleSeriesMarkerStates._(
+              hover: _hover?.build(), select: _select?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+        _$failedField = 'select';
+        _select?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'BubbleSeriesMarkerStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BubbleSeriesMarkerStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BubbleSeriesMarkerStatesHover extends BubbleSeriesMarkerStatesHover {
   @override
   final bool enabled;
@@ -4590,7 +4612,7 @@ class BubbleSeriesMarkerStatesHoverBuilder
 
   @override
   _$BubbleSeriesMarkerStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BubbleSeriesMarkerStatesHover._(
             enabled: enabled,
             fillColor: fillColor,
@@ -4599,17 +4621,11 @@ class BubbleSeriesMarkerStatesHoverBuilder
             lineWidthPlus: lineWidthPlus,
             radius: radius,
             radiusPlus: radiusPlus);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BubbleSeriesMarkerStatesSelect
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BubbleSeriesMarkerStatesSelect extends BubbleSeriesMarkerStatesSelect {
   @override
   final bool enabled;
@@ -4729,24 +4745,18 @@ class BubbleSeriesMarkerStatesSelectBuilder
 
   @override
   _$BubbleSeriesMarkerStatesSelect build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BubbleSeriesMarkerStatesSelect._(
             enabled: enabled,
             fillColor: fillColor,
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BubbleSeriesPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BubbleSeriesPoint extends BubbleSeriesPoint {
   @override
   final BubbleSeriesPointEvents events;
@@ -4816,18 +4826,25 @@ class BubbleSeriesPointBuilder
 
   @override
   _$BubbleSeriesPoint build() {
-    final result = _$v ?? new _$BubbleSeriesPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$BubbleSeriesPoint _$result;
+    try {
+      _$result = _$v ?? new _$BubbleSeriesPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'BubbleSeriesPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BubbleSeriesPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BubbleSeriesPointEvents extends BubbleSeriesPointEvents {
   @override
   final Function click;
@@ -4970,7 +4987,7 @@ class BubbleSeriesPointEventsBuilder
 
   @override
   _$BubbleSeriesPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BubbleSeriesPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -4979,17 +4996,11 @@ class BubbleSeriesPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BubbleSeriesStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BubbleSeriesStates extends BubbleSeriesStates {
   @override
   final BubbleSeriesStatesHover hover;
@@ -5059,18 +5070,25 @@ class BubbleSeriesStatesBuilder
 
   @override
   _$BubbleSeriesStates build() {
-    final result = _$v ?? new _$BubbleSeriesStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$BubbleSeriesStates _$result;
+    try {
+      _$result = _$v ?? new _$BubbleSeriesStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'BubbleSeriesStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BubbleSeriesStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BubbleSeriesStatesHover extends BubbleSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -5203,25 +5221,32 @@ class BubbleSeriesStatesHoverBuilder
 
   @override
   _$BubbleSeriesStatesHover build() {
-    final result = _$v ??
-        new _$BubbleSeriesStatesHover._(
-            animation: animation,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$BubbleSeriesStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$BubbleSeriesStatesHover._(
+              animation: animation,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'BubbleSeriesStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BubbleSeriesStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BubbleSeriesStatesHoverHalo extends BubbleSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -5314,20 +5339,14 @@ class BubbleSeriesStatesHoverHaloBuilder
 
   @override
   _$BubbleSeriesStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BubbleSeriesStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BubbleSeriesStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BubbleSeriesStatesHoverMarker extends BubbleSeriesStatesHoverMarker {
   @override
   final bool enabled;
@@ -5497,7 +5516,7 @@ class BubbleSeriesStatesHoverMarkerBuilder
 
   @override
   _$BubbleSeriesStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BubbleSeriesStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -5508,17 +5527,11 @@ class BubbleSeriesStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BubbleSeriesTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BubbleSeriesTooltip extends BubbleSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -5753,33 +5766,40 @@ class BubbleSeriesTooltipBuilder
 
   @override
   _$BubbleSeriesTooltip build() {
-    final result = _$v ??
-        new _$BubbleSeriesTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$BubbleSeriesTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$BubbleSeriesTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'BubbleSeriesTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BubbleSeriesZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BubbleSeriesZones extends BubbleSeriesZones {
   @override
   final String className;
@@ -5891,14 +5911,14 @@ class BubbleSeriesZonesBuilder
 
   @override
   _$BubbleSeriesZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BubbleSeriesZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

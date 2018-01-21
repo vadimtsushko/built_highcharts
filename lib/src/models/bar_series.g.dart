@@ -4,8 +4,15 @@ part of bar_series;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library bar_series
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<BarSeries> _$barSeriesSerializer = new _$BarSeriesSerializer();
 Serializer<BarSeriesData> _$barSeriesDataSerializer =
@@ -2016,12 +2023,6 @@ class _$BarSeriesZonesSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BarSeries
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BarSeries extends BarSeries {
   @override
   final bool allowPointSelect;
@@ -2422,7 +2423,8 @@ class _$BarSeries extends BarSeries {
   }
 }
 
-class BarSeriesBuilder implements Builder<BarSeries, BarSeriesBuilder> {
+class BarSeriesBuilder
+    implements Builder<BarSeries, BarSeriesBuilder>, SeriesBuilder {
   _$BarSeries _$v;
 
   bool _allowPointSelect;
@@ -2785,7 +2787,7 @@ class BarSeriesBuilder implements Builder<BarSeries, BarSeriesBuilder> {
   }
 
   @override
-  void replace(BarSeries other) {
+  void replace(covariant BarSeries other) {
     if (other == null) throw new ArgumentError.notNull('other');
     _$v = other as _$BarSeries;
   }
@@ -2797,85 +2799,104 @@ class BarSeriesBuilder implements Builder<BarSeries, BarSeriesBuilder> {
 
   @override
   _$BarSeries build() {
-    final result = _$v ??
-        new _$BarSeries._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            colorByPoint: colorByPoint,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            crisp: crisp,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            data: data,
-            dataLabels: _dataLabels?.build(),
-            depth: depth,
-            description: description,
-            edgeColor: edgeColor,
-            edgeWidth: edgeWidth,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            groupPadding: groupPadding,
-            groupZPadding: groupZPadding,
-            grouping: grouping,
-            id: id,
-            index: index,
-            keys: _keys?.build(),
-            legendIndex: legendIndex,
-            linkedTo: linkedTo,
-            maxPointWidth: maxPointWidth,
-            minPointLength: minPointLength,
-            name: name,
-            negativeColor: negativeColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointPadding: pointPadding,
-            pointPlacement: pointPlacement,
-            pointRange: pointRange,
-            pointStart: pointStart,
-            pointWidth: pointWidth,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            softThreshold: softThreshold,
-            stack: stack,
-            stacking: stacking,
-            states: states,
-            stickyTracking: stickyTracking,
-            threshold: threshold,
-            tooltip: tooltip,
-            turboThreshold: turboThreshold,
-            type: type,
-            visible: visible,
-            xAxis: xAxis,
-            yAxis: yAxis,
-            zIndex: zIndex,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$BarSeries _$result;
+    try {
+      _$result = _$v ??
+          new _$BarSeries._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              colorByPoint: colorByPoint,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              crisp: crisp,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              data: data,
+              dataLabels: _dataLabels?.build(),
+              depth: depth,
+              description: description,
+              edgeColor: edgeColor,
+              edgeWidth: edgeWidth,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              groupPadding: groupPadding,
+              groupZPadding: groupZPadding,
+              grouping: grouping,
+              id: id,
+              index: index,
+              keys: _keys?.build(),
+              legendIndex: legendIndex,
+              linkedTo: linkedTo,
+              maxPointWidth: maxPointWidth,
+              minPointLength: minPointLength,
+              name: name,
+              negativeColor: negativeColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointPadding: pointPadding,
+              pointPlacement: pointPlacement,
+              pointRange: pointRange,
+              pointStart: pointStart,
+              pointWidth: pointWidth,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              softThreshold: softThreshold,
+              stack: stack,
+              stacking: stacking,
+              states: states,
+              stickyTracking: stickyTracking,
+              threshold: threshold,
+              tooltip: tooltip,
+              turboThreshold: turboThreshold,
+              type: type,
+              visible: visible,
+              xAxis: xAxis,
+              yAxis: yAxis,
+              zIndex: zIndex,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'BarSeries', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BarSeriesData
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BarSeriesData extends BarSeriesData {
   @override
   final String className;
@@ -3088,7 +3109,7 @@ class BarSeriesDataBuilder
 
   @override
   _$BarSeriesData build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BarSeriesData._(
             className: className,
             color: color,
@@ -3103,17 +3124,11 @@ class BarSeriesDataBuilder
             selected: selected,
             x: x,
             y: y);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BarSeriesDataEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BarSeriesDataEvents extends BarSeriesDataEvents {
   @override
   final Function click;
@@ -3253,7 +3268,7 @@ class BarSeriesDataEventsBuilder
 
   @override
   _$BarSeriesDataEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BarSeriesDataEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -3262,17 +3277,11 @@ class BarSeriesDataEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BarSeriesDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BarSeriesDataLabels extends BarSeriesDataLabels {
   @override
   final String align;
@@ -3623,44 +3632,51 @@ class BarSeriesDataLabelsBuilder
 
   @override
   _$BarSeriesDataLabels build() {
-    final result = _$v ??
-        new _$BarSeriesDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$BarSeriesDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$BarSeriesDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'BarSeriesDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BarSeriesEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BarSeriesEvents extends BarSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3817,7 +3833,7 @@ class BarSeriesEventsBuilder
 
   @override
   _$BarSeriesEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BarSeriesEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -3827,17 +3843,11 @@ class BarSeriesEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BarSeriesPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BarSeriesPoint extends BarSeriesPoint {
   @override
   final BarSeriesPointEvents events;
@@ -3907,18 +3917,25 @@ class BarSeriesPointBuilder
 
   @override
   _$BarSeriesPoint build() {
-    final result = _$v ?? new _$BarSeriesPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$BarSeriesPoint _$result;
+    try {
+      _$result = _$v ?? new _$BarSeriesPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'BarSeriesPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BarSeriesPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BarSeriesPointEvents extends BarSeriesPointEvents {
   @override
   final Function click;
@@ -4059,7 +4076,7 @@ class BarSeriesPointEventsBuilder
 
   @override
   _$BarSeriesPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BarSeriesPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -4068,17 +4085,11 @@ class BarSeriesPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BarSeriesStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BarSeriesStates extends BarSeriesStates {
   @override
   final BarSeriesStatesHover hover;
@@ -4147,18 +4158,25 @@ class BarSeriesStatesBuilder
 
   @override
   _$BarSeriesStates build() {
-    final result = _$v ?? new _$BarSeriesStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$BarSeriesStates _$result;
+    try {
+      _$result = _$v ?? new _$BarSeriesStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'BarSeriesStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BarSeriesStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BarSeriesStatesHover extends BarSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -4287,7 +4305,7 @@ class BarSeriesStatesHoverBuilder
 
   @override
   _$BarSeriesStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BarSeriesStatesHover._(
             animation: animation,
             borderColor: borderColor,
@@ -4295,17 +4313,11 @@ class BarSeriesStatesHoverBuilder
             color: color,
             enabled: enabled,
             halo: halo);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BarSeriesStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BarSeriesStatesHoverHalo extends BarSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -4397,20 +4409,14 @@ class BarSeriesStatesHoverHaloBuilder
 
   @override
   _$BarSeriesStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BarSeriesStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BarSeriesTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BarSeriesTooltip extends BarSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4645,33 +4651,40 @@ class BarSeriesTooltipBuilder
 
   @override
   _$BarSeriesTooltip build() {
-    final result = _$v ??
-        new _$BarSeriesTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$BarSeriesTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$BarSeriesTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'BarSeriesTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class BarSeriesZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$BarSeriesZones extends BarSeriesZones {
   @override
   final String className;
@@ -4783,14 +4796,14 @@ class BarSeriesZonesBuilder
 
   @override
   _$BarSeriesZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$BarSeriesZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

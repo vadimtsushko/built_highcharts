@@ -4,8 +4,15 @@ part of subtitle;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library subtitle
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<Subtitle> _$subtitleSerializer = new _$SubtitleSerializer();
 
@@ -135,12 +142,6 @@ class _$SubtitleSerializer implements StructuredSerializer<Subtitle> {
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class Subtitle
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$Subtitle extends Subtitle {
   @override
   final String align;
@@ -304,18 +305,31 @@ class SubtitleBuilder implements Builder<Subtitle, SubtitleBuilder> {
 
   @override
   _$Subtitle build() {
-    final result = _$v ??
-        new _$Subtitle._(
-            align: align,
-            floating: floating,
-            style: _style?.build(),
-            text: text,
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            widthAdjust: widthAdjust,
-            x: x,
-            y: y);
-    replace(result);
-    return result;
+    _$Subtitle _$result;
+    try {
+      _$result = _$v ??
+          new _$Subtitle._(
+              align: align,
+              floating: floating,
+              style: _style?.build(),
+              text: text,
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              widthAdjust: widthAdjust,
+              x: x,
+              y: y);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'Subtitle', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }

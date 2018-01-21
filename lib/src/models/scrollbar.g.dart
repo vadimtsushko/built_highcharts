@@ -4,8 +4,15 @@ part of scrollbar;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library scrollbar
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<Scrollbar> _$scrollbarSerializer = new _$ScrollbarSerializer();
 
@@ -81,12 +88,6 @@ class _$ScrollbarSerializer implements StructuredSerializer<Scrollbar> {
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class Scrollbar
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$Scrollbar extends Scrollbar {
   @override
   final bool enabled;
@@ -184,13 +185,13 @@ class ScrollbarBuilder implements Builder<Scrollbar, ScrollbarBuilder> {
 
   @override
   _$Scrollbar build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$Scrollbar._(
             enabled: enabled,
             liveRedraw: liveRedraw,
             showFull: showFull,
             zIndex: zIndex);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

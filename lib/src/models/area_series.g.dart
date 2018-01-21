@@ -4,8 +4,15 @@ part of area_series;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library area_series
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<AreaSeries> _$areaSeriesSerializer = new _$AreaSeriesSerializer();
 Serializer<AreaSeriesData> _$areaSeriesDataSerializer =
@@ -2986,12 +2993,6 @@ class _$AreaSeriesZonesSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeries
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeries extends AreaSeries {
   @override
   final bool allowPointSelect;
@@ -3367,7 +3368,8 @@ class _$AreaSeries extends AreaSeries {
   }
 }
 
-class AreaSeriesBuilder implements Builder<AreaSeries, AreaSeriesBuilder> {
+class AreaSeriesBuilder
+    implements Builder<AreaSeries, AreaSeriesBuilder>, SeriesBuilder {
   _$AreaSeries _$v;
 
   bool _allowPointSelect;
@@ -3705,7 +3707,7 @@ class AreaSeriesBuilder implements Builder<AreaSeries, AreaSeriesBuilder> {
   }
 
   @override
-  void replace(AreaSeries other) {
+  void replace(covariant AreaSeries other) {
     if (other == null) throw new ArgumentError.notNull('other');
     _$v = other as _$AreaSeries;
   }
@@ -3717,80 +3719,99 @@ class AreaSeriesBuilder implements Builder<AreaSeries, AreaSeriesBuilder> {
 
   @override
   _$AreaSeries build() {
-    final result = _$v ??
-        new _$AreaSeries._(
-            allowPointSelect: allowPointSelect,
-            animation: animation,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorIndex: colorIndex,
-            connectEnds: connectEnds,
-            connectNulls: connectNulls,
-            cropThreshold: cropThreshold,
-            cursor: cursor,
-            dashStyle: dashStyle,
-            data: data,
-            dataLabels: _dataLabels?.build(),
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            fillColor: fillColor,
-            fillOpacity: fillOpacity,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            id: id,
-            index: index,
-            keys: _keys?.build(),
-            legendIndex: legendIndex,
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            linecap: linecap,
-            linkedTo: linkedTo,
-            marker: _marker?.build(),
-            name: name,
-            negativeColor: negativeColor,
-            negativeFillColor: negativeFillColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointPlacement: pointPlacement,
-            pointStart: pointStart,
-            selected: selected,
-            shadow: shadow,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            softThreshold: softThreshold,
-            stack: stack,
-            stacking: stacking,
-            states: states,
-            step: step,
-            stickyTracking: stickyTracking,
-            threshold: threshold,
-            tooltip: tooltip,
-            trackByArea: trackByArea,
-            turboThreshold: turboThreshold,
-            type: type,
-            visible: visible,
-            xAxis: xAxis,
-            yAxis: yAxis,
-            zIndex: zIndex,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$AreaSeries _$result;
+    try {
+      _$result = _$v ??
+          new _$AreaSeries._(
+              allowPointSelect: allowPointSelect,
+              animation: animation,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorIndex: colorIndex,
+              connectEnds: connectEnds,
+              connectNulls: connectNulls,
+              cropThreshold: cropThreshold,
+              cursor: cursor,
+              dashStyle: dashStyle,
+              data: data,
+              dataLabels: _dataLabels?.build(),
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              fillColor: fillColor,
+              fillOpacity: fillOpacity,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              id: id,
+              index: index,
+              keys: _keys?.build(),
+              legendIndex: legendIndex,
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              linecap: linecap,
+              linkedTo: linkedTo,
+              marker: _marker?.build(),
+              name: name,
+              negativeColor: negativeColor,
+              negativeFillColor: negativeFillColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointPlacement: pointPlacement,
+              pointStart: pointStart,
+              selected: selected,
+              shadow: shadow,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              softThreshold: softThreshold,
+              stack: stack,
+              stacking: stacking,
+              states: states,
+              step: step,
+              stickyTracking: stickyTracking,
+              threshold: threshold,
+              tooltip: tooltip,
+              trackByArea: trackByArea,
+              turboThreshold: turboThreshold,
+              type: type,
+              visible: visible,
+              xAxis: xAxis,
+              yAxis: yAxis,
+              zIndex: zIndex,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'marker';
+        _marker?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'AreaSeries', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesData
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesData extends AreaSeriesData {
   @override
   final String className;
@@ -4019,33 +4040,40 @@ class AreaSeriesDataBuilder
 
   @override
   _$AreaSeriesData build() {
-    final result = _$v ??
-        new _$AreaSeriesData._(
-            className: className,
-            color: color,
-            colorIndex: colorIndex,
-            dataLabels: dataLabels,
-            description: description,
-            drilldown: drilldown,
-            events: events,
-            id: id,
-            labelrank: labelrank,
-            marker: _marker?.build(),
-            name: name,
-            selected: selected,
-            x: x,
-            y: y);
-    replace(result);
-    return result;
+    _$AreaSeriesData _$result;
+    try {
+      _$result = _$v ??
+          new _$AreaSeriesData._(
+              className: className,
+              color: color,
+              colorIndex: colorIndex,
+              dataLabels: dataLabels,
+              description: description,
+              drilldown: drilldown,
+              events: events,
+              id: id,
+              labelrank: labelrank,
+              marker: _marker?.build(),
+              name: name,
+              selected: selected,
+              x: x,
+              y: y);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'AreaSeriesData', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesDataEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesDataEvents extends AreaSeriesDataEvents {
   @override
   final Function click;
@@ -4186,7 +4214,7 @@ class AreaSeriesDataEventsBuilder
 
   @override
   _$AreaSeriesDataEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$AreaSeriesDataEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -4195,17 +4223,11 @@ class AreaSeriesDataEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesDataMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesDataMarker extends AreaSeriesDataMarker {
   @override
   final bool enabled;
@@ -4374,28 +4396,35 @@ class AreaSeriesDataMarkerBuilder
 
   @override
   _$AreaSeriesDataMarker build() {
-    final result = _$v ??
-        new _$AreaSeriesDataMarker._(
-            enabled: enabled,
-            fillColor: fillColor,
-            height: height,
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            radius: radius,
-            states: _states?.build(),
-            symbol: symbol,
-            width: width);
-    replace(result);
-    return result;
+    _$AreaSeriesDataMarker _$result;
+    try {
+      _$result = _$v ??
+          new _$AreaSeriesDataMarker._(
+              enabled: enabled,
+              fillColor: fillColor,
+              height: height,
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              radius: radius,
+              states: _states?.build(),
+              symbol: symbol,
+              width: width);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'states';
+        _states?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'AreaSeriesDataMarker', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesDataMarkerStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesDataMarkerStates extends AreaSeriesDataMarkerStates {
   @override
   final AreaSeriesDataMarkerStatesHover hover;
@@ -4469,19 +4498,26 @@ class AreaSeriesDataMarkerStatesBuilder
 
   @override
   _$AreaSeriesDataMarkerStates build() {
-    final result =
-        _$v ?? new _$AreaSeriesDataMarkerStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$AreaSeriesDataMarkerStates _$result;
+    try {
+      _$result =
+          _$v ?? new _$AreaSeriesDataMarkerStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'AreaSeriesDataMarkerStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesDataMarkerStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesDataMarkerStatesHover
     extends AreaSeriesDataMarkerStatesHover {
   @override
@@ -4616,25 +4652,32 @@ class AreaSeriesDataMarkerStatesHoverBuilder
 
   @override
   _$AreaSeriesDataMarkerStatesHover build() {
-    final result = _$v ??
-        new _$AreaSeriesDataMarkerStatesHover._(
-            animation: animation,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$AreaSeriesDataMarkerStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$AreaSeriesDataMarkerStatesHover._(
+              animation: animation,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'AreaSeriesDataMarkerStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesDataMarkerStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesDataMarkerStatesHoverHalo
     extends AreaSeriesDataMarkerStatesHoverHalo {
   @override
@@ -4730,20 +4773,14 @@ class AreaSeriesDataMarkerStatesHoverHaloBuilder
 
   @override
   _$AreaSeriesDataMarkerStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$AreaSeriesDataMarkerStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesDataMarkerStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesDataMarkerStatesHoverMarker
     extends AreaSeriesDataMarkerStatesHoverMarker {
   @override
@@ -4915,7 +4952,7 @@ class AreaSeriesDataMarkerStatesHoverMarkerBuilder
 
   @override
   _$AreaSeriesDataMarkerStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$AreaSeriesDataMarkerStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -4926,17 +4963,11 @@ class AreaSeriesDataMarkerStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesDataLabels extends AreaSeriesDataLabels {
   @override
   final String align;
@@ -5288,44 +5319,51 @@ class AreaSeriesDataLabelsBuilder
 
   @override
   _$AreaSeriesDataLabels build() {
-    final result = _$v ??
-        new _$AreaSeriesDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$AreaSeriesDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$AreaSeriesDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'AreaSeriesDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesEvents extends AreaSeriesEvents {
   @override
   final Function afterAnimate;
@@ -5482,7 +5520,7 @@ class AreaSeriesEventsBuilder
 
   @override
   _$AreaSeriesEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$AreaSeriesEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -5492,17 +5530,11 @@ class AreaSeriesEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesMarker extends AreaSeriesMarker {
   @override
   final bool enabled;
@@ -5669,28 +5701,35 @@ class AreaSeriesMarkerBuilder
 
   @override
   _$AreaSeriesMarker build() {
-    final result = _$v ??
-        new _$AreaSeriesMarker._(
-            enabled: enabled,
-            fillColor: fillColor,
-            height: height,
-            lineColor: lineColor,
-            lineWidth: lineWidth,
-            radius: radius,
-            states: _states?.build(),
-            symbol: symbol,
-            width: width);
-    replace(result);
-    return result;
+    _$AreaSeriesMarker _$result;
+    try {
+      _$result = _$v ??
+          new _$AreaSeriesMarker._(
+              enabled: enabled,
+              fillColor: fillColor,
+              height: height,
+              lineColor: lineColor,
+              lineWidth: lineWidth,
+              radius: radius,
+              states: _states?.build(),
+              symbol: symbol,
+              width: width);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'states';
+        _states?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'AreaSeriesMarker', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesMarkerStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesMarkerStates extends AreaSeriesMarkerStates {
   @override
   final AreaSeriesMarkerStatesHover hover;
@@ -5772,20 +5811,29 @@ class AreaSeriesMarkerStatesBuilder
 
   @override
   _$AreaSeriesMarkerStates build() {
-    final result = _$v ??
-        new _$AreaSeriesMarkerStates._(
-            hover: _hover?.build(), select: _select?.build());
-    replace(result);
-    return result;
+    _$AreaSeriesMarkerStates _$result;
+    try {
+      _$result = _$v ??
+          new _$AreaSeriesMarkerStates._(
+              hover: _hover?.build(), select: _select?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+        _$failedField = 'select';
+        _select?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'AreaSeriesMarkerStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesMarkerStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesMarkerStatesHover extends AreaSeriesMarkerStatesHover {
   @override
   final bool enabled;
@@ -5929,7 +5977,7 @@ class AreaSeriesMarkerStatesHoverBuilder
 
   @override
   _$AreaSeriesMarkerStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$AreaSeriesMarkerStatesHover._(
             enabled: enabled,
             fillColor: fillColor,
@@ -5938,17 +5986,11 @@ class AreaSeriesMarkerStatesHoverBuilder
             lineWidthPlus: lineWidthPlus,
             radius: radius,
             radiusPlus: radiusPlus);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesMarkerStatesSelect
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesMarkerStatesSelect extends AreaSeriesMarkerStatesSelect {
   @override
   final bool enabled;
@@ -6068,24 +6110,18 @@ class AreaSeriesMarkerStatesSelectBuilder
 
   @override
   _$AreaSeriesMarkerStatesSelect build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$AreaSeriesMarkerStatesSelect._(
             enabled: enabled,
             fillColor: fillColor,
             lineColor: lineColor,
             lineWidth: lineWidth,
             radius: radius);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesPoint extends AreaSeriesPoint {
   @override
   final AreaSeriesPointEvents events;
@@ -6155,18 +6191,25 @@ class AreaSeriesPointBuilder
 
   @override
   _$AreaSeriesPoint build() {
-    final result = _$v ?? new _$AreaSeriesPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$AreaSeriesPoint _$result;
+    try {
+      _$result = _$v ?? new _$AreaSeriesPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'AreaSeriesPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesPointEvents extends AreaSeriesPointEvents {
   @override
   final Function click;
@@ -6307,7 +6350,7 @@ class AreaSeriesPointEventsBuilder
 
   @override
   _$AreaSeriesPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$AreaSeriesPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -6316,17 +6359,11 @@ class AreaSeriesPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesStates extends AreaSeriesStates {
   @override
   final AreaSeriesStatesHover hover;
@@ -6396,18 +6433,25 @@ class AreaSeriesStatesBuilder
 
   @override
   _$AreaSeriesStates build() {
-    final result = _$v ?? new _$AreaSeriesStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$AreaSeriesStates _$result;
+    try {
+      _$result = _$v ?? new _$AreaSeriesStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'AreaSeriesStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesStatesHover extends AreaSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -6538,25 +6582,32 @@ class AreaSeriesStatesHoverBuilder
 
   @override
   _$AreaSeriesStatesHover build() {
-    final result = _$v ??
-        new _$AreaSeriesStatesHover._(
-            animation: animation,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$AreaSeriesStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$AreaSeriesStatesHover._(
+              animation: animation,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'AreaSeriesStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesStatesHoverHalo extends AreaSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -6648,20 +6699,14 @@ class AreaSeriesStatesHoverHaloBuilder
 
   @override
   _$AreaSeriesStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$AreaSeriesStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesStatesHoverMarker extends AreaSeriesStatesHoverMarker {
   @override
   final bool enabled;
@@ -6831,7 +6876,7 @@ class AreaSeriesStatesHoverMarkerBuilder
 
   @override
   _$AreaSeriesStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$AreaSeriesStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -6842,17 +6887,11 @@ class AreaSeriesStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesTooltip extends AreaSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -7087,33 +7126,40 @@ class AreaSeriesTooltipBuilder
 
   @override
   _$AreaSeriesTooltip build() {
-    final result = _$v ??
-        new _$AreaSeriesTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$AreaSeriesTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$AreaSeriesTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'AreaSeriesTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class AreaSeriesZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$AreaSeriesZones extends AreaSeriesZones {
   @override
   final String className;
@@ -7225,14 +7271,14 @@ class AreaSeriesZonesBuilder
 
   @override
   _$AreaSeriesZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$AreaSeriesZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

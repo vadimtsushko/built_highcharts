@@ -4,8 +4,15 @@ part of navigation;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library navigation
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<Navigation> _$navigationSerializer = new _$NavigationSerializer();
 Serializer<NavigationButtonOptions> _$navigationButtonOptionsSerializer =
@@ -273,12 +280,6 @@ class _$NavigationButtonOptionsSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class Navigation
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$Navigation extends Navigation {
   @override
   final NavigationButtonOptions buttonOptions;
@@ -388,23 +389,36 @@ class NavigationBuilder implements Builder<Navigation, NavigationBuilder> {
 
   @override
   _$Navigation build() {
-    final result = _$v ??
-        new _$Navigation._(
-            buttonOptions: _buttonOptions?.build(),
-            menuItemHoverStyle: _menuItemHoverStyle?.build(),
-            menuItemStyle: _menuItemStyle?.build(),
-            menuStyle: _menuStyle?.build());
-    replace(result);
-    return result;
+    _$Navigation _$result;
+    try {
+      _$result = _$v ??
+          new _$Navigation._(
+              buttonOptions: _buttonOptions?.build(),
+              menuItemHoverStyle: _menuItemHoverStyle?.build(),
+              menuItemStyle: _menuItemStyle?.build(),
+              menuStyle: _menuStyle?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'buttonOptions';
+        _buttonOptions?.build();
+        _$failedField = 'menuItemHoverStyle';
+        _menuItemHoverStyle?.build();
+        _$failedField = 'menuItemStyle';
+        _menuItemStyle?.build();
+        _$failedField = 'menuStyle';
+        _menuStyle?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'Navigation', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class NavigationButtonOptions
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$NavigationButtonOptions extends NavigationButtonOptions {
   @override
   final String align;
@@ -635,7 +649,7 @@ class NavigationButtonOptionsBuilder
 
   @override
   _$NavigationButtonOptions build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$NavigationButtonOptions._(
             align: align,
             enabled: enabled,
@@ -651,7 +665,7 @@ class NavigationButtonOptionsBuilder
             verticalAlign: verticalAlign,
             width: width,
             y: y);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

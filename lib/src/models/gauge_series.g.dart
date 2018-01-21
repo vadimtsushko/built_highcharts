@@ -4,8 +4,15 @@ part of gauge_series;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library gauge_series
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<GaugeSeries> _$gaugeSeriesSerializer = new _$GaugeSeriesSerializer();
 Serializer<GaugeSeriesData> _$gaugeSeriesDataSerializer =
@@ -1619,12 +1626,6 @@ class _$GaugeSeriesTooltipSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class GaugeSeries
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$GaugeSeries extends GaugeSeries {
   @override
   final bool animation;
@@ -1890,7 +1891,8 @@ class _$GaugeSeries extends GaugeSeries {
   }
 }
 
-class GaugeSeriesBuilder implements Builder<GaugeSeries, GaugeSeriesBuilder> {
+class GaugeSeriesBuilder
+    implements Builder<GaugeSeries, GaugeSeriesBuilder>, SeriesBuilder {
   _$GaugeSeries _$v;
 
   bool _animation;
@@ -2109,7 +2111,7 @@ class GaugeSeriesBuilder implements Builder<GaugeSeries, GaugeSeriesBuilder> {
   }
 
   @override
-  void replace(GaugeSeries other) {
+  void replace(covariant GaugeSeries other) {
     if (other == null) throw new ArgumentError.notNull('other');
     _$v = other as _$GaugeSeries;
   }
@@ -2121,58 +2123,71 @@ class GaugeSeriesBuilder implements Builder<GaugeSeries, GaugeSeriesBuilder> {
 
   @override
   _$GaugeSeries build() {
-    final result = _$v ??
-        new _$GaugeSeries._(
-            animation: animation,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorIndex: colorIndex,
-            cursor: cursor,
-            data: data,
-            dataLabels: dataLabels,
-            description: description,
-            dial: dial,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            id: id,
-            index: index,
-            keys: _keys?.build(),
-            legendIndex: legendIndex,
-            linkedTo: linkedTo,
-            name: name,
-            negativeColor: negativeColor,
-            overshoot: overshoot,
-            pivot: pivot,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            selected: selected,
-            showCheckbox: showCheckbox,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            stickyTracking: stickyTracking,
-            threshold: threshold,
-            tooltip: tooltip,
-            type: type,
-            visible: visible,
-            wrap: wrap,
-            xAxis: xAxis,
-            yAxis: yAxis,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$GaugeSeries _$result;
+    try {
+      _$result = _$v ??
+          new _$GaugeSeries._(
+              animation: animation,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorIndex: colorIndex,
+              cursor: cursor,
+              data: data,
+              dataLabels: dataLabels,
+              description: description,
+              dial: dial,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              id: id,
+              index: index,
+              keys: _keys?.build(),
+              legendIndex: legendIndex,
+              linkedTo: linkedTo,
+              name: name,
+              negativeColor: negativeColor,
+              overshoot: overshoot,
+              pivot: pivot,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              selected: selected,
+              showCheckbox: showCheckbox,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              stickyTracking: stickyTracking,
+              threshold: threshold,
+              tooltip: tooltip,
+              type: type,
+              visible: visible,
+              wrap: wrap,
+              xAxis: xAxis,
+              yAxis: yAxis,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'GaugeSeries', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class GaugeSeriesData
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$GaugeSeriesData extends GaugeSeriesData {
   @override
   final String className;
@@ -2362,7 +2377,7 @@ class GaugeSeriesDataBuilder
 
   @override
   _$GaugeSeriesData build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$GaugeSeriesData._(
             className: className,
             color: color,
@@ -2375,17 +2390,11 @@ class GaugeSeriesDataBuilder
             name: name,
             selected: selected,
             y: y);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class GaugeSeriesDataEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$GaugeSeriesDataEvents extends GaugeSeriesDataEvents {
   @override
   final Function click;
@@ -2526,7 +2535,7 @@ class GaugeSeriesDataEventsBuilder
 
   @override
   _$GaugeSeriesDataEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$GaugeSeriesDataEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -2535,17 +2544,11 @@ class GaugeSeriesDataEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class GaugeSeriesDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$GaugeSeriesDataLabels extends GaugeSeriesDataLabels {
   @override
   final String align;
@@ -2897,44 +2900,51 @@ class GaugeSeriesDataLabelsBuilder
 
   @override
   _$GaugeSeriesDataLabels build() {
-    final result = _$v ??
-        new _$GaugeSeriesDataLabels._(
-            align: align,
-            allowOverlap: allowOverlap,
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            crop: crop,
-            defer: defer,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$GaugeSeriesDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$GaugeSeriesDataLabels._(
+              align: align,
+              allowOverlap: allowOverlap,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              crop: crop,
+              defer: defer,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'GaugeSeriesDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class GaugeSeriesDial
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$GaugeSeriesDial extends GaugeSeriesDial {
   @override
   final String backgroundColor;
@@ -3089,7 +3099,7 @@ class GaugeSeriesDialBuilder
 
   @override
   _$GaugeSeriesDial build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$GaugeSeriesDial._(
             backgroundColor: backgroundColor,
             baseLength: baseLength,
@@ -3099,17 +3109,11 @@ class GaugeSeriesDialBuilder
             radius: radius,
             rearLength: rearLength,
             topWidth: topWidth);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class GaugeSeriesEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$GaugeSeriesEvents extends GaugeSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3266,7 +3270,7 @@ class GaugeSeriesEventsBuilder
 
   @override
   _$GaugeSeriesEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$GaugeSeriesEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -3276,17 +3280,11 @@ class GaugeSeriesEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class GaugeSeriesPivot
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$GaugeSeriesPivot extends GaugeSeriesPivot {
   @override
   final String backgroundColor;
@@ -3388,23 +3386,17 @@ class GaugeSeriesPivotBuilder
 
   @override
   _$GaugeSeriesPivot build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$GaugeSeriesPivot._(
             backgroundColor: backgroundColor,
             borderColor: borderColor,
             borderWidth: borderWidth,
             radius: radius);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class GaugeSeriesPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$GaugeSeriesPoint extends GaugeSeriesPoint {
   @override
   final GaugeSeriesPointEvents events;
@@ -3474,18 +3466,25 @@ class GaugeSeriesPointBuilder
 
   @override
   _$GaugeSeriesPoint build() {
-    final result = _$v ?? new _$GaugeSeriesPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$GaugeSeriesPoint _$result;
+    try {
+      _$result = _$v ?? new _$GaugeSeriesPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'GaugeSeriesPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class GaugeSeriesPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$GaugeSeriesPointEvents extends GaugeSeriesPointEvents {
   @override
   final Function click;
@@ -3627,7 +3626,7 @@ class GaugeSeriesPointEventsBuilder
 
   @override
   _$GaugeSeriesPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$GaugeSeriesPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -3636,17 +3635,11 @@ class GaugeSeriesPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class GaugeSeriesTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$GaugeSeriesTooltip extends GaugeSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -3881,23 +3874,36 @@ class GaugeSeriesTooltipBuilder
 
   @override
   _$GaugeSeriesTooltip build() {
-    final result = _$v ??
-        new _$GaugeSeriesTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$GaugeSeriesTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$GaugeSeriesTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'GaugeSeriesTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }

@@ -4,8 +4,15 @@ part of funnel_series;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library funnel_series
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<FunnelSeries> _$funnelSeriesSerializer =
     new _$FunnelSeriesSerializer();
@@ -2000,12 +2007,6 @@ class _$FunnelSeriesZonesSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class FunnelSeries
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$FunnelSeries extends FunnelSeries {
   @override
   final bool allowPointSelect;
@@ -2302,7 +2303,7 @@ class _$FunnelSeries extends FunnelSeries {
 }
 
 class FunnelSeriesBuilder
-    implements Builder<FunnelSeries, FunnelSeriesBuilder> {
+    implements Builder<FunnelSeries, FunnelSeriesBuilder>, SeriesBuilder {
   _$FunnelSeries _$v;
 
   bool _allowPointSelect;
@@ -2554,7 +2555,7 @@ class FunnelSeriesBuilder
   }
 
   @override
-  void replace(FunnelSeries other) {
+  void replace(covariant FunnelSeries other) {
     if (other == null) throw new ArgumentError.notNull('other');
     _$v = other as _$FunnelSeries;
   }
@@ -2566,64 +2567,83 @@ class FunnelSeriesBuilder
 
   @override
   _$FunnelSeries build() {
-    final result = _$v ??
-        new _$FunnelSeries._(
-            allowPointSelect: allowPointSelect,
-            animationLimit: animationLimit,
-            borderColor: borderColor,
-            borderWidth: borderWidth,
-            center: center,
-            className: className,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            cursor: cursor,
-            data: data,
-            dataLabels: _dataLabels?.build(),
-            depth: depth,
-            description: description,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            height: height,
-            id: id,
-            index: index,
-            keys: _keys?.build(),
-            legendIndex: legendIndex,
-            linkedTo: linkedTo,
-            minSize: minSize,
-            name: name,
-            neckHeight: neckHeight,
-            neckWidth: neckWidth,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            reversed: reversed,
-            selected: selected,
-            shadow: shadow,
-            showInLegend: showInLegend,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            slicedOffset: slicedOffset,
-            states: states,
-            stickyTracking: stickyTracking,
-            tooltip: tooltip,
-            type: type,
-            visible: visible,
-            width: width,
-            zIndex: zIndex,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$FunnelSeries _$result;
+    try {
+      _$result = _$v ??
+          new _$FunnelSeries._(
+              allowPointSelect: allowPointSelect,
+              animationLimit: animationLimit,
+              borderColor: borderColor,
+              borderWidth: borderWidth,
+              center: center,
+              className: className,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              cursor: cursor,
+              data: data,
+              dataLabels: _dataLabels?.build(),
+              depth: depth,
+              description: description,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              height: height,
+              id: id,
+              index: index,
+              keys: _keys?.build(),
+              legendIndex: legendIndex,
+              linkedTo: linkedTo,
+              minSize: minSize,
+              name: name,
+              neckHeight: neckHeight,
+              neckWidth: neckWidth,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              reversed: reversed,
+              selected: selected,
+              shadow: shadow,
+              showInLegend: showInLegend,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              slicedOffset: slicedOffset,
+              states: states,
+              stickyTracking: stickyTracking,
+              tooltip: tooltip,
+              type: type,
+              visible: visible,
+              width: width,
+              zIndex: zIndex,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'dataLabels';
+        _dataLabels?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'FunnelSeries', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class FunnelSeriesData
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$FunnelSeriesData extends FunnelSeriesData {
   @override
   final String className;
@@ -2837,7 +2857,7 @@ class FunnelSeriesDataBuilder
 
   @override
   _$FunnelSeriesData build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$FunnelSeriesData._(
             className: className,
             color: color,
@@ -2852,17 +2872,11 @@ class FunnelSeriesDataBuilder
             name: name,
             selected: selected,
             y: y);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class FunnelSeriesDataEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$FunnelSeriesDataEvents extends FunnelSeriesDataEvents {
   @override
   final Function click;
@@ -3004,7 +3018,7 @@ class FunnelSeriesDataEventsBuilder
 
   @override
   _$FunnelSeriesDataEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$FunnelSeriesDataEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -3013,17 +3027,11 @@ class FunnelSeriesDataEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class FunnelSeriesDataLabels
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$FunnelSeriesDataLabels extends FunnelSeriesDataLabels {
   @override
   final String backgroundColor;
@@ -3410,47 +3418,54 @@ class FunnelSeriesDataLabelsBuilder
 
   @override
   _$FunnelSeriesDataLabels build() {
-    final result = _$v ??
-        new _$FunnelSeriesDataLabels._(
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-            borderRadius: borderRadius,
-            borderWidth: borderWidth,
-            className: className,
-            color: color,
-            connectorColor: connectorColor,
-            connectorPadding: connectorPadding,
-            connectorWidth: connectorWidth,
-            crop: crop,
-            defer: defer,
-            distance: distance,
-            enabled: enabled,
-            format: format,
-            formatter: formatter,
-            inside: inside,
-            overflow: overflow,
-            padding: padding,
-            rotation: rotation,
-            shadow: shadow,
-            shape: shape,
-            softConnector: softConnector,
-            style: _style?.build(),
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            x: x,
-            y: y,
-            zIndex: zIndex);
-    replace(result);
-    return result;
+    _$FunnelSeriesDataLabels _$result;
+    try {
+      _$result = _$v ??
+          new _$FunnelSeriesDataLabels._(
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderRadius: borderRadius,
+              borderWidth: borderWidth,
+              className: className,
+              color: color,
+              connectorColor: connectorColor,
+              connectorPadding: connectorPadding,
+              connectorWidth: connectorWidth,
+              crop: crop,
+              defer: defer,
+              distance: distance,
+              enabled: enabled,
+              format: format,
+              formatter: formatter,
+              inside: inside,
+              overflow: overflow,
+              padding: padding,
+              rotation: rotation,
+              shadow: shadow,
+              shape: shape,
+              softConnector: softConnector,
+              style: _style?.build(),
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              x: x,
+              y: y,
+              zIndex: zIndex);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'FunnelSeriesDataLabels', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class FunnelSeriesEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$FunnelSeriesEvents extends FunnelSeriesEvents {
   @override
   final Function afterAnimate;
@@ -3607,7 +3622,7 @@ class FunnelSeriesEventsBuilder
 
   @override
   _$FunnelSeriesEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$FunnelSeriesEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -3617,17 +3632,11 @@ class FunnelSeriesEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class FunnelSeriesPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$FunnelSeriesPoint extends FunnelSeriesPoint {
   @override
   final FunnelSeriesPointEvents events;
@@ -3697,18 +3706,25 @@ class FunnelSeriesPointBuilder
 
   @override
   _$FunnelSeriesPoint build() {
-    final result = _$v ?? new _$FunnelSeriesPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$FunnelSeriesPoint _$result;
+    try {
+      _$result = _$v ?? new _$FunnelSeriesPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'FunnelSeriesPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class FunnelSeriesPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$FunnelSeriesPointEvents extends FunnelSeriesPointEvents {
   @override
   final Function click;
@@ -3866,7 +3882,7 @@ class FunnelSeriesPointEventsBuilder
 
   @override
   _$FunnelSeriesPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$FunnelSeriesPointEvents._(
             click: click,
             legendItemClick: legendItemClick,
@@ -3876,17 +3892,11 @@ class FunnelSeriesPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class FunnelSeriesStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$FunnelSeriesStates extends FunnelSeriesStates {
   @override
   final FunnelSeriesStatesHover hover;
@@ -3956,18 +3966,25 @@ class FunnelSeriesStatesBuilder
 
   @override
   _$FunnelSeriesStates build() {
-    final result = _$v ?? new _$FunnelSeriesStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$FunnelSeriesStates _$result;
+    try {
+      _$result = _$v ?? new _$FunnelSeriesStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'FunnelSeriesStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class FunnelSeriesStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$FunnelSeriesStatesHover extends FunnelSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -4112,26 +4129,33 @@ class FunnelSeriesStatesHoverBuilder
 
   @override
   _$FunnelSeriesStatesHover build() {
-    final result = _$v ??
-        new _$FunnelSeriesStatesHover._(
-            animation: animation,
-            brightness: brightness,
-            enabled: enabled,
-            halo: halo,
-            lineWidth: lineWidth,
-            lineWidthPlus: lineWidthPlus,
-            marker: _marker?.build());
-    replace(result);
-    return result;
+    _$FunnelSeriesStatesHover _$result;
+    try {
+      _$result = _$v ??
+          new _$FunnelSeriesStatesHover._(
+              animation: animation,
+              brightness: brightness,
+              enabled: enabled,
+              halo: halo,
+              lineWidth: lineWidth,
+              lineWidthPlus: lineWidthPlus,
+              marker: _marker?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'marker';
+        _marker?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'FunnelSeriesStatesHover', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class FunnelSeriesStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$FunnelSeriesStatesHoverHalo extends FunnelSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -4224,20 +4248,14 @@ class FunnelSeriesStatesHoverHaloBuilder
 
   @override
   _$FunnelSeriesStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$FunnelSeriesStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class FunnelSeriesStatesHoverMarker
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$FunnelSeriesStatesHoverMarker extends FunnelSeriesStatesHoverMarker {
   @override
   final bool enabled;
@@ -4407,7 +4425,7 @@ class FunnelSeriesStatesHoverMarkerBuilder
 
   @override
   _$FunnelSeriesStatesHoverMarker build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$FunnelSeriesStatesHoverMarker._(
             enabled: enabled,
             fillColor: fillColor,
@@ -4418,17 +4436,11 @@ class FunnelSeriesStatesHoverMarkerBuilder
             states: states,
             symbol: symbol,
             width: width);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class FunnelSeriesTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$FunnelSeriesTooltip extends FunnelSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -4663,33 +4675,40 @@ class FunnelSeriesTooltipBuilder
 
   @override
   _$FunnelSeriesTooltip build() {
-    final result = _$v ??
-        new _$FunnelSeriesTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$FunnelSeriesTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$FunnelSeriesTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'FunnelSeriesTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class FunnelSeriesZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$FunnelSeriesZones extends FunnelSeriesZones {
   @override
   final String className;
@@ -4801,14 +4820,14 @@ class FunnelSeriesZonesBuilder
 
   @override
   _$FunnelSeriesZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$FunnelSeriesZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }

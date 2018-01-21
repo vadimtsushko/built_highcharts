@@ -1,16 +1,16 @@
 name: built_highcharts
 description: An absolute bare-bones web app.
-version: 0.0.2
-#homepage: https://www.example.com
-#author: Tsushko <email@example.com>
+version: 0.1.2
+homepage: https://github.com/vadimtsushko/built_highcharts
+author: Vadim Tsushko vadimtsushko@gmail.com
 
 environment:
-  sdk: '>=1.20.1 <2.0.0'
+  sdk:  '>=2.0.0-dev <2.0.0'
 dependencies:
-  path: ^1.4.1
-  built_value: "^1.0.1"
+  path: any
+  built_value: "4.6.1"
   js: any
 dev_dependencies:
-  test: '>=0.12.0'
-  build_runner: "^0.3.2"
-  built_value_generator: "^1.2.1"
+  test: any
+  build_runner: ^0.6.0
+  built_value_generator: "4.6.1"

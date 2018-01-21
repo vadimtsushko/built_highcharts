@@ -4,8 +4,15 @@ part of title;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library title
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<Title> _$titleSerializer = new _$TitleSerializer();
 
@@ -145,12 +152,6 @@ class _$TitleSerializer implements StructuredSerializer<Title> {
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class Title
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$Title extends Title {
   @override
   final String align;
@@ -328,19 +329,32 @@ class TitleBuilder implements Builder<Title, TitleBuilder> {
 
   @override
   _$Title build() {
-    final result = _$v ??
-        new _$Title._(
-            align: align,
-            floating: floating,
-            margin: margin,
-            style: _style?.build(),
-            text: text,
-            useHTML: useHTML,
-            verticalAlign: verticalAlign,
-            widthAdjust: widthAdjust,
-            x: x,
-            y: y);
-    replace(result);
-    return result;
+    _$Title _$result;
+    try {
+      _$result = _$v ??
+          new _$Title._(
+              align: align,
+              floating: floating,
+              margin: margin,
+              style: _style?.build(),
+              text: text,
+              useHTML: useHTML,
+              verticalAlign: verticalAlign,
+              widthAdjust: widthAdjust,
+              x: x,
+              y: y);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'style';
+        _style?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'Title', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }

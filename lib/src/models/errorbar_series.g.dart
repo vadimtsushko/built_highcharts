@@ -4,8 +4,15 @@ part of errorbar_series;
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
-// Target: library errorbar_series
 // **************************************************************************
+
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
 
 Serializer<ErrorbarSeries> _$errorbarSeriesSerializer =
     new _$ErrorbarSeriesSerializer();
@@ -1648,12 +1655,6 @@ class _$ErrorbarSeriesZonesSerializer
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ErrorbarSeries
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ErrorbarSeries extends ErrorbarSeries {
   @override
   final bool allowPointSelect;
@@ -2011,7 +2012,7 @@ class _$ErrorbarSeries extends ErrorbarSeries {
 }
 
 class ErrorbarSeriesBuilder
-    implements Builder<ErrorbarSeries, ErrorbarSeriesBuilder> {
+    implements Builder<ErrorbarSeries, ErrorbarSeriesBuilder>, SeriesBuilder {
   _$ErrorbarSeries _$v;
 
   bool _allowPointSelect;
@@ -2327,7 +2328,7 @@ class ErrorbarSeriesBuilder
   }
 
   @override
-  void replace(ErrorbarSeries other) {
+  void replace(covariant ErrorbarSeries other) {
     if (other == null) throw new ArgumentError.notNull('other');
     _$v = other as _$ErrorbarSeries;
   }
@@ -2339,76 +2340,92 @@ class ErrorbarSeriesBuilder
 
   @override
   _$ErrorbarSeries build() {
-    final result = _$v ??
-        new _$ErrorbarSeries._(
-            allowPointSelect: allowPointSelect,
-            animationLimit: animationLimit,
-            className: className,
-            color: color,
-            colorByPoint: colorByPoint,
-            colorIndex: colorIndex,
-            colors: _colors?.build(),
-            crisp: crisp,
-            cursor: cursor,
-            data: data,
-            depth: depth,
-            description: description,
-            edgeColor: edgeColor,
-            edgeWidth: edgeWidth,
-            enableMouseTracking: enableMouseTracking,
-            events: _events?.build(),
-            exposeElementToA11y: exposeElementToA11y,
-            findNearestPointBy: findNearestPointBy,
-            getExtremesFromAll: getExtremesFromAll,
-            groupZPadding: groupZPadding,
-            id: id,
-            index: index,
-            keys: _keys?.build(),
-            legendIndex: legendIndex,
-            lineWidth: lineWidth,
-            linkedTo: linkedTo,
-            maxPointWidth: maxPointWidth,
-            name: name,
-            negativeColor: negativeColor,
-            point: _point?.build(),
-            pointDescriptionFormatter: pointDescriptionFormatter,
-            pointInterval: pointInterval,
-            pointIntervalUnit: pointIntervalUnit,
-            pointPadding: pointPadding,
-            pointPlacement: pointPlacement,
-            pointRange: pointRange,
-            pointStart: pointStart,
-            pointWidth: pointWidth,
-            selected: selected,
-            skipKeyboardNavigation: skipKeyboardNavigation,
-            states: states,
-            stemColor: stemColor,
-            stemDashStyle: stemDashStyle,
-            stemWidth: stemWidth,
-            stickyTracking: stickyTracking,
-            tooltip: tooltip,
-            turboThreshold: turboThreshold,
-            type: type,
-            visible: visible,
-            whiskerColor: whiskerColor,
-            whiskerLength: whiskerLength,
-            whiskerWidth: whiskerWidth,
-            xAxis: xAxis,
-            yAxis: yAxis,
-            zIndex: zIndex,
-            zoneAxis: zoneAxis,
-            zones: zones);
-    replace(result);
-    return result;
+    _$ErrorbarSeries _$result;
+    try {
+      _$result = _$v ??
+          new _$ErrorbarSeries._(
+              allowPointSelect: allowPointSelect,
+              animationLimit: animationLimit,
+              className: className,
+              color: color,
+              colorByPoint: colorByPoint,
+              colorIndex: colorIndex,
+              colors: _colors?.build(),
+              crisp: crisp,
+              cursor: cursor,
+              data: data,
+              depth: depth,
+              description: description,
+              edgeColor: edgeColor,
+              edgeWidth: edgeWidth,
+              enableMouseTracking: enableMouseTracking,
+              events: _events?.build(),
+              exposeElementToA11y: exposeElementToA11y,
+              findNearestPointBy: findNearestPointBy,
+              getExtremesFromAll: getExtremesFromAll,
+              groupZPadding: groupZPadding,
+              id: id,
+              index: index,
+              keys: _keys?.build(),
+              legendIndex: legendIndex,
+              lineWidth: lineWidth,
+              linkedTo: linkedTo,
+              maxPointWidth: maxPointWidth,
+              name: name,
+              negativeColor: negativeColor,
+              point: _point?.build(),
+              pointDescriptionFormatter: pointDescriptionFormatter,
+              pointInterval: pointInterval,
+              pointIntervalUnit: pointIntervalUnit,
+              pointPadding: pointPadding,
+              pointPlacement: pointPlacement,
+              pointRange: pointRange,
+              pointStart: pointStart,
+              pointWidth: pointWidth,
+              selected: selected,
+              skipKeyboardNavigation: skipKeyboardNavigation,
+              states: states,
+              stemColor: stemColor,
+              stemDashStyle: stemDashStyle,
+              stemWidth: stemWidth,
+              stickyTracking: stickyTracking,
+              tooltip: tooltip,
+              turboThreshold: turboThreshold,
+              type: type,
+              visible: visible,
+              whiskerColor: whiskerColor,
+              whiskerLength: whiskerLength,
+              whiskerWidth: whiskerWidth,
+              xAxis: xAxis,
+              yAxis: yAxis,
+              zIndex: zIndex,
+              zoneAxis: zoneAxis,
+              zones: zones);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'colors';
+        _colors?.build();
+
+        _$failedField = 'events';
+        _events?.build();
+
+        _$failedField = 'keys';
+        _keys?.build();
+
+        _$failedField = 'point';
+        _point?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ErrorbarSeries', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ErrorbarSeriesData
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ErrorbarSeriesData extends ErrorbarSeriesData {
   @override
   final String className;
@@ -2610,7 +2627,7 @@ class ErrorbarSeriesDataBuilder
 
   @override
   _$ErrorbarSeriesData build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ErrorbarSeriesData._(
             className: className,
             color: color,
@@ -2624,17 +2641,11 @@ class ErrorbarSeriesDataBuilder
             name: name,
             selected: selected,
             x: x);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ErrorbarSeriesDataEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ErrorbarSeriesDataEvents extends ErrorbarSeriesDataEvents {
   @override
   final Function click;
@@ -2777,7 +2788,7 @@ class ErrorbarSeriesDataEventsBuilder
 
   @override
   _$ErrorbarSeriesDataEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ErrorbarSeriesDataEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -2786,17 +2797,11 @@ class ErrorbarSeriesDataEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ErrorbarSeriesEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ErrorbarSeriesEvents extends ErrorbarSeriesEvents {
   @override
   final Function afterAnimate;
@@ -2954,7 +2959,7 @@ class ErrorbarSeriesEventsBuilder
 
   @override
   _$ErrorbarSeriesEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ErrorbarSeriesEvents._(
             afterAnimate: afterAnimate,
             checkboxClick: checkboxClick,
@@ -2964,17 +2969,11 @@ class ErrorbarSeriesEventsBuilder
             mouseOut: mouseOut,
             mouseOver: mouseOver,
             show: show);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ErrorbarSeriesPoint
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ErrorbarSeriesPoint extends ErrorbarSeriesPoint {
   @override
   final ErrorbarSeriesPointEvents events;
@@ -3045,18 +3044,25 @@ class ErrorbarSeriesPointBuilder
 
   @override
   _$ErrorbarSeriesPoint build() {
-    final result = _$v ?? new _$ErrorbarSeriesPoint._(events: _events?.build());
-    replace(result);
-    return result;
+    _$ErrorbarSeriesPoint _$result;
+    try {
+      _$result = _$v ?? new _$ErrorbarSeriesPoint._(events: _events?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'events';
+        _events?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ErrorbarSeriesPoint', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ErrorbarSeriesPointEvents
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ErrorbarSeriesPointEvents extends ErrorbarSeriesPointEvents {
   @override
   final Function click;
@@ -3199,7 +3205,7 @@ class ErrorbarSeriesPointEventsBuilder
 
   @override
   _$ErrorbarSeriesPointEvents build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ErrorbarSeriesPointEvents._(
             click: click,
             mouseOut: mouseOut,
@@ -3208,17 +3214,11 @@ class ErrorbarSeriesPointEventsBuilder
             select: select,
             unselect: unselect,
             update_: update_);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ErrorbarSeriesStates
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ErrorbarSeriesStates extends ErrorbarSeriesStates {
   @override
   final ErrorbarSeriesStatesHover hover;
@@ -3289,18 +3289,25 @@ class ErrorbarSeriesStatesBuilder
 
   @override
   _$ErrorbarSeriesStates build() {
-    final result = _$v ?? new _$ErrorbarSeriesStates._(hover: _hover?.build());
-    replace(result);
-    return result;
+    _$ErrorbarSeriesStates _$result;
+    try {
+      _$result = _$v ?? new _$ErrorbarSeriesStates._(hover: _hover?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'hover';
+        _hover?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ErrorbarSeriesStates', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ErrorbarSeriesStatesHover
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ErrorbarSeriesStatesHover extends ErrorbarSeriesStatesHover {
   @override
   final JsonObject animation;
@@ -3431,7 +3438,7 @@ class ErrorbarSeriesStatesHoverBuilder
 
   @override
   _$ErrorbarSeriesStatesHover build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ErrorbarSeriesStatesHover._(
             animation: animation,
             borderColor: borderColor,
@@ -3439,17 +3446,11 @@ class ErrorbarSeriesStatesHoverBuilder
             color: color,
             enabled: enabled,
             halo: halo);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ErrorbarSeriesStatesHoverHalo
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ErrorbarSeriesStatesHoverHalo extends ErrorbarSeriesStatesHoverHalo {
   @override
   final JsonObject attributes;
@@ -3542,20 +3543,14 @@ class ErrorbarSeriesStatesHoverHaloBuilder
 
   @override
   _$ErrorbarSeriesStatesHoverHalo build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ErrorbarSeriesStatesHoverHalo._(
             attributes: attributes, opacity: opacity, size: size);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ErrorbarSeriesTooltip
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ErrorbarSeriesTooltip extends ErrorbarSeriesTooltip {
   @override
   final DateTimeLabelFormats dateTimeLabelFormats;
@@ -3791,33 +3786,40 @@ class ErrorbarSeriesTooltipBuilder
 
   @override
   _$ErrorbarSeriesTooltip build() {
-    final result = _$v ??
-        new _$ErrorbarSeriesTooltip._(
-            dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
-            followPointer: followPointer,
-            followTouchMove: followTouchMove,
-            footerFormat: footerFormat,
-            headerFormat: headerFormat,
-            hideDelay: hideDelay,
-            padding: padding,
-            pointFormat: pointFormat,
-            pointFormatter: pointFormatter,
-            split: split,
-            valueDecimals: valueDecimals,
-            valuePrefix: valuePrefix,
-            valueSuffix: valueSuffix,
-            xDateFormat: xDateFormat);
-    replace(result);
-    return result;
+    _$ErrorbarSeriesTooltip _$result;
+    try {
+      _$result = _$v ??
+          new _$ErrorbarSeriesTooltip._(
+              dateTimeLabelFormats: _dateTimeLabelFormats?.build(),
+              followPointer: followPointer,
+              followTouchMove: followTouchMove,
+              footerFormat: footerFormat,
+              headerFormat: headerFormat,
+              hideDelay: hideDelay,
+              padding: padding,
+              pointFormat: pointFormat,
+              pointFormatter: pointFormatter,
+              split: split,
+              valueDecimals: valueDecimals,
+              valuePrefix: valuePrefix,
+              valueSuffix: valueSuffix,
+              xDateFormat: xDateFormat);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'dateTimeLabelFormats';
+        _dateTimeLabelFormats?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ErrorbarSeriesTooltip', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
   }
 }
 
-// **************************************************************************
-// Generator: BuiltValueGenerator
-// Target: abstract class ErrorbarSeriesZones
-// **************************************************************************
-
-// ignore_for_file: annotate_overrides
 class _$ErrorbarSeriesZones extends ErrorbarSeriesZones {
   @override
   final String className;
@@ -3929,14 +3931,14 @@ class ErrorbarSeriesZonesBuilder
 
   @override
   _$ErrorbarSeriesZones build() {
-    final result = _$v ??
+    final _$result = _$v ??
         new _$ErrorbarSeriesZones._(
             className: className,
             color: color,
             dashStyle: dashStyle,
             fillColor: fillColor,
             value: value);
-    replace(result);
-    return result;
+    replace(_$result);
+    return _$result;
   }
 }
